@@ -44,6 +44,7 @@ import { calcYieldWater }    from './yieldCalc.js';
 import { plausibilityCheck } from './plausibilityCheck.js';
 import {
   applyRetention,
+  getRetentionFactor,
   mapDishMethodToCookingMethod,
   type CookingMethod,
 } from '$lib/data/cookingLossModel.js';
@@ -134,7 +135,14 @@ export function buildRecipeCommunity(
   nutrientMap: Map<string, NutrientRow>,
   servings: number,
   gramsPerServing: number,
+  dishCookMethod?: string,
 ): BuildResult {
+  // Map recipe-level cooking method to a CookingMethod used as the primary (final) cook
+  // for all sections. When undefined, each section uses its own sec.cookMethod (backward-compat).
+  const primaryCookMethod: CookingMethod | undefined = dishCookMethod
+    ? mapDishMethodToCookingMethod(dishCookMethod)
+    : undefined;
+
   const sectionResults: SectionBuildResult[] = [];
   const globalSkipped: SkippedIngredient[]   = [];
 
@@ -185,7 +193,16 @@ export function buildRecipeCommunity(
 
   for (const sec of allSections) {
     const bucket = buckets.get(sec.sectionKey) ?? [];
-    const cookMethod: CookingMethod = mapDishMethodToCookingMethod(sec.cookMethod);
+    // If a recipe-level primary cook method was supplied, use it for this section;
+    // otherwise fall back to the section's own cookMethod (backward-compatible).
+    const effectiveCookMethod: CookingMethod = primaryCookMethod ?? mapDishMethodToCookingMethod(sec.cookMethod);
+
+    // Optional pre-step: fires on the raw ingredients before the primary cook.
+    const hasPrepStep = !!sec.prepMethod && sec.prepMethod !== 'none';
+    const prepCookMethod: CookingMethod | null = hasPrepStep
+      ? mapDishMethodToCookingMethod(sec.prepMethod!)
+      : null;
+
     const skipped: SkippedIngredient[] = [];
 
     // Separate active from skipped
@@ -224,37 +241,63 @@ export function buildRecipeCommunity(
 
     const boilMinutes = (sec as CommunitySection & { boilMinutes?: number }).boilMinutes ?? 0;
 
-    // ── Submersion-boil absorption model ─────────────────────────────────────
-    // When a boiled section contains a dry absorber (pasta, rice, oats, beans)
-    // identified by a numeric absorptionFactor in DataCentralCombo.bin, use the
-    // absorption model instead of the evaporation model (calcYieldWater).
+    // ── Water yield ────────────────────────────────────────────────────────────
+    // Chained (hasPrepStep): yfw_total = yfw_prep × yfw_primary (compounding).
+    //   Prep pass  — boilMinutes drives the stovetop pre-cook yield.
+    //   Primary pass — oven stages drive the final cook yield.
+    // Single-pass (no pre-step): existing behaviour.
     //
-    // absorptionFactor = cooked water fraction target from SR Legacy cooked NDB.
-    // Model: dry non-water solids are conserved; they absorb water to reach the
-    // target fraction. yieldWater = retainedWater / initialWaterG.
-    // Min(1.0) guard prevents yield > 1 when the boiling water pool is small.
-    //
-    // If multiple absorbers are present, use the weighted average factor.
-    // Falls back to calcYieldWater when no absorber ingredient is detected.
+    // Absorption model: fires in the prep pass when prepMethod='boiled' + absorbers,
+    // or in the single pass when effectiveCookMethod='boiled' + absorbers.
     let yieldWater: number;
-    if (cookMethod === 'boiled') {
-      const absorbers = active.filter(a => a.nutrients.absorptionFactor != null);
-      if (absorbers.length > 0) {
-        const absorberGrams = absorbers.reduce((sum, a) => sum + a.grams, 0);
-        const weightedFactor = absorbers.reduce(
-          (sum, a) => sum + (a.nutrients.absorptionFactor! * a.grams), 0
-        ) / absorberGrams;
-        const dryNonWaterG   = totalSectionRawG - initialWaterG;
-        const retainedWaterG = dryNonWaterG * weightedFactor / (1 - weightedFactor);
-        // yieldWater may be >> 1 when initialWaterG is only the dry ingredient's own moisture
-        // (no explicit water row). cooked mass formula handles this:
-        // cookedGrams = rawG - initialWaterG*(1-yieldWater) — negative term means water gained.
-        yieldWater = initialWaterG > 0 ? retainedWaterG / initialWaterG : 1.0;
+    if (hasPrepStep && prepCookMethod) {
+      // ── Prep pass water yield ──────────────────────────────────────────────
+      let yfw_prep: number;
+      if (prepCookMethod === 'boiled') {
+        const absorbers_prep = active.filter(a => a.nutrients.absorptionFactor != null);
+        if (absorbers_prep.length > 0) {
+          // Absorption model: dry absorbers pull cooking water up to target fraction.
+          const absorberGrams_prep = absorbers_prep.reduce((sum, a) => sum + a.grams, 0);
+          const weightedFactor_prep = absorbers_prep.reduce(
+            (sum, a) => sum + (a.nutrients.absorptionFactor! * a.grams), 0
+          ) / absorberGrams_prep;
+          const dryNonWaterG = totalSectionRawG - initialWaterG;
+          const retainedWaterG_prep = dryNonWaterG * weightedFactor_prep / (1 - weightedFactor_prep);
+          yfw_prep = initialWaterG > 0 ? retainedWaterG_prep / initialWaterG : 1.0;
+        } else {
+          yfw_prep = calcYieldWater([], initialWaterG, fillingClass, boilMinutes);
+        }
+      } else {
+        // Non-boiled prep (steamed, fried, etc.): use evaporation model with no oven stages.
+        yfw_prep = calcYieldWater([], initialWaterG, fillingClass, 0);
+      }
+
+      // ── Primary cook water yield ───────────────────────────────────────────
+      // Operates on the post-prep water mass; boilMinutes already consumed by prep pass.
+      const interWaterG = initialWaterG * yfw_prep;
+      const yfw_primary = calcYieldWater(stages, interWaterG, fillingClass, 0);
+
+      // Compound: total water yield = prep × primary
+      yieldWater = yfw_prep * yfw_primary;
+    } else {
+      // ── Single-pass (no pre-step): existing behaviour ──────────────────────
+      if (effectiveCookMethod === 'boiled') {
+        const absorbers = active.filter(a => a.nutrients.absorptionFactor != null);
+        if (absorbers.length > 0) {
+          const absorberGrams = absorbers.reduce((sum, a) => sum + a.grams, 0);
+          const weightedFactor = absorbers.reduce(
+            (sum, a) => sum + (a.nutrients.absorptionFactor! * a.grams), 0
+          ) / absorberGrams;
+          const dryNonWaterG   = totalSectionRawG - initialWaterG;
+          const retainedWaterG = dryNonWaterG * weightedFactor / (1 - weightedFactor);
+          // yieldWater may be >> 1 when initialWaterG is only the dry ingredient's own moisture.
+          yieldWater = initialWaterG > 0 ? retainedWaterG / initialWaterG : 1.0;
+        } else {
+          yieldWater = calcYieldWater(stages, initialWaterG, fillingClass, boilMinutes);
+        }
       } else {
         yieldWater = calcYieldWater(stages, initialWaterG, fillingClass, boilMinutes);
       }
-    } else {
-      yieldWater = calcYieldWater(stages, initialWaterG, fillingClass, boilMinutes);
     }
 
     // Sum retained nutrients across active ingredients
@@ -268,10 +311,16 @@ export function buildRecipeCommunity(
         const colName     = KEY_TO_COLUMN[key] ?? key;
         let retained: number;
         if (key === 'water') {
-          // Water column: apply yield factor instead of retention (they model the same loss)
+          // Water column: yield factor applied above covers water loss for both passes.
           retained = rawPer100g * (grams / 100) * yieldWater;
+        } else if (hasPrepStep && prepCookMethod) {
+          // Chained retention: prep method applied first, then primary cook.
+          // Applied to original raw weight — models cumulative heat-destruction.
+          retained = rawPer100g * (grams / 100)
+            * getRetentionFactor(prepCookMethod, colName)
+            * getRetentionFactor(effectiveCookMethod, colName);
         } else {
-          retained = applyRetention(rawPer100g, grams, cookMethod, colName);
+          retained = applyRetention(rawPer100g, grams, effectiveCookMethod, colName);
         }
         (sectionTotals as Record<string, number>)[key] =
           ((sectionTotals as Record<string, number>)[key] ?? 0) + retained;
@@ -295,7 +344,7 @@ export function buildRecipeCommunity(
       sectionLabel:       sec.sectionLabel,
       fillingClass,
       yieldFactorWater:   yieldWater,
-      cookMethod:         cookMethod,
+      cookMethod:         effectiveCookMethod,
       rawGrams,
       cookedGrams,
       retainedNutrients:  sectionTotals,

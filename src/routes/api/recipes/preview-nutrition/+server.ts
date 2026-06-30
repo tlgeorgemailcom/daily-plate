@@ -112,6 +112,7 @@ export const POST: RequestHandler = async ({ request }) => {
       nutrientMap,
       servingsNum > 0 ? servingsNum : 1,
       gramsPerServing,
+      typeof cookingMethod === 'string' ? cookingMethod : undefined,
     );
 
     // Map BuildResult → PreviewNutrition shape for the form

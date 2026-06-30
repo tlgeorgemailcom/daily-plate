@@ -70,6 +70,11 @@ export interface CommunitySection {
   sectionKey: string;       // e.g. "crust", "filling", "topping"
   sectionLabel: string;     // display name shown in UI
   cookMethod: string;       // "baked" | "boiled" | "simmered" | "raw" | ...
+  /** Optional pre-step fired before the primary (recipe-level) cook.
+   *  When set and not 'none', buildRecipeCommunity applies this method first
+   *  (using section boilMinutes for yield), then applies the recipe-level
+   *  primary cook method second. Water yields compound: yfw_total = yfw_prep × yfw_primary. */
+  prepMethod?: string;
   cookTempF?: number;       // oven temp °F — used when stages[] is absent
   cookMinutes?: number;     // oven time in minutes — used when stages[] is absent
   boilMinutes?: number;     // stovetop boil/simmer time in minutes
