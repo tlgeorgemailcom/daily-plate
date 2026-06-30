@@ -154,7 +154,7 @@
   const COOKING_METHODS = ['Bake', 'Boil', 'Grill', 'Fry', 'No heat'];
   // v3.md §18.1 — lowercase enum stored in recipe_sections.csv::cooking_method.
   const SECTION_COOKING_METHODS = ['raw', 'boiled', 'steamed', 'baked', 'fried', 'pan grilled', 'grilled', 'microwave'];
-  const SECTION_PREP_METHODS    = ['raw', 'boiled', 'steamed', 'blanched', 'baked', 'par-baked', 'fried', 'pan grilled', 'grilled', 'marinated', 'chilled', 'microwave'];
+  const SECTION_PREP_METHODS    = ['boiled', 'steamed', 'blanched', 'baked', 'par-baked', 'fried', 'pan grilled', 'grilled', 'marinated', 'chilled', 'microwave'];
   // v3.md §18.6 — datalist suggestions; free-typing is always allowed.
   const SECTION_LABEL_VOCAB = [
     'base', 'batter', 'broth', 'cold prep', 'crust', 'dough', 'filling',
@@ -2267,7 +2267,7 @@
             class="form-input section-method-select"
             title="How this section is prepared before the primary cook"
           >
-            <option value="none">raw / no prep</option>
+            <option value="none">no prep</option>
             {#each SECTION_PREP_METHODS as m}
               <option value={m}>{m}</option>
             {/each}
