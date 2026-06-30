@@ -173,6 +173,7 @@
   let cookingMethod = $state(initialData.cookingMethod || 'Bake');
   let cookMinutes = $state<number | undefined>(initialData.cookMinutes);
   let cookTempF = $state<number | undefined>(initialData.cookTempF);
+  let cookHelpOpen = $state(false);
   let dishFamily = $state(initialData.dishFamily || '');
   let category = $state(toStoredRecipeCategory(initialData.category));
   let dietaryCategory = $state<DietaryCategory>(initialData.dietaryCategory || 'all');
@@ -2553,7 +2554,43 @@
             </label>
           {/if}
         {/if}
+        <button type="button" class="cook-help-btn" onclick={() => cookHelpOpen = true} title="How to fill in these fields">ⓘ</button>
       </div>
+
+      {#if cookHelpOpen}
+        <div class="cook-help-backdrop" onclick={() => cookHelpOpen = false} role="presentation">
+          <div class="cook-help-dialog" onclick={(e) => e.stopPropagation()} role="dialog" aria-modal="true" aria-label="How to use the cook form fields">
+            <button type="button" class="cook-help-close" onclick={() => cookHelpOpen = false} aria-label="Close">✕</button>
+            <h3 class="cook-help-title">How the cook fields work</h3>
+
+            <h4 class="cook-help-section">Cook * — the primary heat (top bar)</h4>
+            <p>This is the <strong>final application of heat</strong> after all sections are assembled — the oven, the stovetop, or the grill that finishes the whole dish. Set it once and it applies to every section.</p>
+            <ul>
+              <li><strong>Bake (min) / Cook (min)</strong> — how long the finished dish stays in the oven or on the burner. Longer time = more moisture driven off = higher calorie density per gram.</li>
+              <li><strong>Temp (°F)</strong> — oven temperature (Bake only). Higher heat accelerates water loss and affects fat-soluble vitamin survival.</li>
+            </ul>
+
+            <h4 class="cook-help-section">Each section's Prep method</h4>
+            <p>Some sections need cooking <strong>before</strong> they join the rest of the dish. Pick the method that applies:</p>
+            <ul>
+              <li><strong>no heat</strong> — ingredients go in as-is (cold, raw, or already cooked). This is correct for most sections.</li>
+              <li><strong>boiled / steamed</strong> — simmered or steamed on the stovetop first. Enter Prep (min) so the model knows how much water evaporated before assembly.</li>
+              <li><strong>baked / par-baked</strong> — pre-baked separately (e.g. blind-baking a pie crust). Enter Prep (min) and Prep (°F).</li>
+              <li><strong>pan grilled / fried</strong> — sautéed or fried before combining. If fat drains off and is discarded, the model removes those calories from that section.</li>
+              <li><strong>marinated / chilled</strong> — cold prep only; no heat calculations apply.</li>
+            </ul>
+
+            <h4 class="cook-help-section">Why this matters for nutrition</h4>
+            <p>The calculator runs <strong>two passes</strong> per section:</p>
+            <ol>
+              <li><strong>Prep pass</strong> — applies the section's prep method and time to calculate water lost (or absorbed) <em>before</em> assembly.</li>
+              <li><strong>Cook pass</strong> — applies the recipe-level Cook method, time, and temp to whatever remains after prep.</li>
+            </ol>
+            <p>Skipping the stovetop simmer time means the model thinks a wet filling enters the oven at full weight and overestimates water content — understating calories, sugar concentration, and fat percentage in the final serving. Skipping a fat-drain step (pan grilling ground beef) overcounts calories because the rendered fat appears to stay in the dish.</p>
+            <p class="cook-help-tip">💡 When in doubt, choose <strong>no heat</strong> — it's the safe default. Only add a prep method if that section literally goes on a burner, in an oven, or in a pan <em>by itself</em> before everything is combined.</p>
+          </div>
+        </div>
+      {/if}
 
       {#if sections.length === 0}
         {@const unsectioned = ingredients.filter((ing) => ing.name.trim() || ing.quantity.trim())}
@@ -3228,6 +3265,78 @@
   }
   .primary-cook-name {
     white-space: nowrap;
+  }
+  .cook-help-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #4299e1;
+    padding: 0 2px;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .cook-help-btn:hover { color: #2b6cb0; }
+  .cook-help-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+  .cook-help-dialog {
+    background: #fff;
+    border-radius: 10px;
+    padding: 24px 28px 20px;
+    max-width: 520px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+  }
+  .cook-help-close {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #718096;
+  }
+  .cook-help-close:hover { color: #2d3748; }
+  .cook-help-title {
+    margin: 0 0 14px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #2d3748;
+  }
+  .cook-help-section {
+    margin: 14px 0 4px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #2d3748;
+  }
+  .cook-help-dialog p, .cook-help-dialog ul, .cook-help-dialog ol {
+    font-size: 0.85rem;
+    color: #4a5568;
+    margin: 0 0 8px;
+    line-height: 1.5;
+  }
+  .cook-help-dialog ul, .cook-help-dialog ol {
+    padding-left: 18px;
+  }
+  .cook-help-dialog li { margin-bottom: 4px; }
+  .cook-help-tip {
+    background: #ebf8ff;
+    border-left: 3px solid #4299e1;
+    padding: 8px 12px;
+    border-radius: 0 6px 6px 0;
+    margin-top: 10px !important;
   }
   .primary-cook-select {
     font-size: 0.85rem;
