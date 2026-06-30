@@ -101,7 +101,7 @@ yfw = retained_water / raw_water_in_section
 3. No explicit `water` row should appear in the section — the model provides the absorbed water automatically.
 
 **Pipeline execution order (build.py priority):**
-1. Absorption model fires first when `cook_method in ('boiled','simmered')` **and** the section contains at least one absorber NDB.
+1. Absorption model fires first when the normalized cook method resolves to `'boiled'` (i.e. the section uses `boiled`, `simmer`, `sub-simmer`, or `braise`) **and** the section contains at least one absorber NDB.
 2. Manual `yield_factor_water` override from `recipe_sections.csv` (used for locked recipes only).
 3. Physics-based evaporation model (`calc_yield_water`).
 4. Default `yfw = 1.0`.
@@ -201,7 +201,7 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 - **fat column in `comboo.db`** is literal `'n'` for recipe entries — always use `TotalLipidFat`.
 - **NDB_No is stored as integer** in `comboo.db` (no leading zeros).
 - `step_order` must be plain integers (not "1a", "2b").
-- `cooking_method` must be one of: `raw`, `boiled`, `steamed`, `baked`, `fried`, `pan grilled`, `grilled`, `microwave`. (`pan grilled` is an alias for `fried` — same retention factors, friendlier display label.) Compound strings not supported — use `recipe_sections.csv` for multi-stage. **`simmered` is NOT a valid value** — use `boiled` for any simmered/braised/stewed cooking. Using `simmered` silently produces no cook method in the section display. (Discovered June 2026, SIDE_028.)
+- `cooking_method` must be one of: `raw`, `boiled`, `simmer`, `sub-simmer`, `braise`, `steamed`, `baked`, `fried`, `pan grilled`, `grilled`, `microwave`. (`pan grilled` is an alias for `fried` — same retention factors, friendlier display label. `simmer`, `sub-simmer`, and `braise` are stovetop-temperature aliases for `boiled` — they share boiled retention factors but trigger different evaporation rates in the water yield model: `boiled`=212°F open pot, `simmer`=195°F open pot, `sub-simmer`=180°F open pot, `braise`=185°F covered/5% open-pot evaporation. **`simmered` is NOT valid** — note the -ed suffix; use `simmer` or `boiled`. Using `simmered` silently produces no cook method in the section display. Discovered June 2026, SIDE_028.) Compound strings not supported — use `recipe_sections.csv` for multi-stage.
 - `dietary_category` must be one of: `all`, `pollo-pesca`, `pollo`, `pesca`, `veggie`, `vegan`. These are the keys in `DIETARY_INCLUDES` in `RecipeBook.svelte`; any other value silently hides the recipe from all users. Enforced by `validate_ledger.py`.
 - **`dietary_category` assignment rule — apply every time a new recipe is authored:**
   - **`all`** — recipe contains beef, pork, lamb, game, or offal. **`all` does NOT mean "visible to all users" — it means "requires no dietary restrictions" (i.e. contains red meat).** This is the most common authoring mistake.
