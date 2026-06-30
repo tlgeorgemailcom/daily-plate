@@ -1608,40 +1608,6 @@
           {/each}
         </select>
       </label>
-
-      <label class="form-label">
-        Cook *
-        <select bind:value={cookingMethod} class="form-select">
-          {#each COOKING_METHODS as m}
-            <option value={m}>{m}</option>
-          {/each}
-        </select>
-        {#if cookingMethod !== 'No heat'}
-          <div class="cook-timing-row">
-            <label class="section-time-field" title="Total cook time in minutes">
-              <span class="section-time-label">{cookingMethod === 'Bake' ? 'Bake (min)' : 'Cook (min)'}</span>
-              <input
-                type="number" min="0" max="600" step="1" placeholder="–"
-                value={cookMinutes ?? ''}
-                oninput={(e) => { const v = (e.currentTarget as HTMLInputElement).valueAsNumber; cookMinutes = Number.isFinite(v) && v >= 0 ? v : undefined; }}
-                class="form-input time-number-input"
-              />
-            </label>
-            {#if cookingMethod === 'Bake'}
-              <label class="section-time-field" title="Oven temperature °F">
-                <span class="section-time-label">Temp (°F)</span>
-                <input
-                  type="number" min="200" max="600" step="25" placeholder="–"
-                  value={cookTempF ?? ''}
-                  oninput={(e) => { const v = (e.currentTarget as HTMLInputElement).valueAsNumber; cookTempF = Number.isFinite(v) && v > 0 ? v : undefined; }}
-                  class="form-input time-number-input"
-                />
-              </label>
-            {/if}
-          </div>
-        {/if}
-        <span class="field-hint">The primary cooking method — applies to all sections. Sections may add a stovetop pre-step below.</span>
-      </label>
     </div>
     
     {#if !moderatorMode}
@@ -2543,6 +2509,39 @@
         </div>
       {/snippet}
 
+      <div class="primary-cook-bar">
+        <label class="primary-cook-label">
+          <span class="primary-cook-name">Cook *</span>
+          <select bind:value={cookingMethod} class="form-select primary-cook-select">
+            {#each COOKING_METHODS as m}
+              <option value={m}>{m}</option>
+            {/each}
+          </select>
+        </label>
+        {#if cookingMethod !== 'No heat'}
+          <label class="section-time-field" title="Total cook time in minutes">
+            <span class="section-time-label">{cookingMethod === 'Bake' ? 'Bake (min)' : 'Cook (min)'}</span>
+            <input
+              type="number" min="0" max="600" step="1" placeholder="–"
+              value={cookMinutes ?? ''}
+              oninput={(e) => { const v = (e.currentTarget as HTMLInputElement).valueAsNumber; cookMinutes = Number.isFinite(v) && v >= 0 ? v : undefined; }}
+              class="form-input time-number-input"
+            />
+          </label>
+          {#if cookingMethod === 'Bake'}
+            <label class="section-time-field" title="Oven temperature °F">
+              <span class="section-time-label">Temp (°F)</span>
+              <input
+                type="number" min="200" max="600" step="25" placeholder="–"
+                value={cookTempF ?? ''}
+                oninput={(e) => { const v = (e.currentTarget as HTMLInputElement).valueAsNumber; cookTempF = Number.isFinite(v) && v > 0 ? v : undefined; }}
+                class="form-input time-number-input"
+              />
+            </label>
+          {/if}
+        {/if}
+      </div>
+
       {#if sections.length === 0}
         {@const unsectioned = ingredients.filter((ing) => ing.name.trim() || ing.quantity.trim())}
         {#if unsectioned.length > 0}
@@ -3196,12 +3195,30 @@
   }
   .section-gear-btn:hover { background: #edf2f7; }
   .section-remove-btn { padding: 2px 8px; }
-  .cook-timing-row {
+  .primary-cook-bar {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 14px;
     flex-wrap: wrap;
-    margin-top: 6px;
+    padding: 8px 2px 10px;
+    margin-bottom: 6px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .primary-cook-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #4a5568;
+    margin: 0;
+  }
+  .primary-cook-name {
+    white-space: nowrap;
+  }
+  .primary-cook-select {
+    font-size: 0.85rem;
+    padding: 3px 8px;
   }
   .section-times-bar {
     display: flex;
