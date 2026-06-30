@@ -156,7 +156,7 @@
   const COOKING_METHODS = ['Bake', 'Boil', 'Grill', 'Fry', 'No heat'];
   // v3.md §18.1 — lowercase enum stored in recipe_sections.csv::cooking_method.
   const SECTION_COOKING_METHODS = ['raw', 'boiled', 'steamed', 'baked', 'fried', 'pan grilled', 'grilled', 'microwave'];
-  const SECTION_PREP_METHODS    = ['boiled', 'steamed', 'blanched', 'baked', 'par-baked', 'fried', 'pan grilled', 'grilled', 'marinated', 'chilled', 'microwave'];
+  const SECTION_PREP_METHODS    = ['boiled', 'simmer', 'steamed', 'blanched', 'baked', 'par-baked', 'fried', 'pan grilled', 'grilled', 'marinated', 'chilled', 'microwave'];
   // v3.md §18.6 — datalist suggestions; free-typing is always allowed.
   const SECTION_LABEL_VOCAB = [
     'base', 'batter', 'broth', 'cold prep', 'crust', 'dough', 'filling',
@@ -904,7 +904,7 @@
           sections = data.sections.map((s) => ({
             key: s.section_key,
             label: autoLabel ?? s.section_label,
-            prepMethod: s.prep_method ?? undefined,
+            prepMethod: (s.prep_method === 'raw' || !s.prep_method) ? undefined : s.prep_method,
             cookingMethod: s.cooking_method,
             yieldFactorWater: s.yield_factor_water,
             yieldFactorFat: s.yield_factor_fat,
@@ -1480,7 +1480,7 @@
             nextSections = data.sections.map((s: Record<string, unknown>) => ({
               key: String(s.section_key ?? s.key ?? ''),
               label: String(s.section_label ?? s.label ?? ''),
-              prepMethod: typeof s.prep_method === 'string' ? s.prep_method : (typeof s.prepMethod === 'string' ? s.prepMethod : undefined),
+              prepMethod: (() => { const v = typeof s.prep_method === 'string' ? s.prep_method : (typeof s.prepMethod === 'string' ? s.prepMethod : undefined); return (v === 'raw' || !v) ? undefined : v; })(),
               cookingMethod: String(s.cooking_method ?? s.cookingMethod ?? 'baked'),
               yieldFactorWater: typeof s.yield_factor_water === 'number' ? s.yield_factor_water : (typeof s.yieldFactorWater === 'number' ? s.yieldFactorWater : undefined),
               yieldFactorFat: typeof s.yield_factor_fat === 'number' ? s.yield_factor_fat : (typeof s.yieldFactorFat === 'number' ? s.yieldFactorFat : undefined),
@@ -2291,7 +2291,7 @@
             aria-label="Remove section"
           >✕</button>
         </div>
-        {#if sec.prepMethod && ['boiled','steamed','blanched','baked','par-baked','fried','pan grilled','grilled','microwave'].includes(sec.prepMethod)}
+        {#if sec.prepMethod && ['boiled','simmer','steamed','blanched','baked','par-baked','fried','pan grilled','grilled','microwave'].includes(sec.prepMethod)}
           <div class="section-times-bar">
             <label class="section-time-field" title="Time for the prep step in minutes">
               <span class="section-time-label">Prep (min)</span>
