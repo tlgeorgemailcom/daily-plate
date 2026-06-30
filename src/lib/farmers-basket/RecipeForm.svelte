@@ -156,7 +156,7 @@
   const COOKING_METHODS = ['Bake', 'Boil', 'Grill', 'Fry', 'No heat'];
   // v3.md §18.1 — lowercase enum stored in recipe_sections.csv::cooking_method.
   const SECTION_COOKING_METHODS = ['raw', 'boiled', 'steamed', 'baked', 'fried', 'pan grilled', 'grilled', 'microwave'];
-  const SECTION_PREP_METHODS    = ['boiled', 'simmer', 'steamed', 'blanched', 'baked', 'par-baked', 'fried', 'pan grilled', 'grilled', 'marinated', 'chilled', 'microwave'];
+  const SECTION_PREP_METHODS    = ['boiled', 'simmer', 'sub-simmer', 'steamed', 'blanched', 'baked', 'par-baked', 'fried', 'pan grilled', 'grilled', 'marinated', 'chilled', 'microwave'];
   // v3.md §18.6 — datalist suggestions; free-typing is always allowed.
   const SECTION_LABEL_VOCAB = [
     'base', 'batter', 'broth', 'cold prep', 'crust', 'dough', 'filling',
@@ -2291,7 +2291,7 @@
             aria-label="Remove section"
           >✕</button>
         </div>
-        {#if sec.prepMethod && ['boiled','simmer','steamed','blanched','baked','par-baked','fried','pan grilled','grilled','microwave'].includes(sec.prepMethod)}
+        {#if sec.prepMethod && ['boiled','simmer','sub-simmer','steamed','blanched','baked','par-baked','fried','pan grilled','grilled','microwave'].includes(sec.prepMethod)}
           <div class="section-times-bar">
             <label class="section-time-field" title="Time for the prep step in minutes">
               <span class="section-time-label">Prep (min)</span>
@@ -2574,7 +2574,7 @@
             <p>Some sections need cooking <strong>before</strong> they join the rest of the dish. Pick the method that applies:</p>
             <ul>
               <li><strong>no heat</strong> — ingredients go in as-is (cold, raw, or already cooked). This is correct for most sections.</li>
-              <li><strong>boiled / steamed</strong> — simmered or steamed on the stovetop first. Enter Prep (min) so the model knows how much water evaporated before assembly.</li>
+              <li><strong>boiled / simmer / sub-simmer / steamed</strong> — stovetop pre-cook. Enter Prep (min) so the model knows how much water evaporated before assembly. <em>boiled</em> uses 212 °F (rolling boil); <em>simmer</em> 195 °F (gentle bubble); <em>sub-simmer</em> 180 °F (stock / braise pace).</li>
               <li><strong>baked / par-baked</strong> — pre-baked separately (e.g. blind-baking a pie crust). Enter Prep (min) and Prep (°F).</li>
               <li><strong>pan grilled / fried</strong> — sautéed or fried before combining. If fat drains off and is discarded, the model removes those calories from that section.</li>
               <li><strong>marinated / chilled</strong> — cold prep only; no heat calculations apply.</li>

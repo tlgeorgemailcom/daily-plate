@@ -242,6 +242,17 @@ export function buildRecipeCommunity(
     const boilMinutes = (sec as CommunitySection & { boilMinutes?: number }).boilMinutes ?? 0;
 
     // ── Water yield ────────────────────────────────────────────────────────────
+    // Maps a prep method string to its canonical stovetop temperature °F.
+    // Both 'simmer' and 'sub-simmer' map to CookingMethod 'boiled' via
+    // mapDishMethodToCookingMethod, but need distinct temperatures here.
+    function prepMethodToTempF(method: string | undefined | null): number {
+      if (!method) return 212;
+      const m = method.toLowerCase();
+      if (m === 'sub-simmer') return 180;
+      if (m === 'simmer')     return 195;
+      return 212;
+    }
+
     // Chained (hasPrepStep): yfw_total = yfw_prep × yfw_primary (compounding).
     //   Prep pass  — boilMinutes drives the stovetop pre-cook yield.
     //   Primary pass — oven stages drive the final cook yield.
@@ -265,7 +276,7 @@ export function buildRecipeCommunity(
           const retainedWaterG_prep = dryNonWaterG * weightedFactor_prep / (1 - weightedFactor_prep);
           yfw_prep = initialWaterG > 0 ? retainedWaterG_prep / initialWaterG : 1.0;
         } else {
-          yfw_prep = calcYieldWater([], initialWaterG, fillingClass, boilMinutes);
+          yfw_prep = calcYieldWater([], initialWaterG, fillingClass, boilMinutes, prepMethodToTempF(sec.prepMethod));
         }
       } else {
         // Non-boiled prep (steamed, fried, etc.): use evaporation model with no oven stages.
@@ -278,6 +289,7 @@ export function buildRecipeCommunity(
       const interWaterG = initialWaterG * yfw_prep;
       const primaryBoilMins = effectiveCookMethod === 'boiled' ? (sec.cookMinutes ?? 0) : 0;
       const yfw_primary = calcYieldWater(stages, interWaterG, fillingClass, primaryBoilMins);
+      // Note: primary cook temp is always 212 °F — recipe-level COOKING_METHODS has 'Boil' only.
 
       // Compound: total water yield = prep × primary
       yieldWater = yfw_prep * yfw_primary;

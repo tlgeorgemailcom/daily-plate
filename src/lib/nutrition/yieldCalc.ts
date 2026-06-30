@@ -26,6 +26,15 @@ const N_TEMP     = 1.8;     // temperature sensitivity exponent
 const T_REF      = 350.0;   // reference temperature °F
 const BOIL_K_REF = 0.236;   // open-pot stovetop evaporation rate constant
                              // ~29× higher than oven k — convective surface evap
+const BOIL_T_REF = 212.0;   // rolling boil reference temperature °F
+
+// Temperature-scaled stovetop evaporation rate.
+//   boiled     (212 °F) → 0.236       (baseline)
+//   simmer     (195 °F) → ≈ 0.198  (−16 %)
+//   sub-simmer (180 °F) → ≈ 0.163  (−31 %)
+function stovetopRateConstant(tempF: number): number {
+  return BOIL_K_REF * Math.pow(tempF / BOIL_T_REF, N_TEMP);
+}
 
 // ── Binding coefficients ──────────────────────────────────────────────────────
 // Fraction of initial water that is free to evaporate (0 = none, 1 = all).
@@ -69,6 +78,8 @@ export function rateConstant(tempF: number): number {
  * @param initialWaterG Total water mass (g) in the raw filling ingredients.
  * @param fillingClass  Key from BINDING. Defaults to 'none' (yfw = 1.0).
  * @param boilMinutes   Minutes of open-pot stovetop boiling BEFORE oven stages.
+ * @param boilTempF     Stovetop temperature °F (default 212 = rolling boil).
+ *                      Pass 195 for 'simmer' or 180 for 'sub-simmer'.
  *
  * @returns yield_water (0 < value ≤ 1.0)
  *
@@ -78,12 +89,16 @@ export function rateConstant(tempF: number): number {
  *
  * // Vanilla custard: stovetop boil only
  * calcYieldWater([], 380.0, 'dairy_custard', 8.0) // ≈ 0.720
+ *
+ * // Sauce simmered 20 min at 195 °F
+ * calcYieldWater([], 240.0, 'none', 20, 195) // ≈ 0.853 vs 0.827 at full boil
  */
 export function calcYieldWater(
   stages: Array<[tempF: number, minutes: number]>,
   initialWaterG: number,
   fillingClass: string = 'none',
   boilMinutes: number = 0,
+  boilTempF: number = 212,
 ): number {
   if (initialWaterG <= 0) return 1.0;
 
@@ -91,9 +106,9 @@ export function calcYieldWater(
   let freeWater    = initialWaterG * binding;
   const boundWater = initialWaterG * (1.0 - binding);
 
-  // Stage 0: stovetop boil (open-pot, convective evaporation)
+  // Stage 0: stovetop (open-pot, convective evaporation — temperature-scaled)
   if (boilMinutes > 0) {
-    freeWater *= Math.exp(-BOIL_K_REF * boilMinutes);
+    freeWater *= Math.exp(-stovetopRateConstant(boilTempF) * boilMinutes);
   }
 
   // Stages 1-N: oven bake (diffusion-limited, temperature-dependent)
