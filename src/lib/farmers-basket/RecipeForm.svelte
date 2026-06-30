@@ -149,6 +149,7 @@
   const COOKING_METHODS = ['Bake', 'Boil', 'Grill', 'Fry', 'No heat'];
   // v3.md §18.1 — lowercase enum stored in recipe_sections.csv::cooking_method.
   const SECTION_COOKING_METHODS = ['raw', 'boiled', 'steamed', 'baked', 'fried', 'pan grilled', 'grilled', 'microwave'];
+  const SECTION_PREP_METHODS    = ['raw', 'boiled', 'steamed', 'blanched', 'baked', 'par-baked', 'fried', 'pan grilled', 'grilled', 'marinated', 'chilled', 'microwave'];
   // v3.md §18.6 — datalist suggestions; free-typing is always allowed.
   const SECTION_LABEL_VOCAB = [
     'base', 'batter', 'broth', 'cold prep', 'crust', 'dough', 'filling',
@@ -2245,24 +2246,43 @@
             class="form-input section-label-input"
           />
           <span class="section-card-dash">—</span>
-          <span class="section-method-label">Prep</span>
-          <select
-            value={sec.prepMethod ?? sec.cookingMethod}
-            onchange={(e) => { sections = sections.map((s, i) => i === sIdx ? { ...s, prepMethod: (e.currentTarget as HTMLSelectElement).value } : s); }}
-            class="form-input section-method-select section-prep-select"
-            title="Prep method (how ingredients are prepared before cooking)"
-          >
-            {#each SECTION_COOKING_METHODS as m}
-              <option value={m}>{m}</option>
-            {/each}
-          </select>
-          <span class="section-arrow" title="prep → cook">→</span>
-          <span class="section-method-label">Cook</span>
-          <select bind:value={sec.cookingMethod} class="form-input section-method-select">
-            {#each SECTION_COOKING_METHODS as m}
-              <option value={m}>{m}</option>
-            {/each}
-          </select>
+          {#if sec.prepMethod && sec.prepMethod !== sec.cookingMethod}
+            <!-- Prep step: type toggle + prepMethod select -->
+            <select
+              value="prep"
+              onchange={() => { sections = sections.map((s, i) => i === sIdx ? { ...s, prepMethod: undefined } : s); }}
+              class="form-input section-type-select"
+              title="Switch to Cook step"
+            >
+              <option value="prep">Prep</option>
+              <option value="cook">Cook</option>
+            </select>
+            <select
+              value={sec.prepMethod}
+              onchange={(e) => { sections = sections.map((s, i) => i === sIdx ? { ...s, prepMethod: (e.currentTarget as HTMLSelectElement).value } : s); }}
+              class="form-input section-method-select section-prep-select"
+            >
+              {#each SECTION_PREP_METHODS as m}
+                <option value={m}>{m}</option>
+              {/each}
+            </select>
+          {:else}
+            <!-- Cook step: type toggle + cookingMethod select -->
+            <select
+              value="cook"
+              onchange={() => { sections = sections.map((s, i) => i === sIdx ? { ...s, prepMethod: 'raw' } : s); }}
+              class="form-input section-type-select"
+              title="Switch to Prep step"
+            >
+              <option value="cook">Cook</option>
+              <option value="prep">Prep</option>
+            </select>
+            <select bind:value={sec.cookingMethod} class="form-input section-method-select">
+              {#each SECTION_COOKING_METHODS as m}
+                <option value={m}>{m}</option>
+              {/each}
+            </select>
+          {/if}
           {#if moderatorMode}
             <button
               type="button"
@@ -3114,25 +3134,21 @@
     font-size: 0.85rem;
     background: white;
   }
+  .section-header-bar .section-type-select {
+    flex: 0 0 68px;
+    padding: 5px 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background: #edf2f7;
+    color: #4a5568;
+    border-color: #cbd5e0;
+  }
   .section-header-bar .section-prep-select {
-    background: #f7fafc;
+    background: #fefcbf;
   }
   .section-card-dash {
     color: #a0aec0;
     font-weight: 600;
-  }
-  .section-arrow {
-    color: #a0aec0;
-    font-size: 0.8rem;
-    flex-shrink: 0;
-  }
-  .section-method-label {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: #718096;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    flex-shrink: 0;
   }
   .section-gear-btn {
     background: transparent;
