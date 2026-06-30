@@ -274,8 +274,10 @@ export function buildRecipeCommunity(
 
       // ── Primary cook water yield ───────────────────────────────────────────
       // Operates on the post-prep water mass; boilMinutes already consumed by prep pass.
+      // For a boiled primary, use cookMinutes as the stovetop time.
       const interWaterG = initialWaterG * yfw_prep;
-      const yfw_primary = calcYieldWater(stages, interWaterG, fillingClass, 0);
+      const primaryBoilMins = effectiveCookMethod === 'boiled' ? (sec.cookMinutes ?? 0) : 0;
+      const yfw_primary = calcYieldWater(stages, interWaterG, fillingClass, primaryBoilMins);
 
       // Compound: total water yield = prep × primary
       yieldWater = yfw_prep * yfw_primary;

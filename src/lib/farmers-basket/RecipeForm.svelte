@@ -36,6 +36,12 @@
     yieldFactorWater?: number;
     yieldFactorFat?: number;
     yieldFactorOther?: number;
+    /** Stovetop uncovered time for the prep step in minutes (feeds calcYieldWater prep pass). */
+    boilMinutes?: number;
+    /** Primary cook time in minutes (baked: oven time; boiled: stove time). */
+    cookMinutes?: number;
+    /** Primary cook temperature °F for baked sections (feeds oven stages in calcYieldWater). */
+    cookTempF?: number;
   }
   
   export interface RecipeInstruction {
@@ -608,7 +614,7 @@
   }
   function addSection() {
     const key = uniqueSectionKey('section_' + (sections.length + 1));
-    sections = [...sections, { key, label: '', prepMethod: undefined, cookingMethod: 'baked', yieldFactorWater: 1.0 }];
+    sections = [...sections, { key, label: '', prepMethod: undefined, cookingMethod: 'baked', yieldFactorWater: 1.0, boilMinutes: undefined, cookMinutes: undefined, cookTempF: undefined }];
   }
   function removeSection(idx: number) {
     const removedKey = sections[idx]?.key;
@@ -645,7 +651,7 @@
   function addSectionWithRow() {
     const idx = sections.length;
     const key = uniqueSectionKey(`section_${idx + 1}`);
-    sections = [...sections, { key, label: '', prepMethod: undefined, cookingMethod: 'baked', yieldFactorWater: 1.0 }];
+    sections = [...sections, { key, label: '', prepMethod: undefined, cookingMethod: 'baked', yieldFactorWater: 1.0, boilMinutes: undefined, cookMinutes: undefined, cookTempF: undefined }];
     addIngredientToSection(key);
   }
 
@@ -1470,6 +1476,9 @@
               yieldFactorWater: typeof s.yield_factor_water === 'number' ? s.yield_factor_water : (typeof s.yieldFactorWater === 'number' ? s.yieldFactorWater : undefined),
               yieldFactorFat: typeof s.yield_factor_fat === 'number' ? s.yield_factor_fat : (typeof s.yieldFactorFat === 'number' ? s.yieldFactorFat : undefined),
               yieldFactorOther: typeof s.yield_factor_other === 'number' ? s.yield_factor_other : (typeof s.yieldFactorOther === 'number' ? s.yieldFactorOther : undefined),
+              boilMinutes: typeof s.boil_minutes === 'number' ? s.boil_minutes : (typeof s.boilMinutes === 'number' ? s.boilMinutes : undefined),
+              cookMinutes: typeof s.cook_minutes === 'number' ? s.cook_minutes : (typeof s.cookMinutes === 'number' ? s.cookMinutes : undefined),
+              cookTempF: typeof s.cook_temp_f === 'number' ? s.cook_temp_f : (typeof s.cookTempF === 'number' ? s.cookTempF : undefined),
             })).filter((s: RecipeSection) => s.key);
           }
         }
@@ -2281,6 +2290,42 @@
             aria-label="Remove section"
           >✕</button>
         </div>
+        {#if cookingMethod !== 'No heat' || (sec.prepMethod && sec.prepMethod !== 'none')}
+          <div class="section-times-bar">
+            {#if sec.prepMethod && sec.prepMethod !== 'none'}
+              <label class="section-time-field" title="Stovetop time for the pre-step (uncovered), in minutes">
+                <span class="section-time-label">Prep (min)</span>
+                <input
+                  type="number" min="0" max="600" step="1" placeholder="–"
+                  value={sec.boilMinutes ?? ''}
+                  oninput={(e) => { const v = (e.currentTarget as HTMLInputElement).valueAsNumber; sections = sections.map((s, i) => i === sIdx ? { ...s, boilMinutes: Number.isFinite(v) && v >= 0 ? v : undefined } : s); }}
+                  class="form-input time-number-input"
+                />
+              </label>
+              <span class="section-time-arrow">→</span>
+            {/if}
+            <label class="section-time-field" title="Total cook time for this section, in minutes">
+              <span class="section-time-label">Cook (min)</span>
+              <input
+                type="number" min="0" max="600" step="1" placeholder="–"
+                value={sec.cookMinutes ?? ''}
+                oninput={(e) => { const v = (e.currentTarget as HTMLInputElement).valueAsNumber; sections = sections.map((s, i) => i === sIdx ? { ...s, cookMinutes: Number.isFinite(v) && v >= 0 ? v : undefined } : s); }}
+                class="form-input time-number-input"
+              />
+            </label>
+            {#if cookingMethod === 'Bake'}
+              <label class="section-time-field" title="Oven temperature °F for the primary bake">
+                <span class="section-time-label">Temp (°F)</span>
+                <input
+                  type="number" min="200" max="600" step="25" placeholder="350"
+                  value={sec.cookTempF ?? ''}
+                  oninput={(e) => { const v = (e.currentTarget as HTMLInputElement).valueAsNumber; sections = sections.map((s, i) => i === sIdx ? { ...s, cookTempF: Number.isFinite(v) && v > 0 ? v : undefined } : s); }}
+                  class="form-input time-number-input"
+                />
+              </label>
+            {/if}
+          </div>
+        {/if}
         {#if moderatorMode && sectionAdvancedOpen[sIdx]}
           <div class="section-card-advanced">
             <label class="advanced-field">
@@ -3142,6 +3187,37 @@
   }
   .section-gear-btn:hover { background: #edf2f7; }
   .section-remove-btn { padding: 2px 8px; }
+  .section-times-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding: 4px 2px 8px;
+    margin-bottom: 4px;
+  }
+  .section-time-field {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.78rem;
+    color: #718096;
+    white-space: nowrap;
+  }
+  .section-time-label {
+    font-weight: 500;
+    color: #4a5568;
+  }
+  .time-number-input {
+    width: 64px;
+    padding: 3px 6px;
+    font-size: 0.85rem;
+    text-align: center;
+  }
+  .section-time-arrow {
+    color: #a0aec0;
+    font-size: 0.85rem;
+    margin: 0 2px;
+  }
   .section-card-advanced {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
