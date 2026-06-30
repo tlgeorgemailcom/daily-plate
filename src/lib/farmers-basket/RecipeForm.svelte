@@ -2290,9 +2290,9 @@
             aria-label="Remove section"
           >✕</button>
         </div>
-        {#if cookingMethod !== 'No heat' || (sec.prepMethod && sec.prepMethod !== 'none')}
+        {#if cookingMethod !== 'No heat' || (sec.prepMethod === 'boiled' || sec.prepMethod === 'steamed')}
           <div class="section-times-bar">
-            {#if sec.prepMethod && sec.prepMethod !== 'none'}
+            {#if sec.prepMethod === 'boiled' || sec.prepMethod === 'steamed'}
               <label class="section-time-field" title="Stovetop time for the pre-step (uncovered), in minutes">
                 <span class="section-time-label">Prep (min)</span>
                 <input
