@@ -935,6 +935,18 @@
             stages: s.cook_stages ?? undefined,
             fillClass: s.fill_class ?? undefined,
           }));
+          // Derive recipe-level cookTempF / cookMinutes from section stages
+          // (present once build.py writes them into the build JSON).
+          for (const sec of sections) {
+            if (Array.isArray(sec.stages) && sec.stages.length > 0) {
+              const totalMins = (sec.stages as Array<{ tempF: number; minutes: number }>)
+                .reduce((sum, st) => sum + (st.minutes ?? 0), 0);
+              if (totalMins > 0 && cookMinutes == null) cookMinutes = totalMins;
+              const firstTempF = (sec.stages as Array<{ tempF: number; minutes: number }>)[0].tempF;
+              if (firstTempF > 0 && cookTempF == null) cookTempF = firstTempF;
+              break;
+            }
+          }
         }
         // Composite recipes (Rule D) reference child recipes via `component_ref`
         // rows that have no NDB. We skip those here and rely on initialData's
@@ -1564,9 +1576,9 @@
         if (Array.isArray(sec.stages) && sec.stages.length > 0) {
           const totalMins = (sec.stages as Array<{ tempF: number; minutes: number }>)
             .reduce((sum, st) => sum + (st.minutes ?? 0), 0);
-          if (totalMins > 0 && cookMinutes === undefined) cookMinutes = totalMins;
+          if (totalMins > 0 && cookMinutes == null) cookMinutes = totalMins;
           const firstTempF = (sec.stages as Array<{ tempF: number; minutes: number }>)[0].tempF;
-          if (firstTempF > 0 && cookTempF === undefined) cookTempF = firstTempF;
+          if (firstTempF > 0 && cookTempF == null) cookTempF = firstTempF;
           break;
         }
       }

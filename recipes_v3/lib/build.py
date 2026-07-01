@@ -639,6 +639,7 @@ def _build_recipe_multi(
         raw_water += st["raw_water"]
         raw_fat += st["raw_fat"]
 
+        _parsed_stages = _parse_stages(s.cook_stages) if s.cook_stages else []
         sections_out.append({
             "section_key": sec_key,
             "section_label": s.section_label,
@@ -660,6 +661,10 @@ def _build_recipe_multi(
             "raw_carb_grams": _round(st["raw_carb"], 2),
             "raw_fiber_grams": _round(st["raw_fiber"], 2),
             "final_grams": _round(final_S, 2),
+            # Section physics metadata for the edit form (v3-build API path).
+            "boil_minutes": float(s.boil_stages) if s.boil_stages else 0,
+            "cook_stages": [{"tempF": t, "minutes": m} for t, m in _parsed_stages],
+            "fill_class": s.filling_class or "",
         })
 
     if raw_total_grams <= 0:
