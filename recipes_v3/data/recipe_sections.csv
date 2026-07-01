@@ -1,6 +1,6 @@
 recipe_id,section_key,section_label,prep_method,cook_method,yield_factor_water,yield_factor_fat,yield_factor_protein,yield_factor_carbohydrate,yield_factor_other,yield_factor_fiber,filling_class,cook_stages,boil_stages,source_recipe
 SWEET_001,crust,Pie crust,raw,baked,0.82,1.0,,,1.0,,,,,
-SWEET_001,filling,Apple filling,simmer,baked,,1.0,,,1.0,,dense_fruit,"425:15,350:37",5,
+SWEET_001,filling,Apple filling,simmer,baked,,1.0,,,1.0,,thickened_fruit,"425:15,350:37",5,
 SWEET_003,crust,Pie crust,baked,baked,0.75,1.0,,,1.0,,,,,
 SWEET_003,filling,Vanilla custard filling,boiled,boiled,,1.0,,,1.0,,dairy_custard,,8,
 SWEET_003,assembly,Banana layer,raw,raw,1.0,1.0,,,1.0,,,,,

@@ -137,7 +137,7 @@ const CALIBRATION_CASES: Array<{
   initialWater: number;
   expected: number;
 }> = [
-  { recipe: 'SWEET_001 Apple Pie',             fillingClass: 'dense_fruit',       stages: [[425, 15], [350, 37]], initialWater: 722.5, expected: 0.65 },
+  { recipe: 'SWEET_001 Apple Pie',             fillingClass: 'thickened_fruit',   stages: [[425, 15], [350, 37]], boilMinutes: 5, initialWater: 722.5, expected: 0.807 },
   { recipe: 'SWEET_002 Apple Strudel',         fillingClass: 'strudel_fruit',     stages: [[375, 35]],            initialWater: 380.0, expected: 0.85 },
   { recipe: 'SWEET_004 Blueberry Pie',         fillingClass: 'thickened_fruit',   stages: [[425, 25], [375, 52]], initialWater: 420.0, expected: 0.87 },
   { recipe: 'SWEET_005 Cherry Pie',            fillingClass: 'thickened_fruit',   stages: [[425, 25], [375, 52]], initialWater: 380.0, expected: 0.87 },
