@@ -2678,10 +2678,10 @@
             <p>This is the <strong>final application of heat</strong> after all sections are assembled. Set it once and it applies to every section.</p>
             <ul>
               <li><strong>Bake</strong> — oven. Enter Bake (min) and Temp (°F).</li>
-              <li><strong>Boil (lid off)</strong> — rolling boil, 212 °F, uncovered. Pasta, blanching.</li>
-              <li><strong>Simmer (lid off)</strong> — 195 °F, uncovered. Sauce reductions, soups.</li>
-              <li><strong>Sub-simmer (lid off)</strong> — 180 °F, uncovered. Concentrating stock.</li>
-              <li><strong>Braise (covered)</strong> — 185 °F, lid on. ~5 % of open-pot evaporation. Covered stews, pot roasts, Dutch-oven braises.</li>
+              <li><strong>Boil (lid off)</strong> — rolling boil, 212 °F, uncovered. Pasta, blanching. <em>Lid on? Choose Braise instead — a covered pot loses less than 5 % of open-pot moisture.</em></li>
+              <li><strong>Simmer (lid off)</strong> — 195 °F, uncovered. Sauce reductions, soups. <em>Lid on? Choose Braise instead.</em></li>
+              <li><strong>Sub-simmer (lid off)</strong> — 180 °F, uncovered. Concentrating stock. <em>Lid on? Choose Braise instead.</em></li>
+              <li><strong>Braise (covered)</strong> — 185 °F, lid on. Steam recondenses on the lid and drips back; only ~5 % of open-pot evaporation escapes. Use for any covered braise, pot roast, or Dutch-oven method.</li>
               <li><strong>Pan grill</strong> — stovetop skillet or griddle; dry heat, no water model applied.</li>
               <li><strong>Grill</strong> — outdoor grill, broiler, or grate; dry heat, no water model applied.</li>
               <li><strong>Fry</strong> — shallow or deep fry; dry heat, no water model applied.</li>
@@ -2699,6 +2699,7 @@
               <li><strong>baked / par-baked</strong> — pre-baked separately (e.g. blind-baking a pie crust). Enter Prep (min) and Prep (°F).</li>
               <li><strong>pan grilled / fried</strong> — sautéed or fried before combining. If fat drains off and is discarded, the model removes those calories from that section.</li>
               <li><strong>marinated / chilled</strong> — cold prep only; no heat calculations apply.</li>
+              <li><strong>microwave</strong> — microwave oven. Dry heat; no evaporation model is applied. Enter the actual microwave time for record-keeping, but the model does not subtract moisture for this step.</li>
             </ul>
 
             <h4 class="cook-help-section">Why this matters for nutrition</h4>
@@ -2709,6 +2710,9 @@
             </ol>
             <p>Skipping the stovetop simmer time means the model thinks a wet filling enters the oven at full weight and overestimates water content — understating calories, sugar concentration, and fat percentage in the final serving. Skipping a fat-drain step (pan grilling ground beef) overcounts calories because the rendered fat appears to stay in the dish.</p>
             <p class="cook-help-tip">💡 When in doubt, choose <strong>no heat</strong> — it's the safe default. Only add a prep method if that section literally goes on a burner, in an oven, or in a pan <em>by itself</em> before everything is combined.</p>
+
+            <h4 class="cook-help-section">Altitude</h4>
+            <p>The Boil, Simmer, and Sub-simmer methods assume sea-level conditions — water boils at 212 °F. Above about 3,500 ft / 1,070 m elevation, the boiling point drops roughly 2 °F per 1,000 ft, so actual moisture evaporates a bit more slowly than the model predicts. To compensate, enter a slightly shorter time than the actual elapsed cook time, or accept that the model will modestly overstate moisture loss at elevation.</p>
           </div>
         </div>
       {/if}
