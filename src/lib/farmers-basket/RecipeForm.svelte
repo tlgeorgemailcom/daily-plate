@@ -2712,7 +2712,29 @@
             <p class="cook-help-tip">💡 When in doubt, choose <strong>no heat</strong> — it's the safe default. Only add a prep method if that section literally goes on a burner, in an oven, or in a pan <em>by itself</em> before everything is combined.</p>
 
             <h4 class="cook-help-section">Altitude</h4>
-            <p>The Boil, Simmer, and Sub-simmer methods assume sea-level conditions — water boils at 212 °F. Above about 3,500 ft / 1,070 m elevation, the boiling point drops roughly 2 °F per 1,000 ft, so actual moisture evaporates a bit more slowly than the model predicts. To compensate, enter a slightly shorter time than the actual elapsed cook time, or accept that the model will modestly overstate moisture loss at elevation.</p>
+            <p>Sea level is used as a universal baseline so recipes work the same way everywhere — but you can absolutely enter the values that reflect how <em>you</em> cook. If you enter altitude-adjusted values, note your elevation in the recipe instructions so readers at other elevations know to adjust.</p>
+            <p><strong>Bake</strong> — baking is affected by altitude. Baked goods rise too quickly before structure sets, and moisture evaporates faster. At altitude, recipes typically need a higher oven temperature (+15–25 °F) and a shorter bake time (−5 to 8 min per 30 min). There are also ingredient adjustments for liquid, flour, and sugar. If you enter altitude-adjusted values, note that in your instructions.</p>
+            <p><strong>Boil / Simmer / Sub-simmer</strong> — water boils at a lower temperature at altitude (≈ 207 °F at 3,000 ft; ≈ 202 °F at 5,000 ft; ≈ 194 °F at 10,000 ft), so moist-heat cooking takes longer and loses more moisture — the lower boiling point extends cook time, and the drier high-altitude air draws moisture out of the food more freely. Approximate time increases over the sea-level recipe:</p>
+            <ul>
+              <li><strong>3,000–5,000 ft</strong> — add 20–25 %</li>
+              <li><strong>5,000–7,000 ft</strong> — add 30–35 %</li>
+              <li><strong>7,000–10,000 ft</strong> — add 40–50 %</li>
+            </ul>
+            <p>If using an electric pressure cooker, add cooking time based on elevation (+5 % starting at 3,000 ft, then add an additional 5 % for each 1,000 ft):</p>
+            <table class="cook-help-table">
+              <thead><tr><th>Elevation</th><th>Add</th></tr></thead>
+              <tbody>
+                <tr><td>3,000 ft</td><td>+5 %</td></tr>
+                <tr><td>4,000 ft</td><td>+10 %</td></tr>
+                <tr><td>5,000 ft</td><td>+15 %</td></tr>
+                <tr><td>6,000 ft</td><td>+20 %</td></tr>
+                <tr><td>7,000 ft</td><td>+25 %</td></tr>
+                <tr><td>8,000 ft</td><td>+30 %</td></tr>
+                <tr><td>9,000 ft</td><td>+35 %</td></tr>
+                <tr><td>10,000 ft</td><td>+40 %</td></tr>
+              </tbody>
+            </table>
+            <p class="cook-help-tip">💡 Covering the pot (choose <strong>Braise</strong>) significantly reduces moisture loss at any elevation.</p>
           </div>
         </div>
       {/if}
@@ -3456,6 +3478,23 @@
     padding-left: 18px;
   }
   .cook-help-dialog li { margin-bottom: 4px; }
+  .cook-help-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+    margin: 6px 0 10px;
+    color: #4a5568;
+  }
+  .cook-help-table th, .cook-help-table td {
+    border: 1px solid #e2e8f0;
+    padding: 4px 10px;
+    text-align: left;
+  }
+  .cook-help-table thead th {
+    background: #f7fafc;
+    font-weight: 600;
+    color: #2d3748;
+  }
   .cook-help-tip {
     background: #ebf8ff;
     border-left: 3px solid #4299e1;
