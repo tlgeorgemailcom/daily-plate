@@ -1490,9 +1490,8 @@
 
     // v3.md §18 — reconstruct section metadata so the editor shows the same
     // section header bars (label / cooking method / yield factors) the
-    // moderator screen does. Player-source suggestions carry sections inline;
-    // dev-source suggestions need the v3 build artifact (Turso has no
-    // sections_json column on dev_recipes today).
+    // moderator screen does. Both player and dev recipes carry sections inline
+    // via Turso sections_json (upload.py populates dev_recipes since 2026-07-01).
     let nextSections: RecipeSection[] | null = null;
     if (Array.isArray(suggestion.sections) && suggestion.sections.length > 0) {
       // Turso sections_json: normalize snake_case (dev recipes) or camelCase
@@ -1558,6 +1557,19 @@
     }
     if (nextSections) {
       sections = nextSections;
+      // Derive recipe-level cookTempF / cookMinutes from the first section
+      // that carries a non-empty stages array (upload.py writes cook_stages
+      // from recipe_sections.csv into Turso sections_json since 2026-07-01).
+      for (const sec of nextSections) {
+        if (Array.isArray(sec.stages) && sec.stages.length > 0) {
+          const totalMins = (sec.stages as Array<{ tempF: number; minutes: number }>)
+            .reduce((sum, st) => sum + (st.minutes ?? 0), 0);
+          if (totalMins > 0 && cookMinutes === undefined) cookMinutes = totalMins;
+          const firstTempF = (sec.stages as Array<{ tempF: number; minutes: number }>)[0].tempF;
+          if (firstTempF > 0 && cookTempF === undefined) cookTempF = firstTempF;
+          break;
+        }
+      }
     }
 
     suggestionsDismissed = true;
@@ -2362,6 +2374,67 @@
               <input type="number" step="0.01" min="0" max="2"
                 bind:value={sec.yieldFactorOther} placeholder="1.00" class="form-input" />
             </label>
+            <label class="advanced-field" title="Filling class controls how much water is free to evaporate (binding coefficient). Leave blank for non-filling sections.">
+              <span>Fill class</span>
+              <select
+                value={sec.fillClass ?? ''}
+                onchange={(e) => { const v = (e.currentTarget as HTMLSelectElement).value; sections = sections.map((s, i) => i === sIdx ? { ...s, fillClass: v || undefined } : s); }}
+                class="form-input"
+              >
+                <option value="">— none —</option>
+                <option value="dense_fruit">dense_fruit — apple/pear open (0.94)</option>
+                <option value="thickened_fruit">thickened_fruit — cornstarch berry/cherry (0.25)</option>
+                <option value="moderate_fruit">moderate_fruit — stone fruit partial (0.40)</option>
+                <option value="strudel_fruit">strudel_fruit — wrapped pastry (0.55)</option>
+                <option value="mincemeat">mincemeat — dried fruit + fat (0.57)</option>
+                <option value="syrup_custard">syrup_custard — corn syrup/egg (0.53)</option>
+                <option value="vegetable_custard">vegetable_custard — pumpkin/squash (0.12)</option>
+                <option value="dairy_custard">dairy_custard — cream/milk/egg (0.33)</option>
+                <option value="starch_custard">starch_custard — cornstarch custard (0.099)</option>
+                <option value="cake_batter">cake_batter — flour/butter/egg (0.74)</option>
+                <option value="pastry">pastry — blind-baked crust (0.782)</option>
+                <option value="crumb_crust">crumb_crust — cookie/cracker crust (0.432)</option>
+                <option value="none">none — no-bake / cold-set (0.00)</option>
+              </select>
+            </label>
+            <div class="advanced-field advanced-stages" style="grid-column: 1 / -1"
+              title="Multi-stage oven bake: each entry fires in order. calcYieldWater() uses these for evaporation modelling.">
+              <span>Cook stages (°F → min)</span>
+              <div class="stages-rows">
+                {#each (sec.stages ?? []) as stage, stIdx}
+                  <div class="stage-row">
+                    <input type="number" min="200" max="600" step="25" placeholder="°F"
+                      value={stage.tempF}
+                      oninput={(e) => {
+                        const v = (e.currentTarget as HTMLInputElement).valueAsNumber;
+                        const updated = (sec.stages ?? []).map((st, i) => i === stIdx ? { ...st, tempF: Number.isFinite(v) && v > 0 ? v : st.tempF } : st);
+                        sections = sections.map((s, i) => i === sIdx ? { ...s, stages: updated } : s);
+                      }}
+                      class="form-input stage-temp-input" />
+                    <input type="number" min="1" max="600" step="1" placeholder="min"
+                      value={stage.minutes}
+                      oninput={(e) => {
+                        const v = (e.currentTarget as HTMLInputElement).valueAsNumber;
+                        const updated = (sec.stages ?? []).map((st, i) => i === stIdx ? { ...st, minutes: Number.isFinite(v) && v > 0 ? v : st.minutes } : st);
+                        sections = sections.map((s, i) => i === sIdx ? { ...s, stages: updated } : s);
+                      }}
+                      class="form-input stage-min-input" />
+                    <button type="button"
+                      onclick={() => {
+                        const updated = (sec.stages ?? []).filter((_, i) => i !== stIdx);
+                        sections = sections.map((s, i) => i === sIdx ? { ...s, stages: updated.length ? updated : undefined } : s);
+                      }}
+                      class="remove-btn stage-remove-btn" aria-label="Remove stage">✕</button>
+                  </div>
+                {/each}
+                <button type="button"
+                  onclick={() => {
+                    const updated = [...(sec.stages ?? []), { tempF: 350, minutes: 30 }];
+                    sections = sections.map((s, i) => i === sIdx ? { ...s, stages: updated } : s);
+                  }}
+                  class="add-stage-btn">+ stage</button>
+              </div>
+            </div>
           </div>
         {/if}
       {/snippet}
@@ -3429,6 +3502,39 @@
     padding: 3px 6px;
     font-size: 0.85rem;
   }
+  .stages-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 2px;
+  }
+  .stage-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .stage-temp-input, .stage-min-input {
+    width: 70px;
+    padding: 3px 6px;
+    font-size: 0.85rem;
+    text-align: center;
+  }
+  .stage-remove-btn {
+    padding: 2px 6px;
+    font-size: 0.75rem;
+  }
+  .add-stage-btn {
+    align-self: flex-start;
+    margin-top: 2px;
+    padding: 2px 8px;
+    background: white;
+    color: #3182ce;
+    border: 1px dashed #3182ce;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.78rem;
+  }
+  .add-stage-btn:hover { background: #ebf8ff; }
   .add-ingredient-to-section-btn {
     margin-top: 4px;
     padding: 5px 10px;
