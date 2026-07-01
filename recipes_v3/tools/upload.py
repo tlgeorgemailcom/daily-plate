@@ -148,7 +148,13 @@ def _build_payload(rid: str, recipes, ings, ledger, instrs, sections_map) -> dic
     # Keyed by section_key; fields match the Section dataclass (snake_case).
     # The community fillFromSuggestion path reads this directly from Turso —
     # no bundle/levelToFormData involvement needed for paid-tier users.
+    #
+    # yield_factor_water may be None in recipe_sections.csv when it is derived
+    # from filling_class + cook_stages (e.g. dense_fruit bake). In that case
+    # fall back to the computed value already present in the build JSON so the
+    # community form receives the correct pre-computed factor, not null.
     sections_list = sections_map.get(rid, [])
+    _build_sec = {s["section_key"]: s for s in build.get("sections", [])}
     sections_json = json.dumps(
         [
             {
@@ -156,7 +162,11 @@ def _build_payload(rid: str, recipes, ings, ledger, instrs, sections_map) -> dic
                 "section_label": s.section_label,
                 "prep_method": s.prep_method,
                 "cook_method": s.cook_method,
-                "yield_factor_water": s.yield_factor_water,
+                "yield_factor_water": (
+                    s.yield_factor_water
+                    if s.yield_factor_water is not None
+                    else _build_sec.get(s.section_key, {}).get("yield_factor_water")
+                ),
                 "yield_factor_fat": s.yield_factor_fat,
                 "yield_factor_protein": s.yield_factor_protein,
                 "yield_factor_carbohydrate": s.yield_factor_carbohydrate,
