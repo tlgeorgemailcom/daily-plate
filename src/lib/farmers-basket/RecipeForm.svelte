@@ -2734,6 +2734,7 @@
                 <tr><td>10,000 ft</td><td>+40 %</td></tr>
               </tbody>
             </table>
+            <p class="cook-help-tip">💡 <strong>Pressure cooker and nutrition:</strong> pressure-cooked ingredients (rice, beans, grains) produce the same nutritional result as conventionally boiled. Enter your actual ingredients — including the water you used — and select <strong>Boil</strong> as the cooking method. The model calculates final moisture from how much water each ingredient absorbs to reach its cooked state, not from cook time or total water in the pot. Whether you entered 1 cup or 2 cups of water, the per-100g nutrition comes out the same.</p>
             <p class="cook-help-tip">💡 Covering the pot (choose <strong>Braise</strong>) significantly reduces moisture loss at any elevation.</p>
           </div>
         </div>
