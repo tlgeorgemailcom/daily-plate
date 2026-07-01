@@ -229,7 +229,11 @@ export function buildRecipeCommunity(
     if (active.length === 0) continue;
 
     const isWrapped = wrappedKeys.has(sec.sectionKey);
-    const fillingClass = inferFillingClass(active, isWrapped);
+    // Use explicit fill class from section metadata when available (from
+    // recipe_sections.csv via sections_json); fall back to ingredient inference.
+    const fillingClass = (sec.fillClass && sec.fillClass !== '')
+      ? sec.fillClass
+      : inferFillingClass(active, isWrapped);
 
     // Compute initial water for yield calc
     const initialWaterG    = active.reduce((sum, a) =>
@@ -252,6 +256,11 @@ export function buildRecipeCommunity(
     const boilMinutes = (sec as CommunitySection & { boilMinutes?: number }).boilMinutes ?? 0;
 
     // ── Water yield ────────────────────────────────────────────────────────────
+    // Priority 0: locked calibrated value when there is no physics data to
+    // compute from (stages=[] and boilMinutes=0). Used for sections like pie
+    // crust where yfw is empirical, not derived from cook_stages.
+    // When stages or boilMinutes are present the physics model always runs so
+    // user edits to cooking parameters produce correct nutrition deltas.
     // Maps a prep method string to its canonical stovetop temperature °F.
     // Both 'simmer' and 'sub-simmer' map to CookingMethod 'boiled' via
     // mapDishMethodToCookingMethod, but need distinct temperatures here.
@@ -275,9 +284,21 @@ export function buildRecipeCommunity(
     // Absorption model: fires in the prep pass when prepMethod='boiled' + absorbers,
     // or in the single pass when effectiveCookMethod='boiled' + absorbers.
     let yieldWater: number;
-    if (hasPrepStep && prepCookMethod) {
-      // ── Prep pass water yield ──────────────────────────────────────────────
-      let yfw_prep: number;
+    const lockedYfw = (sec as CommunitySection & { yieldFactorWater?: number }).yieldFactorWater;
+    if (stages.length === 0 && boilMinutes === 0
+        && typeof lockedYfw === 'number' && isFinite(lockedYfw)) {
+      // No physics inputs — use locked calibrated value directly.
+      yieldWater = lockedYfw;
+    } else if (hasPrepStep && prepCookMethod) {
+      // ── Prep + primary cook water yield (single call) ──────────────────────
+      // calcYieldWater handles stovetop (boilMinutes) then oven (stages) through
+      // the same free-water pool — exactly matching the Python pipeline's
+      // calc_yield_water().  The previous compound split (yfw_prep × yfw_primary)
+      // applied the binding coefficient twice and diverged from Python whenever
+      // boilMinutes > 0.
+      //
+      // Exception: absorption-model sections (dry absorbers) keep the two-pass
+      // structure because the absorption physics don't fit the single-call model.
       if (prepCookMethod === 'boiled') {
         const absorbers_prep = active.filter(a => a.nutrients.absorptionFactor != null);
         if (absorbers_prep.length > 0) {
@@ -288,26 +309,26 @@ export function buildRecipeCommunity(
           ) / absorberGrams_prep;
           const dryNonWaterG = totalSectionRawG - initialWaterG;
           const retainedWaterG_prep = dryNonWaterG * weightedFactor_prep / (1 - weightedFactor_prep);
-          yfw_prep = initialWaterG > 0 ? retainedWaterG_prep / initialWaterG : 1.0;
+          const yfw_prep = initialWaterG > 0 ? retainedWaterG_prep / initialWaterG : 1.0;
+          const interWaterG = initialWaterG * yfw_prep;
+          const primaryBoilMins = effectiveCookMethod === 'boiled' ? (sec.cookMinutes ?? 0) : 0;
+          const yfw_primary = calcYieldWater(stages, interWaterG, fillingClass,
+            primaryBoilMins, primaryCookTempF, primaryCookLidOn);
+          yieldWater = yfw_prep * yfw_primary;
         } else {
-          yfw_prep = calcYieldWater([], initialWaterG, fillingClass, boilMinutes,
+          // Single call: stovetop evaporation (boilMinutes) then oven stages —
+          // identical to Python calc_yield_water(stages, water, class, boil_minutes).
+          yieldWater = calcYieldWater(stages, initialWaterG, fillingClass, boilMinutes,
             prepMethodToTempF(sec.prepMethod), prepMethodIsLidOn(sec.prepMethod));
         }
       } else {
-        // Non-boiled prep (steamed, fried, etc.): use evaporation model with no oven stages.
-        yfw_prep = calcYieldWater([], initialWaterG, fillingClass, 0);
+        // Non-boiled prep (steamed, fried, etc.): no stovetop evap model; oven-only.
+        yieldWater = calcYieldWater(stages, initialWaterG, fillingClass, 0);
       }
-
-      // ── Primary cook water yield ───────────────────────────────────────────
-      // Operates on the post-prep water mass; boilMinutes already consumed by prep pass.
-      // For a boiled primary, use cookMinutes as the stovetop time.
-      const interWaterG = initialWaterG * yfw_prep;
-      const primaryBoilMins = effectiveCookMethod === 'boiled' ? (sec.cookMinutes ?? 0) : 0;
-      const yfw_primary = calcYieldWater(stages, interWaterG, fillingClass,
-        primaryBoilMins, primaryCookTempF, primaryCookLidOn);
-
-      // Compound: total water yield = prep × primary
-      yieldWater = yfw_prep * yfw_primary;
+    } else if (stages.length === 0 && boilMinutes === 0
+               && typeof lockedYfw === 'number' && isFinite(lockedYfw)) {
+      // No prep step and no physics inputs — locked calibrated value.
+      yieldWater = lockedYfw;
     } else {
       // ── Single-pass (no pre-step): existing behaviour ──────────────────────
       if (effectiveCookMethod === 'boiled') {

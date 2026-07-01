@@ -40,6 +40,14 @@
     boilMinutes?: number;
     /** Oven temperature °F for a baked/par-baked prep step. */
     prepTempF?: number;
+    /** Primary oven temperature °F (single-stage bake). */
+    cookTempF?: number;
+    /** Primary oven time in minutes (single-stage bake). */
+    cookMinutes?: number;
+    /** Multi-stage oven sequence from recipe_sections.csv cook_stages. */
+    stages?: Array<{ tempF: number; minutes: number }>;
+    /** Explicit filling class from recipe_sections.csv (e.g. 'dense_fruit'). */
+    fillClass?: string;
   }
   
   export interface RecipeInstruction {
@@ -923,6 +931,9 @@
             yieldFactorWater: s.yield_factor_water,
             yieldFactorFat: s.yield_factor_fat,
             yieldFactorOther: s.yield_factor_other,
+            boilMinutes: s.boil_minutes ?? undefined,
+            stages: s.cook_stages ?? undefined,
+            fillClass: s.fill_class ?? undefined,
           }));
         }
         // Composite recipes (Rule D) reference child recipes via `component_ref`
@@ -1497,6 +1508,8 @@
         boilMinutes: s.boilMinutes ?? s.boil_minutes ?? undefined,
         cookMinutes: s.cookMinutes ?? s.cook_minutes ?? undefined,
         cookTempF: s.cookTempF ?? s.cook_temp_f ?? undefined,
+        stages: s.stages ?? s.cook_stages ?? undefined,
+        fillClass: s.fillClass ?? s.fill_class ?? undefined,
       })).filter((s: RecipeSection) => s.key);
     } else if (suggestion.sourceType === 'dev') {
       try {
@@ -1515,6 +1528,8 @@
               boilMinutes: typeof s.boil_minutes === 'number' ? s.boil_minutes : (typeof s.boilMinutes === 'number' ? s.boilMinutes : undefined),
               cookMinutes: typeof s.cook_minutes === 'number' ? s.cook_minutes : (typeof s.cookMinutes === 'number' ? s.cookMinutes : undefined),
               cookTempF: typeof s.cook_temp_f === 'number' ? s.cook_temp_f : (typeof s.cookTempF === 'number' ? s.cookTempF : undefined),
+              stages: Array.isArray(s.cook_stages) ? s.cook_stages : (Array.isArray(s.stages) ? s.stages : undefined),
+              fillClass: typeof s.fill_class === 'string' ? (s.fill_class || undefined) : (typeof s.fillClass === 'string' ? (s.fillClass || undefined) : undefined),
             })).filter((s: RecipeSection) => s.key);
           }
         }
@@ -2304,7 +2319,7 @@
         </div>
         {#if sec.prepMethod && ['boiled','simmer','sub-simmer','braise','steamed','blanched','baked','par-baked','fried','pan grilled','grilled','microwave'].includes(sec.prepMethod)}
           <div class="section-times-bar">
-            <label class="section-time-field" title="Time for the prep step in minutes">
+            <label class="section-time-field" title="Lid-off cooking time only (boiled / simmer / sub-simmer). Do not include covered time — use 'braise' for covered cooking.">
               <span class="section-time-label">Prep (min)</span>
               <input
                 type="number" min="0" max="600" step="1" placeholder="–"

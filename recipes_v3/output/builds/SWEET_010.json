@@ -9,6 +9,7 @@
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 8,
   "audit_status": "PASS",
   "audit_notes": "Rule B. All 5 graded macros within \u00b11.3% of canonical NDB 18327. Max delta: Protein +1.3%. FiberTotalDietary and SugarsTotal ungraded (canonical ref=0). Butter-only single crust (1\u00bc cups flour/156.3g, 6 tbsp butter/85g). Filling yfw derived by algorithm: vegetable_custard class, 425\u00b0F/15min \u2192 350\u00b0F/45min \u2192 yfw=0.951. Locked May 13 2026.",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 120.26,
   "raw_protein_grams": 58.62,
   "raw_carb_grams": 343.44,
+  "raw_fiber_grams": 17.3,
   "water_lost_grams": 47.08,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1285.7,
   "grams_per_serving": 160.71,
   "ingredients": [
@@ -411,6 +414,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 4,
       "raw_grams": 281.48,
@@ -418,6 +422,7 @@
       "raw_fat_grams": 70.64,
       "raw_protein_grams": 16.86,
       "raw_carb_grams": 119.29,
+      "raw_fiber_grams": 4.22,
       "final_grams": 270.14
     },
     {
@@ -431,6 +436,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 7,
       "raw_grams": 1051.3,
@@ -438,6 +444,7 @@
       "raw_fat_grams": 49.62,
       "raw_protein_grams": 41.76,
       "raw_carb_grams": 224.16,
+      "raw_fiber_grams": 13.08,
       "final_grams": 1015.57
     }
   ]

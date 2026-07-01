@@ -9,6 +9,7 @@
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 12,
   "audit_status": "NO_CANON",
   "audit_notes": "Rule C. Butter-buttermilk yellow cake with butter-and-bittersweet-chocolate glaze. Cake section: filling_class=cake_batter, 350\u00b0F\u00d732min \u2192 yfw=0.833 (algorithm). Glaze section: raw pour, yfw=1.0 (default \u2014 no baking). No canonical audit applicable (NDB 19409 is NFSMI institutional cocoa-based recipe; structurally incompatible). Locked May 13 2026.",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 275.32,
   "raw_protein_grams": 82.76,
   "raw_carb_grams": 1019.94,
+  "raw_fiber_grams": 30.24,
   "water_lost_grams": 71.04,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1861.06,
   "grams_per_serving": 155.09,
   "ingredients": [
@@ -521,6 +524,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 10,
       "raw_grams": 1314.23,
@@ -528,6 +532,7 @@
       "raw_fat_grams": 172.76,
       "raw_protein_grams": 68.0,
       "raw_carb_grams": 623.07,
+      "raw_fiber_grams": 9.02,
       "final_grams": 1243.19
     },
     {
@@ -541,6 +546,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 6,
       "raw_grams": 617.87,
@@ -548,6 +554,7 @@
       "raw_fat_grams": 102.56,
       "raw_protein_grams": 14.77,
       "raw_carb_grams": 396.87,
+      "raw_fiber_grams": 21.21,
       "final_grams": 617.87
     }
   ]

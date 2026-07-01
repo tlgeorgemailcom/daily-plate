@@ -9,6 +9,7 @@
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 8,
   "audit_status": "NO_CANON",
   "audit_notes": "Crust ingredients standardised to CRUST_002 (NDB 18336 Rule A validated): 156.3g flour, 3.3g salt, 35.3g butter, 55.47g shortening, 37.0g water. Prior all-butter crust (188g flour, 85g butter, no shortening) replaced. Rule C \u2014 no canonical audit (NDB 18314 is a mix-based commercial product: instant pudding mix + non-dairy topping, no egg yolks, far less fat/protein, high sodium from phosphate additives). Nutrient values computed from ingredients with algorithm-derived yield_water. Crust yfw=0.831 (pastry class, blind-bake 400\u00b0F\u00d715min + 400\u00b0F\u00d79min). Filling yfw=0.833 (dairy_custard class, stovetop boil 3min \u2014 1min bubbling + 1\u20132min after tempering; coconut flakes added off-heat, not boiled). Topping yfw=1.000 (raw whipped cream). Whole-recipe yfW=0.920 matches legacy recipe-level yield factor. Prior hard-coded crust yfw=0.84, filling yfw=0.95 replaced by algorithm. Locked May 13 2026.",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 372.03,
   "raw_protein_grams": 59.31,
   "raw_carb_grams": 395.44,
+  "raw_fiber_grams": 12.68,
   "water_lost_grams": 105.17,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1572.9,
   "grams_per_serving": 196.61,
   "ingredients": [
@@ -504,6 +507,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 4,
       "raw_grams": 320.14,
@@ -511,6 +515,7 @@
       "raw_fat_grams": 70.94,
       "raw_protein_grams": 20.09,
       "raw_carb_grams": 143.13,
+      "raw_fiber_grams": 5.06,
       "final_grams": 306.24
     },
     {
@@ -524,6 +529,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 9,
       "raw_grams": 984.93,
@@ -531,6 +537,7 @@
       "raw_fat_grams": 172.28,
       "raw_protein_grams": 29.08,
       "raw_carb_grams": 226.56,
+      "raw_fiber_grams": 7.61,
       "final_grams": 893.66
     },
     {
@@ -544,6 +551,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 2,
       "raw_grams": 373.0,
@@ -551,6 +559,7 @@
       "raw_fat_grams": 128.81,
       "raw_protein_grams": 10.14,
       "raw_carb_grams": 25.75,
+      "raw_fiber_grams": 0.0,
       "final_grams": 373.0
     }
   ]

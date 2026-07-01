@@ -9,6 +9,7 @@
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 8,
   "audit_status": "PASS",
   "audit_notes": "Rule B. All 5 graded macros within \u00b12.1% of canonical NDB 18306. Max delta: Carbohydrate -1.9%. FiberTotalDietary and SugarsTotal ungraded (canonical ref=0). Filling yfw derived by algorithm: thickened_fruit class, 425\u00b0F/25min \u2192 375\u00b0F/52min \u2192 yfw=0.868. Locked May 13 2026.",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 156.95,
   "raw_protein_grams": 36.2,
   "raw_carb_grams": 437.98,
+  "raw_fiber_grams": 25.53,
   "water_lost_grams": 109.3,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1332.16,
   "grams_per_serving": 166.52,
   "ingredients": [
@@ -474,6 +477,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 5,
       "raw_grams": 507.21,
@@ -481,6 +485,7 @@
       "raw_fat_grams": 140.54,
       "raw_protein_grams": 27.27,
       "raw_carb_grams": 199.28,
+      "raw_fiber_grams": 6.75,
       "final_grams": 483.03
     },
     {
@@ -494,6 +499,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 7,
       "raw_grams": 904.25,
@@ -501,6 +507,7 @@
       "raw_fat_grams": 14.03,
       "raw_protein_grams": 5.79,
       "raw_carb_grams": 238.52,
+      "raw_fiber_grams": 18.78,
       "final_grams": 819.13
     },
     {
@@ -514,6 +521,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 2,
       "raw_grams": 30.0,
@@ -521,6 +529,7 @@
       "raw_fat_grams": 2.38,
       "raw_protein_grams": 3.14,
       "raw_carb_grams": 0.18,
+      "raw_fiber_grams": 0.0,
       "final_grams": 30.0
     }
   ]

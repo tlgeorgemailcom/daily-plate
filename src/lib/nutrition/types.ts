@@ -70,6 +70,10 @@ export interface CommunitySection {
   sectionKey: string;       // e.g. "crust", "filling", "topping"
   sectionLabel: string;     // display name shown in UI
   cookMethod: string;       // "baked" | "boiled" | "simmered" | "raw" | ...
+  /** Explicit filling class from recipe_sections.csv (e.g. 'dense_fruit',
+   *  'pastry'). When present, used by buildRecipeCommunity before falling
+   *  back to inferFillingClass(). */
+  fillClass?: string;
   /** Optional pre-step fired before the primary (recipe-level) cook.
    *  When set and not 'none', buildRecipeCommunity applies this method first
    *  (using section boilMinutes for yield), then applies the recipe-level
