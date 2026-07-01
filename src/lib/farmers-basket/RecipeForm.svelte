@@ -1484,7 +1484,20 @@
     // sections_json column on dev_recipes today).
     let nextSections: RecipeSection[] | null = null;
     if (Array.isArray(suggestion.sections) && suggestion.sections.length > 0) {
-      nextSections = suggestion.sections;
+      // Turso sections_json: normalize snake_case (dev recipes) or camelCase
+      // (player recipes) to the RecipeSection interface used by the form.
+      nextSections = (suggestion.sections as any[]).map((s) => ({
+        key: s.key ?? s.section_key ?? '',
+        label: s.label ?? s.section_label ?? '',
+        prepMethod: (() => { const v = s.prepMethod ?? s.prep_method; return (!v || v === 'raw') ? 'none' : v; })(),
+        cookingMethod: s.cookingMethod ?? s.cook_method ?? s.cooking_method ?? 'baked',
+        yieldFactorWater: s.yieldFactorWater ?? s.yield_factor_water ?? undefined,
+        yieldFactorFat: s.yieldFactorFat ?? s.yield_factor_fat ?? undefined,
+        yieldFactorOther: s.yieldFactorOther ?? s.yield_factor_other ?? undefined,
+        boilMinutes: s.boilMinutes ?? s.boil_minutes ?? undefined,
+        cookMinutes: s.cookMinutes ?? s.cook_minutes ?? undefined,
+        cookTempF: s.cookTempF ?? s.cook_temp_f ?? undefined,
+      })).filter((s: RecipeSection) => s.key);
     } else if (suggestion.sourceType === 'dev') {
       try {
         const res = await fetch(`/api/recipes/v3-build/${encodeURIComponent(suggestion.id)}`);

@@ -41,7 +41,7 @@ REPO_ROOT = ROOT.parent  # daily-food-chain/
 sys.path.insert(0, str(ROOT))
 
 from lib.build import to_turso_nutrition_json  # noqa: E402
-from lib.load import load_ingredients, load_instructions, load_ledger, load_recipes  # noqa: E402
+from lib.load import load_ingredients, load_instructions, load_ledger, load_recipes, load_sections  # noqa: E402
 
 BUILDS_DIR = ROOT / "output" / "builds"
 LOG_DIR = ROOT / "output" / "upload_log"
@@ -81,7 +81,7 @@ def _connect():
     return libsql.connect(database=url, auth_token=token)
 
 
-def _build_payload(rid: str, recipes, ings, ledger, instrs) -> dict:
+def _build_payload(rid: str, recipes, ings, ledger, instrs, sections_map) -> dict:
     """Read v3 build JSON for `rid` and assemble Turso column updates."""
     build_path = BUILDS_DIR / f"{rid}.json"
     if not build_path.exists():
@@ -144,6 +144,29 @@ def _build_payload(rid: str, recipes, ings, ledger, instrs) -> dict:
         instr_list.append(_SUGGESTIONS_MARKER)
     recipe_instructions = json.dumps(instr_list, separators=(",", ":"))
 
+    # sections_json: ordered list of section objects for the community edit form.
+    # Keyed by section_key; fields match the Section dataclass (snake_case).
+    # The community fillFromSuggestion path reads this directly from Turso —
+    # no bundle/levelToFormData involvement needed for paid-tier users.
+    sections_list = sections_map.get(rid, [])
+    sections_json = json.dumps(
+        [
+            {
+                "section_key": s.section_key,
+                "section_label": s.section_label,
+                "prep_method": s.prep_method,
+                "cook_method": s.cook_method,
+                "yield_factor_water": s.yield_factor_water,
+                "yield_factor_fat": s.yield_factor_fat,
+                "yield_factor_protein": s.yield_factor_protein,
+                "yield_factor_carbohydrate": s.yield_factor_carbohydrate,
+                "yield_factor_other": s.yield_factor_other,
+            }
+            for s in sections_list
+        ],
+        separators=(",", ":"),
+    ) if sections_list else None
+
     # v3 only writes the columns it owns. Identity / game-key / audit-history
     # columns (food_word, category, cooking_method casing, serving_label,
     # servings, submitted_by) are deliberately preserved as-is in Turso.
@@ -160,6 +183,7 @@ def _build_payload(rid: str, recipes, ings, ledger, instrs) -> dict:
         "retention_model_version": "v3-r6",
         "source_match_version": "v3-greenfield",
         "source_ndb_no": rec.canonical_ndb_no or "",
+        "sections_json": sections_json,
     }
 
 
@@ -175,6 +199,7 @@ UPDATE dev_recipes SET
   retention_model_version  = ?,
   source_match_version     = ?,
   source_ndb_no            = ?,
+  sections_json            = ?,
   updated_at               = ?
 WHERE recipe_id = ?
 """
@@ -185,7 +210,7 @@ _UPDATE_COLS = (
     "grams_per_serving",
     "recipe_ingredients_json", "recipe_instructions_json", "nutrition_json",
     "nutrient_version", "retention_model_version", "source_match_version",
-    "source_ndb_no",
+    "source_ndb_no", "sections_json",
 )
 
 
@@ -204,6 +229,15 @@ def _diff_payload(conn, payload: dict) -> dict | None:
         old = existing.get(col)
         new = payload.get(col)
         if col in ("nutrition_json", "recipe_ingredients_json"):
+            try:
+                old_j = json.loads(old) if old else None
+                new_j = json.loads(new) if new else None
+                if old_j != new_j:
+                    diff[col] = {"old_len": len(old or ""), "new_len": len(new or "")}
+            except Exception:
+                if (old or "") != (new or ""):
+                    diff[col] = {"old_len": len(old or ""), "new_len": len(new or "")}
+        elif col == "sections_json":
             try:
                 old_j = json.loads(old) if old else None
                 new_j = json.loads(new) if new else None
@@ -236,6 +270,7 @@ def main() -> int:
     ings = load_ingredients()
     ledger = load_ledger()
     instrs = load_instructions()
+    sections_map = load_sections()
 
     target_ids = sorted(args.recipe_id) if args.recipe_id else sorted(recipes)
     missing = [r for r in target_ids if r not in recipes]
@@ -250,7 +285,7 @@ def main() -> int:
 
     for rid in target_ids:
         try:
-            payload = _build_payload(rid, recipes, ings, ledger, instrs)
+            payload = _build_payload(rid, recipes, ings, ledger, instrs, sections_map)
         except FileNotFoundError as e:
             print(f"  {rid}  SKIP: {e}", file=sys.stderr)
             continue
@@ -288,6 +323,7 @@ def main() -> int:
                 payload["retention_model_version"],
                 payload["source_match_version"],
                 payload["source_ndb_no"],
+                payload["sections_json"],
                 now_utc,
                 payload["recipe_id"],
             ))

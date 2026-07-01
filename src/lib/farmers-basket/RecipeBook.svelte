@@ -758,21 +758,8 @@
         text
       })),
       sr28Rule: level.sr28Rule,
-      ...(level.sections?.length ? {
-        sections: level.sections.map((s) => {
-          const raw = s as any;
-          const pm = raw.prepMethod ?? raw.prep_method;
-          return {
-            key: raw.key ?? raw.section_key ?? '',
-            label: raw.label ?? raw.section_label ?? '',
-            prepMethod: (!pm || pm === 'raw') ? 'none' : pm,
-            cookingMethod: raw.cookingMethod ?? raw.cook_method ?? raw.cooking_method ?? 'baked',
-            yieldFactorWater: raw.yieldFactorWater ?? raw.yield_factor_water,
-            yieldFactorFat: raw.yieldFactorFat ?? raw.yield_factor_fat,
-            yieldFactorOther: raw.yieldFactorOther ?? raw.yield_factor_other,
-          };
-        })
-      } : {})
+      // Sections are loaded from Turso sections_json via the suggest API
+      // (fillFromSuggestion in RecipeForm). The bundle does not provide sections.
     };
   }
   
