@@ -570,7 +570,15 @@
       "raw_protein_grams": 44.95,
       "raw_carb_grams": 355.43,
       "raw_fiber_grams": 5.08,
-      "final_grams": 807.09
+      "final_grams": 807.09,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 350,
+          "minutes": 24
+        }
+      ],
+      "fill_class": "cake_batter"
     },
     {
       "section_key": "filling",
@@ -592,7 +600,10 @@
       "raw_protein_grams": 19.78,
       "raw_carb_grams": 101.2,
       "raw_fiber_grams": 0.14,
-      "final_grams": 500.97
+      "final_grams": 500.97,
+      "boil_minutes": 3.0,
+      "cook_stages": [],
+      "fill_class": "starch_custard"
     },
     {
       "section_key": "glaze",
@@ -614,7 +625,10 @@
       "raw_protein_grams": 6.56,
       "raw_carb_grams": 73.85,
       "raw_fiber_grams": 6.67,
-      "final_grams": 186.7
+      "final_grams": 186.7,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

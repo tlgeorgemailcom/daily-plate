@@ -9,6 +9,7 @@
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 12,
   "audit_status": "PASS",
   "audit_notes": "Rule B PASS. SugarsTotal excluded (defective canonical: NDB 18102 reports 57.39g/100g \u2014 unachievable with any standard 7-minute frosting). 5 remaining graded macros all within \u00b15% of canonical. Max delta: Protein +2.7%. Fiber ungraded (canonical 1.0g \u2264 CANONICAL_FLOOR). Cake section yfw=0.62 (explicit, calibrated from USDA AH102 \u2014 matches SWEET_016 base). Frosting section yfw=0.50 (empirical \u2014 7-minute double-boiler beating reduces ~50% of frosting moisture; back-calculated from canonical NDB 18102 water content). Locked May 13 2026.",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 167.09,
   "raw_protein_grams": 73.38,
   "raw_carb_grams": 1012.71,
+  "raw_fiber_grams": 23.16,
   "water_lost_grams": 246.54,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1623.77,
   "grams_per_serving": 135.31,
   "ingredients": [
@@ -516,6 +519,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 8,
       "raw_grams": 1184.0,
@@ -523,7 +527,16 @@
       "raw_fat_grams": 125.34,
       "raw_protein_grams": 57.38,
       "raw_carb_grams": 580.63,
-      "final_grams": 1031.96
+      "raw_fiber_grams": 7.62,
+      "final_grams": 1031.96,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 350,
+          "minutes": 30
+        }
+      ],
+      "fill_class": "cake_batter"
     },
     {
       "section_key": "frosting",
@@ -536,6 +549,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 8,
       "raw_grams": 686.3,
@@ -543,7 +557,11 @@
       "raw_fat_grams": 41.76,
       "raw_protein_grams": 16.0,
       "raw_carb_grams": 432.08,
-      "final_grams": 591.81
+      "raw_fiber_grams": 15.54,
+      "final_grams": 591.81,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

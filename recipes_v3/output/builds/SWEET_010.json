@@ -423,7 +423,10 @@
       "raw_protein_grams": 16.86,
       "raw_carb_grams": 119.29,
       "raw_fiber_grams": 4.22,
-      "final_grams": 270.14
+      "final_grams": 270.14,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "filling",
@@ -445,7 +448,19 @@
       "raw_protein_grams": 41.76,
       "raw_carb_grams": 224.16,
       "raw_fiber_grams": 13.08,
-      "final_grams": 1015.57
+      "final_grams": 1015.57,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 425,
+          "minutes": 15
+        },
+        {
+          "tempF": 350,
+          "minutes": 45
+        }
+      ],
+      "fill_class": "vegetable_custard"
     }
   ]
 }

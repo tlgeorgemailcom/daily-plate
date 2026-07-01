@@ -533,7 +533,15 @@
       "raw_protein_grams": 68.0,
       "raw_carb_grams": 623.07,
       "raw_fiber_grams": 9.02,
-      "final_grams": 1243.19
+      "final_grams": 1243.19,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 350,
+          "minutes": 32
+        }
+      ],
+      "fill_class": "cake_batter"
     },
     {
       "section_key": "frosting",
@@ -555,7 +563,10 @@
       "raw_protein_grams": 14.77,
       "raw_carb_grams": 396.87,
       "raw_fiber_grams": 21.21,
-      "final_grams": 617.87
+      "final_grams": 617.87,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

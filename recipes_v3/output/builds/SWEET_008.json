@@ -528,7 +528,10 @@
       "raw_protein_grams": 27.27,
       "raw_carb_grams": 199.28,
       "raw_fiber_grams": 6.75,
-      "final_grams": 484.53
+      "final_grams": 484.53,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "filling",
@@ -550,7 +553,19 @@
       "raw_protein_grams": 12.78,
       "raw_carb_grams": 315.26,
       "raw_fiber_grams": 21.54,
-      "final_grams": 1395.01
+      "final_grams": 1395.01,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 425,
+          "minutes": 20
+        },
+        {
+          "tempF": 375,
+          "minutes": 27
+        }
+      ],
+      "fill_class": "moderate_fruit"
     },
     {
       "section_key": "wash",
@@ -572,7 +587,10 @@
       "raw_protein_grams": 3.14,
       "raw_carb_grams": 0.18,
       "raw_fiber_grams": 0.0,
-      "final_grams": 29.94
+      "final_grams": 29.94,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

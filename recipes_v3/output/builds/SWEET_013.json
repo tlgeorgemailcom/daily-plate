@@ -491,7 +491,15 @@
       "raw_protein_grams": 13.11,
       "raw_carb_grams": 170.44,
       "raw_fiber_grams": 6.96,
-      "final_grams": 310.39
+      "final_grams": 310.39,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 350,
+          "minutes": 9
+        }
+      ],
+      "fill_class": "crumb_crust"
     },
     {
       "section_key": "filling",
@@ -513,7 +521,10 @@
       "raw_protein_grams": 41.61,
       "raw_carb_grams": 336.2,
       "raw_fiber_grams": 17.61,
-      "final_grams": 1025.89
+      "final_grams": 1025.89,
+      "boil_minutes": 3.0,
+      "cook_stages": [],
+      "fill_class": "dairy_custard"
     },
     {
       "section_key": "topping",
@@ -535,7 +546,10 @@
       "raw_protein_grams": 6.76,
       "raw_carb_grams": 22.48,
       "raw_fiber_grams": 0.0,
-      "final_grams": 254.0
+      "final_grams": 254.0,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

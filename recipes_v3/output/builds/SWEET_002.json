@@ -449,7 +449,10 @@
       "raw_protein_grams": 18.13,
       "raw_carb_grams": 111.97,
       "raw_fiber_grams": 3.68,
-      "final_grams": 241.74
+      "final_grams": 241.74,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "filling",
@@ -471,7 +474,15 @@
       "raw_protein_grams": 15.78,
       "raw_carb_grams": 429.57,
       "raw_fiber_grams": 23.03,
-      "final_grams": 977.51
+      "final_grams": 977.51,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 375,
+          "minutes": 35
+        }
+      ],
+      "fill_class": "strudel_fruit"
     },
     {
       "section_key": "finish",
@@ -493,7 +504,10 @@
       "raw_protein_grams": 6.28,
       "raw_carb_grams": 0.36,
       "raw_fiber_grams": 0.0,
-      "final_grams": 50.0
+      "final_grams": 50.0,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

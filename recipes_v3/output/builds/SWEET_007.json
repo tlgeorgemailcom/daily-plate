@@ -738,7 +738,10 @@
       "raw_protein_grams": 32.88,
       "raw_carb_grams": 238.51,
       "raw_fiber_grams": 8.44,
-      "final_grams": 552.93
+      "final_grams": 552.93,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "filling",
@@ -760,7 +763,19 @@
       "raw_protein_grams": 12.53,
       "raw_carb_grams": 616.27,
       "raw_fiber_grams": 37.83,
-      "final_grams": 1263.32
+      "final_grams": 1263.32,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 425,
+          "minutes": 20
+        },
+        {
+          "tempF": 375,
+          "minutes": 32
+        }
+      ],
+      "fill_class": "mincemeat"
     },
     {
       "section_key": "wash",
@@ -782,7 +797,10 @@
       "raw_protein_grams": 3.14,
       "raw_carb_grams": 0.18,
       "raw_fiber_grams": 0.0,
-      "final_grams": 29.94
+      "final_grams": 29.94,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }
