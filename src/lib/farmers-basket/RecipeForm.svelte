@@ -956,11 +956,13 @@
           // per-section Prep display (blind-bake temp/time), not the primary cook.
           for (const sec of sections) {
             if (sec.prepMethod !== 'baked' && sec.prepMethod !== 'par-baked' && Array.isArray(sec.stages) && sec.stages.length > 0) {
-              const totalMins = (sec.stages as Array<{ tempF: number; minutes: number }>)
-                .reduce((sum, st) => sum + (st.minutes ?? 0), 0);
+              const stgs = sec.stages as Array<{ tempF: number; minutes: number }>;
+              const totalMins = stgs.reduce((sum, st) => sum + (st.minutes ?? 0), 0);
               if (totalMins > 0 && cookMinutes == null) cookMinutes = totalMins;
-              const firstTempF = (sec.stages as Array<{ tempF: number; minutes: number }>)[0].tempF;
-              if (firstTempF > 0 && cookTempF == null) cookTempF = firstTempF;
+              // Use the last stage temperature — that's the sustained main bake
+              // temp (e.g. 375°F after the initial 425°F blast), not the first.
+              const lastTempF = stgs[stgs.length - 1].tempF;
+              if (lastTempF > 0 && cookTempF == null) cookTempF = lastTempF;
               break;
             }
           }
@@ -1592,11 +1594,11 @@
       // Skip baked/par-baked sections — their stages drive the Prep display.
       for (const sec of nextSections) {
         if (sec.prepMethod !== 'baked' && sec.prepMethod !== 'par-baked' && Array.isArray(sec.stages) && sec.stages.length > 0) {
-          const totalMins = (sec.stages as Array<{ tempF: number; minutes: number }>)
-            .reduce((sum, st) => sum + (st.minutes ?? 0), 0);
+          const stgs = sec.stages as Array<{ tempF: number; minutes: number }>;
+          const totalMins = stgs.reduce((sum, st) => sum + (st.minutes ?? 0), 0);
           if (totalMins > 0 && cookMinutes == null) cookMinutes = totalMins;
-          const firstTempF = (sec.stages as Array<{ tempF: number; minutes: number }>)[0].tempF;
-          if (firstTempF > 0 && cookTempF == null) cookTempF = firstTempF;
+          const lastTempF = stgs[stgs.length - 1].tempF;
+          if (lastTempF > 0 && cookTempF == null) cookTempF = lastTempF;
           break;
         }
       }
