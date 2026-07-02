@@ -192,7 +192,11 @@
   // Split existing recipeName into parts if present (format: "Dish Name — Suffix")
   let dishName = $state(initialData.dishName || (initialData.recipeName?.includes(' — ') ? initialData.recipeName.split(' — ')[0] : initialData.recipeName || ''));
   let recipeSuffix = $state(initialData.recipeSuffix || (initialData.recipeName?.includes(' — ') ? initialData.recipeName.split(' — ')[1] : ''));
-  let cookingMethod = $state(initialData.cookingMethod || 'Bake');
+  // Normalize the initial cook method: map pipeline values ('baked','boiled','raw','multi', etc.)
+  // to UI labels ('Bake','Boil','No heat', …). Unknown/multi → 'No heat'; missing → 'Bake'.
+  const _initCM = initialData.cookingMethod ?? '';
+  const _matchedCM = COOKING_METHODS.find(m => m.toLowerCase() === _initCM.toLowerCase());
+  let cookingMethod = $state<string>(_matchedCM ?? (_initCM ? 'No heat' : 'Bake'));
   let cookMinutes = $state<number | undefined>(initialData.cookMinutes);
   let cookTempF = $state<number | undefined>(initialData.cookTempF);
   let cookHelpOpen = $state(false);
@@ -2316,13 +2320,13 @@
           <span class="section-card-dash">—</span>
           <!-- Prep method for this section (fires before the recipe-level primary Cook) -->
           <select
-            onchange={(e) => { const v = (e.currentTarget as HTMLSelectElement).value; sections = sections.map((s, i) => i === sIdx ? { ...s, prepMethod: v } : s); }}
+            bind:value={sections[sIdx].prepMethod}
             class="form-input section-method-select"
             title="How this section is prepared before the primary cook"
           >
-            <option value="none" selected={!sec.prepMethod || sec.prepMethod === 'none'}>no heat</option>
+            <option value="none">no heat</option>
             {#each SECTION_PREP_METHODS as m}
-              <option value={m} selected={sec.prepMethod === m}>{PREP_METHOD_DISPLAY[m] ?? m}</option>
+              <option value={m}>{PREP_METHOD_DISPLAY[m] ?? m}</option>
             {/each}
           </select>
           {#if moderatorMode}
