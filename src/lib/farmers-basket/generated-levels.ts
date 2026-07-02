@@ -127,7 +127,7 @@ export const LEVELS: Level[] = [
       { type: 'mouse', delay: 5000 }
     ],
     foodSupply: { lettuce: 0, tomato: 0, carrot: 0, cheese: 0, egg: 5, bread: 4, apple: 0, grapes: 0, bacon: 0, butter: 0, chicken: 0, fish: 0 },
-    servings: '8 slices',
+    servings: '1 slice',
     prepTime: '40 min',
     linkType: 'dish',
     sr28Rule: 'Rule A',
