@@ -469,7 +469,7 @@
     {
       "section_key": "crust",
       "section_label": "Crust",
-      "prep_method": "rolled",
+      "prep_method": "baked",
       "cook_method": "baked",
       "cooking_method": "baked",
       "cooking_method_normalized": "baked",
@@ -491,7 +491,7 @@
       "cook_stages": [
         {
           "tempF": 400,
-          "minutes": 6
+          "minutes": 18
         }
       ],
       "fill_class": "pastry"
@@ -521,7 +521,7 @@
       "cook_stages": [
         {
           "tempF": 325,
-          "minutes": 55
+          "minutes": 50
         }
       ],
       "fill_class": "dairy_custard"
