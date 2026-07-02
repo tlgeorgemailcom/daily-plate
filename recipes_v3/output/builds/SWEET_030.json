@@ -3,12 +3,13 @@
   "recipe_name": "Cookies, Oatmeal with Raisins",
   "sr_rule": "Rule C",
   "canonical_ndb_no": "18184",
-  "cooking_method": "bake",
+  "cooking_method": "baked",
   "cooking_method_normalized": "baked",
   "yield_factor_water": 0.7,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 24,
   "audit_status": "NO_CANON",
   "audit_notes": "Rule C. No comparable USDA SR Legacy canonical for homemade recipe. Macro audit skipped. Locked May 14 2026.",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 189.15,
   "raw_protein_grams": 70.94,
   "raw_carb_grams": 703.53,
+  "raw_fiber_grams": 37.09,
   "water_lost_grams": 57.2,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1116.4,
   "grams_per_serving": 46.52,
   "ingredients": [
@@ -29,8 +32,8 @@
       "ndb_no": "1145",
       "long_desc": "Butter, without salt",
       "grams": 198.7,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "1/2 cup + 6 tbsp",
       "contribution": {
         "Energy_KCal": 1424.679,
@@ -50,8 +53,8 @@
       "ndb_no": "19334",
       "long_desc": "Sugars, brown",
       "grams": 165.0,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "3/4 cup packed",
       "contribution": {
         "Energy_KCal": 627.0,
@@ -71,8 +74,8 @@
       "ndb_no": "19335",
       "long_desc": "Sugars, granulated",
       "grams": 100.0,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "1/2 cup",
       "contribution": {
         "Energy_KCal": 387.0,
@@ -92,8 +95,8 @@
       "ndb_no": "1123",
       "long_desc": "Egg, whole, raw, fresh",
       "grams": 100.0,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "2 large",
       "contribution": {
         "Energy_KCal": 143.0,
@@ -113,8 +116,8 @@
       "ndb_no": "2050",
       "long_desc": "Vanilla extract",
       "grams": 4.2,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "1 teaspoon",
       "contribution": {
         "Energy_KCal": 12.096,
@@ -134,8 +137,8 @@
       "ndb_no": "20581",
       "long_desc": "Wheat flour, white, all-purpose, enriched, unbleached",
       "grams": 187.5,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "1 1/2 cups",
       "contribution": {
         "Energy_KCal": 682.5,
@@ -155,8 +158,8 @@
       "ndb_no": "18372",
       "long_desc": "Leavening agents, baking soda",
       "grams": 4.6,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "1 teaspoon",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -176,8 +179,8 @@
       "ndb_no": "2010",
       "long_desc": "Spices, cinnamon, ground",
       "grams": 2.6,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "1 teaspoon",
       "contribution": {
         "Energy_KCal": 6.422,
@@ -197,8 +200,8 @@
       "ndb_no": "2047",
       "long_desc": "Salt, table",
       "grams": 3.0,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "1/2 teaspoon",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -218,8 +221,8 @@
       "ndb_no": "8120",
       "long_desc": "Cereals, oats, regular and quick, not fortified, dry",
       "grams": 243.0,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "3 cups",
       "contribution": {
         "Energy_KCal": 920.97,
@@ -239,8 +242,8 @@
       "ndb_no": "9298",
       "long_desc": "Raisins, seedless",
       "grams": 165.0,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "1 cup",
       "contribution": {
         "Energy_KCal": 493.35,
@@ -398,5 +401,37 @@
     "omega6": 0.2,
     "AddedSugars": 10.83,
     "IntrinsicSugars": 4.24
-  }
+  },
+  "sections": [
+    {
+      "section_key": "dough",
+      "section_label": "Dough",
+      "prep_method": "mixed",
+      "cook_method": "baked",
+      "cooking_method": "baked",
+      "cooking_method_normalized": "baked",
+      "yield_factor_water": 0.7,
+      "yield_factor_fat": 1.0,
+      "yield_factor_protein": 1.0,
+      "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
+      "yield_factor_other": 1.0,
+      "ingredient_count": 11,
+      "raw_grams": 1173.6,
+      "raw_water_grams": 190.68,
+      "raw_fat_grams": 189.15,
+      "raw_protein_grams": 70.94,
+      "raw_carb_grams": 703.53,
+      "raw_fiber_grams": 37.09,
+      "final_grams": 1116.4,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 350,
+          "minutes": 15
+        }
+      ],
+      "fill_class": ""
+    }
+  ]
 }
