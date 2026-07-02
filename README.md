@@ -38,3 +38,4 @@ npm run preview
 - 📱 Mobile-first responsive layout
 - ✨ Smooth animations and transitions
 - 🏆 Achievement badges and streak tracking
+
