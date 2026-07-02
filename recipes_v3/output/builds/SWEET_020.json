@@ -564,9 +564,9 @@
       "raw_carb_grams": 396.87,
       "raw_fiber_grams": 21.21,
       "final_grams": 617.87,
-      "boil_minutes": 0,
+      "boil_minutes": 3.0,
       "cook_stages": [],
-      "fill_class": ""
+      "fill_class": "none"
     }
   ]
 }

@@ -425,8 +425,17 @@
       "raw_fiber_grams": 4.22,
       "final_grams": 270.14,
       "boil_minutes": 0,
-      "cook_stages": [],
-      "fill_class": ""
+      "cook_stages": [
+        {
+          "tempF": 425,
+          "minutes": 15
+        },
+        {
+          "tempF": 350,
+          "minutes": 45
+        }
+      ],
+      "fill_class": "pastry"
     },
     {
       "section_key": "filling",

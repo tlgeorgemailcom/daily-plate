@@ -9,6 +9,7 @@
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 24,
   "audit_status": "PASS",
   "audit_notes": "Rule A. All graded macros within \u00b15% of canonical NDB 18208. Max delta: TotalLipidFat +4.4%. Locked May 14 2026.",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 196.09,
   "raw_protein_grams": 48.44,
   "raw_carb_grams": 467.33,
+  "raw_fiber_grams": 9.3,
   "water_lost_grams": 84.92,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 802.24,
   "grams_per_serving": 33.43,
   "ingredients": [
@@ -29,7 +32,7 @@
       "ndb_no": "20581",
       "long_desc": "Wheat flour, white, all-purpose, enriched, unbleached",
       "grams": 343.75,
-      "section": "dough",
+      "section": "rolling",
       "ingredient_group": "dough",
       "qty_display": "2\u00be cups",
       "contribution": {
@@ -50,7 +53,7 @@
       "ndb_no": "18370",
       "long_desc": "Leavening agents, baking powder, double-acting, straight phosphate",
       "grams": 9.2,
-      "section": "dough",
+      "section": "rolling",
       "ingredient_group": "dough",
       "qty_display": "2 teaspoons",
       "contribution": {
@@ -71,7 +74,7 @@
       "ndb_no": "2047",
       "long_desc": "Salt, table",
       "grams": 3.0,
-      "section": "dough",
+      "section": "rolling",
       "ingredient_group": "dough",
       "qty_display": "\u00bd teaspoon",
       "contribution": {
@@ -92,7 +95,7 @@
       "ndb_no": "4610",
       "long_desc": "Margarine, regular, 80% fat, composite, stick, with salt",
       "grams": 227.0,
-      "section": "dough",
+      "section": "rolling",
       "ingredient_group": "dough",
       "qty_display": "1 cup (2 sticks)",
       "contribution": {
@@ -113,7 +116,7 @@
       "ndb_no": "19335",
       "long_desc": "Sugars, granulated",
       "grams": 150.0,
-      "section": "dough",
+      "section": "rolling",
       "ingredient_group": "dough",
       "qty_display": "\u00be cup",
       "contribution": {
@@ -134,7 +137,7 @@
       "ndb_no": "1123",
       "long_desc": "Egg, whole, raw, fresh",
       "grams": 100.0,
-      "section": "dough",
+      "section": "rolling",
       "ingredient_group": "dough",
       "qty_display": "2 large",
       "contribution": {
@@ -155,7 +158,7 @@
       "ndb_no": "2050",
       "long_desc": "Vanilla extract",
       "grams": 4.2,
-      "section": "dough",
+      "section": "rolling",
       "ingredient_group": "dough",
       "qty_display": "1 teaspoon",
       "contribution": {
@@ -348,34 +351,24 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
-      "ingredient_count": 1,
-      "raw_grams": 50.0,
-      "raw_water_grams": 0.01,
-      "raw_fat_grams": 0.0,
-      "raw_protein_grams": 0.0,
-      "raw_carb_grams": 49.99,
-      "final_grams": 49.99
-    },
-    {
-      "section_key": "dough",
-      "section_label": "Dough",
-      "prep_method": "rolled",
-      "cook_method": "baked",
-      "cooking_method": "baked",
-      "cooking_method_normalized": "baked",
-      "yield_factor_water": 0.46,
-      "yield_factor_fat": 1.0,
-      "yield_factor_protein": 1.0,
-      "yield_factor_carbohydrate": 1.0,
-      "yield_factor_other": 1.0,
-      "ingredient_count": 7,
-      "raw_grams": 837.15,
-      "raw_water_grams": 157.24,
+      "ingredient_count": 8,
+      "raw_grams": 887.15,
+      "raw_water_grams": 157.25,
       "raw_fat_grams": 196.09,
       "raw_protein_grams": 48.44,
-      "raw_carb_grams": 417.34,
-      "final_grams": 752.24
+      "raw_carb_grams": 467.33,
+      "raw_fiber_grams": 9.3,
+      "final_grams": 802.24,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 375,
+          "minutes": 9
+        }
+      ],
+      "fill_class": "cake_batter"
     }
   ]
 }

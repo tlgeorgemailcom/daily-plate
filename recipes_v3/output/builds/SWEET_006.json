@@ -509,8 +509,13 @@
       "raw_fiber_grams": 5.06,
       "final_grams": 307.01,
       "boil_minutes": 0,
-      "cook_stages": [],
-      "fill_class": ""
+      "cook_stages": [
+        {
+          "tempF": 375,
+          "minutes": 20
+        }
+      ],
+      "fill_class": "pastry"
     },
     {
       "section_key": "filling",
@@ -565,7 +570,7 @@
           "minutes": 9
         }
       ],
-      "fill_class": "meringue"
+      "fill_class": "none"
     }
   ]
 }

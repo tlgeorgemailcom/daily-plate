@@ -9,6 +9,7 @@
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 9,
   "audit_status": "PASS",
   "audit_notes": "Rule B. All graded macros within \u00b15% of canonical NDB 18119. Max delta: Protein +4.0%, Water +3.7%. Sugar increased 3/4 cup\u21923/4 cup+1 tbsp to dilute protein. Optional spices (cinnamon/cloves/ginger) excluded from audit per is_optional. Locked May 14 2026.",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 126.94,
   "raw_protein_grams": 37.4,
   "raw_carb_grams": 500.7,
+  "raw_fiber_grams": 8.48,
   "water_lost_grams": 55.94,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1026.11,
   "grams_per_serving": 114.01,
   "ingredients": [
@@ -445,6 +448,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 8,
       "raw_grams": 667.45,
@@ -452,7 +456,16 @@
       "raw_fat_grams": 92.12,
       "raw_protein_grams": 35.78,
       "raw_carb_grams": 314.87,
-      "final_grams": 638.24
+      "raw_fiber_grams": 5.08,
+      "final_grams": 638.24,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 350,
+          "minutes": 35
+        }
+      ],
+      "fill_class": "cake_batter"
     },
     {
       "section_key": "topping",
@@ -465,6 +478,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 4,
       "raw_grams": 414.6,
@@ -472,7 +486,16 @@
       "raw_fat_grams": 34.83,
       "raw_protein_grams": 1.61,
       "raw_carb_grams": 185.83,
-      "final_grams": 387.87
+      "raw_fiber_grams": 3.4,
+      "final_grams": 387.87,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 350,
+          "minutes": 35
+        }
+      ],
+      "fill_class": "moderate_fruit"
     }
   ]
 }

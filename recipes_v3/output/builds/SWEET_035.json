@@ -9,6 +9,7 @@
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 16,
   "audit_status": "NO_CANON",
   "audit_notes": "Rule C. No comparable USDA SR Legacy canonical for homemade recipe. Macro audit skipped. Locked May 14 2026.",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 93.59,
   "raw_protein_grams": 34.38,
   "raw_carb_grams": 399.33,
+  "raw_fiber_grams": 33.91,
   "water_lost_grams": 132.16,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 756.62,
   "grams_per_serving": 47.29,
   "ingredients": [
@@ -369,6 +372,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 7,
       "raw_grams": 411.03,
@@ -376,7 +380,16 @@
       "raw_fat_grams": 90.8,
       "raw_protein_grams": 24.48,
       "raw_carb_grams": 207.72,
-      "final_grams": 380.6
+      "raw_fiber_grams": 4.51,
+      "final_grams": 380.6,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 350,
+          "minutes": 33
+        }
+      ],
+      "fill_class": "cake_batter"
     },
     {
       "section_key": "filling",
@@ -389,6 +402,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 2,
       "raw_grams": 477.75,
@@ -396,7 +410,16 @@
       "raw_fat_grams": 2.79,
       "raw_protein_grams": 9.9,
       "raw_carb_grams": 191.61,
-      "final_grams": 376.02
+      "raw_fiber_grams": 29.4,
+      "final_grams": 376.02,
+      "boil_minutes": 15.0,
+      "cook_stages": [
+        {
+          "tempF": 350,
+          "minutes": 33
+        }
+      ],
+      "fill_class": "thickened_fruit"
     }
   ]
 }

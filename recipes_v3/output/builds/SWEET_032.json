@@ -9,6 +9,7 @@
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 48,
   "audit_status": "NO_CANON",
   "audit_notes": "Rule C. No comparable USDA SR Legacy canonical for homemade recipe. Macro audit skipped. Locked May 14 2026.",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 100.06,
   "raw_protein_grams": 36.79,
   "raw_carb_grams": 596.28,
+  "raw_fiber_grams": 9.84,
   "water_lost_grams": 77.77,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 804.93,
   "grams_per_serving": 16.77,
   "ingredients": [
@@ -29,7 +32,7 @@
       "ndb_no": "20581",
       "long_desc": "Wheat flour, white, all-purpose, enriched, unbleached",
       "grams": 281.25,
-      "section": "dough",
+      "section": "rolling",
       "ingredient_group": "dough",
       "qty_display": "2\u00bc cups",
       "contribution": {
@@ -50,7 +53,7 @@
       "ndb_no": "18372",
       "long_desc": "Leavening agents, baking soda",
       "grams": 9.2,
-      "section": "dough",
+      "section": "rolling",
       "ingredient_group": "dough",
       "qty_display": "2 teaspoons",
       "contribution": {
@@ -71,7 +74,7 @@
       "ndb_no": "2047",
       "long_desc": "Salt, table",
       "grams": 3.0,
-      "section": "dough",
+      "section": "rolling",
       "ingredient_group": "dough",
       "qty_display": "\u00bd teaspoon",
       "contribution": {
@@ -92,7 +95,7 @@
       "ndb_no": "1145",
       "long_desc": "Butter, without salt",
       "grams": 113.5,
-      "section": "dough",
+      "section": "rolling",
       "ingredient_group": "dough",
       "qty_display": "\u00bd cup (1 stick)",
       "contribution": {
@@ -113,7 +116,7 @@
       "ndb_no": "19335",
       "long_desc": "Sugars, granulated",
       "grams": 200.0,
-      "section": "dough",
+      "section": "rolling",
       "ingredient_group": "dough",
       "qty_display": "1 cup",
       "contribution": {
@@ -134,7 +137,7 @@
       "ndb_no": "19304",
       "long_desc": "Molasses",
       "grams": 168.5,
-      "section": "dough",
+      "section": "rolling",
       "ingredient_group": "dough",
       "qty_display": "\u00bd cup",
       "contribution": {
@@ -155,7 +158,7 @@
       "ndb_no": "1123",
       "long_desc": "Egg, whole, raw, fresh",
       "grams": 50.0,
-      "section": "dough",
+      "section": "rolling",
       "ingredient_group": "dough",
       "qty_display": "1 large",
       "contribution": {
@@ -176,7 +179,7 @@
       "ndb_no": "2021",
       "long_desc": "Spices, ginger, ground",
       "grams": 3.6,
-      "section": "dough",
+      "section": "rolling",
       "ingredient_group": "dough",
       "qty_display": "2 teaspoons",
       "contribution": {
@@ -197,7 +200,7 @@
       "ndb_no": "2010",
       "long_desc": "Spices, cinnamon, ground",
       "grams": 2.6,
-      "section": "dough",
+      "section": "rolling",
       "ingredient_group": "dough",
       "qty_display": "1 teaspoon",
       "contribution": {
@@ -218,7 +221,7 @@
       "ndb_no": "2011",
       "long_desc": "Spices, cloves, ground",
       "grams": 1.05,
-      "section": "dough",
+      "section": "rolling",
       "ingredient_group": "dough",
       "qty_display": "\u00bd teaspoon",
       "contribution": {
@@ -411,34 +414,24 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
-      "ingredient_count": 1,
-      "raw_grams": 50.0,
-      "raw_water_grams": 0.01,
-      "raw_fat_grams": 0.0,
-      "raw_protein_grams": 0.0,
-      "raw_carb_grams": 49.99,
-      "final_grams": 49.99
-    },
-    {
-      "section_key": "dough",
-      "section_label": "Dough",
-      "prep_method": "rolled",
-      "cook_method": "baked",
-      "cooking_method": "baked",
-      "cooking_method_normalized": "baked",
-      "yield_factor_water": 0.4,
-      "yield_factor_fat": 1.0,
-      "yield_factor_protein": 1.0,
-      "yield_factor_carbohydrate": 1.0,
-      "yield_factor_other": 1.0,
-      "ingredient_count": 10,
-      "raw_grams": 832.7,
-      "raw_water_grams": 129.61,
+      "ingredient_count": 11,
+      "raw_grams": 882.7,
+      "raw_water_grams": 129.62,
       "raw_fat_grams": 100.06,
       "raw_protein_grams": 36.79,
-      "raw_carb_grams": 546.29,
-      "final_grams": 754.93
+      "raw_carb_grams": 596.28,
+      "raw_fiber_grams": 9.84,
+      "final_grams": 804.93,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 375,
+          "minutes": 11
+        }
+      ],
+      "fill_class": "cake_batter"
     }
   ]
 }

@@ -493,8 +493,13 @@
       "raw_fiber_grams": 4.22,
       "final_grams": 251.8,
       "boil_minutes": 0,
-      "cook_stages": [],
-      "fill_class": ""
+      "cook_stages": [
+        {
+          "tempF": 375,
+          "minutes": 20
+        }
+      ],
+      "fill_class": "pastry"
     },
     {
       "section_key": "filling",
@@ -544,7 +549,7 @@
       "final_grams": 50.0,
       "boil_minutes": 0,
       "cook_stages": [],
-      "fill_class": ""
+      "fill_class": "none"
     },
     {
       "section_key": "topping",
@@ -569,7 +574,7 @@
       "final_grams": 65.5,
       "boil_minutes": 0,
       "cook_stages": [],
-      "fill_class": ""
+      "fill_class": "none"
     }
   ]
 }
