@@ -952,8 +952,10 @@
           });
           // Derive recipe-level cookTempF / cookMinutes from section stages
           // (present once build.py writes them into the build JSON).
+          // Skip baked/par-baked sections — their cook_stages are used for the
+          // per-section Prep display (blind-bake temp/time), not the primary cook.
           for (const sec of sections) {
-            if (Array.isArray(sec.stages) && sec.stages.length > 0) {
+            if (sec.prepMethod !== 'baked' && sec.prepMethod !== 'par-baked' && Array.isArray(sec.stages) && sec.stages.length > 0) {
               const totalMins = (sec.stages as Array<{ tempF: number; minutes: number }>)
                 .reduce((sum, st) => sum + (st.minutes ?? 0), 0);
               if (totalMins > 0 && cookMinutes == null) cookMinutes = totalMins;
@@ -1587,8 +1589,9 @@
       // Derive recipe-level cookTempF / cookMinutes from the first section
       // that carries a non-empty stages array (upload.py writes cook_stages
       // from recipe_sections.csv into Turso sections_json since 2026-07-01).
+      // Skip baked/par-baked sections — their stages drive the Prep display.
       for (const sec of nextSections) {
-        if (Array.isArray(sec.stages) && sec.stages.length > 0) {
+        if (sec.prepMethod !== 'baked' && sec.prepMethod !== 'par-baked' && Array.isArray(sec.stages) && sec.stages.length > 0) {
           const totalMins = (sec.stages as Array<{ tempF: number; minutes: number }>)
             .reduce((sum, st) => sum + (st.minutes ?? 0), 0);
           if (totalMins > 0 && cookMinutes == null) cookMinutes = totalMins;
