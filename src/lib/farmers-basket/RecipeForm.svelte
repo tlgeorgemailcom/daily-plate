@@ -927,18 +927,29 @@
           const autoLabel = data.sections.length === 1
             ? (recipeName || data.recipeName || data.sections[0].section_label)
             : null;
-          sections = data.sections.map((s) => ({
-            key: s.section_key,
-            label: autoLabel ?? s.section_label,
-            prepMethod: (!s.prep_method || s.prep_method === 'raw') ? 'none' : s.prep_method,
-            cookingMethod: s.cooking_method,
-            yieldFactorWater: s.yield_factor_water,
-            yieldFactorFat: s.yield_factor_fat,
-            yieldFactorOther: s.yield_factor_other,
-            boilMinutes: s.boil_minutes ?? undefined,
-            stages: s.cook_stages ?? undefined,
-            fillClass: s.fill_class ?? undefined,
-          }));
+          sections = data.sections.map((s) => {
+            const pm = (!s.prep_method || s.prep_method === 'raw') ? 'none' : s.prep_method as string;
+            const prepIsBaked = pm === 'baked' || pm === 'par-baked';
+            const stageArr = Array.isArray(s.cook_stages) ? s.cook_stages as Array<{ tempF: number; minutes: number }> : [];
+            const firstStage = stageArr[0];
+            return {
+              key: s.section_key,
+              label: autoLabel ?? s.section_label,
+              prepMethod: pm,
+              cookingMethod: s.cooking_method,
+              yieldFactorWater: s.yield_factor_water,
+              yieldFactorFat: s.yield_factor_fat,
+              yieldFactorOther: s.yield_factor_other,
+              // For baked/par-baked prep steps, time and temp come from cook_stages[0].
+              // For stovetop prep steps (boiled/simmer/…), use boil_minutes.
+              boilMinutes: prepIsBaked
+                ? (firstStage?.minutes ?? undefined)
+                : (s.boil_minutes ?? undefined),
+              prepTempF: prepIsBaked ? (firstStage?.tempF ?? undefined) : undefined,
+              stages: stageArr.length > 0 ? stageArr : undefined,
+              fillClass: s.fill_class ?? undefined,
+            };
+          });
           // Derive recipe-level cookTempF / cookMinutes from section stages
           // (present once build.py writes them into the build JSON).
           for (const sec of sections) {
