@@ -150,6 +150,9 @@ export interface Level {
     yieldFactorWater?: number;
     yieldFactorFat?: number;
     yieldFactorOther?: number;
+    prepMethod?: string;          // 'mixed' | 'rolled' | 'scooped' | 'formed' | 'whisked' | 'baked' | 'par-baked' | 'none'
+    stages?: Array<{ tempF: number; minutes: number }>;  // oven bake profile
+    boilMinutes?: number;         // stovetop prep time in minutes
   }[];
 }
 

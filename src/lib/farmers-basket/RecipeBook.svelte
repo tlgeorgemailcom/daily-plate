@@ -739,6 +739,25 @@
     }
     
     const nj = level.nutritionJson as (typeof level.nutritionJson & { yieldFactorWater?: number; yieldFactorFat?: number }) | undefined;
+
+    // Derive cookTempF/cookMinutes from bundle sections (populated since generate_bundle fix).
+    // This covers Rule D recipes where the v3-build API is not called on non-moderator views.
+    // For Rule A/B recipes the v3-build effect will overwrite these if they differ.
+    let derivedCookMinutes: number | undefined;
+    let derivedCookTempF: number | undefined;
+    if (level.sections && level.sections.length > 0) {
+      for (const sec of level.sections) {
+        const pm = sec.prepMethod ?? 'none';
+        if (pm !== 'baked' && pm !== 'par-baked' && sec.stages && sec.stages.length > 0) {
+          const totalMins = sec.stages.reduce((sum, st) => sum + (st.minutes ?? 0), 0);
+          if (totalMins > 0) derivedCookMinutes = totalMins;
+          const lastTempF = sec.stages[sec.stages.length - 1]?.tempF ?? 0;
+          if (lastTempF > 0) derivedCookTempF = lastTempF;
+          break;
+        }
+      }
+    }
+
     return {
       recipeName: level.name,
       category: level.category,
@@ -747,6 +766,8 @@
       dishFamily: level.dishFamily || '',
       prepTime: level.prepTime || '',
       servings: level.servings || '',
+      ...(derivedCookMinutes != null ? { cookMinutes: derivedCookMinutes } : {}),
+      ...(derivedCookTempF != null ? { cookTempF: derivedCookTempF } : {}),
       nutritionJson: level.nutritionJson || undefined,
       ...(typeof nj?.yieldFactorWater === 'number' ? { yieldFactorWater: nj.yieldFactorWater } : {}),
       ...(typeof nj?.yieldFactorFat   === 'number' ? { yieldFactorFat:   nj.yieldFactorFat   } : {}),
