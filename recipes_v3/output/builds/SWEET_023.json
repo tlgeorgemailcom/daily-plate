@@ -9,6 +9,7 @@
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 8,
   "audit_status": "PASS",
   "audit_notes": "Rule B. All graded macros within \u00b15% of canonical NDB 18126. Max delta: Water +3.1%. Shortening reduced 1/3 cup\u21925 tablespoons. Locked May 14 2026.",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 71.74,
   "raw_protein_grams": 30.96,
   "raw_carb_grams": 239.4,
+  "raw_fiber_grams": 6.78,
   "water_lost_grams": 26.06,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 504.91,
   "grams_per_serving": 63.11,
   "ingredients": [
@@ -306,6 +309,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 6,
       "raw_grams": 530.97,
@@ -313,7 +317,16 @@
       "raw_fat_grams": 71.74,
       "raw_protein_grams": 30.96,
       "raw_carb_grams": 239.4,
-      "final_grams": 504.91
+      "raw_fiber_grams": 6.78,
+      "final_grams": 504.91,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 450,
+          "minutes": 15
+        }
+      ],
+      "fill_class": ""
     }
   ]
 }
