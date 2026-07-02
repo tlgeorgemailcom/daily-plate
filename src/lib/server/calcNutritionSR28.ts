@@ -75,6 +75,12 @@ function round2(v: number): number {
 
 function parseServings(s: string | null | undefined): number {
   if (!s) return 1;
+  // Extract from "(makes N)" pattern first — avoids "1 slice (makes 8)" → 18.
+  const makesMatch = s.match(/\(makes\s+(\d+)\)/i);
+  if (makesMatch) {
+    const n = parseInt(makesMatch[1]);
+    return n > 0 ? n : 1;
+  }
   const n = parseInt(s.replace(/[^0-9]/g, ''));
   return n > 0 ? n : 1;
 }
