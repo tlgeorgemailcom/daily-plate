@@ -495,8 +495,8 @@
       "boil_minutes": 0,
       "cook_stages": [
         {
-          "tempF": 375,
-          "minutes": 20
+          "tempF": 425,
+          "minutes": 9
         }
       ],
       "fill_class": "pastry"
