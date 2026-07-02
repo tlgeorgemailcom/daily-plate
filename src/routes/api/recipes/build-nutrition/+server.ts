@@ -40,8 +40,8 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 
-import type { CommunityIngredient, CommunitySection } from '$lib/nutrition/types.js';
-import { buildRecipeCommunity }   from '$lib/nutrition/buildRecipeCommunity.js';
+import type { CommunityIngredient } from '$lib/nutrition/types.js';
+import { buildRecipeCommunityV3, type CommunitySectionV3 } from '$lib/nutrition/buildRecipeCommunityV3.js';
 import { fetchNutrientsByNdb }    from '$lib/server/nutrition/fetchNutrients.js';
 
 // ── Input validation helpers ──────────────────────────────────────────────────
@@ -58,7 +58,7 @@ function isValidIngredient(x: unknown): x is CommunityIngredient {
   );
 }
 
-function isValidSection(x: unknown): x is CommunitySection {
+function isValidSection(x: unknown): x is CommunitySectionV3 {
   if (!x || typeof x !== 'object') return false;
   const obj = x as Record<string, unknown>;
   return (
@@ -102,7 +102,7 @@ export const POST: RequestHandler = async ({ request }) => {
   }
 
   // ── Validate sections ────────────────────────────────────────────────────────
-  const sectionsArr: CommunitySection[] = [];
+  const sectionsArr: CommunitySectionV3[] = [];
   if (Array.isArray(sections)) {
     if (!sections.every(isValidSection)) {
       return json(
@@ -110,7 +110,7 @@ export const POST: RequestHandler = async ({ request }) => {
         { status: 400 }
       );
     }
-    sectionsArr.push(...(sections as CommunitySection[]));
+    sectionsArr.push(...(sections as CommunitySectionV3[]));
   }
   // Sections are optional — a recipe with no sections is treated as fully unsectioned.
 
@@ -139,7 +139,7 @@ export const POST: RequestHandler = async ({ request }) => {
   }
 
   // ── Run build ────────────────────────────────────────────────────────────────
-  const result = buildRecipeCommunity(
+  const result = buildRecipeCommunityV3(
     sectionsArr,
     ingredients as CommunityIngredient[],
     nutrientMap,

@@ -1,8 +1,8 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { calcNutritionSR28 } from '$lib/server/calcNutritionSR28';
-import { buildRecipeCommunity } from '$lib/nutrition/buildRecipeCommunity';
-import type { CommunitySection, CommunityIngredient, NutrientRow } from '$lib/nutrition/types';
+import { buildRecipeCommunityV3, type CommunitySectionV3 } from '$lib/nutrition/buildRecipeCommunityV3';
+import type { CommunityIngredient, NutrientRow } from '$lib/nutrition/types';
 
 function hasValidLink(row: unknown): boolean {
   if (!row || typeof row !== 'object') return false;
@@ -88,7 +88,7 @@ export const POST: RequestHandler = async ({ request }) => {
     const rawMap = (nutrientMapRaw && typeof nutrientMapRaw === 'object') ? nutrientMapRaw as Record<string, NutrientRow> : {};
     const nutrientMap = new Map<string, NutrientRow>(Object.entries(rawMap));
     const sectionsList = (sectionsRaw as unknown[]).filter(
-      (s): s is CommunitySection =>
+      (s): s is CommunitySectionV3 =>
         !!s && typeof s === 'object' &&
         typeof (s as Record<string, unknown>).sectionKey === 'string'
     );
@@ -106,7 +106,7 @@ export const POST: RequestHandler = async ({ request }) => {
     const servingsNum = Number(servings ?? 1);
     const gramsPerServing = 100; // placeholder; refined at save time
 
-    const buildResult = buildRecipeCommunity(
+    const buildResult = buildRecipeCommunityV3(
       sectionsList,
       ingList,
       nutrientMap,

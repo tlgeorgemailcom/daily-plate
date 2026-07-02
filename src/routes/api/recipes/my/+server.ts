@@ -1,8 +1,8 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { queryAll, execute } from '$lib/server/turso';
-import { buildRecipeCommunity } from '$lib/nutrition/buildRecipeCommunity';
-import type { CommunitySection, CommunityIngredient } from '$lib/nutrition/types';
+import { buildRecipeCommunityV3, type CommunitySectionV3 } from '$lib/nutrition/buildRecipeCommunityV3';
+import type { CommunityIngredient } from '$lib/nutrition/types';
 import { fetchNutrientsByNdb } from '$lib/server/nutrition/fetchNutrients';
 import { toDisplayRecipeCategory, toStoredRecipeCategory } from '$lib/farmers-basket/recipe-categories';
 
@@ -61,7 +61,7 @@ async function calcCommunityNutrition(
   gramsPerServing: unknown,
 ): Promise<{ nutritionJson: object | null; plausibilityFlags: string[]; blocked: boolean; missingIngredients: Array<{ ndbNo: string; displayName?: string }> }> {
   const sections = (sectionsRaw as unknown[]).filter(
-    (s): s is CommunitySection =>
+    (s): s is CommunitySectionV3 =>
       !!s && typeof s === 'object' && typeof (s as Record<string, unknown>).sectionKey === 'string',
   );
   const ingredients: CommunityIngredient[] = (ingredientsRaw as unknown[]).map(r => {
@@ -86,7 +86,7 @@ async function calcCommunityNutrition(
   const servingsNum        = Math.max(1, Number(servings ?? 1));
   const gramsPerServingNum = Math.max(1, Number(gramsPerServing ?? 100));
 
-  const result = buildRecipeCommunity(sections, ingredients, nutrientMap, servingsNum, gramsPerServingNum);
+  const result = buildRecipeCommunityV3(sections, ingredients, nutrientMap, servingsNum, gramsPerServingNum);
 
   const p100  = result.per100g;
   const gps   = result.gramsPerServing;

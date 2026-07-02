@@ -203,6 +203,7 @@ export function buildRecipeCommunityV3(
   nutrientMap: Map<string, NutrientRow>,
   servings: number,
   gramsPerServing: number,
+  dishCookMethod?: string,
 ): BuildResult {
 
   const sectionResults: SectionBuildResult[] = [];
@@ -243,7 +244,7 @@ export function buildRecipeCommunityV3(
   const allSections: CommunitySectionV3[] = [
     ...sections,
     ...(buckets.get('__unsectioned__')!.length > 0
-      ? [{ sectionKey: '__unsectioned__', sectionLabel: 'Unsectioned', cookMethod: 'raw' } as CommunitySectionV3]
+      ? [{ sectionKey: '__unsectioned__', sectionLabel: 'Unsectioned', cookMethod: dishCookMethod ?? 'raw' } as CommunitySectionV3]
       : []),
   ];
 
