@@ -39,7 +39,7 @@ SWEET_010,filling,Pumpkin custard filling,raw,baked,,1.0,,,1.0,,vegetable_custar
 SWEET_012,cake,Yellow butter cake,raw,baked,,1.0,,,1.0,,cake_batter,350:24,,
 SWEET_012,filling,Vanilla pastry cream,boiled,boiled,,1.0,,,1.0,,starch_custard,,3,
 SWEET_012,glaze,Chocolate ganache glaze,raw,raw,1.0,1.0,,,1.0,,none,,,
-SWEET_015,crust,Pie crust,raw,baked,,1.0,,,1.0,,pastry,"400:12,400:6",,
+SWEET_015,crust,Pie crust,baked,baked,,1.0,,,1.0,,pastry,400:18,,
 SWEET_015,filling,Egg custard filling,raw,baked,,1.0,,,1.0,,dairy_custard,325:40,,
 CRUST_001,crust,Double pie crust,raw,baked,0.38,1.0,,,1.0,,,,,
 CRUST_002,crust,Single pie crust,raw,baked,0.38,1.0,,,1.0,,,,,

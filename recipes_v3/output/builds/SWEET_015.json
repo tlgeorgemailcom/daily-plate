@@ -385,7 +385,7 @@
     {
       "section_key": "crust",
       "section_label": "Pie crust",
-      "prep_method": "raw",
+      "prep_method": "baked",
       "cook_method": "baked",
       "cooking_method": "baked",
       "cooking_method_normalized": "baked",
@@ -407,11 +407,7 @@
       "cook_stages": [
         {
           "tempF": 400,
-          "minutes": 12
-        },
-        {
-          "tempF": 400,
-          "minutes": 6
+          "minutes": 18
         }
       ],
       "fill_class": "pastry"
