@@ -511,8 +511,8 @@
       "boil_minutes": 0,
       "cook_stages": [
         {
-          "tempF": 375,
-          "minutes": 20
+          "tempF": 425,
+          "minutes": 25
         }
       ],
       "fill_class": "pastry"
@@ -538,7 +538,7 @@
       "raw_carb_grams": 244.46,
       "raw_fiber_grams": 1.41,
       "final_grams": 788.52,
-      "boil_minutes": 0,
+      "boil_minutes": 9.0,
       "cook_stages": [],
       "fill_class": ""
     },
