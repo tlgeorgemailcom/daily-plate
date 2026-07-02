@@ -1073,7 +1073,13 @@
 
   function parseServingsCount(s: string): number | null {
     if (!s) return null;
-    // Keep decimal values (e.g. "1.5") so per-serving math is accurate.
+    // Extract from "(makes N)" pattern first — avoids "1 unit (makes 12)" → 112.
+    const makesMatch = s.match(/\(makes\s+([\d.]+)\)/i);
+    if (makesMatch) {
+      const n = parseFloat(makesMatch[1]);
+      return Number.isFinite(n) && n > 0 ? n : null;
+    }
+    // Fallback: plain number or legacy format.
     const cleaned = s.replace(/[^0-9.]/g, '');
     if (!cleaned) return null;
     const n = parseFloat(cleaned);
