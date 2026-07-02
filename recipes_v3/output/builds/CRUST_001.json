@@ -9,6 +9,7 @@
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 1,
   "audit_status": "NO_CANON",
   "audit_notes": "Rule D \u2014 no canonical USDA NDB for a double pie crust; not audited. Ingredients are exactly 2\u00d7 CRUST_002 (single crust, NDB 18336 validated Rule A). Per100g profile matches CRUST_002 within rounding: 527.2 kcal, 6.61g protein, 34.40g fat, 47.93g carb, 1.70g fiber, 0.18g sugars, 9.46g water. Crust yfw=0.38 hard-coded (same as CRUST_002 \u2014 fully baked double crust, raw water ~122g reduced to ~46g retained). Locked May 13 2026.",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 171.58,
   "raw_protein_grams": 32.88,
   "raw_carb_grams": 238.51,
+  "raw_fiber_grams": 8.44,
   "water_lost_grams": 76.87,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 498.37,
   "grams_per_serving": 498.37,
   "ingredients": [
@@ -277,7 +280,7 @@
     {
       "section_key": "crust",
       "section_label": "Double pie crust",
-      "prep_method": "raw",
+      "prep_method": "rolled",
       "cook_method": "baked",
       "cooking_method": "baked",
       "cooking_method_normalized": "baked",
@@ -285,6 +288,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 5,
       "raw_grams": 575.25,
@@ -292,7 +296,16 @@
       "raw_fat_grams": 171.58,
       "raw_protein_grams": 32.88,
       "raw_carb_grams": 238.51,
-      "final_grams": 498.37
+      "raw_fiber_grams": 8.44,
+      "final_grams": 498.37,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 425,
+          "minutes": 25
+        }
+      ],
+      "fill_class": ""
     }
   ]
 }

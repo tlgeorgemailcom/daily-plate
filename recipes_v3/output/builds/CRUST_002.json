@@ -9,6 +9,7 @@
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 1,
   "audit_status": "PASS",
   "audit_notes": "Rule A \u2014 NDB 18336 (pie crust prepared from recipe, baked) is a direct homemade comparison; all 7 audit macros present and non-zero. PASS after adding ABS_FLOOR=0.02g/100g to audit.py pct_delta: SugarsTotal canonical=0.17g vs build=0.18g (\u00b10.01g/100g absolute gap, within USDA measurement rounding precision; 5.9% relative was false FAIL). Crust yfw=0.38 hard-coded (fully baked single crust: raw water ~61g reduced to ~23g retained). Worst graded delta after fix: Water -3.6%. Locked May 13 2026.",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 85.79,
   "raw_protein_grams": 16.44,
   "raw_carb_grams": 119.26,
+  "raw_fiber_grams": 4.22,
   "water_lost_grams": 38.43,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 248.81,
   "grams_per_serving": 248.81,
   "ingredients": [
@@ -277,7 +280,7 @@
     {
       "section_key": "crust",
       "section_label": "Single pie crust",
-      "prep_method": "raw",
+      "prep_method": "rolled",
       "cook_method": "baked",
       "cooking_method": "baked",
       "cooking_method_normalized": "baked",
@@ -285,6 +288,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 5,
       "raw_grams": 287.25,
@@ -292,7 +296,16 @@
       "raw_fat_grams": 85.79,
       "raw_protein_grams": 16.44,
       "raw_carb_grams": 119.26,
-      "final_grams": 248.81
+      "raw_fiber_grams": 4.22,
+      "final_grams": 248.81,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 425,
+          "minutes": 25
+        }
+      ],
+      "fill_class": ""
     }
   ]
 }
