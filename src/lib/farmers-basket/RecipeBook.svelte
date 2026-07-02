@@ -1647,6 +1647,26 @@
     return [...mappedDraft, ...missingOriginals];
   }
 
+  // Maps Turso DB cooking_method values (e.g. 'baked', 'boiled', 'pan grilled')
+  // to the UI COOKING_METHODS labels (e.g. 'Bake', 'Boil', 'Pan grill').
+  function normalizeCookingMethod(raw?: string): string {
+    if (!raw) return 'Bake';
+    const map: Record<string, string> = {
+      'baked':       'Bake',
+      'boiled':      'Boil',
+      'simmer':      'Simmer',
+      'sub-simmer':  'Sub-simmer',
+      'braise':      'Braise',
+      'pan grilled': 'Pan grill',
+      'grilled':     'Grill',
+      'fried':       'Fry',
+      'raw':         'No heat',
+      'steamed':     'No heat',
+      'microwave':   'No heat',
+    };
+    return map[raw.toLowerCase()] ?? raw;
+  }
+
   // Derive initial form data for collaborator: use draft if available, else live level
   let collabDraft = $state<Record<string, unknown> | null>(null);
 
@@ -1674,7 +1694,7 @@
         dietaryCategory: (d.dietaryCategory as DietaryCategory) || selectedLevel.dietaryCategory,
         prepTime: d.prepTime || selectedLevel.prepTime || '',
         servings: d.servings || selectedLevel.servings || '',
-        cookingMethod: d.cookingMethod || selectedLevel.cookingMethod || 'Bake',
+        cookingMethod: normalizeCookingMethod(d.cookingMethod || selectedLevel.cookingMethod),
         dishFamily: d.dishFamily || selectedLevel.dishFamily || '',
         nutritionJson: selectedLevel.nutritionJson || undefined,
         linkMode: d.linkMode ? (d.linkMode === 'dish' && levelDishLink ? 'mixed' : d.linkMode) : (selectedLevel.linkType === 'dish' && levelDishLink ? 'mixed' : selectedLevel.linkType || (levelDishLink ? 'mixed' : 'ingredient')),
@@ -1712,7 +1732,7 @@
         dietaryCategory: (d.dietaryCategory as DietaryCategory) || selectedLevel.dietaryCategory,
         prepTime: d.prepTime || selectedLevel.prepTime || '',
         servings: d.servings || selectedLevel.servings || '',
-        cookingMethod: d.cookingMethod || selectedLevel.cookingMethod || 'Bake',
+        cookingMethod: normalizeCookingMethod(d.cookingMethod || selectedLevel.cookingMethod),
         dishFamily: d.dishFamily || selectedLevel.dishFamily || '',
         nutritionJson: selectedLevel.nutritionJson || undefined,
         linkMode: d.linkMode ? (d.linkMode === 'dish' && levelDishLink ? 'mixed' : d.linkMode) : (selectedLevel.linkType === 'dish' && levelDishLink ? 'mixed' : selectedLevel.linkType || (levelDishLink ? 'mixed' : 'ingredient')),

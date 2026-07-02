@@ -172,6 +172,26 @@
     imageUploadError = null;
   }
   
+  // Maps Turso DB cooking_method values (e.g. 'baked', 'boiled', 'pan grilled')
+  // to the UI COOKING_METHODS labels (e.g. 'Bake', 'Boil', 'Pan grill').
+  function normalizeCookingMethod(raw?: string): string {
+    if (!raw) return 'Bake';
+    const map: Record<string, string> = {
+      'baked':       'Bake',
+      'boiled':      'Boil',
+      'simmer':      'Simmer',
+      'sub-simmer':  'Sub-simmer',
+      'braise':      'Braise',
+      'pan grilled': 'Pan grill',
+      'grilled':     'Grill',
+      'fried':       'Fry',
+      'raw':         'No heat',
+      'steamed':     'No heat',
+      'microwave':   'No heat',
+    };
+    return map[raw.toLowerCase()] ?? raw;
+  }
+
   function recipeToFormData(recipe: RecipeSubmission): Partial<RecipeFormData> {
     const rawIngredients = (recipe.modIngredients || recipe.ingredients || []) as unknown as Array<Record<string, unknown>>;
     const rawInstructions = (recipe.instructions || []) as unknown[];
@@ -215,7 +235,7 @@
       submitterName: recipe.submitterName,
       prepTime: recipe.prepTime || '',
       servings: recipe.servings || '',
-      cookingMethod: recipe.cookingMethod || 'Bake',
+      cookingMethod: normalizeCookingMethod(recipe.cookingMethod),
       dishFamily: recipe.dishFamily || '',
       ingredients: mappedIngredients.map((ing) => ({
         ...ing,
