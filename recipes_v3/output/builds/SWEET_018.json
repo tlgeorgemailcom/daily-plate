@@ -9,6 +9,7 @@
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 12,
   "audit_status": "PASS",
   "audit_notes": "Rule B PASS. 2 whole eggs + 1 yolk (117g) fixes protein +6.4%\u2192+2.1%. Worst delta water -3.1%; 0 fails. Locked May 13 2026.",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 132.04,
   "raw_protein_grams": 47.93,
   "raw_carb_grams": 478.24,
+  "raw_fiber_grams": 6.67,
   "water_lost_grams": 60.69,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 889.98,
   "grams_per_serving": 74.17,
   "ingredients": [
@@ -411,6 +414,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 11,
       "raw_grams": 950.67,
@@ -418,7 +422,16 @@
       "raw_fat_grams": 132.04,
       "raw_protein_grams": 47.93,
       "raw_carb_grams": 478.24,
-      "final_grams": 889.98
+      "raw_fiber_grams": 6.67,
+      "final_grams": 889.98,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 350,
+          "minutes": 30
+        }
+      ],
+      "fill_class": ""
     }
   ]
 }
