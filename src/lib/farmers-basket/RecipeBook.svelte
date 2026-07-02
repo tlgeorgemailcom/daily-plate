@@ -771,7 +771,9 @@
       nutritionJson: level.nutritionJson || undefined,
       ...(typeof nj?.yieldFactorWater === 'number' ? { yieldFactorWater: nj.yieldFactorWater } : {}),
       ...(typeof nj?.yieldFactorFat   === 'number' ? { yieldFactorFat:   nj.yieldFactorFat   } : {}),
-      linkMode: (level.linkType === 'dish') ? 'mixed' : (level.linkType || (levelDishLink ? 'mixed' : 'ingredient')),
+      linkMode: level.linkType === 'dish' ? 'mixed'
+        : (level.linkType === 'ingredient' || level.linkType === 'mixed') ? level.linkType
+        : (levelDishLink ? 'mixed' : 'ingredient'),  // 'builtin'/'cocktail'/'component' → 'ingredient'
       ...(levelDishLink ? { dishLink: levelDishLink } : {}),
       ingredients,
       instructions: (level.recipeInstructions || []).map((text, i) => ({

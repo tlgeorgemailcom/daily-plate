@@ -140,8 +140,8 @@ export interface Level {
   imageUrl?: string;              // Cloudinary URL for community recipe photos
   isCommunityRecipe?: boolean;    // True if this is a community-submitted recipe
   submittedBy?: string;           // Submitter player ID for community recipes
-  linkType?: 'ingredient' | 'dish' | 'mixed';  // How ingredients were USDA-linked
-  sr28Rule?: 'Rule A' | 'Rule B' | 'Rule C' | 'Rule D'; // Nutrient data confidence tier
+  linkType?: 'ingredient' | 'dish' | 'mixed' | 'builtin' | 'cocktail' | 'component';  // How ingredients were USDA-linked
+  sr28Rule?: 'Rule A' | 'Rule B' | 'Rule C' | 'Rule D' | 'Rule F' | 'Rule G'; // Nutrient data confidence tier
   nutritionJson?: NutritionJson | null;         // Per-serving nutrients (null = unlinked)
   sections?: {                    // Per-section cooking breakdown (v3 §18; multi-stage recipes only)
     key: string;                  // matches recipeIngredients[].section

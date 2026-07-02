@@ -99,7 +99,7 @@
     nutritionJson?: PersistedNutritionJson;
     yieldFactorWater?: number;
     yieldFactorFat?: number;
-    sr28Rule?: 'Rule A' | 'Rule B' | 'Rule C' | 'Rule D';
+    sr28Rule?: 'Rule A' | 'Rule B' | 'Rule C' | 'Rule D' | 'Rule F' | 'Rule G';
     sections?: RecipeSection[];
   }
   
