@@ -55,7 +55,7 @@ BKFST_002,biscuit,Biscuit,split,raw,1.0,1.0,,,1.0,,,,,BKFST_001
 BKFST_002,gravy,Sausage gravy,ladled,raw,1.0,1.0,,,1.0,,,,,BKFST_012
 BKFST_001,biscuit,Biscuit,formed,baked,0.75,1.0,,,1.0,,,,,
 BKFST_015,sausage,Sausage,patty,fried,0.73,0.91,,,1.0,,,,,
-SWEET_016,cake,Cake,mixed,baked,0.62,1.0,,,1.0,,,,,
+SWEET_016,cake,Cake,mixed,baked,0.62,1.0,,,1.0,,,350:30,,
 SWEET_018,cake,Cake,mixed,baked,0.78,1.0,,,1.0,,,,,
 SWEET_021,cake,Cake,mixed,baked,0.88,1.0,,,1.0,,,,,
 SWEET_023,biscuit,Biscuit,formed,baked,0.85,1.0,,,1.0,,,,,
