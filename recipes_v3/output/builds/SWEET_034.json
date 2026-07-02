@@ -3,12 +3,13 @@
   "recipe_name": "Cookies, Chocolate Chip, Homemade",
   "sr_rule": "Rule C",
   "canonical_ndb_no": "18164",
-  "cooking_method": "bake",
+  "cooking_method": "baked",
   "cooking_method_normalized": "baked",
   "yield_factor_water": 0.33,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 48,
   "audit_status": "NO_CANON",
   "audit_notes": "Rule C. No comparable USDA SR Legacy canonical for homemade recipe. Macro audit skipped. Locked May 14 2026.",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 252.38,
   "raw_protein_grams": 54.1,
   "raw_carb_grams": 681.17,
+  "raw_fiber_grams": 27.65,
   "water_lost_grams": 80.67,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1044.83,
   "grams_per_serving": 21.77,
   "ingredients": [
@@ -29,8 +32,8 @@
       "ndb_no": "20581",
       "long_desc": "Wheat flour, white, all-purpose, enriched, unbleached",
       "grams": 281.25,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "2\u00bc cups",
       "contribution": {
         "Energy_KCal": 1023.75,
@@ -50,8 +53,8 @@
       "ndb_no": "18372",
       "long_desc": "Leavening agents, baking soda",
       "grams": 4.6,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "1 teaspoon",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -71,8 +74,8 @@
       "ndb_no": "2047",
       "long_desc": "Salt, table",
       "grams": 3.0,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "\u00bd teaspoon",
       "contribution": {
         "Energy_KCal": 0.0,
@@ -92,8 +95,8 @@
       "ndb_no": "1145",
       "long_desc": "Butter, without salt",
       "grams": 170.25,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "\u00be cup (1\u00bd sticks, melted)",
       "contribution": {
         "Energy_KCal": 1220.692,
@@ -113,8 +116,8 @@
       "ndb_no": "19334",
       "long_desc": "Sugars, brown",
       "grams": 150.0,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "\u00be cup packed",
       "contribution": {
         "Energy_KCal": 570.0,
@@ -134,8 +137,8 @@
       "ndb_no": "19335",
       "long_desc": "Sugars, granulated",
       "grams": 100.0,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "\u00bd cup",
       "contribution": {
         "Energy_KCal": 387.0,
@@ -155,8 +158,8 @@
       "ndb_no": "1123",
       "long_desc": "Egg, whole, raw, fresh",
       "grams": 50.0,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "1 large",
       "contribution": {
         "Energy_KCal": 71.5,
@@ -176,8 +179,8 @@
       "ndb_no": "1125",
       "long_desc": "Egg, yolk, raw, fresh",
       "grams": 18.0,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "1 egg yolk",
       "contribution": {
         "Energy_KCal": 57.96,
@@ -197,8 +200,8 @@
       "ndb_no": "2050",
       "long_desc": "Vanilla extract",
       "grams": 8.4,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "2 teaspoons",
       "contribution": {
         "Energy_KCal": 24.192,
@@ -218,8 +221,8 @@
       "ndb_no": "19080",
       "long_desc": "Candies, semisweet chocolate",
       "grams": 340.0,
-      "section": "",
-      "ingredient_group": "",
+      "section": "dough",
+      "ingredient_group": "dough",
       "qty_display": "2 cups",
       "contribution": {
         "Energy_KCal": 1632.0,
@@ -377,5 +380,37 @@
     "omega6": 0.08,
     "AddedSugars": 8.97,
     "IntrinsicSugars": 0.05
-  }
+  },
+  "sections": [
+    {
+      "section_key": "dough",
+      "section_label": "Dough",
+      "prep_method": "mixed",
+      "cook_method": "baked",
+      "cooking_method": "baked",
+      "cooking_method_normalized": "baked",
+      "yield_factor_water": 0.33,
+      "yield_factor_fat": 1.0,
+      "yield_factor_protein": 1.0,
+      "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
+      "yield_factor_other": 1.0,
+      "ingredient_count": 10,
+      "raw_grams": 1125.5,
+      "raw_water_grams": 120.4,
+      "raw_fat_grams": 252.38,
+      "raw_protein_grams": 54.1,
+      "raw_carb_grams": 681.17,
+      "raw_fiber_grams": 27.65,
+      "final_grams": 1044.83,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 350,
+          "minutes": 12
+        }
+      ],
+      "fill_class": ""
+    }
+  ]
 }
