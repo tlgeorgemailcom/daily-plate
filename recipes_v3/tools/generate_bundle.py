@@ -130,6 +130,32 @@ def ts_instructions(instr_list):
     lines = [f"      '{esc(t)}'" for t in instr_list]
     return '[\n' + ',\n'.join(lines) + '\n    ]'
 
+def _parse_cook_stages(raw):
+    """Parse '425:20,375:33' -> [{tempF:425,minutes:20},{tempF:375,minutes:33}]"""
+    if not raw or not raw.strip():
+        return []
+    result = []
+    for part in raw.strip().split(','):
+        part = part.strip()
+        if ':' in part:
+            temp_str, min_str = part.split(':', 1)
+            try:
+                result.append({'tempF': int(temp_str.strip()), 'minutes': int(min_str.strip())})
+            except ValueError:
+                pass
+    return result
+
+
+def _parse_boil_stages(raw):
+    """Parse '10' -> 10 (minutes). Returns None if absent."""
+    if not raw or not raw.strip():
+        return None
+    try:
+        return int(raw.strip())
+    except ValueError:
+        return None
+
+
 def ts_sections(sections):
     """Format per-section cooking-method/yield rows for the bundle.
 
@@ -147,6 +173,16 @@ def ts_sections(sections):
             f"label: '{esc(s.get('label', ''))}'",
             f"cookingMethod: '{esc(s['cookingMethod'])}'",
         ]
+        if s.get('prepMethod'):
+            parts.append(f"prepMethod: '{esc(s['prepMethod'])}'")
+        if s.get('stages'):
+            stage_parts = ', '.join(
+                f"{{ tempF: {st['tempF']}, minutes: {st['minutes']} }}"
+                for st in s['stages']
+            )
+            parts.append(f"stages: [{stage_parts}]")
+        if s.get('boilMinutes') is not None:
+            parts.append(f"boilMinutes: {s['boilMinutes']}")
         if s.get('yieldFactorWater') is not None:
             parts.append(f"yieldFactorWater: {s['yieldFactorWater']}")
         if s.get('yieldFactorFat') is not None and s['yieldFactorFat'] != 1.0:
@@ -570,7 +606,10 @@ for recipe in recipes:
         {
             'key':              (s.get('section_key') or '').strip(),
             'label':            (s.get('section_label') or '').strip(),
-            'cookingMethod':    (s.get('cooking_method') or '').strip().lower(),
+            'cookingMethod':    (s.get('cook_method') or '').strip().lower(),
+            'prepMethod':       (s.get('prep_method') or '').strip(),
+            'stages':           _parse_cook_stages(s.get('cook_stages', '')),
+            'boilMinutes':      _parse_boil_stages(s.get('boil_stages', '')),
             'yieldFactorWater': (lambda v: float(v) if v not in (None, '') else None)(s.get('yield_factor_water')),
             'yieldFactorFat':   (lambda v: float(v) if v not in (None, '') else None)(s.get('yield_factor_fat')),
             'yieldFactorOther': (lambda v: float(v) if v not in (None, '') else None)(s.get('yield_factor_other')),

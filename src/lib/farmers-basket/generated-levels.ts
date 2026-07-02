@@ -51,8 +51,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.82 },
-      { key: 'filling', label: 'Apple filling', cookingMethod: '' }
+      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'raw', yieldFactorWater: 0.82 },
+      { key: 'filling', label: 'Apple filling', cookingMethod: 'baked', prepMethod: 'simmer', stages: [{ tempF: 425, minutes: 15 }, { tempF: 350, minutes: 37 }], boilMinutes: 5 }
     ],
   },
   {
@@ -105,9 +105,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'pastry', label: 'Puff pastry', cookingMethod: '', yieldFactorWater: 0.82 },
-      { key: 'filling', label: 'Apple-raisin filling', cookingMethod: '' },
-      { key: 'finish', label: 'Egg wash finish', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'pastry', label: 'Puff pastry', cookingMethod: 'baked', prepMethod: 'raw', yieldFactorWater: 0.82 },
+      { key: 'filling', label: 'Apple-raisin filling', cookingMethod: 'baked', prepMethod: 'simmer', stages: [{ tempF: 375, minutes: 35 }], boilMinutes: 5 },
+      { key: 'finish', label: 'Egg wash finish', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -162,10 +162,10 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'filling', label: 'Vanilla custard filling', cookingMethod: '' },
-      { key: 'assembly', label: 'Banana layer', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'topping', label: 'Whipped cream topping', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 425, minutes: 25 }], yieldFactorWater: 0.75 },
+      { key: 'filling', label: 'Vanilla custard filling', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 8 },
+      { key: 'assembly', label: 'Banana layer', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'topping', label: 'Whipped cream topping', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -220,9 +220,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.82 },
-      { key: 'filling', label: 'Blueberry filling', cookingMethod: '' },
-      { key: 'wash', label: 'Egg wash', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'raw', stages: [{ tempF: 425, minutes: 25 }, { tempF: 375, minutes: 55 }], yieldFactorWater: 0.82 },
+      { key: 'filling', label: 'Blueberry filling', cookingMethod: 'baked', prepMethod: 'raw', stages: [{ tempF: 425, minutes: 25 }, { tempF: 375, minutes: 55 }] },
+      { key: 'wash', label: 'Egg wash', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -277,9 +277,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.82 },
-      { key: 'filling', label: 'Cherry filling', cookingMethod: '' },
-      { key: 'wash', label: 'Egg wash', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'raw', stages: [{ tempF: 425, minutes: 25 }, { tempF: 375, minutes: 55 }], yieldFactorWater: 0.82 },
+      { key: 'filling', label: 'Cherry filling', cookingMethod: 'baked', prepMethod: 'simmer', stages: [{ tempF: 425, minutes: 25 }, { tempF: 375, minutes: 55 }], boilMinutes: 5 },
+      { key: 'wash', label: 'Egg wash', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -336,9 +336,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.84 },
-      { key: 'filling', label: 'Lemon curd filling', cookingMethod: '', yieldFactorWater: 0.92 },
-      { key: 'topping', label: 'Meringue topping', cookingMethod: '', yieldFactorWater: 0.85 }
+      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 425, minutes: 25 }], yieldFactorWater: 0.84 },
+      { key: 'filling', label: 'Lemon curd filling', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 9, yieldFactorWater: 0.92 },
+      { key: 'topping', label: 'Meringue topping', cookingMethod: 'baked', prepMethod: 'none', stages: [{ tempF: 350, minutes: 9 }], yieldFactorWater: 0.85 }
     ],
   },
   {
@@ -405,9 +405,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.82 },
-      { key: 'filling', label: 'Mincemeat filling', cookingMethod: '' },
-      { key: 'wash', label: 'Egg wash', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'raw', stages: [{ tempF: 425, minutes: 20 }, { tempF: 375, minutes: 33 }], yieldFactorWater: 0.82 },
+      { key: 'filling', label: 'Mincemeat filling', cookingMethod: 'baked', prepMethod: 'boiled', stages: [{ tempF: 425, minutes: 20 }, { tempF: 375, minutes: 33 }], boilMinutes: 30 },
+      { key: 'wash', label: 'Egg wash', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -467,9 +467,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.82 },
-      { key: 'filling', label: 'Peach filling', cookingMethod: '' },
-      { key: 'wash', label: 'Egg wash', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'raw', stages: [{ tempF: 425, minutes: 20 }, { tempF: 375, minutes: 27 }], yieldFactorWater: 0.82 },
+      { key: 'filling', label: 'Peach filling', cookingMethod: 'baked', prepMethod: 'simmer', stages: [{ tempF: 425, minutes: 20 }, { tempF: 375, minutes: 27 }], boilMinutes: 10 },
+      { key: 'wash', label: 'Egg wash', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -523,8 +523,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.84 },
-      { key: 'filling', label: 'Pecan custard filling', cookingMethod: '' }
+      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'raw', stages: [{ tempF: 350, minutes: 55 }], yieldFactorWater: 0.84 },
+      { key: 'filling', label: 'Pecan custard filling', cookingMethod: 'baked', prepMethod: 'raw', stages: [{ tempF: 350, minutes: 55 }] }
     ],
   },
   {
@@ -578,8 +578,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.84 },
-      { key: 'filling', label: 'Pumpkin custard filling', cookingMethod: '' }
+      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'raw', stages: [{ tempF: 425, minutes: 15 }, { tempF: 350, minutes: 45 }], yieldFactorWater: 0.84 },
+      { key: 'filling', label: 'Pumpkin custard filling', cookingMethod: 'baked', prepMethod: 'raw', stages: [{ tempF: 425, minutes: 15 }, { tempF: 350, minutes: 45 }] }
     ],
   },
   {
@@ -637,9 +637,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: '' },
-      { key: 'filling', label: 'Vanilla pastry cream', cookingMethod: '' },
-      { key: 'topping', label: 'Whipped cream topping', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 425, minutes: 25 }] },
+      { key: 'filling', label: 'Vanilla pastry cream', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 3 },
+      { key: 'topping', label: 'Whipped cream topping', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -701,9 +701,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cake', label: 'Yellow butter cake', cookingMethod: '' },
-      { key: 'filling', label: 'Vanilla pastry cream', cookingMethod: '' },
-      { key: 'glaze', label: 'Chocolate ganache glaze', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cake', label: 'Yellow butter cake', cookingMethod: 'baked', prepMethod: 'raw', stages: [{ tempF: 350, minutes: 24 }] },
+      { key: 'filling', label: 'Vanilla pastry cream', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 3 },
+      { key: 'glaze', label: 'Chocolate ganache glaze', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -759,9 +759,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Chocolate cookie crumb crust', cookingMethod: '' },
-      { key: 'filling', label: 'Chocolate pastry cream', cookingMethod: '' },
-      { key: 'topping', label: 'Whipped cream topping', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'crust', label: 'Chocolate cookie crumb crust', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 350, minutes: 9 }] },
+      { key: 'filling', label: 'Chocolate pastry cream', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 3 },
+      { key: 'topping', label: 'Whipped cream topping', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -821,9 +821,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: '' },
-      { key: 'filling', label: 'Coconut pastry cream', cookingMethod: '' },
-      { key: 'topping', label: 'Whipped cream topping', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 425, minutes: 25 }] },
+      { key: 'filling', label: 'Coconut pastry cream', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 3 },
+      { key: 'topping', label: 'Whipped cream topping', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -874,8 +874,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: '' },
-      { key: 'filling', label: 'Egg custard filling', cookingMethod: '' }
+      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 400, minutes: 18 }] },
+      { key: 'filling', label: 'Egg custard filling', cookingMethod: 'baked', prepMethod: 'raw', stages: [{ tempF: 325, minutes: 40 }] }
     ],
   },
   {
@@ -925,7 +925,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cake', label: 'Cake', cookingMethod: '', yieldFactorWater: 0.62 }
+      { key: 'cake', label: 'Cake', cookingMethod: 'baked', prepMethod: 'mixed', stages: [{ tempF: 350, minutes: 30 }], yieldFactorWater: 0.62 }
     ],
   },
   {
@@ -991,8 +991,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cake', label: 'White butter cake (SWEET_016 base)', cookingMethod: '', yieldFactorWater: 0.62 },
-      { key: 'frosting', label: '7-minute coconut frosting', cookingMethod: '', yieldFactorWater: 0.5 }
+      { key: 'cake', label: 'White butter cake (SWEET_016 base)', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 350, minutes: 30 }], yieldFactorWater: 0.62 },
+      { key: 'frosting', label: '7-minute coconut frosting', cookingMethod: 'boiled', prepMethod: 'raw', yieldFactorWater: 0.5 }
     ],
   },
   {
@@ -1044,7 +1044,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cake', label: 'Cake', cookingMethod: '', yieldFactorWater: 0.78 }
+      { key: 'cake', label: 'Cake', cookingMethod: 'baked', prepMethod: 'mixed', stages: [{ tempF: 350, minutes: 30 }], yieldFactorWater: 0.78 }
     ],
   },
   {
@@ -1086,7 +1086,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'glaze', label: 'Chocolate glaze', cookingMethod: '' }
+      { key: 'glaze', label: 'Chocolate glaze', cookingMethod: 'raw', prepMethod: 'raw' }
     ],
   },
   {
@@ -1149,8 +1149,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cake', label: 'Butter-buttermilk yellow cake', cookingMethod: '' },
-      { key: 'frosting', label: 'Bittersweet chocolate glaze', cookingMethod: '' }
+      { key: 'cake', label: 'Butter-buttermilk yellow cake', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 350, minutes: 30 }] },
+      { key: 'frosting', label: 'Bittersweet chocolate glaze', cookingMethod: 'raw', prepMethod: 'raw', boilMinutes: 3 }
     ],
   },
   {
@@ -1203,7 +1203,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cake', label: 'Cake', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'cake', label: 'Cake', cookingMethod: 'baked', prepMethod: 'mixed', stages: [{ tempF: 350, minutes: 37 }], yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -1260,8 +1260,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cake', label: 'Cake', cookingMethod: '', yieldFactorWater: 0.86 },
-      { key: 'topping', label: 'Topping', cookingMethod: '', yieldFactorWater: 0.86 }
+      { key: 'cake', label: 'Cake', cookingMethod: 'baked', prepMethod: 'batter', stages: [{ tempF: 350, minutes: 35 }], yieldFactorWater: 0.86 },
+      { key: 'topping', label: 'Topping', cookingMethod: 'baked', prepMethod: 'combined', stages: [{ tempF: 350, minutes: 35 }], yieldFactorWater: 0.86 }
     ],
   },
   {
@@ -1308,7 +1308,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve warm, split horizontally with sweetened berries and whipped cream for classic strawberry shortcake.'
     ],
     sections: [
-      { key: 'biscuit', label: 'Biscuit', cookingMethod: '', yieldFactorWater: 0.85 }
+      { key: 'biscuit', label: 'Biscuit', cookingMethod: 'baked', prepMethod: 'formed', stages: [{ tempF: 450, minutes: 15 }], yieldFactorWater: 0.85 }
     ],
   },
   {
@@ -1362,7 +1362,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cake', label: 'Cake', cookingMethod: '', yieldFactorWater: 0.55 }
+      { key: 'cake', label: 'Cake', cookingMethod: 'baked', prepMethod: 'mixed', stages: [{ tempF: 325, minutes: 45 }], yieldFactorWater: 0.55 }
     ],
   },
   {
@@ -1413,7 +1413,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve plain, with sweetened berries, or with a light glaze.'
     ],
     sections: [
-      { key: 'cake', label: 'Cake', cookingMethod: '', yieldFactorWater: 0.55 }
+      { key: 'cake', label: 'Cake', cookingMethod: 'baked', prepMethod: 'mixed', stages: [{ tempF: 350, minutes: 40 }], yieldFactorWater: 0.55 }
     ],
   },
   {
@@ -1472,8 +1472,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Crust', cookingMethod: '', yieldFactorWater: 0.92 },
-      { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.92 }
+      { key: 'crust', label: 'Crust', cookingMethod: 'baked', prepMethod: 'pressed', stages: [{ tempF: 325, minutes: 12 }], yieldFactorWater: 0.92 },
+      { key: 'filling', label: 'Filling', cookingMethod: 'baked', prepMethod: 'whisked', stages: [{ tempF: 325, minutes: 65 }], yieldFactorWater: 0.92 }
     ],
   },
   {
@@ -1529,8 +1529,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cake', label: 'Cake', cookingMethod: '', yieldFactorWater: 0.83 },
-      { key: 'topping', label: 'Topping', cookingMethod: '', yieldFactorWater: 0.83 }
+      { key: 'cake', label: 'Cake', cookingMethod: 'baked', prepMethod: 'batter', stages: [{ tempF: 350, minutes: 55 }], yieldFactorWater: 0.83 },
+      { key: 'topping', label: 'Topping', cookingMethod: 'baked', prepMethod: 'crumbled', stages: [{ tempF: 350, minutes: 55 }], yieldFactorWater: 0.83 }
     ],
   },
   {
@@ -1629,7 +1629,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'batter', label: 'Batter', cookingMethod: '', yieldFactorWater: 0.79 }
+      { key: 'batter', label: 'Batter', cookingMethod: 'baked', prepMethod: 'mixed', stages: [{ tempF: 350, minutes: 25 }], yieldFactorWater: 0.79 }
     ],
   },
   {
@@ -1681,7 +1681,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'dough', label: 'Dough', cookingMethod: '', yieldFactorWater: 0.7 }
+      { key: 'dough', label: 'Dough', cookingMethod: 'baked', prepMethod: 'mixed', stages: [{ tempF: 350, minutes: 15 }], yieldFactorWater: 0.7 }
     ],
   },
   {
@@ -1730,7 +1730,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'rolling', label: 'Cookies', cookingMethod: '', yieldFactorWater: 0.46 }
+      { key: 'rolling', label: 'Cookies', cookingMethod: 'baked', prepMethod: 'rolled', stages: [{ tempF: 375, minutes: 9 }], yieldFactorWater: 0.46 }
     ],
   },
   {
@@ -1783,7 +1783,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'rolling', label: 'Cookies', cookingMethod: '', yieldFactorWater: 0.4 }
+      { key: 'rolling', label: 'Cookies', cookingMethod: 'baked', prepMethod: 'rolled', stages: [{ tempF: 375, minutes: 11 }], yieldFactorWater: 0.4 }
     ],
   },
   {
@@ -1829,7 +1829,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'dough', label: 'Dough', cookingMethod: '', yieldFactorWater: 0.38 }
+      { key: 'dough', label: 'Dough', cookingMethod: 'baked', prepMethod: 'mixed', stages: [{ tempF: 325, minutes: 13 }], yieldFactorWater: 0.38 }
     ],
   },
   {
@@ -1881,7 +1881,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'dough', label: 'Dough', cookingMethod: '', yieldFactorWater: 0.33 }
+      { key: 'dough', label: 'Dough', cookingMethod: 'baked', prepMethod: 'mixed', stages: [{ tempF: 350, minutes: 12 }], yieldFactorWater: 0.33 }
     ],
   },
   {
@@ -1931,8 +1931,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Crust', cookingMethod: '', yieldFactorWater: 0.62 },
-      { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.62 }
+      { key: 'crust', label: 'Crust', cookingMethod: 'baked', prepMethod: 'pressed', stages: [{ tempF: 350, minutes: 33 }], yieldFactorWater: 0.62 },
+      { key: 'filling', label: 'Filling', cookingMethod: 'baked', prepMethod: 'simmered', stages: [{ tempF: 350, minutes: 33 }], boilMinutes: 15, yieldFactorWater: 0.62 }
     ],
   },
   {
@@ -1977,7 +1977,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'macaroons', label: 'Macaroons', cookingMethod: '', yieldFactorWater: 0.55 }
+      { key: 'macaroons', label: 'Macaroons', cookingMethod: 'baked', prepMethod: 'scooped', stages: [{ tempF: 325, minutes: 22 }], yieldFactorWater: 0.55 }
     ],
   },
   {
@@ -2029,7 +2029,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cookies', label: 'Cookies', cookingMethod: '', yieldFactorWater: 0.46 }
+      { key: 'cookies', label: 'Cookies', cookingMethod: 'baked', prepMethod: 'scooped', stages: [{ tempF: 350, minutes: 10 }], yieldFactorWater: 0.46 }
     ],
   },
   {
@@ -2079,7 +2079,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cookies', label: 'Cookies', cookingMethod: '', yieldFactorWater: 0.35 }
+      { key: 'cookies', label: 'Cookies', cookingMethod: 'baked', prepMethod: 'scooped', stages: [{ tempF: 350, minutes: 10 }], yieldFactorWater: 0.35 }
     ],
   },
   {
@@ -2125,7 +2125,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'shortbread', label: 'Shortbread', cookingMethod: '', yieldFactorWater: 0.3 }
+      { key: 'shortbread', label: 'Shortbread', cookingMethod: 'baked', prepMethod: 'formed', stages: [{ tempF: 325, minutes: 21 }], yieldFactorWater: 0.3 }
     ],
   },
   {
@@ -2181,8 +2181,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Crust', cookingMethod: '', yieldFactorWater: 0.9 },
-      { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'crust', label: 'Crust', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 400, minutes: 18 }], yieldFactorWater: 0.9 },
+      { key: 'filling', label: 'Filling', cookingMethod: 'baked', prepMethod: 'whisked', stages: [{ tempF: 325, minutes: 50 }], yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -2224,7 +2224,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Double pie crust', cookingMethod: '', yieldFactorWater: 0.38 }
+      { key: 'crust', label: 'Double pie crust', cookingMethod: 'baked', prepMethod: 'rolled', stages: [{ tempF: 425, minutes: 25 }], yieldFactorWater: 0.38 }
     ],
   },
   {
@@ -2267,7 +2267,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Single pie crust', cookingMethod: '', yieldFactorWater: 0.38 }
+      { key: 'crust', label: 'Single pie crust', cookingMethod: 'baked', prepMethod: 'rolled', stages: [{ tempF: 425, minutes: 25 }], yieldFactorWater: 0.38 }
     ],
   },
   {
@@ -2309,7 +2309,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Single pie crust (unbaked)', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'crust', label: 'Single pie crust (unbaked)', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -2351,7 +2351,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Crust', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'crust', label: 'Crust', cookingMethod: 'raw', prepMethod: 'rolled', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -2397,7 +2397,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve warm with butter, gravy, or jam.'
     ],
     sections: [
-      { key: 'biscuit', label: 'Biscuit', cookingMethod: '', yieldFactorWater: 0.75 }
+      { key: 'biscuit', label: 'Biscuit', cookingMethod: 'baked', prepMethod: 'formed', yieldFactorWater: 0.75 }
     ],
   },
   {
@@ -2444,7 +2444,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve hot alongside eggs, biscuits, or as the protein in biscuits & gravy.'
     ],
     sections: [
-      { key: 'sausage', label: 'Sausage', cookingMethod: '', yieldFactorWater: 0.73, yieldFactorFat: 0.91 }
+      { key: 'sausage', label: 'Sausage', cookingMethod: 'fried', prepMethod: 'patty', yieldFactorWater: 0.73, yieldFactorFat: 0.91 }
     ],
   },
   {
@@ -2494,8 +2494,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve hot over split biscuits.'
     ],
     sections: [
-      { key: 'sausage', label: 'Browned pork sausage crumbles', cookingMethod: '', yieldFactorWater: 0.73 },
-      { key: 'gravy', label: 'Milk gravy', cookingMethod: '', yieldFactorWater: 0.92 }
+      { key: 'sausage', label: 'Browned pork sausage crumbles', cookingMethod: 'fried', prepMethod: 'crumbled', yieldFactorWater: 0.73 },
+      { key: 'gravy', label: 'Milk gravy', cookingMethod: 'boiled', prepMethod: 'raw', yieldFactorWater: 0.92 }
     ],
   },
   {
@@ -2530,8 +2530,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'biscuit', label: 'Biscuit', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'gravy', label: 'Sausage gravy', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'biscuit', label: 'Biscuit', cookingMethod: 'raw', prepMethod: 'split', yieldFactorWater: 1.0 },
+      { key: 'gravy', label: 'Sausage gravy', cookingMethod: 'raw', prepMethod: 'ladled', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -2576,7 +2576,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'main', label: 'English muffin dough', cookingMethod: '', yieldFactorWater: 0.8 }
+      { key: 'main', label: 'English muffin dough', cookingMethod: 'grilled', prepMethod: 'formed', yieldFactorWater: 0.8 }
     ],
   },
   {
@@ -2621,7 +2621,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'muffin', label: 'English muffin dough', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'muffin', label: 'English muffin dough', cookingMethod: 'grilled', prepMethod: 'formed', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -2661,7 +2661,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Classic for Eggs Benedict and poached eggs. Also excellent over steamed asparagus, broccoli, or other vegetables.'
     ],
     sections: [
-      { key: 'sauce', label: 'Hollandaise sauce', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'sauce', label: 'Hollandaise sauce', cookingMethod: 'steamed', prepMethod: 'whisked', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -2701,10 +2701,10 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'egg', label: 'Poached egg', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'muffin', label: 'English muffin (wheat)', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'bacon', label: 'Canadian bacon', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'hollandaise', label: 'Hollandaise sauce', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'egg', label: 'Poached egg', cookingMethod: 'boiled', prepMethod: 'poached', yieldFactorWater: 1.0 },
+      { key: 'muffin', label: 'English muffin (wheat)', cookingMethod: 'raw', prepMethod: 'toasted', yieldFactorWater: 1.0 },
+      { key: 'bacon', label: 'Canadian bacon', cookingMethod: 'fried', prepMethod: 'pan-fried', yieldFactorWater: 1.0 },
+      { key: 'hollandaise', label: 'Hollandaise sauce', cookingMethod: 'raw', prepMethod: 'spooned', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -2744,7 +2744,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with scrambled eggs, fresh fruit, bacon, or maple syrup.'
     ],
     sections: [
-      { key: 'main', label: 'French toast', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'main', label: 'French toast', cookingMethod: 'fried', prepMethod: 'dipped', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -2780,7 +2780,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with fresh fruit, nuts, or maple syrup.'
     ],
     sections: [
-      { key: 'oatmeal', label: 'Oatmeal', cookingMethod: '', yieldFactorWater: 0.76 }
+      { key: 'oatmeal', label: 'Oatmeal', cookingMethod: 'boiled', yieldFactorWater: 0.76 }
     ],
   },
   {
@@ -2821,7 +2821,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with maple syrup, fresh berries, sliced bananas, or whipped cream.'
     ],
     sections: [
-      { key: 'batter', label: 'Pancake batter', cookingMethod: '', yieldFactorWater: 0.96 }
+      { key: 'batter', label: 'Pancake batter', cookingMethod: 'grilled', yieldFactorWater: 0.96 }
     ],
   },
   {
@@ -2863,7 +2863,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with maple syrup, sliced bananas, whipped cream, or plain Greek yogurt.'
     ],
     sections: [
-      { key: 'batter', label: 'Pancake batter', cookingMethod: '', yieldFactorWater: 0.81 }
+      { key: 'batter', label: 'Pancake batter', cookingMethod: 'grilled', yieldFactorWater: 0.81 }
     ],
   },
   {
@@ -2904,7 +2904,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'batter', label: 'Pancake batter', cookingMethod: '', yieldFactorWater: 0.78 }
+      { key: 'batter', label: 'Pancake batter', cookingMethod: 'grilled', yieldFactorWater: 0.78 }
     ],
   },
   {
@@ -2945,7 +2945,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with maple syrup, whipped cream, or fresh berries.'
     ],
     sections: [
-      { key: 'batter', label: 'Waffle batter', cookingMethod: '', yieldFactorWater: 0.62 }
+      { key: 'batter', label: 'Waffle batter', cookingMethod: 'grilled', yieldFactorWater: 0.62 }
     ],
   },
   {
@@ -2983,7 +2983,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'hashbrown', label: 'Hash brown', cookingMethod: '', yieldFactorWater: 0.251 }
+      { key: 'hashbrown', label: 'Hash brown', cookingMethod: 'fried', yieldFactorWater: 0.251 }
     ],
   },
   {
@@ -3021,7 +3021,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Add cilantro, diced white onion, shredded lettuce or slaw, salsa, or sour cream.'
     ],
     sections: [
-      { key: 'burrito', label: 'Bean burrito', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'burrito', label: 'Bean burrito', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -3060,7 +3060,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Add cilantro, diced white onion, shredded lettuce or slaw, salsa, or sour cream.'
     ],
     sections: [
-      { key: 'burrito', label: 'Bean and cheese burrito', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'burrito', label: 'Bean and cheese burrito', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -3095,7 +3095,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Add cilantro, diced white onion, shredded lettuce or slaw, salsa, or sour cream.'
     ],
     sections: [
-      { key: 'burrito', label: 'Cheese burrito', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'burrito', label: 'Cheese burrito', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -3136,7 +3136,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Add cilantro, diced white onion, shredded lettuce or slaw, salsa, or sour cream.'
     ],
     sections: [
-      { key: 'burrito', label: 'Egg burrito', cookingMethod: '', yieldFactorWater: 0.783 }
+      { key: 'burrito', label: 'Egg burrito', cookingMethod: 'fried', yieldFactorWater: 0.783 }
     ],
   },
   {
@@ -3175,8 +3175,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Add cilantro, diced white onion, shredded lettuce or slaw, salsa, or sour cream.'
     ],
     sections: [
-      { key: 'beef', label: 'Ground beef', cookingMethod: '', yieldFactorWater: 0.6669, yieldFactorFat: 0.593 },
-      { key: 'assembly', label: 'Burrito assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'beef', label: 'Ground beef', cookingMethod: 'fried', yieldFactorWater: 0.6669, yieldFactorFat: 0.593 },
+      { key: 'assembly', label: 'Burrito assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -3217,7 +3217,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Add cilantro, diced white onion, shredded lettuce or slaw, salsa, or sour cream.'
     ],
     sections: [
-      { key: 'burrito', label: 'Breakfast burrito', cookingMethod: '', yieldFactorWater: 0.82 }
+      { key: 'burrito', label: 'Breakfast burrito', cookingMethod: 'fried', yieldFactorWater: 0.82 }
     ],
   },
   {
@@ -3256,7 +3256,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a lemon vinaigrette salad, hash browns, or sourdough toast.'
     ],
     sections: [
-      { key: 'omelette', label: 'Cheese omelette', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'omelette', label: 'Cheese omelette', cookingMethod: 'fried', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -3298,7 +3298,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with hash browns, salsa, toast, or sour cream.'
     ],
     sections: [
-      { key: 'omelette', label: 'Denver omelette', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'omelette', label: 'Denver omelette', cookingMethod: 'fried', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -3345,8 +3345,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a green salad, roasted root vegetables, or fresh fruit.'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.38 },
-      { key: 'filling', label: 'Cheese filling', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'raw', yieldFactorWater: 0.38 },
+      { key: 'filling', label: 'Cheese filling', cookingMethod: 'baked', prepMethod: 'raw', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -3394,8 +3394,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with crispy roasted potatoes or fresh fruit.'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.38 },
-      { key: 'filling', label: 'Spinach cheese filling', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'raw', yieldFactorWater: 0.38 },
+      { key: 'filling', label: 'Spinach cheese filling', cookingMethod: 'baked', prepMethod: 'raw', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -3443,8 +3443,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a fresh green salad, roasted potatoes, or fresh fruit.'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.38 },
-      { key: 'filling', label: 'Ham and cheese filling', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'raw', yieldFactorWater: 0.38 },
+      { key: 'filling', label: 'Ham and cheese filling', cookingMethod: 'baked', prepMethod: 'raw', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -3492,8 +3492,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with an arugula salad, mixed green salad, or asparagus.'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: '', yieldFactorWater: 0.38 },
-      { key: 'filling', label: 'Bacon and cheese filling', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'raw', yieldFactorWater: 0.38 },
+      { key: 'filling', label: 'Bacon and cheese filling', cookingMethod: 'baked', prepMethod: 'raw', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -3535,7 +3535,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a green salad, roasted root vegetables, or fresh fruit.'
     ],
     sections: [
-      { key: 'filling', label: 'Cheese filling', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'filling', label: 'Cheese filling', cookingMethod: 'baked', prepMethod: 'raw', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -3578,7 +3578,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'filling', label: 'Spinach filling', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'filling', label: 'Spinach filling', cookingMethod: 'baked', prepMethod: 'raw', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -3621,7 +3621,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a fresh green salad, roasted potatoes, or fresh fruit.'
     ],
     sections: [
-      { key: 'filling', label: 'Ham and cheese filling', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'filling', label: 'Ham and cheese filling', cookingMethod: 'baked', prepMethod: 'raw', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -3664,7 +3664,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with an arugula salad, mixed green salad, or asparagus.'
     ],
     sections: [
-      { key: 'filling', label: 'Bacon filling', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'filling', label: 'Bacon filling', cookingMethod: 'baked', prepMethod: 'raw', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -3711,7 +3711,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with an arugula salad, crispy potatoes, or roasted tomatoes.'
     ],
     sections: [
-      { key: 'frittata', label: 'Frittata', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'frittata', label: 'Frittata', cookingMethod: 'baked', prepMethod: 'raw', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -3752,7 +3752,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a sunny-side-up egg, bacon, or smoked salmon.'
     ],
     sections: [
-      { key: 'toast', label: 'Avocado Toast', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'toast', label: 'Avocado Toast', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -3796,7 +3796,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'toast', label: 'Avocado Egg Toast', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'toast', label: 'Avocado Egg Toast', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -3837,7 +3837,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with tomato soup, a dill pickle, or a simple green salad.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Grilled Cheese', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'sandwich', label: 'Grilled Cheese', cookingMethod: 'pan grilled', prepMethod: 'raw', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -3876,7 +3876,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with tomato soup, a dill pickle, or a simple green salad.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Grilled Cheese', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'sandwich', label: 'Grilled Cheese', cookingMethod: 'pan grilled', prepMethod: 'raw', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -3915,7 +3915,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with tomato soup, a dill pickle, or a simple green salad.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Grilled Cheese', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'sandwich', label: 'Grilled Cheese', cookingMethod: 'pan grilled', prepMethod: 'raw', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -3956,7 +3956,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with potato chips, a dill pickle, or a bowl of tomato soup.'
     ],
     sections: [
-      { key: 'sandwich', label: 'BLT', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'BLT', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -3999,7 +3999,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with potato chips, a dill pickle spear, or a cup of soup.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Club Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Club Sandwich', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -4040,7 +4040,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with potato chips, a dill pickle, or a cup of tomato soup.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Egg Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Egg Salad', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -4082,7 +4082,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with potato chips, a dill pickle, or a simple green salad.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Tuna Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Tuna Salad', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -4127,8 +4127,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with potato chips, a dill pickle, or a simple green salad.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.82 },
-      { key: 'sandwich', label: 'Chicken Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan grilled', yieldFactorWater: 0.82 },
+      { key: 'sandwich', label: 'Chicken Salad', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -4167,7 +4167,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with potato chips, a dill pickle, or a cup of soup.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Ham and Cheese', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Ham and Cheese', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -4203,7 +4203,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with potato chips, fresh fruit, or a glass of milk.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Peanut Butter & Jelly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Peanut Butter & Jelly', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -4244,7 +4244,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with potato chips, a dill pickle, or alongside a bowl of tomato soup.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Pimento Cheese', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Pimento Cheese', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -4289,7 +4289,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside other tea sandwiches, scones with clotted cream, or a pot of hot tea.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Cucumber Tea', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Cucumber Tea', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -4334,7 +4334,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a simple green salad, cornichons, or a bowl of French onion soup.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Croque Monsieur', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'sandwich', label: 'Croque Monsieur', cookingMethod: 'pan grilled', prepMethod: 'raw', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -4381,7 +4381,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a simple green salad, cornichons, or a bowl of French onion soup.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Croque Madame', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'sandwich', label: 'Croque Madame', cookingMethod: 'pan grilled', prepMethod: 'raw', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -4426,7 +4426,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with raspberry jam alongside for dipping (not included in nutrient calculation).'
     ],
     sections: [
-      { key: 'sandwich', label: 'Monte Cristo Sandwich', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'sandwich', label: 'Monte Cristo Sandwich', cookingMethod: 'pan grilled', prepMethod: 'raw', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -4473,7 +4473,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a simple green salad or fresh fruit on the side.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Hot Brown', cookingMethod: '', yieldFactorWater: 0.92 }
+      { key: 'sandwich', label: 'Hot Brown', cookingMethod: 'baked', prepMethod: 'raw', yieldFactorWater: 0.92 }
     ],
   },
   {
@@ -4518,7 +4518,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with mashed potatoes, roasted vegetables, or steamed green beans.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Open-Faced Roast Beef with Gravy', cookingMethod: '', yieldFactorWater: 0.87 }
+      { key: 'sandwich', label: 'Open-Faced Roast Beef with Gravy', cookingMethod: 'boiled', prepMethod: 'raw', yieldFactorWater: 0.87 }
     ],
   },
   {
@@ -4558,7 +4558,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with potato chips, a dill pickle, or a simple green salad.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Turkey Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Turkey Sandwich', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -4599,7 +4599,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with potato chips, a dill pickle, or a simple green salad.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Turkey with Provolone Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Turkey with Provolone Sandwich', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -4641,7 +4641,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with tortilla chips, a dill pickle, or a simple green salad.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Turkey & Avocado Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Turkey & Avocado Sandwich', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -4684,7 +4684,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with tortilla chips, a dill pickle, or a simple green salad.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Turkey & Avocado with Provolone Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Turkey & Avocado with Provolone Sandwich', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -4728,7 +4728,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with tortilla chips, a dill pickle, or a simple green salad.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Turkey & Avocado with Bacon Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Turkey & Avocado with Bacon Sandwich', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -4769,7 +4769,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'sandwich', label: 'Roast Beef Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Roast Beef Sandwich', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -4810,7 +4810,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'sandwich', label: 'Avocado with Sprouts & Tomato Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Avocado with Sprouts & Tomato Sandwich', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -4851,7 +4851,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with potato chips, a dill pickle spear, or a cup of coleslaw.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Reuben Sandwich', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'sandwich', label: 'Reuben Sandwich', cookingMethod: 'pan grilled', prepMethod: 'pan grilled', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -4890,7 +4890,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with potato chips, a dill pickle spear, or a cup of coleslaw.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Pastrami Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Pastrami Sandwich', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -4929,7 +4929,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with potato chips, a dill pickle spear, or a cup of coleslaw.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Corned Beef Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Corned Beef Sandwich', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -4969,7 +4969,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with potato chips, extra pickles, or a cold beverage.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Liverwurst Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Liverwurst Sandwich', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -5008,7 +5008,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with dark rye crackers, extra pickles, or a cold beverage.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Limburger Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Limburger Sandwich', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -5051,7 +5051,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, onion rings, or a dill pickle spear.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Patty Melt', cookingMethod: '', yieldFactorWater: 0.82 }
+      { key: 'sandwich', label: 'Patty Melt', cookingMethod: 'pan grilled', prepMethod: 'pan grilled', yieldFactorWater: 0.82 }
     ],
   },
   {
@@ -5101,7 +5101,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with potato chips, coleslaw, or baked beans.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Sloppy Joe', cookingMethod: '', yieldFactorWater: 0.8 }
+      { key: 'sandwich', label: 'Sloppy Joe', cookingMethod: 'pan grilled', prepMethod: 'pan grilled', yieldFactorWater: 0.8 }
     ],
   },
   {
@@ -5149,8 +5149,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with baked beans, potato chips, or corn on the cob.'
     ],
     sections: [
-      { key: 'pork', label: 'Pulled pork', cookingMethod: '', yieldFactorWater: 0.6, yieldFactorFat: 0.88 },
-      { key: 'slaw', label: 'Coleslaw & bun', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'pork', label: 'Pulled pork', cookingMethod: 'baked', prepMethod: 'raw', yieldFactorWater: 0.6, yieldFactorFat: 0.88 },
+      { key: 'slaw', label: 'Coleslaw & bun', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -5196,8 +5196,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with baked beans, coleslaw, or corn on the cob.'
     ],
     sections: [
-      { key: 'brisket', label: 'Barbecue brisket', cookingMethod: '', yieldFactorWater: 0.62, yieldFactorFat: 0.92 },
-      { key: 'assembly', label: 'Toppings & bun', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'brisket', label: 'Barbecue brisket', cookingMethod: 'baked', prepMethod: 'raw', yieldFactorWater: 0.62, yieldFactorFat: 0.92 },
+      { key: 'assembly', label: 'Toppings & bun', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -5243,8 +5243,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, a side salad, or coleslaw.'
     ],
     sections: [
-      { key: 'chicken', label: 'Grilled chicken', cookingMethod: '', yieldFactorWater: 0.8, yieldFactorFat: 0.98 },
-      { key: 'assembly', label: 'Toppings & bun', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'chicken', label: 'Grilled chicken', cookingMethod: 'pan grilled', prepMethod: 'raw', yieldFactorWater: 0.8, yieldFactorFat: 0.98 },
+      { key: 'assembly', label: 'Toppings & bun', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -5295,8 +5295,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, coleslaw, or pickled jalapeños on the side.'
     ],
     sections: [
-      { key: 'chicken', label: 'Fried chicken', cookingMethod: '', yieldFactorWater: 0.82 },
-      { key: 'assembly', label: 'Toppings & bun', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'chicken', label: 'Fried chicken', cookingMethod: 'fried', prepMethod: 'raw', yieldFactorWater: 0.82 },
+      { key: 'assembly', label: 'Toppings & bun', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -5348,8 +5348,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with celery sticks, carrot sticks, and extra ranch or blue cheese dressing on the side.'
     ],
     sections: [
-      { key: 'chicken', label: 'Fried chicken', cookingMethod: '', yieldFactorWater: 0.82 },
-      { key: 'assembly', label: 'Toppings & bun', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'chicken', label: 'Fried chicken', cookingMethod: 'fried', prepMethod: 'raw', yieldFactorWater: 0.82 },
+      { key: 'assembly', label: 'Toppings & bun', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -5402,8 +5402,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with extra pickles, coleslaw, and a cold beverage to balance the heat.'
     ],
     sections: [
-      { key: 'chicken', label: 'Fried chicken', cookingMethod: '', yieldFactorWater: 0.82 },
-      { key: 'assembly', label: 'Toppings & bun', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'chicken', label: 'Fried chicken', cookingMethod: 'fried', prepMethod: 'raw', yieldFactorWater: 0.82 },
+      { key: 'assembly', label: 'Toppings & bun', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -5451,8 +5451,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, coleslaw, or malt vinegar on the side.'
     ],
     sections: [
-      { key: 'fish', label: 'Fried cod', cookingMethod: '', yieldFactorWater: 0.85 },
-      { key: 'assembly', label: 'Toppings & bun', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'fish', label: 'Fried cod', cookingMethod: 'fried', prepMethod: 'raw', yieldFactorWater: 0.85 },
+      { key: 'assembly', label: 'Toppings & bun', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -5505,8 +5505,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with coleslaw, a lemon wedge, or a simple green salad.'
     ],
     sections: [
-      { key: 'crab_cake', label: 'Crab cake', cookingMethod: '', yieldFactorWater: 0.9 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'crab_cake', label: 'Crab cake', cookingMethod: 'pan grilled', prepMethod: 'raw', yieldFactorWater: 0.9 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -5552,8 +5552,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with kettle chips, a dill pickle, or a cup of clam chowder.'
     ],
     sections: [
-      { key: 'lobster_salad', label: 'Lobster salad', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'lobster_salad', label: 'Lobster salad', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'pan grilled', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -5598,8 +5598,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with tomato soup, kettle chips, or a dill pickle.'
     ],
     sections: [
-      { key: 'tuna_salad', label: 'Tuna salad', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'tuna_salad', label: 'Tuna salad', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'pan grilled', prepMethod: 'raw', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -5647,9 +5647,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, a simple green salad, or horseradish sauce on the side.'
     ],
     sections: [
-      { key: 'onion_saute', label: 'Sautéed onion', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'au_jus', label: 'Au jus', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'onion_saute', label: 'Sautéed onion', cookingMethod: 'pan grilled', prepMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'au_jus', label: 'Au jus', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'baked', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -5694,9 +5694,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries or kettle chips, and giardiniera on the side.'
     ],
     sections: [
-      { key: 'au_jus', label: 'Au jus', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'sweet_peppers', label: 'Sweet peppers', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'au_jus', label: 'Au jus', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'sweet_peppers', label: 'Sweet peppers', cookingMethod: 'pan grilled', prepMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -5751,9 +5751,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, coleslaw, or a cup of gumbo on the side.'
     ],
     sections: [
-      { key: 'remoulade', label: 'Remoulade sauce', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'shrimp', label: 'Fried shrimp', cookingMethod: '', yieldFactorWater: 0.85 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'remoulade', label: 'Remoulade sauce', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'shrimp', label: 'Fried shrimp', cookingMethod: 'fried', yieldFactorWater: 0.85 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -5808,9 +5808,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, coleslaw, or a cup of gumbo on the side.'
     ],
     sections: [
-      { key: 'remoulade', label: 'Remoulade sauce', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'oyster', label: 'Fried oysters', cookingMethod: '', yieldFactorWater: 0.85 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'remoulade', label: 'Remoulade sauce', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'oyster', label: 'Fried oysters', cookingMethod: 'fried', yieldFactorWater: 0.85 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -5863,8 +5863,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a simple green salad, roasted vegetables, or kettle chips on the side.'
     ],
     sections: [
-      { key: 'meatballs', label: 'Meatballs', cookingMethod: '', yieldFactorWater: 0.74 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'meatballs', label: 'Meatballs', cookingMethod: 'pan grilled', yieldFactorWater: 0.74 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -5912,7 +5912,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with kettle chips, a dill pickle, or a simple green salad.'
     ],
     sections: [
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -5964,8 +5964,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a simple green salad or roasted vegetables on the side.'
     ],
     sections: [
-      { key: 'chicken', label: 'Breaded chicken', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'chicken', label: 'Breaded chicken', cookingMethod: 'fried', yieldFactorWater: 0.75 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'baked', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6009,8 +6009,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, onion rings, or a dill pickle on the side.'
     ],
     sections: [
-      { key: 'filling', label: 'Beef filling', cookingMethod: '', yieldFactorWater: 0.82 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'filling', label: 'Beef filling', cookingMethod: 'pan grilled', yieldFactorWater: 0.82 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6062,8 +6062,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a light clear soup or Vietnamese iced coffee on the side.'
     ],
     sections: [
-      { key: 'pork', label: 'Pork', cookingMethod: '', yieldFactorWater: 0.8 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'pork', label: 'Pork', cookingMethod: 'pan grilled', yieldFactorWater: 0.8 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6107,7 +6107,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a simple arugula salad or a cup of tomato soup on the side.'
     ],
     sections: [
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6148,8 +6148,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a green salad, fresh berries, or hash browns.'
     ],
     sections: [
-      { key: 'eggs', label: 'Eggs', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'eggs', label: 'Eggs', cookingMethod: 'pan grilled', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6189,8 +6189,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a green salad, fresh berries, or hash browns.'
     ],
     sections: [
-      { key: 'eggs', label: 'Eggs', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'eggs', label: 'Eggs', cookingMethod: 'pan grilled', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6230,9 +6230,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a green salad, fresh berries, or hash browns.'
     ],
     sections: [
-      { key: 'sausage', label: 'Sausage', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'eggs', label: 'Eggs', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'sausage', label: 'Sausage', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'eggs', label: 'Eggs', cookingMethod: 'pan grilled', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6272,9 +6272,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a green salad, fresh berries, or hash browns.'
     ],
     sections: [
-      { key: 'ham', label: 'Ham', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'eggs', label: 'Eggs', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'ham', label: 'Ham', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'eggs', label: 'Eggs', cookingMethod: 'pan grilled', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6313,7 +6313,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a green salad, fresh berries, or hash browns.'
     ],
     sections: [
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6370,8 +6370,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with tabbouleh, a simple cucumber salad, or hummus on the side.'
     ],
     sections: [
-      { key: 'falafel', label: 'Falafel', cookingMethod: '', yieldFactorWater: 0.8 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'falafel', label: 'Falafel', cookingMethod: 'fried', yieldFactorWater: 0.8 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6422,9 +6422,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with Greek salad, roasted potatoes, or extra tzatziki on the side.'
     ],
     sections: [
-      { key: 'lamb', label: 'Lamb', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'tzatziki', label: 'Tzatziki', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'lamb', label: 'Lamb', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'tzatziki', label: 'Tzatziki', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6466,8 +6466,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with kettle chips, a dill pickle, or tomato soup on the side.'
     ],
     sections: [
-      { key: 'coleslaw', label: 'Coleslaw', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'coleslaw', label: 'Coleslaw', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'pan grilled', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -6509,8 +6509,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, onion rings, or a dill pickle on the side.'
     ],
     sections: [
-      { key: 'patty', label: 'Patty', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'patty', label: 'Patty', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6554,8 +6554,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, onion rings, or a dill pickle on the side.'
     ],
     sections: [
-      { key: 'patty', label: 'Patty', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'patty', label: 'Patty', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6600,8 +6600,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, onion rings, or a dill pickle on the side.'
     ],
     sections: [
-      { key: 'patty', label: 'Patty', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'patty', label: 'Patty', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6645,8 +6645,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, onion rings, or a dill pickle on the side.'
     ],
     sections: [
-      { key: 'patty', label: 'Patties', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'patty', label: 'Patties', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6694,9 +6694,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, onion rings, or a dill pickle on the side.'
     ],
     sections: [
-      { key: 'mushrooms', label: 'Mushrooms', cookingMethod: '', yieldFactorWater: 0.9 },
-      { key: 'patty', label: 'Patty', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'mushrooms', label: 'Mushrooms', cookingMethod: 'pan grilled', yieldFactorWater: 0.9 },
+      { key: 'patty', label: 'Patty', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6739,8 +6739,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, coleslaw, or extra BBQ sauce on the side.'
     ],
     sections: [
-      { key: 'patty', label: 'Patty', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'patty', label: 'Patty', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6782,8 +6782,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with sweet potato fries, a dill pickle, or a light garden salad on the side.'
     ],
     sections: [
-      { key: 'patty', label: 'Patty', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'patty', label: 'Patty', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6829,8 +6829,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with sweet potato fries, a green salad, or sliced avocado on the side.'
     ],
     sections: [
-      { key: 'patty', label: 'Patty', cookingMethod: '', yieldFactorWater: 0.85 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'patty', label: 'Patty', cookingMethod: 'pan grilled', yieldFactorWater: 0.85 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6868,8 +6868,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, potato chips, or baked beans on the side.'
     ],
     sections: [
-      { key: 'frank', label: 'Grilled frank', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'frank', label: 'Grilled frank', cookingMethod: 'grilled', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6911,8 +6911,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, potato chips, or baked beans on the side.'
     ],
     sections: [
-      { key: 'frank', label: 'Frank', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'frank', label: 'Frank', cookingMethod: 'grilled', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6951,8 +6951,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, potato chips, or baked beans on the side.'
     ],
     sections: [
-      { key: 'frank', label: 'Frank', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'frank', label: 'Frank', cookingMethod: 'grilled', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6997,7 +6997,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with mustard or ketchup for dipping.'
     ],
     sections: [
-      { key: 'corn_dog', label: 'Corn Dog', cookingMethod: '', yieldFactorWater: 0.85 }
+      { key: 'corn_dog', label: 'Corn Dog', cookingMethod: 'fried', yieldFactorWater: 0.85 }
     ],
   },
   {
@@ -7038,8 +7038,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, potato chips, or baked beans on the side.'
     ],
     sections: [
-      { key: 'coleslaw', label: 'Coleslaw', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'coleslaw', label: 'Coleslaw', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'grilled', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -7088,7 +7088,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): The French mother sauce. Use as the base for Mornay (add cheese), lasagna, moussaka, croque monsieur, mac and cheese, or any gratin.'
     ],
     sections: [
-      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'boiled', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -7128,8 +7128,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Pour over cauliflower, broccoli, or leeks for a vegetable gratin. Use in croque monsieur, macaroni and cheese, or anywhere a creamy cheese sauce is needed.'
     ],
     sections: [
-      { key: 'bechamel', label: 'Béchamel sauce', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'cheese', label: 'Cheese for Mornay Sauce', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'bechamel', label: 'Béchamel sauce', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'cheese', label: 'Cheese for Mornay Sauce', cookingMethod: 'raw', prepMethod: 'grated', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -7172,8 +7172,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): A classic French onion sauce. Excellent with roast veal, lamb chops, chicken, or poached eggs.'
     ],
     sections: [
-      { key: 'onion', label: 'Sweated onion purée', cookingMethod: '', yieldFactorWater: 0.45 },
-      { key: 'bechamel', label: 'Béchamel sauce', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'onion', label: 'Sweated onion purée', cookingMethod: 'pan grilled', prepMethod: 'thinly sliced', yieldFactorWater: 0.45 },
+      { key: 'bechamel', label: 'Béchamel sauce', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -7213,8 +7213,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): An enriched béchamel for delicate dishes. Spoon over poached chicken, veal, fish fillets, or steamed vegetables.'
     ],
     sections: [
-      { key: 'bechamel', label: 'Béchamel sauce', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'cream', label: 'Cream', cookingMethod: '', yieldFactorWater: 0.82 }
+      { key: 'bechamel', label: 'Béchamel sauce', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'cream', label: 'Cream', cookingMethod: 'boiled', yieldFactorWater: 0.82 }
     ],
   },
   {
@@ -7252,8 +7252,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): A rosy-pink béchamel. Use over poached eggs, white fish, chicken breasts, or as a filling sauce for seafood crêpes.'
     ],
     sections: [
-      { key: 'bechamel', label: 'Béchamel sauce', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'aurore', label: 'Tomato purée', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'bechamel', label: 'Béchamel sauce', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'aurore', label: 'Tomato purée', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -7293,8 +7293,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): A French mother sauce. Use as the base for Sauce Suprême (add cream and butter) or Mushroom Velouté. Excellent spooned over poached chicken, veal, or white fish.'
     ],
     sections: [
-      { key: 'stock', label: 'White Chicken Stock', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'roux', label: 'Blonde roux', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'stock', label: 'White Chicken Stock', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'roux', label: 'Blonde roux', cookingMethod: 'boiled', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -7341,8 +7341,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): The classic accompaniment to a beef steak — especially filet mignon or ribeye. Also excellent over grilled chicken, salmon, or lamb chops.'
     ],
     sections: [
-      { key: 'reduction', label: 'Tarragon reduction', cookingMethod: '', yieldFactorWater: 0.2 },
-      { key: 'emulsion', label: 'Egg & butter emulsion', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'reduction', label: 'Tarragon reduction', cookingMethod: 'boiled', yieldFactorWater: 0.2 },
+      { key: 'emulsion', label: 'Egg & butter emulsion', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -7392,7 +7392,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): The foundation for soups, risotto, rice pilaf, and sauces. Freeze in quart containers for up to 3 months.'
     ],
     sections: [
-      { key: 'stock', label: 'Stock', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089, yieldFactorOther: 0.02 }
+      { key: 'stock', label: 'Stock', cookingMethod: 'boiled', yieldFactorWater: 0.68, yieldFactorFat: 0.089, yieldFactorOther: 0.02 }
     ],
   },
   {
@@ -7443,7 +7443,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): A richer, deeper-flavored stock for dark sauces, braises, and gravies. Freeze in quart containers for up to 3 months.'
     ],
     sections: [
-      { key: 'stock', label: 'Stock', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089, yieldFactorOther: 0.02 }
+      { key: 'stock', label: 'Stock', cookingMethod: 'boiled', yieldFactorWater: 0.68, yieldFactorFat: 0.089, yieldFactorOther: 0.02 }
     ],
   },
   {
@@ -7493,7 +7493,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): A lighter, everyday chicken broth for soups, risotto, rice pilaf, and cooking. Freeze in quart containers for up to 3 months.'
     ],
     sections: [
-      { key: 'stock', label: 'Stock', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089, yieldFactorOther: 0.02 }
+      { key: 'stock', label: 'Stock', cookingMethod: 'boiled', yieldFactorWater: 0.68, yieldFactorFat: 0.089, yieldFactorOther: 0.02 }
     ],
   },
   {
@@ -7543,7 +7543,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): The base for French onion soup, pot roast, and dark sauces. Freeze in quart containers for up to 3 months.'
     ],
     sections: [
-      { key: 'stock', label: 'Stock', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089, yieldFactorOther: 0.02 }
+      { key: 'stock', label: 'Stock', cookingMethod: 'boiled', yieldFactorWater: 0.68, yieldFactorFat: 0.089, yieldFactorOther: 0.02 }
     ],
   },
   {
@@ -7594,7 +7594,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Drink warm as a sipping broth, or use as the base for soups, stews, and braises. Refrigerate up to 5 days or freeze up to 6 months.'
     ],
     sections: [
-      { key: 'stock', label: 'Stock', cookingMethod: '', yieldFactorWater: 0.68, yieldFactorFat: 0.089, yieldFactorOther: 0.02 }
+      { key: 'stock', label: 'Stock', cookingMethod: 'boiled', yieldFactorWater: 0.68, yieldFactorFat: 0.089, yieldFactorOther: 0.02 }
     ],
   },
   {
@@ -7646,7 +7646,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): The base for fish chowder, seafood bisque, seafood gumbo, and sauces for poached fish. Use within 3 days — fish stock does not keep as long as meat stocks.'
     ],
     sections: [
-      { key: 'stock', label: 'Stock', cookingMethod: '', yieldFactorWater: 0.9, yieldFactorOther: 0.02 }
+      { key: 'stock', label: 'Stock', cookingMethod: 'boiled', yieldFactorWater: 0.9, yieldFactorOther: 0.02 }
     ],
   },
   {
@@ -7698,7 +7698,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): A clean-tasting all-purpose base for vegetable soups, risotto, and grain dishes. Also a substitute for chicken broth in vegetarian recipes.'
     ],
     sections: [
-      { key: 'stock', label: 'Stock', cookingMethod: '', yieldFactorWater: 0.82, yieldFactorFat: 0.95, yieldFactorOther: 0.02 }
+      { key: 'stock', label: 'Stock', cookingMethod: 'boiled', yieldFactorWater: 0.82, yieldFactorFat: 0.95, yieldFactorOther: 0.02 }
     ],
   },
   {
@@ -7743,7 +7743,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve immediately over fettuccine or linguine. Also excellent with gnocchi, or as a finishing sauce for grilled chicken or shrimp.'
     ],
     sections: [
-      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'boiled', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -7788,7 +7788,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Use as the base for tartar sauce, ranch dressing, aioli, and potato salad. Vastly superior to store-bought for egg salad and chicken salad.'
     ],
     sections: [
-      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -7831,7 +7831,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Use in vinaigrettes, marinades, and compound butters. An excellent sandwich spread and the base for honey mustard dressing.'
     ],
     sections: [
-      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -7878,7 +7878,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): The definitive homemade ketchup. Use anywhere store-bought ketchup would go — burgers, fries, meatloaf, and as the base for barbecue sauce.'
     ],
     sections: [
-      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.603 }
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'boiled', yieldFactorWater: 0.603 }
     ],
   },
   {
@@ -7927,7 +7927,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): The base for Russian Dressing (see the Russian Dressing recipe). Also excellent as a condiment for hot dogs and burgers, spooned over cream cheese with crackers, or stirred into cocktail sauce for shrimp.'
     ],
     sections: [
-      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.63 }
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'boiled', yieldFactorWater: 0.63 }
     ],
   },
   {
@@ -7970,9 +7970,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): The classic spread for Reuben and Rachel sandwiches. Also excellent as a salad dressing over wedge salad, or as a dipping sauce for crab cakes and fried shrimp.'
     ],
     sections: [
-      { key: 'mayonnaise', label: 'Mayonnaise', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'chili_sauce', label: 'Chili Sauce', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'seasoning', label: 'To finish', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'mayonnaise', label: 'Mayonnaise', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'chili_sauce', label: 'Chili Sauce', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'seasoning', label: 'To finish', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -8023,8 +8023,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with mashed potatoes, collard greens, or steamed green beans.'
     ],
     sections: [
-      { key: 'steak', label: 'Chicken fried steak', cookingMethod: '', yieldFactorWater: 0.82 },
-      { key: 'gravy', label: 'Cream gravy', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'steak', label: 'Chicken fried steak', cookingMethod: 'fried', yieldFactorWater: 0.82 },
+      { key: 'gravy', label: 'Cream gravy', cookingMethod: 'boiled', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -8066,7 +8066,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside roast chicken, seared duck breast, or braised beef short ribs. Garnish with fresh chives.'
     ],
     sections: [
-      { key: 'puree', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 }
+      { key: 'puree', label: 'Potatoes', cookingMethod: 'boiled', yieldFactorWater: 0.96 }
     ],
   },
   {
@@ -8112,8 +8112,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside roast chicken, grilled steak, or braised lamb. Garnish with fresh chives.'
     ],
     sections: [
-      { key: 'garlic', label: 'Roasted garlic', cookingMethod: '', yieldFactorWater: 0.62 },
-      { key: 'puree', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 }
+      { key: 'garlic', label: 'Roasted garlic', cookingMethod: 'baked', yieldFactorWater: 0.62 },
+      { key: 'puree', label: 'Potatoes', cookingMethod: 'boiled', yieldFactorWater: 0.96 }
     ],
   },
   {
@@ -8153,7 +8153,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside pan-seared steak, roast chicken, or braised short ribs. Finish with a grind of black pepper or a sprinkle of fresh chives.'
     ],
     sections: [
-      { key: 'puree', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 }
+      { key: 'puree', label: 'Potatoes', cookingMethod: 'boiled', yieldFactorWater: 0.96 }
     ],
   },
   {
@@ -8194,7 +8194,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside prime rib, roast beef, or beef tenderloin. The horseradish heat pairs especially well with rich, fatty beef cuts.'
     ],
     sections: [
-      { key: 'puree', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 }
+      { key: 'puree', label: 'Potatoes', cookingMethod: 'boiled', yieldFactorWater: 0.96 }
     ],
   },
   {
@@ -8242,8 +8242,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside grilled burgers, hot dogs, or fried chicken. A classic pairing for summer barbecues and picnics.'
     ],
     sections: [
-      { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 },
-      { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'potatoes', label: 'Potatoes', cookingMethod: 'boiled', yieldFactorWater: 0.96 },
+      { key: 'dressing', label: 'Dressing', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -8291,8 +8291,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve warm alongside bratwurst, pork schnitzel, or grilled sausages.'
     ],
     sections: [
-      { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 },
-      { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 0.8 }
+      { key: 'potatoes', label: 'Potatoes', cookingMethod: 'boiled', yieldFactorWater: 0.96 },
+      { key: 'dressing', label: 'Dressing', cookingMethod: 'pan grilled', yieldFactorWater: 0.8 }
     ],
   },
   {
@@ -8337,7 +8337,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside roast lamb, beef tenderloin, or pan-seared duck breast.'
     ],
     sections: [
-      { key: 'gratin', label: 'Gratin', cookingMethod: '', yieldFactorWater: 0.85 }
+      { key: 'gratin', label: 'Gratin', cookingMethod: 'baked', yieldFactorWater: 0.85 }
     ],
   },
   {
@@ -8385,7 +8385,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside roast chicken, pork tenderloin, or a simple green salad for a lighter meal.'
     ],
     sections: [
-      { key: 'gratin', label: 'Gratin', cookingMethod: '', yieldFactorWater: 0.85 }
+      { key: 'gratin', label: 'Gratin', cookingMethod: 'baked', yieldFactorWater: 0.85 }
     ],
   },
   {
@@ -8428,7 +8428,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside roast beef, pan-seared steak, or roasted lamb chops. Elegant enough for a dinner party.'
     ],
     sections: [
-      { key: 'gratin', label: 'Pommes Anna', cookingMethod: '', yieldFactorWater: 0.85 }
+      { key: 'gratin', label: 'Pommes Anna', cookingMethod: 'baked', yieldFactorWater: 0.85 }
     ],
   },
   {
@@ -8477,8 +8477,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with crusty bread and a simple green salad. Best enjoyed straight from the oven while the cheese is still bubbling.'
     ],
     sections: [
-      { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 },
-      { key: 'gratin', label: 'Gratin', cookingMethod: '', yieldFactorWater: 0.82 }
+      { key: 'potatoes', label: 'Potatoes', cookingMethod: 'boiled', yieldFactorWater: 0.96 },
+      { key: 'gratin', label: 'Gratin', cookingMethod: 'baked', yieldFactorWater: 0.82 }
     ],
   },
   {
@@ -8521,8 +8521,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve tossed with browned butter and sage, tomato sauce, or pesto.'
     ],
     sections: [
-      { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 },
-      { key: 'dough', label: 'Dough', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'potatoes', label: 'Potatoes', cookingMethod: 'boiled', yieldFactorWater: 0.96 },
+      { key: 'dough', label: 'Dough', cookingMethod: 'boiled', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -8567,7 +8567,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve warm alongside chili, soups, or BBQ. Pairs especially well with baked beans or collard greens.'
     ],
     sections: [
-      { key: 'batter', label: 'Batter', cookingMethod: '', yieldFactorWater: 0.73 }
+      { key: 'batter', label: 'Batter', cookingMethod: 'baked', yieldFactorWater: 0.73 }
     ],
   },
   {
@@ -8612,7 +8612,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve warm alongside chili, soups, or BBQ. The tang from the buttermilk makes it especially good with spicy dishes.'
     ],
     sections: [
-      { key: 'batter', label: 'Batter', cookingMethod: '', yieldFactorWater: 0.73 }
+      { key: 'batter', label: 'Batter', cookingMethod: 'baked', yieldFactorWater: 0.73 }
     ],
   },
   {
@@ -8660,7 +8660,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside BBQ ribs, fried chicken, pulled pork sandwiches, or burgers.'
     ],
     sections: [
-      { key: 'slaw', label: 'Slaw', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'slaw', label: 'Slaw', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -8704,7 +8704,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside roast beef, steak, or roast chicken. Finish with a sprinkle of fresh parsley or grated Parmesan.'
     ],
     sections: [
-      { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.85 }
+      { key: 'potatoes', label: 'Potatoes', cookingMethod: 'baked', yieldFactorWater: 0.85 }
     ],
   },
   {
@@ -8751,7 +8751,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Top with additional sour cream and serve as a hearty side or main. Great alongside grilled steak or BBQ chicken.'
     ],
     sections: [
-      { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'potatoes', label: 'Potatoes', cookingMethod: 'baked', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -8793,7 +8793,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Top with vegan sour cream or fresh herbs if desired.'
     ],
     sections: [
-      { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.82 }
+      { key: 'potatoes', label: 'Potatoes', cookingMethod: 'baked', yieldFactorWater: 0.82 }
     ],
   },
   {
@@ -8840,7 +8840,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside cornbread, hot dogs, or BBQ. A classic side for summer cookouts and potlucks.'
     ],
     sections: [
-      { key: 'beans', label: 'Beans', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'beans', label: 'Beans', cookingMethod: 'baked', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -8883,8 +8883,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside BBQ, hot dogs, or as a comforting main. Top with buttered breadcrumbs before baking for extra crunch.'
     ],
     sections: [
-      { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'sauce', label: 'Cheese Sauce', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'pasta', label: 'Pasta', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'sauce', label: 'Cheese Sauce', cookingMethod: 'boiled', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -8924,8 +8924,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): A classic weeknight comfort dish. Serve with a simple green salad or garlic bread.'
     ],
     sections: [
-      { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'mac_tomato', label: 'Mac and Tomato', cookingMethod: '', yieldFactorWater: 0.95 }
+      { key: 'pasta', label: 'Pasta', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'mac_tomato', label: 'Mac and Tomato', cookingMethod: 'boiled', yieldFactorWater: 0.95 }
     ],
   },
   {
@@ -8969,7 +8969,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): The seasoning blend used in Stewed Okra and Tomatoes, Fried Okra, Fried Squash, Chicken Gumbo, and Seafood Gumbo. Also excellent as a dry rub for chicken, shrimp, or fish before grilling or pan-frying.'
     ],
     sections: [
-      { key: 'blend', label: 'Spice blend', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'blend', label: 'Spice blend', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -9015,8 +9015,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over rice.'
     ],
     sections: [
-      { key: 'stew', label: 'Stewed Okra and Tomatoes', cookingMethod: '', yieldFactorWater: 0.88 },
-      { key: 'seasoning', label: 'Creole Seasoning', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'stew', label: 'Stewed Okra and Tomatoes', cookingMethod: 'boiled', yieldFactorWater: 0.88 },
+      { key: 'seasoning', label: 'Creole Seasoning', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -9062,8 +9062,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside fried chicken, BBQ ribs, or pulled pork. Also pairs well with ranch dressing or hot sauce for dipping.'
     ],
     sections: [
-      { key: 'coating', label: 'Fried Okra', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'seasoning', label: 'Creole Seasoning', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'coating', label: 'Fried Okra', cookingMethod: 'fried', yieldFactorWater: 0.75 },
+      { key: 'seasoning', label: 'Creole Seasoning', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -9111,8 +9111,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve as a side with fried chicken, BBQ, or catfish. Also great as an appetizer with ranch dressing or remoulade sauce.'
     ],
     sections: [
-      { key: 'coating', label: 'Fried Squash', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'seasoning', label: 'Creole Seasoning', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'coating', label: 'Fried Squash', cookingMethod: 'fried', yieldFactorWater: 0.75 },
+      { key: 'seasoning', label: 'Creole Seasoning', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -9155,7 +9155,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over steamed broccoli, cauliflower, Brussels sprouts, or asparagus. Also excellent as a quick stovetop mac and cheese sauce, or as a warm dip with tortilla chips.'
     ],
     sections: [
-      { key: 'sauce', label: 'Cheese Sauce', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'sauce', label: 'Cheese Sauce', cookingMethod: 'boiled', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -9210,8 +9210,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): A classic Thanksgiving and holiday side. Pairs especially well with roasted turkey, glazed ham, or prime rib.'
     ],
     sections: [
-      { key: 'filling', label: 'Sweet Potato Filling', cookingMethod: '', yieldFactorWater: 0.85 },
-      { key: 'topping', label: 'Oat Pecan Topping', cookingMethod: '', yieldFactorWater: 0.95 }
+      { key: 'filling', label: 'Sweet Potato Filling', cookingMethod: 'baked', yieldFactorWater: 0.85 },
+      { key: 'topping', label: 'Oat Pecan Topping', cookingMethod: 'baked', yieldFactorWater: 0.95 }
     ],
   },
   {
@@ -9264,8 +9264,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): A classic vegan Thanksgiving side. Pairs especially well with roasted vegetables, lentil loaf, or stuffed mushrooms.'
     ],
     sections: [
-      { key: 'filling', label: 'Sweet Potato Filling', cookingMethod: '', yieldFactorWater: 0.85 },
-      { key: 'topping', label: 'Oat Pecan Topping', cookingMethod: '', yieldFactorWater: 0.95 }
+      { key: 'filling', label: 'Sweet Potato Filling', cookingMethod: 'baked', yieldFactorWater: 0.85 },
+      { key: 'topping', label: 'Oat Pecan Topping', cookingMethod: 'baked', yieldFactorWater: 0.95 }
     ],
   },
   {
@@ -9314,8 +9314,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): A classic holiday side. Pairs especially well with roasted turkey, glazed ham, or prime rib.'
     ],
     sections: [
-      { key: 'filling', label: 'Sweet Potato Filling', cookingMethod: '', yieldFactorWater: 0.85 },
-      { key: 'topping', label: 'Marshmallow Topping', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'filling', label: 'Sweet Potato Filling', cookingMethod: 'baked', yieldFactorWater: 0.85 },
+      { key: 'topping', label: 'Marshmallow Topping', cookingMethod: 'baked', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -9357,8 +9357,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): The dressing for Grilled Chicken Salad and Niçoise Salad. Also excellent over any green salad, roasted vegetables, or as a marinade for grilled chicken or fish.'
     ],
     sections: [
-      { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'mustard', label: 'Dijon-Style Mustard', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'dressing', label: 'Dressing', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'mustard', label: 'Dijon-Style Mustard', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -9405,8 +9405,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): The dressing for Greek Salad, Gnocchi Antipasto Salad, and Mediterranean Pasta Salad. Also excellent as a marinade for grilled vegetables, chicken, or shrimp.'
     ],
     sections: [
-      { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'mustard', label: 'Dijon-Style Mustard', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'dressing', label: 'Dressing', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'mustard', label: 'Dijon-Style Mustard', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -9449,8 +9449,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Excellent over arugula, mixed greens, or caprese. Also works as a marinade for grilled chicken or salmon, or as a drizzle over roasted vegetables.'
     ],
     sections: [
-      { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'mustard', label: 'Dijon-Style Mustard', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'dressing', label: 'Dressing', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'mustard', label: 'Dijon-Style Mustard', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -9496,8 +9496,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): The dressing for Spinach Salad. Also excellent over grilled fish, steamed asparagus, or any salad where you want bright citrus flavor.'
     ],
     sections: [
-      { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'mustard', label: 'Dijon-Style Mustard', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'dressing', label: 'Dressing', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'mustard', label: 'Dijon-Style Mustard', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -9543,7 +9543,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve as a salad dressing, vegetable dip, or sandwich spread. Also excellent with buffalo wings, chicken tenders, pizza, and raw vegetables.'
     ],
     sections: [
-      { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'dressing', label: 'Dressing', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -9589,7 +9589,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): The dressing for Wedge Salad. Also excellent as a dip for buffalo wings, chicken tenders, and raw vegetables.'
     ],
     sections: [
-      { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'dressing', label: 'Dressing', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -9631,7 +9631,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve as a dipping sauce for chicken tenders, nuggets, or pretzels. Also excellent as a salad dressing or sandwich spread.'
     ],
     sections: [
-      { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'dressing', label: 'Dressing', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -9679,7 +9679,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Excellent over garden salads, grain bowls, and crudités. Also excellent as a sandwich spread, burger sauce, or dip for vegetables.'
     ],
     sections: [
-      { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'dressing', label: 'Dressing', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -9727,8 +9727,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): The dressing for Caesar Salad, Chicken Caesar Salad, Shrimp Caesar Salad, and Chicken Caesar Wrap.'
     ],
     sections: [
-      { key: 'dressing', label: 'Dressing', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'mustard', label: 'Dijon-Style Mustard', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'dressing', label: 'Dressing', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'mustard', label: 'Dijon-Style Mustard', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -9771,8 +9771,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve as a starter before pasta or grilled chicken, or add sliced grilled chicken or shrimp to make it a main course.'
     ],
     sections: [
-      { key: 'salad', label: 'Caesar Salad', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'dressing', label: 'Caesar Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'salad', label: 'Caesar Salad', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'dressing', label: 'Caesar Dressing', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -9817,9 +9817,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a slice of garlic bread or crusty sourdough on the side.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'salad', label: 'Caesar Salad', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'dressing', label: 'Caesar Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'salad', label: 'Caesar Salad', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'dressing', label: 'Caesar Dressing', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -9865,8 +9865,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with blue cheese dressing or ranch dressing on the side (see SAUCE_021 or SAUCE_020).'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'salad', label: 'Cobb Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'salad', label: 'Cobb Salad', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -9908,7 +9908,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with your choice of dressing on the side. Ranch Dressing (see SAUCE_020), Honey Mustard Dressing (see SAUCE_022), or Italian Vinaigrette (see SAUCE_017) are all excellent choices.'
     ],
     sections: [
-      { key: 'salad', label: 'Chef Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'salad', label: 'Chef Salad', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -9950,8 +9950,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with warm pita bread, grilled chicken or lamb, or as a side to grilled fish.'
     ],
     sections: [
-      { key: 'salad', label: 'Greek Salad', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'dressing', label: 'Italian Vinaigrette', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'salad', label: 'Greek Salad', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'dressing', label: 'Italian Vinaigrette', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -9999,8 +9999,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with salsa, guacamole, sour cream, or warm tortillas.'
     ],
     sections: [
-      { key: 'beef', label: 'Beef', cookingMethod: '', yieldFactorWater: 0.75, yieldFactorFat: 0.593 },
-      { key: 'salad', label: 'Taco Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'beef', label: 'Beef', cookingMethod: 'pan grilled', yieldFactorWater: 0.75, yieldFactorFat: 0.593 },
+      { key: 'salad', label: 'Taco Salad', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -10045,8 +10045,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve as a starter or light side. Pairs well with grilled salmon or chicken.'
     ],
     sections: [
-      { key: 'asparagus', label: 'Asparagus', cookingMethod: '', yieldFactorWater: 0.92 },
-      { key: 'salad', label: 'Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'asparagus', label: 'Asparagus', cookingMethod: 'boiled', yieldFactorWater: 0.92 },
+      { key: 'salad', label: 'Salad', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -10089,7 +10089,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with crusty bread or crostini. Makes an elegant starter or light lunch.'
     ],
     sections: [
-      { key: 'salad', label: 'Burrata Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'salad', label: 'Burrata Salad', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -10130,7 +10130,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with crusty Italian bread or bruschetta. Pairs well with prosciutto or a glass of white wine.'
     ],
     sections: [
-      { key: 'salad', label: 'Caprese Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'salad', label: 'Caprese Salad', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -10177,7 +10177,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with warm pita bread or as a side to grilled chicken or lamb.'
     ],
     sections: [
-      { key: 'salad', label: 'Chickpea Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'salad', label: 'Chickpea Salad', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -10226,9 +10226,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve chilled alongside grilled corn, garlic bread, or fresh fruit.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'salad', label: 'Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'pasta', label: 'Pasta', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'salad', label: 'Salad', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -10279,9 +10279,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve chilled with crusty bread or as a picnic main course.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'salad', label: 'Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'pasta', label: 'Pasta', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'salad', label: 'Salad', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -10328,9 +10328,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with garlic bread or as a starter before a pasta main course.'
     ],
     sections: [
-      { key: 'gnocchi', label: 'Potato Gnocchi', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'dressing', label: 'Italian Vinaigrette', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'salad', label: 'Antipasto Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'gnocchi', label: 'Potato Gnocchi', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'dressing', label: 'Italian Vinaigrette', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'salad', label: 'Antipasto Salad', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -10378,9 +10378,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with crusty bread or garlic bread on the side.'
     ],
     sections: [
-      { key: 'chicken', label: 'Grilled chicken', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'dressing', label: 'Basic Vinaigrette', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'salad', label: 'Garden salad', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'chicken', label: 'Grilled chicken', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'dressing', label: 'Basic Vinaigrette', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'salad', label: 'Garden salad', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -10429,8 +10429,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve chilled alongside grilled chicken, lamb, or fish.'
     ],
     sections: [
-      { key: 'orzo', label: 'Orzo', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'salad', label: 'Mediterranean salad', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'orzo', label: 'Orzo', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'salad', label: 'Mediterranean salad', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -10480,9 +10480,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve chilled alongside grilled chicken, salmon, or as a picnic main course.'
     ],
     sections: [
-      { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'dressing', label: 'Italian Vinaigrette', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'salad', label: 'Mediterranean salad', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'pasta', label: 'Pasta', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'dressing', label: 'Italian Vinaigrette', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'salad', label: 'Mediterranean salad', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -10531,7 +10531,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside grilled chicken or pork, or as a light main course.'
     ],
     sections: [
-      { key: 'salad', label: 'Ramen Noodle Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'salad', label: 'Ramen Noodle Salad', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -10575,9 +10575,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with crusty bread or garlic bread on the side.'
     ],
     sections: [
-      { key: 'shrimp', label: 'Shrimp', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'dressing', label: 'Caesar Dressing', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'salad', label: 'Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'shrimp', label: 'Shrimp', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'dressing', label: 'Caesar Dressing', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'salad', label: 'Salad', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -10633,8 +10633,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with warm tortillas or tortilla chips and extra salsa on the side.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'salad', label: 'Southwestern Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'salad', label: 'Southwestern Salad', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -10687,8 +10687,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with warm tortillas or crusty bread.'
     ],
     sections: [
-      { key: 'shrimp', label: 'Shrimp', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'salad', label: 'Shrimp and Avocado Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'shrimp', label: 'Shrimp', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'salad', label: 'Shrimp and Avocado Salad', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -10734,8 +10734,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve chilled alongside grilled corn, crusty bread, or fresh fruit.'
     ],
     sections: [
-      { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'salad', label: 'Tuna Macaroni Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'pasta', label: 'Pasta', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'salad', label: 'Tuna Macaroni Salad', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -10777,8 +10777,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve as a starter before grilled steak, beef tenderloin, or roasted chicken.'
     ],
     sections: [
-      { key: 'dressing', label: 'Blue Cheese Dressing', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'salad', label: 'Wedge Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'dressing', label: 'Blue Cheese Dressing', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'salad', label: 'Wedge Salad', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -10824,9 +10824,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with crusty French bread for a classic French bistro-style meal.'
     ],
     sections: [
-      { key: 'potatoes', label: 'Potatoes', cookingMethod: '', yieldFactorWater: 0.96 },
-      { key: 'dressing', label: 'Vinaigrette', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'salad', label: 'Nicoise Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'potatoes', label: 'Potatoes', cookingMethod: 'boiled', yieldFactorWater: 0.96 },
+      { key: 'dressing', label: 'Vinaigrette', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'salad', label: 'Nicoise Salad', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -10867,8 +10867,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve as a starter or alongside grilled chicken or seared salmon.'
     ],
     sections: [
-      { key: 'dressing', label: 'Lemon Vinaigrette', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'salad', label: 'Spinach Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'dressing', label: 'Lemon Vinaigrette', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'salad', label: 'Spinach Salad', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -10914,7 +10914,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve chilled alongside grilled chicken, BBQ ribs, or as a light main course.'
     ],
     sections: [
-      { key: 'salad', label: 'Three Bean Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'salad', label: 'Three Bean Salad', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -10958,7 +10958,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve on a bed of lettuce or alongside grilled chicken and crusty bread.'
     ],
     sections: [
-      { key: 'salad', label: 'Waldorf Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'salad', label: 'Waldorf Salad', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -11011,8 +11011,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve topped with crushed peanuts, fresh cilantro, or a drizzle of chili oil.'
     ],
     sections: [
-      { key: 'noodles', label: 'Noodles', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'stir_fry', label: 'Stir-Fry', cookingMethod: '', yieldFactorWater: 0.8 }
+      { key: 'noodles', label: 'Noodles', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'stir_fry', label: 'Stir-Fry', cookingMethod: 'pan grilled', yieldFactorWater: 0.8 }
     ],
   },
   {
@@ -11058,7 +11058,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over steamed white rice.'
     ],
     sections: [
-      { key: 'main', label: 'Beef and Broccoli', cookingMethod: '', yieldFactorWater: 0.87 }
+      { key: 'main', label: 'Beef and Broccoli', cookingMethod: 'pan grilled', yieldFactorWater: 0.87 }
     ],
   },
   {
@@ -11117,8 +11117,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Top with freshly grated Parmesan cheese and serve with crusty bread on the side.'
     ],
     sections: [
-      { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'sauce', label: 'Bolognese Sauce', cookingMethod: '', yieldFactorWater: 0.45 }
+      { key: 'pasta', label: 'Pasta', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'sauce', label: 'Bolognese Sauce', cookingMethod: 'boiled', yieldFactorWater: 0.45 }
     ],
   },
   {
@@ -11174,7 +11174,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over buttered egg noodles, creamy mashed potatoes, or crusty French bread.'
     ],
     sections: [
-      { key: 'main', label: 'Beef Bourguignon', cookingMethod: '', yieldFactorWater: 0.5 }
+      { key: 'main', label: 'Beef Bourguignon', cookingMethod: 'boiled', yieldFactorWater: 0.5 }
     ],
   },
   {
@@ -11231,7 +11231,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Accompany with warm tortillas, diced white onion, fresh cilantro, and lime wedges.'
     ],
     sections: [
-      { key: 'main', label: 'Beef Birria', cookingMethod: '', yieldFactorWater: 0.5 }
+      { key: 'main', label: 'Beef Birria', cookingMethod: 'boiled', yieldFactorWater: 0.5 }
     ],
   },
   {
@@ -11284,7 +11284,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve in bowls over egg noodles or with crusty bread.'
     ],
     sections: [
-      { key: 'main', label: 'Beef Carbonnade', cookingMethod: '', yieldFactorWater: 0.5 }
+      { key: 'main', label: 'Beef Carbonnade', cookingMethod: 'boiled', yieldFactorWater: 0.5 }
     ],
   },
   {
@@ -11332,7 +11332,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with warm tortillas, fresh cilantro, diced onion, and lime wedges.'
     ],
     sections: [
-      { key: 'main', label: 'Carne Asada', cookingMethod: '', yieldFactorWater: 0.75 }
+      { key: 'main', label: 'Carne Asada', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 }
     ],
   },
   {
@@ -11385,7 +11385,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve on its own or over steamed rice or with warm flour tortillas.'
     ],
     sections: [
-      { key: 'main', label: 'Carne Guisada', cookingMethod: '', yieldFactorWater: 0.55 }
+      { key: 'main', label: 'Carne Guisada', cookingMethod: 'boiled', yieldFactorWater: 0.55 }
     ],
   },
   {
@@ -11443,9 +11443,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with Irish soda bread, whole grain mustard, and horseradish sauce on the side.'
     ],
     sections: [
-      { key: 'brine', label: 'Brine', cookingMethod: '', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
-      { key: 'beef', label: 'Corned Beef', cookingMethod: '', yieldFactorWater: 0.6 },
-      { key: 'vegetables', label: 'Vegetables', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'brine', label: 'Brine', cookingMethod: 'raw', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
+      { key: 'beef', label: 'Corned Beef', cookingMethod: 'boiled', yieldFactorWater: 0.6 },
+      { key: 'vegetables', label: 'Vegetables', cookingMethod: 'boiled', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -11505,8 +11505,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with steamed green beans or a simple green salad.'
     ],
     sections: [
-      { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.85, yieldFactorFat: 0.7 },
-      { key: 'topping', label: 'Topping', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'filling', label: 'Filling', cookingMethod: 'pan grilled', yieldFactorWater: 0.85, yieldFactorFat: 0.7 },
+      { key: 'topping', label: 'Topping', cookingMethod: 'baked', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -11553,8 +11553,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with white rice, black beans, and fried plantains.'
     ],
     sections: [
-      { key: 'marinade', label: 'Marinade', cookingMethod: '', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
-      { key: 'beef', label: 'Beef', cookingMethod: '', yieldFactorWater: 0.78 }
+      { key: 'marinade', label: 'Marinade', cookingMethod: 'raw', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
+      { key: 'beef', label: 'Beef', cookingMethod: 'grilled', yieldFactorWater: 0.78 }
     ],
   },
   {
@@ -11604,7 +11604,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve on its own or over steamed rice.'
     ],
     sections: [
-      { key: 'curry', label: 'Curry', cookingMethod: '', yieldFactorWater: 0.8, yieldFactorFat: 0.85 }
+      { key: 'curry', label: 'Curry', cookingMethod: 'boiled', yieldFactorWater: 0.8, yieldFactorFat: 0.85 }
     ],
   },
   {
@@ -11662,7 +11662,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over steamed white rice or with black beans.'
     ],
     sections: [
-      { key: 'ropa', label: 'Ropa Vieja', cookingMethod: '', yieldFactorWater: 0.75 }
+      { key: 'ropa', label: 'Ropa Vieja', cookingMethod: 'boiled', yieldFactorWater: 0.75 }
     ],
   },
   {
@@ -11714,8 +11714,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with creamy mashed potatoes and roasted asparagus.'
     ],
     sections: [
-      { key: 'steak', label: 'Steak Diane', cookingMethod: '', yieldFactorWater: 0.8 },
-      { key: 'dijon', label: 'Dijon-Style Mustard', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'steak', label: 'Steak Diane', cookingMethod: 'pan grilled', yieldFactorWater: 0.8 },
+      { key: 'dijon', label: 'Dijon-Style Mustard', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -11764,9 +11764,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with Mexican rice, refried beans, sour cream, and fresh guacamole.'
     ],
     sections: [
-      { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.8, yieldFactorFat: 0.593 },
-      { key: 'sauce', label: 'Red Enchilada Sauce', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 0.93 }
+      { key: 'filling', label: 'Filling', cookingMethod: 'pan grilled', yieldFactorWater: 0.8, yieldFactorFat: 0.593 },
+      { key: 'sauce', label: 'Red Enchilada Sauce', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'baked', yieldFactorWater: 0.93 }
     ],
   },
   {
@@ -11818,7 +11818,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with egg noodles, bread dumplings, or crusty bread.'
     ],
     sections: [
-      { key: 'goulash', label: 'Goulash', cookingMethod: '', yieldFactorWater: 0.8 }
+      { key: 'goulash', label: 'Goulash', cookingMethod: 'boiled', yieldFactorWater: 0.8 }
     ],
   },
   {
@@ -11871,8 +11871,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with sour cream, guacamole, salsa, shredded cheese, and lime wedges.'
     ],
     sections: [
-      { key: 'marinade', label: 'Marinade', cookingMethod: '', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
-      { key: 'fajitas', label: 'Fajitas', cookingMethod: '', yieldFactorWater: 0.8 }
+      { key: 'marinade', label: 'Marinade', cookingMethod: 'raw', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
+      { key: 'fajitas', label: 'Fajitas', cookingMethod: 'pan grilled', yieldFactorWater: 0.8 }
     ],
   },
   {
@@ -11926,8 +11926,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with egg noodles, mashed potatoes, or crusty bread.'
     ],
     sections: [
-      { key: 'patties', label: 'Patties', cookingMethod: '', yieldFactorWater: 0.75, yieldFactorFat: 0.593 },
-      { key: 'gravy', label: 'Onion Gravy', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'patties', label: 'Patties', cookingMethod: 'pan grilled', yieldFactorWater: 0.75, yieldFactorFat: 0.593 },
+      { key: 'gravy', label: 'Onion Gravy', cookingMethod: 'boiled', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -11972,8 +11972,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with chimichurri sauce, roasted vegetables, or a simple green salad.'
     ],
     sections: [
-      { key: 'marinade', label: 'Marinade', cookingMethod: '', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
-      { key: 'steak', label: 'Steak', cookingMethod: '', yieldFactorWater: 0.8 }
+      { key: 'marinade', label: 'Marinade', cookingMethod: 'raw', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
+      { key: 'steak', label: 'Steak', cookingMethod: 'grilled', yieldFactorWater: 0.8 }
     ],
   },
   {
@@ -12032,8 +12032,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over pasta or with crusty bread, garnished with fresh parsley and additional Parmesan.'
     ],
     sections: [
-      { key: 'meatballs', label: 'Meatballs', cookingMethod: '', yieldFactorWater: 0.85 },
-      { key: 'sauce', label: 'Tomato Sauce', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'meatballs', label: 'Meatballs', cookingMethod: 'pan grilled', yieldFactorWater: 0.85 },
+      { key: 'sauce', label: 'Tomato Sauce', cookingMethod: 'boiled', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -12090,9 +12090,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with garlic bread and a simple green salad or Caesar salad.'
     ],
     sections: [
-      { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'meat_sauce', label: 'Meat Sauce', cookingMethod: '', yieldFactorWater: 0.85 },
-      { key: 'cheese_filling', label: 'Cheese Filling', cookingMethod: '', yieldFactorWater: 0.92 }
+      { key: 'pasta', label: 'Pasta', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'meat_sauce', label: 'Meat Sauce', cookingMethod: 'pan grilled', yieldFactorWater: 0.85 },
+      { key: 'cheese_filling', label: 'Cheese Filling', cookingMethod: 'baked', yieldFactorWater: 0.92 }
     ],
   },
   {
@@ -12146,8 +12146,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with egg drop soup or hot and sour soup, and steamed dumplings on the side.'
     ],
     sections: [
-      { key: 'noodles', label: 'Noodles', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'stir_fry', label: 'Stir-Fry', cookingMethod: '', yieldFactorWater: 0.95 }
+      { key: 'noodles', label: 'Noodles', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'stir_fry', label: 'Stir-Fry', cookingMethod: 'pan grilled', yieldFactorWater: 0.95 }
     ],
   },
   {
@@ -12193,8 +12193,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with creamy mashed potatoes and roasted asparagus or a simple green salad.'
     ],
     sections: [
-      { key: 'marinade', label: 'Marinade', cookingMethod: '', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
-      { key: 'steak', label: 'Steak', cookingMethod: '', yieldFactorWater: 0.8 }
+      { key: 'marinade', label: 'Marinade', cookingMethod: 'raw', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
+      { key: 'steak', label: 'Steak', cookingMethod: 'grilled', yieldFactorWater: 0.8 }
     ],
   },
   {
@@ -12245,8 +12245,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with warm pita bread, tzatziki sauce, and a Greek salad or rice pilaf.'
     ],
     sections: [
-      { key: 'marinade', label: 'Marinade', cookingMethod: '', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
-      { key: 'kabobs', label: 'Kabobs', cookingMethod: '', yieldFactorWater: 0.85 }
+      { key: 'marinade', label: 'Marinade', cookingMethod: 'raw', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
+      { key: 'kabobs', label: 'Kabobs', cookingMethod: 'grilled', yieldFactorWater: 0.85 }
     ],
   },
   {
@@ -12291,7 +12291,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over steamed jasmine rice with kimchi, steamed bok choy, or a cucumber salad on the side.'
     ],
     sections: [
-      { key: 'beef', label: 'Beef', cookingMethod: '', yieldFactorWater: 0.85, yieldFactorFat: 0.593 }
+      { key: 'beef', label: 'Beef', cookingMethod: 'pan grilled', yieldFactorWater: 0.85, yieldFactorFat: 0.593 }
     ],
   },
   {
@@ -12348,8 +12348,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with creamy mashed potatoes and green beans, with extra ketchup or brown gravy on the side.'
     ],
     sections: [
-      { key: 'meatloaf', label: 'Meatloaf', cookingMethod: '', yieldFactorWater: 0.82 },
-      { key: 'glaze', label: 'Glaze', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'meatloaf', label: 'Meatloaf', cookingMethod: 'baked', yieldFactorWater: 0.82 },
+      { key: 'glaze', label: 'Glaze', cookingMethod: 'baked', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -12396,8 +12396,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve on its own or over steamed white rice.'
     ],
     sections: [
-      { key: 'beef', label: 'Beef', cookingMethod: '', yieldFactorWater: 0.82 },
-      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.8 }
+      { key: 'beef', label: 'Beef', cookingMethod: 'fried', yieldFactorWater: 0.82 },
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'boiled', yieldFactorWater: 0.8 }
     ],
   },
   {
@@ -12453,8 +12453,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Pairs well with risotto, polenta, or crusty bread.'
     ],
     sections: [
-      { key: 'braise', label: 'Braise', cookingMethod: '', yieldFactorWater: 0.65 },
-      { key: 'gremolata', label: 'Gremolata', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'braise', label: 'Braise', cookingMethod: 'boiled', yieldFactorWater: 0.65 },
+      { key: 'gremolata', label: 'Gremolata', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -12506,8 +12506,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve on its own or over steamed white rice.'
     ],
     sections: [
-      { key: 'beef', label: 'Beef', cookingMethod: '', yieldFactorWater: 0.82 },
-      { key: 'stir_fry', label: 'Stir-Fry', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'beef', label: 'Beef', cookingMethod: 'pan grilled', yieldFactorWater: 0.82 },
+      { key: 'stir_fry', label: 'Stir-Fry', cookingMethod: 'pan grilled', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -12558,7 +12558,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve as a filling for tacos or empanadas, or on its own or over steamed rice.'
     ],
     sections: [
-      { key: 'picadillo', label: 'Picadillo', cookingMethod: '', yieldFactorWater: 0.85, yieldFactorFat: 0.593 }
+      { key: 'picadillo', label: 'Picadillo', cookingMethod: 'pan grilled', yieldFactorWater: 0.85, yieldFactorFat: 0.593 }
     ],
   },
   {
@@ -12609,8 +12609,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a simple green salad or steamed green beans on the side.'
     ],
     sections: [
-      { key: 'crust', label: 'Crust', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'crust', label: 'Crust', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'filling', label: 'Filling', cookingMethod: 'baked', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -12664,7 +12664,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with crusty bread or dinner rolls to soak up the braising liquid.'
     ],
     sections: [
-      { key: 'roast', label: 'Pot Roast', cookingMethod: '', yieldFactorWater: 0.8 }
+      { key: 'roast', label: 'Pot Roast', cookingMethod: 'baked', yieldFactorWater: 0.8 }
     ],
   },
   {
@@ -12717,7 +12717,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over pasta, polenta, or gnocchi.'
     ],
     sections: [
-      { key: 'ragu', label: 'Ragu', cookingMethod: '', yieldFactorWater: 0.75 }
+      { key: 'ragu', label: 'Ragu', cookingMethod: 'baked', yieldFactorWater: 0.75 }
     ],
   },
   {
@@ -12765,9 +12765,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with coleslaw, baked beans, and corn on the cob.'
     ],
     sections: [
-      { key: 'rub', label: 'Dry Rub', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'ribs', label: 'Ribs', cookingMethod: '', yieldFactorWater: 0.72, yieldFactorFat: 0.85 },
-      { key: 'bbq_sauce', label: 'BBQ Sauce', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'rub', label: 'Dry Rub', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'ribs', label: 'Ribs', cookingMethod: 'baked', yieldFactorWater: 0.72, yieldFactorFat: 0.85 },
+      { key: 'bbq_sauce', label: 'BBQ Sauce', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -12825,8 +12825,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with creamy mashed potatoes or egg noodles, and steamed green beans or peas.'
     ],
     sections: [
-      { key: 'patties', label: 'Patties', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'gravy', label: 'Gravy', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'patties', label: 'Patties', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'gravy', label: 'Gravy', cookingMethod: 'boiled', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -12879,7 +12879,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with creamy mashed potatoes or soft polenta, and crusty bread to soak up the braising liquid.'
     ],
     sections: [
-      { key: 'braise', label: 'Braise', cookingMethod: '', yieldFactorWater: 0.72 }
+      { key: 'braise', label: 'Braise', cookingMethod: 'baked', yieldFactorWater: 0.72 }
     ],
   },
   {
@@ -12925,7 +12925,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with warm flour tortillas and pico de gallo for fajitas, or over rice with grilled vegetables.'
     ],
     sections: [
-      { key: 'steak', label: 'Steak', cookingMethod: '', yieldFactorWater: 0.75 }
+      { key: 'steak', label: 'Steak', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 }
     ],
   },
   {
@@ -12977,8 +12977,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over egg noodles or mashed potatoes.'
     ],
     sections: [
-      { key: 'beef', label: 'Beef', cookingMethod: '', yieldFactorWater: 0.8 },
-      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'beef', label: 'Beef', cookingMethod: 'pan grilled', yieldFactorWater: 0.8 },
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'boiled', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -13024,7 +13024,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with creamy mashed potatoes and roasted asparagus, with the pan drippings spooned over the top.'
     ],
     sections: [
-      { key: 'tenderloin', label: 'Tenderloin', cookingMethod: '', yieldFactorWater: 0.75 }
+      { key: 'tenderloin', label: 'Tenderloin', cookingMethod: 'baked', yieldFactorWater: 0.75 }
     ],
   },
   {
@@ -13070,7 +13070,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve immediately on its own or over steamed rice.'
     ],
     sections: [
-      { key: 'teriyaki', label: 'Teriyaki', cookingMethod: '', yieldFactorWater: 0.8 }
+      { key: 'teriyaki', label: 'Teriyaki', cookingMethod: 'pan grilled', yieldFactorWater: 0.8 }
     ],
   },
   {
@@ -13122,9 +13122,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with roasted root vegetables, creamed spinach, or a simple green salad.'
     ],
     sections: [
-      { key: 'duxelles', label: 'Duxelles', cookingMethod: '', yieldFactorWater: 0.18 },
-      { key: 'dijon', label: 'Dijon-Style Mustard', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'wellington', label: 'Wellington', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'duxelles', label: 'Duxelles', cookingMethod: 'pan grilled', yieldFactorWater: 0.18 },
+      { key: 'dijon', label: 'Dijon-Style Mustard', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'wellington', label: 'Wellington', cookingMethod: 'baked', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -13176,7 +13176,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve immediately on its own or over steamed rice.'
     ],
     sections: [
-      { key: 'stir_fry', label: 'Stir Fry', cookingMethod: '', yieldFactorWater: 0.85 }
+      { key: 'stir_fry', label: 'Stir Fry', cookingMethod: 'pan grilled', yieldFactorWater: 0.85 }
     ],
   },
   {
@@ -13226,8 +13226,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with Mexican rice, refried beans, and guacamole or pico de gallo on the side.'
     ],
     sections: [
-      { key: 'taco_meat', label: 'Taco Meat', cookingMethod: '', yieldFactorWater: 0.8, yieldFactorFat: 0.75 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'taco_meat', label: 'Taco Meat', cookingMethod: 'pan grilled', yieldFactorWater: 0.8, yieldFactorFat: 0.75 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -13279,8 +13279,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve immediately on its own or over steamed rice.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'boiled', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -13331,8 +13331,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over pasta, polenta, or rice.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.8 },
-      { key: 'braise', label: 'Braise', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan grilled', yieldFactorWater: 0.8 },
+      { key: 'braise', label: 'Braise', cookingMethod: 'boiled', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -13383,8 +13383,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve on its own or over steamed rice with naan bread.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.8 },
-      { key: 'curry', label: 'Curry Sauce', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan grilled', yieldFactorWater: 0.8 },
+      { key: 'curry', label: 'Curry Sauce', cookingMethod: 'boiled', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -13434,9 +13434,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with Mexican rice, refried beans, and sour cream or guacamole on the side.'
     ],
     sections: [
-      { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.8 },
-      { key: 'sauce', label: 'Red Enchilada Sauce', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 0.95 }
+      { key: 'filling', label: 'Filling', cookingMethod: 'pan grilled', yieldFactorWater: 0.8 },
+      { key: 'sauce', label: 'Red Enchilada Sauce', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'baked', yieldFactorWater: 0.95 }
     ],
   },
   {
@@ -13487,9 +13487,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with pasta, mashed potatoes, or crusty bread to soak up the creamy spinach sauce.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'sauce', label: 'Cream Spinach Sauce', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'broth', label: 'Chicken Broth', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'sauce', label: 'Cream Spinach Sauce', cookingMethod: 'boiled', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -13542,8 +13542,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve on its own or with egg drop soup or hot and sour soup on the side.'
     ],
     sections: [
-      { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'stir_fry', label: 'Stir Fry', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'rice', label: 'Rice', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'stir_fry', label: 'Stir Fry', cookingMethod: 'pan grilled', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -13599,9 +13599,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with steamed rice.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.85 },
-      { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.92 }
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'fried', yieldFactorWater: 0.85 },
+      { key: 'broth', label: 'Chicken Broth', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'pan grilled', yieldFactorWater: 0.92 }
     ],
   },
   {
@@ -13657,9 +13657,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over steamed rice or with steamed dumplings on the side.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'stir_fry', label: 'Stir Fry', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'broth', label: 'Chicken Broth', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'stir_fry', label: 'Stir Fry', cookingMethod: 'pan grilled', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -13711,9 +13711,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with pasta or rice.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.82 },
-      { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'sauce', label: 'Lemon Caper Sauce', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan grilled', yieldFactorWater: 0.82 },
+      { key: 'broth', label: 'Chicken Broth', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'sauce', label: 'Lemon Caper Sauce', cookingMethod: 'pan grilled', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -13764,9 +13764,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a simple green salad or crusty bread on the side.'
     ],
     sections: [
-      { key: 'crust', label: 'Crust', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'crust', label: 'Crust', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'broth', label: 'Chicken Broth', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'filling', label: 'Filling', cookingMethod: 'baked', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -13817,8 +13817,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over steamed rice or with warm pita bread and a simple salad.'
     ],
     sections: [
-      { key: 'marinade', label: 'Marinade', cookingMethod: '', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
-      { key: 'kabobs', label: 'Kabobs', cookingMethod: '', yieldFactorWater: 0.75 }
+      { key: 'marinade', label: 'Marinade', cookingMethod: 'raw', yieldFactorWater: 0.0, yieldFactorFat: 0.0, yieldFactorOther: 0.0 },
+      { key: 'kabobs', label: 'Kabobs', cookingMethod: 'grilled', yieldFactorWater: 0.75 }
     ],
   },
   {
@@ -13869,8 +13869,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with sour cream, guacamole, or a simple green salad on the side.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.92 }
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'filling', label: 'Filling', cookingMethod: 'baked', yieldFactorWater: 0.92 }
     ],
   },
   {
@@ -13922,9 +13922,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with pasta or rice.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.82 },
-      { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'sauce', label: 'Marsala Sauce', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan grilled', yieldFactorWater: 0.82 },
+      { key: 'broth', label: 'Chicken Broth', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'sauce', label: 'Marsala Sauce', cookingMethod: 'pan grilled', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -13983,8 +13983,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with steamed basmati rice or warm naan bread.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'sauce', label: 'Masala Sauce', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'sauce', label: 'Masala Sauce', cookingMethod: 'pan grilled', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -14045,10 +14045,10 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve immediately or store components separately for easy meal prep throughout the week.'
     ],
     sections: [
-      { key: 'rice', label: 'Brown Rice', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'peanut_sauce', label: 'Peanut Sauce', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'toppings', label: 'Toppings', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'rice', label: 'Brown Rice', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'peanut_sauce', label: 'Peanut Sauce', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'toppings', label: 'Toppings', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -14102,9 +14102,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over steamed white rice.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.85 },
-      { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'fried', yieldFactorWater: 0.85 },
+      { key: 'broth', label: 'Chicken Broth', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'pan grilled', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -14150,7 +14150,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve hot with dipping sauce of your choice — honey mustard, ranch dressing, or BBQ sauce.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.85 }
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'fried', yieldFactorWater: 0.85 }
     ],
   },
   {
@@ -14200,9 +14200,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Drizzle with hot sauce or honey for a sweet-and-spicy kick.'
     ],
     sections: [
-      { key: 'waffles', label: 'Waffles plain', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.85 },
-      { key: 'maple_syrup', label: 'Maple Syrup', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'waffles', label: 'Waffles plain', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'fried', yieldFactorWater: 0.85 },
+      { key: 'maple_syrup', label: 'Maple Syrup', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -14246,7 +14246,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over steamed white rice.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 }
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'boiled', yieldFactorWater: 0.75 }
     ],
   },
   {
@@ -14302,8 +14302,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over steamed basmati rice or with naan.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'boiled', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -14355,9 +14355,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with pasta, creamy polenta, or mashed potatoes to soak up the pan sauce.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.7 },
-      { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'boiled', yieldFactorWater: 0.7 },
+      { key: 'broth', label: 'Chicken Broth', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -14412,10 +14412,10 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with crusty bread to soak up the sauce and a simple green salad.'
     ],
     sections: [
-      { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'pasta', label: 'Pasta', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'boiled', yieldFactorWater: 0.75 },
+      { key: 'broth', label: 'Chicken Broth', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -14475,11 +14475,11 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a simple green salad and crusty bread.'
     ],
     sections: [
-      { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.88 },
-      { key: 'topping', label: 'Topping', cookingMethod: '', yieldFactorWater: 0.95 },
-      { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'pasta', label: 'Pasta', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'boiled', yieldFactorWater: 0.88 },
+      { key: 'topping', label: 'Topping', cookingMethod: 'baked', yieldFactorWater: 0.95 },
+      { key: 'broth', label: 'Chicken Broth', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -14540,8 +14540,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over steamed basmati rice or with naan.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'boiled', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -14597,9 +14597,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with pasta, rice, or crusty bread.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.88 },
-      { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'boiled', yieldFactorWater: 0.88 },
+      { key: 'broth', label: 'Chicken Broth', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -14647,7 +14647,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with flatbread, rice, or a cucumber-yogurt sauce.'
     ],
     sections: [
-      { key: 'kabob', label: 'Kabob', cookingMethod: '', yieldFactorWater: 0.75 }
+      { key: 'kabob', label: 'Kabob', cookingMethod: 'grilled', yieldFactorWater: 0.75 }
     ],
   },
   {
@@ -14695,7 +14695,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with flatbread, tzatziki, or a fresh herb salad.'
     ],
     sections: [
-      { key: 'kofta', label: 'Kofta', cookingMethod: '', yieldFactorWater: 0.75 }
+      { key: 'kofta', label: 'Kofta', cookingMethod: 'grilled', yieldFactorWater: 0.75 }
     ],
   },
   {
@@ -14738,7 +14738,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with warm pita, tzatziki sauce, sliced tomatoes, and onion.'
     ],
     sections: [
-      { key: 'souvlaki', label: 'Souvlaki', cookingMethod: '', yieldFactorWater: 0.75 }
+      { key: 'souvlaki', label: 'Souvlaki', cookingMethod: 'grilled', yieldFactorWater: 0.75 }
     ],
   },
   {
@@ -14800,8 +14800,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a simple green salad and crusty bread.'
     ],
     sections: [
-      { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.85 },
-      { key: 'topping', label: 'Mashed potato topping', cookingMethod: '', yieldFactorWater: 0.96 }
+      { key: 'filling', label: 'Filling', cookingMethod: 'pan grilled', yieldFactorWater: 0.85 },
+      { key: 'topping', label: 'Mashed potato topping', cookingMethod: 'boiled', yieldFactorWater: 0.96 }
     ],
   },
   {
@@ -14858,7 +14858,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over basmati rice or with naan bread.'
     ],
     sections: [
-      { key: 'curry', label: 'Curry', cookingMethod: '', yieldFactorWater: 0.66 }
+      { key: 'curry', label: 'Curry', cookingMethod: 'boiled', yieldFactorWater: 0.66 }
     ],
   },
   {
@@ -14920,7 +14920,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over couscous or with warm flatbread.'
     ],
     sections: [
-      { key: 'tagine', label: 'Tagine', cookingMethod: '', yieldFactorWater: 0.75 }
+      { key: 'tagine', label: 'Tagine', cookingMethod: 'boiled', yieldFactorWater: 0.75 }
     ],
   },
   {
@@ -14981,9 +14981,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a simple green salad and crusty bread.'
     ],
     sections: [
-      { key: 'eggplant', label: 'Eggplant', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'meat_sauce', label: 'Meat Sauce', cookingMethod: '', yieldFactorWater: 0.82 },
-      { key: 'bechamel', label: 'Béchamel', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'eggplant', label: 'Eggplant', cookingMethod: 'baked', yieldFactorWater: 0.75 },
+      { key: 'meat_sauce', label: 'Meat Sauce', cookingMethod: 'pan grilled', yieldFactorWater: 0.82 },
+      { key: 'bechamel', label: 'Béchamel', cookingMethod: 'boiled', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -15036,7 +15036,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with mashed potatoes, polenta, or crusty bread.'
     ],
     sections: [
-      { key: 'braise', label: 'Braise', cookingMethod: '', yieldFactorWater: 0.73 }
+      { key: 'braise', label: 'Braise', cookingMethod: 'boiled', yieldFactorWater: 0.73 }
     ],
   },
   {
@@ -15080,7 +15080,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with roasted vegetables or a simple salad.'
     ],
     sections: [
-      { key: 'chops', label: 'Chops', cookingMethod: '', yieldFactorWater: 0.82 }
+      { key: 'chops', label: 'Chops', cookingMethod: 'pan grilled', yieldFactorWater: 0.82 }
     ],
   },
   {
@@ -15128,8 +15128,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'rack', label: 'Rack of Lamb', cookingMethod: '', yieldFactorWater: 0.87 },
-      { key: 'dijon', label: 'Dijon-Style Mustard', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'rack', label: 'Rack of Lamb', cookingMethod: 'baked', yieldFactorWater: 0.87 },
+      { key: 'dijon', label: 'Dijon-Style Mustard', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -15175,7 +15175,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with roasted potatoes, a Greek salad, or warm pita bread.'
     ],
     sections: [
-      { key: 'lamb', label: 'Leg of Lamb', cookingMethod: '', yieldFactorWater: 0.62, yieldFactorFat: 0.705 }
+      { key: 'lamb', label: 'Leg of Lamb', cookingMethod: 'baked', yieldFactorWater: 0.62, yieldFactorFat: 0.705 }
     ],
   },
   {
@@ -15233,8 +15233,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with raita, a fresh cucumber and tomato salad, or warm naan bread.'
     ],
     sections: [
-      { key: 'lamb', label: 'Lamb', cookingMethod: '', yieldFactorWater: 0.78 },
-      { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'lamb', label: 'Lamb', cookingMethod: 'boiled', yieldFactorWater: 0.78 },
+      { key: 'rice', label: 'Rice', cookingMethod: 'boiled', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -15281,7 +15281,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve in warm tortillas with your choice of toppings such as diced white onion, fresh cilantro, salsa, and lime wedges.'
     ],
     sections: [
-      { key: 'carnitas', label: 'Carnitas', cookingMethod: '', yieldFactorWater: 0.65 }
+      { key: 'carnitas', label: 'Carnitas', cookingMethod: 'boiled', yieldFactorWater: 0.65 }
     ],
   },
   {
@@ -15328,7 +15328,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over steamed rice.'
     ],
     sections: [
-      { key: 'char_siu', label: 'Char Siu', cookingMethod: '', yieldFactorWater: 0.72 }
+      { key: 'char_siu', label: 'Char Siu', cookingMethod: 'baked', yieldFactorWater: 0.72 }
     ],
   },
   {
@@ -15372,7 +15372,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with mashed potatoes, roasted vegetables, or steamed green beans.'
     ],
     sections: [
-      { key: 'chops', label: 'Pork Chops', cookingMethod: '', yieldFactorWater: 0.82 }
+      { key: 'chops', label: 'Pork Chops', cookingMethod: 'pan grilled', yieldFactorWater: 0.82 }
     ],
   },
   {
@@ -15416,7 +15416,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with roasted root vegetables, mashed potatoes, and a savory pan sauce or gravy.'
     ],
     sections: [
-      { key: 'crown', label: 'Crown Roast', cookingMethod: '', yieldFactorWater: 0.64 }
+      { key: 'crown', label: 'Crown Roast', cookingMethod: 'baked', yieldFactorWater: 0.64 }
     ],
   },
   {
@@ -15463,7 +15463,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with sweet-and-sour sauce or duck sauce.'
     ],
     sections: [
-      { key: 'rolls', label: 'Egg Rolls', cookingMethod: '', yieldFactorWater: 0.6 }
+      { key: 'rolls', label: 'Egg Rolls', cookingMethod: 'fried', yieldFactorWater: 0.6 }
     ],
   },
   {
@@ -15514,8 +15514,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with additional scallions and sesame seeds. Serve with sriracha or chili garlic sauce on the side.'
     ],
     sections: [
-      { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.85 }
+      { key: 'rice', label: 'Rice', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'filling', label: 'Filling', cookingMethod: 'pan grilled', yieldFactorWater: 0.85 }
     ],
   },
   {
@@ -15558,7 +15558,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with lemon wedges and an arugula salad.'
     ],
     sections: [
-      { key: 'main', label: 'Pork Milanese', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'main', label: 'Pork Milanese', cookingMethod: 'pan grilled', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -15607,8 +15607,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with additional BBQ sauce on the side.'
     ],
     sections: [
-      { key: 'ribs', label: 'Baby Back Ribs', cookingMethod: '', yieldFactorWater: 0.73 },
-      { key: 'bbq_sauce', label: 'BBQ Sauce', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'ribs', label: 'Baby Back Ribs', cookingMethod: 'baked', yieldFactorWater: 0.73 },
+      { key: 'bbq_sauce', label: 'BBQ Sauce', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -15657,8 +15657,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with coleslaw or potato salad.'
     ],
     sections: [
-      { key: 'ribs', label: 'Spareribs', cookingMethod: '', yieldFactorWater: 0.596 },
-      { key: 'bbq_sauce', label: 'BBQ Sauce', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'ribs', label: 'Spareribs', cookingMethod: 'baked', yieldFactorWater: 0.596 },
+      { key: 'bbq_sauce', label: 'BBQ Sauce', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -15707,8 +15707,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve 2 ribs per person with coleslaw or potato salad.'
     ],
     sections: [
-      { key: 'ribs', label: 'Country-Style Ribs', cookingMethod: '', yieldFactorWater: 0.577 },
-      { key: 'bbq_sauce', label: 'BBQ Sauce', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'ribs', label: 'Country-Style Ribs', cookingMethod: 'baked', yieldFactorWater: 0.577 },
+      { key: 'bbq_sauce', label: 'BBQ Sauce', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -15755,7 +15755,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with lemon wedges and a simple green salad or cucumber salad.'
     ],
     sections: [
-      { key: 'main', label: 'Pork Schnitzel', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'main', label: 'Pork Schnitzel', cookingMethod: 'pan grilled', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -15814,9 +15814,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with roasted potatoes or egg noodles.'
     ],
     sections: [
-      { key: 'tenderloin', label: 'Tenderloin', cookingMethod: '', yieldFactorWater: 0.82 },
-      { key: 'pan_sauce', label: 'Pan Sauce', cookingMethod: '', yieldFactorWater: 0.8 },
-      { key: 'chicken_broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'tenderloin', label: 'Tenderloin', cookingMethod: 'baked', yieldFactorWater: 0.82 },
+      { key: 'pan_sauce', label: 'Pan Sauce', cookingMethod: 'pan grilled', yieldFactorWater: 0.8 },
+      { key: 'chicken_broth', label: 'Chicken Broth', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -15863,7 +15863,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with roasted vegetables, mashed potatoes, or over rice.'
     ],
     sections: [
-      { key: 'pork', label: 'Pork Shoulder', cookingMethod: '', yieldFactorWater: 0.6 }
+      { key: 'pork', label: 'Pork Shoulder', cookingMethod: 'baked', yieldFactorWater: 0.6 }
     ],
   },
   {
@@ -15912,8 +15912,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with additional scallions and sesame seeds. Serve with sriracha or chili garlic sauce on the side.'
     ],
     sections: [
-      { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.85 }
+      { key: 'rice', label: 'Rice', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'filling', label: 'Filling', cookingMethod: 'pan grilled', yieldFactorWater: 0.85 }
     ],
   },
   {
@@ -15969,8 +15969,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over egg noodles, mashed potatoes, or with lingonberry jam on the side.'
     ],
     sections: [
-      { key: 'meatballs', label: 'Meatballs', cookingMethod: '', yieldFactorWater: 0.85 },
-      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'meatballs', label: 'Meatballs', cookingMethod: 'pan grilled', yieldFactorWater: 0.85 },
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'boiled', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -16020,7 +16020,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with lemon wedges and tartar sauce or remoulade.'
     ],
     sections: [
-      { key: 'crab_cakes', label: 'Crab Cakes', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'crab_cakes', label: 'Crab Cakes', cookingMethod: 'pan grilled', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -16065,7 +16065,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve immediately chilled, optionally with extra lemon wedges.'
     ],
     sections: [
-      { key: 'stuffed_avocados', label: 'Stuffed avocados', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'stuffed_avocados', label: 'Stuffed avocados', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -16118,8 +16118,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with soy sauce, pickled ginger, and wasabi.'
     ],
     sections: [
-      { key: 'rice', label: 'Sushi rice', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'rice', label: 'Sushi rice', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -16172,8 +16172,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with soy sauce, pickled ginger, and wasabi.'
     ],
     sections: [
-      { key: 'rice', label: 'Sushi rice', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'rice', label: 'Sushi rice', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -16230,8 +16230,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with additional soy sauce or spicy mayo on the side.'
     ],
     sections: [
-      { key: 'rice', label: 'Sushi Rice', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'assembly', label: 'Bowl Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'rice', label: 'Sushi Rice', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'assembly', label: 'Bowl Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -16287,9 +16287,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with additional lime wedges and a drizzle of sriracha or spicy mayo.'
     ],
     sections: [
-      { key: 'quinoa', label: 'Quinoa', cookingMethod: '', yieldFactorWater: 0.7 },
-      { key: 'salmon', label: 'Salmon', cookingMethod: '', yieldFactorWater: 0.82 },
-      { key: 'assembly', label: 'Bowl Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'quinoa', label: 'Quinoa', cookingMethod: 'boiled', yieldFactorWater: 0.7 },
+      { key: 'salmon', label: 'Salmon', cookingMethod: 'pan grilled', yieldFactorWater: 0.82 },
+      { key: 'assembly', label: 'Bowl Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -16335,7 +16335,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Pairs well with risotto, pasta, or crusty bread.'
     ],
     sections: [
-      { key: 'scallops', label: 'Scallops', cookingMethod: '', yieldFactorWater: 0.82 }
+      { key: 'scallops', label: 'Scallops', cookingMethod: 'pan grilled', yieldFactorWater: 0.82 }
     ],
   },
   {
@@ -16395,9 +16395,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a simple green salad or steamed asparagus on the side.'
     ],
     sections: [
-      { key: 'grits', label: 'Grits', cookingMethod: '', yieldFactorWater: 0.82 },
-      { key: 'chicken_stock', label: 'White Chicken Stock', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'shrimp', label: 'Shrimp', cookingMethod: '', yieldFactorWater: 0.85 }
+      { key: 'grits', label: 'Grits', cookingMethod: 'boiled', yieldFactorWater: 0.82 },
+      { key: 'chicken_stock', label: 'White Chicken Stock', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'shrimp', label: 'Shrimp', cookingMethod: 'pan grilled', yieldFactorWater: 0.85 }
     ],
   },
   {
@@ -16447,7 +16447,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Pairs well with rice, couscous, or warm flatbread.'
     ],
     sections: [
-      { key: 'kabobs', label: 'Shrimp Kabobs', cookingMethod: '', yieldFactorWater: 0.85 }
+      { key: 'kabobs', label: 'Shrimp Kabobs', cookingMethod: 'grilled', yieldFactorWater: 0.85 }
     ],
   },
   {
@@ -16493,7 +16493,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with steamed green beans, roasted asparagus, or boiled new potatoes.'
     ],
     sections: [
-      { key: 'meuniere', label: 'Meunière', cookingMethod: '', yieldFactorWater: 0.82 }
+      { key: 'meuniere', label: 'Meunière', cookingMethod: 'pan grilled', yieldFactorWater: 0.82 }
     ],
   },
   {
@@ -16543,8 +16543,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with additional soy sauce, sriracha, or spicy mayo on the side. Top with pickled ginger for extra brightness.'
     ],
     sections: [
-      { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'poke', label: 'Poke', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'rice', label: 'Rice', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'poke', label: 'Poke', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -16600,8 +16600,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with crusty bread for dipping.'
     ],
     sections: [
-      { key: 'fish_stock', label: 'Fish Stock', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'stew', label: 'Cioppino', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'fish_stock', label: 'Fish Stock', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'stew', label: 'Cioppino', cookingMethod: 'boiled', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -16650,8 +16650,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve fish and chips together with malt vinegar and lemon wedges.'
     ],
     sections: [
-      { key: 'fish', label: 'Battered Fish', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'chips', label: 'Chips', cookingMethod: '', yieldFactorWater: 0.55 }
+      { key: 'fish', label: 'Battered Fish', cookingMethod: 'fried', yieldFactorWater: 0.75 },
+      { key: 'chips', label: 'Chips', cookingMethod: 'fried', yieldFactorWater: 0.55 }
     ],
   },
   {
@@ -16707,9 +16707,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve directly from the pan with extra lemon wedges and a simple green salad on the side.'
     ],
     sections: [
-      { key: 'fish_stock', label: 'Fish Stock', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'rice', label: 'Saffron Rice', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'paella', label: 'Seafood and Sofrito', cookingMethod: '', yieldFactorWater: 0.85 }
+      { key: 'fish_stock', label: 'Fish Stock', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'rice', label: 'Saffron Rice', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'paella', label: 'Seafood and Sofrito', cookingMethod: 'pan grilled', yieldFactorWater: 0.85 }
     ],
   },
   {
@@ -16756,7 +16756,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over pasta or with crusty bread.'
     ],
     sections: [
-      { key: 'scampi', label: 'Shrimp Scampi', cookingMethod: '', yieldFactorWater: 0.82 }
+      { key: 'scampi', label: 'Shrimp Scampi', cookingMethod: 'pan grilled', yieldFactorWater: 0.82 }
     ],
   },
   {
@@ -16810,8 +16810,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a lime wedge and your favorite hot sauce on the side.'
     ],
     sections: [
-      { key: 'rice', label: 'White Rice', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'filling', label: 'Vegetable Filling', cookingMethod: '', yieldFactorWater: 0.85 }
+      { key: 'rice', label: 'White Rice', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'filling', label: 'Vegetable Filling', cookingMethod: 'pan grilled', yieldFactorWater: 0.85 }
     ],
   },
   {
@@ -16857,7 +16857,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with your preferred dipping sauce.'
     ],
     sections: [
-      { key: 'egg_rolls', label: 'Egg Rolls', cookingMethod: '', yieldFactorWater: 0.62 }
+      { key: 'egg_rolls', label: 'Egg Rolls', cookingMethod: 'fried', yieldFactorWater: 0.62 }
     ],
   },
   {
@@ -16904,8 +16904,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with additional scallions or sesame seeds if desired.'
     ],
     sections: [
-      { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'filling', label: 'Egg Roll Filling', cookingMethod: '', yieldFactorWater: 0.85 }
+      { key: 'rice', label: 'Rice', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'filling', label: 'Egg Roll Filling', cookingMethod: 'pan grilled', yieldFactorWater: 0.85 }
     ],
   },
   {
@@ -16952,7 +16952,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with your choice of dipping sauce such as sweet chili sauce, sriracha mayo, or tamari.'
     ],
     sections: [
-      { key: 'nuggets', label: 'Tofu Nuggets', cookingMethod: '', yieldFactorWater: 0.85 }
+      { key: 'nuggets', label: 'Tofu Nuggets', cookingMethod: 'pan grilled', yieldFactorWater: 0.85 }
     ],
   },
   {
@@ -17009,8 +17009,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with sesame seeds and sliced scallions. Serve with additional tamari or sriracha on the side.'
     ],
     sections: [
-      { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'stir_fry', label: 'Stir-Fry', cookingMethod: '', yieldFactorWater: 0.85 }
+      { key: 'rice', label: 'Rice', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'stir_fry', label: 'Stir-Fry', cookingMethod: 'pan grilled', yieldFactorWater: 0.85 }
     ],
   },
   {
@@ -17065,8 +17065,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with additional sesame seeds and scallions. Pairs well with steamed edamame or a simple cucumber salad on the side.'
     ],
     sections: [
-      { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'sesame_tofu', label: 'Sesame Tofu & Broccoli', cookingMethod: '', yieldFactorWater: 0.85 }
+      { key: 'rice', label: 'Rice', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'sesame_tofu', label: 'Sesame Tofu & Broccoli', cookingMethod: 'pan grilled', yieldFactorWater: 0.85 }
     ],
   },
   {
@@ -17122,9 +17122,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Top with additional fresh cilantro and a squeeze of lemon juice.'
     ],
     sections: [
-      { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'lentils', label: 'Lentils', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'dal_base', label: 'Dal Sauce', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'rice', label: 'Rice', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'lentils', label: 'Lentils', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'dal_base', label: 'Dal Sauce', cookingMethod: 'pan grilled', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -17178,8 +17178,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with thinly sliced red onion. A pinch of garam masala stirred in at the end adds warmth and depth.'
     ],
     sections: [
-      { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'chana_masala', label: 'Chana Masala', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'rice', label: 'Rice', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'chana_masala', label: 'Chana Masala', cookingMethod: 'pan grilled', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -17228,7 +17228,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve directly from the skillet with crusty bread or pita for dipping.'
     ],
     sections: [
-      { key: 'shakshuka', label: 'Shakshuka', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'shakshuka', label: 'Shakshuka', cookingMethod: 'pan grilled', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -17283,8 +17283,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Top with sliced avocado or a drizzle of hot sauce before serving.'
     ],
     sections: [
-      { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'peppers', label: 'Stuffed Peppers', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'rice', label: 'Rice', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'peppers', label: 'Stuffed Peppers', cookingMethod: 'baked', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -17339,8 +17339,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with sour cream or salsa on the side.'
     ],
     sections: [
-      { key: 'rice', label: 'Rice', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'poblanos', label: 'Stuffed Poblanos', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'rice', label: 'Rice', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'poblanos', label: 'Stuffed Poblanos', cookingMethod: 'baked', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -17391,7 +17391,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Top with a drizzle of balsamic glaze or serve with a simple green salad on the side.'
     ],
     sections: [
-      { key: 'zucchini_boats', label: 'Zucchini Boats', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'zucchini_boats', label: 'Zucchini Boats', cookingMethod: 'baked', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -17442,8 +17442,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with sour cream, avocado, or fresh cilantro on the side.'
     ],
     sections: [
-      { key: 'sauce', label: 'Red Enchilada Sauce', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'enchiladas', label: 'Cheese Enchiladas', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'sauce', label: 'Red Enchilada Sauce', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'enchiladas', label: 'Cheese Enchiladas', cookingMethod: 'baked', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -17501,9 +17501,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a simple green salad and garlic bread on the side.'
     ],
     sections: [
-      { key: 'noodles', label: 'Noodles', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'sauce', label: 'Tomato Sauce', cookingMethod: '', yieldFactorWater: 0.73 },
-      { key: 'cheese_filling', label: 'Cheese Filling', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'noodles', label: 'Noodles', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'sauce', label: 'Tomato Sauce', cookingMethod: 'boiled', yieldFactorWater: 0.73 },
+      { key: 'cheese_filling', label: 'Cheese Filling', cookingMethod: 'baked', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -17547,7 +17547,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): A party and picnic classic. Serve chilled on a platter and garnish with additional paprika or fresh chives.'
     ],
     sections: [
-      { key: 'filling', label: 'Deviled Egg Filling', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'filling', label: 'Deviled Egg Filling', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -17591,7 +17591,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): A Southern classic. Serve alongside fried chicken, BBQ ribs, or pulled pork. Don\'t discard the pot likker — it\'s delicious sopped up with cornbread.'
     ],
     sections: [
-      { key: 'greens', label: 'Collard Greens', cookingMethod: '', yieldFactorWater: 0.65 }
+      { key: 'greens', label: 'Collard Greens', cookingMethod: 'boiled', yieldFactorWater: 0.65 }
     ],
   },
   {
@@ -17633,7 +17633,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside fried chicken, BBQ ribs, meatloaf, or roast turkey. Also makes a great filling for cornbread.'
     ],
     sections: [
-      { key: 'cream', label: 'Creamed Corn', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'cream', label: 'Creamed Corn', cookingMethod: 'boiled', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -17677,7 +17677,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): A steakhouse classic. Pairs especially well with grilled steak, roasted chicken, or prime rib.'
     ],
     sections: [
-      { key: 'cream', label: 'Creamed Spinach', cookingMethod: '', yieldFactorWater: 0.39 }
+      { key: 'cream', label: 'Creamed Spinach', cookingMethod: 'boiled', yieldFactorWater: 0.39 }
     ],
   },
   {
@@ -17718,7 +17718,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside burgers, sandwiches, or grilled meats. Season with garlic salt, Cajun spice, or Parmesan cheese for variations.'
     ],
     sections: [
-      { key: 'fries', label: 'French Fries', cookingMethod: '', yieldFactorWater: 0.21 }
+      { key: 'fries', label: 'French Fries', cookingMethod: 'fried', yieldFactorWater: 0.21 }
     ],
   },
   {
@@ -17759,7 +17759,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside roast chicken, pork tenderloin, or holiday ham. A simple vegetable side that also works well for Thanksgiving or Easter.'
     ],
     sections: [
-      { key: 'carrots', label: 'Glazed Carrots', cookingMethod: '', yieldFactorWater: 0.8 }
+      { key: 'carrots', label: 'Glazed Carrots', cookingMethod: 'boiled', yieldFactorWater: 0.8 }
     ],
   },
   {
@@ -17803,7 +17803,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside burgers, hot dogs, or fried chicken. Also good as an appetizer with ranch dressing or dipping sauce.'
     ],
     sections: [
-      { key: 'rings', label: 'Onion Rings', cookingMethod: '', yieldFactorWater: 0.29 }
+      { key: 'rings', label: 'Onion Rings', cookingMethod: 'fried', yieldFactorWater: 0.29 }
     ],
   },
   {
@@ -17845,8 +17845,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): A Thanksgiving classic. Pairs perfectly with roast turkey, mashed potatoes, and cranberry sauce.'
     ],
     sections: [
-      { key: 'casserole', label: 'Green Bean Casserole', cookingMethod: '', yieldFactorWater: 0.88 },
-      { key: 'topping', label: 'Onion Ring Topping', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'casserole', label: 'Green Bean Casserole', cookingMethod: 'baked', yieldFactorWater: 0.88 },
+      { key: 'topping', label: 'Onion Ring Topping', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -17891,8 +17891,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside roasted chicken, grilled fish, or lamb chops. Stir in toasted pine nuts or dried cranberries for a festive variation.'
     ],
     sections: [
-      { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'rice', label: 'Rice Pilaf', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'broth', label: 'Chicken Broth', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'rice', label: 'Rice Pilaf', cookingMethod: 'boiled', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -17940,8 +17940,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): A classic Italian comfort food. Serve alongside grilled chicken, veal, or seared scallops. Try adding sautéed mushrooms or asparagus for a hearty variation.'
     ],
     sections: [
-      { key: 'broth', label: 'Chicken Broth', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'risotto', label: 'Risotto', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'broth', label: 'Chicken Broth', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'risotto', label: 'Risotto', cookingMethod: 'boiled', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -17983,7 +17983,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Pairs well with roast chicken, grilled salmon, or steak. Finish with grated Parmesan or wrap spears in prosciutto before roasting.'
     ],
     sections: [
-      { key: 'asparagus', label: 'Roasted Asparagus', cookingMethod: '', yieldFactorWater: 0.85 }
+      { key: 'asparagus', label: 'Roasted Asparagus', cookingMethod: 'baked', yieldFactorWater: 0.85 }
     ],
   },
   {
@@ -18025,7 +18025,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): A great holiday side. Pairs well with roast chicken, pork tenderloin, or turkey. Try tossing with crumbled bacon or pancetta before roasting.'
     ],
     sections: [
-      { key: 'sprouts', label: 'Roasted Brussels Sprouts', cookingMethod: '', yieldFactorWater: 0.85 }
+      { key: 'sprouts', label: 'Roasted Brussels Sprouts', cookingMethod: 'baked', yieldFactorWater: 0.85 }
     ],
   },
   {
@@ -18070,7 +18070,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): A classic party appetizer. Serve warm before an Italian dinner, steak, or holiday gathering. Add cooked crumbled sausage to the filling for a heartier version.'
     ],
     sections: [
-      { key: 'mushrooms', label: 'Stuffed Mushrooms', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'mushrooms', label: 'Stuffed Mushrooms', cookingMethod: 'baked', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -18111,7 +18111,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): A Southern classic. Serve alongside fried chicken, pork chops, or BBQ. Add diced bacon or okra for a more traditional variation.'
     ],
     sections: [
-      { key: 'succotash', label: 'Succotash', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'succotash', label: 'Succotash', cookingMethod: 'pan grilled', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -18157,8 +18157,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with crusty bread or croutons. Top with a swirl of cream and fresh chives for garnish.'
     ],
     sections: [
-      { key: 'stock', label: 'Chicken stock', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'soup', label: 'Asparagus soup', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'stock', label: 'Chicken stock', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'soup', label: 'Asparagus soup', cookingMethod: 'boiled', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -18205,10 +18205,10 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with bean sprouts, fresh Thai basil, lime wedges, hoisin sauce, and sriracha.'
     ],
     sections: [
-      { key: 'stock', label: 'Beef stock', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'seasoning', label: 'Broth seasoning', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'noodles', label: 'Rice noodles', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'beef', label: 'Beef', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'stock', label: 'Beef stock', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'seasoning', label: 'Broth seasoning', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'noodles', label: 'Rice noodles', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'beef', label: 'Beef', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -18259,8 +18259,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with crusty bread or over buttered egg noodles.'
     ],
     sections: [
-      { key: 'stock', label: 'Beef stock', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'stew', label: 'Beef stew', cookingMethod: '', yieldFactorWater: 0.65 }
+      { key: 'stock', label: 'Beef stock', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'stew', label: 'Beef stew', cookingMethod: 'boiled', yieldFactorWater: 0.65 }
     ],
   },
   {
@@ -18308,8 +18308,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with crusty bread or a soft pretzel. A bread bowl makes a classic presentation.'
     ],
     sections: [
-      { key: 'stock', label: 'Chicken stock', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'soup', label: 'Broccoli cheddar', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'stock', label: 'Chicken stock', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'soup', label: 'Broccoli cheddar', cookingMethod: 'boiled', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -18354,8 +18354,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside fried rice, potstickers, or stir-fry.'
     ],
     sections: [
-      { key: 'stock', label: 'Chicken stock', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'egg_drop', label: 'Egg drop', cookingMethod: '', yieldFactorWater: 0.95 }
+      { key: 'stock', label: 'Chicken stock', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'egg_drop', label: 'Egg drop', cookingMethod: 'boiled', yieldFactorWater: 0.95 }
     ],
   },
   {
@@ -18406,8 +18406,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve as a first course alongside stir-fry, fried rice, or dumplings. For more heat, add extra white pepper or a few drops of chili oil.'
     ],
     sections: [
-      { key: 'stock', label: 'Chicken stock', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'hot_sour', label: 'Hot and sour', cookingMethod: '', yieldFactorWater: 0.92 }
+      { key: 'stock', label: 'Chicken stock', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'hot_sour', label: 'Hot and sour', cookingMethod: 'boiled', yieldFactorWater: 0.92 }
     ],
   },
   {
@@ -18460,8 +18460,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with sliced avocado, sour cream, shredded cheese, or extra lime wedges.'
     ],
     sections: [
-      { key: 'stock', label: 'Chicken stock', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'soup', label: 'Tortilla soup', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'stock', label: 'Chicken stock', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'soup', label: 'Tortilla soup', cookingMethod: 'boiled', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -18515,8 +18515,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Top with shredded cheese, sour cream, sliced avocado, or fresh cilantro. Serve with cornbread or tortilla chips.'
     ],
     sections: [
-      { key: 'stock', label: 'Vegetable stock', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'chili', label: 'Chili', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'stock', label: 'Vegetable stock', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'chili', label: 'Chili', cookingMethod: 'boiled', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -18568,9 +18568,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Turn off the heat and stir in 1½ tsp gumbo filé powder — add it off the heat only, as boiling causes filé to turn stringy. Serve in bowls over hot cooked white rice.'
     ],
     sections: [
-      { key: 'stock', label: 'Chicken stock', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'cajun_spice', label: 'Creole seasoning', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'gumbo', label: 'Gumbo', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'stock', label: 'Chicken stock', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'cajun_spice', label: 'Creole seasoning', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'gumbo', label: 'Gumbo', cookingMethod: 'boiled', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -18621,9 +18621,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with oyster crackers, crusty bread, or a simple green salad.'
     ],
     sections: [
-      { key: 'stock', label: 'White Chicken Stock', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'soup', label: 'Soup', cookingMethod: '', yieldFactorWater: 0.9 },
-      { key: 'noodles', label: 'Noodles', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'stock', label: 'White Chicken Stock', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'soup', label: 'Soup', cookingMethod: 'boiled', yieldFactorWater: 0.9 },
+      { key: 'noodles', label: 'Noodles', cookingMethod: 'boiled', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -18675,8 +18675,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve in bowls topped with shredded cheddar cheese, sour cream, diced onion, or sliced jalapeños. Good alongside cornbread or crackers.'
     ],
     sections: [
-      { key: 'stock', label: 'Beef Stock', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'chili', label: 'Chili', cookingMethod: '', yieldFactorWater: 0.82 }
+      { key: 'stock', label: 'Beef Stock', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'chili', label: 'Chili', cookingMethod: 'boiled', yieldFactorWater: 0.82 }
     ],
   },
   {
@@ -18730,8 +18730,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve in bowls topped with shredded cheddar cheese, sour cream, diced onion, or sliced jalapeños. Good alongside cornbread or crackers.'
     ],
     sections: [
-      { key: 'stock', label: 'Beef Stock', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'chili', label: 'Chili', cookingMethod: '', yieldFactorWater: 0.82 }
+      { key: 'stock', label: 'Beef Stock', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'chili', label: 'Chili', cookingMethod: 'boiled', yieldFactorWater: 0.82 }
     ],
   },
   {
@@ -18790,9 +18790,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Turn off the heat and stir in 1½ tsp gumbo filé powder — add it off the heat only, as boiling causes filé to turn stringy. Serve in bowls over hot cooked white rice.'
     ],
     sections: [
-      { key: 'fish_stock', label: 'Fish Stock', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'cajun_spice', label: 'Creole Seasoning', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'gumbo', label: 'Gumbo', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'fish_stock', label: 'Fish Stock', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'cajun_spice', label: 'Creole Seasoning', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'gumbo', label: 'Gumbo', cookingMethod: 'boiled', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -18848,8 +18848,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve in bowls topped with diced avocado, sliced jalapeños, or additional cilantro. Good alongside warm tortillas or cornbread.'
     ],
     sections: [
-      { key: 'vegetable_stock', label: 'Vegetable Stock', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'soup', label: 'Soup', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'vegetable_stock', label: 'Vegetable Stock', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'soup', label: 'Soup', cookingMethod: 'boiled', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -18903,8 +18903,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): serve with oyster crackers or sourdough bread. Garnish with a pat of butter, fresh chives, or a pinch of smoked paprika.'
     ],
     sections: [
-      { key: 'fish_stock', label: 'Fish Stock', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'chowder', label: 'Chowder', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'fish_stock', label: 'Fish Stock', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'chowder', label: 'Chowder', cookingMethod: 'boiled', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -18959,8 +18959,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): serve with crusty bread or oyster crackers. Garnish with additional chopped parsley.'
     ],
     sections: [
-      { key: 'fish_stock', label: 'Fish Stock', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'chowder', label: 'Chowder', cookingMethod: '', yieldFactorWater: 0.85 }
+      { key: 'fish_stock', label: 'Fish Stock', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'chowder', label: 'Chowder', cookingMethod: 'boiled', yieldFactorWater: 0.85 }
     ],
   },
   {
@@ -19011,9 +19011,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): serve immediately while the cheese is still bubbly. Pairs well with a simple green salad.'
     ],
     sections: [
-      { key: 'beef_stock', label: 'Beef Stock', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'onion_soup', label: 'Caramelized Onion Soup', cookingMethod: '', yieldFactorWater: 0.25 },
-      { key: 'topping', label: 'Topping', cookingMethod: '', yieldFactorWater: 0.95 }
+      { key: 'beef_stock', label: 'Beef Stock', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'onion_soup', label: 'Caramelized Onion Soup', cookingMethod: 'pan grilled', yieldFactorWater: 0.25 },
+      { key: 'topping', label: 'Topping', cookingMethod: 'baked', yieldFactorWater: 0.95 }
     ],
   },
   {
@@ -19067,8 +19067,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): serve with warm pita or crusty bread. Garnish with a drizzle of olive oil, fresh parsley, or a pinch of smoked paprika.'
     ],
     sections: [
-      { key: 'vegetable_stock', label: 'Vegetable Stock', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'soup', label: 'Soup', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'vegetable_stock', label: 'Vegetable Stock', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'soup', label: 'Soup', cookingMethod: 'boiled', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -19126,8 +19126,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a drizzle of cream, a pinch of paprika, fresh chives or chopped tarragon.'
     ],
     sections: [
-      { key: 'fish_stock', label: 'Fish Stock', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'bisque', label: 'Bisque', cookingMethod: '', yieldFactorWater: 0.85 }
+      { key: 'fish_stock', label: 'Fish Stock', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'bisque', label: 'Bisque', cookingMethod: 'boiled', yieldFactorWater: 0.85 }
     ],
   },
   {
@@ -19187,9 +19187,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Top with freshly grated Parmesan cheese and a drizzle of olive oil; serve with crusty bread on the side.'
     ],
     sections: [
-      { key: 'stock', label: 'Vegetable Stock', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'soup', label: 'Soup', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'stock', label: 'Vegetable Stock', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'pasta', label: 'Pasta', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'soup', label: 'Soup', cookingMethod: 'boiled', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -19241,7 +19241,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with shredded cabbage, sliced radishes, diced white onion, fresh cilantro, lime wedges, and tostadas on the side.'
     ],
     sections: [
-      { key: 'pozole', label: 'Pozole Rojo', cookingMethod: '', yieldFactorWater: 0.73 }
+      { key: 'pozole', label: 'Pozole Rojo', cookingMethod: 'boiled', yieldFactorWater: 0.73 }
     ],
   },
   {
@@ -19290,7 +19290,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with crusty bread or a grilled cheese sandwich on the side.'
     ],
     sections: [
-      { key: 'soup', label: 'Tomato Soup', cookingMethod: '', yieldFactorWater: 0.75 }
+      { key: 'soup', label: 'Tomato Soup', cookingMethod: 'boiled', yieldFactorWater: 0.75 }
     ],
   },
   {
@@ -19326,7 +19326,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with sliced tomatoes, cucumber, fresh fruit, or a hot cup of coffee.'
     ],
     sections: [
-      { key: 'bagel', label: 'Bagel', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'bagel', label: 'Bagel', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -19366,7 +19366,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with sliced cucumber, fresh dill, lemon wedges, or fresh fruit on the side.'
     ],
     sections: [
-      { key: 'bagel', label: 'Bagel', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'bagel', label: 'Bagel', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -19409,7 +19409,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with hash browns, salsa, toast, or sour cream.'
     ],
     sections: [
-      { key: 'scramble', label: 'Scramble', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'scramble', label: 'Scramble', cookingMethod: 'pan grilled', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -19453,7 +19453,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with refried beans, avocado, salsa, or warm tortillas.'
     ],
     sections: [
-      { key: 'migas', label: 'Migas', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'migas', label: 'Migas', cookingMethod: 'pan grilled', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -19499,7 +19499,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with refried beans, avocado, or salsa.'
     ],
     sections: [
-      { key: 'migas', label: 'Migas', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'migas', label: 'Migas', cookingMethod: 'pan grilled', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -19538,7 +19538,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve chilled with sliced strawberries, sliced bananas, or a sprinkle of toasted coconut flakes.'
     ],
     sections: [
-      { key: 'parfait', label: 'Parfait', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'parfait', label: 'Parfait', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -19584,7 +19584,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with maple syrup, fresh berries, or whipped cream.'
     ],
     sections: [
-      { key: 'waffle', label: 'Waffle', cookingMethod: '', yieldFactorWater: 0.62 }
+      { key: 'waffle', label: 'Waffle', cookingMethod: 'grilled', yieldFactorWater: 0.62 }
     ],
   },
   {
@@ -19632,8 +19632,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with sliced avocado, crumbled queso fresco, or warm refried beans alongside.'
     ],
     sections: [
-      { key: 'salsa', label: 'Salsa Ranchera', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 0.95 }
+      { key: 'salsa', label: 'Salsa Ranchera', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'pan grilled', yieldFactorWater: 0.95 }
     ],
   },
   {
@@ -19683,7 +19683,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with fresh fruit, hot sauce, or a simple green salad.'
     ],
     sections: [
-      { key: 'strata', label: 'Strata', cookingMethod: '', yieldFactorWater: 0.85 }
+      { key: 'strata', label: 'Strata', cookingMethod: 'baked', yieldFactorWater: 0.85 }
     ],
   },
   {
@@ -19727,7 +19727,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Fill with Nutella and sliced banana, fresh berries and whipped cream, or lemon juice and powdered sugar.'
     ],
     sections: [
-      { key: 'crepes', label: 'Crepes', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'crepes', label: 'Crepes', cookingMethod: 'pan grilled', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -19770,7 +19770,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Dust with powdered sugar and squeeze fresh lemon juice over the top, or serve with maple syrup and fresh berries.'
     ],
     sections: [
-      { key: 'dutch_baby', label: 'Dutch Baby', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'dutch_baby', label: 'Dutch Baby', cookingMethod: 'baked', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -19810,7 +19810,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Top with fresh blueberries or sliced banana, a drizzle of honey, granola, chia seeds, or a spoonful of nut butter.'
     ],
     sections: [
-      { key: 'overnight_oats', label: 'Overnight Oats', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'overnight_oats', label: 'Overnight Oats', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -19855,7 +19855,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with milk, over Greek yogurt, or with fresh fruit. Stir in 1 cup dried cranberries or raisins after cooling for a fruity variation.'
     ],
     sections: [
-      { key: 'granola', label: 'Granola', cookingMethod: '', yieldFactorWater: 0.515 }
+      { key: 'granola', label: 'Granola', cookingMethod: 'baked', prepMethod: 'raw', yieldFactorWater: 0.515 }
     ],
   },
   {
@@ -19903,7 +19903,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with plant-based milk or coconut yogurt, or enjoy dry as a trail mix.'
     ],
     sections: [
-      { key: 'granola', label: 'Granola', cookingMethod: '', yieldFactorWater: 0.66 }
+      { key: 'granola', label: 'Granola', cookingMethod: 'baked', prepMethod: 'raw', yieldFactorWater: 0.66 }
     ],
   },
   {
@@ -19950,7 +19950,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with cocktail sauce, tartar sauce, or lemon wedges. Pairs well with coleslaw or french fries.'
     ],
     sections: [
-      { key: 'main', label: 'Fried Shrimp', cookingMethod: '', yieldFactorWater: 0.62 }
+      { key: 'main', label: 'Fried Shrimp', cookingMethod: 'fried', yieldFactorWater: 0.62 }
     ],
   },
   {
@@ -20000,7 +20000,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with cocktail sauce, remoulade, or lemon wedges. Pairs well with coleslaw or french fries.'
     ],
     sections: [
-      { key: 'main', label: 'Cornmeal Fried Shrimp', cookingMethod: '', yieldFactorWater: 0.62 }
+      { key: 'main', label: 'Cornmeal Fried Shrimp', cookingMethod: 'fried', yieldFactorWater: 0.62 }
     ],
   },
   {
@@ -20038,8 +20038,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with freshly grated Parmesan cheese and torn fresh basil. Serve with crusty bread or garlic bread.'
     ],
     sections: [
-      { key: 'pasta', label: 'Spaghetti', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'meatballs', label: 'Beef Italian Meatballs', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'pasta', label: 'Spaghetti', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'meatballs', label: 'Beef Italian Meatballs', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -20089,7 +20089,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Use as the sauce for red enchiladas, chicken enchiladas, and enchilada casserole. Also excellent as a braising liquid for chicken or pork, or as a base for enchilada soup.'
     ],
     sections: [
-      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.73 }
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'boiled', yieldFactorWater: 0.73 }
     ],
   },
   {
@@ -20137,7 +20137,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Use as a glaze, dipping sauce, or basting sauce for ribs, chicken, or burgers.'
     ],
     sections: [
-      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.85 }
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'boiled', yieldFactorWater: 0.85 }
     ],
   },
   {
@@ -20182,7 +20182,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over pasta with freshly grated Parmesan cheese, use as a pizza sauce, or serve as a dipping sauce for crusty bread.'
     ],
     sections: [
-      { key: 'main', label: 'Marinara Sauce', cookingMethod: '', yieldFactorWater: 0.85 }
+      { key: 'main', label: 'Marinara Sauce', cookingMethod: 'boiled', yieldFactorWater: 0.85 }
     ],
   },
   {
@@ -20237,8 +20237,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with pickled turnips, cucumber slices, or a yogurt-garlic sauce alongside.'
     ],
     sections: [
-      { key: 'beef', label: 'Beef', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'beef', label: 'Beef', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -20287,8 +20287,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with Ranch Dressing (see SAUCE_020) or Blue Cheese Dressing (see SAUCE_021).'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -20335,9 +20335,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a cup of tomato soup or a side of seasoned potato wedges.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'dressing', label: 'Caesar Dressing', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'dressing', label: 'Caesar Dressing', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -20388,8 +20388,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'fish', label: 'Fish', cookingMethod: '', yieldFactorWater: 0.82 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'fish', label: 'Fish', cookingMethod: 'pan grilled', yieldFactorWater: 0.82 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -20443,8 +20443,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a greek salad or seasoned fries on the side.'
     ],
     sections: [
-      { key: 'patty', label: 'Patty', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'patty', label: 'Patty', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -20499,8 +20499,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a cup of lemon rice soup or a side of tabbouleh.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -20544,8 +20544,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, onion rings, or a simple green salad on the side.'
     ],
     sections: [
-      { key: 'patties', label: 'Patties', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'toppings', label: 'Toppings', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'patties', label: 'Patties', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'toppings', label: 'Toppings', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -20590,7 +20590,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside a vegetable crudité platter, a fruit salad, or a light soup.'
     ],
     sections: [
-      { key: 'pinwheels', label: 'Pinwheels', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'pinwheels', label: 'Pinwheels', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -20638,8 +20638,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with potato chips or a simple green salad.'
     ],
     sections: [
-      { key: 'shrimp', label: 'Shrimp', cookingMethod: '', yieldFactorWater: 0.82 },
-      { key: 'salad', label: 'Salad', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'shrimp', label: 'Shrimp', cookingMethod: 'pan grilled', yieldFactorWater: 0.82 },
+      { key: 'salad', label: 'Salad', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -20679,7 +20679,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Best made with peak-season summer tomatoes and soft bread. Serve with potato chips.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Sandwich', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Sandwich', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -20731,8 +20731,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with salsa, guacamole, or hot sauce on the side.'
     ],
     sections: [
-      { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.85 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'filling', label: 'Filling', cookingMethod: 'pan grilled', yieldFactorWater: 0.85 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -20785,8 +20785,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Brush tops with beaten egg before baking for a golden finish. Serve with chimichurri sauce, salsa verde, or sour cream.'
     ],
     sections: [
-      { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 0.85, yieldFactorFat: 0.593 },
-      { key: 'crust', label: 'Crust', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'filling', label: 'Filling', cookingMethod: 'pan grilled', yieldFactorWater: 0.85, yieldFactorFat: 0.593 },
+      { key: 'crust', label: 'Crust', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -20832,8 +20832,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Top with sour cream, salsa verde, pickled jalapeños, hot sauce, or shredded lettuce.'
     ],
     sections: [
-      { key: 'dough', label: 'Dough', cookingMethod: '', yieldFactorWater: 0.82 },
-      { key: 'filling', label: 'Filling', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'dough', label: 'Dough', cookingMethod: 'pan grilled', yieldFactorWater: 0.82 },
+      { key: 'filling', label: 'Filling', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -20884,9 +20884,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with garlic bread and a green salad.'
     ],
     sections: [
-      { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'marinara', label: 'Marinara Sauce', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'cheese', label: 'Cheese Layer', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'pasta', label: 'Pasta', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'marinara', label: 'Marinara Sauce', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'cheese', label: 'Cheese Layer', cookingMethod: 'baked', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -20938,9 +20938,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a green salad or alongside pasta.'
     ],
     sections: [
-      { key: 'bread_base', label: 'Garlic Bread Base', cookingMethod: '', yieldFactorWater: 0.85 },
-      { key: 'sauce', label: 'Marinara Sauce', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'toppings', label: 'Cheese Topping', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'bread_base', label: 'Garlic Bread Base', cookingMethod: 'baked', yieldFactorWater: 0.85 },
+      { key: 'sauce', label: 'Marinara Sauce', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'toppings', label: 'Cheese Topping', cookingMethod: 'baked', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -20992,9 +20992,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Top with fresh basil or a drizzle of olive oil just before serving.'
     ],
     sections: [
-      { key: 'crust', label: 'Pizza Crust', cookingMethod: '', yieldFactorWater: 0.85 },
-      { key: 'sauce', label: 'Marinara Sauce', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'toppings', label: 'Cheese Topping', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'crust', label: 'Pizza Crust', cookingMethod: 'baked', yieldFactorWater: 0.85 },
+      { key: 'sauce', label: 'Marinara Sauce', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'toppings', label: 'Cheese Topping', cookingMethod: 'baked', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -21046,9 +21046,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Top with fresh basil or a drizzle of olive oil just before serving.'
     ],
     sections: [
-      { key: 'crust', label: 'Pizza Crust', cookingMethod: '', yieldFactorWater: 0.72 },
-      { key: 'sauce', label: 'Marinara Sauce', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'toppings', label: 'Cheese Topping', cookingMethod: '', yieldFactorWater: 0.9 }
+      { key: 'crust', label: 'Pizza Crust', cookingMethod: 'baked', yieldFactorWater: 0.72 },
+      { key: 'sauce', label: 'Marinara Sauce', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'toppings', label: 'Cheese Topping', cookingMethod: 'baked', yieldFactorWater: 0.9 }
     ],
   },
   {
@@ -21099,8 +21099,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with additional parsley and lemon wedges. Serve with crusty bread.'
     ],
     sections: [
-      { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'shrimp', label: 'Garlic Butter Shrimp', cookingMethod: '', yieldFactorWater: 0.88 }
+      { key: 'pasta', label: 'Pasta', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'shrimp', label: 'Garlic Butter Shrimp', cookingMethod: 'pan grilled', yieldFactorWater: 0.88 }
     ],
   },
   {
@@ -21151,9 +21151,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with extra Parmesan, toasted pine nuts, and fresh basil leaves.'
     ],
     sections: [
-      { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'chicken', label: 'Grilled Chicken', cookingMethod: '', yieldFactorWater: 0.75 },
-      { key: 'pesto', label: 'Basil Pesto', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'pasta', label: 'Pasta', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'chicken', label: 'Grilled Chicken', cookingMethod: 'pan grilled', yieldFactorWater: 0.75 },
+      { key: 'pesto', label: 'Basil Pesto', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -21201,8 +21201,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Add lemon zest (1 tbsp) for extra brightness. Top with extra Parmesan.'
     ],
     sections: [
-      { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'sauce', label: 'Lemon Butter Sauce', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'pasta', label: 'Pasta', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'sauce', label: 'Lemon Butter Sauce', cookingMethod: 'pan grilled', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -21257,8 +21257,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Top with toasted pine nuts. Use any combination of seasonal vegetables you like.'
     ],
     sections: [
-      { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'vegetables', label: 'Spring Vegetables', cookingMethod: '', yieldFactorWater: 0.85 }
+      { key: 'pasta', label: 'Pasta', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'vegetables', label: 'Spring Vegetables', cookingMethod: 'pan grilled', yieldFactorWater: 0.85 }
     ],
   },
   {
@@ -21304,8 +21304,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Top with extra Parmesan and a drizzle of olive oil. Add halved cherry tomatoes or grilled vegetables.'
     ],
     sections: [
-      { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'pesto', label: 'Basil Pesto', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'pasta', label: 'Pasta', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'pesto', label: 'Basil Pesto', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -21361,9 +21361,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Substitute fresh sage (8–10 leaves, fried briefly in the butter) if available.'
     ],
     sections: [
-      { key: 'filling', label: 'Ricotta & Spinach Filling', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'dough', label: 'Fresh Pasta Dough', cookingMethod: '', yieldFactorWater: 0.95 },
-      { key: 'sauce', label: 'Brown Butter Sage', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'filling', label: 'Ricotta & Spinach Filling', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'dough', label: 'Fresh Pasta Dough', cookingMethod: 'boiled', yieldFactorWater: 0.95 },
+      { key: 'sauce', label: 'Brown Butter Sage', cookingMethod: 'pan grilled', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -21418,8 +21418,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Top with freshly grated Parmesan cheese.'
     ],
     sections: [
-      { key: 'pasta', label: 'Spaghetti', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'bolognese', label: 'Bolognese Sauce', cookingMethod: '', yieldFactorWater: 0.8 }
+      { key: 'pasta', label: 'Spaghetti', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'bolognese', label: 'Bolognese Sauce', cookingMethod: 'boiled', yieldFactorWater: 0.8 }
     ],
   },
   {
@@ -21462,8 +21462,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Pecorino Romano is the traditional cheese — substitute all or half the Parmesan for a sharper, saltier flavor.'
     ],
     sections: [
-      { key: 'pasta', label: 'Spaghetti', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'sauce', label: 'Cacio e Pepe Sauce', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'pasta', label: 'Spaghetti', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'sauce', label: 'Cacio e Pepe Sauce', cookingMethod: 'pan grilled', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -21508,8 +21508,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Guanciale (cured pork cheek) is traditional — substitute for the bacon if available or use lardons if available.'
     ],
     sections: [
-      { key: 'pasta', label: 'Spaghetti', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'carbonara', label: 'Carbonara', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'pasta', label: 'Spaghetti', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'carbonara', label: 'Carbonara', cookingMethod: 'pan grilled', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -21554,8 +21554,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Top with additional Parmesan and freshly cracked black pepper. Add grilled chicken or shrimp for a protein boost.'
     ],
     sections: [
-      { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.85 }
+      { key: 'pasta', label: 'Pasta', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'pan grilled', yieldFactorWater: 0.85 }
     ],
   },
   {
@@ -21606,8 +21606,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Top with additional Parmesan and fresh basil. Add cooked pancetta or Italian sausage for a meat version.'
     ],
     sections: [
-      { key: 'pasta', label: 'Pasta', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'sauce', label: 'Sauce', cookingMethod: '', yieldFactorWater: 0.85 }
+      { key: 'pasta', label: 'Pasta', cookingMethod: 'boiled', yieldFactorWater: 1.0 },
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'boiled', yieldFactorWater: 0.85 }
     ],
   },
   {
@@ -21645,7 +21645,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Top with whipped cream and a maraschino cherry.'
     ],
     sections: [
-      { key: 'milkshake', label: 'Milkshake', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'milkshake', label: 'Milkshake', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -21682,7 +21682,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Top with whipped cream and chocolate shavings.'
     ],
     sections: [
-      { key: 'milkshake', label: 'Milkshake', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'milkshake', label: 'Milkshake', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -21719,7 +21719,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Top with whipped cream and a fresh strawberry.'
     ],
     sections: [
-      { key: 'milkshake', label: 'Milkshake', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'milkshake', label: 'Milkshake', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -21755,7 +21755,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Café au lait is traditionally drunk from a wide bowl at breakfast in France. Serve with a croissant or brioche.'
     ],
     sections: [
-      { key: 'cafe_au_lait', label: 'Café au Lait', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cafe_au_lait', label: 'Café au Lait', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -21792,7 +21792,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Dust the foam with cocoa powder or shaved chocolate. For an iced mocha, let the espresso–chocolate mixture cool, then pour over ice before adding cold milk.'
     ],
     sections: [
-      { key: 'cafe_mocha', label: 'Café Mocha', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cafe_mocha', label: 'Café Mocha', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -21828,7 +21828,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Dust lightly with cinnamon or unsweetened cocoa powder. Traditionally served without added sugar in Italy.'
     ],
     sections: [
-      { key: 'cappuccino', label: 'Cappuccino', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cappuccino', label: 'Cappuccino', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -21866,7 +21866,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over ice. For a pitcher, multiply by 4 and let the ginger steep 30 minutes before straining for a stronger flavor. Garnish with a lemon wheel and mint sprig.'
     ],
     sections: [
-      { key: 'ginger_lemonade', label: 'Ginger Lemonade', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'ginger_lemonade', label: 'Ginger Lemonade', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -21904,7 +21904,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over ice. Garnish with a fresh strawberry and a lemon slice. For a sparkling version, substitute the water with club soda.'
     ],
     sections: [
-      { key: 'strawberry_lemonade', label: 'Strawberry Lemonade', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'strawberry_lemonade', label: 'Strawberry Lemonade', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -21942,7 +21942,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over ice. Named after golfer Arnold Palmer, who famously ordered half iced tea and half lemonade. For a stronger lemon flavor, reduce the water and increase the lemon juice.'
     ],
     sections: [
-      { key: 'arnold_palmer', label: 'Arnold Palmer', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'arnold_palmer', label: 'Arnold Palmer', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -21981,7 +21981,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Pour into a chilled glass and top with a few fresh berries. For a dairy-free version, substitute the yogurt with coconut yogurt.'
     ],
     sections: [
-      { key: 'berry_smoothie', label: 'Berry Smoothie', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'berry_smoothie', label: 'Berry Smoothie', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -22019,7 +22019,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): For a thicker smoothie, use a frozen banana. For a dairy-free version, substitute the milk with oat milk or almond milk.'
     ],
     sections: [
-      { key: 'strawberry_banana', label: 'Strawberry Banana Smoothie', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'strawberry_banana', label: 'Strawberry Banana Smoothie', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -22057,7 +22057,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Add 1 tbsp honey for extra sweetness. Freeze banana chunks in advance for a colder, thicker smoothie.'
     ],
     sections: [
-      { key: 'green_smoothie', label: 'Green Smoothie', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'green_smoothie', label: 'Green Smoothie', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -22095,7 +22095,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): For a thicker smoothie, use frozen mango and banana chunks. Garnish with a pineapple wedge. For a lighter version, substitute the coconut milk with coconut water.'
     ],
     sections: [
-      { key: 'tropical_smoothie', label: 'Tropical Smoothie', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'tropical_smoothie', label: 'Tropical Smoothie', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -22131,7 +22131,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a maraschino cherry and an orange slice. For a Shirley Temple Black, substitute the ginger ale with cola.'
     ],
     sections: [
-      { key: 'shirley_temple', label: 'Shirley Temple', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'shirley_temple', label: 'Shirley Temple', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -22168,7 +22168,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over ice with orange or pineapple slices as garnish. For a sparkling version, replace the orange juice with equal parts orange juice and club soda.'
     ],
     sections: [
-      { key: 'fruit_punch', label: 'Fruit Punch', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'fruit_punch', label: 'Fruit Punch', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -22207,7 +22207,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a lime wheel and fresh mint sprig. For a frozen version, blend all ingredients with ice.'
     ],
     sections: [
-      { key: 'virgin_mojito', label: 'Virgin Mojito', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'virgin_mojito', label: 'Virgin Mojito', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -22246,7 +22246,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a watermelon wedge or fresh mint sprig. For a sparkling version, substitute club soda for the water.'
     ],
     sections: [
-      { key: 'agua_fresca', label: 'Watermelon Agua Fresca', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'agua_fresca', label: 'Watermelon Agua Fresca', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -22283,7 +22283,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a pineapple wedge and a maraschino cherry. For a thicker texture, add more ice and blend again.'
     ],
     sections: [
-      { key: 'pina_colada', label: 'Virgin Piña Colada', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'pina_colada', label: 'Virgin Piña Colada', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -22326,7 +22326,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve chilled. For a spiked version, stir in 2 oz bourbon or dark rum per serving.'
     ],
     sections: [
-      { key: 'eggnog', label: 'Eggnog', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'eggnog', label: 'Eggnog', cookingMethod: 'boiled', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -22367,8 +22367,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over ice. For a creamier version, replace half the water with whole milk.'
     ],
     sections: [
-      { key: 'blend_strain', label: 'Blend and Strain', cookingMethod: '', yieldFactorWater: 0.908, yieldFactorFat: 0.49 },
-      { key: 'sweeten', label: 'To Sweeten', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'blend_strain', label: 'Blend and Strain', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 0.908, yieldFactorFat: 0.49 },
+      { key: 'sweeten', label: 'To Sweeten', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -22414,7 +22414,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Sprinkle a pinch of cinnamon on top. For a stronger tea flavor, steep 2 black tea bags in the milk during simmering.'
     ],
     sections: [
-      { key: 'chai', label: 'Chai Tea', cookingMethod: '', yieldFactorWater: 0.92 }
+      { key: 'chai', label: 'Chai Tea', cookingMethod: 'boiled', prepMethod: 'raw', yieldFactorWater: 0.92 }
     ],
   },
   {
@@ -22454,7 +22454,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): For an iced matcha latte, cool the components and pour over ice. Use oat milk for a dairy-free version.'
     ],
     sections: [
-      { key: 'matcha', label: 'Matcha Latte', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'matcha', label: 'Matcha Latte', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -22495,7 +22495,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a cinnamon stick or orange slice. For a spiked version, stir in 2 oz of bourbon or apple brandy per serving.'
     ],
     sections: [
-      { key: 'cider', label: 'Spiced Apple Cider', cookingMethod: '', yieldFactorWater: 0.96 }
+      { key: 'cider', label: 'Spiced Apple Cider', cookingMethod: 'boiled', prepMethod: 'raw', yieldFactorWater: 0.96 }
     ],
   },
   {
@@ -22535,7 +22535,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Alexander', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Alexander', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -22573,7 +22573,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Americano', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Americano', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -22612,7 +22612,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Angel Face', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Angel Face', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -22651,7 +22651,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Aperol Spritz', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Aperol Spritz', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -22692,7 +22692,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '1.0', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -22733,7 +22733,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '1.0', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -22771,7 +22771,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '1.0', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -22811,7 +22811,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '1.0', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -22848,7 +22848,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '1.0', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -22893,7 +22893,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '1.0', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -22932,7 +22932,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '1.0', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -22973,7 +22973,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '1.0', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -23014,7 +23014,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Cut the lemon peel spiral long enough to drape over the rim — the crusta (sugared peel) is the cocktail\'s defining signature.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '1.0', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -23053,7 +23053,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '1.0', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -23093,7 +23093,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '1.0', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -23132,7 +23132,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '1.0', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -23172,7 +23172,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '1.0', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -23212,7 +23212,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '1.0', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -23252,7 +23252,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '1.0', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -23293,7 +23293,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '1.0', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -23333,7 +23333,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '1.0', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -23371,7 +23371,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '1.0', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -23409,7 +23409,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '1.0', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -23448,7 +23448,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '1.0', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -23489,7 +23489,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '1.0', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -23530,7 +23530,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '1.0', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -23567,7 +23567,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '1.0', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -23609,7 +23609,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '1.0', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -23651,7 +23651,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '1.0', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -23692,7 +23692,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '1.0', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -23729,7 +23729,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '1.0', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -23769,7 +23769,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: '1.0', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -23810,7 +23810,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -23848,7 +23848,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -23886,7 +23886,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -23924,7 +23924,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -23964,7 +23964,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -24004,7 +24004,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a lemon twist.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -24041,7 +24041,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a lime wheel.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -24078,7 +24078,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a lemon twist.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -24116,7 +24116,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a lime wheel.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -24153,7 +24153,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -24190,7 +24190,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with an orange twist.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -24228,7 +24228,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a grapefruit twist.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -24265,7 +24265,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a long lemon peel spiral draped over the rim.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -24303,7 +24303,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a lemon slice and a cinnamon stick.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -24347,7 +24347,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a lime wheel.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -24387,7 +24387,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a lime wheel.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -24426,7 +24426,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Do not stir after adding cream — drink through the cream layer.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -24465,7 +24465,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a lemon slice and a maraschino cherry.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -24504,7 +24504,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a pineapple wedge or pineapple leaf.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -24540,7 +24540,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Use a dry Aligoté or Chablis; serve well chilled.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -24576,7 +24576,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a single blackcurrant or a twist of lemon.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -24614,7 +24614,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a brandied cherry or a thin lime wheel.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -24653,7 +24653,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a thin lemon wheel or a twist of lemon peel.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -24696,7 +24696,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a lemon wedge and a maraschino cherry.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -24736,7 +24736,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a spent lime shell, fresh mint sprig, and a cocktail cherry. For a dramatic presentation, float a small amount of overproof dark rum on top.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -24773,7 +24773,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a Luxardo maraschino cherry or a twist of orange peel.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -24811,7 +24811,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a lime wheel or wedge.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -24849,7 +24849,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a lemon twist or maraschino cherry.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -24887,7 +24887,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a maraschino cherry.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -24925,7 +24925,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a lime wheel or expressed lime peel.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -24965,7 +24965,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a lime wedge.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -25001,7 +25001,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with an orange slice or twist.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -25038,7 +25038,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a fresh mint sprig.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -25079,7 +25079,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a fresh mint sprig and a pineapple wedge.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -25119,7 +25119,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a mint sprig and a lime wheel.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -25157,7 +25157,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with an orange twist.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -25194,7 +25194,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a lime wheel and a fresh mint sprig.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -25232,7 +25232,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with whipped cream and a drizzle of chocolate syrup.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -25273,7 +25273,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a cinnamon stick and an orange slice.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -25311,7 +25311,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -25348,7 +25348,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Express an orange peel over the glass and use as garnish.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -25388,7 +25388,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -25428,7 +25428,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Express a 2-inch grapefruit peel over the glass and use as garnish.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -25470,7 +25470,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a fresh mint sprig.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -25506,7 +25506,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Express an orange peel over the glass, run it around the rim, and drop it in as garnish.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -25544,7 +25544,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a grapefruit or lime wedge. Optionally rim the glass with salt before building.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -25582,7 +25582,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -25619,7 +25619,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -25659,7 +25659,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a piece of candied ginger and a lemon twist.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -25696,7 +25696,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a pineapple wedge and a maraschino cherry.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -25734,7 +25734,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with cucumber slices, a strawberry, a sprig of mint, and an orange wheel.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -25772,7 +25772,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a pineapple wedge or a thin lemon wheel.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -25811,7 +25811,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Finish with 3 drops of Angostura bitters on the foam and a lemon twist.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -25850,7 +25850,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with an orange wheel, a maraschino cherry, and a sprig of mint.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -25891,7 +25891,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Float half a fresh passion fruit on the surface of the cocktail as garnish.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -25928,7 +25928,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Grate fresh nutmeg over the top to finish.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -25966,7 +25966,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a brandied cherry.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -26010,7 +26010,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a few drops of orange blossom water on the foam.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -26049,7 +26049,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a lemon or orange twist.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -26088,7 +26088,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with an orange slice, maraschino cherry, and a mint sprig.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -26129,7 +26129,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with an orange slice and maraschino cherry.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -26169,7 +26169,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a lemon slice and fresh raspberries.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -26204,7 +26204,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a lemon twist.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -26242,7 +26242,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a lime twist.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -26282,7 +26282,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Add sliced oranges, lemons, and apples to the pitcher. A splash of club soda per glass adds lightness.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -26322,7 +26322,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Add sliced peaches, lemons, and white grapes to the pitcher. A splash of sparkling water or ginger ale per glass adds effervescence.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -26361,7 +26361,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a lemon twist, expressed over the glass and placed on the rim.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -26397,7 +26397,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with an orange slice or wedge.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -26435,7 +26435,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a lime wedge or grapefruit slice.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -26473,7 +26473,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with an orange slice and a maraschino cherry.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -26512,7 +26512,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a lemon wheel.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -26551,7 +26551,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -26590,7 +26590,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -26635,7 +26635,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a pineapple wedge and a maraschino cherry on a skewer.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -26675,7 +26675,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a fresh mint sprig.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -26716,7 +26716,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a thin slice of red chilli on the rim.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -26753,8 +26753,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish each glass with a sprinkle of freshly grated nutmeg and a dollop of whipped cream.'
     ],
     sections: [
-      { key: 'eggnog', label: 'Eggnog', cookingMethod: '', yieldFactorWater: 1.0 },
-      { key: 'rum', label: 'Dark Rum', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'eggnog', label: 'Eggnog', cookingMethod: 'raw', yieldFactorWater: 1.0 },
+      { key: 'rum', label: 'Dark Rum', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -26796,7 +26796,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Top with whipped cream or marshmallows.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'boiled', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -26834,7 +26834,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a half-slice of orange.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -26870,7 +26870,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a fresh mint sprig.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -26909,7 +26909,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a fresh strawberry on the rim.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -26949,7 +26949,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a mint sprig and a lime wheel.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -26988,7 +26988,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -27025,7 +27025,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with an orange slice and a maraschino cherry.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -27063,7 +27063,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with an orange twist.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -27100,7 +27100,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Salt the rim and garnish with a lime wheel.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -27139,7 +27139,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a lemon wheel and a cherry.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -27182,7 +27182,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with three cherries skewered on a cocktail pick (the dots) and a pineapple frond (the dash) — Morse code for "V," a WWII victory symbol.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -27220,7 +27220,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve straight up with no garnish.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -27259,7 +27259,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a lemon twist or a brandied cherry.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -27299,7 +27299,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a lemon zest twist and white grapes.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -27336,7 +27336,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a large lemon twist. Bond\'s directive was "shaken, not stirred" — though stirring is the classic technique for spirit-only cocktails.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -27376,7 +27376,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a lemon twist or cherry.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -27413,7 +27413,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a lime wedge.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -27452,7 +27452,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with an Angostura bitters dash and a cherry.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -27489,7 +27489,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Stir gently before drinking, or leave layered for presentation.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -27527,7 +27527,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a lemon wheel or cherry.'
     ],
     sections: [
-      { key: 'cocktail', label: 'Cocktail', cookingMethod: '', yieldFactorWater: 1.0 }
+      { key: 'cocktail', label: 'Cocktail', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   }
 ];
