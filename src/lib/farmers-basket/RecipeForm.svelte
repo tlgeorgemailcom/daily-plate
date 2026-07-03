@@ -945,10 +945,11 @@
               yieldFactorFat: s.yield_factor_fat,
               yieldFactorOther: s.yield_factor_other,
               // For baked/par-baked prep steps, time and temp come from cook_stages[0].
-              // For stovetop prep steps (boiled/simmer/…), use boil_minutes.
+              // For stovetop prep steps (boiled/simmer/…), use boil_minutes when set,
+              // otherwise fall back to cook_stages[0].minutes (BKFST-style staging).
               boilMinutes: prepIsBaked
                 ? (firstStage?.minutes ?? undefined)
-                : (s.boil_minutes ?? undefined),
+                : (s.boil_minutes || firstStage?.minutes),
               prepTempF: prepIsBaked ? (firstStage?.tempF ?? undefined) : undefined,
               stages: stageArr.length > 0 ? stageArr : undefined,
               fillClass: s.fill_class ?? undefined,

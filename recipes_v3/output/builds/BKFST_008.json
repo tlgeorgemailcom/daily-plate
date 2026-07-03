@@ -9,6 +9,7 @@
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "Rule B. All 5 scored macros \u2264\u00b13.5% of canonical NDB 18294. Fiber+Sugar unscored (canonical=0.0). Max delta: Protein -3.5%. yfw=0.81 (blueberries burst during griddling). Locked May 22 2026.",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 38.89,
   "raw_protein_grams": 25.28,
   "raw_carb_grams": 125.67,
+  "raw_fiber_grams": 5.03,
   "water_lost_grams": 53.5,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 429.2,
   "grams_per_serving": 107.3,
   "ingredients": [
@@ -348,6 +351,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 8,
       "raw_grams": 482.7,
@@ -355,7 +359,16 @@
       "raw_fat_grams": 38.89,
       "raw_protein_grams": 25.28,
       "raw_carb_grams": 125.67,
-      "final_grams": 429.2
+      "raw_fiber_grams": 5.03,
+      "final_grams": 429.2,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 0,
+          "minutes": 3
+        }
+      ],
+      "fill_class": ""
     }
   ]
 }

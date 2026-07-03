@@ -9,6 +9,7 @@
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "Rule B. All 5 scored macros \u2264\u00b12.9% of canonical NDB 18390. Fiber+Sugar unscored (canonical=0.0). Max delta: Protein -2.9%. yfw=0.78 (buttermilk batter more watery). Locked May 22 2026.",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 37.08,
   "raw_protein_grams": 26.79,
   "raw_carb_grams": 118.12,
+  "raw_fiber_grams": 3.26,
   "water_lost_grams": 59.98,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 406.12,
   "grams_per_serving": 101.53,
   "ingredients": [
@@ -327,6 +330,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 7,
       "raw_grams": 466.1,
@@ -334,7 +338,16 @@
       "raw_fat_grams": 37.08,
       "raw_protein_grams": 26.79,
       "raw_carb_grams": 118.12,
-      "final_grams": 406.12
+      "raw_fiber_grams": 3.26,
+      "final_grams": 406.12,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 0,
+          "minutes": 3
+        }
+      ],
+      "fill_class": ""
     }
   ]
 }

@@ -9,6 +9,7 @@
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 8,
   "audit_status": "",
   "audit_notes": "",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 247.1,
   "raw_protein_grams": 113.29,
   "raw_carb_grams": 132.79,
+  "raw_fiber_grams": 4.95,
   "water_lost_grams": 75.96,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 912.4,
   "grams_per_serving": 114.05,
   "ingredients": [
@@ -453,6 +456,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 5,
       "raw_grams": 279.79,
@@ -460,7 +464,16 @@
       "raw_fat_grams": 85.8,
       "raw_protein_grams": 16.44,
       "raw_carb_grams": 119.26,
-      "final_grams": 245.98
+      "raw_fiber_grams": 4.22,
+      "final_grams": 245.98,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 375,
+          "minutes": 37
+        }
+      ],
+      "fill_class": ""
     },
     {
       "section_key": "filling",
@@ -473,6 +486,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 8,
       "raw_grams": 708.57,
@@ -480,7 +494,16 @@
       "raw_fat_grams": 161.31,
       "raw_protein_grams": 96.85,
       "raw_carb_grams": 13.53,
-      "final_grams": 666.43
+      "raw_fiber_grams": 0.73,
+      "final_grams": 666.43,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 375,
+          "minutes": 37
+        }
+      ],
+      "fill_class": ""
     }
   ]
 }

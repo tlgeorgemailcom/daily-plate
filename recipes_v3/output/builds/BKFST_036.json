@@ -9,6 +9,7 @@
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 1,
   "audit_status": "",
   "audit_notes": "",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 50.11,
   "raw_protein_grams": 31.08,
   "raw_carb_grams": 32.32,
+  "raw_fiber_grams": 1.77,
   "water_lost_grams": 0.0,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 225.4,
   "grams_per_serving": 225.4,
   "ingredients": [
@@ -318,7 +321,7 @@
   "sections": [
     {
       "section_key": "eggs",
-      "section_label": "Eggs:",
+      "section_label": "Eggs",
       "prep_method": "raw",
       "cook_method": "pan grilled",
       "cooking_method": "pan grilled",
@@ -327,6 +330,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 4,
       "raw_grams": 114.4,
@@ -334,11 +338,20 @@
       "raw_fat_grams": 20.87,
       "raw_protein_grams": 12.69,
       "raw_carb_grams": 0.79,
-      "final_grams": 114.4
+      "raw_fiber_grams": 0.03,
+      "final_grams": 114.4,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 0,
+          "minutes": 2
+        }
+      ],
+      "fill_class": ""
     },
     {
       "section_key": "assembly",
-      "section_label": "Assembly:",
+      "section_label": "Assembly",
       "prep_method": "raw",
       "cook_method": "raw",
       "cooking_method": "raw",
@@ -347,6 +360,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 3,
       "raw_grams": 111.0,
@@ -354,7 +368,11 @@
       "raw_fat_grams": 29.24,
       "raw_protein_grams": 18.39,
       "raw_carb_grams": 31.52,
-      "final_grams": 111.0
+      "raw_fiber_grams": 1.74,
+      "final_grams": 111.0,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }
