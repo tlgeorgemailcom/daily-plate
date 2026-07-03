@@ -89,6 +89,27 @@ def _stored_category(raw: str) -> str:
     return _CATEGORY_MAP.get(raw.strip().lower(), "entrees-main-courses")
 
 
+_COOK_METHOD_MAP = {
+    "baked":       "Bake",
+    "boiled":      "Boil",
+    "simmer":      "Simmer",
+    "sub-simmer":  "Sub-simmer",
+    "braise":      "Braise",
+    "pan grilled": "Pan grill",
+    "grilled":     "Grill",
+    "fried":       "Fry",
+    "raw":         "No heat",
+    "steamed":     "No heat",
+    "microwave":   "No heat",
+}
+
+
+def _normalize_cook_method(raw: str | None) -> str | None:
+    if not raw:
+        return None
+    return _COOK_METHOD_MAP.get(raw.lower(), raw) or None
+
+
 def _load_extra_recipe_fields() -> dict[str, dict]:
     """Read dietary_category and prep_time from recipes.csv (not in Recipe dataclass)."""
     import csv
@@ -174,7 +195,7 @@ def _build_payload(rid, recipes, ings, ledger, instrs, extras):
         "recipe_name": rec.recipe_name,
         "category": _stored_category(rec.category or ""),
         "dietary_category": ex.get("dietary_category"),
-        "cooking_method": rec.cooking_method or None,
+        "cooking_method": _normalize_cook_method(rec.cooking_method),
         "dish_family": None,
         "prep_time": ex.get("prep_time"),
         "servings": servings_text,
