@@ -746,15 +746,21 @@
     let derivedCookMinutes: number | undefined;
     let derivedCookTempF: number | undefined;
     if (level.sections && level.sections.length > 0) {
-      for (const sec of level.sections) {
-        const pm = sec.prepMethod ?? 'none';
-        if (pm !== 'baked' && pm !== 'par-baked' && sec.stages && sec.stages.length > 0) {
-          const totalMins = sec.stages.reduce((sum, st) => sum + (st.minutes ?? 0), 0);
-          if (totalMins > 0) derivedCookMinutes = totalMins;
-          const lastTempF = sec.stages[sec.stages.length - 1]?.tempF ?? 0;
-          if (lastTempF > 0) derivedCookTempF = lastTempF;
-          break;
-        }
+      // Only derive primary cook when exactly ONE non-baked section has stages.
+      // Two or more staged sections = "no primary cook" recipe: primary fields stay blank
+      // and each section shows its own prep stage independently.
+      const eligibleSecs = level.sections.filter(
+        sec => (sec.prepMethod ?? 'none') !== 'baked'
+            && (sec.prepMethod ?? 'none') !== 'par-baked'
+            && Array.isArray(sec.stages)
+            && sec.stages.length > 0
+      );
+      if (eligibleSecs.length === 1) {
+        const stgs = eligibleSecs[0].stages as Array<{ tempF: number; minutes: number }>;
+        const totalMins = stgs.reduce((sum, st) => sum + (st.minutes ?? 0), 0);
+        if (totalMins > 0) derivedCookMinutes = totalMins;
+        const lastTempF = stgs[stgs.length - 1]?.tempF ?? 0;
+        if (lastTempF > 0) derivedCookTempF = lastTempF;
       }
     }
 
