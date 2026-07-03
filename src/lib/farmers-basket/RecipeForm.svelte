@@ -1539,7 +1539,7 @@
       nextSections = (suggestion.sections as any[]).map((s) => ({
         key: s.key ?? s.section_key ?? '',
         label: s.label ?? s.section_label ?? '',
-        prepMethod: (() => { const v = s.prepMethod ?? s.prep_method; return (!v || v === 'raw') ? 'none' : v; })(),
+        prepMethod: (() => { const v = s.prepMethod ?? s.cook_method ?? s.prep_method; return (!v || v === 'raw') ? 'none' : v; })(),
         cookingMethod: s.cookingMethod ?? s.cook_method ?? s.cooking_method ?? 'baked',
         yieldFactorWater: s.yieldFactorWater ?? s.yield_factor_water ?? undefined,
         yieldFactorFat: s.yieldFactorFat ?? s.yield_factor_fat ?? undefined,
@@ -1559,7 +1559,7 @@
             nextSections = data.sections.map((s: Record<string, unknown>) => ({
               key: String(s.section_key ?? s.key ?? ''),
               label: String(s.section_label ?? s.label ?? ''),
-              prepMethod: (() => { const v = typeof s.prep_method === 'string' ? s.prep_method : (typeof s.prepMethod === 'string' ? s.prepMethod : undefined); return (!v || v === 'raw') ? 'none' : v; })(),
+              prepMethod: (() => { const v = typeof s.cook_method === 'string' ? s.cook_method : (typeof s.prepMethod === 'string' ? s.prepMethod : (typeof s.prep_method === 'string' ? s.prep_method : undefined)); return (!v || v === 'raw') ? 'none' : v; })(),
               cookingMethod: String(s.cooking_method ?? s.cookingMethod ?? 'baked'),
               yieldFactorWater: typeof s.yield_factor_water === 'number' ? s.yield_factor_water : (typeof s.yieldFactorWater === 'number' ? s.yieldFactorWater : undefined),
               yieldFactorFat: typeof s.yield_factor_fat === 'number' ? s.yield_factor_fat : (typeof s.yieldFactorFat === 'number' ? s.yieldFactorFat : undefined),
