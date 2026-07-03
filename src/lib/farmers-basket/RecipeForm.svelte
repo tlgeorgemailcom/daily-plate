@@ -889,10 +889,14 @@
       section_key: string;
       section_label: string;
       prep_method?: string;
+      cook_method?: string;
       cooking_method: string;
       yield_factor_water?: number;
       yield_factor_fat?: number;
       yield_factor_other?: number;
+      cook_stages?: Array<{ tempF: number; minutes: number }>;
+      boil_minutes?: number;
+      fill_class?: string;
     }>;
   };
   let v3Build = $state<V3Build | null>(null);
@@ -928,7 +932,7 @@
             ? (recipeName || data.recipeName || data.sections[0].section_label)
             : null;
           sections = data.sections.map((s) => {
-            const pm = (!s.prep_method || s.prep_method === 'raw') ? 'none' : s.prep_method as string;
+            const pm = (() => { const v = s.cook_method ?? s.cooking_method ?? s.prep_method; return (!v || v === 'raw') ? 'none' : v as string; })();
             const prepIsBaked = pm === 'baked' || pm === 'par-baked';
             const stageArr = Array.isArray(s.cook_stages) ? s.cook_stages as Array<{ tempF: number; minutes: number }> : [];
             const firstStage = stageArr[0];
