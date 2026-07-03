@@ -5,6 +5,44 @@
 
 ---
 
+## ⚠ V3 PARALLEL PIPELINE CONVERSION — IN PROGRESS (as of 2026-07-03)
+
+### What the v3 parallel pipeline IS
+
+The v3 pipeline is designed to compute `yfw` (water yield factor) from **first principles** using a physics-based evaporation model. The inputs are:
+- `cook_method` in `recipe_sections.csv` — determines temperature (e.g. simmer=195°F, boiled=212°F, baked=350–450°F)
+- `cook_stages` in `recipe_sections.csv` — stores time in `tempF:minutes` format (e.g. `450:14`, `0:7`, `325:30`)
+
+When both are present and `yfw` is not manually locked, `build.py` calls `calc_yield_water()` to derive `yfw` automatically. **No recipe should have a manually locked `yfw` in the final v3 state.**
+
+### What has been done
+
+- **BKFST recipes 1–52**: `cook_stages` added to all sections per `docs/breakfast.md` spec — commit `bda9c476` + `16e4c822` (2026-07-03)
+- **Section splits completed** for burritos (BKFST_017–022), Avocado Toast Tomato & Egg (BKFST_035), Huevos Rancheros (BKFST_047) — each component (tortilla, beans, eggs, cheese, potatoes) now has its own section with the correct `cook_method` and `cook_stages`
+- **Cook method corrections**: BKFST_033 Frittata changed `baked→pan grilled`; BKFST_021 beef and BKFST_037/038 ham changed to `pan grilled`; BKFST_012 gravy changed `boiled→simmer`
+- All 36 affected BKFST recipes rebuilt, uploaded to Turso, bundle regenerated
+- **Form fix** (`RecipeForm.svelte`): section cook-method dropdown was reading `prep_method` (physical action like "crumbled") instead of `cook_method` (heat method). Fixed — commits `b347ac3a` + `4466cd66`
+
+### What is still outstanding
+
+1. **Locked `yfw` values must be cleared across ALL recipes.** Every explicit `yfw` value currently sitting in `recipe_sections.csv` (e.g. `yfw=0.75` for BKFST_001, `yfw=0.92` for BKFST_012, etc.) is a legacy calibration artifact. Once `cook_stages` are populated for all recipes, these must be removed column-by-column so the physics model takes over. This is a **separate phase** — do not clear them until cook_stages coverage is complete and verified.
+
+2. **Cook minutes not displaying in section Prep display.** The form reads `boil_minutes` (from `boil_stages` CSV column) for stovetop sections. For BKFST sections, `boil_stages` is empty — the minutes live in `cook_stages[0].minutes`. The form's `boilMinutes` field needs to fall back to `firstStage?.minutes` when `boil_minutes` is 0 or absent. Fix location: `RecipeForm.svelte` `$effect` block, `boilMinutes` assignment (~line 940).
+
+3. **cook_stages annotations for non-BKFST recipes** (ENTR, SIDE, SAND, SAUCE, SALAD, STOCK, SWEET) — not yet started. BKFST is the first category completed.
+
+4. **`simmer` vs `boiled` display**: For any section still showing the wrong cook method label in the form dropdown, verify `recipe_sections.csv::cook_method` is set correctly. The form now reads `cook_method` correctly (fixed in this session), so what's in the CSV is what shows.
+
+5. **Retention factors**: `simmer`, `sub-simmer`, and `braise` all map to `"boiled"` retention percentages in `retention.py` (by design — they share nutrient retention). The distinction between simmer and boiled exists **only** in the evaporation model (`build.py` lines 583–586: simmer=195°F, boiled=212°F). This is correct and intentional. No re-evaluation of existing recipes is needed on retention grounds.
+
+### Key invariant going forward
+
+> **`yfw` must never be hardcoded in a new or rebuilt section.** Leave `yfw` empty (or 1.0 as a no-op placeholder) and let the physics model compute it from `cook_stages`. The locked values in existing sections are technical debt to be resolved in a dedicated cleanup phase.
+
+---
+
+---
+
 ## The Non-Negotiable Pre-Build Checklist
 
 Run these gates **before writing a single CSV row**. Skipping any one causes a pipeline error, a display bug, or a silent nutrition error.
