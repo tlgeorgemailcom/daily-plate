@@ -433,3 +433,83 @@ Fat that renders into a sauce/roux and stays in the dish: `yff = 1.0` (not drain
 ## Error Handling Policy
 
 There are no pre-existing or acceptable errors. Every error from `validate_ledger.py`, `build_all.py`, or any tool must be resolved before moving on. The only acceptable warning is `Rule D — bespoke key OK`.
+
+---
+
+## Dev Recipe ↔ Community Recipe Parity
+
+The project maintains two parallel computation paths that must always stay in sync. A failure in either breaks the platform.
+
+### The Two Paths
+
+**Python pipeline (dev recipes)**
+```
+recipes.csv (pipeline format) → build_all.py → output/builds/*.json → insert_new.py → Turso dev_recipes
+→ generate_bundle.py → generated-levels.ts → RecipeBook.svelte
+```
+
+**TypeScript community path**
+```
+RecipeForm.svelte (UI format) → /api/recipes/my POST → Turso dev_recipes
+→ buildRecipeCommunity.ts → RecipeBook.svelte
+```
+
+Both paths terminate in the same Turso table (`dev_recipes`) and the same display component (`RecipeBook.svelte`). Any format or value mismatch between the two paths surfaces as a UI bug in `/moderate` or the recipe viewer.
+
+### `cooking_method` Format Convention
+
+This is the most common parity pitfall. Two distinct formats exist:
+
+| Context | Format | Examples |
+|---|---|---|
+| `recipes.csv` (pipeline source of truth) | pipeline format | `baked`, `pan grilled`, `boiled`, `raw` |
+| Turso `dev_recipes.cooking_method` | UI format | `Bake`, `Pan grill`, `Boil`, `No heat` |
+| `RecipeForm.svelte` `COOKING_METHODS` | UI format | `Bake`, `Pan grill`, `Boil`, `No heat` |
+
+**Rule:** `cooking_method` must be stored in UI format in Turso for all recipes — dev and community alike. Community recipes are saved through RecipeForm.svelte, which writes UI-format values. Dev recipes are inserted via `insert_new.py`, which normalizes pipeline format to UI format at insert time using `_normalize_cook_method()`.
+
+**Normalization map (`insert_new.py::_normalize_cook_method` and `/moderate/+page.svelte::normalizeCookingMethod`):**
+
+| Pipeline (recipes.csv) | UI (Turso / RecipeForm) |
+|---|---|
+| `baked` | `Bake` |
+| `boiled` | `Boil` |
+| `simmer` | `Simmer` |
+| `sub-simmer` | `Sub-simmer` |
+| `braise` | `Braise` |
+| `pan grilled` | `Pan grill` |
+| `grilled` | `Grill` |
+| `fried` | `Fry` |
+| `raw` | `No heat` |
+| `steamed` | `No heat` |
+| `microwave` | `No heat` |
+
+**Why this matters:** `RecipeForm.svelte` initializes `cookingMethod` via a case-insensitive match against `COOKING_METHODS = ['Bake', 'Boil', ...]`. If Turso stores `'baked'`, the match `'baked' === 'bake'` fails, `_initCM` is truthy, and the form falls through to `'No heat'`. Every recipe where `insert_new.py` previously wrote the raw pipeline value would silently show `'No heat'` in the cook bar regardless of actual cooking method.
+
+**The defensive code fix** (`normalizeCookingMethod()` in `/moderate/+page.svelte` and `RecipeBook.svelte`) converts pipeline-format values to UI-format before RecipeForm receives them. This is a safety net — the authoritative fix is the Turso data and the `insert_new.py` normalization at write time.
+
+**One-time migration tool** — if you ever need to re-normalize all existing rows (e.g. after importing a batch of recipes written directly to `recipes.csv`):
+```bash
+python3 recipes_v3/tools/normalize_cooking_method.py          # dry-run
+python3 recipes_v3/tools/normalize_cooking_method.py --commit  # write to Turso
+```
+The script handles per-recipe overrides for composite-method recipes (e.g. `multi` legacy value).
+
+### Absorption Model Parity
+
+The water-absorption model for dry starches and legumes is implemented in two separate codebases. Both must stay in sync whenever the model changes.
+
+| Layer | Implementation |
+|---|---|
+| Python pipeline | `DataCentralCombo.bin` → `load.py` → `nuts["_absorption_factor"]` → `build.py` section absorbers → auto-yfw |
+| TypeScript community | `DataCentralCombo.bin` → `NutrientRow.absorptionFactor` (`types.ts`) → `buildRecipeCommunity.ts` weighted-average model |
+
+**Key invariant:** a bin factor added to a new NDB in `comboo.db` (via `UPDATE DataCentralCombo SET bin = '...'`) takes effect for dev recipes at the next `build_all.py --recipe` run, and for community recipes immediately (TypeScript reads `bin` from Turso at runtime). No code change is needed in either path — only the DB update and a dev-recipe rebuild.
+
+### Moderation UI Parity (`/moderate`)
+
+`/moderate` is the shared admin editing surface for both dev recipes and community recipe approvals. Its `recipeToFormData()` function must handle all possible Turso states, including legacy pipeline-format `cooking_method` values. The `normalizeCookingMethod()` helper at the top of `moderate/+page.svelte` ensures this.
+
+The same helper exists in `RecipeBook.svelte` (`collabInitialData()` / `creatorInitialData()`) for the in-app draft loading paths.
+
+**When a dev recipe shows `'No heat'` in the cook bar of `/moderate`:** the Turso row has a pipeline-format `cooking_method`. Fix with a direct Turso SQL UPDATE or re-run `normalize_cooking_method.py --commit`.

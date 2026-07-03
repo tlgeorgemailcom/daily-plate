@@ -9,6 +9,7 @@
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "Rule B. All 5 scored macros \u2264\u00b12.4% of canonical NDB 18269. Fiber+Sugar unscored (canonical=0.0). Max delta: Carbs +2.4%. yfw=0.90 (pan-fried). Locked May 21 2026.",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 27.17,
   "raw_protein_grams": 19.39,
   "raw_carb_grams": 63.04,
+  "raw_fiber_grams": 3.24,
   "water_lost_grams": 14.76,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 246.99,
   "grams_per_serving": 61.75,
   "ingredients": [
@@ -31,7 +34,7 @@
       "grams": 120.0,
       "section": "main",
       "ingredient_group": "main",
-      "qty_display": "4 slices",
+      "qty_display": "4 slices (30g each)",
       "contribution": {
         "Energy_KCal": 319.2,
         "Protein": 10.62,
@@ -285,6 +288,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 5,
       "raw_grams": 261.75,
@@ -292,7 +296,16 @@
       "raw_fat_grams": 27.17,
       "raw_protein_grams": 19.39,
       "raw_carb_grams": 63.04,
-      "final_grams": 246.99
+      "raw_fiber_grams": 3.24,
+      "final_grams": 246.99,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 0,
+          "minutes": 4
+        }
+      ],
+      "fill_class": ""
     }
   ]
 }

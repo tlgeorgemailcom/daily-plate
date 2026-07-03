@@ -9,6 +9,7 @@
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 2,
   "audit_status": "NO_CANON",
   "audit_notes": "Rule G \u2014 FNDDS FC 32101500 Eggs Benedict. Components: NDB 1131 (poached egg) 200g + BKFST_004 (English Muffin) 114g + NDB 10130 (Canadian bacon raw) 114g + BKFST_006 (Hollandaise Sauce) 240g per 2-serving batch. Total 668g / 2 servings = 334g per serving. FNDDS canonical: 288 kcal / 13.81g P / 21.10g F / 8.48g C per 100g. Computed: 289.5 kcal / 10.54g P / 23.97g F / 8.62g C. FNDDS recipe not representative of standard preparation \u2014 excess Canadian bacon, margarine added separately, insufficient hollandaise. Locked May 21 2026.",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 160.11,
   "raw_protein_grams": 70.38,
   "raw_carb_grams": 57.61,
+  "raw_fiber_grams": 5.07,
   "water_lost_grams": 0.0,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 668.0,
   "grams_per_serving": 334.0,
   "ingredients": [
@@ -266,6 +269,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 1,
       "raw_grams": 200.0,
@@ -273,7 +277,16 @@
       "raw_fat_grams": 18.94,
       "raw_protein_grams": 25.02,
       "raw_carb_grams": 1.42,
-      "final_grams": 200.0
+      "raw_fiber_grams": 0.0,
+      "final_grams": 200.0,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 0,
+          "minutes": 3
+        }
+      ],
+      "fill_class": ""
     },
     {
       "section_key": "muffin",
@@ -286,6 +299,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 1,
       "raw_grams": 114.0,
@@ -293,7 +307,16 @@
       "raw_fat_grams": 2.22,
       "raw_protein_grams": 9.48,
       "raw_carb_grams": 50.34,
-      "final_grams": 114.0
+      "raw_fiber_grams": 4.99,
+      "final_grams": 114.0,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 0,
+          "minutes": 6
+        }
+      ],
+      "fill_class": ""
     },
     {
       "section_key": "bacon",
@@ -306,6 +329,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 1,
       "raw_grams": 114.0,
@@ -313,7 +337,16 @@
       "raw_fat_grams": 2.99,
       "raw_protein_grams": 23.15,
       "raw_carb_grams": 1.53,
-      "final_grams": 114.0
+      "raw_fiber_grams": 0.0,
+      "final_grams": 114.0,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 0,
+          "minutes": 2
+        }
+      ],
+      "fill_class": ""
     },
     {
       "section_key": "hollandaise",
@@ -326,6 +359,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 1,
       "raw_grams": 240.0,
@@ -333,7 +367,16 @@
       "raw_fat_grams": 135.96,
       "raw_protein_grams": 12.72,
       "raw_carb_grams": 4.32,
-      "final_grams": 240.0
+      "raw_fiber_grams": 0.07,
+      "final_grams": 240.0,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 0,
+          "minutes": 3
+        }
+      ],
+      "fill_class": ""
     }
   ]
 }

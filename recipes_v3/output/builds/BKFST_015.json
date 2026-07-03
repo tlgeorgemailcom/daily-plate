@@ -9,6 +9,7 @@
   "yield_factor_fat": 0.91,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 12,
   "audit_status": "APPROVED",
   "audit_notes": "Rule B accepted; spice-form divergence (whole spices vs commercial oleoresins) drives Carbs +62.7% above canonical NDB 7064 (structurally irreducible). Energy corrected to +1.5% \u2705 via Atwater recomputation (yff=0.91 fat-drain). P +1.5% F 0.0% Su +3.7% W -1.7% all \u2705. Fiber unscored (canonical=0). Locked May 23 2026.",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 124.84,
   "raw_protein_grams": 78.4,
   "raw_carb_grams": 9.63,
+  "raw_fiber_grams": 1.91,
   "water_lost_grams": 75.65,
   "fat_lost_grams": 11.24,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 416.88,
   "grams_per_serving": 34.74,
   "ingredients": [
@@ -390,6 +393,7 @@
       "yield_factor_fat": 0.91,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 10,
       "raw_grams": 503.77,
@@ -397,7 +401,16 @@
       "raw_fat_grams": 124.84,
       "raw_protein_grams": 78.4,
       "raw_carb_grams": 9.63,
-      "final_grams": 416.88
+      "raw_fiber_grams": 1.91,
+      "final_grams": 416.88,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 0,
+          "minutes": 8
+        }
+      ],
+      "fill_class": ""
     }
   ]
 }

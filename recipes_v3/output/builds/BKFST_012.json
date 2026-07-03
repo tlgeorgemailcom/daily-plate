@@ -9,6 +9,7 @@
   "yield_factor_fat": 0.94,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 8,
   "audit_status": "NO_CANON",
   "audit_notes": "Rule G \u2014 FNDDS FC 27120120 (canonical 180 kcal\u00b76.78P\u00b713.61F\u00b77.65C per 100g). E=-3.2% \u2705 P=+28.6% \u274c F=-8.4% \u274c C=-13.9% \u274c. Sausage section yff corrected to 1.0 (rendered fat stays in gravy roux, does not drain). Protein inflation from SR Legacy lean pork vs FNDDS composite; fat/carb gaps reflect no homemade analog in SR Legacy. Rule G retained. Locked May 23 2026.",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 115.55,
   "raw_protein_grams": 80.91,
   "raw_carb_grams": 61.11,
+  "raw_fiber_grams": 2.57,
   "water_lost_grams": 99.92,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 927.72,
   "grams_per_serving": 115.97,
   "ingredients": [
@@ -465,7 +468,7 @@
   "sections": [
     {
       "section_key": "sausage",
-      "section_label": "Browned pork sausage crumbles",
+      "section_label": "Browned pork sausage",
       "prep_method": "crumbled",
       "cook_method": "fried",
       "cooking_method": "fried",
@@ -474,6 +477,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 9,
       "raw_grams": 353.84,
@@ -481,7 +485,16 @@
       "raw_fat_grams": 72.35,
       "raw_protein_grams": 58.1,
       "raw_carb_grams": 7.23,
-      "final_grams": 297.6
+      "raw_fiber_grams": 1.44,
+      "final_grams": 297.6,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 0,
+          "minutes": 7
+        }
+      ],
+      "fill_class": ""
     },
     {
       "section_key": "gravy",
@@ -494,6 +507,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 5,
       "raw_grams": 673.8,
@@ -501,7 +515,16 @@
       "raw_fat_grams": 43.2,
       "raw_protein_grams": 22.8,
       "raw_carb_grams": 53.88,
-      "final_grams": 630.12
+      "raw_fiber_grams": 1.13,
+      "final_grams": 630.12,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 0,
+          "minutes": 5
+        }
+      ],
+      "fill_class": ""
     }
   ]
 }

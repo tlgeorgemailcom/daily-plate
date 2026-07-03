@@ -9,6 +9,7 @@
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 11,
   "audit_status": "PASS",
   "audit_notes": "Rule B. All 5 graded macros within \u00b14.9% of canonical NDB 18639. Max delta: Protein -4.9%. Fiber and Sugar ungraded (canonical=0). yfw=0.90 (griddle-cooked). Flour adjusted to 380g for protein tolerance. Locked May 20 2026.",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 12.06,
   "raw_protein_grams": 49.64,
   "raw_carb_grams": 304.38,
+  "raw_fiber_grams": 12.14,
   "water_lost_grams": 30.71,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 652.29,
   "grams_per_serving": 59.3,
   "ingredients": [
@@ -285,6 +288,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 5,
       "raw_grams": 683.0,
@@ -292,7 +296,16 @@
       "raw_fat_grams": 12.06,
       "raw_protein_grams": 49.64,
       "raw_carb_grams": 304.38,
-      "final_grams": 652.29
+      "raw_fiber_grams": 12.14,
+      "final_grams": 652.29,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 0,
+          "minutes": 6
+        }
+      ],
+      "fill_class": ""
     }
   ]
 }
