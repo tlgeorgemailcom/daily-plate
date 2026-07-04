@@ -1,5 +1,6 @@
 import { json, error } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
+import { getGameDb } from '$lib/server/turso';
 
 /**
  * GET /api/recipes/v3-build/[recipe_id]
@@ -50,14 +51,38 @@ export const GET: RequestHandler = async ({ params }) => {
     throw error(404, `No v3 build for ${recipeId}`);
   }
 
-  // For composite recipes (Rule D with component_ref ingredients), the
-  // recipe_sections.csv records cook_method='raw' because at the composite
-  // assembly step the components are already cooked. For display in the
-  // editor we want the SOURCE recipe's cook_method (e.g. baked for biscuit,
-  // boiled for milk gravy) so each section header shows how that component
-  // was actually prepared.
+  // ── Section cook data: prefer Turso (always current) over build JSON ──────
+  // upload.py writes cook_method, cook_stages, boil_minutes, fill_class, and
+  // all yield factors into sections_json on every --commit run. Reading from
+  // Turso means the form sees up-to-date section structure without requiring a
+  // Vite rebuild. Fall back to the build JSON sections if Turso is unavailable
+  // or the row has no sections_json yet.
   type SectionRow = Record<string, unknown>;
   type IngredientRow = Record<string, unknown>;
+
+  let tursoSections: SectionRow[] | null = null;
+  try {
+    const db = getGameDb();
+    const result = await db.execute({
+      sql: 'SELECT sections_json FROM dev_recipes WHERE recipe_id = ?',
+      args: [recipeId],
+    });
+    if (result.rows.length > 0) {
+      const raw = result.rows[0].sections_json as string | null;
+      if (raw) {
+        const parsed_sections = JSON.parse(raw) as SectionRow[];
+        if (Array.isArray(parsed_sections) && parsed_sections.length > 0) {
+          tursoSections = parsed_sections;
+        }
+      }
+    }
+  } catch {
+    // Turso unavailable — fall back to build JSON sections silently
+  }
+
+  // For composite recipes, override each component_ref section's cook_method
+  // with the child recipe's actual cooking method so section headers show how
+  // that component was prepared (e.g. "baked" for biscuit, not "raw").
   const rawIngredients = (parsed.ingredients ?? []) as IngredientRow[];
   const sectionToComponentRef = new Map<string, string>();
   for (const ing of rawIngredients) {
@@ -67,14 +92,12 @@ export const GET: RequestHandler = async ({ params }) => {
       sectionToComponentRef.set(sec, ref);
     }
   }
-  const enrichedSections = ((parsed.sections ?? []) as SectionRow[]).map((sec) => {
+
+  function enrichSection(sec: SectionRow): SectionRow {
     const ref = sectionToComponentRef.get(sec.section_key as string);
     if (!ref) return sec;
     const childBuild = BUILDS_BY_ID[ref];
     if (!childBuild) return sec;
-    // Prefer the child's top-level cooking_method; when the child is itself
-    // multi-section (e.g. sausage gravy = fry sausage + simmer gravy), pick
-    // the section with the largest final_grams as the dominant cook step.
     let childCook =
       (childBuild.cooking_method as string | undefined) ??
       (childBuild.cook_method as string | undefined);
@@ -87,7 +110,11 @@ export const GET: RequestHandler = async ({ params }) => {
     }
     if (!childCook || childCook === 'multi') return sec;
     return { ...sec, cook_method: childCook, cooking_method: childCook, cooking_method_normalized: childCook };
-  });
+  }
+
+  const enrichedSections = tursoSections
+    ? tursoSections.map(enrichSection)
+    : ((parsed.sections ?? []) as SectionRow[]).map(enrichSection);
 
   // Inline-expand component_ref rows so the edit form gets a flat,
   // fully-editable ingredient list (same as RecipeBook::levelToFormData).
