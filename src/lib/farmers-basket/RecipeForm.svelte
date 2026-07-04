@@ -196,7 +196,7 @@
   // to UI labels ('Bake','Boil','No heat', …). Unknown/multi → 'No heat'; missing → 'Bake'.
   const _initCM = initialData.cookingMethod ?? '';
   const _matchedCM = COOKING_METHODS.find(m => m.toLowerCase() === _initCM.toLowerCase());
-  let cookingMethod = $state<string>(_matchedCM ?? (_initCM ? 'No heat' : 'Bake'));
+  let cookingMethod = $state<string>(_matchedCM ?? '');
   let cookMinutes = $state<number | undefined>(initialData.cookMinutes);
   let cookTempF = $state<number | undefined>(initialData.cookTempF);
   let cookHelpOpen = $state(false);
@@ -2672,33 +2672,30 @@
         <label class="primary-cook-label">
           <span class="primary-cook-name">Cook *</span>
           <select bind:value={cookingMethod} class="form-select primary-cook-select">
+            <option value="">— select —</option>
             {#each COOKING_METHODS as m}
               <option value={m}>{COOK_METHOD_DISPLAY[m] ?? m}</option>
             {/each}
           </select>
         </label>
-        {#if cookingMethod !== 'No heat'}
-          <label class="section-time-field" title="Total cook time in minutes">
-            <span class="section-time-label">{['Bake','Braise','Simmer','Sub-simmer'].includes(cookingMethod) ? `${cookingMethod} (min)` : 'Cook (min)'}</span>
-            <input
-              type="number" min="0" max="600" step="1" placeholder="–"
-              value={cookMinutes ?? ''}
-              oninput={(e) => { const v = (e.currentTarget as HTMLInputElement).valueAsNumber; cookMinutes = Number.isFinite(v) && v >= 0 ? v : undefined; }}
-              class="form-input time-number-input"
-            />
-          </label>
-          {#if cookingMethod === 'Bake'}
-            <label class="section-time-field" title="Oven temperature °F">
-              <span class="section-time-label">Temp (°F)</span>
-              <input
-                type="number" min="200" max="600" step="25" placeholder="–"
-                value={cookTempF ?? ''}
-                oninput={(e) => { const v = (e.currentTarget as HTMLInputElement).valueAsNumber; cookTempF = Number.isFinite(v) && v > 0 ? v : undefined; }}
-                class="form-input time-number-input"
-              />
-            </label>
-          {/if}
-        {/if}
+        <label class="section-time-field" title="Total cook time in minutes">
+          <span class="section-time-label">{['Bake','Braise','Simmer','Sub-simmer'].includes(cookingMethod) ? `${cookingMethod} (min)` : 'Cook (min)'}</span>
+          <input
+            type="number" min="0" max="600" step="1" placeholder="–"
+            value={cookMinutes ?? ''}
+            oninput={(e) => { const v = (e.currentTarget as HTMLInputElement).valueAsNumber; cookMinutes = Number.isFinite(v) && v >= 0 ? v : undefined; }}
+            class="form-input time-number-input"
+          />
+        </label>
+        <label class="section-time-field" title="Oven temperature °F">
+          <span class="section-time-label">Temp (°F)</span>
+          <input
+            type="number" min="200" max="600" step="25" placeholder="–"
+            value={cookTempF ?? ''}
+            oninput={(e) => { const v = (e.currentTarget as HTMLInputElement).valueAsNumber; cookTempF = Number.isFinite(v) && v > 0 ? v : undefined; }}
+            class="form-input time-number-input"
+          />
+        </label>
         <button type="button" class="cook-help-btn" onclick={() => cookHelpOpen = true} title="How to fill in these fields">ⓘ</button>
       </div>
 
