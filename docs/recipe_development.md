@@ -72,6 +72,36 @@ There is no "final cook" phase in the pipeline. If a recipe has a final assembly
 
 > **`yfw` must never be hardcoded in a new or rebuilt section.** Leave `yfw` empty (or 1.0 as a no-op placeholder) and let the physics model compute it from `cook_stages`. The locked values in existing sections are technical debt to be resolved in a dedicated cleanup phase.
 
+### ⚠ The V3 end state: every recipe, every section, physics-only yield factors
+
+The goal of the v3 conversion is that **every recipe in every category** runs entirely through the physics-based pipeline with no manually-locked yield factors anywhere — not at the recipe level, not at the section level. This means:
+
+- Each prep section gets `cook_method` + `cook_stages` (temp:time) → pipeline derives `yfw` automatically
+- If the recipe has a final assembly section (e.g. a bake after components are prepped), that section also gets its own `cook_method` + `cook_stages`
+- No `yield_factor_water`, `yield_factor_fat`, etc. are set by hand in `recipe_sections.csv` once the physics model takes over
+- The locked values currently in the CSV (`yfw=0.75`, `yfw=0.92`, etc.) are temporary placeholders from the pre-v3 calibration era — they will be cleared category by category after `cook_stages` coverage is confirmed
+
+**This applies to ALL categories: BKFST, ENTR, SIDE, SAND, SAUCE, SALAD, STOCK, SWEET, SOUP, PASTA, BVRG.** BKFST is the first category to reach `cook_stages` coverage. Each remaining category will be adapted in the same way: spec file → audit → section splits → cook_method + cook_stages → rebuild → verify.
+
+### ⚠ Turso and the bundle MUST always be in sync
+
+Every change to recipe data requires **both** of the following — skipping either leaves the app in a split-brain state:
+
+| What changed | Command required |
+|---|---|
+| `recipe_ingredients.csv`, `recipe_sections.csv`, ingredient grams, nutrition | `python recipes_v3/tools/upload.py --recipe ID --commit` → updates Turso (runtime API) |
+| Any recipe data visible in the basket UI or edit form | `python recipes_v3/tools/generate_bundle.py` → updates `generated-levels.ts` (static bundle) |
+
+**Why both are needed:** The basket app serves recipe data from two sources simultaneously — Turso (live API calls for edit/moderate paths) and the static bundle compiled into the app (for the play/view paths). A change pushed to Turso but not bundled will show correctly in the edit form but revert to old data in the game. A bundle regenerated without uploading to Turso will show correctly in the game but serve stale data to the edit form.
+
+**After every fix session:** the complete sequence is always:
+```
+python recipes_v3/tools/build_all.py --recipe ID   # recompute nutrition
+python recipes_v3/tools/upload.py --recipe ID --commit  # push to Turso
+python recipes_v3/tools/generate_bundle.py         # update static bundle
+git add ... && git commit && git push              # deploy
+```
+
 ---
 
 ## Category Section Review Process
