@@ -957,32 +957,35 @@
           });
           // If 2+ sections each have their own cook method, blank the recipe-level
           // primary cook — there's no single primary heat that applies to the whole dish.
-          // Also blank for single-section recipes — the section header already shows the
-          // cook method, time and temp; showing it again in the primary cook bar doubles it.
+          // Blank the primary cook bar whenever sections handle their own heat,
+          // or when no real heat exists at the recipe level.
+          // Exception: quiche pattern — all sections are raw-assembled but a real
+          // oven bake applies to the whole dish (cookingMethod is a true heat like 'Bake').
           const nonRawSections = sections.filter(sec => sec.prepMethod && sec.prepMethod !== 'none');
-          if (nonRawSections.length >= 2 || (nonRawSections.length === 1 && sections.length === 1)) {
-            cookingMethod = '';
-            cookMinutes = undefined;
-            cookTempF = undefined;
-          } else if (sections.length > 1) {
-            // Derive recipe-level cookTempF / cookMinutes from section stages only
-            // for MULTI-section recipes where one section drives the primary cook
-            // (e.g. quiche: crust baked + filling raw).
-            // Skip baked/par-baked sections — their cook_stages are used for the
-            // per-section Prep display (blind-bake temp/time), not the primary cook.
-            // Only derive if exactly ONE non-baked section has stages.
-            const eligibleSecs2 = sections.filter(
-              sec => sec.prepMethod !== 'baked' && sec.prepMethod !== 'par-baked'
-                  && Array.isArray(sec.stages) && sec.stages.length > 0
-            );
-            if (eligibleSecs2.length === 1) {
-              const stgs = eligibleSecs2[0].stages as Array<{ tempF: number; minutes: number }>;
-              const totalMins = stgs.reduce((sum, st) => sum + (st.minutes ?? 0), 0);
-              if (totalMins > 0 && cookMinutes == null) cookMinutes = totalMins;
-              // Use the last stage temperature — that's the sustained main bake
-              // temp (e.g. 375°F after the initial 425°F blast), not the first.
-              const lastTempF = stgs[stgs.length - 1].tempF;
-              if (lastTempF > 0 && cookTempF == null) cookTempF = lastTempF;
+          const hasAnySectionHeat = nonRawSections.length > 0;
+          const allSectionsRaw = nonRawSections.length === 0;
+          const primaryIsRawOrEmpty = !cookingMethod || cookingMethod === 'No heat';
+
+          if (sections.length > 0) {
+            if (hasAnySectionHeat || (allSectionsRaw && primaryIsRawOrEmpty)) {
+              // Sections display their own heat, or there's no meaningful primary heat
+              cookingMethod = '';
+              cookMinutes = undefined;
+              cookTempF = undefined;
+            } else if (allSectionsRaw && !primaryIsRawOrEmpty) {
+              // Quiche pattern: all sections assembled raw, but the whole dish bakes.
+              // Derive cook time/temp from whichever section carries the oven stages.
+              const eligibleSecs2 = sections.filter(
+                sec => sec.prepMethod !== 'baked' && sec.prepMethod !== 'par-baked'
+                    && Array.isArray(sec.stages) && sec.stages.length > 0
+              );
+              if (eligibleSecs2.length === 1) {
+                const stgs = eligibleSecs2[0].stages as Array<{ tempF: number; minutes: number }>;
+                const totalMins = stgs.reduce((sum, st) => sum + (st.minutes ?? 0), 0);
+                if (totalMins > 0 && cookMinutes == null) cookMinutes = totalMins;
+                const lastTempF = stgs[stgs.length - 1].tempF;
+                if (lastTempF > 0 && cookTempF == null) cookTempF = lastTempF;
+              }
             }
           }
         }
