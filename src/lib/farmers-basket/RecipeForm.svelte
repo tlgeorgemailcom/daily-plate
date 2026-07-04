@@ -1581,7 +1581,19 @@
     // moderator screen does. Both player and dev recipes carry sections inline
     // via Turso sections_json (upload.py populates dev_recipes since 2026-07-01).
     let nextSections: RecipeSection[] | null = null;
-    if (Array.isArray(suggestion.sections) && suggestion.sections.length > 0) {
+    // For dev recipes, prefer v3Data.sections because the v3-build API's
+    // enrichSection() replaces each component_ref section's cook_method with
+    // the child recipe's actual cooking method (e.g. 'baked' for a biscuit
+    // section whose source_recipe is BKFST_001). The raw Turso sections_json
+    // still has cook_method='raw' on those sections, so the prep-time bar
+    // would be hidden. Fall through to suggestion.sections for player recipes
+    // (which have no v3-build counterpart).
+    const useV3Sections =
+      suggestion.sourceType === 'dev' &&
+      v3Data != null &&
+      Array.isArray(v3Data.sections) &&
+      (v3Data.sections as unknown[]).length > 0;
+    if (!useV3Sections && Array.isArray(suggestion.sections) && suggestion.sections.length > 0) {
       // Turso sections_json: normalize snake_case (dev recipes) or camelCase
       // (player recipes) to the RecipeSection interface used by the form.
       nextSections = (suggestion.sections as any[]).map((s) => ({
@@ -1600,7 +1612,6 @@
         fillClass: s.fillClass ?? s.fill_class ?? undefined,
       })).filter((s: RecipeSection) => s.key);
     } else if (v3Data && Array.isArray(v3Data.sections) && (v3Data.sections as unknown[]).length > 0) {
-      // v3-build was already fetched above — use its sections (avoids a second fetch).
       nextSections = (v3Data.sections as Record<string, unknown>[]).map((s) => ({
         key: String(s.section_key ?? s.key ?? ''),
         label: String(s.section_label ?? s.label ?? ''),
