@@ -1536,7 +1536,28 @@
 
   async function fillFromSuggestion(suggestion: RecipeSuggestion) {
     applySuggestionMeta(suggestion);
-    const rawIngredients = suggestion.ingredients;
+
+    // For dev recipes, always fetch the v3-build API to get the inline-expanded
+    // ingredient list. The suggest API returns recipe_ingredients_json verbatim,
+    // which keeps composite recipes' component_ref stubs (isDish=true rows are
+    // dropped) — so only the 2-3 non-ref leaf rows survive. The v3-build API's
+    // `ingredients` array has those stubs replaced by each child recipe's actual
+    // leaf ingredients, giving the full ingredient list the moderator sees.
+    // Fall back to suggestion.ingredients if the API is unreachable.
+    let v3Data: Record<string, unknown> | null = null;
+    if (suggestion.sourceType === 'dev') {
+      try {
+        const res = await fetch(`/api/recipes/v3-build/${encodeURIComponent(suggestion.id)}`);
+        if (res.ok) v3Data = await res.json();
+      } catch {
+        /* network error — fall through to suggestion data */
+      }
+    }
+
+    const rawIngredients =
+      (v3Data && Array.isArray(v3Data.ingredients) && (v3Data.ingredients as unknown[]).length > 0)
+        ? (v3Data.ingredients as RecipeIngredient[])
+        : suggestion.ingredients;
     if (Array.isArray(rawIngredients) && rawIngredients.length > 0) {
       ingredients = rawIngredients.map((ing, idx) => toMappedIngredient(ing, idx + 1));
       nextIngredientId = ingredients.length;
@@ -1569,31 +1590,22 @@
         stages: s.stages ?? s.cook_stages ?? undefined,
         fillClass: s.fillClass ?? s.fill_class ?? undefined,
       })).filter((s: RecipeSection) => s.key);
-    } else if (suggestion.sourceType === 'dev') {
-      try {
-        const res = await fetch(`/api/recipes/v3-build/${encodeURIComponent(suggestion.id)}`);
-        if (res.ok) {
-          const data = await res.json();
-          if (Array.isArray(data?.sections) && data.sections.length > 0) {
-            nextSections = data.sections.map((s: Record<string, unknown>) => ({
-              key: String(s.section_key ?? s.key ?? ''),
-              label: String(s.section_label ?? s.label ?? ''),
-              prepMethod: (() => { const v = typeof s.cook_method === 'string' ? s.cook_method : (typeof s.prepMethod === 'string' ? s.prepMethod : (typeof s.prep_method === 'string' ? s.prep_method : undefined)); return (!v || v === 'raw') ? 'none' : v; })(),
-              cookingMethod: String(s.cooking_method ?? s.cookingMethod ?? 'baked'),
-              yieldFactorWater: typeof s.yield_factor_water === 'number' ? s.yield_factor_water : (typeof s.yieldFactorWater === 'number' ? s.yieldFactorWater : undefined),
-              yieldFactorFat: typeof s.yield_factor_fat === 'number' ? s.yield_factor_fat : (typeof s.yieldFactorFat === 'number' ? s.yieldFactorFat : undefined),
-              yieldFactorOther: typeof s.yield_factor_other === 'number' ? s.yield_factor_other : (typeof s.yieldFactorOther === 'number' ? s.yieldFactorOther : undefined),
-              boilMinutes: typeof s.boil_minutes === 'number' ? s.boil_minutes : (typeof s.boilMinutes === 'number' ? s.boilMinutes : undefined),
-              cookMinutes: typeof s.cook_minutes === 'number' ? s.cook_minutes : (typeof s.cookMinutes === 'number' ? s.cookMinutes : undefined),
-              cookTempF: typeof s.cook_temp_f === 'number' ? s.cook_temp_f : (typeof s.cookTempF === 'number' ? s.cookTempF : undefined),
-              stages: Array.isArray(s.cook_stages) ? s.cook_stages : (Array.isArray(s.stages) ? s.stages : undefined),
-              fillClass: typeof s.fill_class === 'string' ? (s.fill_class || undefined) : (typeof s.fillClass === 'string' ? (s.fillClass || undefined) : undefined),
-            })).filter((s: RecipeSection) => s.key);
-          }
-        }
-      } catch {
-        /* network error — fall through to per-row derivation */
-      }
+    } else if (v3Data && Array.isArray(v3Data.sections) && (v3Data.sections as unknown[]).length > 0) {
+      // v3-build was already fetched above — use its sections (avoids a second fetch).
+      nextSections = (v3Data.sections as Record<string, unknown>[]).map((s) => ({
+        key: String(s.section_key ?? s.key ?? ''),
+        label: String(s.section_label ?? s.label ?? ''),
+        prepMethod: (() => { const v = typeof s.cook_method === 'string' ? s.cook_method : (typeof s.prepMethod === 'string' ? s.prepMethod : (typeof s.prep_method === 'string' ? s.prep_method : undefined)); return (!v || v === 'raw') ? 'none' : v; })(),
+        cookingMethod: String(s.cooking_method ?? s.cookingMethod ?? 'baked'),
+        yieldFactorWater: typeof s.yield_factor_water === 'number' ? s.yield_factor_water : (typeof s.yieldFactorWater === 'number' ? s.yieldFactorWater : undefined),
+        yieldFactorFat: typeof s.yield_factor_fat === 'number' ? s.yield_factor_fat : (typeof s.yieldFactorFat === 'number' ? s.yieldFactorFat : undefined),
+        yieldFactorOther: typeof s.yield_factor_other === 'number' ? s.yield_factor_other : (typeof s.yieldFactorOther === 'number' ? s.yieldFactorOther : undefined),
+        boilMinutes: typeof s.boil_minutes === 'number' ? s.boil_minutes : (typeof s.boilMinutes === 'number' ? s.boilMinutes : undefined),
+        cookMinutes: typeof s.cook_minutes === 'number' ? s.cook_minutes : (typeof s.cookMinutes === 'number' ? s.cookMinutes : undefined),
+        cookTempF: typeof s.cook_temp_f === 'number' ? s.cook_temp_f : (typeof s.cookTempF === 'number' ? s.cookTempF : undefined),
+        stages: Array.isArray(s.cook_stages) ? s.cook_stages : (Array.isArray(s.stages) ? s.stages : undefined),
+        fillClass: typeof s.fill_class === 'string' ? (s.fill_class || undefined) : (typeof s.fillClass === 'string' ? (s.fillClass || undefined) : undefined),
+      })).filter((s: RecipeSection) => s.key);
     }
     if ((!nextSections || nextSections.length === 0) && ingredients.some((i) => i.section)) {
       // Last-resort derivation: synthesise minimal section objects from the
