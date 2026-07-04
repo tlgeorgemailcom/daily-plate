@@ -21,6 +21,7 @@
     cookingMethod?: string;
     dishFamily?: string | null;
     nutritionJson?: { perServing: { cal: number; pro: number; fat: number; carb: number; fib: number; sug: number; h2o: number }; gramsPerServing: number; servings: number; sources: { ndb: string; name: string; grams: number }[] } | null;
+    sections?: unknown[];
   }
   
   let recipes = $state<MyRecipe[]>([]);
@@ -290,7 +291,8 @@
         dishFamily: data.dishFamily || null,
         ingredients: ingredientsPayload,
         instructions: data.instructions.filter(i => i.text.trim()).map(i => i.text),
-        ...(isLinked && data.linkMode ? { linkType: data.linkMode } : {})
+        ...(isLinked && data.linkMode ? { linkType: data.linkMode } : {}),
+        ...(data.sections && data.sections.length > 0 ? { sections: data.sections } : {})
       };
       
       // Only include imageUrl if it changed
@@ -487,7 +489,8 @@
               id: i + 1,
               text: typeof text === 'string' ? text : (text as any).text || ''
             })),
-            nutritionJson: editingRecipe.nutritionJson || undefined
+            nutritionJson: editingRecipe.nutritionJson || undefined,
+            sections: (editingRecipe.sections as any) || undefined
           }}
           onsubmit={handleSaveEdit}
           oncancel={() => editingRecipe = null}
