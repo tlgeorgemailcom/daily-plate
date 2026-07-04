@@ -22,12 +22,17 @@ When both are present and `yfw` is not manually locked, `build.py` calls `calc_y
 - **Cook method corrections**: BKFST_033 Frittata changed `baked→pan grilled`; BKFST_021 beef and BKFST_037/038 ham changed to `pan grilled`; BKFST_012 gravy changed `boiled→simmer`
 - All 36 affected BKFST recipes rebuilt, uploaded to Turso, bundle regenerated
 - **Form fix** (`RecipeForm.svelte`): section cook-method dropdown was reading `prep_method` (physical action like "crumbled") instead of `cook_method` (heat method). Fixed — commits `b347ac3a` + `4466cd66`
+- **Form fix** (`RecipeForm.svelte`): primary cook bar — `Cook *` dropdown was defaulting to `'Bake'` when no value was present, and `Temp (°F)` field was hidden unless `Bake` was selected, and `Cook (min)` was hidden for `'No heat'`. All three primary cook fields (`Cook`, `Cook (min)`, `Temp (°F)`) are now always visible and blank by default — commits `4942c81f` + `a105df1e` (2026-07-03)
+- **Form fix** (`RecipeForm.svelte`): for multi-section recipes (2+ non-raw sections), the primary cook method, time, and temp are now cleared to blank when the v3-build API loads section data — preventing the recipe's stored top-level `cooking_method` (e.g. `'boiled'`) from incorrectly populating the primary cook dropdown. Commit `a105df1e` (2026-07-03)
+- **BKFST section cook method audit and corrections** — commit `5ae1a0e0` + `ade05f4f` (2026-07-03): All BKFST recipe sections compared against `docs/breakfast.md` spec. 15 section rows and 7 `recipes.csv` rows corrected. See § **Category Section Review Process** below for the full methodology.
 
 ### What is still outstanding
 
 1. **Locked `yfw` values must be cleared across ALL recipes.** Every explicit `yfw` value currently sitting in `recipe_sections.csv` (e.g. `yfw=0.75` for BKFST_001, `yfw=0.92` for BKFST_012, etc.) is a legacy calibration artifact. Once `cook_stages` are populated for all recipes, these must be removed column-by-column so the physics model takes over. This is a **separate phase** — do not clear them until cook_stages coverage is complete and verified.
 
-2. **Cook minutes not displaying in section Prep display.** The form reads `boil_minutes` (from `boil_stages` CSV column) for stovetop sections. For BKFST sections, `boil_stages` is empty — the minutes live in `cook_stages[0].minutes`. The form's `boilMinutes` field needs to fall back to `firstStage?.minutes` when `boil_minutes` is 0 or absent. Fix location: `RecipeForm.svelte` `$effect` block, `boilMinutes` assignment (~line 940).
+2. **Cook minutes not displaying in section Prep display.** The form reads `boil_minutes` (from `boil_stages` CSV column) for stovetop sections. For BKFST sections, `boil_stages` is empty — the minutes live in `cook_stages[0].minutes`. The form's `boilMinutes` field needs to fall back to `firstStage?.minutes` when `boil_minutes` is 0 or absent. Fix location: `RecipeForm.svelte` `$effect` block, `boilMinutes` assignment (~line 940). **Status: still open — affects many recipes across all categories.**
+
+6. **Primary cook bar shows wrong method for many non-BKFST multi-section recipes.** The fix in `a105df1e` clears the primary cook field for any recipe where the v3-build API returns 2+ sections with non-raw prep methods. However, ENTR, SIDE, SAND, SAUCE, SALAD, STOCK, and SWEET multi-section recipes were built before the `cook_stages` / `cook_method` infrastructure was fully in place — many will open the edit form with incorrect (stale) primary cook values until their build JSONs are rebuilt from current CSV state. Once cook_stages annotations are complete for each category, rebuild and regenerate the bundle to propagate corrections.
 
 3. **cook_stages annotations for non-BKFST recipes** (ENTR, SIDE, SAND, SAUCE, SALAD, STOCK, SWEET) — not yet started. BKFST is the first category completed.
 
@@ -38,6 +43,109 @@ When both are present and `yfw` is not manually locked, `build.py` calls `calc_y
 ### Key invariant going forward
 
 > **`yfw` must never be hardcoded in a new or rebuilt section.** Leave `yfw` empty (or 1.0 as a no-op placeholder) and let the physics model compute it from `cook_stages`. The locked values in existing sections are technical debt to be resolved in a dedicated cleanup phase.
+
+---
+
+## Category Section Review Process
+
+When reviewing a food category (BKFST, ENTR, SIDE, etc.) for correctness, use the following workflow. Each category gets a spec file (e.g. `docs/breakfast.md`) that lists the correct cook method and time for every recipe and every section. The AI compares the spec against the CSVs and fixes all discrepancies.
+
+### Spec file format
+
+Each recipe entry in the spec follows this pattern:
+```
+N. Recipe Name | primary cook time | primary cook method | primary temp (°F if bake)
+```
+For multi-section recipes with no primary cook:
+```
+N. Recipe Name: no primary cook
+Prep: Section label | time min | cook method
+Prep: Section label | time min | cook method
+```
+
+"No primary cook" means 2 or more sections each have their own distinct prep step — the form's primary cook bar should be blank.
+
+### Audit command
+
+```python
+python3 -c "
+import csv
+BASE = 'recipes_v3/data'
+secs = {}
+with open(f'{BASE}/recipe_sections.csv') as f:
+    for row in csv.DictReader(f):
+        rid = row['recipe_id']
+        if rid.startswith('PREFIX_'):
+            secs.setdefault(rid, []).append(row)
+for rid in sorted(secs):
+    for s in secs[rid]:
+        print(f'{rid} | {s[\"section_key\"]:25} | cm={s[\"cook_method\"]:15} | stages={s[\"cook_stages\"]}')
+    print()
+"
+```
+
+Replace `PREFIX_` with the category prefix (e.g. `BKFST_`, `ENTR_`, `SIDE_`).
+
+### Common errors found during BKFST review (2026-07-03)
+
+| Wrong value | Correct value | Affected recipes |
+|---|---|---|
+| `grilled` | `pan grilled` | Pancakes, English Muffins (griddle = pan grill, not BBQ grill) |
+| `fried` | `pan grilled` | French Toast (skillet = pan grill, not deep fry) |
+| `steamed` | `simmer` | Hollandaise Sauce |
+| `raw` on component-ref section | actual cook method of that section | Eggs Benedict muffin + hollandaise sections |
+| `fried` | `pan grilled` | Eggs Benedict Canadian bacon section |
+| `baked` on filling section | `raw` | Quiche filling sections (see quiche pattern below) |
+| `raw` on sausage component-ref | `pan grilled` | BKFST_037 Croissant Sausage |
+
+**Rule: `grilled` = outdoor/open-flame grill (waffles use `grilled` correctly — waffle iron). `pan grilled` = stovetop skillet or griddle. When in doubt: pancakes, crepes, French toast, English muffins, quesadillas, sautéed items → `pan grilled`.**
+
+### Composite recipe (component-ref) section fixes
+
+When a section uses `source_recipe=CHILD_ID`, its `cook_method` defaults to `raw` because the parent doesn't "know" how the child was cooked. Two fix strategies:
+
+1. **Just change `cook_method` on the parent section** — works when the parent section merely needs to display the correct prep label and the child ingredients are correctly expanded. The `source_recipe` link stays intact and ingredients still render from the child recipe. (Used for BKFST_003 muffin, hollandaise; BKFST_037 sausage.)
+
+2. **Break the composite entirely** — remove `source_recipe`, delete the component-ref row from `recipe_ingredients.csv`, and inline all child leaf ingredients with correct section assignments and scaled grams. Required when the child has multiple internal sections that need to appear as separate parent sections. (Used for BKFST_002 `@BKFST_012` → two sections: `sausage_crumbles` + `milk_gravy`.)
+
+Scale factor for inlining: `target_grams (from parent) / child_raw_total_grams`.
+
+### Quiche pattern (primary cook with assembly-only sections)
+
+For baked dishes where the assembly steps involve no heat (press crust, mix filling) and the entire bake happens as a single final step:
+
+- **Crust section**: keep `cm=baked`, `stages=375:37` (or whatever temp:time). This single non-raw section drives the primary cook bar → shows "Bake | 37 min | 375°F".
+- **Filling section**: set `cm=raw`, clear `cook_stages`. This shows "no heat" in the section header.
+- Result: 1 non-raw section → multi-section blank logic does NOT fire → primary cook bar is populated from the crust section. ✅
+
+This pattern applies to any dish where: multiple ingredient groups exist, but only the combined bake/cook matters as the primary step. Examples: quiches, casseroles, stratas, gratins, lasagnas.
+
+### Fix script pattern
+
+```python
+SECTION_FIXES = {
+    ('RECIPE_ID', 'section_key'): {'cook_method': 'new_value'},
+    ('RECIPE_ID', 'section_key'): {'cook_method': 'new_value', 'cook_stages': ''},
+    ...
+}
+RECIPE_CM_FIXES = {
+    'RECIPE_ID': 'new_cooking_method',
+    ...
+}
+# Then: DictReader → apply fixes → DictWriter → overwrite both CSVs
+```
+
+After running the fix script, always:
+1. `python recipes_v3/tools/build_all.py --recipe ID1 --recipe ID2 ...`
+2. `python recipes_v3/tools/upload.py --recipe ID --commit` (for each)
+3. `python recipes_v3/tools/generate_bundle.py`
+4. `git add ... && git commit && git push`
+
+### BKFST review status (as of 2026-07-03)
+
+All 52 BKFST recipes have had `cook_stages` added and section splits completed. A second-pass cook method audit corrected 15 section rows and 7 `recipes.csv` rows. The user is still reviewing the full BKFST set in the UI — further corrections may be identified.
+
+**When BKFST review is complete:** start the next category using the same spec-file + audit-script + fix-script workflow. Create `docs/[category].md` with the spec entries, then follow the process above.
 
 ---
 
