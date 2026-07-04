@@ -705,6 +705,16 @@ def _build_recipe_multi(
     methods_used = sorted({s.cook_method for s in sections})
     if has_composite_section:
         dish_method_label = "multi"
+    elif (
+        len(methods_used) == 1
+        and methods_used[0] == "raw"
+        and recipe.cooking_method not in ("raw", "multi", "")
+    ):
+        # All sections are assembly-only (cook_method=raw) but the recipe has a
+        # whole-dish cook in recipes.csv (e.g. quiche: crust + filling each assembled
+        # raw, then the whole quiche bakes at 375 °F).  Preserve the recipe-level
+        # cooking_method so the primary cook bar in the edit form shows correctly.
+        dish_method_label = recipe.cooking_method
     else:
         dish_method_label = methods_used[0] if len(methods_used) == 1 else "multi"
     dish_method_normalized = (
