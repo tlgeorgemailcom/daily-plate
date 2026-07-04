@@ -15,6 +15,34 @@ The v3 pipeline is designed to compute `yfw` (water yield factor) from **first p
 
 When both are present and `yfw` is not manually locked, `build.py` calls `calc_yield_water()` to derive `yfw` automatically. **No recipe should have a manually locked `yfw` in the final v3 state.**
 
+### ⚠ CRITICAL: Section-first computation — the core architectural rule
+
+> **Every section's retention and yield are applied to its own ingredients BEFORE any assembly or final cook step.** This is the most important architectural fact about the v3 pipeline. Every new or migrated recipe must be structured with this in mind.
+
+**How `build.py` processes a multi-section recipe:**
+
+1. For each section in `recipe_sections.csv`:
+   - Sum the raw ingredient grams for that section
+   - Apply **retention factors** (based on the section's `cook_method`)
+   - Apply **yield factors** (`yfw`, `yff`, `yfp`, `yfc`, `yfo`) — either from `cook_stages` physics model or locked values
+   - Produce the section's **cooked nutrient totals**
+2. Sum all sections' cooked nutrient totals into the recipe total
+3. Divide by total cooked grams to produce **per-100g values**
+
+There is no "final cook" phase in the pipeline. If a recipe has a final assembly step (e.g. baked quiche, braised stew), that step is modelled by giving the appropriate section a `cook_method` and `cook_stages` that reflect the actual cooking. The pipeline then applies those factors to that section's ingredients.
+
+**Practical implications for authoring:**
+
+| Scenario | How to model it |
+|---|---|
+| Sausage browned then combined into gravy | Two sections: `sausage` (fried) + `gravy` (simmer). Each section gets its own retention. |
+| Eggs poached, muffin grilled, sauce simmered, assembled cold | Four sections, each with their own cook method. No "assembly cook". |
+| Quiche: crust pressed + filling mixed + whole thing baked | Two sections: `crust` (baked, with temp:time) + `filling` (raw). The bake applies to the crust section. Filling's assembly involves no heat. |
+| Burrito: tortilla pan-grilled + beans heated + cheese cold | Three sections: `tortilla` (pan grilled) + `beans` (pan grilled) + `cheese` (raw). |
+| Stew: all ingredients cooked together | One section, cook_method=simmer or braise, with the stew's total time. |
+
+**Why this matters for each new category:** When adapting ENTR, SIDE, SAND, SAUCE, etc. recipes to v3, the first question for every multi-component recipe is: *"Which ingredients are cooked separately before assembly, and which are cooked together?"* Each independently-cooked component must be its own section with the correct `cook_method`. Ingredients that are assembled cold and never cooked get `cook_method=raw`. There is no catch-all "final bake" that re-cooks everything — the section structure IS the cooking model.
+
 ### What has been done
 
 - **BKFST recipes 1–52**: `cook_stages` added to all sections per `docs/breakfast.md` spec — commit `bda9c476` + `16e4c822` (2026-07-03)
