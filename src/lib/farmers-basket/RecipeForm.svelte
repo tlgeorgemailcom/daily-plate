@@ -955,24 +955,33 @@
               fillClass: s.fill_class ?? undefined,
             };
           });
-          // Derive recipe-level cookTempF / cookMinutes from section stages
-          // (present once build.py writes them into the build JSON).
-          // Skip baked/par-baked sections — their cook_stages are used for the
-          // per-section Prep display (blind-bake temp/time), not the primary cook.
-          // Only derive if exactly ONE non-baked section has stages;
-          // two or more staged sections = "no primary cook" recipe (fields stay blank).
-          const eligibleSecs2 = sections.filter(
-            sec => sec.prepMethod !== 'baked' && sec.prepMethod !== 'par-baked'
-                && Array.isArray(sec.stages) && sec.stages.length > 0
-          );
-          if (eligibleSecs2.length === 1) {
-            const stgs = eligibleSecs2[0].stages as Array<{ tempF: number; minutes: number }>;
-            const totalMins = stgs.reduce((sum, st) => sum + (st.minutes ?? 0), 0);
-            if (totalMins > 0 && cookMinutes == null) cookMinutes = totalMins;
-            // Use the last stage temperature — that's the sustained main bake
-            // temp (e.g. 375°F after the initial 425°F blast), not the first.
-            const lastTempF = stgs[stgs.length - 1].tempF;
-            if (lastTempF > 0 && cookTempF == null) cookTempF = lastTempF;
+          // If 2+ sections each have their own cook method, blank the recipe-level
+          // primary cook — there's no single primary heat that applies to the whole dish.
+          const nonRawSections = sections.filter(sec => sec.prepMethod && sec.prepMethod !== 'none');
+          if (nonRawSections.length >= 2) {
+            cookingMethod = '';
+            cookMinutes = undefined;
+            cookTempF = undefined;
+          } else {
+            // Derive recipe-level cookTempF / cookMinutes from section stages
+            // (present once build.py writes them into the build JSON).
+            // Skip baked/par-baked sections — their cook_stages are used for the
+            // per-section Prep display (blind-bake temp/time), not the primary cook.
+            // Only derive if exactly ONE non-baked section has stages;
+            // two or more staged sections = "no primary cook" recipe (fields stay blank).
+            const eligibleSecs2 = sections.filter(
+              sec => sec.prepMethod !== 'baked' && sec.prepMethod !== 'par-baked'
+                  && Array.isArray(sec.stages) && sec.stages.length > 0
+            );
+            if (eligibleSecs2.length === 1) {
+              const stgs = eligibleSecs2[0].stages as Array<{ tempF: number; minutes: number }>;
+              const totalMins = stgs.reduce((sum, st) => sum + (st.minutes ?? 0), 0);
+              if (totalMins > 0 && cookMinutes == null) cookMinutes = totalMins;
+              // Use the last stage temperature — that's the sustained main bake
+              // temp (e.g. 375°F after the initial 425°F blast), not the first.
+              const lastTempF = stgs[stgs.length - 1].tempF;
+              if (lastTempF > 0 && cookTempF == null) cookTempF = lastTempF;
+            }
           }
         }
         // Composite recipes (Rule D) reference child recipes via `component_ref`
