@@ -1477,7 +1477,9 @@
       quantity:
         (ing as RecipeIngredient).quantity ??
         (ing as { ing_qty?: string }).ing_qty ??
-        // v3-build expandedIngredients expose gram weight as a number
+        // v3-build direct ingredients carry qty_display (e.g. "4 large eggs")
+        (ing as { qty_display?: string }).qty_display ??
+        // component_ref children have no qty_display — fall back to gram weight
         (typeof (ing as { grams?: unknown }).grams === 'number'
           ? `${(ing as { grams: number }).grams}g`
           : undefined) ??
@@ -1590,7 +1592,7 @@
         yieldFactorWater: s.yieldFactorWater ?? s.yield_factor_water ?? undefined,
         yieldFactorFat: s.yieldFactorFat ?? s.yield_factor_fat ?? undefined,
         yieldFactorOther: s.yieldFactorOther ?? s.yield_factor_other ?? undefined,
-        boilMinutes: s.boilMinutes ?? s.boil_minutes ?? undefined,
+        boilMinutes: (() => { const stageArr = Array.isArray(s.cook_stages) ? s.cook_stages as Array<{tempF:number;minutes:number}> : (Array.isArray(s.stages) ? s.stages as Array<{tempF:number;minutes:number}> : []); const bm = s.boilMinutes ?? s.boil_minutes ?? 0; const pm = s.prepMethod ?? s.cook_method ?? s.prep_method ?? ''; const prepIsBaked = pm === 'baked' || pm === 'par-baked'; return prepIsBaked ? (stageArr[0]?.minutes ?? undefined) : ((typeof bm === 'number' ? bm : 0) || stageArr[0]?.minutes); })(),
         cookMinutes: s.cookMinutes ?? s.cook_minutes ?? undefined,
         cookTempF: s.cookTempF ?? s.cook_temp_f ?? undefined,
         stages: s.stages ?? s.cook_stages ?? undefined,
@@ -1606,7 +1608,7 @@
         yieldFactorWater: typeof s.yield_factor_water === 'number' ? s.yield_factor_water : (typeof s.yieldFactorWater === 'number' ? s.yieldFactorWater : undefined),
         yieldFactorFat: typeof s.yield_factor_fat === 'number' ? s.yield_factor_fat : (typeof s.yieldFactorFat === 'number' ? s.yieldFactorFat : undefined),
         yieldFactorOther: typeof s.yield_factor_other === 'number' ? s.yield_factor_other : (typeof s.yieldFactorOther === 'number' ? s.yieldFactorOther : undefined),
-        boilMinutes: typeof s.boil_minutes === 'number' ? s.boil_minutes : (typeof s.boilMinutes === 'number' ? s.boilMinutes : undefined),
+        boilMinutes: (() => { const stageArr = Array.isArray(s.cook_stages) ? s.cook_stages as Array<{tempF:number;minutes:number}> : []; const bm = typeof s.boil_minutes === 'number' ? s.boil_minutes : (typeof s.boilMinutes === 'number' ? s.boilMinutes : 0); const pm = typeof s.cook_method === 'string' ? s.cook_method : ''; const prepIsBaked = pm === 'baked' || pm === 'par-baked'; return prepIsBaked ? (stageArr[0]?.minutes ?? undefined) : (bm || stageArr[0]?.minutes); })(),
         cookMinutes: typeof s.cook_minutes === 'number' ? s.cook_minutes : (typeof s.cookMinutes === 'number' ? s.cookMinutes : undefined),
         cookTempF: typeof s.cook_temp_f === 'number' ? s.cook_temp_f : (typeof s.cookTempF === 'number' ? s.cookTempF : undefined),
         stages: Array.isArray(s.cook_stages) ? s.cook_stages : (Array.isArray(s.stages) ? s.stages : undefined),
@@ -1634,18 +1636,32 @@
     }
     if (nextSections) {
       sections = nextSections;
-      // Derive recipe-level cookTempF / cookMinutes from the first section
-      // that carries a non-empty stages array (upload.py writes cook_stages
-      // from recipe_sections.csv into Turso sections_json since 2026-07-01).
-      // Skip baked/par-baked sections — their stages drive the Prep display.
-      for (const sec of nextSections) {
-        if (sec.prepMethod !== 'baked' && sec.prepMethod !== 'par-baked' && Array.isArray(sec.stages) && sec.stages.length > 0) {
-          const stgs = sec.stages as Array<{ tempF: number; minutes: number }>;
-          const totalMins = stgs.reduce((sum, st) => sum + (st.minutes ?? 0), 0);
-          if (totalMins > 0 && cookMinutes == null) cookMinutes = totalMins;
-          const lastTempF = stgs[stgs.length - 1].tempF;
-          if (lastTempF > 0 && cookTempF == null) cookTempF = lastTempF;
-          break;
+      // Mirror the moderator $effect: blank the top-bar cook when sections
+      // handle their own heat (hasAnySectionHeat). Only derive a top-bar
+      // cookMinutes for the quiche pattern (all sections assembled raw but
+      // a real oven bake applies to the whole dish).
+      const nonRawSecs = nextSections.filter(sec => sec.prepMethod && sec.prepMethod !== 'none');
+      const hasAnySectionHeat = nonRawSecs.length > 0;
+      const allSectionsRaw = nonRawSecs.length === 0;
+      const primaryIsRawOrEmpty = !cookingMethod || cookingMethod === 'No heat';
+      if (nextSections.length > 0) {
+        if (hasAnySectionHeat || (allSectionsRaw && primaryIsRawOrEmpty)) {
+          cookingMethod = '';
+          cookMinutes = undefined;
+          cookTempF = undefined;
+        } else if (allSectionsRaw && !primaryIsRawOrEmpty) {
+          // Quiche pattern: all sections assembled raw, whole dish bakes.
+          const eligibleSecs = nextSections.filter(
+            sec => sec.prepMethod !== 'baked' && sec.prepMethod !== 'par-baked'
+                && Array.isArray(sec.stages) && sec.stages.length > 0
+          );
+          if (eligibleSecs.length === 1) {
+            const stgs = eligibleSecs[0].stages as Array<{ tempF: number; minutes: number }>;
+            const totalMins = stgs.reduce((sum, st) => sum + (st.minutes ?? 0), 0);
+            if (totalMins > 0 && cookMinutes == null) cookMinutes = totalMins;
+            const lastTempF = stgs[stgs.length - 1].tempF;
+            if (lastTempF > 0 && cookTempF == null) cookTempF = lastTempF;
+          }
         }
       }
     }
