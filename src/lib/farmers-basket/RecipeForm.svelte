@@ -1452,6 +1452,8 @@
     const name =
       (ing as RecipeIngredient).name ??
       (ing as { ing_name?: string }).ing_name ??
+      // v3-build expandedIngredients use long_desc as the display name
+      (ing as { long_desc?: string }).long_desc ??
       '';
     const ndbNo =
       (ing as RecipeIngredient).ndbNo ??
@@ -1475,6 +1477,10 @@
       quantity:
         (ing as RecipeIngredient).quantity ??
         (ing as { ing_qty?: string }).ing_qty ??
+        // v3-build expandedIngredients expose gram weight as a number
+        (typeof (ing as { grams?: unknown }).grams === 'number'
+          ? `${(ing as { grams: number }).grams}g`
+          : undefined) ??
         '',
       gameFood: (ing as RecipeIngredient).gameFood,
       animal: (ing as RecipeIngredient).animal,
