@@ -52,8 +52,8 @@ CRUST_003,crust,Single pie crust (unbaked),raw,raw,1.0,1.0,,,1.0,,,,,
 BKFST_012,sausage,Browned pork sausage,crumbled,fried,0.73,1.0,,,1.0,,,0:7,,
 BKFST_012,gravy,Milk gravy,raw,simmer,0.92,1.0,,,1.0,,,0:5,,
 BKFST_002,biscuit,Biscuit,split,raw,1.0,1.0,,,1.0,,,450:14,,BKFST_001
-BKFST_002,sausage_crumbles,Browned pork sausage,crumbled,raw,1.0,1.0,,,1.0,,,0:7,,BKFST_012
-BKFST_002,milk_gravy,Milk gravy,raw,raw,1.0,1.0,,,1.0,,,0:5,,
+BKFST_002,sausage_crumbles,Browned pork sausage,crumbled,fried,0.73,1.0,,,1.0,,,0:7,,
+BKFST_002,milk_gravy,Milk gravy,raw,simmer,0.92,1.0,,,1.0,,,0:5,,
 BKFST_001,biscuit,Biscuit,formed,baked,0.75,1.0,,,1.0,,,450:14,,
 BKFST_015,sausage,Sausage,patty,fried,0.73,0.91,,,1.0,,,0:8,,
 SWEET_016,cake,Cake,mixed,baked,0.62,1.0,,,1.0,,,350:30,,
