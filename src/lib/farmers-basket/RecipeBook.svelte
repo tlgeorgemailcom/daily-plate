@@ -779,7 +779,7 @@
       recipeName: level.name,
       category: level.category,
       dietaryCategory: level.dietaryCategory,
-      cookingMethod: level.cookingMethod || derivedCookMethod || 'Bake',
+      cookingMethod: level.cookingMethod || derivedCookMethod || '',
       dishFamily: level.dishFamily || '',
       prepTime: level.prepTime || '',
       servings: level.servings || '',

@@ -637,13 +637,12 @@ SIDE_038,sprouts,Roasted Brussels Sprouts,,baked,0.85,1.0,1.0,1.0,1.0,,,,,
 SIDE_039,mushrooms,Stuffed Mushrooms,,baked,0.90,1.0,1.0,1.0,1.0,,,,,
 SIDE_040,succotash,Succotash,,pan grilled,0.90,1.0,1.0,1.0,1.0,,,,,
 SOUP_001,stock,Chicken stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_003
-SOUP_001,soup,Asparagus soup,,boiled,0.88,1.0,1.0,1.0,1.0,,,0:20,,
-SOUP_002,stock,Beef stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_004
-SOUP_002,seasoning,Broth seasoning,,raw,1.0,1.0,1.0,1.0,1.0,,,,,
+SOUP_001,soup,Asparagus soup,,simmer,0.88,1.0,1.0,1.0,1.0,,,0:17,,
+SOUP_002,stock,Beef stock and seasoning,,simmer,1.0,1.0,1.0,1.0,1.0,,,0:20,,STOCK_004
 SOUP_002,noodles,Rice noodles,,boiled,1.0,1.0,1.0,1.0,1.0,,,0:9,,
 SOUP_002,beef,Beef,,raw,1.0,1.0,1.0,1.0,1.0,,,,,
 SOUP_003,stock,Beef stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_004
-SOUP_003,stew,Beef stew,,boiled,0.65,1.0,1.0,1.0,1.0,,,0:90,,
+SOUP_003,stew,Beef stew,,braise,0.65,1.0,1.0,1.0,1.0,,,0:60,,
 SOUP_004,stock,Chicken stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_003
 SOUP_004,soup,Broccoli cheddar,,boiled,0.90,1.0,1.0,1.0,1.0,,,0:25,,
 SOUP_005,stock,Chicken stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_003

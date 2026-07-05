@@ -517,8 +517,8 @@
       "section_key": "stew",
       "section_label": "Beef stew",
       "prep_method": "raw",
-      "cook_method": "boiled",
-      "cooking_method": "boiled",
+      "cook_method": "braise",
+      "cooking_method": "braise",
       "cooking_method_normalized": "boiled",
       "yield_factor_water": 0.65,
       "yield_factor_fat": 1.0,
@@ -538,7 +538,7 @@
       "cook_stages": [
         {
           "tempF": 0,
-          "minutes": 90
+          "minutes": 60
         }
       ],
       "fill_class": ""
