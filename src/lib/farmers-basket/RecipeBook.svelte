@@ -350,11 +350,10 @@
     if (servingsStr) {
       const m = servingsStr.match(/^(\d+(?:\.\d+)?)\s+(.+)$/);
       if (m) {
-        const count = parseFloat(m[1]);
         const unit = m[2].trim();
-        // Keep original count+unit when serving is >1 unit (e.g. "3 enchiladas").
-        // Only singularize when count=1 (e.g. "1 cups" → "1 cup").
-        const label = count > 1 ? `${count} ${unit}` : `1 ${singularizeUnit(unit)}`;
+        // Always show 1 singular unit — the nutrition is always per-serving,
+        // so "12 patties (34.7g)" is wrong; it should be "1 patty (34.7g)".
+        const label = `1 ${singularizeUnit(unit)}`;
         return gStr ? `${label} (${gStr})` : label;
       }
     }
