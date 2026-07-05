@@ -80,13 +80,45 @@ export const GET: RequestHandler = async ({ params }) => {
     // Turso unavailable — fall back to build JSON sections silently
   }
 
-  // upload.py now writes the child recipe's actual cook_method for
-  // component-ref sections directly into sections_json, so no API-layer
-  // correction is needed. Sections from Turso are used as-is.
+  // For composite recipes, override each component_ref section's cook_method
+  // with the child recipe's actual cooking method so section headers show how
+  // that component was prepared (e.g. "baked" for biscuit, not "raw").
+  // upload.py (commit 0731aaae) now writes the correct value for new uploads,
+  // but enrichSection() is kept as a safety net for existing Turso rows that
+  // still carry the old cook_method='raw'. It becomes a no-op once all
+  // composite recipes have been re-uploaded with --commit.
   const rawIngredients = (parsed.ingredients ?? []) as IngredientRow[];
+  const sectionToComponentRef = new Map<string, string>();
+  for (const ing of rawIngredients) {
+    const ref = ing.component_ref as string | undefined;
+    const sec = ing.section as string | undefined;
+    if (ref && sec && !sectionToComponentRef.has(sec)) {
+      sectionToComponentRef.set(sec, ref);
+    }
+  }
+
+  function enrichSection(sec: SectionRow): SectionRow {
+    const ref = sectionToComponentRef.get(sec.section_key as string);
+    if (!ref) return sec;
+    const childBuild = BUILDS_BY_ID[ref];
+    if (!childBuild) return sec;
+    let childCook =
+      (childBuild.cooking_method as string | undefined) ??
+      (childBuild.cook_method as string | undefined);
+    if (!childCook || childCook === 'multi') {
+      const childSecs = (childBuild.sections as SectionRow[] | undefined) ?? [];
+      const dominant = childSecs
+        .slice()
+        .sort((a, b) => ((b.final_grams as number) ?? 0) - ((a.final_grams as number) ?? 0))[0];
+      childCook = dominant?.cook_method as string | undefined;
+    }
+    if (!childCook || childCook === 'multi') return sec;
+    return { ...sec, cook_method: childCook, cooking_method: childCook, cooking_method_normalized: childCook };
+  }
 
   const enrichedSections = tursoSections
-    ?? ((parsed.sections ?? []) as SectionRow[]);
+    ? tursoSections.map(enrichSection)
+    : ((parsed.sections ?? []) as SectionRow[]).map(enrichSection);
 
   // Inline-expand component_ref rows so the edit form gets a flat,
   // fully-editable ingredient list (same as RecipeBook::levelToFormData).
