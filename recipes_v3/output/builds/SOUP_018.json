@@ -9,6 +9,7 @@
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "",
   "audit_notes": "",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 40.12,
   "raw_protein_grams": 108.65,
   "raw_carb_grams": 332.52,
+  "raw_fiber_grams": 70.91,
   "water_lost_grams": -280.6,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 3037.58,
   "grams_per_serving": 759.39,
   "ingredients": [
@@ -217,7 +220,7 @@
     {
       "ingredient_key": "turmeric_ground",
       "ndb_no": "2043",
-      "long_desc": "Spices, turmeric, ground",
+      "long_desc": "\"Spices, turmeric, ground\"",
       "grams": 1.4,
       "section": "soup",
       "ingredient_group": "soup",
@@ -496,6 +499,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 1,
       "raw_grams": 1422.0,
@@ -503,7 +507,11 @@
       "raw_fat_grams": 1.0,
       "raw_protein_grams": 3.41,
       "raw_carb_grams": 13.22,
-      "final_grams": 1422.0
+      "raw_fiber_grams": 9.81,
+      "final_grams": 1422.0,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "soup",
@@ -516,6 +524,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 14,
       "raw_grams": 1334.98,
@@ -523,7 +532,16 @@
       "raw_fat_grams": 39.13,
       "raw_protein_grams": 105.23,
       "raw_carb_grams": 319.3,
-      "final_grams": 1615.58
+      "raw_fiber_grams": 61.1,
+      "final_grams": 1615.58,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 0,
+          "minutes": 37
+        }
+      ],
+      "fill_class": ""
     }
   ]
 }

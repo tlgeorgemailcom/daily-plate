@@ -118,7 +118,7 @@
       "grams": 150.0,
       "section": "stock",
       "ingredient_group": "stock",
-      "qty_display": "1 medium",
+      "qty_display": "1 medium onion, thinly sliced",
       "contribution": {
         "Energy_KCal": 60.0,
         "Protein": 1.65,
@@ -139,7 +139,7 @@
       "grams": 89.0,
       "section": "stock",
       "ingredient_group": "stock",
-      "qty_display": "1 medium",
+      "qty_display": "1 medium leek, thinly sliced",
       "contribution": {
         "Energy_KCal": 54.29,
         "Protein": 1.335,
@@ -160,7 +160,7 @@
       "grams": 80.0,
       "section": "stock",
       "ingredient_group": "stock",
-      "qty_display": "2 stalks celery",
+      "qty_display": "2 stalks celery, thinly sliced",
       "contribution": {
         "Energy_KCal": 12.8,
         "Protein": 0.552,
@@ -181,7 +181,7 @@
       "grams": 18.0,
       "section": "stock",
       "ingredient_group": "stock",
-      "qty_display": "\u00be oz",
+      "qty_display": "\u00be oz fresh parsley, whole sprigs",
       "contribution": {
         "Energy_KCal": 6.48,
         "Protein": 0.535,
@@ -465,7 +465,15 @@
       "raw_protein_grams": 166.53,
       "raw_carb_grams": 40.51,
       "raw_fiber_grams": 7.04,
-      "final_grams": 2979.92
+      "final_grams": 2979.92,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 0,
+          "minutes": 40
+        }
+      ],
+      "fill_class": ""
     }
   ]
 }

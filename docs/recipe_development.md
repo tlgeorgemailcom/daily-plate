@@ -717,3 +717,33 @@ The water-absorption model for dry starches and legumes is implemented in two se
 The same helper exists in `RecipeBook.svelte` (`collabInitialData()` / `creatorInitialData()`) for the in-app draft loading paths.
 
 **When a dev recipe shows `'No heat'` in the cook bar of `/moderate`:** the Turso row has a pipeline-format `cooking_method`. Fix with a direct Turso SQL UPDATE or re-run `normalize_cooking_method.py --commit`.
+
+### Primary Cook Bar Blanking Rules (RecipeForm.svelte `$effect`)
+
+The primary cook bar (`cookingMethod`, `cookMinutes`, `cookTempF`) is blanked automatically when the v3-build API response is loaded into the form. The rule is:
+
+| Situation | Primary cook bar |
+|---|---|
+| Any section has its own heat (1+ non-raw sections) | Blanked — sections display their own heat |
+| All sections raw AND `cookingMethod` is empty or `'No heat'` | Blanked — no meaningful heat exists |
+| All sections raw AND `cookingMethod` is a real heat (e.g. `'Bake'`) | **Kept** — quiche pattern; time/temp derived from section stages |
+
+**The quiche pattern** applies when the entire assembled dish goes into the oven as a unit (e.g. BKFST_025–030). The sections (`crust`, `filling`) are assembled raw (`cook_method='raw'` in `recipe_sections.csv`) and the recipe-level `cooking_method='baked'` in `recipes.csv`. `build.py` promotes the recipe-level method to `dish_method_label` when all sections are raw, which flows through the API as `data.cookMethod='baked'` → normalized to `'Bake'` in the form → kept by the quiche branch.
+
+**The blanking pattern** applies to:
+- Assembly-only recipes with no cooking (avocado toast, bagels, smoked salmon croissant): all sections raw, `cooking_method='raw'` → `cookingMethod='No heat'` → blanked
+- Multi-section recipes where sections handle all cooking (croissant sandwiches, Eggs Benedict): one or more sections have a prep method → blanked
+
+**Where this is implemented:** `RecipeForm.svelte`, inside the v3-build `$effect`, after sections are populated from `data.sections`. Committed `4f0ec712` (2026-07-04).
+
+### Quiche-Pattern Section Authoring
+
+For recipes where all sections are assembled raw but the whole dish applies a single primary heat:
+
+1. Set every section's `cook_method` to `'raw'` in `recipe_sections.csv`. The sections will display as "no heat" in the prep headers — this is correct. The sections are pre-assembled before the oven; no individual section is cooked separately.
+2. Set the recipe's `cooking_method` to the actual method (e.g. `baked`) in `recipes.csv`.
+3. Add `cook_stages` (e.g. `375:37`) to whichever section carries the oven time/temp — typically the crust or the first section listed. The pipeline stores these stages in the section JSON so the form can read them back.
+4. In `build.py` `_build_recipe_multi()`: the `elif` branch fires when all sections are raw AND `recipe.cooking_method` is a non-raw, non-empty, non-multi value — it sets `dish_method_label = recipe.cooking_method`, which the API returns as `data.cookMethod`.
+5. The form's quiche branch picks up `cookingMethod='Bake'` (not raw/empty), finds `eligibleSecs2` with stages, and populates `cookMinutes` and `cookTempF`.
+
+**Key invariant:** a quiche-pattern recipe must have exactly ONE section with non-empty `cook_stages` (so `eligibleSecs2.length === 1`). If two sections both carry stages the branch does not fire and time/temp will not be derived.

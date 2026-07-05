@@ -9,6 +9,7 @@
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "",
   "audit_notes": "",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 139.17,
   "raw_protein_grams": 89.43,
   "raw_carb_grams": 63.52,
+  "raw_fiber_grams": 10.99,
   "water_lost_grams": 108.94,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1389.79,
   "grams_per_serving": 347.45,
   "ingredients": [
@@ -242,7 +245,7 @@
       "grams": 23.4,
       "section": "bisque",
       "ingredient_group": "bisque",
-      "qty_display": "3 tbsp all-purpose flour",
+      "qty_display": "3 tbsp",
       "contribution": {
         "Energy_KCal": 85.176,
         "Protein": 2.417,
@@ -559,6 +562,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 1,
       "raw_grams": 474.0,
@@ -566,7 +570,11 @@
       "raw_fat_grams": 2.94,
       "raw_protein_grams": 9.39,
       "raw_carb_grams": 1.9,
-      "final_grams": 474.0
+      "raw_fiber_grams": 1.14,
+      "final_grams": 474.0,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "bisque",
@@ -579,6 +587,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 17,
       "raw_grams": 1024.73,
@@ -586,7 +595,16 @@
       "raw_fat_grams": 136.23,
       "raw_protein_grams": 80.04,
       "raw_carb_grams": 61.63,
-      "final_grams": 915.79
+      "raw_fiber_grams": 9.85,
+      "final_grams": 915.79,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 0,
+          "minutes": 30
+        }
+      ],
+      "fill_class": ""
     }
   ]
 }

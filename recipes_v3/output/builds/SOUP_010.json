@@ -9,6 +9,7 @@
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "",
   "audit_notes": "",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 26.97,
   "raw_protein_grams": 132.21,
   "raw_carb_grams": 150.41,
+  "raw_fiber_grams": 15.91,
   "water_lost_grams": -255.21,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1820.2,
   "grams_per_serving": 455.05,
   "ingredients": [
@@ -433,6 +436,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 1,
       "raw_grams": 720.0,
@@ -440,7 +444,11 @@
       "raw_fat_grams": 9.65,
       "raw_protein_grams": 27.79,
       "raw_carb_grams": 0.22,
-      "final_grams": 720.0
+      "raw_fiber_grams": 2.38,
+      "final_grams": 720.0,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "soup",
@@ -453,6 +461,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 10,
       "raw_grams": 674.98,
@@ -460,7 +469,16 @@
       "raw_fat_grams": 9.77,
       "raw_protein_grams": 80.33,
       "raw_carb_grams": 28.96,
-      "final_grams": 620.58
+      "raw_fiber_grams": 7.92,
+      "final_grams": 620.58,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 0,
+          "minutes": 20
+        }
+      ],
+      "fill_class": ""
     },
     {
       "section_key": "noodles",
@@ -473,6 +491,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 1,
       "raw_grams": 170.1,
@@ -480,7 +499,16 @@
       "raw_fat_grams": 7.55,
       "raw_protein_grams": 24.09,
       "raw_carb_grams": 121.23,
-      "final_grams": 479.62
+      "raw_fiber_grams": 5.61,
+      "final_grams": 479.62,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 0,
+          "minutes": 10
+        }
+      ],
+      "fill_class": ""
     }
   ]
 }

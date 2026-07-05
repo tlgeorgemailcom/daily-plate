@@ -9,6 +9,7 @@
   "yield_factor_fat": 0.089,
   "yield_factor_protein": 0.395,
   "yield_factor_carbohydrate": 0.02,
+  "yield_factor_fiber": 1.0,
   "servings_count": 2,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 71.04,
   "raw_protein_grams": 400.48,
   "raw_carb_grams": 42.86,
+  "raw_fiber_grams": 11.47,
   "water_lost_grams": 1782.0,
   "fat_lost_grams": 64.71,
   "protein_lost_grams": 242.29,
   "carb_lost_grams": 42.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 3992.31,
   "grams_per_serving": 1996.16,
   "ingredients": [
@@ -94,7 +97,7 @@
       "grams": 150.0,
       "section": "stock",
       "ingredient_group": "stock",
-      "qty_display": "1 large, quartered",
+      "qty_display": "1 large onion, quartered",
       "contribution": {
         "Energy_KCal": 60.0,
         "Protein": 1.65,
@@ -115,7 +118,7 @@
       "grams": 183.0,
       "section": "stock",
       "ingredient_group": "stock",
-      "qty_display": "3 medium",
+      "qty_display": "3 medium carrots, roughly chopped",
       "contribution": {
         "Energy_KCal": 75.03,
         "Protein": 1.702,
@@ -136,7 +139,7 @@
       "grams": 120.0,
       "section": "stock",
       "ingredient_group": "stock",
-      "qty_display": "3 stalks",
+      "qty_display": "3 stalks celery, roughly chopped",
       "contribution": {
         "Energy_KCal": 19.2,
         "Protein": 0.828,
@@ -157,7 +160,7 @@
       "grams": 12.0,
       "section": "stock",
       "ingredient_group": "stock",
-      "qty_display": "4 cloves",
+      "qty_display": "4 cloves garlic, halved",
       "contribution": {
         "Energy_KCal": 17.88,
         "Protein": 0.763,
@@ -423,7 +426,7 @@
   "sections": [
     {
       "section_key": "stock",
-      "section_label": "Stock:",
+      "section_label": "Stock",
       "prep_method": "raw",
       "cook_method": "boiled",
       "cooking_method": "boiled",
@@ -432,6 +435,7 @@
       "yield_factor_fat": 0.089,
       "yield_factor_protein": 0.395,
       "yield_factor_carbohydrate": 0.02,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 0.02,
       "ingredient_count": 12,
       "raw_grams": 6123.32,
@@ -439,7 +443,16 @@
       "raw_fat_grams": 71.04,
       "raw_protein_grams": 400.48,
       "raw_carb_grams": 42.86,
-      "final_grams": 3992.31
+      "raw_fiber_grams": 11.47,
+      "final_grams": 3992.31,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 0,
+          "minutes": 1440
+        }
+      ],
+      "fill_class": ""
     }
   ]
 }

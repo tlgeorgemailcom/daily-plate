@@ -97,7 +97,7 @@
       "grams": 150.0,
       "section": "stock",
       "ingredient_group": "stock",
-      "qty_display": "1 medium",
+      "qty_display": "1 medium onion, quartered",
       "contribution": {
         "Energy_KCal": 60.0,
         "Protein": 1.65,
@@ -118,7 +118,7 @@
       "grams": 122.0,
       "section": "stock",
       "ingredient_group": "stock",
-      "qty_display": "2 medium",
+      "qty_display": "2 medium carrots, roughly chopped",
       "contribution": {
         "Energy_KCal": 50.02,
         "Protein": 1.135,
@@ -139,7 +139,7 @@
       "grams": 120.0,
       "section": "stock",
       "ingredient_group": "stock",
-      "qty_display": "3 stalks celery",
+      "qty_display": "3 stalks celery, roughly chopped",
       "contribution": {
         "Energy_KCal": 19.2,
         "Protein": 0.828,
@@ -160,7 +160,7 @@
       "grams": 89.0,
       "section": "stock",
       "ingredient_group": "stock",
-      "qty_display": "1 medium",
+      "qty_display": "1 medium leek, halved lengthwise",
       "contribution": {
         "Energy_KCal": 54.29,
         "Protein": 1.335,
@@ -423,7 +423,15 @@
       "raw_protein_grams": 355.99,
       "raw_carb_grams": 45.36,
       "raw_fiber_grams": 11.11,
-      "final_grams": 3372.92
+      "final_grams": 3372.92,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 0,
+          "minutes": 180
+        }
+      ],
+      "fill_class": ""
     }
   ]
 }

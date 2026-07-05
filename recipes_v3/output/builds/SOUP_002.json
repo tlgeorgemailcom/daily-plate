@@ -9,6 +9,7 @@
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 24.98,
   "raw_protein_grams": 177.63,
   "raw_carb_grams": 208.34,
+  "raw_fiber_grams": 16.22,
   "water_lost_grams": 406.06,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 3187.15,
   "grams_per_serving": 796.79,
   "ingredients": [
@@ -433,6 +436,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 1,
       "raw_grams": 1892.0,
@@ -440,7 +444,11 @@
       "raw_fat_grams": 3.59,
       "raw_protein_grams": 83.44,
       "raw_carb_grams": 0.57,
-      "final_grams": 1892.0
+      "raw_fiber_grams": 7.0,
+      "final_grams": 1892.0,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "seasoning",
@@ -453,6 +461,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 8,
       "raw_grams": 188.2,
@@ -460,7 +469,11 @@
       "raw_fat_grams": 1.5,
       "raw_protein_grams": 7.32,
       "raw_carb_grams": 25.93,
-      "final_grams": 188.2
+      "raw_fiber_grams": 5.59,
+      "final_grams": 188.2,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "noodles",
@@ -473,6 +486,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 2,
       "raw_grams": 1172.8,
@@ -480,7 +494,16 @@
       "raw_fat_grams": 1.27,
       "raw_protein_grams": 13.49,
       "raw_carb_grams": 181.85,
-      "final_grams": 766.75
+      "raw_fiber_grams": 3.63,
+      "final_grams": 766.75,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 0,
+          "minutes": 9
+        }
+      ],
+      "fill_class": ""
     },
     {
       "section_key": "beef",
@@ -493,6 +516,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 1,
       "raw_grams": 340.2,
@@ -500,7 +524,11 @@
       "raw_fat_grams": 18.61,
       "raw_protein_grams": 73.38,
       "raw_carb_grams": 0.0,
-      "final_grams": 340.2
+      "raw_fiber_grams": 0.0,
+      "final_grams": 340.2,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

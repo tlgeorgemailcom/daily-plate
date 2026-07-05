@@ -9,6 +9,7 @@
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "",
   "audit_notes": "",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 163.96,
   "raw_protein_grams": 123.33,
   "raw_carb_grams": 207.16,
+  "raw_fiber_grams": 16.46,
   "water_lost_grams": 191.57,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 2392.33,
   "grams_per_serving": 598.08,
   "ingredients": [
@@ -179,7 +182,7 @@
       "grams": 23.4,
       "section": "chowder",
       "ingredient_group": "chowder",
-      "qty_display": "3 tbsp all-purpose flour",
+      "qty_display": "3 tbsp",
       "contribution": {
         "Energy_KCal": 85.176,
         "Protein": 2.417,
@@ -496,6 +499,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 1,
       "raw_grams": 474.0,
@@ -503,7 +507,11 @@
       "raw_fat_grams": 2.94,
       "raw_protein_grams": 9.39,
       "raw_carb_grams": 1.9,
-      "final_grams": 474.0
+      "raw_fiber_grams": 1.14,
+      "final_grams": 474.0,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "chowder",
@@ -516,6 +524,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 14,
       "raw_grams": 2109.9,
@@ -523,7 +532,16 @@
       "raw_fat_grams": 161.03,
       "raw_protein_grams": 113.94,
       "raw_carb_grams": 205.26,
-      "final_grams": 1918.33
+      "raw_fiber_grams": 15.32,
+      "final_grams": 1918.33,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 0,
+          "minutes": 25
+        }
+      ],
+      "fill_class": ""
     }
   ]
 }

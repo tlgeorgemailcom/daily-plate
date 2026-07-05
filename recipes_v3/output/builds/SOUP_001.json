@@ -9,6 +9,7 @@
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 79.54,
   "raw_protein_grams": 53.43,
   "raw_carb_grams": 46.73,
+  "raw_fiber_grams": 15.26,
   "water_lost_grams": 73.69,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1624.99,
   "grams_per_serving": 406.25,
   "ingredients": [
@@ -391,6 +394,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 1,
       "raw_grams": 946.0,
@@ -398,7 +402,11 @@
       "raw_fat_grams": 12.68,
       "raw_protein_grams": 36.52,
       "raw_carb_grams": 0.28,
-      "final_grams": 946.0
+      "raw_fiber_grams": 3.12,
+      "final_grams": 946.0,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "soup",
@@ -411,6 +419,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 9,
       "raw_grams": 752.68,
@@ -418,7 +427,16 @@
       "raw_fat_grams": 66.86,
       "raw_protein_grams": 16.92,
       "raw_carb_grams": 46.44,
-      "final_grams": 678.99
+      "raw_fiber_grams": 12.13,
+      "final_grams": 678.99,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 0,
+          "minutes": 20
+        }
+      ],
+      "fill_class": ""
     }
   ]
 }

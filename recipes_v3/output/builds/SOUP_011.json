@@ -9,6 +9,7 @@
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "",
   "audit_notes": "",
@@ -17,10 +18,12 @@
   "raw_fat_grams": 158.26,
   "raw_protein_grams": 148.55,
   "raw_carb_grams": 96.75,
+  "raw_fiber_grams": 30.82,
   "water_lost_grams": 234.13,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1727.24,
   "grams_per_serving": 431.81,
   "ingredients": [
@@ -454,6 +457,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 1,
       "raw_grams": 240.0,
@@ -461,7 +465,11 @@
       "raw_fat_grams": 0.46,
       "raw_protein_grams": 10.58,
       "raw_carb_grams": 0.07,
-      "final_grams": 240.0
+      "raw_fiber_grams": 0.89,
+      "final_grams": 240.0,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "chili",
@@ -474,6 +482,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 12,
       "raw_grams": 1721.38,
@@ -481,7 +490,16 @@
       "raw_fat_grams": 157.81,
       "raw_protein_grams": 137.97,
       "raw_carb_grams": 96.68,
-      "final_grams": 1487.24
+      "raw_fiber_grams": 29.93,
+      "final_grams": 1487.24,
+      "boil_minutes": 0,
+      "cook_stages": [
+        {
+          "tempF": 0,
+          "minutes": 45
+        }
+      ],
+      "fill_class": ""
     }
   ]
 }

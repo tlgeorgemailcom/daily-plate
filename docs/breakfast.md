@@ -106,15 +106,15 @@ Prep: Bacon and cheese filling | no heat
 
 31. Frittata Herbs and Cheese | 6 min | Pan Grill
 
-32. Avocado Toast Basic | No heat
+32. Avocado Toast Basic
 
-33. Avocado Toast Tomato and Egg | no primary
+33. Avocado Toast Tomato and Egg
 Currently has Avocado Toast Tomato and Egg: needs a spilt
 Prep: Avocado toast tomato | no heat
 Prep: Egg | 4 min | simmer (lid off)
 
 
-34. Croissant Egg & Cheese Sandwich | no primary
+34. Croissant Egg & Cheese Sandwich
 Prep: Eggs | 2 min | pan grilled
 Prep: Assembly | no heat
 
@@ -129,17 +129,17 @@ Prep: Assembly | no heat
 
 
 
-37. Croissant Ham, Egg & Cheese Sandwich | no primary
+37. Croissant Ham, Egg & Cheese Sandwich
 Prep: Ham | 2 min | pan grilled
 Prep: Eggs  | 2 min | pan grilled
 Prep: Assembly | no heat
 
-38. Croissant Smoked Salmon & Cream Cheese | no heat
+38. Croissant Smoked Salmon & Cream Cheese
 
 
-39. Bagel & Cream Cheese | no heat
+39. Bagel & Cream Cheese
 
-40. Bagel & Lox | no heat
+40. Bagel & Lox
 
 41. Denver Scrambler | 7 min | Pan grill
 
