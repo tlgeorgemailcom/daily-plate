@@ -862,14 +862,15 @@
   // been independently validated against canonical USDA. v3 is never uploaded
   // to Turso here — this is read-only display.
   type V3Ingredient = {
-    ingredient_key: string;
-    ndb_no: string;
-    long_desc: string;
-    grams: number;
+    name: string;
+    quantity: string;
+    ndbNo: string | number;
+    portionGrams: number;
     section?: string;
-    ingredient_group?: string;
-    qty_display?: string;
-    component_ref?: string;
+    foodWord?: string;
+    portionDesc?: string;
+    isDish?: boolean;
+    componentRef?: string;
   };
   type V3Build = {
     recipe_id: string;
@@ -992,31 +993,31 @@
         // Composite recipes (Rule D) reference child recipes via `component_ref`
         // rows that have no NDB. We skip those here and rely on initialData's
         // pre-expanded children (from levelToFormData) to populate the editor.
-        const v3LeafIngredients = (data.ingredients ?? []).filter((ing) => !ing.component_ref);
+        const v3LeafIngredients = (data.ingredients ?? []).filter((ing) => !ing.componentRef);
         if (v3LeafIngredients.length > 0) {
           const ndbToFood = new Map(FOODS.map(f => [f.ndb, f]));
           ingredients = v3LeafIngredients.map((ing, i) => {
-            const food = ndbToFood.get(ing.ndb_no);
+            const food = ndbToFood.get(ing.ndbNo);
             return {
               id: i + 1,
-              name: ing.long_desc || ing.ingredient_key,
-              quantity: ing.qty_display || `${ing.grams.toFixed(1)} g`,
+              name: ing.name,
+              quantity: ing.quantity || `${(ing.portionGrams ?? 0).toFixed(1)} g`,
               gameFood: '' as FoodType | '',
               animal: '' as AnimalType | '',
-              foodWord: food?.word,
-              ndbNo: ing.ndb_no,
-              portionDesc: ing.qty_display || `${ing.grams.toFixed(1)} g`,
-              portionGrams: ing.grams,
+              foodWord: food?.word ?? ing.foodWord,
+              ndbNo: ing.ndbNo,
+              portionDesc: ing.quantity || `${(ing.portionGrams ?? 0).toFixed(1)} g`,
+              portionGrams: ing.portionGrams,
               servingCount: 1,
               ingredientStatus: 'required' as const,
               section: ing.section,
-              ingredient_group: ing.ingredient_group || ing.section,
+              ingredient_group: ing.section,
             };
           });
           nextIngredientId = ingredients.length + 1;
           // Append moderator-added ingredients from stored data that aren't in the v3 build
           // (e.g. optional spices added via the Edit Recipe UI).
-          const v3NdbNos = new Set(v3LeafIngredients.map((i) => i.ndb_no).filter(Boolean));
+          const v3NdbNos = new Set(v3LeafIngredients.map((i) => i.ndbNo).filter(Boolean));
           const storedExtras = (initialData.ingredients ?? []).filter(
             (ing) => !ing.isDish && (ing.ndbNo ? !v3NdbNos.has(ing.ndbNo) : true)
           );
@@ -2324,10 +2325,10 @@
                   <tbody>
                     {#each v3Build.ingredients as ing}
                       <tr>
-                        <td>{ing.long_desc || ing.ingredient_key}</td>
-                        <td class="mono">{ing.ndb_no}</td>
-                        <td class="num">{ing.grams.toFixed(1)}</td>
-                        <td>{ing.qty_display || ''}</td>
+                        <td>{ing.name}</td>
+                        <td class="mono">{ing.ndbNo ?? ''}</td>
+                        <td class="num">{(ing.portionGrams ?? 0).toFixed(1)}</td>
+                        <td>{ing.quantity || ''}</td>
                       </tr>
                     {/each}
                   </tbody>

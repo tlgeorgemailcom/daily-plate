@@ -52,81 +52,114 @@ export const GET: RequestHandler = async ({ params }) => {
   }
 
   // ── Section cook data: prefer Turso (always current) over build JSON ──────
-  // upload.py writes cook_method, cook_stages, boil_minutes, fill_class, and
-  // all yield factors into sections_json on every --commit run. Reading from
-  // Turso means the form sees up-to-date section structure without requiring a
-  // Vite rebuild. Fall back to the build JSON sections if Turso is unavailable
-  // or the row has no sections_json yet.
+  // ── Sections + Ingredients: Turso is the sole source of truth ────────────
+  // upload.py writes both sections_json and recipe_ingredients_json on every
+  // --commit run. Reading from Turso means forms always see current data
+  // without requiring a Vite rebuild. Fall back to build JSON only when Turso
+  // is unavailable.
   type SectionRow = Record<string, unknown>;
-  type IngredientRow = Record<string, unknown>;
+  type TursoIngredient = {
+    name: string; quantity: string; section?: string; foodWord?: string;
+    ndbNo: string | number; portionDesc?: string; portionGrams: number;
+    servingCount?: number; isDish?: boolean; componentRef?: string;
+  };
 
   let tursoSections: SectionRow[] | null = null;
+  let tursoIngredients: TursoIngredient[] | null = null;
   try {
     const db = getGameDb();
     const result = await db.execute({
-      sql: 'SELECT sections_json FROM dev_recipes WHERE recipe_id = ?',
+      sql: 'SELECT sections_json, recipe_ingredients_json FROM dev_recipes WHERE recipe_id = ?',
       args: [recipeId],
     });
     if (result.rows.length > 0) {
-      const raw = result.rows[0].sections_json as string | null;
-      if (raw) {
-        const parsed_sections = JSON.parse(raw) as SectionRow[];
-        if (Array.isArray(parsed_sections) && parsed_sections.length > 0) {
-          tursoSections = parsed_sections;
-        }
+      const rawSections = result.rows[0].sections_json as string | null;
+      if (rawSections) {
+        const ps = JSON.parse(rawSections) as SectionRow[];
+        if (Array.isArray(ps) && ps.length > 0) tursoSections = ps;
+      }
+      const rawIngs = result.rows[0].recipe_ingredients_json as string | null;
+      if (rawIngs) {
+        const pi = JSON.parse(rawIngs) as TursoIngredient[];
+        if (Array.isArray(pi) && pi.length > 0) tursoIngredients = pi;
       }
     }
   } catch {
-    // Turso unavailable — fall back to build JSON sections silently
+    // Turso unavailable — fall back to build JSON silently
   }
 
-  // upload.py writes the child recipe's actual cook_method for component-ref
-  // sections directly into sections_json, so sections from Turso are correct
-  // as-is. Build JSON sections are used only as a fallback when Turso is
-  // unavailable.
-  const rawIngredients = (parsed.ingredients ?? []) as IngredientRow[];
-
-  const enrichedSections = tursoSections
-    ?? ((parsed.sections ?? []) as SectionRow[]);
-
-  // Inline-expand component_ref rows so the edit form gets a flat,
-  // fully-editable ingredient list (same as RecipeBook::levelToFormData).
-  // Each component_ref's child leaf ingredients are scaled to the grams
-  // used in this recipe and inherit the parent row's section key.
-  const expandedIngredients: IngredientRow[] = [];
-  for (const ing of rawIngredients) {
-    const ref = ing.component_ref as string | undefined;
-    if (!ref) {
-      expandedIngredients.push(ing);
-      continue;
+  // Expand component_ref rows using child recipe data from Turso.
+  let expandedIngredients: TursoIngredient[] = [];
+  if (tursoIngredients !== null) {
+    const childIds = [...new Set(
+      tursoIngredients.filter(i => i.componentRef).map(i => i.componentRef!)
+    )];
+    let childIngsMap: Record<string, TursoIngredient[]> = {};
+    if (childIds.length > 0) {
+      try {
+        const db = getGameDb();
+        const placeholders = childIds.map(() => '?').join(',');
+        const childResult = await db.execute({
+          sql: `SELECT recipe_id, recipe_ingredients_json FROM dev_recipes WHERE recipe_id IN (${placeholders})`,
+          args: childIds,
+        });
+        for (const row of childResult.rows) {
+          const cId = row.recipe_id as string;
+          const cJson = row.recipe_ingredients_json as string | null;
+          if (cJson) childIngsMap[cId] = JSON.parse(cJson) as TursoIngredient[];
+        }
+      } catch { /* ignore — child rows stay unresolved */ }
     }
-    const childBuild = BUILDS_BY_ID[ref];
-    if (!childBuild) {
-      expandedIngredients.push(ing); // unknown child: keep ref as-is
-      continue;
+    for (const ing of tursoIngredients) {
+      if (!ing.componentRef) { expandedIngredients.push(ing); continue; }
+      const childLeafs = (childIngsMap[ing.componentRef] ?? []).filter(c => !c.componentRef);
+      if (childLeafs.length === 0) { expandedIngredients.push(ing); continue; }
+      const childBatch = childLeafs.reduce((s, c) => s + c.portionGrams, 0);
+      const scale = childBatch > 0 && ing.portionGrams > 0 ? ing.portionGrams / childBatch : 1;
+      for (const c of childLeafs) {
+        expandedIngredients.push({
+          ...c,
+          portionGrams: Math.round(c.portionGrams * scale * 100) / 100,
+          section: ing.section,
+        });
+      }
     }
-    const childLeafs = ((childBuild.ingredients ?? []) as IngredientRow[]).filter(
-      (c) => !c.component_ref,
-    );
-    if (childLeafs.length === 0) {
-      expandedIngredients.push(ing); // empty child: keep ref as-is
-      continue;
-    }
-    const childBatch = childLeafs.reduce((s, c) => s + ((c.grams as number) || 0), 0);
-    const parentGrams = (ing.grams as number) || 0;
-    const scale = childBatch > 0 && parentGrams > 0 ? parentGrams / childBatch : 1;
-    for (const c of childLeafs) {
-      expandedIngredients.push({
-        ingredient_key: c.ingredient_key,
-        ndb_no: c.ndb_no,
-        long_desc: c.long_desc,
-        grams: Math.round(((c.grams as number) || 0) * scale * 100) / 100,
-        section: ing.section,
-        ingredient_group: ing.ingredient_group ?? ing.section,
-        // qty_display omitted intentionally — the scaled gram weight is shown
-      });
+  } else {
+    // Fallback: expand from build JSON when Turso is unavailable
+    type IngredientRow = Record<string, unknown>;
+    const rawIngredients = (parsed.ingredients ?? []) as IngredientRow[];
+    for (const ing of rawIngredients) {
+      const ref = ing.component_ref as string | undefined;
+      if (!ref) {
+        expandedIngredients.push({
+          name: (ing.long_desc as string) || (ing.ingredient_key as string),
+          quantity: (ing.qty_display as string) || '',
+          ndbNo: (ing.ndb_no as string) || '',
+          portionGrams: (ing.grams as number) || 0,
+          section: ing.section as string | undefined,
+        });
+        continue;
+      }
+      const childBuild = BUILDS_BY_ID[ref];
+      if (!childBuild) continue;
+      const childLeafs = ((childBuild.ingredients ?? []) as IngredientRow[]).filter(c => !c.component_ref);
+      if (childLeafs.length === 0) continue;
+      const childBatch = childLeafs.reduce((s, c) => s + ((c.grams as number) || 0), 0);
+      const parentGrams = (ing.grams as number) || 0;
+      const scale = childBatch > 0 && parentGrams > 0 ? parentGrams / childBatch : 1;
+      for (const c of childLeafs) {
+        expandedIngredients.push({
+          name: (c.long_desc as string) || (c.ingredient_key as string),
+          quantity: '',
+          ndbNo: (c.ndb_no as string) || '',
+          portionGrams: Math.round(((c.grams as number) || 0) * scale * 100) / 100,
+          section: ing.section as string | undefined,
+        });
+      }
     }
   }
+
+  const enrichedSections = tursoSections ?? ((parsed.sections ?? []) as SectionRow[]);
 
   return json({
     recipe_id: parsed.recipe_id,
