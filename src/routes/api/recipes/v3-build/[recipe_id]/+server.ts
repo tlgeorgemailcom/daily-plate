@@ -88,41 +88,20 @@ export const GET: RequestHandler = async ({ params }) => {
     // Turso unavailable — fall back to build JSON silently
   }
 
-  // Expand component_ref rows using child recipe data from Turso.
+  // Build expanded ingredient list — component_ref rows are kept as single lines
+  // (not expanded into constituent raw ingredients).
   let expandedIngredients: TursoIngredient[] = [];
   if (tursoIngredients !== null) {
-    const childIds = [...new Set(
-      tursoIngredients.filter(i => i.componentRef).map(i => i.componentRef!)
-    )];
-    let childIngsMap: Record<string, TursoIngredient[]> = {};
-    if (childIds.length > 0) {
-      try {
-        const db = getGameDb();
-        const placeholders = childIds.map(() => '?').join(',');
-        const childResult = await db.execute({
-          sql: `SELECT recipe_id, recipe_ingredients_json FROM dev_recipes WHERE recipe_id IN (${placeholders})`,
-          args: childIds,
-        });
-        for (const row of childResult.rows) {
-          const cId = row.recipe_id as string;
-          const cJson = row.recipe_ingredients_json as string | null;
-          if (cJson) childIngsMap[cId] = JSON.parse(cJson) as TursoIngredient[];
-        }
-      } catch { /* ignore — child rows stay unresolved */ }
-    }
     for (const ing of tursoIngredients) {
       if (!ing.componentRef) { expandedIngredients.push(ing); continue; }
-      const childLeafs = (childIngsMap[ing.componentRef] ?? []).filter(c => !c.componentRef);
-      if (childLeafs.length === 0) { expandedIngredients.push(ing); continue; }
-      const childBatch = childLeafs.reduce((s, c) => s + c.portionGrams, 0);
-      const scale = childBatch > 0 && ing.portionGrams > 0 ? ing.portionGrams / childBatch : 1;
-      for (const c of childLeafs) {
-        expandedIngredients.push({
-          ...c,
-          portionGrams: Math.round(c.portionGrams * scale * 100) / 100,
-          section: ing.section,
-        });
-      }
+      // Keep component-ref rows as single ingredient lines — do NOT expand into
+      // constituent raw ingredients. Shows "2 cups Beef Stock (recipe)" rather
+      // than "4 lb beef shank, 12 cups water…" in the moderator edit form.
+      expandedIngredients.push({ ...ing, isDish: false });
+    }
+      // constituent raw ingredients. Shows "2 cups Beef Stock (recipe)" rather
+      // than "4 lb beef shank, 12 cups water…" in the moderator edit form.
+      expandedIngredients.push({ ...ing, isDish: false });
     }
   } else {
     // Fallback: expand from build JSON when Turso is unavailable

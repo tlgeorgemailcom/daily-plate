@@ -699,28 +699,15 @@
       for (const ing of level.recipeIngredients) {
         if (ing.isDish && !ing.componentRef) continue; // strip parent dish-header
         if (ing.componentRef) {
-          const child = levels.find((l) => l.id === ing.componentRef);
-          const childIngs = child?.recipeIngredients?.filter((c) => !c.isDish || !!c.componentRef);
-          if (!childIngs || childIngs.length === 0) {
-            expanded.push(ing); // fallback: keep ref as-is
-            continue;
-          }
-          const childBatch = childIngs.reduce((s, c) => s + (c.portionGrams || 0), 0);
-          const parentGrams = ing.portionGrams || 0;
-          const scale = childBatch > 0 && parentGrams > 0 ? parentGrams / childBatch : 1;
-          for (const c of childIngs) {
-            expanded.push({
-              ...c,
-              section: ing.section, // inherit parent's section
-              portionGrams:
-                typeof c.portionGrams === 'number'
-                  ? Math.round(c.portionGrams * scale * 100) / 100
-                  : c.portionGrams
-            });
-          }
-        } else {
-          expanded.push(ing);
+          // Keep component-ref rows (stock, broth, sauce, etc.) as single ingredient
+          // lines — do NOT expand into constituent raw ingredients. Showing "2 cups
+          // Beef Stock (recipe)" is far cleaner than expanding to "4 lb beef shank,
+          // 12 cups water…" in the edit form. The cook can refer to the linked recipe
+          // for the stock/sauce detail.
+          expanded.push({ ...ing, isDish: false });
+          continue;
         }
+        expanded.push(ing);
       }
       // Map recipeIngredients to form ingredients, matching with game foods from recipe array
       ingredients = expanded.map((ing, i) => {
@@ -759,11 +746,12 @@
     
     const nj = level.nutritionJson as (typeof level.nutritionJson & { yieldFactorWater?: number; yieldFactorFat?: number }) | undefined;
 
-    // Derive cookTempF/cookMinutes from bundle sections (populated since generate_bundle fix).
+    // Derive cookTempF/cookMinutes and cookingMethod from bundle sections.
     // This covers Rule D recipes where the v3-build API is not called on non-moderator views.
     // For Rule A/B recipes the v3-build effect will overwrite these if they differ.
     let derivedCookMinutes: number | undefined;
     let derivedCookTempF: number | undefined;
+    let derivedCookMethod: string | undefined;
     if (level.sections && level.sections.length > 0) {
       // Only derive primary cook when exactly ONE non-baked section has stages.
       // Two or more staged sections = "no primary cook" recipe: primary fields stay blank
@@ -780,6 +768,10 @@
         if (totalMins > 0) derivedCookMinutes = totalMins;
         const lastTempF = stgs[stgs.length - 1]?.tempF ?? 0;
         if (lastTempF > 0) derivedCookTempF = lastTempF;
+        // Derive cookingMethod from the eligible (staged) section when not set at level
+        if (!level.cookingMethod) {
+          derivedCookMethod = eligibleSecs[0].cookingMethod as string | undefined;
+        }
       }
     }
 
@@ -787,7 +779,7 @@
       recipeName: level.name,
       category: level.category,
       dietaryCategory: level.dietaryCategory,
-      cookingMethod: level.cookingMethod || 'Bake',
+      cookingMethod: level.cookingMethod || derivedCookMethod || 'Bake',
       dishFamily: level.dishFamily || '',
       prepTime: level.prepTime || '',
       servings: level.servings || '',
