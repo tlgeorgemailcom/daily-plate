@@ -968,8 +968,9 @@
           const primaryIsRawOrEmpty = !cookingMethod || cookingMethod === 'No heat';
 
           if (sections.length > 0) {
-            if (hasAnySectionHeat || (allSectionsRaw && primaryIsRawOrEmpty)) {
-              // Sections display their own heat, or there's no meaningful primary heat
+            if ((hasAnySectionHeat && !data.cookMethod) || (allSectionsRaw && primaryIsRawOrEmpty)) {
+              // Sections display their own heat with no explicit recipe-level cook method,
+              // or there's no meaningful primary heat — blank the top bar.
               cookingMethod = '';
               cookMinutes = undefined;
               cookTempF = undefined;
@@ -1070,10 +1071,10 @@
             }
             nextIngredientId = idx;
           }
-          // When sections drive per-stage cooking methods, the recipe-wide
-          // cookingMethod field is meaningless — leave it untouched (the UI
-          // hides the field when sections.length > 0).
-          if (data.cookMethod && (!data.sections || data.sections.length === 0)) {
+          // Apply the recipe-level cook method from Turso — this is the explicit
+          // authored value and is the source of truth for the top bar regardless
+          // of whether the recipe has sections.
+          if (data.cookMethod) {
             const cm = data.cookMethod.trim();
             const norm = cm.toLowerCase() === 'no heat' || cm.toLowerCase() === 'noheat' || cm.toLowerCase() === 'none'
               ? 'No heat'
@@ -1658,8 +1659,9 @@
       const hasAnySectionHeat = nonRawSecs.length > 0;
       const allSectionsRaw = nonRawSecs.length === 0;
       const primaryIsRawOrEmpty = !cookingMethod || cookingMethod === 'No heat';
+      const explicitCookMethod = (v3Data as Record<string, unknown> | null)?.cookMethod as string | undefined;
       if (nextSections.length > 0) {
-        if (hasAnySectionHeat || (allSectionsRaw && primaryIsRawOrEmpty)) {
+        if ((hasAnySectionHeat && !explicitCookMethod) || (allSectionsRaw && primaryIsRawOrEmpty)) {
           cookingMethod = '';
           cookMinutes = undefined;
           cookTempF = undefined;
@@ -1680,6 +1682,15 @@
       }
     }
 
+    // Apply the explicit recipe-level cook method from Turso (same as v3-build $effect).
+    if (explicitCookMethod) {
+      const cm = explicitCookMethod.trim();
+      const norm = cm.toLowerCase() === 'no heat' || cm.toLowerCase() === 'noheat' || cm.toLowerCase() === 'none'
+        ? 'No heat'
+        : cm.charAt(0).toUpperCase() + cm.slice(1).toLowerCase();
+      const match = COOKING_METHODS.find(m => m.toLowerCase() === norm.toLowerCase());
+      if (match) cookingMethod = match;
+    }
     suggestionsDismissed = true;
     // Load stored nutrition from the source recipe (comes from dev_recipes).
     persistedNutrition = suggestion.nutritionJson ?? null;
