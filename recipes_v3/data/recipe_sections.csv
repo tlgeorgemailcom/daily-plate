@@ -637,54 +637,54 @@ SIDE_038,sprouts,Roasted Brussels Sprouts,,baked,0.85,1.0,1.0,1.0,1.0,,,,,
 SIDE_039,mushrooms,Stuffed Mushrooms,,baked,0.90,1.0,1.0,1.0,1.0,,,,,
 SIDE_040,succotash,Succotash,,pan grilled,0.90,1.0,1.0,1.0,1.0,,,,,
 SOUP_001,stock,Chicken stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_003
-SOUP_001,soup,Asparagus soup,,boiled,0.88,1.0,1.0,1.0,1.0,,,,,
+SOUP_001,soup,Asparagus soup,,boiled,0.88,1.0,1.0,1.0,1.0,,,0:20,,
 SOUP_002,stock,Beef stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_004
 SOUP_002,seasoning,Broth seasoning,,raw,1.0,1.0,1.0,1.0,1.0,,,,,
-SOUP_002,noodles,Rice noodles,,boiled,1.0,1.0,1.0,1.0,1.0,,,,,
+SOUP_002,noodles,Rice noodles,,boiled,1.0,1.0,1.0,1.0,1.0,,,0:9,,
 SOUP_002,beef,Beef,,raw,1.0,1.0,1.0,1.0,1.0,,,,,
 SOUP_003,stock,Beef stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_004
-SOUP_003,stew,Beef stew,,boiled,0.65,1.0,1.0,1.0,1.0,,,,,
+SOUP_003,stew,Beef stew,,boiled,0.65,1.0,1.0,1.0,1.0,,,0:90,,
 SOUP_004,stock,Chicken stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_003
-SOUP_004,soup,Broccoli cheddar,,boiled,0.90,1.0,1.0,1.0,1.0,,,,,
+SOUP_004,soup,Broccoli cheddar,,boiled,0.90,1.0,1.0,1.0,1.0,,,0:25,,
 SOUP_005,stock,Chicken stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_003
-SOUP_005,egg_drop,Egg drop,,boiled,0.95,1.0,1.0,1.0,1.0,,,,,
+SOUP_005,egg_drop,Egg drop,,boiled,0.95,1.0,1.0,1.0,1.0,,,0:6,,
 SOUP_006,stock,Chicken stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_003
-SOUP_006,hot_sour,Hot and sour,,boiled,0.92,1.0,1.0,1.0,1.0,,,,,
+SOUP_006,hot_sour,Hot and sour,,boiled,0.92,1.0,1.0,1.0,1.0,,,0:15,,
 SOUP_007,stock,Chicken stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_003
-SOUP_007,soup,Tortilla soup,,boiled,0.88,1.0,1.0,1.0,1.0,,,,,
+SOUP_007,soup,Tortilla soup,,boiled,0.88,1.0,1.0,1.0,1.0,,,0:30,,
 SOUP_008,stock,Vegetable stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_007
-SOUP_008,chili,Chili,,boiled,0.9,1.0,1.0,1.0,1.0,,,,,
+SOUP_008,chili,Chili,,boiled,0.9,1.0,1.0,1.0,1.0,,,0:45,,
 SOUP_009,stock,Chicken stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_003
 SOUP_009,cajun_spice,Creole seasoning,,raw,1.0,1.0,1.0,1.0,1.0,,,,,SAUCE_014
-SOUP_009,gumbo,Gumbo,,boiled,0.88,1.0,1.0,1.0,1.0,,,,,
+SOUP_009,gumbo,Gumbo,,boiled,0.88,1.0,1.0,1.0,1.0,,,0:50,,
 SOUP_010,stock,White Chicken Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_003
-SOUP_010,soup,Soup,,boiled,0.9,1.0,1.0,1.0,1.0,,,,,
-SOUP_010,noodles,Noodles,,boiled,1.0,1.0,1.0,1.0,1.0,,,,,
+SOUP_010,soup,Soup,,boiled,0.9,1.0,1.0,1.0,1.0,,,0:20,,
+SOUP_010,noodles,Noodles,,boiled,1.0,1.0,1.0,1.0,1.0,,,0:10,,
 SOUP_011,stock,Beef Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_004
-SOUP_011,chili,Chili,,boiled,0.82,1.0,1.0,1.0,1.0,,,,,
+SOUP_011,chili,Chili,,boiled,0.82,1.0,1.0,1.0,1.0,,,0:45,,
 SOUP_012,stock,Beef Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_004
-SOUP_012,chili,Chili,,boiled,0.82,1.0,1.0,1.0,1.0,,,,,
+SOUP_012,chili,Chili,,boiled,0.82,1.0,1.0,1.0,1.0,,,0:45,,
 SOUP_013,fish_stock,Fish Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_006
 SOUP_013,cajun_spice,Creole Seasoning,,raw,1.0,1.0,1.0,1.0,1.0,,,,,SAUCE_014
-SOUP_013,gumbo,Gumbo,,boiled,0.88,1.0,1.0,1.0,1.0,,,,,
+SOUP_013,gumbo,Gumbo,,boiled,0.88,1.0,1.0,1.0,1.0,,,0:45,,
 SOUP_014,vegetable_stock,Vegetable Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_007
-SOUP_014,soup,Soup,,boiled,0.88,1.0,1.0,1.0,1.0,,,,,
+SOUP_014,soup,Soup,,boiled,0.88,1.0,1.0,1.0,1.0,,,0:30,,
 SOUP_015,fish_stock,Fish Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_006
-SOUP_015,chowder,Chowder,,boiled,0.88,1.0,1.0,1.0,1.0,,,,,
+SOUP_015,chowder,Chowder,,boiled,0.88,1.0,1.0,1.0,1.0,,,0:25,,
 SOUP_016,fish_stock,Fish Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_006
-SOUP_016,chowder,Chowder,,boiled,0.85,1.0,1.0,1.0,1.0,,,,,
+SOUP_016,chowder,Chowder,,boiled,0.85,1.0,1.0,1.0,1.0,,,0:30,,
 SOUP_017,beef_stock,Beef Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_004
-SOUP_017,onion_soup,Caramelized Onion Soup,,pan grilled,0.25,1.0,1.0,1.0,1.0,,,,,
-SOUP_017,topping,Topping,,baked,0.95,1.0,1.0,1.0,1.0,,,,,
+SOUP_017,onion_soup,Caramelized Onion Soup,,pan grilled,0.25,1.0,1.0,1.0,1.0,,,0:45,,
+SOUP_017,topping,Topping,,baked,0.95,1.0,1.0,1.0,1.0,,,375:10,,
 SOUP_018,vegetable_stock,Vegetable Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_007
-SOUP_018,soup,Soup,,boiled,1.0,1.0,1.0,1.0,1.0,,,,,
+SOUP_018,soup,Soup,,boiled,1.0,1.0,1.0,1.0,1.0,,,0:37,,
 SOUP_019,fish_stock,Fish Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_006
-SOUP_019,bisque,Bisque,,boiled,0.85,1.0,1.0,1.0,1.0,,,,,
+SOUP_019,bisque,Bisque,,boiled,0.85,1.0,1.0,1.0,1.0,,,0:30,,
 SOUP_020,stock,Vegetable Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_007
-SOUP_020,pasta,Pasta,,boiled,1.0,1.0,1.0,1.0,1.0,,,,,
-SOUP_020,soup,Soup,,boiled,0.88,1.0,1.0,1.0,1.0,,,,,
-SOUP_021,pozole,Pozole Rojo,,boiled,0.73,1.0,1.0,1.0,1.0,,,,,
-SOUP_022,soup,Tomato Soup,,boiled,0.75,1.0,1.0,1.0,1.0,,,,,
+SOUP_020,pasta,Pasta,,boiled,1.0,1.0,1.0,1.0,1.0,,,0:10,,
+SOUP_020,soup,Soup,,boiled,0.88,1.0,1.0,1.0,1.0,,,0:30,,
+SOUP_021,pozole,Pozole Rojo,,boiled,0.73,1.0,1.0,1.0,1.0,,,0:90,,
+SOUP_022,soup,Tomato Soup,,boiled,0.75,1.0,1.0,1.0,1.0,,,0:25,,
 BKFST_040,bagel,Bagel,,raw,1.0,1.0,1.0,1.0,1.0,,,,,
 BKFST_041,bagel,Bagel,,raw,1.0,1.0,1.0,1.0,1.0,,,,,
 BKFST_042,scramble,Scramble,,pan grilled,1.0,1.0,1.0,1.0,1.0,,,0:7,,
