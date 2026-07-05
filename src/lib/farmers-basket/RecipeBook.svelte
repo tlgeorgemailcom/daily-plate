@@ -360,6 +360,26 @@
     return gStr ? `Per serving (${gStr})` : 'Per serving';
   }
 
+  // Format the 🍽️ badge: always "1 {singular} (makes N)" for multi-serving
+  // recipes and "1 {singular}" for single-serving ones.
+  // Handles both old-style totals ("12 patties") and already-canonical strings
+  // ("1 slice (makes 8)"). Fractional units ("1/4 cup (makes 24+)") are returned
+  // unchanged because they don't match the simple integer+unit pattern.
+  function formatServingsBadge(servings: string): string {
+    const stripped = servings.trim().replace(/\s*\((serves|makes)[^)]*\)/gi, '');
+    const m = stripped.match(/^(\d+(?:\.\d+)?)\s+(.+)$/);
+    if (!m) return servings; // e.g. "1/4 cup (makes 24+)" — leave as-is
+    const count = parseFloat(m[1]);
+    const unit = m[2].trim();
+    const singular = singularizeUnit(unit);
+    if (count === 1) {
+      // Already a single unit — re-attach any "(makes N)" from the original string.
+      const makes = servings.match(/\(((?:serves|makes)[^)]*)\)/i);
+      return makes ? `1 ${singular} (${makes[1]})` : `1 ${singular}`;
+    }
+    return `1 ${singular} (makes ${Math.round(count)})`;
+  }
+
   function getChildIngredientLines(componentRef: string): string[] {
     const child = levels.find((l) => l.id === componentRef);
     if (!child?.recipeIngredients) return [];
@@ -2153,7 +2173,7 @@
             <div class="recipe-details">
               <div class="recipe-meta">
                 {#if selectedLevel.prepTime}<span>⏱️ {selectedLevel.prepTime}</span>{/if}
-                {#if selectedLevel.servings}<span>🍽️ {selectedLevel.servings}</span>{/if}
+                {#if selectedLevel.servings}<span>🍽️ {formatServingsBadge(selectedLevel.servings)}</span>{/if}
               </div>
               
               {#if selectedLevel.recipeIngredients && selectedLevel.recipeIngredients.length > 0}
