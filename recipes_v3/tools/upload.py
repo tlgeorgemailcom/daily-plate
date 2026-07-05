@@ -155,6 +155,35 @@ def _build_payload(rid: str, recipes, ings, ledger, instrs, sections_map) -> dic
     # community form receives the correct pre-computed factor, not null.
     sections_list = sections_map.get(rid, [])
     _build_sec = {s["section_key"]: s for s in build.get("sections", [])}
+
+    def _component_cook_method(child_id: str) -> str:
+        """Return the actual cooking method for a component-ref child recipe.
+
+        Component-ref sections in recipe_sections.csv carry cook_method='raw'
+        because the parent recipe's pipeline skips retention/yield for those
+        sections — the child's already-built per-100g panel is used directly.
+        But the *display* method (shown in section headers, prep-time bars)
+        should be the child's real heat method (e.g. 'baked' for BKFST_001).
+        Writing this correct value to Turso means enrichSection() in the
+        v3-build API is no longer needed for form population.
+        """
+        child_rec = recipes.get(child_id)
+        method = child_rec.cooking_method if child_rec else ""
+        if method and method != "multi":
+            return method
+        # Multi-section child: use dominant section by final_grams in build JSON.
+        child_path = BUILDS_DIR / f"{child_id}.json"
+        if child_path.exists():
+            child_build = json.loads(child_path.read_text())
+            method = child_build.get("cooking_method") or child_build.get("cook_method") or ""
+            if method and method != "multi":
+                return method
+            child_secs = child_build.get("sections", [])
+            if child_secs:
+                dominant = max(child_secs, key=lambda x: x.get("final_grams", 0))
+                return dominant.get("cook_method", "") or ""
+        return ""
+
     def _parse_cook_stages(raw: str) -> list:
         """Parse '425:15,350:37' → [{tempF,minutes},…]. Empty string → []."""
         if not raw:
@@ -182,7 +211,7 @@ def _build_payload(rid: str, recipes, ings, ledger, instrs, sections_map) -> dic
                 "section_key": s.section_key,
                 "section_label": s.section_label,
                 "prep_method": s.prep_method,
-                "cook_method": s.cook_method,
+                "cook_method": _component_cook_method(s.source_recipe) if s.source_recipe else s.cook_method,
                 "yield_factor_water": (
                     s.yield_factor_water
                     if s.yield_factor_water is not None
