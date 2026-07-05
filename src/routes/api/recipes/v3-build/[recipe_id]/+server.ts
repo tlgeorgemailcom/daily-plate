@@ -99,42 +99,20 @@ export const GET: RequestHandler = async ({ params }) => {
       // than "4 lb beef shank, 12 cups water…" in the moderator edit form.
       expandedIngredients.push({ ...ing, isDish: false });
     }
-      // constituent raw ingredients. Shows "2 cups Beef Stock (recipe)" rather
-      // than "4 lb beef shank, 12 cups water…" in the moderator edit form.
-      expandedIngredients.push({ ...ing, isDish: false });
-    }
   } else {
-    // Fallback: expand from build JSON when Turso is unavailable
+    // Fallback: populate from build JSON when Turso is unavailable.
+    // Component-ref rows are kept as single lines here too.
     type IngredientRow = Record<string, unknown>;
     const rawIngredients = (parsed.ingredients ?? []) as IngredientRow[];
     for (const ing of rawIngredients) {
-      const ref = ing.component_ref as string | undefined;
-      if (!ref) {
-        expandedIngredients.push({
-          name: (ing.long_desc as string) || (ing.ingredient_key as string),
-          quantity: (ing.qty_display as string) || '',
-          ndbNo: (ing.ndb_no as string) || '',
-          portionGrams: (ing.grams as number) || 0,
-          section: ing.section as string | undefined,
-        });
-        continue;
-      }
-      const childBuild = BUILDS_BY_ID[ref];
-      if (!childBuild) continue;
-      const childLeafs = ((childBuild.ingredients ?? []) as IngredientRow[]).filter(c => !c.component_ref);
-      if (childLeafs.length === 0) continue;
-      const childBatch = childLeafs.reduce((s, c) => s + ((c.grams as number) || 0), 0);
-      const parentGrams = (ing.grams as number) || 0;
-      const scale = childBatch > 0 && parentGrams > 0 ? parentGrams / childBatch : 1;
-      for (const c of childLeafs) {
-        expandedIngredients.push({
-          name: (c.long_desc as string) || (c.ingredient_key as string),
-          quantity: '',
-          ndbNo: (c.ndb_no as string) || '',
-          portionGrams: Math.round(((c.grams as number) || 0) * scale * 100) / 100,
-          section: ing.section as string | undefined,
-        });
-      }
+      expandedIngredients.push({
+        name: (ing.long_desc as string) || (ing.ingredient_key as string),
+        quantity: (ing.qty_display as string) || '',
+        ndbNo: (ing.ndb_no as string) || '',
+        portionGrams: (ing.grams as number) || 0,
+        section: ing.section as string | undefined,
+        ...(ing.component_ref ? { componentRef: ing.component_ref as string, isDish: false } : {}),
+      });
     }
   }
 
