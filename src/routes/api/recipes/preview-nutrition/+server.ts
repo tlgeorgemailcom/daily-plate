@@ -3,6 +3,7 @@ import type { RequestHandler } from './$types';
 import { calcNutritionSR28 } from '$lib/server/calcNutritionSR28';
 import { buildRecipeCommunityV3, type CommunitySectionV3 } from '$lib/nutrition/buildRecipeCommunityV3';
 import type { CommunityIngredient, NutrientRow } from '$lib/nutrition/types';
+import { fetchNutrientsByNdb } from '$lib/server/nutrition/fetchNutrients.js';
 
 function hasValidLink(row: unknown): boolean {
   if (!row || typeof row !== 'object') return false;
@@ -145,7 +146,81 @@ export const POST: RequestHandler = async ({ request }) => {
     return json({ nutritionJson, canonical: null });
   }
 
-  // Drop any rows that are not yet nutritionally linked. Live preview computes
+  // ── Sections-aware path: sections sent but no embedded nutrientMap ──────────
+  // When buildNutritionPayload sends sections (multi-section recipes), fetch
+  // nutrients from Turso and run V3 so per-section cook methods, yield factors,
+  // fill classes, and oven stages are all applied correctly.
+  if (Array.isArray(sectionsRaw) && sectionsRaw.length > 0 && communityBuild !== true) {
+    const sectionsList = (sectionsRaw as unknown[]).filter(
+      (s): s is CommunitySectionV3 =>
+        !!s && typeof s === 'object' &&
+        typeof (s as Record<string, unknown>).sectionKey === 'string'
+    );
+    if (sectionsList.length > 0) {
+      const ndbNos = rawIngs
+        .filter(r => { const o = r as Record<string, unknown>; return !o.exempt && Number(o.portionGrams ?? 0) > 0; })
+        .map(r => String((r as Record<string, unknown>).ndbNo ?? ''))
+        .filter(ndb => ndb.length > 0);
+      let sectionNutrientMap: Map<string, NutrientRow>;
+      try {
+        sectionNutrientMap = await fetchNutrientsByNdb(ndbNos);
+      } catch {
+        // Turso unavailable — fall through to flat SR28 path
+        sectionNutrientMap = new Map();
+      }
+      if (sectionNutrientMap.size > 0) {
+        const ingList: CommunityIngredient[] = rawIngs.map(r => {
+          const o = r as Record<string, unknown>;
+          return {
+            ndbNo:        String(o.ndbNo ?? ''),
+            portionGrams: Number(o.portionGrams ?? 0),
+            sectionKey:   typeof o.section === 'string' ? o.section : undefined,
+            isOptional:   o.exempt === true,
+            exempt:       false,
+            displayName:  String(o.name ?? ''),
+          };
+        }).filter(i => i.ndbNo && i.portionGrams > 0);
+        const servingsNum = Number(servings ?? 1);
+        const buildResult = buildRecipeCommunityV3(
+          sectionsList,
+          ingList,
+          sectionNutrientMap,
+          servingsNum > 0 ? servingsNum : 1,
+          100, // placeholder; actual grams-per-serving computed by V3
+          typeof dishCookMethod === 'string' ? dishCookMethod
+            : (typeof cookingMethod === 'string' ? cookingMethod : undefined),
+        );
+        const p100 = buildResult.per100g;
+        const gps  = buildResult.gramsPerServing;
+        const srv  = buildResult.servings;
+        const scale = gps / 100;
+        return json({
+          nutritionJson: {
+            perServing: {
+              cal:  (p100.energy_KCal       ?? 0) * scale,
+              pro:  (p100.protein           ?? 0) * scale,
+              fat:  (p100.totalLipidFat     ?? 0) * scale,
+              carb: (p100.carbohydrate      ?? 0) * scale,
+              fib:  (p100.fiberTotalDietary ?? 0) * scale,
+              sug:  (p100.sugarsTotal       ?? 0) * scale,
+            },
+            per100g: {
+              Energy_KCal:       p100.energy_KCal       ?? 0,
+              Protein:           p100.protein           ?? 0,
+              TotalLipidFat:     p100.totalLipidFat     ?? 0,
+              Carbohydrate:      p100.carbohydrate      ?? 0,
+              FiberTotalDietary: p100.fiberTotalDietary ?? 0,
+              SugarsTotal:       p100.sugarsTotal       ?? 0,
+              Water:             p100.water             ?? 0,
+            },
+            gramsPerServing: gps,
+            servings: srv,
+          },
+          canonical: null,
+        });
+      }
+    }
+  } Live preview computes
   // from whatever IS linked rather than blocking on partial data.
   const linkedIngs = rawIngs.filter((row) => hasValidLink(row));
   if (linkedIngs.length === 0 && !hasValidLink(dishLink)) {

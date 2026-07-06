@@ -312,11 +312,11 @@ export function buildRecipeCommunityV3(
           const retainedWaterG   = dryNonWaterG * weightedFactor / (1 - weightedFactor);
           yieldWater = initialWaterG > 0 ? retainedWaterG / initialWaterG : 1.0;
         } else {
-          const boilMins = (sec as any).boilMinutes ?? 0;
+          const boilMins = (sec as any).boilMinutes ?? (sec as any).boil_minutes ?? 0;
           yieldWater = calcYieldWater(stages, initialWaterG, fillClass, boilMins, 212, false);
         }
       } else {
-        const boilMins = (sec as any).boilMinutes ?? 0;
+        const boilMins = (sec as any).boilMinutes ?? (sec as any).boil_minutes ?? 0;
         yieldWater = calcYieldWater(stages, initialWaterG, fillClass, boilMins);
       }
     }
