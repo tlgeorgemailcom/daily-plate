@@ -495,6 +495,8 @@
             // cookingMethod. Blank-top-bar recipes must not pick up section stage times.
             ...(() => {
               if (!editingRecipe.cookingMethod) return {};
+              const cm = editingRecipe.cookingMethod.toLowerCase();
+              if (cm === 'no heat' || cm === 'noheat' || cm === 'none' || cm === 'raw') return {};
               const secs: any[] = (editingRecipe.sections as any[]) || [];
               for (const s of secs) {
                 const stgs: Array<{tempF:number;minutes:number}> = Array.isArray(s.cook_stages ?? s.stages)

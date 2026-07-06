@@ -262,6 +262,8 @@
       // where the crust blind-bakes separately) must not pick up section stage times.
       ...(() => {
         if (!recipe.cookingMethod) return {};
+        const cm = recipe.cookingMethod.toLowerCase();
+        if (cm === 'no heat' || cm === 'noheat' || cm === 'none' || cm === 'raw') return {};
         const secs: any[] = (recipe.sections as any[]) || [];
         for (const s of secs) {
           const stgs: Array<{tempF:number;minutes:number}> = Array.isArray(s.cook_stages ?? s.stages)
