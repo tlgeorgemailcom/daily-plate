@@ -792,7 +792,9 @@
         }),
       dishLink: dishLink ?? undefined,
       linkType: linkMode,
-      servings,
+      // Parse the servings label ("1 slice (makes 8)") to a plain count so
+      // all endpoints receive a number they can pass to buildRecipeCommunityV3.
+      servings: parseServingsCount(servings) ?? 1,
       cookingMethod,
       dishCookMethod: cookingMethod || undefined,
       // Include section metadata so preview-nutrition can run V3 with per-section
