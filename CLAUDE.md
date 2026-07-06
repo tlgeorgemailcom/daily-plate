@@ -18,6 +18,7 @@
 | [Pipeline: recipes_v3](#pipeline-recipes_v3) | CSV files, math contract, build/upload commands |
 | [Absorption Model](#absorption-model-datacentralcombobin) | `bin` column, all 56 NDB values |
 | [insert_new.py](#insert_newpy--initial-turso-insert) | First-time recipe row insert |
+| [Form Architecture](#form-architecture-lessons) | RecipeForm data flow, API parity rules, scope traps |
 | [Critical Invariants](#critical-invariants) | cooking_method values, dietary_category rules |
 | [Key Data Sources](#key-data-sources) | DB paths, FNDDS CSV, food_word validation |
 | [Recipe ID Prefixes](#recipe-id-prefixes) | Status counts per prefix |
@@ -721,6 +722,36 @@ Composite recipes (e.g. BKFST_002 Biscuits & Gravy) reference child recipes via 
 - **Baby food excluded** — `FdGrp_Cd <> '300'` always applied.
 
 **Environment**: `.env.local` sets `TURSO_SR28_URL=libsql://comboo-tlgeorge.aws-us-east-1.turso.io` — dev and production both hit the remote Turso comboo DB. Vercel env vars `TURSO_SR28_URL` + `TURSO_SR28_TOKEN` must be set or production falls back to a local file path that doesn't exist on Vercel.
+
+## Form Architecture Lessons
+
+These patterns have caused repeated bugs. Read before touching `RecipeForm.svelte`, `suggest/+server.ts`, or `moderate/+page.svelte`.
+
+**Two loading paths — moderator vs community:**
+- **Moderator form** (`/moderate`): passes `recipeId={selectedRecipe.id}` to RecipeForm. The v3-build `$effect` fires, fetches `/api/recipes/v3-build/[id]`, and applies `cookMethod`/sections/ingredients from that response. `initialData` is built by `recipeToFormData()`.
+- **Community form** (basket form, `/farmers-basket`): does NOT pass `recipeId`. The v3-build `$effect` exits immediately (`if (!id) return`). The form relies ENTIRELY on `fillFromSuggestion()` and `initialData`. If `fillFromSuggestion` doesn't correctly set a field, there is no secondary path to fix it.
+- **Community edit form** (`/farmers-basket/my-recipes`): also does NOT pass `recipeId`. Uses static `initialData` only — `fillFromSuggestion` is never called (`disableSuggestions={true}`). Every field the form needs must be in `initialData`.
+
+**`suggest` API and `moderate` API must return the same recipe-level fields:**
+- `fillFromSuggestion(suggestion)` reads `suggestion.cookingMethod`, `suggestion.nutritionJson`, `suggestion.sections`, etc.
+- The moderator form calls `fillFromSuggestion` with a `RecipeSubmission` (from the moderate API).
+- The community form calls `fillFromSuggestion` with a `RecipeSuggestion` (from the suggest API).
+- **Any field read from `suggestion.*` in `fillFromSuggestion` must be in BOTH APIs' SELECT and in the `RecipeSuggestion` interface.** Missing a field from the suggest API gives the community form a different result than the moderator form even though both call the same function with the same Turso data. (Discovered July 2026: `cooking_method` missing from suggest API caused community top bar to show blank.)
+
+**`initialData` must include ALL top-bar fields explicitly:**
+- `cookMinutes` and `cookTempF` are NOT stored as top-level columns in Turso's `dev_recipes` or `player_recipes` tables.
+- They must be DERIVED from `sections_json` when building `initialData` — in `recipeToFormData()` (moderate form) and in the inline `initialData` object in `my-recipes/+page.svelte`.
+- Derivation: check `cook_stages` array first (dev recipes, snake_case), then `stages` array (community recipes, camelCase), then flat `cookTempF`/`cookMinutes` per section. If absent, top bar shows blank — which is CORRECT if those fields genuinely aren't set.
+
+**Block-scoping trap in `fillFromSuggestion`:**
+- Variables declared with `const` inside `if (nextSections) { ... }` are NOT accessible after the closing `}`.
+- `explicitCookMethod` was declared inside `if (nextSections)` but used outside it to apply `cookingMethod = match`. TypeScript did not catch this (Svelte compilation); the community form's `cookingMethod` silently stayed blank. (Fixed July 2026: moved declaration before `if (nextSections)`.)
+- **Rule**: any variable needed after a conditional block must be declared in the outer scope with `let` (reassignable) or outside the block as `const`.
+
+**All form data comes from Turso — no derivation from build JSON:**
+- The v3-build API (`/api/recipes/v3-build/[id]`) provides `cookMethod` from Turso's `cooking_method` column, sections/ingredients from Turso's `sections_json`/`recipe_ingredients_json`. It does NOT use the build JSON for form-populating fields.
+- `per100g` from the build JSON is for the audit comparison chart only — never to populate the form.
+- If Turso has an empty `cooking_method`, the form shows blank — intentional. Do not add derivation logic to guess the cook method from other sources.
 
 ## Word Game Candidate Log
 
