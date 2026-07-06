@@ -121,7 +121,10 @@ export const POST: RequestHandler = async ({ request }) => {
 
     // Map BuildResult → PreviewNutrition shape for the form
     const p100 = buildResult.per100g;
-    const gps  = buildResult.gramsPerServing;
+    // gramsPerServing was passed as a placeholder (100); compute from actual cooked weight.
+    const gps  = buildResult.servings > 0
+      ? buildResult.totalCookedGrams / buildResult.servings
+      : buildResult.gramsPerServing;
     const srv  = buildResult.servings;
     const scale = gps / 100;
     const nutritionJson = {
@@ -196,7 +199,10 @@ export const POST: RequestHandler = async ({ request }) => {
           typeof dishCookMinutes === 'number' ? (dishCookMinutes as number) : undefined,
         );
         const p100 = buildResult.per100g;
-        const gps  = buildResult.gramsPerServing;
+        // gramsPerServing was passed as a placeholder (100); compute from actual cooked weight.
+        const gps  = buildResult.servings > 0
+          ? buildResult.totalCookedGrams / buildResult.servings
+          : buildResult.gramsPerServing;
         const srv  = buildResult.servings;
         const scale = gps / 100;
         return json({
