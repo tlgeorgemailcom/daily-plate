@@ -801,9 +801,9 @@
         sections: sections.map(sec => ({
           sectionKey:      sec.key,
           sectionLabel:    sec.label,
-          // V3 cookMethod: prepMethod stores the section's primary cook
-          // (derived from cook_method in sections_json by fillFromSuggestion).
-          cookMethod:      sec.prepMethod === 'none' ? 'raw' : (sec.prepMethod || 'raw'),
+          // V3 cookMethod: cookingMethod stores the section's primary cook
+          // (derived from cook_method in sections_json — not prepMethod).
+          cookMethod:      sec.cookingMethod || 'raw',
           ...(typeof sec.yieldFactorWater === 'number' ? { yieldFactorWater: sec.yieldFactorWater } : {}),
           ...(typeof sec.yieldFactorFat   === 'number' ? { yieldFactorFat:   sec.yieldFactorFat   } : {}),
           ...(typeof sec.boilMinutes === 'number' && sec.boilMinutes > 0 ? { boilMinutes: sec.boilMinutes } : {}),
@@ -973,15 +973,26 @@
             ? (recipeName || data.recipeName || data.sections[0].section_label)
             : null;
           sections = data.sections.map((s) => {
-            const pm = (() => { const v = s.cook_method ?? s.cooking_method ?? s.prep_method; return (!v || v === 'raw') ? 'none' : v as string; })();
-            const prepIsBaked = pm === 'baked' || pm === 'par-baked';
+            const cookM = (typeof s.cook_method === 'string' ? s.cook_method : (s.cooking_method ?? '')) as string;
+            const prepV = (typeof s.prep_method === 'string' ? s.prep_method : '') as string;
+            // prepMethod for DISPLAY:
+            //  non-raw prep_method   → show the pre-step (e.g. simmer | 5 min)
+            //  raw/empty prep + non-baked cook_method → show cook_method (section IS that cook)
+            //  raw/empty prep + baked cook_method    → 'none' (top bar owns the bake display)
+            const pm = (() => {
+              if (prepV && prepV !== 'raw') return prepV;
+              const isBaked = cookM === 'baked' || cookM === 'par-baked';
+              if (!isBaked && cookM && cookM !== 'raw') return cookM;
+              return 'none';
+            })();
+            const prepIsBaked = cookM === 'baked' || cookM === 'par-baked';
             const stageArr = Array.isArray(s.cook_stages) ? s.cook_stages as Array<{ tempF: number; minutes: number }> : [];
             const firstStage = stageArr[0];
             return {
               key: s.section_key,
               label: autoLabel ?? s.section_label,
               prepMethod: pm,
-              cookingMethod: s.cooking_method,
+              cookingMethod: cookM || 'raw',
               yieldFactorWater: s.yield_factor_water,
               yieldFactorFat: s.yield_factor_fat,
               yieldFactorOther: s.yield_factor_other,
@@ -1654,8 +1665,15 @@
       nextSections = (v3Data.sections as Record<string, unknown>[]).map((s) => ({
         key: String(s.section_key ?? s.key ?? ''),
         label: String(s.section_label ?? s.label ?? ''),
-        prepMethod: (() => { const v = typeof s.cook_method === 'string' ? s.cook_method : (typeof s.prepMethod === 'string' ? s.prepMethod : (typeof s.prep_method === 'string' ? s.prep_method : undefined)); return (!v || v === 'raw') ? 'none' : v; })(),
-        cookingMethod: String(s.cooking_method ?? s.cookingMethod ?? 'baked'),
+        prepMethod: (() => {
+          const cookV = typeof s.cook_method === 'string' ? s.cook_method : '';
+          const prepV = typeof s.prep_method === 'string' ? s.prep_method : (typeof s.prepMethod === 'string' ? s.prepMethod : '');
+          if (prepV && prepV !== 'raw') return prepV;
+          const isBaked = cookV === 'baked' || cookV === 'par-baked';
+          if (!isBaked && cookV && cookV !== 'raw') return cookV;
+          return 'none';
+        })(),
+        cookingMethod: String(s.cook_method ?? s.cookMethod ?? s.cooking_method ?? 'raw'),
         yieldFactorWater: typeof s.yield_factor_water === 'number' ? s.yield_factor_water : (typeof s.yieldFactorWater === 'number' ? s.yieldFactorWater : undefined),
         yieldFactorFat: typeof s.yield_factor_fat === 'number' ? s.yield_factor_fat : (typeof s.yieldFactorFat === 'number' ? s.yieldFactorFat : undefined),
         yieldFactorOther: typeof s.yield_factor_other === 'number' ? s.yield_factor_other : (typeof s.yieldFactorOther === 'number' ? s.yieldFactorOther : undefined),
