@@ -543,6 +543,12 @@ def _build_recipe_multi(
 
         s = st["section"]
         method = normalize_cooking_method(s.cook_method)
+        # Two-pass retention: if prep_method is a real cook step (not raw/empty)
+        # AND different from cook_method, apply prep retention first, then
+        # cook_method retention. Macros (in _MACRO_SET) are handled via yield
+        # factors — unaffected. Only micronutrients receive the chained factors.
+        _prep_norm = normalize_cooking_method(s.prep_method) if s.prep_method else 'raw'
+        _has_prep = _prep_norm not in ('raw',) and _prep_norm != method
         # ── Yield factor for water ─────────────────────────────────────────
         # Priority order:
         #   1. Submersion-boil absorption model — fires when cook_method=boiled
@@ -612,9 +618,9 @@ def _build_recipe_multi(
             elif n in _MACRO_SET:
                 retained_S[n] = sums_S[n]
             elif n in _FAT_SOLUBLE_NUTRIENTS:
-                retained_S[n] = sums_S[n] * get_retention(method, n) * yfo_S
+                retained_S[n] = sums_S[n] * (get_retention(_prep_norm, n) if _has_prep else 1.0) * get_retention(method, n) * yfo_S
             else:
-                retained_S[n] = sums_S[n] * get_retention(method, n)
+                retained_S[n] = sums_S[n] * (get_retention(_prep_norm, n) if _has_prep else 1.0) * get_retention(method, n)
             retained_dish[n] += retained_S[n]
 
         # When fat, protein, or carbs drain out (yff/yfp/yfc < 1), patch
