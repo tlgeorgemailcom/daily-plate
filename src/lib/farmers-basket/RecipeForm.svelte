@@ -810,7 +810,10 @@
           ...(sec.prepMethod && sec.prepMethod !== 'none' ? { prepMethod: sec.prepMethod } : {}),
           ...(typeof sec.yieldFactorWater === 'number' ? { yieldFactorWater: sec.yieldFactorWater } : {}),
           ...(typeof sec.yieldFactorFat   === 'number' ? { yieldFactorFat:   sec.yieldFactorFat   } : {}),
-          ...(typeof sec.boilMinutes === 'number' && sec.boilMinutes > 0 ? { boilMinutes: sec.boilMinutes } : {}),
+          // boilMinutes = stovetop pre-step time only (not oven stage minutes).
+          // Baked sections show stage[0].minutes in the UI but that is oven time,
+          // NOT a stovetop pre-boil — never send it to V3 as boilMinutes.
+          ...(typeof sec.boilMinutes === 'number' && sec.boilMinutes > 0 && sec.cookingMethod !== 'baked' && sec.cookingMethod !== 'par-baked' ? { boilMinutes: sec.boilMinutes } : {}),
           ...(Array.isArray(sec.stages) && sec.stages.length > 0 ? { stages: sec.stages } : {}),
           ...(sec.fillClass ? { fillClass: sec.fillClass } : {}),
           // Inject top-bar oven params as fallback for sections with no explicit stages.
@@ -1006,11 +1009,12 @@
               yieldFactorWater: s.yield_factor_water,
               yieldFactorFat: s.yield_factor_fat,
               yieldFactorOther: s.yield_factor_other,
-              // boilMinutes = pre-step stovetop simmer time (boil_minutes from
-              // recipe_sections.csv). For baked sections this is the simmer BEFORE
-              // the oven, NOT the first oven stage duration (that lives in stages[]).
+              // boilMinutes: for baked sections shows stage[0].minutes (oven time, for display).
+              // For stovetop sections uses boil_minutes (actual pre-boil time).
+              // buildNutritionPayload excludes boilMinutes for baked sections so
+              // the oven stage minutes are not sent to V3 as stovetop pre-boil time.
               boilMinutes: prepIsBaked
-                ? (s.boil_minutes || undefined)
+                ? (firstStage?.minutes ?? undefined)
                 : (s.boil_minutes || firstStage?.minutes),
               prepTempF: prepIsBaked ? (firstStage?.tempF ?? undefined) : undefined,
               stages: stageArr.length > 0 ? stageArr : undefined,
@@ -1681,7 +1685,7 @@
         yieldFactorWater: s.yieldFactorWater ?? s.yield_factor_water ?? undefined,
         yieldFactorFat: s.yieldFactorFat ?? s.yield_factor_fat ?? undefined,
         yieldFactorOther: s.yieldFactorOther ?? s.yield_factor_other ?? undefined,
-        boilMinutes: (() => { const stageArr = Array.isArray(s.cook_stages) ? s.cook_stages as Array<{tempF:number;minutes:number}> : (Array.isArray(s.stages) ? s.stages as Array<{tempF:number;minutes:number}> : []); const bm = s.boilMinutes ?? s.boil_minutes ?? 0; const pm = s.prepMethod ?? s.cook_method ?? s.prep_method ?? ''; const prepIsBaked = pm === 'baked' || pm === 'par-baked'; return prepIsBaked ? (bm || undefined) : ((typeof bm === 'number' ? bm : 0) || stageArr[0]?.minutes); })(),
+        boilMinutes: (() => { const stageArr = Array.isArray(s.cook_stages) ? s.cook_stages as Array<{tempF:number;minutes:number}> : (Array.isArray(s.stages) ? s.stages as Array<{tempF:number;minutes:number}> : []); const bm = s.boilMinutes ?? s.boil_minutes ?? 0; const pm = s.prepMethod ?? s.cook_method ?? s.prep_method ?? ''; const prepIsBaked = pm === 'baked' || pm === 'par-baked'; return prepIsBaked ? (stageArr[0]?.minutes ?? undefined) : ((typeof bm === 'number' ? bm : 0) || stageArr[0]?.minutes); })(),
         prepTempF: (() => { const stageArr = Array.isArray(s.cook_stages) ? s.cook_stages as Array<{tempF:number;minutes:number}> : (Array.isArray(s.stages) ? s.stages as Array<{tempF:number;minutes:number}> : []); const pm = s.prepMethod ?? s.cook_method ?? s.prep_method ?? ''; const prepIsBaked = pm === 'baked' || pm === 'par-baked'; return prepIsBaked ? (stageArr[0]?.tempF ?? undefined) : undefined; })(),
         cookMinutes: s.cookMinutes ?? s.cook_minutes ?? undefined,
         cookTempF: s.cookTempF ?? s.cook_temp_f ?? undefined,
@@ -1704,7 +1708,7 @@
         yieldFactorWater: typeof s.yield_factor_water === 'number' ? s.yield_factor_water : (typeof s.yieldFactorWater === 'number' ? s.yieldFactorWater : undefined),
         yieldFactorFat: typeof s.yield_factor_fat === 'number' ? s.yield_factor_fat : (typeof s.yieldFactorFat === 'number' ? s.yieldFactorFat : undefined),
         yieldFactorOther: typeof s.yield_factor_other === 'number' ? s.yield_factor_other : (typeof s.yieldFactorOther === 'number' ? s.yieldFactorOther : undefined),
-        boilMinutes: (() => { const stageArr = Array.isArray(s.cook_stages) ? s.cook_stages as Array<{tempF:number;minutes:number}> : []; const bm = typeof s.boil_minutes === 'number' ? s.boil_minutes : (typeof s.boilMinutes === 'number' ? s.boilMinutes : 0); const pm = typeof s.cook_method === 'string' ? s.cook_method : ''; const prepIsBaked = pm === 'baked' || pm === 'par-baked'; return prepIsBaked ? (bm || undefined) : (bm || stageArr[0]?.minutes); })(),
+        boilMinutes: (() => { const stageArr = Array.isArray(s.cook_stages) ? s.cook_stages as Array<{tempF:number;minutes:number}> : []; const bm = typeof s.boil_minutes === 'number' ? s.boil_minutes : (typeof s.boilMinutes === 'number' ? s.boilMinutes : 0); const pm = typeof s.cook_method === 'string' ? s.cook_method : ''; const prepIsBaked = pm === 'baked' || pm === 'par-baked'; return prepIsBaked ? (stageArr[0]?.minutes ?? undefined) : (bm || stageArr[0]?.minutes); })(),
         prepTempF: (() => { const stageArr = Array.isArray(s.cook_stages) ? s.cook_stages as Array<{tempF:number;minutes:number}> : []; const pm = typeof s.cook_method === 'string' ? s.cook_method : ''; const prepIsBaked = pm === 'baked' || pm === 'par-baked'; return prepIsBaked ? (stageArr[0]?.tempF ?? undefined) : undefined; })(),
         cookMinutes: typeof s.cook_minutes === 'number' ? s.cook_minutes : (typeof s.cookMinutes === 'number' ? s.cookMinutes : undefined),
         cookTempF: typeof s.cook_temp_f === 'number' ? s.cook_temp_f : (typeof s.cookTempF === 'number' ? s.cookTempF : undefined),
