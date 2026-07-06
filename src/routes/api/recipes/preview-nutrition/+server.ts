@@ -220,7 +220,9 @@ export const POST: RequestHandler = async ({ request }) => {
         });
       }
     }
-  } Live preview computes
+  }
+
+  // Drop any rows that are not yet nutritionally linked. Live preview computes
   // from whatever IS linked rather than blocking on partial data.
   const linkedIngs = rawIngs.filter((row) => hasValidLink(row));
   if (linkedIngs.length === 0 && !hasValidLink(dishLink)) {
