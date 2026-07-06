@@ -257,7 +257,27 @@
       nutritionJson: (recipe.nutritionJson as any) || undefined,
       sr28Rule: (recipe.srRule as 'Rule A' | 'Rule B' | 'Rule C' | 'Rule D' | undefined) || undefined,
       sections: (recipe.sections as any[] | undefined) || undefined,
-    };
+      // Derive top-bar oven time/temp from sections so the top bar is populated
+      // on initial load for both dev and community recipes.
+      // Check cook_stages (dev/array) then flat cookTempF/cookMinutes (community).
+      ...(() => {
+        const secs: any[] = (recipe.sections as any[]) || [];
+        for (const s of secs) {
+          const stgs: Array<{tempF:number;minutes:number}> = Array.isArray(s.cook_stages ?? s.stages)
+            ? (s.cook_stages ?? s.stages).filter((st: any) => st.tempF > 0 && st.minutes > 0)
+            : [];
+          if (stgs.length > 0) {
+            return {
+              cookMinutes: stgs.reduce((sum, st) => sum + st.minutes, 0),
+              cookTempF: stgs[stgs.length - 1].tempF,
+            };
+          }
+          if (Number(s.cookTempF) > 0 && Number(s.cookMinutes) > 0) {
+            return { cookMinutes: Number(s.cookMinutes), cookTempF: Number(s.cookTempF) };
+          }
+        }
+        return {};
+      })(),
   }
   
   // Image handling functions for published recipes

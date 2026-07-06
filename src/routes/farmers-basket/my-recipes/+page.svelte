@@ -490,7 +490,24 @@
               text: typeof text === 'string' ? text : (text as any).text || ''
             })),
             nutritionJson: editingRecipe.nutritionJson || undefined,
-            sections: (editingRecipe.sections as any) || undefined
+            sections: (editingRecipe.sections as any) || undefined,
+            // Derive top-bar oven time/temp from sections (cook_stages array for dev
+            // recipes; flat cookTempF/cookMinutes for community recipes).
+            ...(() => {
+              const secs: any[] = (editingRecipe.sections as any[]) || [];
+              for (const s of secs) {
+                const stgs: Array<{tempF:number;minutes:number}> = Array.isArray(s.cook_stages ?? s.stages)
+                  ? (s.cook_stages ?? s.stages).filter((st: any) => st.tempF > 0 && st.minutes > 0)
+                  : [];
+                if (stgs.length > 0) return {
+                  cookMinutes: stgs.reduce((sum, st) => sum + st.minutes, 0),
+                  cookTempF: stgs[stgs.length - 1].tempF,
+                };
+                if (Number(s.cookTempF) > 0 && Number(s.cookMinutes) > 0)
+                  return { cookMinutes: Number(s.cookMinutes), cookTempF: Number(s.cookTempF) };
+              }
+              return {};
+            })(),
           }}
           onsubmit={handleSaveEdit}
           oncancel={() => editingRecipe = null}
