@@ -1050,6 +1050,22 @@
                 if (lastTempF > 0 && cookTempF == null) cookTempF = lastTempF;
               }
             }
+            // Assembled-bake fallback: when the top bar has an explicit cook method
+            // but cookMinutes/cookTempF are still unset, derive from the first section
+            // with oven stages. Covers pies, gratins, and any multi-section assembled
+            // bake where sections share the same oven operation as the top bar.
+            if (data.cookMethod && cookMinutes == null && cookTempF == null) {
+              const stagedSec = sections.find(s =>
+                Array.isArray(s.stages) && (s.stages as Array<{tempF:number;minutes:number}>).some(st => st.tempF > 0)
+              );
+              if (stagedSec) {
+                const stgs = (stagedSec.stages as Array<{tempF:number;minutes:number}>).filter(st => st.tempF > 0 && st.minutes > 0);
+                const totalMins = stgs.reduce((sum, st) => sum + st.minutes, 0);
+                if (totalMins > 0) cookMinutes = totalMins;
+                const lastTempF = stgs[stgs.length - 1]?.tempF;
+                if (lastTempF > 0) cookTempF = lastTempF;
+              }
+            }
           }
         }
         // Composite recipes (Rule D) reference child recipes via `component_ref`
@@ -1746,6 +1762,21 @@
             if (totalMins > 0 && cookMinutes == null) cookMinutes = totalMins;
             const lastTempF = stgs[stgs.length - 1].tempF;
             if (lastTempF > 0 && cookTempF == null) cookTempF = lastTempF;
+          }
+        }
+        // Assembled-bake fallback: when top bar has an explicit cook method but
+        // cookMinutes/cookTempF are still unset, derive from the first section
+        // with oven stages (pies, gratins, any multi-section assembled bake).
+        if (explicitCookMethod && cookMinutes == null && cookTempF == null) {
+          const stagedSec = nextSections.find(s =>
+            Array.isArray(s.stages) && (s.stages as Array<{tempF:number;minutes:number}>).some(st => st.tempF > 0)
+          );
+          if (stagedSec) {
+            const stgs = (stagedSec.stages as Array<{tempF:number;minutes:number}>).filter(st => st.tempF > 0 && st.minutes > 0);
+            const totalMins = stgs.reduce((sum, st) => sum + st.minutes, 0);
+            if (totalMins > 0) cookMinutes = totalMins;
+            const lastTempF = stgs[stgs.length - 1]?.tempF;
+            if (lastTempF > 0) cookTempF = lastTempF;
           }
         }
       }
