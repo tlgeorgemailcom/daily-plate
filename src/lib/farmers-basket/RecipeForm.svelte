@@ -1485,6 +1485,7 @@
     instructions: RecipeInstruction[];
     sourceType: 'dev' | 'player';
     dishFamily?: string | null;
+    cookingMethod?: string | null;
     nutritionJson?: PersistedNutritionJson | null;
     sections?: RecipeSection[] | null;
   }
