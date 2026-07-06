@@ -257,10 +257,11 @@
       nutritionJson: (recipe.nutritionJson as any) || undefined,
       sr28Rule: (recipe.srRule as 'Rule A' | 'Rule B' | 'Rule C' | 'Rule D' | undefined) || undefined,
       sections: (recipe.sections as any[] | undefined) || undefined,
-      // Derive top-bar oven time/temp from sections so the top bar is populated
-      // on initial load for both dev and community recipes.
-      // Check cook_stages (dev/array) then flat cookTempF/cookMinutes (community).
+      // Derive top-bar oven time/temp from sections ONLY when the recipe has an
+      // explicit cookingMethod. Recipes with blank top bars (cream pies, cakes
+      // where the crust blind-bakes separately) must not pick up section stage times.
       ...(() => {
+        if (!recipe.cookingMethod) return {};
         const secs: any[] = (recipe.sections as any[]) || [];
         for (const s of secs) {
           const stgs: Array<{tempF:number;minutes:number}> = Array.isArray(s.cook_stages ?? s.stages)

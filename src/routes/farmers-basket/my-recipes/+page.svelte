@@ -491,9 +491,10 @@
             })),
             nutritionJson: editingRecipe.nutritionJson || undefined,
             sections: (editingRecipe.sections as any) || undefined,
-            // Derive top-bar oven time/temp from sections (cook_stages array for dev
-            // recipes; flat cookTempF/cookMinutes for community recipes).
+            // Derive top-bar oven time/temp ONLY when the recipe has an explicit
+            // cookingMethod. Blank-top-bar recipes must not pick up section stage times.
             ...(() => {
+              if (!editingRecipe.cookingMethod) return {};
               const secs: any[] = (editingRecipe.sections as any[]) || [];
               for (const s of secs) {
                 const stgs: Array<{tempF:number;minutes:number}> = Array.isArray(s.cook_stages ?? s.stages)
