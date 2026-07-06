@@ -1,5 +1,43 @@
 # Daily Food Chain — AI Handoff
 
+---
+## 📂 External Reference Files
+| Topic | File |
+|---|---|
+| Recipe authoring steps, decision gates, `qty_display` patterns | `docs/recipe_development.md` ← **start here** |
+| Pipeline math spec (phases, CSV schemas, authoring runbook §17) | `docs/v3.md` |
+| Sandwich planning | `docs/sandwiches.md` |
+| Sauce/condiment planning | `docs/sauces_condiments.md` |
+| Recipe master list | `docs/recipe_list.md` |
+
+## 🗂 In-File Index
+| Section | What's there |
+|---|---|
+| [Project](#project) | Stack overview |
+| [Purpose and Strategic Intent](#purpose-and-strategic-intent-of-recipe-development) | Why recipes matter |
+| [Pipeline: recipes_v3](#pipeline-recipes_v3) | CSV files, math contract, build/upload commands |
+| [Absorption Model](#absorption-model-datacentralcombobin) | `bin` column, all 56 NDB values |
+| [insert_new.py](#insert_newpy--initial-turso-insert) | First-time recipe row insert |
+| [Critical Invariants](#critical-invariants) | cooking_method values, dietary_category rules |
+| [Key Data Sources](#key-data-sources) | DB paths, FNDDS CSV, food_word validation |
+| [Recipe ID Prefixes](#recipe-id-prefixes) | Status counts per prefix |
+| [Validation Rules](#validation-rules) | Rule A/B/C/D/F/G definitions |
+| [Current Work: BKFST](#current-work-bkfst-recipes) | All 53 breakfast recipes |
+| [Current Work: SAND](#current-work-sand-recipes) | All 79 sandwich/burger recipes |
+| [Current Work: SAUCE](#current-work-sauce-recipes) | All 27 sauce/condiment recipes |
+| [Current Work: STOCK](#current-work-stock-recipes) | All 7 stock/broth recipes |
+| [Current Work: ENTR](#current-work-entr-recipes) | All 39 entrée recipes |
+| [Current Work: SIDE](#current-work-side-recipes) | All 26 side dish recipes |
+| [Current Work: SALAD](#current-work-salad-recipes) | All 26 salad recipes |
+| [Human Approval Requirements](#human-approval-requirements) | What needs sign-off |
+| [Error Handling Policy](#error-handling-policy) | No silent errors |
+| [Recipe Audit Protocol](#recipe-audit-protocol) | Audit table format |
+| [Authoring Lessons](#authoring-lessons-from-bkfst_001) | ~60 accumulated gotchas |
+| [Composite Recipes](#composite-recipes-rule-d-component_ref) | component_ref architecture |
+| [Word Game Candidate Log](#word-game-candidate-log) | New ingredient game words |
+
+---
+
 > Claude AI is not required to ask permission to query the DataCentralCombo table in the comboo.db
 
 > **Building a recipe? Follow `docs/recipe_development.md` — it is the source of truth for all authoring steps, decision gates, and `qty_display` patterns. The sections below document pipeline internals, current work, and accumulated lessons. When in doubt: `recipe_development.md` first.**
