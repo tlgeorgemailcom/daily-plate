@@ -278,6 +278,7 @@
         }
         return {};
       })(),
+    };
   }
   
   // Image handling functions for published recipes
