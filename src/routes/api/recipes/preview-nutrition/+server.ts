@@ -65,6 +65,9 @@ export const POST: RequestHandler = async ({ request }) => {
     communityBuild,
     sections: sectionsRaw,
     nutrientMap: nutrientMapRaw,
+    dishCookMethod,
+    dishCookTempF,
+    dishCookMinutes,
   } = body as Record<string, unknown>;
 
   if (typeof linkType !== 'string' || !linkType) {
@@ -189,6 +192,8 @@ export const POST: RequestHandler = async ({ request }) => {
           100, // placeholder; actual grams-per-serving computed by V3
           typeof dishCookMethod === 'string' ? dishCookMethod
             : (typeof cookingMethod === 'string' ? cookingMethod : undefined),
+          typeof dishCookTempF   === 'number' ? (dishCookTempF   as number) : undefined,
+          typeof dishCookMinutes === 'number' ? (dishCookMinutes as number) : undefined,
         );
         const p100 = buildResult.per100g;
         const gps  = buildResult.gramsPerServing;

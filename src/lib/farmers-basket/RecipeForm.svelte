@@ -799,20 +799,28 @@
       // cook methods and yield factors instead of the flat SR28 fallback.
       ...(hasSections ? {
         sections: sections.map(sec => ({
-          sectionKey:      sec.key,
-          sectionLabel:    sec.label,
+          sectionKey:   sec.key,
+          sectionLabel: sec.label,
           // V3 cookMethod: cookingMethod stores the section's primary cook
           // (derived from cook_method in sections_json — not prepMethod).
-          cookMethod:      sec.cookingMethod || 'raw',
+          cookMethod:   sec.cookingMethod || 'raw',
+          // Pre-step method for two-pass retention (pre-step × primary cook).
+          ...(sec.prepMethod && sec.prepMethod !== 'none' ? { prepMethod: sec.prepMethod } : {}),
           ...(typeof sec.yieldFactorWater === 'number' ? { yieldFactorWater: sec.yieldFactorWater } : {}),
           ...(typeof sec.yieldFactorFat   === 'number' ? { yieldFactorFat:   sec.yieldFactorFat   } : {}),
           ...(typeof sec.boilMinutes === 'number' && sec.boilMinutes > 0 ? { boilMinutes: sec.boilMinutes } : {}),
           ...(Array.isArray(sec.stages) && sec.stages.length > 0 ? { stages: sec.stages } : {}),
           ...(sec.fillClass ? { fillClass: sec.fillClass } : {}),
+          // Inject top-bar oven params as fallback for sections with no explicit stages.
+          ...(!(Array.isArray(sec.stages) && sec.stages.length > 0) ? {
+            cookTempF:   typeof sec.cookTempF   === 'number' ? sec.cookTempF   : (cookTempF   ?? undefined),
+            cookMinutes: typeof sec.cookMinutes === 'number' ? sec.cookMinutes : (cookMinutes ?? undefined),
+          } : {}),
         })),
+        ...(typeof cookTempF   === 'number' ? { dishCookTempF:   cookTempF   } : {}),
+        ...(typeof cookMinutes === 'number' ? { dishCookMinutes: cookMinutes } : {}),
       } : {}),
-      // Only include flat yield factors when there are no sections; when sections
-      // are present each section carries its own yieldFactorWater/Fat.
+      // Only include flat yield factors when there are no sections.
       ...(typeof yieldFactorWater === 'number' && !hasSections ? { yieldFactorWater } : {}),
       ...(typeof yieldFactorFat   === 'number' && !hasSections ? { yieldFactorFat }   : {}),
     };

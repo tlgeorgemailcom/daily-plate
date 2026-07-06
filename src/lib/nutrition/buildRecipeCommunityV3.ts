@@ -35,6 +35,7 @@ import { calcYieldWater }    from './yieldCalc.js';
 import { plausibilityCheck } from './plausibilityCheck.js';
 import {
   applyRetention,
+  getRetentionFactor,
   mapDishMethodToCookingMethod,
   type CookingMethod,
 } from '$lib/data/cookingLossModel.js';
@@ -204,7 +205,23 @@ export function buildRecipeCommunityV3(
   servings: number,
   gramsPerServing: number,
   dishCookMethod?: string,
+  dishCookTempF?: number,
+  dishCookMinutes?: number,
 ): BuildResult {
+  // ── Recipe-level (top bar) primary cook parameters ──────────────────────────
+  // The top bar represents the final assembled-bake or primary cook applied to
+  // the whole dish. When set it overrides each section’s own cook_method for
+  // effectiveCookMethod. Sections without their own oven stages inherit the
+  // top-bar temp/minutes as the oven stage source.
+  const primaryCookMethod: CookingMethod | undefined = dishCookMethod
+    ? mapDishMethodToCookingMethod(dishCookMethod)
+    : undefined;
+  const rawDish = dishCookMethod?.trim().toLowerCase() ?? '';
+  const primaryCookTempF =
+    rawDish === 'sub-simmer' ? 180 :
+    rawDish === 'simmer'     ? 195 :
+    rawDish === 'braise'     ? 185 : 212;
+  const primaryCookLidOn = rawDish === 'braise';
 
   const sectionResults: SectionBuildResult[] = [];
   const globalSkipped: SkippedIngredient[]   = [];
@@ -252,8 +269,30 @@ export function buildRecipeCommunityV3(
   for (const sec of allSections) {
     const bucket = buckets.get(sec.sectionKey) ?? [];
 
-    // Cook method drives retention lookup (prep_method is ignored — display only).
-    const effectiveCookMethod: CookingMethod = mapDishMethodToCookingMethod(sec.cookMethod);
+    // effectiveCookMethod = top bar’s method (if set) OR section’s own cook_method.
+    // This represents the final/assembled cook applied to the whole dish.
+    const effectiveCookMethod: CookingMethod = primaryCookMethod ?? mapDishMethodToCookingMethod(sec.cookMethod);
+    // Stovetop temperature for evaporation model when effectiveCookMethod=‘boiled’.
+    const secCookStr = sec.cookMethod.toLowerCase();
+    const effectiveTempF = primaryCookMethod
+      ? primaryCookTempF
+      : (secCookStr === 'sub-simmer' ? 180 : secCookStr === 'simmer' ? 195 : secCookStr === 'braise' ? 185 : 212);
+    const effectiveLidOn = primaryCookMethod ? primaryCookLidOn : (secCookStr === 'braise');
+
+    // Pre-step: section’s own prepMethod fires BEFORE the primary cook.
+    // e.g. simmer the apple filling 5 min, then bake the assembled pie 52 min.
+    // Only active when the pre-step resolves to a DIFFERENT cook method than the
+    // primary (prevents double-counting when the section IS the primary cook,
+    // e.g. a soup where prepMethod=‘simmer’ ≡ effectiveCookMethod=‘boiled’).
+    const prepMethodStr = ((sec as any).prepMethod ?? (sec as any).prep_method ?? '') as string;
+    const prepCookMethodRaw: CookingMethod | null =
+      (prepMethodStr && prepMethodStr !== 'none' && prepMethodStr !== 'raw')
+        ? mapDishMethodToCookingMethod(prepMethodStr)
+        : null;
+    const hasPrepStep = prepCookMethodRaw !== null && prepCookMethodRaw !== effectiveCookMethod;
+    const prepCookMethod: CookingMethod | null = hasPrepStep ? prepCookMethodRaw : null;
+    const prepTempF = prepMethodStr === 'sub-simmer' ? 180 : prepMethodStr === 'simmer' ? 195 : prepMethodStr === 'braise' ? 185 : 212;
+    const prepLidOn = prepMethodStr === 'braise';
 
     const skipped: SkippedIngredient[] = [];
     const active: Array<{ grams: number; nutrients: NutrientRow }> = [];
@@ -327,7 +366,10 @@ export function buildRecipeCommunityV3(
     const yfc = sec.yieldFactorCarbohydrate ?? 1.0;
     const yfo = sec.yieldFactorOther        ?? 1.0;
 
-    // ── Step 1+2: Sum retained nutrients (single retention pass — cook_method only) ──
+    // ── Step 1+2: Sum retained nutrients ──────────────────────────────────────────────
+    // Two-pass when hasPrepStep: pre-step retention × primary cook retention.
+    // Each cook method has its own factor table in COOKING_RETENTION.
+    // Single-pass otherwise (primary cook only).
     const sectionTotals: Record<string, number> = {};
     let rawGrams = 0;
 
@@ -336,10 +378,19 @@ export function buildRecipeCommunityV3(
       for (const key of MACRO_KEYS) {
         const rawPer100g = (nutrients as unknown as Record<string, number>)[key] ?? 0;
         const colName    = KEY_TO_COLUMN[key] ?? key;
-        const retained   = key === 'water'
-          // Water: not scaled here — yieldWater applied to section total below.
-          ? rawPer100g * (grams / 100)
-          : applyRetention(rawPer100g, grams, effectiveCookMethod, colName);
+        let retained: number;
+        if (key === 'water') {
+          // Water: yield factor applied via yieldWater below.
+          retained = rawPer100g * (grams / 100);
+        } else if (hasPrepStep && prepCookMethod) {
+          // Two-pass: pre-step retention × primary cook retention.
+          // e.g. simmer’s VitC 0.50 × baked’s VitC factor.
+          const prepFactor    = getRetentionFactor(prepCookMethod, colName);
+          const primaryFactor = getRetentionFactor(effectiveCookMethod, colName);
+          retained = rawPer100g * (grams / 100) * prepFactor * primaryFactor;
+        } else {
+          retained = applyRetention(rawPer100g, grams, effectiveCookMethod, colName);
+        }
         sectionTotals[key] = (sectionTotals[key] ?? 0) + retained;
       }
     }
