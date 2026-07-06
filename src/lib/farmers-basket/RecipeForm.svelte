@@ -1731,21 +1731,13 @@
       }
       nextSections = derived;
     }
+    const explicitCookMethod = suggestion.cookingMethod || undefined;
     if (nextSections) {
       sections = nextSections;
-      // Mirror the moderator $effect: blank the top-bar cook when sections
-      // handle their own heat (hasAnySectionHeat). Only derive a top-bar
-      // cookMinutes for the quiche pattern (all sections assembled raw but
-      // a real oven bake applies to the whole dish).
       const nonRawSecs = nextSections.filter(sec => sec.prepMethod && sec.prepMethod !== 'none');
       const hasAnySectionHeat = nonRawSecs.length > 0;
       const allSectionsRaw = nonRawSecs.length === 0;
       const primaryIsRawOrEmpty = !cookingMethod || cookingMethod === 'No heat';
-      // Turso is the source of truth for the top-bar cook method.
-      // suggestion.cookingMethod is read directly from dev_recipes.cooking_method.
-      // v3Data.cookMethod is the pipeline-computed value (build JSON) and is
-      // only used for the audit comparison chart — never to populate the form.
-      const explicitCookMethod = suggestion.cookingMethod || undefined;
       if (nextSections.length > 0) {
         if ((hasAnySectionHeat && !explicitCookMethod) || (allSectionsRaw && primaryIsRawOrEmpty)) {
           cookingMethod = '';
