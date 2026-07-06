@@ -448,7 +448,7 @@
     {
       "section_key": "crust",
       "section_label": "Crust",
-      "prep_method": "pressed",
+      "prep_method": "raw",
       "cook_method": "baked",
       "cooking_method": "baked",
       "cooking_method_normalized": "baked",
@@ -478,7 +478,7 @@
     {
       "section_key": "filling",
       "section_label": "Filling",
-      "prep_method": "whisked",
+      "prep_method": "raw",
       "cook_method": "baked",
       "cooking_method": "baked",
       "cooking_method_normalized": "baked",
