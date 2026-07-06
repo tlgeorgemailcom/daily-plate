@@ -187,6 +187,25 @@
   ];
   const LOCAL_FOODS_BY_NDB = new Map(FOODS.map(food => [food.ndb, food]));
 
+  // Maps pipeline cooking_method values (past-tense / lowercase) to the UI
+  // display labels used in COOKING_METHODS. Handles baked→Bake, boiled→Boil,
+  // fried→Fry, pan grilled→Pan grill, grilled→Grill, raw→No heat.
+  function normalizeCookMethodLabel(raw: string): string {
+    const m = (raw ?? '').trim().toLowerCase();
+    const MAP: Record<string, string> = {
+      'baked':       'Bake',
+      'boiled':      'Boil',
+      'fried':       'Fry',
+      'pan grilled': 'Pan grill',
+      'grilled':     'Grill',
+      'raw':         'No heat',
+      'no heat':     'No heat',
+      'noheat':      'No heat',
+      'none':        'No heat',
+    };
+    return MAP[m] ?? (m.charAt(0).toUpperCase() + m.slice(1));
+  }
+
   // Form state
   let recipeName = $state(initialData.recipeName || '');
   // Split existing recipeName into parts if present (format: "Dish Name — Suffix")
@@ -195,7 +214,7 @@
   // Normalize the initial cook method: map pipeline values ('baked','boiled','raw','multi', etc.)
   // to UI labels ('Bake','Boil','No heat', …). Unknown/multi → 'No heat'; missing → 'Bake'.
   const _initCM = initialData.cookingMethod ?? '';
-  const _matchedCM = COOKING_METHODS.find(m => m.toLowerCase() === _initCM.toLowerCase());
+  const _matchedCM = COOKING_METHODS.find(m => m.toLowerCase() === normalizeCookMethodLabel(_initCM).toLowerCase());
   let cookingMethod = $state<string>(_matchedCM ?? '');
   let cookMinutes = $state<number | undefined>(initialData.cookMinutes);
   let cookTempF = $state<number | undefined>(initialData.cookTempF);
@@ -1075,10 +1094,7 @@
           // authored value and is the source of truth for the top bar regardless
           // of whether the recipe has sections.
           if (data.cookMethod) {
-            const cm = data.cookMethod.trim();
-            const norm = cm.toLowerCase() === 'no heat' || cm.toLowerCase() === 'noheat' || cm.toLowerCase() === 'none'
-              ? 'No heat'
-              : cm.charAt(0).toUpperCase() + cm.slice(1).toLowerCase();
+            const norm = normalizeCookMethodLabel(data.cookMethod);
             const match = COOKING_METHODS.find(m => m.toLowerCase() === norm.toLowerCase());
             if (match) cookingMethod = match;
           }
@@ -1659,7 +1675,11 @@
       const hasAnySectionHeat = nonRawSecs.length > 0;
       const allSectionsRaw = nonRawSecs.length === 0;
       const primaryIsRawOrEmpty = !cookingMethod || cookingMethod === 'No heat';
-      const explicitCookMethod = (v3Data as Record<string, unknown> | null)?.cookMethod as string | undefined;
+      // Turso is the source of truth for the top-bar cook method.
+      // suggestion.cookingMethod is read directly from dev_recipes.cooking_method.
+      // v3Data.cookMethod is the pipeline-computed value (build JSON) and is
+      // only used for the audit comparison chart — never to populate the form.
+      const explicitCookMethod = suggestion.cookingMethod || undefined;
       if (nextSections.length > 0) {
         if ((hasAnySectionHeat && !explicitCookMethod) || (allSectionsRaw && primaryIsRawOrEmpty)) {
           cookingMethod = '';
@@ -1684,10 +1704,7 @@
 
     // Apply the explicit recipe-level cook method from Turso (same as v3-build $effect).
     if (explicitCookMethod) {
-      const cm = explicitCookMethod.trim();
-      const norm = cm.toLowerCase() === 'no heat' || cm.toLowerCase() === 'noheat' || cm.toLowerCase() === 'none'
-        ? 'No heat'
-        : cm.charAt(0).toUpperCase() + cm.slice(1).toLowerCase();
+      const norm = normalizeCookMethodLabel(explicitCookMethod);
       const match = COOKING_METHODS.find(m => m.toLowerCase() === norm.toLowerCase());
       if (match) cookingMethod = match;
     }

@@ -66,10 +66,14 @@ export const GET: RequestHandler = async ({ params }) => {
 
   let tursoSections: SectionRow[] | null = null;
   let tursoIngredients: TursoIngredient[] | null = null;
+  // Turso is the source of truth for all form-populating fields.
+  // cooking_method is read from Turso so the form top bar reflects what
+  // is actually stored — not what the pipeline happened to compute.
+  let tursoCookingMethod: string | null = null;
   try {
     const db = getGameDb();
     const result = await db.execute({
-      sql: 'SELECT sections_json, recipe_ingredients_json FROM dev_recipes WHERE recipe_id = ?',
+      sql: 'SELECT sections_json, recipe_ingredients_json, cooking_method FROM dev_recipes WHERE recipe_id = ?',
       args: [recipeId],
     });
     if (result.rows.length > 0) {
@@ -83,6 +87,7 @@ export const GET: RequestHandler = async ({ params }) => {
         const pi = JSON.parse(rawIngs) as TursoIngredient[];
         if (Array.isArray(pi) && pi.length > 0) tursoIngredients = pi;
       }
+      tursoCookingMethod = (result.rows[0].cooking_method as string | null) ?? null;
     }
   } catch {
     // Turso unavailable — fall back to build JSON silently
@@ -121,7 +126,10 @@ export const GET: RequestHandler = async ({ params }) => {
   return json({
     recipe_id: parsed.recipe_id,
     srRule: parsed.sr_rule,
-    cookMethod: parsed.cooking_method ?? parsed.cook_method,
+    // Turso is the source of truth: use the stored cooking_method when Turso
+    // is available (even if empty — empty means no primary cook method is set).
+    // Fall back to the build JSON only when Turso was unreachable (tursoCookingMethod===null).
+    cookMethod: tursoCookingMethod !== null ? tursoCookingMethod : (parsed.cooking_method ?? parsed.cook_method),
     cookMethodNormalized: parsed.cooking_method_normalized ?? parsed.cook_method_normalized,
     yieldFactorWater: parsed.yield_factor_water,
     yieldFactorFat: parsed.yield_factor_fat,
