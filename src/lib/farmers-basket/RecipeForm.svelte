@@ -2181,12 +2181,12 @@
           {@const gps = liveNutritionJson.gramsPerServing}
           {@const hasLive100g = !!p100 || (gps != null && gps > 0)}
           {@const showLive100g = macroPer === '100g' && hasLive100g}
-          {@const calVal  = showLive100g ? (p100 ? Math.round(p100.Energy_KCal)               : (gps ? Math.round(liveNutritionJson.perServing.cal  / gps * 100) : liveNutritionJson.perServing.cal))  : liveNutritionJson.perServing.cal}
-          {@const proVal  = showLive100g ? (p100 ? Math.round(p100.Protein           * 10) / 10 : (gps ? Math.round(liveNutritionJson.perServing.pro  / gps * 100) : liveNutritionJson.perServing.pro))  : liveNutritionJson.perServing.pro}
-          {@const fatVal  = showLive100g ? (p100 ? Math.round(p100.TotalLipidFat     * 10) / 10 : (gps ? Math.round(liveNutritionJson.perServing.fat  / gps * 100) : liveNutritionJson.perServing.fat))  : liveNutritionJson.perServing.fat}
-          {@const carbVal = showLive100g ? (p100 ? Math.round(p100.Carbohydrate      * 10) / 10 : (gps ? Math.round(liveNutritionJson.perServing.carb / gps * 100) : liveNutritionJson.perServing.carb)) : liveNutritionJson.perServing.carb}
-          {@const fibVal  = showLive100g ? (p100 ? Math.round(p100.FiberTotalDietary * 10) / 10 : (gps ? Math.round(liveNutritionJson.perServing.fib  / gps * 100) : liveNutritionJson.perServing.fib))  : liveNutritionJson.perServing.fib}
-          {@const sugVal  = showLive100g ? (p100 ? Math.round(p100.SugarsTotal       * 10) / 10 : (gps ? Math.round(liveNutritionJson.perServing.sug  / gps * 100) : liveNutritionJson.perServing.sug))  : liveNutritionJson.perServing.sug}
+          {@const calVal  = showLive100g ? (p100 ? Math.round(p100.Energy_KCal)               : (gps ? Math.round(liveNutritionJson.perServing.cal  / gps * 100) : liveNutritionJson.perServing.cal))  : Math.round(liveNutritionJson.perServing.cal  * 10) / 10}
+          {@const proVal  = showLive100g ? (p100 ? Math.round(p100.Protein           * 10) / 10 : (gps ? Math.round(liveNutritionJson.perServing.pro  / gps * 100) : liveNutritionJson.perServing.pro))  : Math.round(liveNutritionJson.perServing.pro  * 10) / 10}
+          {@const fatVal  = showLive100g ? (p100 ? Math.round(p100.TotalLipidFat     * 10) / 10 : (gps ? Math.round(liveNutritionJson.perServing.fat  / gps * 100) : liveNutritionJson.perServing.fat))  : Math.round(liveNutritionJson.perServing.fat  * 10) / 10}
+          {@const carbVal = showLive100g ? (p100 ? Math.round(p100.Carbohydrate      * 10) / 10 : (gps ? Math.round(liveNutritionJson.perServing.carb / gps * 100) : liveNutritionJson.perServing.carb)) : Math.round(liveNutritionJson.perServing.carb * 10) / 10}
+          {@const fibVal  = showLive100g ? (p100 ? Math.round(p100.FiberTotalDietary * 10) / 10 : (gps ? Math.round(liveNutritionJson.perServing.fib  / gps * 100) : liveNutritionJson.perServing.fib))  : Math.round(liveNutritionJson.perServing.fib  * 10) / 10}
+          {@const sugVal  = showLive100g ? (p100 ? Math.round(p100.SugarsTotal       * 10) / 10 : (gps ? Math.round(liveNutritionJson.perServing.sug  / gps * 100) : liveNutritionJson.perServing.sug))  : Math.round(liveNutritionJson.perServing.sug  * 10) / 10}
           <div class="macro-preview" class:complete={true}>
             <div class="macro-preview-header">
               <span class="macro-preview-label">
