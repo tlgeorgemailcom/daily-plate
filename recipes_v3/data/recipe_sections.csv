@@ -639,8 +639,6 @@ SIDE_040,succotash,Succotash,,pan grilled,0.90,1.0,1.0,1.0,1.0,,,,,
 SOUP_002,stock,Beef stock and seasoning,,simmer,,1.0,1.0,1.0,1.0,,,,20,STOCK_004
 SOUP_002,noodles,Rice noodles,,boiled,,1.0,1.0,1.0,1.0,,,,9,
 SOUP_002,beef,Beef,,raw,,1.0,1.0,1.0,1.0,,,,,
-SOUP_004,stock,Chicken stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_003
-SOUP_004,soup,Broccoli cheddar,,boiled,0.90,1.0,1.0,1.0,1.0,,,0:25,,
 SOUP_005,stock,Chicken stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_003
 SOUP_005,egg_drop,Egg drop,,boiled,0.95,1.0,1.0,1.0,1.0,,,0:6,,
 SOUP_006,stock,Chicken stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_003
@@ -926,3 +924,7 @@ SOUP_003,beef,Beef,fried,fried,,1.0,,,1.0,,fried_meat,,10,
 SOUP_003,onion_celery,Onion and celery,fried,fried,,1.0,,,1.0,,fried_meat,,7,
 SOUP_003,garlic_tomato,Garlic and tomato paste,fried,fried,,1.0,,,1.0,,,,2,
 SOUP_003,stew,Beef stew,,braise,,1.0,,,1.0,,simmer_sauce,,50,
+SOUP_004,onion_carrot,Onion and carrot,fried,fried,,1.0,,,1.0,,fried_meat,,6,
+SOUP_004,garlic,Garlic,fried,fried,,1.0,,,1.0,,,,1,
+SOUP_004,soup,Chicken stock and half-and-half,,simmer,,1.0,,,1.0,,simmer_sauce,,20,
+SOUP_004,cheese,Cheddar cheese,finish,raw,,1.0,,,1.0,,,,,
