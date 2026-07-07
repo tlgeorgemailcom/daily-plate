@@ -169,8 +169,8 @@
     'Braise':    'Braise (covered)',
   };
   // v3.md §18.1 — lowercase enum stored in recipe_sections.csv::cooking_method.
-  const SECTION_COOKING_METHODS = ['raw', 'boiled', 'steamed', 'baked', 'fried', 'pan grilled', 'grilled', 'microwave'];
-  const SECTION_PREP_METHODS    = ['boiled', 'simmer', 'sub-simmer', 'braise', 'steamed', 'blanched', 'baked', 'par-baked', 'fried', 'pan grilled', 'grilled', 'marinated', 'chilled', 'microwave'];
+  const SECTION_COOKING_METHODS = ['raw', 'boiled', 'steamed', 'baked', 'fried', 'pan grilled', 'grilled', 'broiled', 'microwave'];
+  const SECTION_PREP_METHODS    = ['boiled', 'simmer', 'sub-simmer', 'braise', 'steamed', 'blanched', 'baked', 'par-baked', 'fried', 'pan grilled', 'grilled', 'broiled', 'marinated', 'chilled', 'microwave'];
   // Display labels for prep methods — stored values are clean identifiers;
   // UI annotations clarify open-pot vs covered assumption for the water model.
   const PREP_METHOD_DISPLAY: Record<string, string> = {
@@ -198,6 +198,7 @@
       'fried':       'Fry',
       'pan grilled': 'Pan grill',
       'grilled':     'Grill',
+      'broiled':     'Broil',
       'raw':         'No heat',
       'no heat':     'No heat',
       'noheat':      'No heat',
@@ -2562,7 +2563,7 @@
             aria-label="Remove section"
           >✕</button>
         </div>
-        {#if sec.prepMethod && ['boiled','simmer','sub-simmer','braise','steamed','blanched','baked','par-baked','fried','pan grilled','grilled','microwave'].includes(sec.prepMethod)}
+        {#if sec.prepMethod && ['boiled','simmer','sub-simmer','braise','steamed','blanched','baked','par-baked','fried','pan grilled','grilled','broiled','microwave'].includes(sec.prepMethod)}
           <div class="section-times-bar">
             <label class="section-time-field" title="Lid-off cooking time only (boiled / simmer / sub-simmer). Do not include covered time — use 'braise' for covered cooking.">
               <span class="section-time-label">Prep (min)</span>
