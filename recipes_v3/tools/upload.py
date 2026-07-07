@@ -255,9 +255,9 @@ def _build_payload(rid: str, recipes, ings, ledger, instrs, sections_map) -> dic
                     cook_minutes_val = _bm
                 break
 
-    # v3 only writes the columns it owns. Identity / game-key / audit-history
-    # columns (food_word, category, cooking_method casing, serving_label,
-    # servings, submitted_by) are deliberately preserved as-is in Turso.
+    # v3 owns all dev recipe columns except game/identity keys (food_word, category,
+    # dietary_category, serving_label, servings, submitted_by).
+    # cooking_method is now written by upload.py — recipes.csv is authoritative.
     return {
         "recipe_id": rid,
         "recipe_name": rec.recipe_name,
@@ -274,6 +274,7 @@ def _build_payload(rid: str, recipes, ings, ledger, instrs, sections_map) -> dic
         "sections_json": sections_json,
         "cook_minutes": cook_minutes_val,
         "cook_temp_f":  cook_temp_f_val,
+        "cooking_method": rec.cooking_method or "",
     }
 
 
@@ -292,6 +293,7 @@ UPDATE dev_recipes SET
   sections_json            = ?,
   cook_minutes             = ?,
   cook_temp_f              = ?,
+  cooking_method           = ?,
   updated_at               = ?
 WHERE recipe_id = ?
 """
@@ -302,7 +304,7 @@ _UPDATE_COLS = (
     "grams_per_serving",
     "recipe_ingredients_json", "recipe_instructions_json", "nutrition_json",
     "nutrient_version", "retention_model_version", "source_match_version",
-    "source_ndb_no", "sections_json", "cook_minutes", "cook_temp_f",
+    "source_ndb_no", "sections_json", "cook_minutes", "cook_temp_f", "cooking_method",
 )
 
 
@@ -418,6 +420,7 @@ def main() -> int:
                 payload["sections_json"],
                 payload["cook_minutes"],
                 payload["cook_temp_f"],
+                payload["cooking_method"],
                 now_utc,
                 payload["recipe_id"],
             ))
