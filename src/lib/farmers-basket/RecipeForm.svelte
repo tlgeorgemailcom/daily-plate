@@ -998,9 +998,10 @@
               if (prepV && prepV !== 'raw') return prepV;
               const isBaked = cookM === 'baked' || cookM === 'par-baked';
               if (!isBaked && cookM && cookM !== 'raw') {
-                // Section cook matches top bar → top bar owns the display
+                // Top bar set → top bar owns all heat, section shows no pre-step
+                // Top bar blank → section IS the cook, show its method
                 const topM = ((data.cookMethod ?? '') as string).toLowerCase();
-                if (topM && cookM.toLowerCase() === topM) return 'none';
+                if (topM) return 'none';
                 return cookM;
               }
               return 'none';
@@ -1714,7 +1715,7 @@
           const isBaked = cookV === 'baked' || cookV === 'par-baked';
           if (!isBaked && cookV && cookV !== 'raw') {
             const topM = (explicitCookMethod ?? '').toLowerCase();
-            if (topM && cookV.toLowerCase() === topM) return 'none';
+            if (topM) return 'none';
             return cookV;
           }
           return 'none';
