@@ -51,7 +51,7 @@ SWEET_020,frosting,Bittersweet chocolate glaze,raw,raw,,1.0,,,1.0,,none,,3,
 CRUST_003,crust,Single pie crust (unbaked),raw,raw,1.0,1.0,,,1.0,,,,,
 BKFST_012,sausage,Browned pork sausage,fried,fried,,1.0,,,1.0,,fried_meat,,7,
 BKFST_012,gravy,Milk gravy,simmer,simmer,,1.0,,,1.0,,simmer_sauce,,5,
-BKFST_002,biscuit,Biscuit,split,raw,1.0,1.0,,,1.0,,,450:14,,BKFST_001
+BKFST_002,biscuit,Biscuit,baked,raw,,1.0,,,1.0,,,450:14,,BKFST_001
 BKFST_002,sausage_crumbles,Browned pork sausage,fried,fried,,1.0,,,1.0,,fried_meat,,7,
 BKFST_002,milk_gravy,Milk gravy,simmer,simmer,,1.0,,,1.0,,simmer_sauce,,5,
 BKFST_001,biscuit,Biscuit,,baked,,1.0,,,1.0,,cake_batter,450:14,,
