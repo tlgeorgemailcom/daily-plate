@@ -34,6 +34,8 @@ interface RecipeSubmission {
   cookingMethod?: string;
   dishFamily?: string | null;
   linkType?: 'ingredient' | 'dish' | 'mixed';
+  cookMinutes?: number;
+  cookTempF?: number;
   nutritionJson?: unknown | null;
   sections?: unknown[];
 }
@@ -71,6 +73,8 @@ function buildPlayerSubmission(row: Record<string, unknown>): RecipeSubmission {
     cookingMethod: (row.cookingMethod as string | null) || undefined,
     dishFamily: (row.dishFamily as string | null) || null,
     linkType: (row.linkType as 'ingredient' | 'dish' | 'mixed' | null) || undefined,
+    cookMinutes: typeof row.cookMinutes === 'number' ? row.cookMinutes : undefined,
+    cookTempF:   typeof row.cookTempF   === 'number' ? row.cookTempF   : undefined,
     nutritionJson: row.nutritionJson ? parseJson(row.nutritionJson as string, null) : null,
     sections: row.sectionsJson ? parseJson(row.sectionsJson as string, undefined) : undefined
   };
@@ -102,6 +106,8 @@ function buildDevSubmission(row: Record<string, unknown>): RecipeSubmission {
     cookingMethod: (row.cookingMethod as string | null) || undefined,
     dishFamily: (row.dishFamily as string | null) || null,
     linkType: (row.linkType as 'ingredient' | 'dish' | 'mixed' | null) || undefined,
+    cookMinutes: typeof row.cookMinutes === 'number' ? row.cookMinutes : undefined,
+    cookTempF:   typeof row.cookTempF   === 'number' ? row.cookTempF   : undefined,
     nutritionJson: row.nutritionJson ? parseJson(row.nutritionJson as string, null) : null,
     sections: row.sectionsJson ? parseJson(row.sectionsJson as string, undefined) : undefined
   };
