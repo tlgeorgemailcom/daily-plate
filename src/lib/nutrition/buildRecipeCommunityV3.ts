@@ -286,7 +286,7 @@ export function buildRecipeCommunityV3(
     // e.g. a soup where prepMethod=‘simmer’ ≡ effectiveCookMethod=‘boiled’).
     const prepMethodStr = ((sec as any).prepMethod ?? (sec as any).prep_method ?? '') as string;
     const prepCookMethodRaw: CookingMethod | null =
-      (prepMethodStr && prepMethodStr !== 'none' && prepMethodStr !== 'raw')
+      (prepMethodStr && prepMethodStr !== 'none' && prepMethodStr !== 'raw' && prepMethodStr !== 'finish')
         ? mapDishMethodToCookingMethod(prepMethodStr)
         : null;
     const hasPrepStep = prepCookMethodRaw !== null && prepCookMethodRaw !== effectiveCookMethod;

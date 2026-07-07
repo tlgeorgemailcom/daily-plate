@@ -44,7 +44,8 @@ export type CookingMethod =
   | 'fried'
   | 'grilled'
   | 'microwave'
-  | 'no_heat';
+  | 'no_heat'
+  | 'finish';
 
 /** SR28 column name → display label */
 export const NUTRIENT_LABELS: Record<string, string> = {

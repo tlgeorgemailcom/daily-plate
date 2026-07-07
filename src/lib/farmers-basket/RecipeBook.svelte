@@ -1680,6 +1680,7 @@
       'raw':         'No heat',
       'steamed':     'No heat',
       'microwave':   'No heat',
+      'finish':      'Added after cooking',
     };
     return map[raw.toLowerCase()] ?? raw;
   }

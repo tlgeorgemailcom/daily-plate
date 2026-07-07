@@ -188,6 +188,7 @@
       'raw':         'No heat',
       'steamed':     'No heat',
       'microwave':   'No heat',
+      'finish':      'Added after cooking',
     };
     return map[raw.toLowerCase()] ?? raw;
   }
@@ -263,7 +264,7 @@
       ...(() => {
         if (!recipe.cookingMethod) return {};
         const cm = recipe.cookingMethod.toLowerCase();
-        if (cm === 'no heat' || cm === 'noheat' || cm === 'none' || cm === 'raw') return {};
+        if (cm === 'no heat' || cm === 'noheat' || cm === 'none' || cm === 'raw' || cm === 'finish') return {};
         const secs: any[] = (recipe.sections as any[]) || [];
         for (const s of secs) {
           const stgs: Array<{tempF:number;minutes:number}> = Array.isArray(s.cook_stages ?? s.stages)

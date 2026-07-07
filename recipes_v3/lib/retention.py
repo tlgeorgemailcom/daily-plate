@@ -39,6 +39,7 @@ COOK_METHOD_ALIASES = {
     "raw":        "raw",
     "no_heat":    "raw",
     "no heat":    "raw",
+    "finish":     "raw",
     "bake":       "baked",
     "baked":      "baked",
     "roast":      "baked",

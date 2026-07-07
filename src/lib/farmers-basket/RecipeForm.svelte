@@ -170,7 +170,7 @@
   };
   // v3.md §18.1 — lowercase enum stored in recipe_sections.csv::cooking_method.
   const SECTION_COOKING_METHODS = ['raw', 'boiled', 'steamed', 'baked', 'fried', 'pan grilled', 'grilled', 'broiled', 'microwave'];
-  const SECTION_PREP_METHODS    = ['boiled', 'simmer', 'sub-simmer', 'braise', 'steamed', 'blanched', 'baked', 'par-baked', 'fried', 'pan grilled', 'grilled', 'broiled', 'marinated', 'chilled', 'microwave'];
+  const SECTION_PREP_METHODS    = ['boiled', 'simmer', 'sub-simmer', 'braise', 'steamed', 'blanched', 'baked', 'par-baked', 'fried', 'pan grilled', 'grilled', 'broiled', 'marinated', 'chilled', 'microwave', 'finish'];
   // Display labels for prep methods — stored values are clean identifiers;
   // UI annotations clarify open-pot vs covered assumption for the water model.
   const PREP_METHOD_DISPLAY: Record<string, string> = {
@@ -178,6 +178,7 @@
     'simmer':     'simmer (lid off)',
     'sub-simmer': 'sub-simmer (lid off)',
     'braise':     'braise (covered)',
+    'finish':     'Added after cooking',
   };
   // v3.md §18.6 — datalist suggestions; free-typing is always allowed.
   const SECTION_LABEL_VOCAB = [
@@ -203,6 +204,7 @@
       'no heat':     'No heat',
       'noheat':      'No heat',
       'none':        'No heat',
+      'finish':      'No heat',
     };
     return MAP[m] ?? (m.charAt(0).toUpperCase() + m.slice(1));
   }
@@ -1036,7 +1038,7 @@
           // or when no real heat exists at the recipe level.
           // Exception: quiche pattern — all sections are raw-assembled but a real
           // oven bake applies to the whole dish (cookingMethod is a true heat like 'Bake').
-          const nonRawSections = sections.filter(sec => sec.prepMethod && sec.prepMethod !== 'none');
+          const nonRawSections = sections.filter(sec => sec.prepMethod && sec.prepMethod !== 'none' && sec.prepMethod !== 'finish');
           const hasAnySectionHeat = nonRawSections.length > 0;
           const allSectionsRaw = nonRawSections.length === 0;
           const primaryIsRawOrEmpty = !cookingMethod || cookingMethod === 'No heat';
@@ -1755,7 +1757,7 @@
     const explicitCookMethod = suggestion.cookingMethod || undefined;
     if (nextSections) {
       sections = nextSections;
-      const nonRawSecs = nextSections.filter(sec => sec.prepMethod && sec.prepMethod !== 'none');
+      const nonRawSecs = nextSections.filter(sec => sec.prepMethod && sec.prepMethod !== 'none' && sec.prepMethod !== 'finish');
       const hasAnySectionHeat = nonRawSecs.length > 0;
       const allSectionsRaw = nonRawSecs.length === 0;
       const primaryIsRawOrEmpty = !cookingMethod || cookingMethod === 'No heat';
@@ -2563,6 +2565,9 @@
             aria-label="Remove section"
           >✕</button>
         </div>
+        {#if sec.prepMethod === 'finish'}
+          <p class="finish-info-note">ℹ️ Stirred in or added after the primary cook is complete — e.g. cheese, cream, finishing butter, whipped cream. No heat is applied; nutrition is calculated from the raw ingredient weight.</p>
+        {/if}
         {#if sec.prepMethod && ['boiled','simmer','sub-simmer','braise','steamed','blanched','baked','par-baked','fried','pan grilled','grilled','broiled','microwave'].includes(sec.prepMethod)}
           <div class="section-times-bar">
             <label class="section-time-field" title="Lid-off cooking time only (boiled / simmer / sub-simmer). Do not include covered time — use 'braise' for covered cooking.">
@@ -2910,6 +2915,7 @@
             <p>Some sections need cooking <strong>before</strong> they join the rest of the dish. Pick the method that applies:</p>
             <ul>
               <li><strong>no heat</strong> — ingredients go in as-is (cold, raw, or already cooked). This is correct for most sections.</li>
+              <li><strong>Added after cooking</strong> — ingredient is stirred in or added after the primary cook is complete, off-heat (e.g. shredded cheese into a soup, whipped cream on a cooled pie, finishing butter). No evaporation is modelled; nutrition uses the raw weight as-is.</li>
               <li><strong>boiled (lid off)</strong> — rolling boil, 212 °F, uncovered. Blanching, par-boiling.</li>
               <li><strong>simmer (lid off)</strong> — 195 °F, uncovered. Sauce reductions, hollandaise bases.</li>
               <li><strong>sub-simmer (lid off)</strong> — 180 °F, uncovered. Concentrating stock, uncovered slow stews.</li>
@@ -3721,6 +3727,15 @@
     padding: 8px 12px;
     border-radius: 0 6px 6px 0;
     margin-top: 10px !important;
+  }
+  .finish-info-note {
+    font-size: 0.78rem;
+    color: #555;
+    background: #fffbea;
+    border-left: 3px solid #d69e2e;
+    padding: 5px 10px;
+    border-radius: 0 4px 4px 0;
+    margin: 4px 0 0 0;
   }
   .primary-cook-select {
     font-size: 0.85rem;
