@@ -56,6 +56,13 @@ export const BINDING: Record<string, number> = {
   pastry:            0.782,  // blind-baked pie crust
   crumb_crust:       0.432,  // baked cookie/cracker crumb crust
   none:              0.00,   // stovetop cold-set or no-bake — no evaporation
+  // ── Stovetop / fried / grilled fill classes ─────────────────────────────
+  // Calibrated from locked BKFST values using stovetop evaporation model.
+  simmer_sauce:       0.127, // simmered gravy/sauce (195°F×5min → yfw=0.92)
+  pan_grilled_batter: 0.206, // pan-grilled bread/batter (350°F×6min → yfw=0.80)
+  fried_meat:         0.272, // fried ground meat (375°F×8min → yfw=0.73)
+  fried_potato:       0.750, // fried potato high surface area (375°F×10min → yfw=0.25)
+  grilled_batter:     0.408, // waffle-iron grilled batter (375°F×4min → yfw=0.62)
   // meringue: NOT included — model invalid for surface-browning sections.
   // Never pass 'meringue' to this function. inferFillingClass() never emits it.
 };

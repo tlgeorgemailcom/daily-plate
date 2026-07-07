@@ -113,6 +113,14 @@ BINDING: dict[str, float] = {
     "crumb_crust":        0.432, # baked cookie/cracker crumb crust — SWEET_013 (350°F×9) → yfw=0.970
                                  # cookies already dry; only residual butter moisture evaporates
     "none":               0.00,  # stovetop / cold-set / no-bake
+    # ── Stovetop / fried / grilled fill classes ─────────────────────────────
+    # Calibrated from locked BKFST values using stovetop_rate_constant(temp).
+    # These use the boil-path (boil_minutes) in calc_yield_water, not oven stages.
+    "simmer_sauce":       0.127, # simmered gravy/sauce — BKFST_012 gravy: 195°F×5min → yfw=0.92
+    "pan_grilled_batter": 0.206, # pan-grilled bread/batter — BKFST_004 English muffin: 350°F×6min → yfw=0.80
+    "fried_meat":         0.272, # fried ground meat — BKFST_015 sausage: 375°F×8min → yfw=0.73
+    "fried_potato":       0.750, # fried potato (high surface area) — BKFST_013 hash browns: 375°F×10min → yfw=0.25
+    "grilled_batter":     0.408, # waffle-iron grilled batter — BKFST_014 waffle: 375°F×4min → yfw=0.62
     # meringue: DO NOT USE — model invalid for surface-browning sections
 }
 
