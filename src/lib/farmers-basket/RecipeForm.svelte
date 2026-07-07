@@ -990,12 +990,19 @@
             const prepV = (typeof s.prep_method === 'string' ? s.prep_method : '') as string;
             // prepMethod for DISPLAY:
             //  non-raw prep_method   → show the pre-step (e.g. simmer | 5 min)
-            //  raw/empty prep + non-baked cook_method → show cook_method (section IS that cook)
-            //  raw/empty prep + baked cook_method    → 'none' (top bar owns the bake display)
+            //  raw/empty prep + non-baked cook_method, and cook_method does NOT match
+            //    the top bar → section IS that cook (e.g. Sausage Gravy sections)
+            //  raw/empty prep + cook_method matches top bar → 'none' (top bar owns it)
+            //  raw/empty prep + baked cook_method    → 'none' (top bar owns the bake)
             const pm = (() => {
               if (prepV && prepV !== 'raw') return prepV;
               const isBaked = cookM === 'baked' || cookM === 'par-baked';
-              if (!isBaked && cookM && cookM !== 'raw') return cookM;
+              if (!isBaked && cookM && cookM !== 'raw') {
+                // Section cook matches top bar → top bar owns the display
+                const topM = ((data.cookMethod ?? '') as string).toLowerCase();
+                if (topM && cookM.toLowerCase() === topM) return 'none';
+                return cookM;
+              }
               return 'none';
             })();
             const prepIsBaked = cookM === 'baked' || cookM === 'par-baked';
@@ -1068,6 +1075,10 @@
                 if (totalMins > 0) cookMinutes = totalMins;
                 const lastTempF = stgs[stgs.length - 1]?.tempF;
                 if (lastTempF > 0) cookTempF = lastTempF;
+              } else {
+                // Stovetop recipe: derive top-bar time from section boilMinutes
+                const stovetopSec = sections.find(s => typeof s.boilMinutes === 'number' && s.boilMinutes > 0);
+                if (stovetopSec && cookMinutes == null) cookMinutes = stovetopSec.boilMinutes;
               }
             }
           }
@@ -1701,7 +1712,11 @@
           const prepV = typeof s.prep_method === 'string' ? s.prep_method : (typeof s.prepMethod === 'string' ? s.prepMethod : '');
           if (prepV && prepV !== 'raw') return prepV;
           const isBaked = cookV === 'baked' || cookV === 'par-baked';
-          if (!isBaked && cookV && cookV !== 'raw') return cookV;
+          if (!isBaked && cookV && cookV !== 'raw') {
+            const topM = (explicitCookMethod ?? '').toLowerCase();
+            if (topM && cookV.toLowerCase() === topM) return 'none';
+            return cookV;
+          }
           return 'none';
         })(),
         cookingMethod: String(s.cook_method ?? s.cookMethod ?? s.cooking_method ?? 'raw'),
@@ -1774,6 +1789,10 @@
             if (totalMins > 0) cookMinutes = totalMins;
             const lastTempF = stgs[stgs.length - 1]?.tempF;
             if (lastTempF > 0) cookTempF = lastTempF;
+          } else {
+            // Stovetop recipe: derive top-bar time from section boilMinutes
+            const stovetopSec = nextSections.find(s => typeof s.boilMinutes === 'number' && s.boilMinutes > 0);
+            if (stovetopSec && cookMinutes == null) cookMinutes = stovetopSec.boilMinutes;
           }
         }
       }

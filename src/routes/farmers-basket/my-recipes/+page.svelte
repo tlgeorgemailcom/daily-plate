@@ -508,6 +508,8 @@
                 };
                 if (Number(s.cookTempF) > 0 && Number(s.cookMinutes) > 0)
                   return { cookMinutes: Number(s.cookMinutes), cookTempF: Number(s.cookTempF) };
+                const boilMins = s.boil_minutes ?? s.boilMinutes ?? 0;
+                if (Number(boilMins) > 0) return { cookMinutes: Number(boilMins) };
               }
               return {};
             })(),
