@@ -368,7 +368,7 @@
     {
       "section_key": "egg",
       "section_label": "Poached egg",
-      "prep_method": "raw",
+      "prep_method": "simmer",
       "cook_method": "simmer",
       "cooking_method": "simmer",
       "cooking_method_normalized": "boiled",
@@ -386,13 +386,8 @@
       "raw_carb_grams": 0.35,
       "raw_fiber_grams": 0.0,
       "final_grams": 50.0,
-      "boil_minutes": 0,
-      "cook_stages": [
-        {
-          "tempF": 0,
-          "minutes": 4
-        }
-      ],
+      "boil_minutes": 4.0,
+      "cook_stages": [],
       "fill_class": ""
     }
   ]
