@@ -70,10 +70,12 @@ export const GET: RequestHandler = async ({ params }) => {
   // cooking_method is read from Turso so the form top bar reflects what
   // is actually stored — not what the pipeline happened to compute.
   let tursoCookingMethod: string | null = null;
+  let tursoCookMinutes: number | null = null;
+  let tursoCookTempF: number | null = null;
   try {
     const db = getGameDb();
     const result = await db.execute({
-      sql: 'SELECT sections_json, recipe_ingredients_json, cooking_method FROM dev_recipes WHERE recipe_id = ?',
+      sql: 'SELECT sections_json, recipe_ingredients_json, cooking_method, cook_minutes, cook_temp_f FROM dev_recipes WHERE recipe_id = ?',
       args: [recipeId],
     });
     if (result.rows.length > 0) {
@@ -88,6 +90,8 @@ export const GET: RequestHandler = async ({ params }) => {
         if (Array.isArray(pi) && pi.length > 0) tursoIngredients = pi;
       }
       tursoCookingMethod = (result.rows[0].cooking_method as string | null) ?? null;
+      tursoCookMinutes = (result.rows[0].cook_minutes as number | null) ?? null;
+      tursoCookTempF   = (result.rows[0].cook_temp_f  as number | null) ?? null;
     }
   } catch {
     // Turso unavailable — fall back to build JSON silently
@@ -131,6 +135,8 @@ export const GET: RequestHandler = async ({ params }) => {
     // Fall back to the build JSON only when Turso was unreachable (tursoCookingMethod===null).
     cookMethod: tursoCookingMethod !== null ? tursoCookingMethod : (parsed.cooking_method ?? parsed.cook_method),
     cookMethodNormalized: parsed.cooking_method_normalized ?? parsed.cook_method_normalized,
+    cookMinutes: tursoCookMinutes,
+    cookTempF:   tursoCookTempF,
     yieldFactorWater: parsed.yield_factor_water,
     yieldFactorFat: parsed.yield_factor_fat,
     servingsCount: parsed.servings_count,

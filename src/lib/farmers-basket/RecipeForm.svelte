@@ -1065,25 +1065,11 @@
                 if (lastTempF > 0 && cookTempF == null) cookTempF = lastTempF;
               }
             }
-            // Assembled-bake fallback: when the top bar has an explicit cook method
-            // but cookMinutes/cookTempF are still unset, derive from the first section
-            // with oven stages. Covers pies, gratins, and any multi-section assembled
-            // bake where sections share the same oven operation as the top bar.
-            if (data.cookMethod && cookMinutes == null && cookTempF == null) {
-              const stagedSec = sections.find(s =>
-                Array.isArray(s.stages) && (s.stages as Array<{tempF:number;minutes:number}>).some(st => st.tempF > 0)
-              );
-              if (stagedSec) {
-                const stgs = (stagedSec.stages as Array<{tempF:number;minutes:number}>).filter(st => st.tempF > 0 && st.minutes > 0);
-                const totalMins = stgs.reduce((sum, st) => sum + st.minutes, 0);
-                if (totalMins > 0) cookMinutes = totalMins;
-                const lastTempF = stgs[stgs.length - 1]?.tempF;
-                if (lastTempF > 0) cookTempF = lastTempF;
-              } else {
-                // Stovetop recipe: derive top-bar time from section boilMinutes
-                const stovetopSec = sections.find(s => typeof s.boilMinutes === 'number' && s.boilMinutes > 0);
-                if (stovetopSec && cookMinutes == null) cookMinutes = stovetopSec.boilMinutes;
-              }
+            // Use cook_minutes/cook_temp_f from Turso directly — no section scan.
+            // These are set by upload.py for dev recipes.
+            if (data.cookMethod) {
+              if (typeof data.cookMinutes === 'number') cookMinutes = data.cookMinutes;
+              if (typeof data.cookTempF   === 'number') cookTempF   = data.cookTempF;
             }
           }
         }
