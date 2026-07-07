@@ -126,7 +126,8 @@ export const GET: RequestHandler = async ({ url }) => {
       const rows = await queryAll<RecipeRow>(
         `SELECT recipe_id, recipe_name, category, dietary_category, prep_time, servings,
           recipe_ingredients_json, recipe_instructions_json, sections_json, image_url, submitted_by, submitter_name, status, created_at,
-                moderator_note, nutrition_json, link_type, cooking_method, dish_family
+                moderator_note, nutrition_json, link_type, cooking_method, dish_family,
+                cook_minutes, cook_temp_f
          FROM player_recipes 
          WHERE submitted_by = ?
          ORDER BY created_at DESC`,
@@ -151,6 +152,8 @@ export const GET: RequestHandler = async ({ url }) => {
         linkType: row.link_type ?? null,
         cookingMethod: row.cooking_method || 'Bake',
         dishFamily: row.dish_family || null,
+        cookMinutes: row.cook_minutes ?? undefined,
+        cookTempF: row.cook_temp_f ?? undefined,
         nutritionJson: row.nutrition_json && row.nutrition_json !== EMPTY_NUTRITION_JSON
           ? JSON.parse(row.nutrition_json)
           : null
@@ -177,7 +180,8 @@ export const GET: RequestHandler = async ({ url }) => {
     const rows = await queryAll<RecipeRow>(
       `SELECT recipe_id, recipe_name, category, dietary_category, prep_time, servings,
               recipe_ingredients_json, recipe_instructions_json, sections_json, image_url, submitted_by, submitter_name, status, created_at,
-              moderator_note, nutrition_json, link_type, cooking_method, dish_family
+              moderator_note, nutrition_json, link_type, cooking_method, dish_family,
+              cook_minutes, cook_temp_f
        FROM player_recipes 
        WHERE recipe_id IN (${placeholders})
        ORDER BY created_at DESC`,
@@ -203,6 +207,8 @@ export const GET: RequestHandler = async ({ url }) => {
       linkType: row.link_type ?? null,
       cookingMethod: row.cooking_method || 'Bake',
       dishFamily: row.dish_family || null,
+      cookMinutes: row.cook_minutes ?? undefined,
+      cookTempF: row.cook_temp_f ?? undefined,
     }));
     
     return json({ recipes });

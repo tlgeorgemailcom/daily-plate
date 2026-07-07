@@ -42,6 +42,7 @@ sys.path.insert(0, str(ROOT))
 
 from lib.build import to_turso_nutrition_json  # noqa: E402
 from lib.load import load_ingredients, load_instructions, load_ledger, load_recipes, load_sections  # noqa: E402
+from lib.retention import normalize_cooking_method  # noqa: E402
 
 BUILDS_DIR = ROOT / "output" / "builds"
 LOG_DIR = ROOT / "output" / "upload_log"
@@ -232,6 +233,28 @@ def _build_payload(rid: str, recipes, ings, ledger, instrs, sections_map) -> dic
         separators=(",", ":"),
     ) if sections_list else None
 
+    # Derive top-bar cook_minutes and cook_temp_f from the primary cook section.
+    # Primary cook section = prep_method empty/none/raw/finish AND cook_method
+    # matches the recipe-level cooking_method.  Recipes with a blank top bar
+    # (e.g. multi-stage breakfasts) produce None for both fields.
+    _NO_HEAT = ("", "none", "raw", "finish")
+    _top_cm = normalize_cooking_method(rec.cooking_method or "")
+    cook_minutes_val: int | None = None
+    cook_temp_f_val:  int | None = None
+    if _top_cm and _top_cm != "raw" and sections_list:
+        for _s in sections_list:
+            _pm = (_s.prep_method or "").strip().lower()
+            _cm = normalize_cooking_method(_s.cook_method or "")
+            if _pm in _NO_HEAT and _cm == _top_cm:
+                _stgs = _parse_cook_stages(_s.cook_stages or "")
+                _bm   = _parse_boil_minutes(_s.boil_stages or "")
+                if _stgs:
+                    cook_minutes_val = sum(st["minutes"] for st in _stgs)
+                    cook_temp_f_val  = _stgs[-1]["tempF"] if _stgs[-1]["tempF"] > 0 else None
+                elif _bm > 0:
+                    cook_minutes_val = _bm
+                break
+
     # v3 only writes the columns it owns. Identity / game-key / audit-history
     # columns (food_word, category, cooking_method casing, serving_label,
     # servings, submitted_by) are deliberately preserved as-is in Turso.
@@ -249,6 +272,8 @@ def _build_payload(rid: str, recipes, ings, ledger, instrs, sections_map) -> dic
         "source_match_version": "v3-greenfield",
         "source_ndb_no": rec.canonical_ndb_no or "",
         "sections_json": sections_json,
+        "cook_minutes": cook_minutes_val,
+        "cook_temp_f":  cook_temp_f_val,
     }
 
 
@@ -265,6 +290,8 @@ UPDATE dev_recipes SET
   source_match_version     = ?,
   source_ndb_no            = ?,
   sections_json            = ?,
+  cook_minutes             = ?,
+  cook_temp_f              = ?,
   updated_at               = ?
 WHERE recipe_id = ?
 """
@@ -275,7 +302,7 @@ _UPDATE_COLS = (
     "grams_per_serving",
     "recipe_ingredients_json", "recipe_instructions_json", "nutrition_json",
     "nutrient_version", "retention_model_version", "source_match_version",
-    "source_ndb_no", "sections_json",
+    "source_ndb_no", "sections_json", "cook_minutes", "cook_temp_f",
 )
 
 
@@ -389,6 +416,8 @@ def main() -> int:
                 payload["source_match_version"],
                 payload["source_ndb_no"],
                 payload["sections_json"],
+                payload["cook_minutes"],
+                payload["cook_temp_f"],
                 now_utc,
                 payload["recipe_id"],
             ))

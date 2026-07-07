@@ -198,6 +198,8 @@ export const PATCH: RequestHandler = async ({ request }) => {
           dish_family = COALESCE(?, dish_family),
           nutrition_json = ?,
           plausibility_flags = ?,
+          cook_minutes = ?,
+          cook_temp_f = ?,
           updated_at = datetime('now'),
           status = ?
         WHERE recipe_id = ?`,
@@ -218,6 +220,8 @@ export const PATCH: RequestHandler = async ({ request }) => {
           fields.dishFamily || null,
           nutritionJson ? JSON.stringify(nutritionJson) : EMPTY_NUTRITION_JSON,
           patchPlausibilityFlags.length > 0 ? JSON.stringify(patchPlausibilityFlags) : null,
+          typeof fields.cookMinutes === 'number' ? fields.cookMinutes : null,
+          typeof fields.cookTempF   === 'number' ? fields.cookTempF   : null,
           newStatus,
           recipeId
         ]
@@ -334,9 +338,10 @@ export const POST: RequestHandler = async ({ request }) => {
         sections_json,
         image_url, link_type, cooking_method, dish_family, nutrition_json,
         plausibility_flags,
+        cook_minutes, cook_temp_f,
         submitter_name, status, created_at, updated_at,
         grams_per_serving, nutrient_version, retention_model_version, source_match_version
-      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'), datetime('now'), ?, ?, ?, ?)`,
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'), datetime('now'), ?, ?, ?, ?)`,
       [
         recipeId,
         submittedBy,
@@ -356,6 +361,8 @@ export const POST: RequestHandler = async ({ request }) => {
         body.dishFamily || null,
         nutritionJson,
         postPlausibilityFlags.length > 0 ? JSON.stringify(postPlausibilityFlags) : null,
+        typeof body.cookMinutes === 'number' ? body.cookMinutes : null,
+        typeof body.cookTempF   === 'number' ? body.cookTempF   : null,
         submitterName,
         status
         ,gramsPerServing,

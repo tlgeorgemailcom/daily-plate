@@ -120,7 +120,8 @@ export const GET: RequestHandler = async ({ url }) => {
              food_supply AS foodSupply, image_url AS imageUrl, updated_at AS updatedAt,
              cooking_method AS cookingMethod, dish_family AS dishFamily,
              link_type AS linkType, nutrition_json AS nutritionJson,
-             sections_json AS sectionsJson
+             sections_json AS sectionsJson,
+             cook_minutes AS cookMinutes, cook_temp_f AS cookTempF
       FROM player_recipes
       WHERE status IN ('pending', 'needs_changes')
       ORDER BY created_at ASC
@@ -135,7 +136,8 @@ export const GET: RequestHandler = async ({ url }) => {
              food_supply AS foodSupply, image_url AS imageUrl, updated_at AS updatedAt,
              cooking_method AS cookingMethod, dish_family AS dishFamily,
              link_type AS linkType, nutrition_json AS nutritionJson,
-             sections_json AS sectionsJson
+             sections_json AS sectionsJson,
+             cook_minutes AS cookMinutes, cook_temp_f AS cookTempF
       FROM dev_recipes
       WHERE status = 'published'
       ORDER BY created_at ASC
@@ -150,7 +152,8 @@ export const GET: RequestHandler = async ({ url }) => {
              food_supply AS foodSupply, image_url AS imageUrl, updated_at AS updatedAt,
              cooking_method AS cookingMethod, dish_family AS dishFamily,
              link_type AS linkType, nutrition_json AS nutritionJson,
-             sections_json AS sectionsJson
+             sections_json AS sectionsJson,
+             cook_minutes AS cookMinutes, cook_temp_f AS cookTempF
       FROM player_recipes
       WHERE status = 'approved'
       ORDER BY created_at ASC

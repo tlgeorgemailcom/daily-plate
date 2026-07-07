@@ -491,28 +491,9 @@
             })),
             nutritionJson: editingRecipe.nutritionJson || undefined,
             sections: (editingRecipe.sections as any) || undefined,
-            // Derive top-bar oven time/temp ONLY when the recipe has an explicit
-            // cookingMethod. Blank-top-bar recipes must not pick up section stage times.
-            ...(() => {
-              if (!editingRecipe.cookingMethod) return {};
-              const cm = editingRecipe.cookingMethod.toLowerCase();
-              if (cm === 'no heat' || cm === 'noheat' || cm === 'none' || cm === 'raw' || cm === 'finish') return {};
-              const secs: any[] = (editingRecipe.sections as any[]) || [];
-              for (const s of secs) {
-                const stgs: Array<{tempF:number;minutes:number}> = Array.isArray(s.cook_stages ?? s.stages)
-                  ? (s.cook_stages ?? s.stages).filter((st: any) => st.tempF > 0 && st.minutes > 0)
-                  : [];
-                if (stgs.length > 0) return {
-                  cookMinutes: stgs.reduce((sum, st) => sum + st.minutes, 0),
-                  cookTempF: stgs[stgs.length - 1].tempF,
-                };
-                if (Number(s.cookTempF) > 0 && Number(s.cookMinutes) > 0)
-                  return { cookMinutes: Number(s.cookMinutes), cookTempF: Number(s.cookTempF) };
-                const boilMins = s.boil_minutes ?? s.boilMinutes ?? 0;
-                if (Number(boilMins) > 0) return { cookMinutes: Number(boilMins) };
-              }
-              return {};
-            })(),
+            // Read top-bar cook time directly from dedicated Turso columns.
+            cookMinutes: typeof (editingRecipe as any).cookMinutes === 'number' ? (editingRecipe as any).cookMinutes : undefined,
+            cookTempF:   typeof (editingRecipe as any).cookTempF   === 'number' ? (editingRecipe as any).cookTempF   : undefined,
           }}
           onsubmit={handleSaveEdit}
           oncancel={() => editingRecipe = null}
