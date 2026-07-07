@@ -1766,23 +1766,27 @@
             if (lastTempF > 0 && cookTempF == null) cookTempF = lastTempF;
           }
         }
-        // Assembled-bake fallback: when top bar has an explicit cook method but
-        // cookMinutes/cookTempF are still unset, derive from the first section
-        // with oven stages (pies, gratins, any multi-section assembled bake).
+        // Use cook_minutes/cook_temp_f directly when available (stored in Turso).
+        // Fall back to section scan only for old community recipes predating those columns.
         if (explicitCookMethod && cookMinutes == null && cookTempF == null) {
-          const stagedSec = nextSections.find(s =>
-            Array.isArray(s.stages) && (s.stages as Array<{tempF:number;minutes:number}>).some(st => st.tempF > 0)
-          );
-          if (stagedSec) {
-            const stgs = (stagedSec.stages as Array<{tempF:number;minutes:number}>).filter(st => st.tempF > 0 && st.minutes > 0);
-            const totalMins = stgs.reduce((sum, st) => sum + st.minutes, 0);
-            if (totalMins > 0) cookMinutes = totalMins;
-            const lastTempF = stgs[stgs.length - 1]?.tempF;
-            if (lastTempF > 0) cookTempF = lastTempF;
+          if (typeof (suggestion as any).cookMinutes === 'number') {
+            cookMinutes = (suggestion as any).cookMinutes;
+          } else if (typeof (suggestion as any).cookTempF === 'number') {
+            cookTempF = (suggestion as any).cookTempF;
           } else {
-            // Stovetop recipe: derive top-bar time from section boilMinutes
-            const stovetopSec = nextSections.find(s => typeof s.boilMinutes === 'number' && s.boilMinutes > 0);
-            if (stovetopSec && cookMinutes == null) cookMinutes = stovetopSec.boilMinutes;
+            const stagedSec = nextSections.find(s =>
+              Array.isArray(s.stages) && (s.stages as Array<{tempF:number;minutes:number}>).some(st => st.tempF > 0)
+            );
+            if (stagedSec) {
+              const stgs = (stagedSec.stages as Array<{tempF:number;minutes:number}>).filter(st => st.tempF > 0 && st.minutes > 0);
+              const totalMins = stgs.reduce((sum, st) => sum + st.minutes, 0);
+              if (totalMins > 0) cookMinutes = totalMins;
+              const lastTempF = stgs[stgs.length - 1]?.tempF;
+              if (lastTempF > 0) cookTempF = lastTempF;
+            } else {
+              const stovetopSec = nextSections.find(s => typeof s.boilMinutes === 'number' && s.boilMinutes > 0);
+              if (stovetopSec && cookMinutes == null) cookMinutes = stovetopSec.boilMinutes;
+            }
           }
         }
       }

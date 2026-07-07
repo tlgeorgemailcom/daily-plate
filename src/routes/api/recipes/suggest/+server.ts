@@ -164,6 +164,8 @@ export const GET: RequestHandler = async ({ url }) => {
               nutrition_json,
               sections_json,
               cooking_method,
+              cook_minutes,
+              cook_temp_f,
               'dev' AS source_type
        FROM dev_recipes
         WHERE status = 'published'
@@ -176,6 +178,8 @@ export const GET: RequestHandler = async ({ url }) => {
               nutrition_json,
               sections_json,
               cooking_method,
+              cook_minutes,
+              cook_temp_f,
               'player' AS source_type
        FROM player_recipes
        WHERE status = 'approved'`,
@@ -217,6 +221,8 @@ export const GET: RequestHandler = async ({ url }) => {
         sourceType: row.source_type,
         dishFamily: row.dish_family || null,
         cookingMethod: (row.cooking_method as string | null) || undefined,
+        cookMinutes: typeof row.cook_minutes === 'number' ? row.cook_minutes : undefined,
+        cookTempF:   typeof row.cook_temp_f  === 'number' ? row.cook_temp_f  : undefined,
         matchScore: s,
         nutritionJson: (() => { try { return row.nutrition_json ? (JSON.parse(row.nutrition_json) as StoredNutritionJson) : null; } catch { return null; } })(),
         // v3.md §18 — top-level section metadata (key/label/cookingMethod/yieldFactors).
