@@ -280,7 +280,7 @@
     {
       "section_key": "tortilla",
       "section_label": "Flour tortilla",
-      "prep_method": "raw",
+      "prep_method": "pan grilled",
       "cook_method": "pan grilled",
       "cooking_method": "pan grilled",
       "cooking_method_normalized": "fried",
@@ -298,19 +298,14 @@
       "raw_carb_grams": 35.55,
       "raw_fiber_grams": 2.52,
       "final_grams": 72.0,
-      "boil_minutes": 0,
-      "cook_stages": [
-        {
-          "tempF": 0,
-          "minutes": 1
-        }
-      ],
+      "boil_minutes": 1.0,
+      "cook_stages": [],
       "fill_class": ""
     },
     {
       "section_key": "beans",
       "section_label": "Beans",
-      "prep_method": "raw",
+      "prep_method": "pan grilled",
       "cook_method": "pan grilled",
       "cooking_method": "pan grilled",
       "cooking_method_normalized": "fried",
@@ -328,13 +323,8 @@
       "raw_carb_grams": 20.12,
       "raw_fiber_grams": 6.7,
       "final_grams": 108.5,
-      "boil_minutes": 0,
-      "cook_stages": [
-        {
-          "tempF": 0,
-          "minutes": 3
-        }
-      ],
+      "boil_minutes": 3.0,
+      "cook_stages": [],
       "fill_class": ""
     },
     {
