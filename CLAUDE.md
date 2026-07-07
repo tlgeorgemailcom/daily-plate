@@ -232,7 +232,13 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 
 **Component-ref child recipe must have `status='approved'` in `recipes.csv`** — otherwise `validate_ledger.py` raises `component-ref @RECIPE_ID status='' (must be 'approved')`. Set `status='approved'` and `audit_status='PASS'` on the child recipe before running the composite build. (Found during SAUCE_002 build — June 2026.)
 
-**`upload.py` deliberately does NOT update `category`, `food_word`, `cooking_method`, or `dietary_category`** — these identity columns are set once at insert time and preserved on every subsequent upload. To correct one of these columns in Turso after the fact, use a direct SQL UPDATE via the `libsql_experimental` Python client (same pattern as `insert_new.py`'s `_connect()`). **Always call `conn.commit()` after the UPDATE** — without it the change is visible only within the same connection and is not persisted to the remote database.
+**`upload.py` deliberately does NOT update `category`, `food_word`, or `dietary_category`** — these identity columns are set once at insert time and preserved on every subsequent upload. **`cooking_method` is now written by `upload.py` on every upload** — `recipes.csv` is the source of truth. Never use direct SQL to change `cooking_method` on dev recipes; update `recipes.csv` instead and run `upload.py --commit`. (Changed July 2026.)
+
+**`recipes.csv.cooking_method` must always match Turso.** `upload.py` derives `cook_minutes` and `cook_temp_f` from sections using `rec.cooking_method` from CSV. A stale CSV value (e.g., `''` when Turso has `'simmer'`) causes `cook_minutes=None` and the form top bar shows blank or wrong time. Fix: update `recipes.csv` cooking_method, then run `upload.py --commit` to sync.
+
+**`dev_recipes` and `player_recipes` now have `cook_minutes` and `cook_temp_f` columns (added July 2026).** These store the top-bar primary cook time/temp directly. `upload.py` derives them automatically from the primary cook section (the section with `prep_method=''` and `cook_method=recipe.cooking_method`). The form reads these columns directly — no section scanning. Any section with a `prep_method` set is a prep step and does not drive the top bar.
+
+**`'finish'` prep_method — Added after cooking (added July 2026).** Use for ingredients stirred in or added after the primary cook is complete: cheese melted into a soup off-heat, whipped cream on a cooled pie, finishing butter, beaten eggs dropped into simmering broth. Physics = `raw` (yfw=1.0, all retention factors 1.0 — no evaporation, no heat destruction). Displays as "Added after cooking" with an amber info note in the form. The ingredient must still be in `recipe_ingredients.csv` for nutrition to be correct. Example: SOUP_004 cheddar cheese, SOUP_005 egg_whole_raw.
 
 ## Critical Invariants
 - **Never edit a v3 recipe row in the Turso UI** — it returns 423 and blocks re-uploads. Edit the CSV only.
