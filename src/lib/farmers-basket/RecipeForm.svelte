@@ -161,7 +161,7 @@
   const GAME_FOODS = Object.keys(FOOD_EMOJI) as FoodType[];
   const ANIMAL_TYPES: AnimalType[] = ['rabbit', 'squirrel', 'raccoon', 'bird', 'mouse', 'fox'];
   
-  const COOKING_METHODS = ['Bake', 'Boil', 'Simmer', 'Sub-simmer', 'Braise', 'Pan grill', 'Grill', 'Fry', 'No heat'];
+  const COOKING_METHODS = ['Bake', 'Boil', 'Simmer', 'Sub-simmer', 'Braise', 'Pan grill', 'Grill', 'Broil', 'Fry', 'No heat'];
   const COOK_METHOD_DISPLAY: Record<string, string> = {
     'Boil':      'Boil (lid off)',
     'Simmer':    'Simmer (lid off)',
