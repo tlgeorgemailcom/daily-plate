@@ -84,12 +84,12 @@ SWEET_035,filling,Filling,simmered,baked,,1.0,,,1.0,,thickened_fruit,350:33,15,
 SWEET_040,crust,Crust,baked,baked,,1.0,,,1.0,,pastry,400:18,,
 SWEET_040,filling,Filling,whisked,baked,,1.0,,,1.0,,dairy_custard,325:50,,
 BKFST_004,main,English muffin dough,,pan grilled,,1.0,,,1.0,,pan_grilled_batter,,6,
-BKFST_016,muffin,English muffin dough,formed,pan grilled,0.90,1.0,,,1.0,,,0:6,,
+BKFST_016,muffin,English muffin dough,,pan grilled,,1.0,,,1.0,,pan_grilled_batter,,6,
 BKFST_006,sauce,Hollandaise sauce,whisked,simmer,1.0,1.0,,,1.0,,,,,
-BKFST_003,egg,Poached egg,poached,simmer,1.0,1.0,,,1.0,,,0:3,,
-BKFST_003,muffin,English muffin (wheat),toasted,pan grilled,1.0,1.0,,,1.0,,,0:6,,BKFST_004
-BKFST_003,bacon,Canadian bacon,pan-fried,pan grilled,1.0,1.0,,,1.0,,,0:2,,
-BKFST_003,hollandaise,Hollandaise sauce,spooned,simmer,1.0,1.0,,,1.0,,,0:3,,BKFST_006
+BKFST_003,egg,Poached egg,simmer,simmer,1.0,1.0,,,1.0,,,,3,
+BKFST_003,muffin,English muffin (wheat),pan grilled,pan grilled,1.0,1.0,,,1.0,,,,6,BKFST_004
+BKFST_003,bacon,Canadian bacon,pan grilled,pan grilled,1.0,1.0,,,1.0,,,,2,
+BKFST_003,hollandaise,Hollandaise sauce,simmer,simmer,1.0,1.0,,,1.0,,,,3,BKFST_006
 BKFST_005,main,French toast,dipped,pan grilled,0.90,1.0,,,1.0,,,0:4,,
 BKFST_007,oatmeal,Oatmeal,,boiled,0.76,1.0,,,1.0,,,0:5,,
 BKFST_010,batter,Pancake batter,,pan grilled,0.96,1.0,,,1.0,,,0:3,,
