@@ -640,7 +640,8 @@ SOUP_002,stock,Beef stock and seasoning,,simmer,,1.0,1.0,1.0,1.0,,,,20,STOCK_004
 SOUP_002,noodles,Rice noodles,,boiled,,1.0,1.0,1.0,1.0,,,,9,
 SOUP_002,beef,Beef,,raw,,1.0,1.0,1.0,1.0,,,,,
 SOUP_006,stock,Chicken stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_003
-SOUP_006,hot_sour,Hot and sour,,boiled,0.92,1.0,1.0,1.0,1.0,,,0:15,,
+SOUP_006,hot_sour,Hot and sour,,simmer,0.92,1.0,1.0,1.0,1.0,,,,12,
+SOUP_006,finish,Eggs and sesame oil,finish,raw,1.0,1.0,1.0,1.0,1.0,,,,,
 SOUP_007,stock,Chicken stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_003
 SOUP_007,soup,Tortilla soup,,boiled,0.88,1.0,1.0,1.0,1.0,,,0:30,,
 SOUP_008,stock,Vegetable stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_007
