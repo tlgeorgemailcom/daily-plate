@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "raw",
   "cooking_method_normalized": "raw",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 1,
   "audit_status": "PASS",
   "audit_notes": "Rule D \u2014 no canonical; dark rum 2oz + lime \u00beoz + OJ 2oz + pineapple juice 2oz + grenadine \u00bdoz; ~218.2g",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 0.21,
   "raw_protein_grams": 0.74,
   "raw_carb_grams": 29.42,
+  "raw_fiber_grams": 0.33,
   "water_lost_grams": 0.0,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 218.2,
   "grams_per_serving": 218.2,
   "ingredients": [
@@ -285,6 +290,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 5,
       "raw_grams": 218.2,
@@ -292,7 +298,11 @@
       "raw_fat_grams": 0.21,
       "raw_protein_grams": 0.74,
       "raw_carb_grams": 29.42,
-      "final_grams": 218.2
+      "raw_fiber_grams": 0.33,
+      "final_grams": 218.2,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

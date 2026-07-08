@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "grilled",
   "cooking_method_normalized": "grilled",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 0.85,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 44.76,
   "raw_protein_grams": 97.13,
   "raw_carb_grams": 31.08,
+  "raw_fiber_grams": 8.06,
   "water_lost_grams": 117.42,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 848.2,
   "grams_per_serving": 212.05,
   "ingredients": [
@@ -432,6 +437,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 12,
       "raw_grams": 965.63,
@@ -439,7 +445,11 @@
       "raw_fat_grams": 44.76,
       "raw_protein_grams": 97.13,
       "raw_carb_grams": 31.08,
-      "final_grams": 848.2
+      "raw_fiber_grams": 8.06,
+      "final_grams": 848.2,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

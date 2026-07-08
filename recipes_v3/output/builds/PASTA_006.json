@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 112.98,
   "raw_protein_grams": 129.89,
   "raw_carb_grams": 179.92,
+  "raw_fiber_grams": 9.46,
   "water_lost_grams": 693.6,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1024.68,
   "grams_per_serving": 256.17,
   "ingredients": [
@@ -495,6 +500,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 2,
       "raw_grams": 1172.8,
@@ -502,7 +508,11 @@
       "raw_fat_grams": 3.42,
       "raw_protein_grams": 29.57,
       "raw_carb_grams": 169.35,
-      "final_grams": 542.1
+      "raw_fiber_grams": 7.26,
+      "final_grams": 542.1,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "chicken",
@@ -515,6 +525,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 5,
       "raw_grams": 357.43,
@@ -522,7 +533,11 @@
       "raw_fat_grams": 22.54,
       "raw_protein_grams": 76.86,
       "raw_carb_grams": 1.5,
-      "final_grams": 294.53
+      "raw_fiber_grams": 0.28,
+      "final_grams": 294.53,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "pesto",
@@ -535,6 +550,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 8,
       "raw_grams": 188.05,
@@ -542,7 +558,11 @@
       "raw_fat_grams": 87.01,
       "raw_protein_grams": 23.46,
       "raw_carb_grams": 9.07,
-      "final_grams": 188.05
+      "raw_fiber_grams": 1.91,
+      "final_grams": 188.05,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

@@ -5,6 +5,8 @@
   "canonical_ndb_no": "6700",
   "cooking_method": "boiled",
   "cooking_method_normalized": "boiled",
+  "cook_minutes": 50,
+  "cook_temp_f": null,
   "yield_factor_water": 0.82,
   "yield_factor_fat": 0.95,
   "yield_factor_protein": 0.484,

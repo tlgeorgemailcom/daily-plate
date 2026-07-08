@@ -5,6 +5,8 @@
   "canonical_ndb_no": null,
   "cooking_method": "raw",
   "cooking_method_normalized": "raw",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
@@ -402,7 +404,10 @@
       "raw_protein_grams": 24.13,
       "raw_carb_grams": 105.88,
       "raw_fiber_grams": 26.86,
-      "final_grams": 969.18
+      "final_grams": 969.18,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

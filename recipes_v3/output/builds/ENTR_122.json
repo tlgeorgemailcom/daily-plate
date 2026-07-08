@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 58.11,
   "raw_protein_grams": 69.08,
   "raw_carb_grams": 278.54,
+  "raw_fiber_grams": 36.49,
   "water_lost_grams": 155.88,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1767.49,
   "grams_per_serving": 441.87,
   "ingredients": [
@@ -136,7 +141,7 @@
       "grams": 246.0,
       "section": "poblanos",
       "ingredient_group": "poblanos",
-      "qty_display": "2 medium tomatoes, diced",
+      "qty_display": "2 medium tomatoes, diced (123g each)",
       "contribution": {
         "Energy_KCal": 44.28,
         "Protein": 2.165,
@@ -516,6 +521,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 2,
       "raw_grams": 540.5,
@@ -523,7 +529,11 @@
       "raw_fat_grams": 1.22,
       "raw_protein_grams": 13.19,
       "raw_carb_grams": 147.91,
-      "final_grams": 519.2
+      "raw_fiber_grams": 2.41,
+      "final_grams": 519.2,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "poblanos",
@@ -536,6 +546,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 14,
       "raw_grams": 1382.88,
@@ -543,7 +554,11 @@
       "raw_fat_grams": 56.89,
       "raw_protein_grams": 55.89,
       "raw_carb_grams": 130.64,
-      "final_grams": 1248.3
+      "raw_fiber_grams": 34.08,
+      "final_grams": 1248.3,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

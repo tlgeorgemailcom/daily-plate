@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 2,
   "audit_status": "PENDING",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 48.86,
   "raw_protein_grams": 68.76,
   "raw_carb_grams": 20.25,
+  "raw_fiber_grams": 4.92,
   "water_lost_grams": 41.9,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 474.6,
   "grams_per_serving": 237.3,
   "ingredients": [
@@ -52,7 +57,7 @@
       "grams": 188.0,
       "section": "salad",
       "ingredient_group": "romaine",
-      "qty_display": "4 cups",
+      "qty_display": "4 cups romaine lettuce, torn or roughly chopped",
       "contribution": {
         "Energy_KCal": 31.96,
         "Protein": 2.312,
@@ -286,6 +291,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 1,
       "raw_grams": 226.8,
@@ -293,7 +299,11 @@
       "raw_fat_grams": 5.94,
       "raw_protein_grams": 51.03,
       "raw_carb_grams": 0.0,
-      "final_grams": 184.9
+      "raw_fiber_grams": 0.0,
+      "final_grams": 184.9,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "salad",
@@ -306,6 +316,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 3,
       "raw_grams": 228.0,
@@ -313,7 +324,11 @@
       "raw_fat_grams": 8.01,
       "raw_protein_grams": 13.03,
       "raw_carb_grams": 18.02,
-      "final_grams": 228.0
+      "raw_fiber_grams": 4.71,
+      "final_grams": 228.0,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "dressing",
@@ -326,6 +341,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 1,
       "raw_grams": 61.7,
@@ -333,7 +349,11 @@
       "raw_fat_grams": 34.91,
       "raw_protein_grams": 4.7,
       "raw_carb_grams": 2.23,
-      "final_grams": 61.7
+      "raw_fiber_grams": 0.21,
+      "final_grams": 61.7,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

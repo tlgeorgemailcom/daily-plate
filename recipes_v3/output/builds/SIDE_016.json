@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "baked",
   "cooking_method_normalized": "baked",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 0.9,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "Rule D \u2014 no canonical match.",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 188.91,
   "raw_protein_grams": 101.09,
   "raw_carb_grams": 297.92,
+  "raw_fiber_grams": 22.1,
   "water_lost_grams": 159.55,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 2064.9,
   "grams_per_serving": 516.22,
   "ingredients": [
@@ -31,7 +36,7 @@
       "grams": 1476.0,
       "section": "potatoes",
       "ingredient_group": "potatoes",
-      "qty_display": "4 large potatoes",
+      "qty_display": "4 large russet potatoes (1,476g)",
       "contribution": {
         "Energy_KCal": 1166.04,
         "Protein": 31.586,
@@ -115,7 +120,7 @@
       "grams": 113.0,
       "section": "potatoes",
       "ingredient_group": "potatoes",
-      "qty_display": "1 cup shredded",
+      "qty_display": "1 cup Cheddar cheese, shredded",
       "contribution": {
         "Energy_KCal": 456.52,
         "Protein": 25.843,
@@ -157,7 +162,7 @@
       "grams": 90.0,
       "section": "potatoes",
       "ingredient_group": "potatoes",
-      "qty_display": "6 medium scallions",
+      "qty_display": "6 scallions, thinly sliced",
       "contribution": {
         "Energy_KCal": 28.8,
         "Protein": 1.647,
@@ -390,6 +395,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 10,
       "raw_grams": 2224.45,
@@ -397,7 +403,11 @@
       "raw_fat_grams": 188.91,
       "raw_protein_grams": 101.09,
       "raw_carb_grams": 297.92,
-      "final_grams": 2064.9
+      "raw_fiber_grams": 22.1,
+      "final_grams": 2064.9,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "boiled",
   "cooking_method_normalized": "boiled",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 0.88,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 3,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 79.33,
   "raw_protein_grams": 21.88,
   "raw_carb_grams": 6.88,
+  "raw_fiber_grams": 0.28,
   "water_lost_grams": 11.01,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 193.38,
   "grams_per_serving": 64.46,
   "ingredients": [
@@ -73,7 +78,7 @@
       "grams": 50.0,
       "section": "sauce",
       "ingredient_group": "sauce",
-      "qty_display": "\u00bd cup, finely grated",
+      "qty_display": "\u00bd cup Parmesan cheese, finely grated",
       "contribution": {
         "Energy_KCal": 196.0,
         "Protein": 17.875,
@@ -94,7 +99,7 @@
       "grams": 4.5,
       "section": "sauce",
       "ingredient_group": "sauce",
-      "qty_display": "1 clove",
+      "qty_display": "1 clove garlic, minced",
       "contribution": {
         "Energy_KCal": 6.705,
         "Protein": 0.286,
@@ -318,7 +323,7 @@
   "sections": [
     {
       "section_key": "sauce",
-      "section_label": "Sauce:",
+      "section_label": "Sauce",
       "prep_method": "raw",
       "cook_method": "boiled",
       "cooking_method": "boiled",
@@ -327,6 +332,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 7,
       "raw_grams": 204.39,
@@ -334,7 +340,11 @@
       "raw_fat_grams": 79.33,
       "raw_protein_grams": 21.88,
       "raw_carb_grams": 6.88,
-      "final_grams": 193.38
+      "raw_fiber_grams": 0.28,
+      "final_grams": 193.38,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

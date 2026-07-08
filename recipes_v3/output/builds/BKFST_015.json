@@ -5,6 +5,8 @@
   "canonical_ndb_no": "7064",
   "cooking_method": "fried",
   "cooking_method_normalized": "fried",
+  "cook_minutes": 8,
+  "cook_temp_f": null,
   "yield_factor_water": 0.73,
   "yield_factor_fat": 0.91,
   "yield_factor_protein": 1.0,

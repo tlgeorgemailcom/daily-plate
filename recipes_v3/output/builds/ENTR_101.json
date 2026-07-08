@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 3,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 56.49,
   "raw_protein_grams": 84.22,
   "raw_carb_grams": 199.28,
+  "raw_fiber_grams": 15.94,
   "water_lost_grams": 119.8,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1264.0,
   "grams_per_serving": 421.33,
   "ingredients": [
@@ -136,7 +141,7 @@
       "grams": 226.8,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "8 oz, cubed",
+      "qty_display": "8 oz raw salmon (chinook), cubed",
       "contribution": {
         "Energy_KCal": 405.972,
         "Protein": 45.201,
@@ -199,7 +204,7 @@
       "grams": 2.0,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "1 tsp, minced",
+      "qty_display": "1 tsp fresh ginger, minced",
       "contribution": {
         "Energy_KCal": 1.6,
         "Protein": 0.036,
@@ -241,7 +246,7 @@
       "grams": 119.0,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "1 cup, sliced",
+      "qty_display": "1 cup cucumber, sliced",
       "contribution": {
         "Energy_KCal": 14.28,
         "Protein": 0.702,
@@ -283,7 +288,7 @@
       "grams": 30.0,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "2 medium, thinly sliced",
+      "qty_display": "2 medium scallions, thinly sliced",
       "contribution": {
         "Energy_KCal": 9.6,
         "Protein": 0.549,
@@ -474,6 +479,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 5,
       "raw_grams": 725.0,
@@ -481,7 +487,11 @@
       "raw_fat_grams": 1.04,
       "raw_protein_grams": 13.0,
       "raw_carb_grams": 170.31,
-      "final_grams": 605.2
+      "raw_fiber_grams": 0.0,
+      "final_grams": 605.2,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "assembly",
@@ -494,6 +504,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 9,
       "raw_grams": 658.8,
@@ -501,7 +512,11 @@
       "raw_fat_grams": 55.45,
       "raw_protein_grams": 71.22,
       "raw_carb_grams": 28.97,
-      "final_grams": 658.8
+      "raw_fiber_grams": 15.94,
+      "final_grams": 658.8,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

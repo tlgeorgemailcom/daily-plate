@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "boiled",
   "cooking_method_normalized": "boiled",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,21 +20,23 @@
   "raw_fat_grams": 148.37,
   "raw_protein_grams": 180.54,
   "raw_carb_grams": 54.81,
+  "raw_fiber_grams": 11.75,
   "water_lost_grams": 456.86,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1668.84,
   "grams_per_serving": 417.21,
   "ingredients": [
     {
       "ingredient_key": "lamb_foreshank_raw",
       "ndb_no": "17007",
-      "long_desc": "Lamb, domestic, foreshank, separable lean and fat, trimmed to 1/4\" fat, choice, raw",
+      "long_desc": "Lamb Shanks (braised lamb foreshank)",
       "grams": 888.0,
       "section": "braise",
       "ingredient_group": "braise",
-      "qty_display": "4 shanks",
+      "qty_display": "4",
       "contribution": {
         "Energy_KCal": 1784.88,
         "Protein": 167.921,
@@ -115,7 +120,7 @@
       "grams": 220.0,
       "section": "braise",
       "ingredient_group": "braise",
-      "qty_display": "1 large, halved and thinly sliced",
+      "qty_display": "1 large onion, halved and thinly sliced",
       "contribution": {
         "Energy_KCal": 88.0,
         "Protein": 2.42,
@@ -136,7 +141,7 @@
       "grams": 122.0,
       "section": "braise",
       "ingredient_group": "braise",
-      "qty_display": "2 medium, cut into 1-inch pieces",
+      "qty_display": "2 medium carrots, cut into 1-inch pieces",
       "contribution": {
         "Energy_KCal": 50.02,
         "Protein": 1.135,
@@ -157,7 +162,7 @@
       "grams": 80.0,
       "section": "braise",
       "ingredient_group": "braise",
-      "qty_display": "2 stalks, cut into 1-inch pieces",
+      "qty_display": "2 stalks celery, cut into 1-inch pieces",
       "contribution": {
         "Energy_KCal": 12.8,
         "Protein": 0.552,
@@ -178,7 +183,7 @@
       "grams": 12.0,
       "section": "braise",
       "ingredient_group": "braise",
-      "qty_display": "4 cloves, minced",
+      "qty_display": "4 cloves garlic, minced",
       "contribution": {
         "Energy_KCal": 17.88,
         "Protein": 0.763,
@@ -262,7 +267,7 @@
       "grams": 3.4,
       "section": "braise",
       "ingredient_group": "braise",
-      "qty_display": "2 sprigs",
+      "qty_display": "2 sprigs fresh rosemary, whole",
       "contribution": {
         "Energy_KCal": 4.454,
         "Protein": 0.113,
@@ -283,7 +288,7 @@
       "grams": 2.4,
       "section": "braise",
       "ingredient_group": "braise",
-      "qty_display": "3 sprigs",
+      "qty_display": "3 sprigs fresh thyme, whole",
       "contribution": {
         "Energy_KCal": 2.424,
         "Protein": 0.133,
@@ -304,7 +309,7 @@
       "grams": 1.2,
       "section": "braise",
       "ingredient_group": "braise",
-      "qty_display": "2 leaves",
+      "qty_display": "2 bay leaves",
       "contribution": {
         "Energy_KCal": 3.756,
         "Protein": 0.091,
@@ -474,6 +479,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 14,
       "raw_grams": 2125.7,
@@ -481,7 +487,11 @@
       "raw_fat_grams": 148.37,
       "raw_protein_grams": 180.54,
       "raw_carb_grams": 54.81,
-      "final_grams": 1668.84
+      "raw_fiber_grams": 11.75,
+      "final_grams": 1668.84,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

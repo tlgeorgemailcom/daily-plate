@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "boiled",
   "cooking_method_normalized": "boiled",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 0.9,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 6,
   "audit_status": "PENDING",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 110.97,
   "raw_protein_grams": 88.91,
   "raw_carb_grams": 229.17,
+  "raw_fiber_grams": 8.6,
   "water_lost_grams": -286.23,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1260.77,
   "grams_per_serving": 210.13,
   "ingredients": [
@@ -115,7 +120,7 @@
       "grams": 170.0,
       "section": "sauce",
       "ingredient_group": "sauce",
-      "qty_display": "1\u00bd cups shredded",
+      "qty_display": "1\u00bd cups Cheddar cheese, shredded",
       "contribution": {
         "Energy_KCal": 686.8,
         "Protein": 38.879,
@@ -327,6 +332,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 1,
       "raw_grams": 244.0,
@@ -334,7 +340,11 @@
       "raw_fat_grams": 3.68,
       "raw_protein_grams": 31.82,
       "raw_carb_grams": 182.19,
-      "final_grams": 580.52
+      "raw_fiber_grams": 7.81,
+      "final_grams": 580.52,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "sauce",
@@ -347,6 +357,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 6,
       "raw_grams": 730.6,
@@ -354,7 +365,11 @@
       "raw_fat_grams": 107.28,
       "raw_protein_grams": 57.09,
       "raw_carb_grams": 46.97,
-      "final_grams": 680.25
+      "raw_fiber_grams": 0.79,
+      "final_grams": 680.25,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

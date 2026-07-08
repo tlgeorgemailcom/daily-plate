@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "baked",
   "cooking_method_normalized": "baked",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 0.72,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 120.48,
   "raw_protein_grams": 190.78,
   "raw_carb_grams": 53.54,
+  "raw_fiber_grams": 11.55,
   "water_lost_grams": 475.14,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1638.56,
   "grams_per_serving": 409.64,
   "ingredients": [
@@ -73,7 +78,7 @@
       "grams": 200.0,
       "section": "braise",
       "ingredient_group": "braise",
-      "qty_display": "1 large",
+      "qty_display": "1 large onion, diced",
       "contribution": {
         "Energy_KCal": 80.0,
         "Protein": 2.2,
@@ -94,7 +99,7 @@
       "grams": 122.0,
       "section": "braise",
       "ingredient_group": "braise",
-      "qty_display": "2 medium",
+      "qty_display": "2 medium carrots, sliced",
       "contribution": {
         "Energy_KCal": 50.02,
         "Protein": 1.135,
@@ -115,7 +120,7 @@
       "grams": 80.0,
       "section": "braise",
       "ingredient_group": "braise",
-      "qty_display": "2 stalks",
+      "qty_display": "2 stalks celery, sliced",
       "contribution": {
         "Energy_KCal": 12.8,
         "Protein": 0.552,
@@ -136,7 +141,7 @@
       "grams": 12.0,
       "section": "braise",
       "ingredient_group": "braise",
-      "qty_display": "4 cloves",
+      "qty_display": "4 cloves garlic, minced",
       "contribution": {
         "Energy_KCal": 17.88,
         "Protein": 0.763,
@@ -241,7 +246,7 @@
       "grams": 3.4,
       "section": "braise",
       "ingredient_group": "braise",
-      "qty_display": "1 sprig",
+      "qty_display": "1 sprig fresh rosemary, whole",
       "contribution": {
         "Energy_KCal": 4.454,
         "Protein": 0.113,
@@ -262,7 +267,7 @@
       "grams": 1.2,
       "section": "braise",
       "ingredient_group": "braise",
-      "qty_display": "2",
+      "qty_display": "2 bay leaves",
       "contribution": {
         "Energy_KCal": 3.756,
         "Protein": 0.091,
@@ -474,6 +479,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 14,
       "raw_grams": 2113.7,
@@ -481,7 +487,11 @@
       "raw_fat_grams": 120.48,
       "raw_protein_grams": 190.78,
       "raw_carb_grams": 53.54,
-      "final_grams": 1638.56
+      "raw_fiber_grams": 11.55,
+      "final_grams": 1638.56,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

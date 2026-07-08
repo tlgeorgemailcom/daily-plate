@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 6,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 100.99,
   "raw_protein_grams": 3.27,
   "raw_carb_grams": 9.36,
+  "raw_fiber_grams": 1.58,
   "water_lost_grams": 0.0,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 196.0,
   "grams_per_serving": 32.67,
   "ingredients": [
@@ -287,6 +292,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 1,
       "raw_grams": 120.0,
@@ -294,7 +300,11 @@
       "raw_fat_grams": 100.72,
       "raw_protein_grams": 2.42,
       "raw_carb_grams": 1.1,
-      "final_grams": 120.0
+      "raw_fiber_grams": 0.06,
+      "final_grams": 120.0,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "chili_sauce",
@@ -307,6 +317,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 1,
       "raw_grams": 51.0,
@@ -314,7 +325,11 @@
       "raw_fat_grams": 0.16,
       "raw_protein_grams": 0.65,
       "raw_carb_grams": 5.25,
-      "final_grams": 51.0
+      "raw_fiber_grams": 1.01,
+      "final_grams": 51.0,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "seasoning",
@@ -327,6 +342,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 3,
       "raw_grams": 25.0,
@@ -334,7 +350,11 @@
       "raw_fat_grams": 0.12,
       "raw_protein_grams": 0.19,
       "raw_carb_grams": 3.01,
-      "final_grams": 25.0
+      "raw_fiber_grams": 0.51,
+      "final_grams": 25.0,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

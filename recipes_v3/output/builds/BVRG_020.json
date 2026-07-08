@@ -5,10 +5,13 @@
   "canonical_ndb_no": "14638",
   "cooking_method": "raw",
   "cooking_method_normalized": "raw",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 14.63,
   "raw_protein_grams": 12.62,
   "raw_carb_grams": 170.8,
+  "raw_fiber_grams": 6.08,
   "water_lost_grams": 88.26,
   "fat_lost_grams": 7.46,
   "protein_lost_grams": 7.83,
   "carb_lost_grams": 55.98,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1003.98,
   "grams_per_serving": 250.99,
   "ingredients": [
@@ -306,6 +311,7 @@
       "yield_factor_fat": 0.49,
       "yield_factor_protein": 0.38,
       "yield_factor_carbohydrate": 0.318,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 4,
       "raw_grams": 1071.1,
@@ -313,7 +319,11 @@
       "raw_fat_grams": 14.62,
       "raw_protein_grams": 12.62,
       "raw_carb_grams": 82.08,
-      "final_grams": 911.58
+      "raw_fiber_grams": 6.08,
+      "final_grams": 911.58,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "sweeten",
@@ -326,6 +336,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 2,
       "raw_grams": 92.4,
@@ -333,7 +344,11 @@
       "raw_fat_grams": 0.0,
       "raw_protein_grams": 0.0,
       "raw_carb_grams": 88.71,
-      "final_grams": 92.4
+      "raw_fiber_grams": 0.0,
+      "final_grams": 92.4,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 133.45,
   "raw_protein_grams": 109.4,
   "raw_carb_grams": 209.92,
+  "raw_fiber_grams": 9.59,
   "water_lost_grams": 7.2,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 957.1,
   "grams_per_serving": 239.27,
   "ingredients": [
@@ -304,7 +309,7 @@
       "grams": 6.0,
       "section": "sauce",
       "ingredient_group": "sauce",
-      "qty_display": "2 cloves garlic",
+      "qty_display": "2 cloves garlic, minced",
       "contribution": {
         "Energy_KCal": 8.94,
         "Protein": 0.382,
@@ -558,6 +563,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 7,
       "raw_grams": 442.12,
@@ -565,7 +571,11 @@
       "raw_fat_grams": 50.43,
       "raw_protein_grams": 54.75,
       "raw_carb_grams": 13.42,
-      "final_grams": 442.12
+      "raw_fiber_grams": 2.24,
+      "final_grams": 442.12,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "dough",
@@ -578,6 +588,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 4,
       "raw_grams": 416.6,
@@ -585,7 +596,11 @@
       "raw_fat_grams": 30.32,
       "raw_protein_grams": 44.66,
       "raw_carb_grams": 191.86,
-      "final_grams": 409.4
+      "raw_fiber_grams": 6.75,
+      "final_grams": 409.4,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "sauce",
@@ -598,6 +613,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 7,
       "raw_grams": 105.58,
@@ -605,7 +621,11 @@
       "raw_fat_grams": 52.7,
       "raw_protein_grams": 9.99,
       "raw_carb_grams": 4.65,
-      "final_grams": 105.58
+      "raw_fiber_grams": 0.6,
+      "final_grams": 105.58,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

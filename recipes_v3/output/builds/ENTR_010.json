@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 6,
   "audit_status": "NO_CANON",
   "audit_notes": "Rule D \u2014 no canonical match. Bespoke ingredient decomposition. Locked June 2026.",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 311.13,
   "raw_protein_grams": 270.22,
   "raw_carb_grams": 280.39,
+  "raw_fiber_grams": 46.87,
   "water_lost_grams": 2389.59,
   "fat_lost_grams": 6.89,
   "protein_lost_grams": 5.13,
   "carb_lost_grams": 117.22,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 2772.17,
   "grams_per_serving": 462.03,
   "ingredients": [
@@ -220,7 +225,7 @@
       "grams": 12.0,
       "section": "brine",
       "ingredient_group": "brine",
-      "qty_display": "1 large knob fresh ginger",
+      "qty_display": "1 large knob fresh ginger, peeled",
       "contribution": {
         "Energy_KCal": 9.6,
         "Protein": 0.218,
@@ -367,7 +372,7 @@
       "grams": 453.6,
       "section": "vegetables",
       "ingredient_group": "vegetables",
-      "qty_display": "\u00bd head green cabbage",
+      "qty_display": "\u00bd head green cabbage, cut into wedges",
       "contribution": {
         "Energy_KCal": 113.4,
         "Protein": 5.806,
@@ -388,7 +393,7 @@
       "grams": 600.0,
       "section": "vegetables",
       "ingredient_group": "vegetables",
-      "qty_display": "4 medium potatoes",
+      "qty_display": "4 medium white potatoes, halved (173g each)",
       "contribution": {
         "Energy_KCal": 414.0,
         "Protein": 10.08,
@@ -409,7 +414,7 @@
       "grams": 244.0,
       "section": "vegetables",
       "ingredient_group": "vegetables",
-      "qty_display": "4 large carrots",
+      "qty_display": "4 large carrots, peeled and cut into 2-inch pieces",
       "contribution": {
         "Energy_KCal": 100.04,
         "Protein": 2.269,
@@ -430,7 +435,7 @@
       "grams": 160.0,
       "section": "vegetables",
       "ingredient_group": "vegetables",
-      "qty_display": "4 stalks celery",
+      "qty_display": "4 stalks celery, cut into 2-inch pieces",
       "contribution": {
         "Energy_KCal": 25.6,
         "Protein": 1.104,
@@ -451,7 +456,7 @@
       "grams": 110.0,
       "section": "vegetables",
       "ingredient_group": "vegetables",
-      "qty_display": "1 medium onion",
+      "qty_display": "1 medium onion, quartered",
       "contribution": {
         "Energy_KCal": 44.0,
         "Protein": 1.21,
@@ -621,6 +626,7 @@
       "yield_factor_fat": 0.0,
       "yield_factor_protein": 0.0,
       "yield_factor_carbohydrate": 0.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 0.0,
       "ingredient_count": 11,
       "raw_grams": 2350.6,
@@ -628,7 +634,11 @@
       "raw_fat_grams": 6.89,
       "raw_protein_grams": 5.13,
       "raw_carb_grams": 117.22,
-      "final_grams": 290.9
+      "raw_fiber_grams": 8.4,
+      "final_grams": 290.9,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "beef",
@@ -641,6 +651,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 5,
       "raw_grams": 1372.8,
@@ -648,7 +659,11 @@
       "raw_fat_grams": 302.22,
       "raw_protein_grams": 244.62,
       "raw_carb_grams": 4.19,
-      "final_grams": 1051.05
+      "raw_fiber_grams": 1.47,
+      "final_grams": 1051.05,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "vegetables",
@@ -661,6 +676,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 5,
       "raw_grams": 1567.6,
@@ -668,7 +684,11 @@
       "raw_fat_grams": 2.02,
       "raw_protein_grams": 20.47,
       "raw_carb_grams": 158.97,
-      "final_grams": 1430.23
+      "raw_fiber_grams": 37.0,
+      "final_grams": 1430.23,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

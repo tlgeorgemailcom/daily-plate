@@ -5,6 +5,8 @@
   "canonical_ndb_no": null,
   "cooking_method": "pan grilled",
   "cooking_method_normalized": "fried",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 0.9,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
@@ -255,7 +257,10 @@
       "raw_protein_grams": 18.4,
       "raw_carb_grams": 31.41,
       "raw_fiber_grams": 1.62,
-      "final_grams": 126.39
+      "final_grams": 126.39,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "boiled",
   "cooking_method_normalized": "boiled",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 102.3,
   "raw_protein_grams": 215.37,
   "raw_carb_grams": 80.14,
+  "raw_fiber_grams": 19.24,
   "water_lost_grams": 510.32,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1412.63,
   "grams_per_serving": 353.16,
   "ingredients": [
@@ -31,7 +36,7 @@
       "grams": 900.0,
       "section": "curry",
       "ingredient_group": "curry",
-      "qty_display": "2 lb, cut into 1\u00bd-inch pieces",
+      "qty_display": "2 lb lamb shoulder, cut into 1\u00bd-inch pieces",
       "contribution": {
         "Energy_KCal": 1206.0,
         "Protein": 181.89,
@@ -52,7 +57,7 @@
       "grams": 320.0,
       "section": "curry",
       "ingredient_group": "curry",
-      "qty_display": "2 large, finely diced",
+      "qty_display": "2 large onions, finely diced",
       "contribution": {
         "Energy_KCal": 128.0,
         "Protein": 3.52,
@@ -73,7 +78,7 @@
       "grams": 12.0,
       "section": "curry",
       "ingredient_group": "curry",
-      "qty_display": "4 cloves, minced",
+      "qty_display": "4 cloves garlic, minced",
       "contribution": {
         "Energy_KCal": 17.88,
         "Protein": 0.763,
@@ -94,7 +99,7 @@
       "grams": 18.0,
       "section": "curry",
       "ingredient_group": "curry",
-      "qty_display": "3 tbsp, freshly grated",
+      "qty_display": "3 tbsp fresh ginger, grated",
       "contribution": {
         "Energy_KCal": 14.4,
         "Protein": 0.328,
@@ -157,7 +162,7 @@
       "grams": 240.0,
       "section": "curry",
       "ingredient_group": "curry",
-      "qty_display": "1 cup, room temperature",
+      "qty_display": "1 cup Greek whole milk yogurt, at room temperature",
       "contribution": {
         "Energy_KCal": 232.8,
         "Protein": 21.6,
@@ -178,7 +183,7 @@
       "grams": 6.9,
       "section": "curry",
       "ingredient_group": "curry",
-      "qty_display": "3 tsp (Kashmiri chili proxy)",
+      "qty_display": "3 tsp paprika (Kashmiri chili proxy)",
       "contribution": {
         "Energy_KCal": 19.458,
         "Protein": 0.976,
@@ -220,7 +225,7 @@
       "grams": 4.0,
       "section": "curry",
       "ingredient_group": "curry",
-      "qty_display": "2 tsp",
+      "qty_display": "2 tsp ground cumin",
       "contribution": {
         "Energy_KCal": 15.0,
         "Protein": 0.712,
@@ -237,7 +242,7 @@
     {
       "ingredient_key": "cardamom_ground",
       "ndb_no": "2006",
-      "long_desc": "Spices, cardamom",
+      "long_desc": "\"Spices, cardamom\"",
       "grams": 2.0,
       "section": "curry",
       "ingredient_group": "curry",
@@ -300,7 +305,7 @@
     {
       "ingredient_key": "turmeric_ground",
       "ndb_no": "2043",
-      "long_desc": "Spices, turmeric, ground",
+      "long_desc": "\"Spices, turmeric, ground\"",
       "grams": 3.0,
       "section": "curry",
       "ingredient_group": "curry",
@@ -346,7 +351,7 @@
       "grams": 1.2,
       "section": "curry",
       "ingredient_group": "curry",
-      "qty_display": "2 leaves",
+      "qty_display": "2 bay leaves",
       "contribution": {
         "Energy_KCal": 3.756,
         "Protein": 0.091,
@@ -558,6 +563,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 18,
       "raw_grams": 1922.95,
@@ -565,7 +571,11 @@
       "raw_fat_grams": 102.3,
       "raw_protein_grams": 215.37,
       "raw_carb_grams": 80.14,
-      "final_grams": 1412.63
+      "raw_fiber_grams": 19.24,
+      "final_grams": 1412.63,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

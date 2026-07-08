@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "raw",
   "cooking_method_normalized": "raw",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 6,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 63.14,
   "raw_protein_grams": 38.52,
   "raw_carb_grams": 4.73,
+  "raw_fiber_grams": 0.67,
   "water_lost_grams": 0.0,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 354.32,
   "grams_per_serving": 59.05,
   "ingredients": [
@@ -157,7 +162,7 @@
       "grams": 1.15,
       "section": "filling",
       "ingredient_group": "filling",
-      "qty_display": "1/2 tsp, for garnish",
+      "qty_display": "1/2 tsp paprika (for garnish)",
       "contribution": {
         "Energy_KCal": 3.243,
         "Protein": 0.163,
@@ -327,6 +332,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 7,
       "raw_grams": 354.32,
@@ -334,7 +340,11 @@
       "raw_fat_grams": 63.14,
       "raw_protein_grams": 38.52,
       "raw_carb_grams": 4.73,
-      "final_grams": 354.32
+      "raw_fiber_grams": 0.67,
+      "final_grams": 354.32,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

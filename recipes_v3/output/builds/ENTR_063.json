@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "boiled",
   "cooking_method_normalized": "boiled",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 0.75,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 51.3,
   "raw_protein_grams": 191.23,
   "raw_carb_grams": 14.83,
+  "raw_fiber_grams": 2.3,
   "water_lost_grams": 236.22,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 992.03,
   "grams_per_serving": 248.01,
   "ingredients": [
@@ -94,7 +99,7 @@
       "grams": 18.0,
       "section": "chicken",
       "ingredient_group": "chicken",
-      "qty_display": "6 cloves",
+      "qty_display": "6 cloves garlic, crushed",
       "contribution": {
         "Energy_KCal": 26.82,
         "Protein": 1.145,
@@ -115,7 +120,7 @@
       "grams": 1.8,
       "section": "chicken",
       "ingredient_group": "chicken",
-      "qty_display": "3 leaves",
+      "qty_display": "3 bay leaves",
       "contribution": {
         "Energy_KCal": 5.634,
         "Protein": 0.137,
@@ -348,6 +353,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 8,
       "raw_grams": 1228.25,
@@ -355,7 +361,11 @@
       "raw_fat_grams": 51.3,
       "raw_protein_grams": 191.23,
       "raw_carb_grams": 14.83,
-      "final_grams": 992.03
+      "raw_fiber_grams": 2.3,
+      "final_grams": 992.03,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

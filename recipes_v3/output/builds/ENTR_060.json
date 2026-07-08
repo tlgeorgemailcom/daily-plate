@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 0.85,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 95.91,
   "raw_protein_grams": 170.69,
   "raw_carb_grams": 130.51,
+  "raw_fiber_grams": 4.12,
   "water_lost_grams": 92.33,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1033.67,
   "grams_per_serving": 258.42,
   "ingredients": [
@@ -73,7 +78,7 @@
       "grams": 50.0,
       "section": "chicken",
       "ingredient_group": "chicken",
-      "qty_display": "1 large",
+      "qty_display": "1 large egg, beaten",
       "contribution": {
         "Energy_KCal": 71.5,
         "Protein": 6.28,
@@ -263,7 +268,7 @@
       "grams": 9.0,
       "section": "sauce",
       "ingredient_group": "sauce",
-      "qty_display": "3 cloves",
+      "qty_display": "3 cloves garlic, minced",
       "contribution": {
         "Energy_KCal": 13.41,
         "Protein": 0.572,
@@ -284,7 +289,7 @@
       "grams": 6.0,
       "section": "sauce",
       "ingredient_group": "sauce",
-      "qty_display": "1 tbsp",
+      "qty_display": "1 tbsp fresh ginger, minced",
       "contribution": {
         "Energy_KCal": 4.8,
         "Protein": 0.109,
@@ -347,7 +352,7 @@
       "grams": 36.0,
       "section": "sauce",
       "ingredient_group": "sauce",
-      "qty_display": "3 stalks",
+      "qty_display": "3 scallions, thinly sliced",
       "contribution": {
         "Energy_KCal": 11.52,
         "Protein": 0.659,
@@ -538,6 +543,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 6,
       "raw_grams": 852.38,
@@ -545,7 +551,11 @@
       "raw_fat_grams": 77.03,
       "raw_protein_grams": 159.6,
       "raw_carb_grams": 59.14,
-      "final_grams": 770.43
+      "raw_fiber_grams": 0.72,
+      "final_grams": 770.43,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "broth",
@@ -558,6 +568,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 1,
       "raw_grams": 60.0,
@@ -565,7 +576,11 @@
       "raw_fat_grams": 0.8,
       "raw_protein_grams": 2.32,
       "raw_carb_grams": 0.02,
-      "final_grams": 60.0
+      "raw_fiber_grams": 0.2,
+      "final_grams": 60.0,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "sauce",
@@ -578,6 +593,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 10,
       "raw_grams": 213.62,
@@ -585,7 +601,11 @@
       "raw_fat_grams": 18.08,
       "raw_protein_grams": 8.78,
       "raw_carb_grams": 71.36,
-      "final_grams": 203.24
+      "raw_fiber_grams": 3.2,
+      "final_grams": 203.24,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

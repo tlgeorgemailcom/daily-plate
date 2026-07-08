@@ -5,6 +5,8 @@
   "canonical_ndb_no": "18140",
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
+  "cook_minutes": 30,
+  "cook_temp_f": 350,
   "yield_factor_water": 0.83,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,

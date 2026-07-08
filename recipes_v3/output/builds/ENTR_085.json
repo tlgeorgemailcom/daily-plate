@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "baked",
   "cooking_method_normalized": "baked",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 8,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 202.01,
   "raw_protein_grams": 321.67,
   "raw_carb_grams": 6.73,
+  "raw_fiber_grams": 1.65,
   "water_lost_grams": 389.85,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1246.45,
   "grams_per_serving": 155.81,
   "ingredients": [
@@ -31,7 +36,7 @@
       "grams": 1580.0,
       "section": "crown",
       "ingredient_group": "crown",
-      "qty_display": "2 racks (14 ribs), frenched, tied into a crown",
+      "qty_display": "2 racks pork center rib roast (14 ribs), frenched, tied into a crown",
       "contribution": {
         "Energy_KCal": 2938.8,
         "Protein": 320.424,
@@ -94,7 +99,7 @@
       "grams": 3.4,
       "section": "crown",
       "ingredient_group": "crown",
-      "qty_display": "2 sprigs rosemary, leaves stripped and minced",
+      "qty_display": "2 sprigs fresh rosemary, leaves stripped and minced",
       "contribution": {
         "Energy_KCal": 4.454,
         "Protein": 0.113,
@@ -115,7 +120,7 @@
       "grams": 2.4,
       "section": "crown",
       "ingredient_group": "crown",
-      "qty_display": "4 sprigs thyme, leaves stripped",
+      "qty_display": "4 sprigs fresh thyme leaves, stripped",
       "contribution": {
         "Energy_KCal": 2.424,
         "Protein": 0.133,
@@ -327,6 +332,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 7,
       "raw_grams": 1636.3,
@@ -334,7 +340,11 @@
       "raw_fat_grams": 202.01,
       "raw_protein_grams": 321.67,
       "raw_carb_grams": 6.73,
-      "final_grams": 1246.45
+      "raw_fiber_grams": 1.65,
+      "final_grams": 1246.45,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

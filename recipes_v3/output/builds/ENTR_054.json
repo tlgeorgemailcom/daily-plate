@@ -5,6 +5,8 @@
   "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 0.9,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
@@ -467,7 +469,10 @@
       "raw_protein_grams": 32.9,
       "raw_carb_grams": 238.5,
       "raw_fiber_grams": 8.45,
-      "final_grams": 559.6
+      "final_grams": 559.6,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "broth",
@@ -489,7 +494,10 @@
       "raw_protein_grams": 18.53,
       "raw_carb_grams": 0.14,
       "raw_fiber_grams": 1.58,
-      "final_grams": 480.0
+      "final_grams": 480.0,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "filling",
@@ -511,7 +519,10 @@
       "raw_protein_grams": 172.34,
       "raw_carb_grams": 135.21,
       "raw_fiber_grams": 23.6,
-      "final_grams": 1548.07
+      "final_grams": 1548.07,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 162.24,
   "raw_protein_grams": 110.18,
   "raw_carb_grams": 48.36,
+  "raw_fiber_grams": 7.97,
   "water_lost_grams": 165.04,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 679.16,
   "grams_per_serving": 169.79,
   "ingredients": [
@@ -90,7 +95,7 @@
     {
       "ingredient_key": "chili_powder",
       "ndb_no": "2009",
-      "long_desc": "Spices, chili powder",
+      "long_desc": "",
       "grams": 4.3,
       "section": "ribs",
       "ingredient_group": "ribs",
@@ -412,6 +417,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 10,
       "raw_grams": 724.2,
@@ -419,7 +425,11 @@
       "raw_fat_grams": 161.55,
       "raw_protein_grams": 108.32,
       "raw_carb_grams": 25.8,
-      "final_grams": 559.16
+      "raw_fiber_grams": 5.72,
+      "final_grams": 559.16,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "bbq_sauce",
@@ -432,6 +442,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 1,
       "raw_grams": 120.0,
@@ -439,7 +450,11 @@
       "raw_fat_grams": 0.7,
       "raw_protein_grams": 1.86,
       "raw_carb_grams": 22.56,
-      "final_grams": 120.0
+      "raw_fiber_grams": 2.24,
+      "final_grams": 120.0,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

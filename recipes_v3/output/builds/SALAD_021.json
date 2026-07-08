@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 130.57,
   "raw_protein_grams": 88.18,
   "raw_carb_grams": 188.33,
+  "raw_fiber_grams": 10.6,
   "water_lost_grams": 630.7,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1191.17,
   "grams_per_serving": 297.79,
   "ingredients": [
@@ -115,7 +120,7 @@
       "grams": 120.0,
       "section": "salad",
       "ingredient_group": "salad",
-      "qty_display": "3 stalks",
+      "qty_display": "3 stalks celery, diced",
       "contribution": {
         "Energy_KCal": 19.2,
         "Protein": 0.828,
@@ -411,6 +416,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 2,
       "raw_grams": 1172.8,
@@ -418,7 +424,11 @@
       "raw_fat_grams": 3.42,
       "raw_protein_grams": 29.57,
       "raw_carb_grams": 169.35,
-      "final_grams": 542.1
+      "raw_fiber_grams": 7.26,
+      "final_grams": 542.1,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "salad",
@@ -431,6 +441,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 9,
       "raw_grams": 649.08,
@@ -438,7 +449,11 @@
       "raw_fat_grams": 127.15,
       "raw_protein_grams": 58.6,
       "raw_carb_grams": 18.98,
-      "final_grams": 649.08
+      "raw_fiber_grams": 3.35,
+      "final_grams": 649.08,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

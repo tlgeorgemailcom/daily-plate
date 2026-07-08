@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "boiled",
   "cooking_method_normalized": "boiled",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 94.53,
   "raw_protein_grams": 214.34,
   "raw_carb_grams": 168.25,
+  "raw_fiber_grams": 36.29,
   "water_lost_grams": 378.15,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1637.85,
   "grams_per_serving": 409.46,
   "ingredients": [
@@ -31,7 +36,7 @@
       "grams": 900.0,
       "section": "tagine",
       "ingredient_group": "tagine",
-      "qty_display": "2 lb, cut into 1\u00bd-inch pieces",
+      "qty_display": "2 lb lamb shoulder, cut into 1\u00bd-inch pieces",
       "contribution": {
         "Energy_KCal": 1206.0,
         "Protein": 181.89,
@@ -52,7 +57,7 @@
       "grams": 240.0,
       "section": "tagine",
       "ingredient_group": "tagine",
-      "qty_display": "1\u00bd large, finely diced",
+      "qty_display": "1\u00bd large onions, finely diced",
       "contribution": {
         "Energy_KCal": 96.0,
         "Protein": 2.64,
@@ -73,7 +78,7 @@
       "grams": 12.0,
       "section": "tagine",
       "ingredient_group": "tagine",
-      "qty_display": "4 cloves, minced",
+      "qty_display": "4 cloves garlic, minced",
       "contribution": {
         "Energy_KCal": 17.88,
         "Protein": 0.763,
@@ -94,7 +99,7 @@
       "grams": 12.0,
       "section": "tagine",
       "ingredient_group": "tagine",
-      "qty_display": "2 tbsp, freshly grated",
+      "qty_display": "2 tbsp fresh ginger, grated",
       "contribution": {
         "Energy_KCal": 9.6,
         "Protein": 0.218,
@@ -157,7 +162,7 @@
       "grams": 164.0,
       "section": "tagine",
       "ingredient_group": "tagine",
-      "qty_display": "1 cup, drained",
+      "qty_display": "1 cup chickpeas, cooked and drained",
       "contribution": {
         "Energy_KCal": 268.96,
         "Protein": 14.53,
@@ -178,7 +183,7 @@
       "grams": 65.0,
       "section": "tagine",
       "ingredient_group": "tagine",
-      "qty_display": "\u00bd cup, roughly chopped",
+      "qty_display": "\u00bd cup dried apricots, roughly chopped",
       "contribution": {
         "Energy_KCal": 156.65,
         "Protein": 2.204,
@@ -262,7 +267,7 @@
       "grams": 4.0,
       "section": "tagine",
       "ingredient_group": "tagine",
-      "qty_display": "2 tsp",
+      "qty_display": "2 tsp ground cumin",
       "contribution": {
         "Energy_KCal": 15.0,
         "Protein": 0.712,
@@ -321,7 +326,7 @@
     {
       "ingredient_key": "turmeric_ground",
       "ndb_no": "2043",
-      "long_desc": "Spices, turmeric, ground",
+      "long_desc": "\"Spices, turmeric, ground\"",
       "grams": 3.0,
       "section": "tagine",
       "ingredient_group": "tagine",
@@ -388,7 +393,7 @@
       "grams": 1.2,
       "section": "tagine",
       "ingredient_group": "tagine",
-      "qty_display": "2 leaves",
+      "qty_display": "2 bay leaves",
       "contribution": {
         "Energy_KCal": 3.756,
         "Protein": 0.091,
@@ -451,7 +456,7 @@
       "grams": 23.0,
       "section": "tagine",
       "ingredient_group": "tagine",
-      "qty_display": "\u00bc cup, toasted",
+      "qty_display": "\u00bc cup sliced almonds, toasted",
       "contribution": {
         "Energy_KCal": 133.17,
         "Protein": 4.864,
@@ -472,7 +477,7 @@
       "grams": 16.0,
       "section": "tagine",
       "ingredient_group": "tagine",
-      "qty_display": "1 cup, chopped",
+      "qty_display": "1 cup fresh cilantro, chopped",
       "contribution": {
         "Energy_KCal": 3.68,
         "Protein": 0.341,
@@ -493,7 +498,7 @@
       "grams": 15.0,
       "section": "tagine",
       "ingredient_group": "tagine",
-      "qty_display": "\u00bc cup, chopped",
+      "qty_display": "\u00bc cup fresh parsley, chopped",
       "contribution": {
         "Energy_KCal": 5.4,
         "Protein": 0.446,
@@ -663,6 +668,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 23,
       "raw_grams": 2016.0,
@@ -670,7 +676,11 @@
       "raw_fat_grams": 94.53,
       "raw_protein_grams": 214.34,
       "raw_carb_grams": 168.25,
-      "final_grams": 1637.85
+      "raw_fiber_grams": 36.29,
+      "final_grams": 1637.85,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

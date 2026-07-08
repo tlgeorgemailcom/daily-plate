@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "grilled",
   "cooking_method_normalized": "grilled",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 0.75,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 102.26,
   "raw_protein_grams": 184.71,
   "raw_carb_grams": 10.29,
+  "raw_fiber_grams": 2.21,
   "water_lost_grams": 179.51,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 849.44,
   "grams_per_serving": 212.36,
   "ingredients": [
@@ -94,7 +99,7 @@
       "grams": 12.0,
       "section": "souvlaki",
       "ingredient_group": "souvlaki",
-      "qty_display": "4 cloves",
+      "qty_display": "4 cloves garlic, minced",
       "contribution": {
         "Energy_KCal": 17.88,
         "Protein": 0.763,
@@ -327,6 +332,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 7,
       "raw_grams": 1028.95,
@@ -334,7 +340,11 @@
       "raw_fat_grams": 102.26,
       "raw_protein_grams": 184.71,
       "raw_carb_grams": 10.29,
-      "final_grams": 849.44
+      "raw_fiber_grams": 2.21,
+      "final_grams": 849.44,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

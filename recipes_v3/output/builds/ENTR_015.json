@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "NO_CANON",
   "audit_notes": "Rule D \u2014 no canonical match. Bespoke ingredient decomposition. Locked June 2026.",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 118.83,
   "raw_protein_grams": 162.73,
   "raw_carb_grams": 26.14,
+  "raw_fiber_grams": 3.55,
   "water_lost_grams": 196.62,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1135.13,
   "grams_per_serving": 283.78,
   "ingredients": [
@@ -94,7 +99,7 @@
       "grams": 6.0,
       "section": "steak",
       "ingredient_group": "steak",
-      "qty_display": "2 cloves garlic",
+      "qty_display": "2 cloves garlic, minced",
       "contribution": {
         "Energy_KCal": 8.94,
         "Protein": 0.382,
@@ -115,7 +120,7 @@
       "grams": 227.0,
       "section": "steak",
       "ingredient_group": "steak",
-      "qty_display": "8 oz crimini mushrooms",
+      "qty_display": "8 oz crimini mushrooms, sliced \u00bc inch thick",
       "contribution": {
         "Energy_KCal": 49.94,
         "Protein": 5.675,
@@ -220,7 +225,7 @@
       "grams": 7.6,
       "section": "steak",
       "ingredient_group": "steak",
-      "qty_display": "2 tbsp fresh parsley",
+      "qty_display": "2 tbsp fresh parsley, chopped",
       "contribution": {
         "Energy_KCal": 2.736,
         "Protein": 0.226,
@@ -454,6 +459,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 12,
       "raw_grams": 1316.75,
@@ -461,7 +467,11 @@
       "raw_fat_grams": 117.19,
       "raw_protein_grams": 161.54,
       "raw_carb_grams": 24.64,
-      "final_grams": 1120.13
+      "raw_fiber_grams": 2.99,
+      "final_grams": 1120.13,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "dijon",
@@ -474,6 +484,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 1,
       "raw_grams": 15.0,
@@ -481,7 +492,11 @@
       "raw_fat_grams": 1.64,
       "raw_protein_grams": 1.19,
       "raw_carb_grams": 1.5,
-      "final_grams": 15.0
+      "raw_fiber_grams": 0.56,
+      "final_grams": 15.0,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

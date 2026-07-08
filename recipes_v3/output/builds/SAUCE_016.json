@@ -5,6 +5,8 @@
   "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
@@ -97,7 +99,7 @@
       "grams": 3.0,
       "section": "dressing",
       "ingredient_group": "dressing",
-      "qty_display": "1 clove, minced",
+      "qty_display": "1 clove garlic, minced",
       "contribution": {
         "Energy_KCal": 4.47,
         "Protein": 0.191,
@@ -340,7 +342,10 @@
       "raw_protein_grams": 0.26,
       "raw_carb_grams": 4.8,
       "raw_fiber_grams": 0.22,
-      "final_grams": 232.87
+      "final_grams": 232.87,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "mustard",
@@ -362,7 +367,10 @@
       "raw_protein_grams": 0.2,
       "raw_carb_grams": 0.25,
       "raw_fiber_grams": 0.09,
-      "final_grams": 2.5
+      "final_grams": 2.5,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

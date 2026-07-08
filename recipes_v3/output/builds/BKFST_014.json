@@ -5,6 +5,8 @@
   "canonical_ndb_no": "18367",
   "cooking_method": "grilled",
   "cooking_method_normalized": "grilled",
+  "cook_minutes": 4,
+  "cook_temp_f": null,
   "yield_factor_water": 0.62,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,

@@ -1,14 +1,17 @@
 {
   "recipe_id": "ENTR_044",
-  "recipe_name": "Beef Tacos",
+  "recipe_name": "Beef Soft Tacos",
   "sr_rule": "Rule D",
   "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 0.8,
   "yield_factor_fat": 0.75,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 139.13,
   "raw_protein_grams": 108.09,
   "raw_carb_grams": 106.58,
+  "raw_fiber_grams": 17.54,
   "water_lost_grams": 68.35,
   "fat_lost_grams": 23.04,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1000.58,
   "grams_per_serving": 250.15,
   "ingredients": [
@@ -48,7 +53,7 @@
     {
       "ingredient_key": "chili_powder",
       "ndb_no": "2009",
-      "long_desc": "Spices, chili powder",
+      "long_desc": "",
       "grams": 5.4,
       "section": "taco_meat",
       "ingredient_group": "taco_meat",
@@ -241,7 +246,7 @@
       "grams": 56.7,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "1/2 cup",
+      "qty_display": "1/2 cup cheddar cheese, shredded",
       "contribution": {
         "Energy_KCal": 229.068,
         "Protein": 12.967,
@@ -262,7 +267,7 @@
       "grams": 75.0,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "1 cup",
+      "qty_display": "1 cup iceberg lettuce, shredded",
       "contribution": {
         "Energy_KCal": 10.5,
         "Protein": 0.675,
@@ -283,7 +288,7 @@
       "grams": 123.0,
       "section": "assembly",
       "ingredient_group": "assembly",
-      "qty_display": "1 medium",
+      "qty_display": "1 medium tomato, diced (123g)",
       "contribution": {
         "Energy_KCal": 22.14,
         "Protein": 1.082,
@@ -474,6 +479,7 @@
       "yield_factor_fat": 0.75,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 9,
       "raw_grams": 530.27,
@@ -481,7 +487,11 @@
       "raw_fat_grams": 92.17,
       "raw_protein_grams": 79.61,
       "raw_carb_grams": 6.78,
-      "final_grams": 438.88
+      "raw_fiber_grams": 3.07,
+      "final_grams": 438.88,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "assembly",
@@ -494,6 +504,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 5,
       "raw_grams": 561.7,
@@ -501,7 +512,11 @@
       "raw_fat_grams": 46.96,
       "raw_protein_grams": 28.47,
       "raw_carb_grams": 99.8,
-      "final_grams": 561.7
+      "raw_fiber_grams": 14.47,
+      "final_grams": 561.7,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

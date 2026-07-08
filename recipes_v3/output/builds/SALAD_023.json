@@ -5,6 +5,8 @@
   "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
@@ -403,7 +405,10 @@
       "raw_protein_grams": 5.71,
       "raw_carb_grams": 53.41,
       "raw_fiber_grams": 8.16,
-      "final_grams": 328.91
+      "final_grams": 328.91,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "dressing",
@@ -425,7 +430,10 @@
       "raw_protein_grams": 0.13,
       "raw_carb_grams": 1.44,
       "raw_fiber_grams": 0.09,
-      "final_grams": 67.2
+      "final_grams": 67.2,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "salad",
@@ -447,7 +455,10 @@
       "raw_protein_grams": 80.72,
       "raw_carb_grams": 32.51,
       "raw_fiber_grams": 13.97,
-      "final_grams": 1013.4
+      "final_grams": 1013.4,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

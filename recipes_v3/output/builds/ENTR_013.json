@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "boiled",
   "cooking_method_normalized": "boiled",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "NO_CANON",
   "audit_notes": "Rule D \u2014 no canonical match. Bespoke ingredient decomposition. Locked June 2026.",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 167.57,
   "raw_protein_grams": 208.45,
   "raw_carb_grams": 59.86,
+  "raw_fiber_grams": 17.68,
   "water_lost_grams": 266.94,
   "fat_lost_grams": 25.14,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1505.38,
   "grams_per_serving": 376.34,
   "ingredients": [
@@ -31,7 +36,7 @@
       "grams": 907.2,
       "section": "curry",
       "ingredient_group": "curry",
-      "qty_display": "2 lbs beef chuck roast",
+      "qty_display": "2 lbs beef chuck roast, cut into 1\u00bd-inch cubes",
       "contribution": {
         "Energy_KCal": 1270.08,
         "Protein": 191.691,
@@ -73,7 +78,7 @@
       "grams": 246.0,
       "section": "curry",
       "ingredient_group": "curry",
-      "qty_display": "2 medium tomatoes",
+      "qty_display": "2 medium tomatoes, diced (123g each)",
       "contribution": {
         "Energy_KCal": 44.28,
         "Protein": 2.165,
@@ -94,7 +99,7 @@
       "grams": 150.0,
       "section": "curry",
       "ingredient_group": "curry",
-      "qty_display": "1 large onion",
+      "qty_display": "1 large onion, diced",
       "contribution": {
         "Energy_KCal": 60.0,
         "Protein": 1.65,
@@ -115,7 +120,7 @@
       "grams": 12.0,
       "section": "curry",
       "ingredient_group": "curry",
-      "qty_display": "4 cloves garlic",
+      "qty_display": "4 cloves garlic, minced",
       "contribution": {
         "Energy_KCal": 17.88,
         "Protein": 0.763,
@@ -136,7 +141,7 @@
       "grams": 6.0,
       "section": "curry",
       "ingredient_group": "curry",
-      "qty_display": "1 tbsp fresh ginger",
+      "qty_display": "1 tbsp fresh ginger, minced",
       "contribution": {
         "Energy_KCal": 4.8,
         "Protein": 0.109,
@@ -432,6 +437,7 @@
       "yield_factor_fat": 0.85,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 12,
       "raw_grams": 1797.45,
@@ -439,7 +445,11 @@
       "raw_fat_grams": 167.57,
       "raw_protein_grams": 208.45,
       "raw_carb_grams": 59.86,
-      "final_grams": 1505.38
+      "raw_fiber_grams": 17.68,
+      "final_grams": 1505.38,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

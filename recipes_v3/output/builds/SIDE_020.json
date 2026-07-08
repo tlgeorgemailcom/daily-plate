@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "boiled",
   "cooking_method_normalized": "boiled",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 0.95,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PENDING",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 27.89,
   "raw_protein_grams": 38.86,
   "raw_carb_grams": 212.54,
+  "raw_fiber_grams": 15.76,
   "water_lost_grams": -317.97,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1004.89,
   "grams_per_serving": 251.22,
   "ingredients": [
@@ -285,6 +290,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 1,
       "raw_grams": 244.0,
@@ -292,7 +298,11 @@
       "raw_fat_grams": 3.68,
       "raw_protein_grams": 31.82,
       "raw_carb_grams": 182.19,
-      "final_grams": 580.52
+      "raw_fiber_grams": 7.81,
+      "final_grams": 580.52,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "mac_tomato",
@@ -305,6 +315,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 4,
       "raw_grams": 442.97,
@@ -312,7 +323,11 @@
       "raw_fat_grams": 24.2,
       "raw_protein_grams": 7.04,
       "raw_carb_grams": 30.35,
-      "final_grams": 424.37
+      "raw_fiber_grams": 7.95,
+      "final_grams": 424.37,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

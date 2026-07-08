@@ -5,10 +5,13 @@
   "canonical_ndb_no": "21138",
   "cooking_method": "fried",
   "cooking_method_normalized": "fried",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 0.21,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "E +0.8% F +1.3% C -2.8% W -4.6% all pass. P/Fi/Su structural divergence irreducible.",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 60.73,
   "raw_protein_grams": 19.41,
   "raw_carb_grams": 163.93,
+  "raw_fiber_grams": 11.79,
   "water_lost_grams": 563.18,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 407.02,
   "grams_per_serving": 101.76,
   "ingredients": [
@@ -243,6 +248,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 3,
       "raw_grams": 970.2,
@@ -250,7 +256,11 @@
       "raw_fat_grams": 60.73,
       "raw_protein_grams": 19.41,
       "raw_carb_grams": 163.93,
-      "final_grams": 407.02
+      "raw_fiber_grams": 11.79,
+      "final_grams": 407.02,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

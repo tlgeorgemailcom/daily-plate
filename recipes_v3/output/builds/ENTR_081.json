@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "boiled",
   "cooking_method_normalized": "boiled",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 6,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 88.43,
   "raw_protein_grams": 186.82,
   "raw_carb_grams": 391.57,
+  "raw_fiber_grams": 21.14,
   "water_lost_grams": -461.87,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 2353.52,
   "grams_per_serving": 392.25,
   "ingredients": [
@@ -157,7 +162,7 @@
       "grams": 123.0,
       "section": "lamb",
       "ingredient_group": "lamb",
-      "qty_display": "1 medium tomato, chopped",
+      "qty_display": "1 medium tomato, chopped (123g)",
       "contribution": {
         "Energy_KCal": 22.14,
         "Protein": 1.082,
@@ -325,7 +330,7 @@
       "grams": 1.2,
       "section": "lamb",
       "ingredient_group": "lamb",
-      "qty_display": "2 leaves",
+      "qty_display": "2 bay leaves",
       "contribution": {
         "Energy_KCal": 3.756,
         "Protein": 0.091,
@@ -409,7 +414,7 @@
       "grams": 6.0,
       "section": "rice",
       "ingredient_group": "rice",
-      "qty_display": "2 tbsp fresh",
+      "qty_display": "2 tbsp fresh mint, chopped",
       "contribution": {
         "Energy_KCal": 2.64,
         "Protein": 0.197,
@@ -600,6 +605,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 16,
       "raw_grams": 1466.62,
@@ -607,7 +613,11 @@
       "raw_fat_grams": 85.66,
       "raw_protein_grams": 157.76,
       "raw_carb_grams": 70.68,
-      "final_grams": 1217.19
+      "raw_fiber_grams": 15.09,
+      "final_grams": 1217.19,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "rice",
@@ -620,6 +630,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 4,
       "raw_grams": 425.0,
@@ -627,7 +638,11 @@
       "raw_fat_grams": 2.77,
       "raw_protein_grams": 29.06,
       "raw_carb_grams": 320.89,
-      "final_grams": 1136.34
+      "raw_fiber_grams": 6.06,
+      "final_grams": 1136.34,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

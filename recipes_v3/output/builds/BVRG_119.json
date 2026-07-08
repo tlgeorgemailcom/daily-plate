@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "raw",
   "cooking_method_normalized": "raw",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 1,
   "audit_status": "PASS",
   "audit_notes": "Rule D \u2014 no canonical; cachaca 1\u00bdoz + sweet vermouth \u00beoz + Cynar \u00beoz + bitters 2 dashes; NDB 14810 cynar custom; ~89.6g",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 0.0,
   "raw_protein_grams": 0.0,
   "raw_carb_grams": 9.5,
+  "raw_fiber_grams": 0.0,
   "water_lost_grams": 0.0,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 89.63,
   "grams_per_serving": 89.63,
   "ingredients": [
@@ -264,6 +269,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 4,
       "raw_grams": 89.63,
@@ -271,7 +277,11 @@
       "raw_fat_grams": 0.0,
       "raw_protein_grams": 0.0,
       "raw_carb_grams": 9.5,
-      "final_grams": 89.63
+      "raw_fiber_grams": 0.0,
+      "final_grams": 89.63,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "baked",
   "cooking_method_normalized": "baked",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 0.85,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 6,
   "audit_status": "PASS",
   "audit_notes": "Rule D \u2014 no canonical match.",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 137.34,
   "raw_protein_grams": 58.62,
   "raw_carb_grams": 157.8,
+  "raw_fiber_grams": 22.11,
   "water_lost_grams": 154.08,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1248.19,
   "grams_per_serving": 208.03,
   "ingredients": [
@@ -94,7 +99,7 @@
       "grams": 108.0,
       "section": "gratin",
       "ingredient_group": "gratin",
-      "qty_display": "1 cup shredded",
+      "qty_display": "1 cup Gruy\u00e8re cheese, shredded",
       "contribution": {
         "Energy_KCal": 446.04,
         "Protein": 32.195,
@@ -369,6 +374,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 9,
       "raw_grams": 1402.28,
@@ -376,7 +382,11 @@
       "raw_fat_grams": 137.34,
       "raw_protein_grams": 58.62,
       "raw_carb_grams": 157.8,
-      "final_grams": 1248.19
+      "raw_fiber_grams": 22.11,
+      "final_grams": 1248.19,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

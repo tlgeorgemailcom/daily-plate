@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "pan grilled",
   "cooking_method_normalized": "fried",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 96.09,
   "raw_protein_grams": 136.98,
   "raw_carb_grams": 4.67,
+  "raw_fiber_grams": 1.06,
   "water_lost_grams": 84.68,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 633.57,
   "grams_per_serving": 158.39,
   "ingredients": [
@@ -115,7 +120,7 @@
       "grams": 2.4,
       "section": "chops",
       "ingredient_group": "chops",
-      "qty_display": "3 sprigs",
+      "qty_display": "3 sprigs fresh thyme, leaves stripped",
       "contribution": {
         "Energy_KCal": 2.424,
         "Protein": 0.133,
@@ -136,7 +141,7 @@
       "grams": 1.7,
       "section": "chops",
       "ingredient_group": "chops",
-      "qty_display": "1 sprig",
+      "qty_display": "1 sprig fresh rosemary, whole",
       "contribution": {
         "Energy_KCal": 2.227,
         "Protein": 0.056,
@@ -348,6 +353,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 8,
       "raw_grams": 718.25,
@@ -355,7 +361,11 @@
       "raw_fat_grams": 96.09,
       "raw_protein_grams": 136.98,
       "raw_carb_grams": 4.67,
-      "final_grams": 633.57
+      "raw_fiber_grams": 1.06,
+      "final_grams": 633.57,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

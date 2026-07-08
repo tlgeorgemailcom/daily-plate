@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "pan grilled",
   "cooking_method_normalized": "fried",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 0.85,
   "yield_factor_fat": 0.593,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 157.41,
   "raw_protein_grams": 130.0,
   "raw_carb_grams": 90.0,
+  "raw_fiber_grams": 17.48,
   "water_lost_grams": 170.55,
   "fat_lost_grams": 64.07,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1304.0,
   "grams_per_serving": 326.0,
   "ingredients": [
@@ -73,7 +78,7 @@
       "grams": 160.0,
       "section": "picadillo",
       "ingredient_group": "picadillo",
-      "qty_display": "1 large onion",
+      "qty_display": "1 large onion, diced",
       "contribution": {
         "Energy_KCal": 64.0,
         "Protein": 1.76,
@@ -94,7 +99,7 @@
       "grams": 149.0,
       "section": "picadillo",
       "ingredient_group": "picadillo",
-      "qty_display": "1 large",
+      "qty_display": "1 large green bell pepper, diced",
       "contribution": {
         "Energy_KCal": 29.8,
         "Protein": 1.281,
@@ -115,7 +120,7 @@
       "grams": 12.0,
       "section": "picadillo",
       "ingredient_group": "picadillo",
-      "qty_display": "4 cloves",
+      "qty_display": "4 cloves garlic, minced",
       "contribution": {
         "Energy_KCal": 17.88,
         "Protein": 0.763,
@@ -157,7 +162,7 @@
       "grams": 32.4,
       "section": "picadillo",
       "ingredient_group": "picadillo",
-      "qty_display": "1/4 cup green olives",
+      "qty_display": "1/4 cup green olives, sliced",
       "contribution": {
         "Energy_KCal": 46.98,
         "Protein": 0.334,
@@ -241,7 +246,7 @@
       "grams": 3.0,
       "section": "picadillo",
       "ingredient_group": "picadillo",
-      "qty_display": "1-1/2 tsp cumin",
+      "qty_display": "1-1/2 tsp ground cumin",
       "contribution": {
         "Energy_KCal": 11.25,
         "Protein": 0.534,
@@ -495,6 +500,7 @@
       "yield_factor_fat": 0.593,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 15,
       "raw_grams": 1538.63,
@@ -502,7 +508,11 @@
       "raw_fat_grams": 157.41,
       "raw_protein_grams": 130.0,
       "raw_carb_grams": 90.0,
-      "final_grams": 1304.0
+      "raw_fiber_grams": 17.48,
+      "final_grams": 1304.0,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

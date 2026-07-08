@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "raw",
   "cooking_method_normalized": "raw",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 1,
   "audit_status": "PASS",
   "audit_notes": "Rule D \u2014 no canonical; vodka 1\u00bdoz + peach liqueur 1\u00bdoz + OJ 2oz + cranberry 1\u00bdoz; ~195.5g",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 0.17,
   "raw_protein_grams": 0.43,
   "raw_carb_grams": 26.63,
+  "raw_fiber_grams": 0.12,
   "water_lost_grams": 0.0,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 191.6,
   "grams_per_serving": 191.6,
   "ingredients": [
@@ -264,6 +269,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 4,
       "raw_grams": 191.6,
@@ -271,7 +277,11 @@
       "raw_fat_grams": 0.17,
       "raw_protein_grams": 0.43,
       "raw_carb_grams": 26.63,
-      "final_grams": 191.6
+      "raw_fiber_grams": 0.12,
+      "final_grams": 191.6,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

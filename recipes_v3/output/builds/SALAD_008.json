@@ -1,14 +1,17 @@
 {
   "recipe_id": "SALAD_008",
   "recipe_name": "Burrata Salad",
-  "sr_rule": "D",
+  "sr_rule": "Rule D",
   "canonical_ndb_no": null,
   "cooking_method": "raw",
   "cooking_method_normalized": "raw",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 2,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 66.46,
   "raw_protein_grams": 45.55,
   "raw_carb_grams": 22.24,
+  "raw_fiber_grams": 5.45,
   "water_lost_grams": 0.0,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 571.4,
   "grams_per_serving": 285.7,
   "ingredients": [
@@ -52,7 +57,7 @@
       "grams": 246.0,
       "section": "salad",
       "ingredient_group": "tomato",
-      "qty_display": "2 medium",
+      "qty_display": "2 medium tomatoes (123g each), sliced into \u00bc-inch rounds",
       "contribution": {
         "Energy_KCal": 44.28,
         "Protein": 2.165,
@@ -369,6 +374,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 9,
       "raw_grams": 571.4,
@@ -376,7 +382,11 @@
       "raw_fat_grams": 66.46,
       "raw_protein_grams": 45.55,
       "raw_carb_grams": 22.24,
-      "final_grams": 571.4
+      "raw_fiber_grams": 5.45,
+      "final_grams": 571.4,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

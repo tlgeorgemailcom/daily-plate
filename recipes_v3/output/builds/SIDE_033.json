@@ -5,10 +5,13 @@
   "canonical_ndb_no": "36036",
   "cooking_method": "fried",
   "cooking_method_normalized": "fried",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 0.29,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 86.36,
   "raw_protein_grams": 29.88,
   "raw_carb_grams": 190.78,
+  "raw_fiber_grams": 12.48,
   "water_lost_grams": 383.63,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 473.37,
   "grams_per_serving": 118.34,
   "ingredients": [
@@ -52,7 +57,7 @@
       "grams": 187.5,
       "section": "rings",
       "ingredient_group": "rings",
-      "qty_display": "1 1/2 cups all-purpose flour",
+      "qty_display": "1 1/2 cups",
       "contribution": {
         "Energy_KCal": 682.5,
         "Protein": 19.369,
@@ -94,7 +99,7 @@
       "grams": 78.0,
       "section": "rings",
       "ingredient_group": "rings",
-      "qty_display": "for deep frying (78g absorbed), vegetable oil",
+      "qty_display": "78g vegetable oil (absorbed during frying)",
       "contribution": {
         "Energy_KCal": 672.36,
         "Protein": 0.0,
@@ -348,6 +353,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 8,
       "raw_grams": 857.0,
@@ -355,7 +361,11 @@
       "raw_fat_grams": 86.36,
       "raw_protein_grams": 29.88,
       "raw_carb_grams": 190.78,
-      "final_grams": 473.37
+      "raw_fiber_grams": 12.48,
+      "final_grams": 473.37,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

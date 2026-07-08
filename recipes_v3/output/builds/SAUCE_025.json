@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "boiled",
   "cooking_method_normalized": "boiled",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 0.73,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 11,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 26.84,
   "raw_protein_grams": 17.06,
   "raw_carb_grams": 78.82,
+  "raw_fiber_grams": 30.8,
   "water_lost_grams": 94.83,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 397.87,
   "grams_per_serving": 36.17,
   "ingredients": [
@@ -88,34 +93,13 @@
       "intrinsic_sugar_g": 4.664
     },
     {
-      "ingredient_key": "apple_cider_vinegar",
-      "ndb_no": "2048",
-      "long_desc": "Vinegar, cider",
-      "grams": 59.6,
-      "section": "sauce",
-      "ingredient_group": "sauce",
-      "qty_display": "1/4 cup",
-      "contribution": {
-        "Energy_KCal": 12.516,
-        "Protein": 0.0,
-        "TotalLipidFat": 0.0,
-        "Carbohydrate": 0.554,
-        "FiberTotalDietary": 0.0,
-        "SugarsTotal": 0.238,
-        "Water": 55.911
-      },
-      "sugar_policy": "none_added",
-      "added_sugar_g": 0.0,
-      "intrinsic_sugar_g": 0.238
-    },
-    {
       "ingredient_key": "garlic_raw",
       "ndb_no": "11215",
       "long_desc": "Garlic, raw",
       "grams": 9.0,
       "section": "sauce",
       "ingredient_group": "sauce",
-      "qty_display": "3 cloves garlic",
+      "qty_display": "3 cloves garlic, minced",
       "contribution": {
         "Energy_KCal": 13.41,
         "Protein": 0.572,
@@ -136,7 +120,7 @@
       "grams": 180.0,
       "section": "sauce",
       "ingredient_group": "sauce",
-      "qty_display": "2 Roma tomatoes",
+      "qty_display": "2 Roma tomatoes, quartered",
       "contribution": {
         "Energy_KCal": 32.4,
         "Protein": 1.584,
@@ -233,6 +217,27 @@
       "sugar_policy": "none_added",
       "added_sugar_g": 0.0,
       "intrinsic_sugar_g": 0.0
+    },
+    {
+      "ingredient_key": "apple_cider_vinegar",
+      "ndb_no": "2048",
+      "long_desc": "Vinegar, cider",
+      "grams": 59.6,
+      "section": "sauce",
+      "ingredient_group": "sauce",
+      "qty_display": "1/4 cup",
+      "contribution": {
+        "Energy_KCal": 12.516,
+        "Protein": 0.0,
+        "TotalLipidFat": 0.0,
+        "Carbohydrate": 0.554,
+        "FiberTotalDietary": 0.0,
+        "SugarsTotal": 0.238,
+        "Water": 55.911
+      },
+      "sugar_policy": "none_added",
+      "added_sugar_g": 0.0,
+      "intrinsic_sugar_g": 0.238
     },
     {
       "ingredient_key": "salt_table",
@@ -411,6 +416,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 11,
       "raw_grams": 492.7,
@@ -418,7 +424,11 @@
       "raw_fat_grams": 26.84,
       "raw_protein_grams": 17.06,
       "raw_carb_grams": 78.82,
-      "final_grams": 397.87
+      "raw_fiber_grams": 30.8,
+      "final_grams": 397.87,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

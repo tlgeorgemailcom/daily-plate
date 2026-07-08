@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "boiled",
   "cooking_method_normalized": "boiled",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 0.96,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 6,
   "audit_status": "PASS",
   "audit_notes": "Rule D \u2014 no canonical match.",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 12.87,
   "raw_protein_grams": 53.63,
   "raw_carb_grams": 334.02,
+  "raw_fiber_grams": 28.52,
   "water_lost_grams": 29.6,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1233.6,
   "grams_per_serving": 205.6,
   "ingredients": [
@@ -73,7 +78,7 @@
       "grams": 100.0,
       "section": "dough",
       "ingredient_group": "dough",
-      "qty_display": "2 large",
+      "qty_display": "2 large eggs",
       "contribution": {
         "Energy_KCal": 143.0,
         "Protein": 12.56,
@@ -264,6 +269,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 1,
       "raw_grams": 907.2,
@@ -271,7 +277,11 @@
       "raw_fat_grams": 0.91,
       "raw_protein_grams": 15.24,
       "raw_carb_grams": 142.52,
-      "final_grams": 877.6
+      "raw_fiber_grams": 21.77,
+      "final_grams": 877.6,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "dough",
@@ -284,6 +294,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 3,
       "raw_grams": 356.0,
@@ -291,7 +302,11 @@
       "raw_fat_grams": 11.96,
       "raw_protein_grams": 38.38,
       "raw_carb_grams": 191.5,
-      "final_grams": 356.0
+      "raw_fiber_grams": 6.75,
+      "final_grams": 356.0,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 0.96,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "Rule D \u2014 no canonical match.",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 41.43,
   "raw_protein_grams": 56.01,
   "raw_carb_grams": 173.3,
+  "raw_fiber_grams": 24.96,
   "water_lost_grams": 74.26,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1184.74,
   "grams_per_serving": 296.19,
   "ingredients": [
@@ -73,7 +78,7 @@
       "grams": 150.0,
       "section": "dressing",
       "ingredient_group": "dressing",
-      "qty_display": "1 large",
+      "qty_display": "1 large onion, thinly sliced",
       "contribution": {
         "Energy_KCal": 60.0,
         "Protein": 1.65,
@@ -199,7 +204,7 @@
       "grams": 7.6,
       "section": "dressing",
       "ingredient_group": "dressing",
-      "qty_display": "2 tbsp",
+      "qty_display": "2 tbsp fresh parsley, chopped",
       "contribution": {
         "Energy_KCal": 2.736,
         "Protein": 0.226,
@@ -369,6 +374,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 1,
       "raw_grams": 907.2,
@@ -376,7 +382,11 @@
       "raw_fat_grams": 0.91,
       "raw_protein_grams": 15.24,
       "raw_carb_grams": 142.52,
-      "final_grams": 877.6
+      "raw_fiber_grams": 21.77,
+      "final_grams": 877.6,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "dressing",
@@ -389,6 +399,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 8,
       "raw_grams": 351.8,
@@ -396,7 +407,11 @@
       "raw_fat_grams": 40.53,
       "raw_protein_grams": 40.76,
       "raw_carb_grams": 30.78,
-      "final_grams": 307.15
+      "raw_fiber_grams": 3.19,
+      "final_grams": 307.15,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

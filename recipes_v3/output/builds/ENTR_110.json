@@ -5,6 +5,8 @@
   "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 0.85,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
@@ -550,7 +552,10 @@
       "raw_protein_grams": 14.26,
       "raw_carb_grams": 2.88,
       "raw_fiber_grams": 1.73,
-      "final_grams": 720.0
+      "final_grams": 720.0,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "rice",
@@ -572,7 +577,10 @@
       "raw_protein_grams": 19.85,
       "raw_carb_grams": 238.82,
       "raw_fiber_grams": 0.81,
-      "final_grams": 843.16
+      "final_grams": 843.16,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "paella",
@@ -594,7 +602,10 @@
       "raw_protein_grams": 101.43,
       "raw_carb_grams": 69.34,
       "raw_fiber_grams": 13.55,
-      "final_grams": 1177.71
+      "final_grams": 1177.71,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

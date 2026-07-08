@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 6,
   "audit_status": "NO_CANON",
   "audit_notes": "Rule D \u2014 no canonical match. Bespoke ingredient decomposition. Locked June 2026.",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 161.82,
   "raw_protein_grams": 117.37,
   "raw_carb_grams": 210.69,
+  "raw_fiber_grams": 34.69,
   "water_lost_grams": 225.65,
   "fat_lost_grams": 31.83,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 2068.54,
   "grams_per_serving": 344.76,
   "ingredients": [
@@ -52,7 +57,7 @@
       "grams": 110.0,
       "section": "filling",
       "ingredient_group": "filling",
-      "qty_display": "1 medium onion",
+      "qty_display": "1 medium onion, finely chopped",
       "contribution": {
         "Energy_KCal": 44.0,
         "Protein": 1.21,
@@ -73,7 +78,7 @@
       "grams": 122.0,
       "section": "filling",
       "ingredient_group": "filling",
-      "qty_display": "2 medium carrots",
+      "qty_display": "2 medium carrots, finely chopped",
       "contribution": {
         "Energy_KCal": 50.02,
         "Protein": 1.135,
@@ -94,7 +99,7 @@
       "grams": 80.0,
       "section": "filling",
       "ingredient_group": "filling",
-      "qty_display": "2 stalks celery",
+      "qty_display": "2 stalks celery, finely chopped",
       "contribution": {
         "Energy_KCal": 12.8,
         "Protein": 0.552,
@@ -115,7 +120,7 @@
       "grams": 9.0,
       "section": "filling",
       "ingredient_group": "filling",
-      "qty_display": "3 cloves garlic",
+      "qty_display": "3 cloves garlic, minced",
       "contribution": {
         "Energy_KCal": 13.41,
         "Protein": 0.572,
@@ -241,7 +246,7 @@
       "grams": 15.6,
       "section": "filling",
       "ingredient_group": "filling",
-      "qty_display": "2 tbsp flour",
+      "qty_display": "2 tbsp",
       "contribution": {
         "Energy_KCal": 56.784,
         "Protein": 1.611,
@@ -262,7 +267,7 @@
       "grams": 0.8,
       "section": "filling",
       "ingredient_group": "filling",
-      "qty_display": "1 tsp fresh thyme",
+      "qty_display": "1 tsp fresh thyme, leaves stripped",
       "contribution": {
         "Energy_KCal": 0.808,
         "Protein": 0.044,
@@ -283,7 +288,7 @@
       "grams": 1.7,
       "section": "filling",
       "ingredient_group": "filling",
-      "qty_display": "1 sprig fresh rosemary",
+      "qty_display": "1 sprig fresh rosemary, whole",
       "contribution": {
         "Energy_KCal": 2.227,
         "Protein": 0.056,
@@ -346,7 +351,7 @@
       "grams": 907.2,
       "section": "topping",
       "ingredient_group": "topping",
-      "qty_display": "2 lbs Yukon Gold potatoes",
+      "qty_display": "2 lbs Yukon Gold potatoes, peeled and quartered",
       "contribution": {
         "Energy_KCal": 625.968,
         "Protein": 15.241,
@@ -621,6 +626,7 @@
       "yield_factor_fat": 0.7,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 15,
       "raw_grams": 1183.45,
@@ -628,7 +634,11 @@
       "raw_fat_grams": 106.11,
       "raw_protein_grams": 91.47,
       "raw_carb_grams": 61.55,
-      "final_grams": 1015.56
+      "raw_fiber_grams": 12.77,
+      "final_grams": 1015.56,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "topping",
@@ -641,6 +651,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 6,
       "raw_grams": 1142.58,
@@ -648,7 +659,11 @@
       "raw_fat_grams": 55.72,
       "raw_protein_grams": 25.91,
       "raw_carb_grams": 149.14,
-      "final_grams": 1052.98
+      "raw_fiber_grams": 21.92,
+      "final_grams": 1052.98,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

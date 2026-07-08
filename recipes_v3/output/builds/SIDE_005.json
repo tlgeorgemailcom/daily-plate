@@ -5,10 +5,13 @@
   "canonical_ndb_no": "11414",
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 0.96,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 5,
   "audit_status": "PASS",
   "audit_notes": "Rule C \u2014 Fat +23.9% (mayo ratio vs USDA recipe); Fiber +39.3% (skin inclusion); Energy +2.2% P +1.0% C -0.8% W -2.0% all pass",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 141.09,
   "raw_protein_grams": 37.59,
   "raw_carb_grams": 153.84,
+  "raw_fiber_grams": 25.12,
   "water_lost_grams": 29.6,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1389.1,
   "grams_per_serving": 277.82,
   "ingredients": [
@@ -73,7 +78,7 @@
       "grams": 150.0,
       "section": "dressing",
       "ingredient_group": "dressing",
-      "qty_display": "3 large",
+      "qty_display": "3 large hard-boiled eggs, roughly chopped",
       "contribution": {
         "Energy_KCal": 232.5,
         "Protein": 18.87,
@@ -94,7 +99,7 @@
       "grams": 120.0,
       "section": "dressing",
       "ingredient_group": "dressing",
-      "qty_display": "3 stalks",
+      "qty_display": "3 stalks celery, diced",
       "contribution": {
         "Energy_KCal": 19.2,
         "Protein": 0.828,
@@ -115,7 +120,7 @@
       "grams": 40.0,
       "section": "dressing",
       "ingredient_group": "dressing",
-      "qty_display": "1/4 cup",
+      "qty_display": "1/4 cup onion, finely diced",
       "contribution": {
         "Energy_KCal": 16.0,
         "Protein": 0.44,
@@ -369,6 +374,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 1,
       "raw_grams": 907.2,
@@ -376,7 +382,11 @@
       "raw_fat_grams": 0.91,
       "raw_protein_grams": 15.24,
       "raw_carb_grams": 142.52,
-      "final_grams": 877.6
+      "raw_fiber_grams": 21.77,
+      "final_grams": 877.6,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "dressing",
@@ -389,6 +399,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 8,
       "raw_grams": 511.5,
@@ -396,7 +407,11 @@
       "raw_fat_grams": 140.18,
       "raw_protein_grams": 22.35,
       "raw_carb_grams": 11.32,
-      "final_grams": 511.5
+      "raw_fiber_grams": 3.35,
+      "final_grams": 511.5,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

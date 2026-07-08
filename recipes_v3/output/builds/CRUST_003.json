@@ -5,10 +5,13 @@
   "canonical_ndb_no": "18402",
   "cooking_method": "raw",
   "cooking_method_normalized": "raw",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 1,
   "audit_status": "PASS",
   "audit_notes": "Rule B. All 5 graded macros within +-3.0% of canonical NDB 18402. Max delta: Protein +3.0%. FiberTotalDietary ungraded \u2014 NDB 18402 reports 3.4g fiber/100g for the unbaked recipe while the identical baked recipe (NDB 18336) reports 1.7g fiber/100g; baking concentrates nutrients (yfw=0.38), so the baked version should have MORE fiber/100g than the unbaked version, not less. NDB 18402 Fiber=3.4 is physically implausible and consistent with a USDA measurement or transcription error. Built Fiber=1.51g/100g is consistent with ingredient-level calculation (flour sole fiber source). Ice water 2 tbsp (29.57g) vs CRUST_002 37g \u2014 difference is principled: yfw=1.0 retains all moisture so less water needed to match canonical. Locked May 14 2026.",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 85.79,
   "raw_protein_grams": 16.44,
   "raw_carb_grams": 119.26,
+  "raw_fiber_grams": 4.22,
   "water_lost_grams": 0.0,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 279.79,
   "grams_per_serving": 279.79,
   "ingredients": [
@@ -285,6 +290,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 5,
       "raw_grams": 279.79,
@@ -292,7 +298,11 @@
       "raw_fat_grams": 85.79,
       "raw_protein_grams": 16.44,
       "raw_carb_grams": 119.26,
-      "final_grams": 279.79
+      "raw_fiber_grams": 4.22,
+      "final_grams": 279.79,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

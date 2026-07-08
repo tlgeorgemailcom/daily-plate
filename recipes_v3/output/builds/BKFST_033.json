@@ -5,6 +5,8 @@
   "canonical_ndb_no": null,
   "cooking_method": "broiled",
   "cooking_method_normalized": "grilled",
+  "cook_minutes": 4,
+  "cook_temp_f": null,
   "yield_factor_water": 0.9,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,

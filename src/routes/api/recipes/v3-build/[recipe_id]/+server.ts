@@ -135,8 +135,8 @@ export const GET: RequestHandler = async ({ params }) => {
     // Fall back to the build JSON only when Turso was unreachable (tursoCookingMethod===null).
     cookMethod: tursoCookingMethod !== null ? tursoCookingMethod : (parsed.cooking_method ?? parsed.cook_method),
     cookMethodNormalized: parsed.cooking_method_normalized ?? parsed.cook_method_normalized,
-    cookMinutes: tursoCookMinutes,
-    cookTempF:   tursoCookTempF,
+    cookMinutes: tursoCookMinutes ?? (parsed.cook_minutes as number | null) ?? null,
+    cookTempF:   tursoCookTempF   ?? (parsed.cook_temp_f  as number | null) ?? null,
     yieldFactorWater: parsed.yield_factor_water,
     yieldFactorFat: parsed.yield_factor_fat,
     servingsCount: parsed.servings_count,

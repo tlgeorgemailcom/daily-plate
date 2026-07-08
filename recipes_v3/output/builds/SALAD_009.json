@@ -1,14 +1,17 @@
 {
   "recipe_id": "SALAD_009",
   "recipe_name": "Caprese Salad",
-  "sr_rule": "D",
+  "sr_rule": "Rule D",
   "canonical_ndb_no": null,
   "cooking_method": "raw",
   "cooking_method_normalized": "raw",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 2,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 52.66,
   "raw_protein_grams": 42.69,
   "raw_carb_grams": 24.7,
+  "raw_fiber_grams": 5.3,
   "water_lost_grams": 0.0,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 634.4,
   "grams_per_serving": 317.2,
   "ingredients": [
@@ -31,7 +36,7 @@
       "grams": 369.0,
       "section": "salad",
       "ingredient_group": "tomato",
-      "qty_display": "3 medium",
+      "qty_display": "3 medium tomatoes (123g each), sliced into \u00bc-inch rounds",
       "contribution": {
         "Energy_KCal": 66.42,
         "Protein": 3.247,
@@ -327,6 +332,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 7,
       "raw_grams": 634.4,
@@ -334,7 +340,11 @@
       "raw_fat_grams": 52.66,
       "raw_protein_grams": 42.69,
       "raw_carb_grams": 24.7,
-      "final_grams": 634.4
+      "raw_fiber_grams": 5.3,
+      "final_grams": 634.4,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

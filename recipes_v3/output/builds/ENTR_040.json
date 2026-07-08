@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "baked",
   "cooking_method_normalized": "baked",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 0.75,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 103.0,
   "raw_protein_grams": 201.04,
   "raw_carb_grams": 9.21,
+  "raw_fiber_grams": 3.14,
   "water_lost_grams": 170.12,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 832.38,
   "grams_per_serving": 208.1,
   "ingredients": [
@@ -94,7 +99,7 @@
       "grams": 12.0,
       "section": "tenderloin",
       "ingredient_group": "tenderloin",
-      "qty_display": "4 cloves",
+      "qty_display": "4 cloves garlic, smashed",
       "contribution": {
         "Energy_KCal": 17.88,
         "Protein": 0.763,
@@ -115,7 +120,7 @@
       "grams": 9.6,
       "section": "tenderloin",
       "ingredient_group": "tenderloin",
-      "qty_display": "4 sprigs",
+      "qty_display": "4 sprigs fresh thyme, whole",
       "contribution": {
         "Energy_KCal": 9.696,
         "Protein": 0.534,
@@ -136,7 +141,7 @@
       "grams": 6.8,
       "section": "tenderloin",
       "ingredient_group": "tenderloin",
-      "qty_display": "2 sprigs",
+      "qty_display": "2 sprigs fresh rosemary, whole",
       "contribution": {
         "Energy_KCal": 8.908,
         "Protein": 0.225,
@@ -348,6 +353,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 8,
       "raw_grams": 1002.5,
@@ -355,7 +361,11 @@
       "raw_fat_grams": 103.0,
       "raw_protein_grams": 201.04,
       "raw_carb_grams": 9.21,
-      "final_grams": 832.38
+      "raw_fiber_grams": 3.14,
+      "final_grams": 832.38,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 0.75,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 58.6,
   "raw_protein_grams": 152.72,
   "raw_carb_grams": 29.58,
+  "raw_fiber_grams": 1.98,
   "water_lost_grams": 151.09,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 809.31,
   "grams_per_serving": 202.33,
   "ingredients": [
@@ -73,7 +78,7 @@
       "grams": 1.0,
       "section": "chicken",
       "ingredient_group": "chicken",
-      "qty_display": "8 leaves",
+      "qty_display": "8 fresh sage leaves, whole",
       "contribution": {
         "Energy_KCal": 3.15,
         "Protein": 0.106,
@@ -454,6 +459,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 6,
       "raw_grams": 661.33,
@@ -461,7 +467,11 @@
       "raw_fat_grams": 20.3,
       "raw_protein_grams": 147.65,
       "raw_carb_grams": 25.0,
-      "final_grams": 547.21
+      "raw_fiber_grams": 1.39,
+      "final_grams": 547.21,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "sauce",
@@ -474,6 +484,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 6,
       "raw_grams": 179.07,
@@ -481,7 +492,11 @@
       "raw_fat_grams": 36.69,
       "raw_protein_grams": 0.44,
       "raw_carb_grams": 4.54,
-      "final_grams": 142.1
+      "raw_fiber_grams": 0.19,
+      "final_grams": 142.1,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "broth",
@@ -494,6 +509,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 1,
       "raw_grams": 120.0,
@@ -501,7 +517,11 @@
       "raw_fat_grams": 1.61,
       "raw_protein_grams": 4.63,
       "raw_carb_grams": 0.04,
-      "final_grams": 120.0
+      "raw_fiber_grams": 0.4,
+      "final_grams": 120.0,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

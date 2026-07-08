@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 0.8,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 205.73,
   "raw_protein_grams": 159.76,
   "raw_carb_grams": 231.55,
+  "raw_fiber_grams": 25.89,
   "water_lost_grams": 271.18,
   "fat_lost_grams": 28.12,
   "protein_lost_grams": 1.54,
   "carb_lost_grams": 10.25,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1427.18,
   "grams_per_serving": 356.79,
   "ingredients": [
@@ -516,6 +521,7 @@
       "yield_factor_fat": 0.0,
       "yield_factor_protein": 0.0,
       "yield_factor_carbohydrate": 0.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 0.0,
       "ingredient_count": 6,
       "raw_grams": 103.9,
@@ -523,7 +529,11 @@
       "raw_fat_grams": 28.12,
       "raw_protein_grams": 1.54,
       "raw_carb_grams": 10.25,
-      "final_grams": 3.78
+      "raw_fiber_grams": 1.58,
+      "final_grams": 3.78,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "fajitas",
@@ -536,6 +546,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 10,
       "raw_grams": 1634.38,
@@ -543,7 +554,11 @@
       "raw_fat_grams": 177.61,
       "raw_protein_grams": 158.21,
       "raw_carb_grams": 221.3,
-      "final_grams": 1423.4
+      "raw_fiber_grams": 24.32,
+      "final_grams": 1423.4,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

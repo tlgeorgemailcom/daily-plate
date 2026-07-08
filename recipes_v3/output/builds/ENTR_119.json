@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 30.29,
   "raw_protein_grams": 64.83,
   "raw_carb_grams": 329.47,
+  "raw_fiber_grams": 51.65,
   "water_lost_grams": 125.85,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1565.55,
   "grams_per_serving": 391.39,
   "ingredients": [
@@ -178,7 +183,7 @@
       "grams": 369.0,
       "section": "chana_masala",
       "ingredient_group": "chana_masala",
-      "qty_display": "2 large tomatoes, diced",
+      "qty_display": "2 large tomatoes, diced (182g each)",
       "contribution": {
         "Energy_KCal": 66.42,
         "Protein": 3.247,
@@ -216,7 +221,7 @@
     {
       "ingredient_key": "turmeric_ground",
       "ndb_no": "2043",
-      "long_desc": "Spices, turmeric, ground",
+      "long_desc": "\"Spices, turmeric, ground\"",
       "grams": 3.0,
       "section": "chana_masala",
       "ingredient_group": "chana_masala",
@@ -241,7 +246,7 @@
       "grams": 3.6,
       "section": "chana_masala",
       "ingredient_group": "chana_masala",
-      "qty_display": "2 tsp ground coriander",
+      "qty_display": "2 tsp ground coriander seed",
       "contribution": {
         "Energy_KCal": 10.728,
         "Protein": 0.445,
@@ -495,6 +500,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 2,
       "raw_grams": 540.5,
@@ -502,7 +508,11 @@
       "raw_fat_grams": 1.22,
       "raw_protein_grams": 13.19,
       "raw_carb_grams": 147.91,
-      "final_grams": 519.2
+      "raw_fiber_grams": 2.41,
+      "final_grams": 519.2,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "chana_masala",
@@ -515,6 +525,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 13,
       "raw_grams": 1150.9,
@@ -522,7 +533,11 @@
       "raw_fat_grams": 29.07,
       "raw_protein_grams": 51.64,
       "raw_carb_grams": 181.56,
-      "final_grams": 1046.35
+      "raw_fiber_grams": 49.24,
+      "final_grams": 1046.35,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

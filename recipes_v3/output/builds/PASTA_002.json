@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 150.13,
   "raw_protein_grams": 107.98,
   "raw_carb_grams": 204.53,
+  "raw_fiber_grams": 17.51,
   "water_lost_grams": 36.73,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 944.9,
   "grams_per_serving": 236.22,
   "ingredients": [
@@ -433,6 +438,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 6,
       "raw_grams": 430.85,
@@ -440,7 +446,11 @@
       "raw_fat_grams": 71.62,
       "raw_protein_grams": 31.41,
       "raw_carb_grams": 174.92,
-      "final_grams": 409.05
+      "raw_fiber_grams": 11.39,
+      "final_grams": 409.05,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "sauce",
@@ -453,6 +463,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 1,
       "raw_grams": 240.0,
@@ -460,7 +471,11 @@
       "raw_fat_grams": 8.52,
       "raw_protein_grams": 4.46,
       "raw_carb_grams": 21.24,
-      "final_grams": 240.0
+      "raw_fiber_grams": 5.28,
+      "final_grams": 240.0,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "toppings",
@@ -473,6 +488,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 5,
       "raw_grams": 310.77,
@@ -480,7 +496,11 @@
       "raw_fat_grams": 69.99,
       "raw_protein_grams": 72.11,
       "raw_carb_grams": 8.36,
-      "final_grams": 295.85
+      "raw_fiber_grams": 0.85,
+      "final_grams": 295.85,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

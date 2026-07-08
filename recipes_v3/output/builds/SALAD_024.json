@@ -3,12 +3,15 @@
   "recipe_name": "Spinach Salad",
   "sr_rule": "Rule D",
   "canonical_ndb_no": null,
-  "cooking_method": "raw",
-  "cooking_method_normalized": "raw",
+  "cooking_method": "multi",
+  "cooking_method_normalized": "multi",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 2,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 64.03,
   "raw_protein_grams": 36.48,
   "raw_carb_grams": 17.87,
+  "raw_fiber_grams": 5.08,
   "water_lost_grams": 0.0,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 511.4,
   "grams_per_serving": 255.7,
   "ingredients": [
@@ -74,7 +79,7 @@
       "grams": 46.0,
       "section": "salad",
       "ingredient_group": "salad",
-      "qty_display": "4 slices",
+      "qty_display": "4 slices bacon, crumbled",
       "contribution": {
         "Energy_KCal": 215.28,
         "Protein": 15.603,
@@ -95,7 +100,7 @@
       "grams": 100.0,
       "section": "salad",
       "ingredient_group": "salad",
-      "qty_display": "2 large",
+      "qty_display": "2 large hard-boiled eggs, halved",
       "contribution": {
         "Energy_KCal": 155.0,
         "Protein": 12.58,
@@ -116,7 +121,7 @@
       "grams": 113.4,
       "section": "salad",
       "ingredient_group": "salad",
-      "qty_display": "4 oz",
+      "qty_display": "4 oz cremini mushrooms, thinly sliced",
       "contribution": {
         "Energy_KCal": 24.948,
         "Protein": 2.835,
@@ -137,7 +142,7 @@
       "grams": 18.0,
       "section": "salad",
       "ingredient_group": "salad",
-      "qty_display": "\u00bc small red onion",
+      "qty_display": "\u00bc small red onion, thinly sliced",
       "contribution": {
         "Energy_KCal": 7.2,
         "Protein": 0.198,
@@ -307,6 +312,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 1,
       "raw_grams": 64.0,
@@ -314,7 +320,11 @@
       "raw_fat_grams": 36.49,
       "raw_protein_grams": 0.4,
       "raw_carb_grams": 3.24,
-      "final_grams": 64.0
+      "raw_fiber_grams": 0.36,
+      "final_grams": 64.0,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "salad",
@@ -327,6 +337,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 5,
       "raw_grams": 447.4,
@@ -334,7 +345,11 @@
       "raw_fat_grams": 27.55,
       "raw_protein_grams": 36.08,
       "raw_carb_grams": 14.63,
-      "final_grams": 447.4
+      "raw_fiber_grams": 4.73,
+      "final_grams": 447.4,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

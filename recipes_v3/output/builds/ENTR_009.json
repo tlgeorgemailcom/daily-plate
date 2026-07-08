@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "boiled",
   "cooking_method_normalized": "boiled",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "NO_CANON",
   "audit_notes": "Rule D \u2014 no canonical match. Bespoke Tex-Mex ingredient decomposition. Locked June 2026.",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 58.15,
   "raw_protein_grams": 156.06,
   "raw_carb_grams": 59.65,
+  "raw_fiber_grams": 12.31,
   "water_lost_grams": 571.63,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 992.17,
   "grams_per_serving": 248.04,
   "ingredients": [
@@ -31,7 +36,7 @@
       "grams": 680.4,
       "section": "main",
       "ingredient_group": "main",
-      "qty_display": "1\u00bd lbs",
+      "qty_display": "1\u00bd lbs beef chuck roast, cut into 1 to 2-inch cubes",
       "contribution": {
         "Energy_KCal": 952.56,
         "Protein": 143.769,
@@ -52,7 +57,7 @@
       "grams": 246.0,
       "section": "main",
       "ingredient_group": "main",
-      "qty_display": "2 medium",
+      "qty_display": "2 medium tomatoes, diced (123g each)",
       "contribution": {
         "Energy_KCal": 44.28,
         "Protein": 2.165,
@@ -73,7 +78,7 @@
       "grams": 220.0,
       "section": "main",
       "ingredient_group": "main",
-      "qty_display": "1\u00bd medium",
+      "qty_display": "1\u00bd medium onions, diced",
       "contribution": {
         "Energy_KCal": 88.0,
         "Protein": 2.42,
@@ -94,7 +99,7 @@
       "grams": 119.0,
       "section": "main",
       "ingredient_group": "main",
-      "qty_display": "1 medium",
+      "qty_display": "1 medium green bell pepper, diced",
       "contribution": {
         "Energy_KCal": 23.8,
         "Protein": 1.023,
@@ -178,7 +183,7 @@
       "grams": 12.0,
       "section": "main",
       "ingredient_group": "main",
-      "qty_display": "4 cloves",
+      "qty_display": "4 cloves garlic, minced",
       "contribution": {
         "Energy_KCal": 17.88,
         "Protein": 0.763,
@@ -216,7 +221,7 @@
     {
       "ingredient_key": "chili_powder",
       "ndb_no": "2009",
-      "long_desc": "Spices, chili powder",
+      "long_desc": "",
       "grams": 2.7,
       "section": "main",
       "ingredient_group": "main",
@@ -474,6 +479,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 14,
       "raw_grams": 1563.8,
@@ -481,7 +487,11 @@
       "raw_fat_grams": 58.15,
       "raw_protein_grams": 156.06,
       "raw_carb_grams": 59.65,
-      "final_grams": 992.17
+      "raw_fiber_grams": 12.31,
+      "final_grams": 992.17,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

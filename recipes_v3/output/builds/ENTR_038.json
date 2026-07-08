@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "pan grilled",
   "cooking_method_normalized": "fried",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 0.75,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 161.62,
   "raw_protein_grams": 126.73,
   "raw_carb_grams": 14.68,
+  "raw_fiber_grams": 2.13,
   "water_lost_grams": 125.27,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 696.78,
   "grams_per_serving": 174.2,
   "ingredients": [
@@ -115,7 +120,7 @@
       "grams": 12.0,
       "section": "steak",
       "ingredient_group": "steak",
-      "qty_display": "4 cloves",
+      "qty_display": "4 cloves garlic, minced",
       "contribution": {
         "Energy_KCal": 17.88,
         "Protein": 0.763,
@@ -153,7 +158,7 @@
     {
       "ingredient_key": "chili_powder",
       "ndb_no": "2009",
-      "long_desc": "Spices, chili powder",
+      "long_desc": "",
       "grams": 2.7,
       "section": "steak",
       "ingredient_group": "steak",
@@ -369,6 +374,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 9,
       "raw_grams": 822.05,
@@ -376,7 +382,11 @@
       "raw_fat_grams": 161.62,
       "raw_protein_grams": 126.73,
       "raw_carb_grams": 14.68,
-      "final_grams": 696.78
+      "raw_fiber_grams": 2.13,
+      "final_grams": 696.78,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

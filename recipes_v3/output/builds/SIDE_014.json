@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "raw",
   "cooking_method_normalized": "raw",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 8,
   "audit_status": "PASS",
   "audit_notes": "Rule D \u2014 no canonical match.",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 85.42,
   "raw_protein_grams": 9.91,
   "raw_carb_grams": 72.35,
+  "raw_fiber_grams": 18.09,
   "water_lost_grams": 0.0,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 895.2,
   "grams_per_serving": 111.9,
   "ingredients": [
@@ -52,7 +57,7 @@
       "grams": 140.0,
       "section": "slaw",
       "ingredient_group": "slaw",
-      "qty_display": "2 cups shredded",
+      "qty_display": "2 cups red cabbage, shredded",
       "contribution": {
         "Energy_KCal": 43.4,
         "Protein": 2.002,
@@ -73,7 +78,7 @@
       "grams": 220.0,
       "section": "slaw",
       "ingredient_group": "slaw",
-      "qty_display": "2 cups shredded",
+      "qty_display": "2 cups carrot, shredded",
       "contribution": {
         "Energy_KCal": 90.2,
         "Protein": 2.046,
@@ -94,7 +99,7 @@
       "grams": 119.0,
       "section": "slaw",
       "ingredient_group": "slaw",
-      "qty_display": "1 medium",
+      "qty_display": "1 medium red bell pepper, thinly sliced",
       "contribution": {
         "Energy_KCal": 36.89,
         "Protein": 1.178,
@@ -115,7 +120,7 @@
       "grams": 36.0,
       "section": "slaw",
       "ingredient_group": "slaw",
-      "qty_display": "3 stalks",
+      "qty_display": "3 scallions, thinly sliced",
       "contribution": {
         "Energy_KCal": 11.52,
         "Protein": 0.659,
@@ -411,6 +416,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 11,
       "raw_grams": 895.2,
@@ -418,7 +424,11 @@
       "raw_fat_grams": 85.42,
       "raw_protein_grams": 9.91,
       "raw_carb_grams": 72.35,
-      "final_grams": 895.2
+      "raw_fiber_grams": 18.09,
+      "final_grams": 895.2,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

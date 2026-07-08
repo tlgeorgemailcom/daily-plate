@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "boiled",
   "cooking_method_normalized": "boiled",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "NO_CANON",
   "audit_notes": "Rule D \u2014 no canonical match. FNDDS FC 27111200 has two unresolvable NDB references. Bespoke ingredient decomposition. Locked June 2026.",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 100.02,
   "raw_protein_grams": 223.72,
   "raw_carb_grams": 81.96,
+  "raw_fiber_grams": 11.0,
   "water_lost_grams": 867.0,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1336.94,
   "grams_per_serving": 334.24,
   "ingredients": [
@@ -31,7 +36,7 @@
       "grams": 907.2,
       "section": "main",
       "ingredient_group": "main",
-      "qty_display": "2 lbs",
+      "qty_display": "2 lbs beef chuck roast, cut into 2-inch cubes",
       "contribution": {
         "Energy_KCal": 1270.08,
         "Protein": 191.691,
@@ -94,7 +99,7 @@
       "grams": 226.8,
       "section": "main",
       "ingredient_group": "main",
-      "qty_display": "8 oz",
+      "qty_display": "8 oz crimini mushrooms, halved or quartered",
       "contribution": {
         "Energy_KCal": 49.896,
         "Protein": 5.67,
@@ -115,7 +120,7 @@
       "grams": 220.0,
       "section": "main",
       "ingredient_group": "main",
-      "qty_display": "2 medium",
+      "qty_display": "2 medium onions, diced",
       "contribution": {
         "Energy_KCal": 88.0,
         "Protein": 2.42,
@@ -136,7 +141,7 @@
       "grams": 122.0,
       "section": "main",
       "ingredient_group": "main",
-      "qty_display": "2 medium",
+      "qty_display": "2 medium carrots, sliced into 1-inch chunks",
       "contribution": {
         "Energy_KCal": 50.02,
         "Protein": 1.135,
@@ -178,7 +183,7 @@
       "grams": 12.0,
       "section": "main",
       "ingredient_group": "main",
-      "qty_display": "4 cloves",
+      "qty_display": "4 cloves garlic, minced",
       "contribution": {
         "Energy_KCal": 17.88,
         "Protein": 0.763,
@@ -495,6 +500,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 15,
       "raw_grams": 2203.95,
@@ -502,7 +508,11 @@
       "raw_fat_grams": 100.02,
       "raw_protein_grams": 223.72,
       "raw_carb_grams": 81.96,
-      "final_grams": 1336.94
+      "raw_fiber_grams": 11.0,
+      "final_grams": 1336.94,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

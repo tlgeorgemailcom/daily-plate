@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "baked",
   "cooking_method_normalized": "baked",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 0.75,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 72.22,
   "raw_protein_grams": 163.85,
   "raw_carb_grams": 101.45,
+  "raw_fiber_grams": 25.11,
   "water_lost_grams": 432.64,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1680.26,
   "grams_per_serving": 420.07,
   "ingredients": [
@@ -31,7 +36,7 @@
       "grams": 680.4,
       "section": "ragu",
       "ingredient_group": "ragu",
-      "qty_display": "1-1/2 lb",
+      "qty_display": "1-1/2 lb beef chuck roast, cut into 4 pieces",
       "contribution": {
         "Energy_KCal": 952.56,
         "Protein": 143.769,
@@ -73,7 +78,7 @@
       "grams": 110.0,
       "section": "ragu",
       "ingredient_group": "ragu",
-      "qty_display": "1 medium",
+      "qty_display": "1 medium onion, diced",
       "contribution": {
         "Energy_KCal": 44.0,
         "Protein": 1.21,
@@ -94,7 +99,7 @@
       "grams": 122.0,
       "section": "ragu",
       "ingredient_group": "ragu",
-      "qty_display": "2 medium",
+      "qty_display": "2 medium carrots, diced",
       "contribution": {
         "Energy_KCal": 50.02,
         "Protein": 1.135,
@@ -115,7 +120,7 @@
       "grams": 80.0,
       "section": "ragu",
       "ingredient_group": "ragu",
-      "qty_display": "2 stalks",
+      "qty_display": "2 stalks celery, diced",
       "contribution": {
         "Energy_KCal": 12.8,
         "Protein": 0.552,
@@ -136,7 +141,7 @@
       "grams": 12.0,
       "section": "ragu",
       "ingredient_group": "ragu",
-      "qty_display": "4 cloves",
+      "qty_display": "4 cloves garlic, minced",
       "contribution": {
         "Energy_KCal": 17.88,
         "Protein": 0.763,
@@ -262,7 +267,7 @@
       "grams": 3.4,
       "section": "ragu",
       "ingredient_group": "ragu",
-      "qty_display": "1 sprig",
+      "qty_display": "1 sprig fresh rosemary, whole",
       "contribution": {
         "Energy_KCal": 4.454,
         "Protein": 0.113,
@@ -283,7 +288,7 @@
       "grams": 1.2,
       "section": "ragu",
       "ingredient_group": "ragu",
-      "qty_display": "2",
+      "qty_display": "2 bay leaves",
       "contribution": {
         "Energy_KCal": 3.756,
         "Protein": 0.091,
@@ -495,6 +500,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 15,
       "raw_grams": 2112.9,
@@ -502,7 +508,11 @@
       "raw_fat_grams": 72.22,
       "raw_protein_grams": 163.85,
       "raw_carb_grams": 101.45,
-      "final_grams": 1680.26
+      "raw_fiber_grams": 25.11,
+      "final_grams": 1680.26,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

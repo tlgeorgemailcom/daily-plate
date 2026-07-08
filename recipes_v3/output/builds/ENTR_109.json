@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "fried",
   "cooking_method_normalized": "fried",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 0.75,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 161.03,
   "raw_protein_grams": 168.69,
   "raw_carb_grams": 327.28,
+  "raw_fiber_grams": 17.49,
   "water_lost_grams": 529.63,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1709.82,
   "grams_per_serving": 427.46,
   "ingredients": [
@@ -432,6 +437,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 8,
       "raw_grams": 1259.17,
@@ -439,7 +445,11 @@
       "raw_fat_grams": 92.29,
       "raw_protein_grams": 149.22,
       "raw_carb_grams": 162.98,
-      "final_grams": 1050.38
+      "raw_fiber_grams": 5.55,
+      "final_grams": 1050.38,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "chips",
@@ -452,6 +462,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 4,
       "raw_grams": 980.28,
@@ -459,7 +470,11 @@
       "raw_fat_grams": 68.74,
       "raw_protein_grams": 19.47,
       "raw_carb_grams": 164.3,
-      "final_grams": 659.44
+      "raw_fiber_grams": 11.94,
+      "final_grams": 659.44,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

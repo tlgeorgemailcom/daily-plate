@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 0.75,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 60.95,
   "raw_protein_grams": 166.56,
   "raw_carb_grams": 52.2,
+  "raw_fiber_grams": 12.81,
   "water_lost_grams": 349.07,
   "fat_lost_grams": 41.55,
   "protein_lost_grams": 1.46,
   "carb_lost_grams": 8.71,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1192.66,
   "grams_per_serving": 298.16,
   "ingredients": [
@@ -73,7 +78,7 @@
       "grams": 9.0,
       "section": "marinade",
       "ingredient_group": "marinade",
-      "qty_display": "3 cloves",
+      "qty_display": "3 cloves garlic, minced",
       "contribution": {
         "Energy_KCal": 13.41,
         "Protein": 0.572,
@@ -136,7 +141,7 @@
       "grams": 1.0,
       "section": "marinade",
       "ingredient_group": "marinade",
-      "qty_display": "1/2 tsp",
+      "qty_display": "1/2 tsp ground cumin",
       "contribution": {
         "Energy_KCal": 3.75,
         "Protein": 0.178,
@@ -220,7 +225,7 @@
       "grams": 196.0,
       "section": "kabobs",
       "ingredient_group": "kabobs",
-      "qty_display": "1 large",
+      "qty_display": "1 large zucchini, cut into 1-1/2-inch pieces",
       "contribution": {
         "Energy_KCal": 33.32,
         "Protein": 2.372,
@@ -241,7 +246,7 @@
       "grams": 119.0,
       "section": "kabobs",
       "ingredient_group": "kabobs",
-      "qty_display": "1 medium",
+      "qty_display": "1 medium red bell pepper, cut into 1-1/2-inch pieces",
       "contribution": {
         "Energy_KCal": 36.89,
         "Protein": 1.178,
@@ -262,7 +267,7 @@
       "grams": 119.0,
       "section": "kabobs",
       "ingredient_group": "kabobs",
-      "qty_display": "1 medium",
+      "qty_display": "1 medium green bell pepper, cut into 1-1/2-inch pieces",
       "contribution": {
         "Energy_KCal": 23.8,
         "Protein": 1.023,
@@ -283,7 +288,7 @@
       "grams": 160.0,
       "section": "kabobs",
       "ingredient_group": "kabobs",
-      "qty_display": "1 medium",
+      "qty_display": "1 medium onion, cut into 1-1/2-inch pieces",
       "contribution": {
         "Energy_KCal": 64.0,
         "Protein": 1.76,
@@ -304,7 +309,7 @@
       "grams": 227.0,
       "section": "kabobs",
       "ingredient_group": "kabobs",
-      "qty_display": "8 oz",
+      "qty_display": "8 oz crimini mushrooms, halved if large",
       "contribution": {
         "Energy_KCal": 49.94,
         "Protein": 5.675,
@@ -495,6 +500,7 @@
       "yield_factor_fat": 0.0,
       "yield_factor_protein": 0.0,
       "yield_factor_carbohydrate": 0.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 0.0,
       "ingredient_count": 8,
       "raw_grams": 89.05,
@@ -502,7 +508,11 @@
       "raw_fat_grams": 41.55,
       "raw_protein_grams": 1.46,
       "raw_carb_grams": 8.71,
-      "final_grams": 3.7
+      "raw_fiber_grams": 2.24,
+      "final_grams": 3.7,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "kabobs",
@@ -515,6 +525,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 7,
       "raw_grams": 1504.4,
@@ -522,7 +533,11 @@
       "raw_fat_grams": 19.4,
       "raw_protein_grams": 165.1,
       "raw_carb_grams": 43.5,
-      "final_grams": 1188.96
+      "raw_fiber_grams": 10.56,
+      "final_grams": 1188.96,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

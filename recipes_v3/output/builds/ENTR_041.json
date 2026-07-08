@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "pan grilled",
   "cooking_method_normalized": "fried",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 0.8,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 59.66,
   "raw_protein_grams": 156.28,
   "raw_carb_grams": 51.41,
+  "raw_fiber_grams": 0.85,
   "water_lost_grams": 118.13,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 761.07,
   "grams_per_serving": 190.27,
   "ingredients": [
@@ -136,7 +141,7 @@
       "grams": 9.0,
       "section": "teriyaki",
       "ingredient_group": "teriyaki",
-      "qty_display": "3 cloves",
+      "qty_display": "3 cloves garlic, minced",
       "contribution": {
         "Energy_KCal": 13.41,
         "Protein": 0.572,
@@ -157,7 +162,7 @@
       "grams": 6.0,
       "section": "teriyaki",
       "ingredient_group": "teriyaki",
-      "qty_display": "1 tbsp",
+      "qty_display": "1 tbsp fresh ginger, grated",
       "contribution": {
         "Energy_KCal": 4.8,
         "Protein": 0.109,
@@ -369,6 +374,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 9,
       "raw_grams": 879.2,
@@ -376,7 +382,11 @@
       "raw_fat_grams": 59.66,
       "raw_protein_grams": 156.28,
       "raw_carb_grams": 51.41,
-      "final_grams": 761.07
+      "raw_fiber_grams": 0.85,
+      "final_grams": 761.07,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

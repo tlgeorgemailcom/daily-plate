@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 8,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 215.81,
   "raw_protein_grams": 242.53,
   "raw_carb_grams": 359.51,
+  "raw_fiber_grams": 31.15,
   "water_lost_grams": 1827.95,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 2526.74,
   "grams_per_serving": 315.84,
   "ingredients": [
@@ -283,7 +288,7 @@
       "grams": 75.0,
       "section": "cheese_filling",
       "ingredient_group": "cheese_filling",
-      "qty_display": "3/4 cup, grated",
+      "qty_display": "3/4 cup Parmesan cheese, grated",
       "contribution": {
         "Energy_KCal": 294.0,
         "Protein": 26.812,
@@ -325,7 +330,7 @@
       "grams": 15.0,
       "section": "cheese_filling",
       "ingredient_group": "cheese_filling",
-      "qty_display": "1/4 cup parsley, chopped",
+      "qty_display": "1/4 cup fresh parsley, chopped",
       "contribution": {
         "Energy_KCal": 5.4,
         "Protein": 0.446,
@@ -563,6 +568,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 2,
       "raw_grams": 2340.2,
@@ -570,7 +576,11 @@
       "raw_fat_grams": 5.14,
       "raw_protein_grams": 44.36,
       "raw_carb_grams": 254.03,
-      "final_grams": 814.68
+      "raw_fiber_grams": 10.89,
+      "final_grams": 814.68,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "sauce",
@@ -583,6 +593,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 8,
       "raw_grams": 992.18,
@@ -590,7 +601,11 @@
       "raw_fat_grams": 29.81,
       "raw_protein_grams": 16.14,
       "raw_carb_grams": 78.47,
-      "final_grams": 762.32
+      "raw_fiber_grams": 19.59,
+      "final_grams": 762.32,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "cheese_filling",
@@ -603,6 +618,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 8,
       "raw_grams": 1022.32,
@@ -610,7 +626,11 @@
       "raw_fat_grams": 180.86,
       "raw_protein_grams": 182.02,
       "raw_carb_grams": 27.02,
-      "final_grams": 949.74
+      "raw_fiber_grams": 0.67,
+      "final_grams": 949.74,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

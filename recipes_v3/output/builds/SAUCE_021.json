@@ -1,14 +1,17 @@
 {
   "recipe_id": "SAUCE_021",
   "recipe_name": "Blue Cheese Dressing",
-  "sr_rule": "D",
+  "sr_rule": "Rule D",
   "canonical_ndb_no": null,
   "cooking_method": "raw",
   "cooking_method_normalized": "raw",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 10,
   "audit_status": "PENDING",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 113.33,
   "raw_protein_grams": 16.79,
   "raw_carb_grams": 9.89,
+  "raw_fiber_grams": 0.19,
   "water_lost_grams": 0.0,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 307.52,
   "grams_per_serving": 30.75,
   "ingredients": [
@@ -94,7 +99,7 @@
       "grams": 56.7,
       "section": "dressing",
       "ingredient_group": "dressing",
-      "qty_display": "2 oz",
+      "qty_display": "2 oz blue cheese crumbles",
       "contribution": {
         "Energy_KCal": 200.151,
         "Protein": 12.134,
@@ -369,6 +374,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 9,
       "raw_grams": 307.52,
@@ -376,7 +382,11 @@
       "raw_fat_grams": 113.33,
       "raw_protein_grams": 16.79,
       "raw_carb_grams": 9.89,
-      "final_grams": 307.52
+      "raw_fiber_grams": 0.19,
+      "final_grams": 307.52,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

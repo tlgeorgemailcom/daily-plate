@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "pan grilled",
   "cooking_method_normalized": "fried",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "NO_CANON",
   "audit_notes": "Rule D \u2014 no canonical match. No FNDDS carne asada entry. Bespoke ingredient decomposition. Locked June 2026.",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 65.84,
   "raw_protein_grams": 149.75,
   "raw_carb_grams": 21.01,
+  "raw_fiber_grams": 3.23,
   "water_lost_grams": 153.9,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 710.26,
   "grams_per_serving": 177.56,
   "ingredients": [
@@ -115,7 +120,7 @@
       "grams": 12.0,
       "section": "main",
       "ingredient_group": "main",
-      "qty_display": "4 cloves",
+      "qty_display": "4 cloves garlic, minced",
       "contribution": {
         "Energy_KCal": 17.88,
         "Protein": 0.763,
@@ -411,6 +416,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 11,
       "raw_grams": 864.15,
@@ -418,7 +424,11 @@
       "raw_fat_grams": 65.84,
       "raw_protein_grams": 149.75,
       "raw_carb_grams": 21.01,
-      "final_grams": 710.26
+      "raw_fiber_grams": 3.23,
+      "final_grams": 710.26,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

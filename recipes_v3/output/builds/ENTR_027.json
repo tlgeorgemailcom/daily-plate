@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "baked",
   "cooking_method_normalized": "baked",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 0.82,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 8,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 198.53,
   "raw_protein_grams": 184.58,
   "raw_carb_grams": 111.93,
+  "raw_fiber_grams": 8.31,
   "water_lost_grams": 170.17,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1349.1,
   "grams_per_serving": 168.64,
   "ingredients": [
@@ -600,6 +605,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 16,
       "raw_grams": 1432.28,
@@ -607,7 +613,11 @@
       "raw_fat_grams": 198.46,
       "raw_protein_grams": 183.87,
       "raw_carb_grams": 83.45,
-      "final_grams": 1262.1
+      "raw_fiber_grams": 8.11,
+      "final_grams": 1262.1,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "glaze",
@@ -620,6 +630,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 4,
       "raw_grams": 87.0,
@@ -627,7 +638,11 @@
       "raw_fat_grams": 0.07,
       "raw_protein_grams": 0.72,
       "raw_carb_grams": 28.48,
-      "final_grams": 87.0
+      "raw_fiber_grams": 0.2,
+      "final_grams": 87.0,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

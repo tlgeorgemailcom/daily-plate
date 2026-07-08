@@ -5,6 +5,8 @@
   "canonical_ndb_no": null,
   "cooking_method": "boiled",
   "cooking_method_normalized": "boiled",
+  "cook_minutes": 1440,
+  "cook_temp_f": null,
   "yield_factor_water": 0.68,
   "yield_factor_fat": 0.089,
   "yield_factor_protein": 0.395,

@@ -766,6 +766,8 @@ def _build_recipe_multi(
         "canonical_ndb_no": recipe.canonical_ndb_no,
         "cooking_method": dish_method_label,
         "cooking_method_normalized": dish_method_normalized,
+        "cook_minutes": recipe.cook_minutes,
+        "cook_temp_f": recipe.cook_temp_f,
         "yield_factor_water": recipe.yield_factor_water,
         "yield_factor_fat": recipe.yield_factor_fat,
         "yield_factor_protein": recipe.yield_factor_protein,

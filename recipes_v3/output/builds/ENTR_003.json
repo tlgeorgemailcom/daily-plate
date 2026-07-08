@@ -5,10 +5,13 @@
   "canonical_ndb_no": "27415110",
   "cooking_method": "pan grilled",
   "cooking_method_normalized": "fried",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 2,
   "audit_status": "PASS",
   "audit_notes": "Rule F \u2014 all 7 macros within \u00b15% of FNDDS FC 27415110 canonical. Locked June 2026.",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 94.94,
   "raw_protein_grams": 91.82,
   "raw_carb_grams": 46.99,
+  "raw_fiber_grams": 12.54,
   "water_lost_grams": 94.91,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 886.54,
   "grams_per_serving": 443.27,
   "ingredients": [
@@ -31,7 +36,7 @@
       "grams": 340.2,
       "section": "main",
       "ingredient_group": "main",
-      "qty_display": "\u00be lb",
+      "qty_display": "\u00be lb beef flank steak, sliced into bite-sized strips",
       "contribution": {
         "Energy_KCal": 479.682,
         "Protein": 73.381,
@@ -136,7 +141,7 @@
       "grams": 6.0,
       "section": "main",
       "ingredient_group": "main",
-      "qty_display": "2 cloves",
+      "qty_display": "2 cloves garlic, minced",
       "contribution": {
         "Energy_KCal": 8.94,
         "Protein": 0.382,
@@ -369,6 +374,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 9,
       "raw_grams": 981.45,
@@ -376,7 +382,11 @@
       "raw_fat_grams": 94.94,
       "raw_protein_grams": 91.82,
       "raw_carb_grams": 46.99,
-      "final_grams": 886.54
+      "raw_fiber_grams": 12.54,
+      "final_grams": 886.54,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

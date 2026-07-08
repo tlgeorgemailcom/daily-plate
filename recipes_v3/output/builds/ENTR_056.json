@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 0.92,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 6,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 142.62,
   "raw_protein_grams": 236.43,
   "raw_carb_grams": 208.26,
+  "raw_fiber_grams": 38.62,
   "water_lost_grams": 224.58,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 2138.49,
   "grams_per_serving": 356.42,
   "ingredients": [
@@ -157,7 +162,7 @@
       "grams": 160.0,
       "section": "filling",
       "ingredient_group": "filling",
-      "qty_display": "1 medium",
+      "qty_display": "1 medium onion, diced",
       "contribution": {
         "Energy_KCal": 64.0,
         "Protein": 1.76,
@@ -178,7 +183,7 @@
       "grams": 119.0,
       "section": "filling",
       "ingredient_group": "filling",
-      "qty_display": "1 medium",
+      "qty_display": "1 medium green bell pepper, diced",
       "contribution": {
         "Energy_KCal": 23.8,
         "Protein": 1.023,
@@ -220,7 +225,7 @@
       "grams": 2.1,
       "section": "filling",
       "ingredient_group": "filling",
-      "qty_display": "1 tsp",
+      "qty_display": "1 tsp ground cumin",
       "contribution": {
         "Energy_KCal": 7.875,
         "Protein": 0.374,
@@ -283,7 +288,7 @@
       "grams": 226.8,
       "section": "filling",
       "ingredient_group": "filling",
-      "qty_display": "2 cups",
+      "qty_display": "2 cups cheddar cheese, shredded",
       "contribution": {
         "Energy_KCal": 916.272,
         "Protein": 51.869,
@@ -453,6 +458,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 3,
       "raw_grams": 683.98,
@@ -460,7 +466,11 @@
       "raw_fat_grams": 17.85,
       "raw_protein_grams": 153.15,
       "raw_carb_grams": 0.37,
-      "final_grams": 558.25
+      "raw_fiber_grams": 0.15,
+      "final_grams": 558.25,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "filling",
@@ -473,6 +483,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 10,
       "raw_grams": 1679.1,
@@ -480,7 +491,11 @@
       "raw_fat_grams": 124.78,
       "raw_protein_grams": 83.28,
       "raw_carb_grams": 207.89,
-      "final_grams": 1580.24
+      "raw_fiber_grams": 38.47,
+      "final_grams": 1580.24,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

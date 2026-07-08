@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 0.6,
   "yield_factor_fat": 0.88,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 1,
   "audit_status": "",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 28.18,
   "raw_protein_grams": 27.85,
   "raw_carb_grams": 40.14,
+  "raw_fiber_grams": 2.75,
   "water_lost_grams": 35.37,
   "fat_lost_grams": 1.9,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 243.17,
   "grams_per_serving": 243.17,
   "ingredients": [
@@ -411,6 +416,7 @@
       "yield_factor_fat": 0.88,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 5,
       "raw_grams": 130.74,
@@ -418,7 +424,11 @@
       "raw_fat_grams": 15.86,
       "raw_protein_grams": 22.47,
       "raw_carb_grams": 1.06,
-      "final_grams": 93.47
+      "raw_fiber_grams": 0.34,
+      "final_grams": 93.47,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "slaw",
@@ -431,6 +441,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 6,
       "raw_grams": 149.7,
@@ -438,7 +449,11 @@
       "raw_fat_grams": 12.32,
       "raw_protein_grams": 5.38,
       "raw_carb_grams": 39.08,
-      "final_grams": 149.7
+      "raw_fiber_grams": 2.41,
+      "final_grams": 149.7,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

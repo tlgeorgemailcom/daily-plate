@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "raw",
   "cooking_method_normalized": "raw",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 1,
   "audit_status": "PASS",
   "audit_notes": "Rule D \u2014 no canonical; beer 6oz + lemon \u00beoz + simple syrup \u00beoz + club soda 4\u00bdoz; ~360.9g",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 0.05,
   "raw_protein_grams": 0.9,
   "raw_carb_grams": 21.0,
+  "raw_fiber_grams": 0.07,
   "water_lost_grams": 0.0,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 360.83,
   "grams_per_serving": 360.83,
   "ingredients": [
@@ -264,6 +269,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 4,
       "raw_grams": 360.83,
@@ -271,7 +277,11 @@
       "raw_fat_grams": 0.05,
       "raw_protein_grams": 0.9,
       "raw_carb_grams": 21.0,
-      "final_grams": 360.83
+      "raw_fiber_grams": 0.07,
+      "final_grams": 360.83,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 0.85,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 37.01,
   "raw_protein_grams": 47.32,
   "raw_carb_grams": 256.89,
+  "raw_fiber_grams": 31.14,
   "water_lost_grams": 141.68,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1390.69,
   "grams_per_serving": 347.67,
   "ingredients": [
@@ -31,7 +36,7 @@
       "grams": 185.0,
       "section": "rice",
       "ingredient_group": "rice",
-      "qty_display": "1 cup",
+      "qty_display": "1 cup white rice, rinsed",
       "contribution": {
         "Energy_KCal": 675.25,
         "Protein": 13.191,
@@ -516,6 +521,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 2,
       "raw_grams": 540.5,
@@ -523,7 +529,11 @@
       "raw_fat_grams": 1.22,
       "raw_protein_grams": 13.19,
       "raw_carb_grams": 147.91,
-      "final_grams": 519.2
+      "raw_fiber_grams": 2.41,
+      "final_grams": 519.2,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "filling",
@@ -536,6 +546,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 14,
       "raw_grams": 991.88,
@@ -543,7 +554,11 @@
       "raw_fat_grams": 35.79,
       "raw_protein_grams": 34.13,
       "raw_carb_grams": 108.99,
-      "final_grams": 871.49
+      "raw_fiber_grams": 28.73,
+      "final_grams": 871.49,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

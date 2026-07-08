@@ -1,14 +1,17 @@
 {
   "recipe_id": "SIDE_024",
   "recipe_name": "Sweet Potato Casserole",
-  "sr_rule": "D",
+  "sr_rule": "Rule D",
   "canonical_ndb_no": null,
   "cooking_method": "baked",
   "cooking_method_normalized": "baked",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 1.0,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 8,
   "audit_status": "PENDING",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 153.22,
   "raw_protein_grams": 48.14,
   "raw_carb_grams": 446.84,
+  "raw_fiber_grams": 57.69,
   "water_lost_grams": 187.59,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1764.66,
   "grams_per_serving": 220.58,
   "ingredients": [
@@ -115,7 +120,7 @@
       "grams": 50.0,
       "section": "filling",
       "ingredient_group": "filling",
-      "qty_display": "1 large",
+      "qty_display": "1 large egg",
       "contribution": {
         "Energy_KCal": 71.5,
         "Protein": 6.28,
@@ -495,6 +500,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 9,
       "raw_grams": 1679.95,
@@ -502,7 +508,11 @@
       "raw_fat_grams": 55.75,
       "raw_protein_grams": 32.14,
       "raw_carb_grams": 336.57,
-      "final_grams": 1494.57
+      "raw_fiber_grams": 42.32,
+      "final_grams": 1494.57,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "topping",
@@ -515,6 +525,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 6,
       "raw_grams": 272.3,
@@ -522,7 +533,11 @@
       "raw_fat_grams": 97.47,
       "raw_protein_grams": 16.0,
       "raw_carb_grams": 110.26,
-      "final_grams": 270.09
+      "raw_fiber_grams": 15.37,
+      "final_grams": 270.09,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }

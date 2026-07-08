@@ -5,10 +5,13 @@
   "canonical_ndb_no": null,
   "cooking_method": "multi",
   "cooking_method_normalized": "multi",
+  "cook_minutes": null,
+  "cook_temp_f": null,
   "yield_factor_water": 0.88,
   "yield_factor_fat": 1.0,
   "yield_factor_protein": 1.0,
   "yield_factor_carbohydrate": 1.0,
+  "yield_factor_fiber": 1.0,
   "servings_count": 4,
   "audit_status": "PASS",
   "audit_notes": "",
@@ -17,10 +20,12 @@
   "raw_fat_grams": 120.4,
   "raw_protein_grams": 160.36,
   "raw_carb_grams": 49.39,
+  "raw_fiber_grams": 4.41,
   "water_lost_grams": 187.39,
   "fat_lost_grams": 0.0,
   "protein_lost_grams": 0.0,
   "carb_lost_grams": 0.0,
+  "fiber_lost_grams": 0.0,
   "cooked_total_grams": 1396.73,
   "grams_per_serving": 349.18,
   "ingredients": [
@@ -115,7 +120,7 @@
       "grams": 110.0,
       "section": "sauce",
       "ingredient_group": "sauce",
-      "qty_display": "1 medium",
+      "qty_display": "1 medium onion, sliced",
       "contribution": {
         "Energy_KCal": 44.0,
         "Protein": 1.21,
@@ -136,7 +141,7 @@
       "grams": 226.8,
       "section": "sauce",
       "ingredient_group": "sauce",
-      "qty_display": "8 oz",
+      "qty_display": "8 oz crimini mushrooms, sliced 1/4 inch thick",
       "contribution": {
         "Energy_KCal": 49.896,
         "Protein": 5.67,
@@ -157,7 +162,7 @@
       "grams": 6.0,
       "section": "sauce",
       "ingredient_group": "sauce",
-      "qty_display": "2 cloves",
+      "qty_display": "2 cloves garlic, minced",
       "contribution": {
         "Energy_KCal": 8.94,
         "Protein": 0.382,
@@ -474,6 +479,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 3,
       "raw_grams": 687.55,
@@ -481,7 +487,11 @@
       "raw_fat_grams": 40.11,
       "raw_protein_grams": 142.53,
       "raw_carb_grams": 0.74,
-      "final_grams": 588.93
+      "raw_fiber_grams": 0.29,
+      "final_grams": 588.93,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     },
     {
       "section_key": "sauce",
@@ -494,6 +504,7 @@
       "yield_factor_fat": 1.0,
       "yield_factor_protein": 1.0,
       "yield_factor_carbohydrate": 1.0,
+      "yield_factor_fiber": 1.0,
       "yield_factor_other": 1.0,
       "ingredient_count": 11,
       "raw_grams": 896.58,
@@ -501,7 +512,11 @@
       "raw_fat_grams": 80.29,
       "raw_protein_grams": 17.83,
       "raw_carb_grams": 48.65,
-      "final_grams": 807.8
+      "raw_fiber_grams": 4.12,
+      "final_grams": 807.8,
+      "boil_minutes": 0,
+      "cook_stages": [],
+      "fill_class": ""
     }
   ]
 }
