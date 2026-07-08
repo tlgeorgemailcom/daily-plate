@@ -1491,8 +1491,10 @@
     sourceType: 'dev' | 'player';
     dishFamily?: string | null;
     cookingMethod?: string | null;
+    cookMinutes?: number;
+    cookTempF?: number;
     nutritionJson?: PersistedNutritionJson | null;
-    sections?: RecipeSection[] | null;
+    sections?: unknown[] | null;
   }
 
   let suggestions = $state<RecipeSuggestion[]>([]);
@@ -1722,19 +1724,34 @@
       })).filter((s: RecipeSection) => s.key);
     }
     if ((!nextSections || nextSections.length === 0) && ingredients.some((i) => i.section)) {
-      // Last-resort derivation: synthesise minimal section objects from the
-      // unique per-row keys so grouping at least renders.
+      // Last-resort derivation: synthesise section objects from unique per-row
+      // section keys. Try to read prep/cook methods from suggestion.sections or
+      // v3Data.sections if available so the derived sections carry correct methods.
+      const rawSecs = (v3Data?.sections as Record<string, unknown>[] | undefined) ??
+        (suggestion.sections as Record<string, unknown>[] | undefined) ?? [];
+      const secMeta = new Map<string, { prepMethod: string; cookingMethod: string; boilMinutes?: number }>();
+      for (const s of rawSecs) {
+        const k = String(s.section_key ?? s.key ?? '');
+        if (!k) continue;
+        const rawPm = String(s.prep_method ?? s.prepMethod ?? '');
+        const rawCm = String(s.cook_method ?? s.cookingMethod ?? s.cooking_method ?? 'raw');
+        const bm = typeof s.boil_minutes === 'number' ? s.boil_minutes : undefined;
+        const pm = (rawPm && rawPm !== 'raw') ? rawPm : (rawCm && rawCm !== 'raw' ? rawCm : 'none');
+        secMeta.set(k, { prepMethod: pm, cookingMethod: rawCm, boilMinutes: bm });
+      }
       const seen = new Set<string>();
       const derived: RecipeSection[] = [];
       for (const ing of ingredients) {
         const k = ing.section;
         if (k && !seen.has(k)) {
           seen.add(k);
+          const meta = secMeta.get(k);
           derived.push({
             key: k,
             label: formatSectionHeader(k),
-            prepMethod: 'none',
-            cookingMethod: 'baked',
+            prepMethod: meta?.prepMethod ?? 'none',
+            cookingMethod: meta?.cookingMethod ?? 'baked',
+            boilMinutes: meta?.boilMinutes,
           });
         }
       }
