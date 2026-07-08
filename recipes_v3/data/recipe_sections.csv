@@ -662,8 +662,11 @@ SOUP_009,okra,Okra,,raw,1.0,1.0,1.0,1.0,1.0,,,,,
 SOUP_010,stock,White chicken stock,simmer,simmer,,1.0,,,1.0,,simmer_sauce,,20,
 SOUP_010,noodles,Egg noodles,,boiled,,1.0,,,1.0,,,,,
 SOUP_010,finish,Parsley,finish,raw,1.0,1.0,1.0,1.0,1.0,,,,,
-SOUP_011,stock,Beef Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_004
-SOUP_011,chili,Chili,,boiled,0.82,1.0,1.0,1.0,1.0,,,0:45,,
+SOUP_011,stock,Beef stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_004
+SOUP_011,beef,Beef,fried,fried,,1.0,,,1.0,,fried_meat,,15,
+SOUP_011,onion,Onion,simmer,simmer,,1.0,,,1.0,,,,7,
+SOUP_011,garlic,Garlic,simmer,simmer,,1.0,,,1.0,,,,3,
+SOUP_011,spices,Spices,simmer,simmer,,1.0,,,1.0,,,,2,
 SOUP_012,stock,Beef Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_004
 SOUP_012,chili,Chili,,boiled,0.82,1.0,1.0,1.0,1.0,,,0:45,,
 SOUP_013,fish_stock,Fish Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_006
