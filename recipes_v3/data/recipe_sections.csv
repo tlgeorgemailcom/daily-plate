@@ -681,8 +681,11 @@ SOUP_013,chicken_sausage,Chicken and sausage,simmer,simmer,,1.0,,,1.0,,simmer_sa
 SOUP_013,okra,Okra,simmer,simmer,,1.0,,,1.0,,,,15,
 SOUP_013,seafood,Shrimp and seafood,,simmer,,1.0,,,1.0,,,,7,
 SOUP_013,finish,Scallion and parsley,finish,raw,1.0,1.0,1.0,1.0,1.0,,,,,
-SOUP_014,vegetable_stock,Vegetable Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_007
-SOUP_014,soup,Soup,,boiled,0.88,1.0,1.0,1.0,1.0,,,0:30,,
+SOUP_014,vegetable_stock,Vegetable stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_007
+SOUP_014,onion_celery,Onion and celery,fried,fried,,1.0,,,1.0,,fried_meat,,10,
+SOUP_014,bell_pepper,Bell pepper,simmer,simmer,,1.0,,,1.0,,,,3,
+SOUP_014,garlic_spices,Garlic and spices,simmer,simmer,,1.0,,,1.0,,,,2,
+SOUP_014,finish,Lime juice and cilantro,finish,raw,1.0,1.0,1.0,1.0,1.0,,,,,
 SOUP_015,fish_stock,Fish Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_006
 SOUP_015,chowder,Chowder,,boiled,0.88,1.0,1.0,1.0,1.0,,,0:25,,
 SOUP_016,fish_stock,Fish Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_006
