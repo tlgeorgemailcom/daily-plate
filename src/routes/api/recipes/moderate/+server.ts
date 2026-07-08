@@ -208,7 +208,8 @@ export const POST: RequestHandler = async ({ request }) => {
       servings,
       ingredients,
       instructions,
-      sections
+      sections,
+      nutritionJson
     } = body;
 
     if (!action) {
@@ -302,6 +303,7 @@ export const POST: RequestHandler = async ({ request }) => {
           recipe_ingredients_json = COALESCE(?, recipe_ingredients_json),
           recipe_instructions_json = COALESCE(?, recipe_instructions_json),
           sections_json = COALESCE(?, sections_json),
+          nutrition_json = COALESCE(?, nutrition_json),
           recipe = ?,
           animal_spawns = ?,
           food_supply = ?,
@@ -318,6 +320,7 @@ export const POST: RequestHandler = async ({ request }) => {
           ingredients ? JSON.stringify(ingredients) : null,
           instructions ? JSON.stringify(instructions) : null,
           sections ? JSON.stringify(sections) : null,
+          nutritionJson ? JSON.stringify(nutritionJson) : null,
           JSON.stringify(gameFoods),
           JSON.stringify(animalSpawns || []),
           JSON.stringify(foodSupply || {}),

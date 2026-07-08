@@ -388,6 +388,7 @@
           })),
           ...(data.sections && data.sections.length > 0 ? { sections: data.sections } : {}),
           instructions: data.instructions.filter(i => i.text.trim()).map(i => i.text),
+          nutritionJson: data.nutritionJson ?? null,
           gameFoods,
           animalSpawns,
           foodSupply
