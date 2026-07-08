@@ -300,6 +300,16 @@ export function buildRecipeCommunityV3(
       if (ing.isOptional) { skipped.push({ ndbNo: ing.ndbNo, displayName: ing.displayName, reason: 'optional'    }); continue; }
       if (ing.exempt)     { skipped.push({ ndbNo: ing.ndbNo, displayName: ing.displayName, reason: 'exempt'      }); continue; }
       const nr = nutrientMap.get(ing.ndbNo);
+      if (!nr && ing.componentPer100g) {
+        // Component_ref ingredient: use pre-built per-100g values directly (same
+        // as Python pipeline treating dev sub-recipes as SR Legacy food items).
+        const syntheticNr = { ndbNo: ing.ndbNo, longDesc: ing.displayName ?? '', fdGrpCd: '' } as NutrientRow;
+        for (const [k, v] of Object.entries(ing.componentPer100g)) {
+          (syntheticNr as Record<string, unknown>)[k] = v;
+        }
+        active.push({ grams: ing.portionGrams, nutrients: syntheticNr });
+        continue;
+      }
       if (!nr)            { skipped.push({ ndbNo: ing.ndbNo, displayName: ing.displayName, reason: 'missing_ndb' }); continue; }
       active.push({ grams: ing.portionGrams, nutrients: nr });
     }

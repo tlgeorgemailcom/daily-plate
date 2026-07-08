@@ -62,6 +62,7 @@ export const GET: RequestHandler = async ({ params }) => {
     name: string; quantity: string; section?: string; foodWord?: string;
     ndbNo: string | number; portionDesc?: string; portionGrams: number;
     servingCount?: number; isDish?: boolean; componentRef?: string;
+    componentPer100g?: Record<string, number>;
   };
 
   let tursoSections: SectionRow[] | null = null;
@@ -104,9 +105,12 @@ export const GET: RequestHandler = async ({ params }) => {
     for (const ing of tursoIngredients) {
       if (!ing.componentRef) { expandedIngredients.push(ing); continue; }
       // Keep component-ref rows as single ingredient lines — do NOT expand into
-      // constituent raw ingredients. Shows "2 cups Beef Stock (recipe)" rather
-      // than "4 lb beef shank, 12 cups water…" in the moderator edit form.
-      expandedIngredients.push({ ...ing, isDish: false });
+      // constituent raw ingredients. Attach pre-built per-100g nutrition from
+      // BUILDS_BY_ID so the TypeScript community pipeline uses the same values
+      // as the Python pipeline (treating dev sub-recipes as SR Legacy items).
+      const childBuild = BUILDS_BY_ID[ing.componentRef];
+      const componentPer100g = childBuild?.per100g as Record<string, number> | undefined;
+      expandedIngredients.push({ ...ing, isDish: false, ...(componentPer100g ? { componentPer100g } : {}) });
     }
   } else {
     // Fallback: populate from build JSON when Turso is unavailable.

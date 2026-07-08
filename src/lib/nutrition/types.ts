@@ -100,6 +100,10 @@ export interface CommunityIngredient {
   isOptional?: boolean;     // excluded from math when true (cook-may-omit)
   exempt?: boolean;         // no NDB nutrition data; excluded from math (e.g. garnish)
   displayName?: string;     // display only — does not affect calculation
+  /** Pre-built per-100g nutrition for component_ref ingredients (dev recipes used as sub-recipes).
+   *  When present and ndbNo has no SR28 match, these values are used directly — same as Python
+   *  pipeline treating dev sub-recipes as SR Legacy food items. */
+  componentPer100g?: Record<string, number>;
 }
 
 // ── Build output ──────────────────────────────────────────────────────────────

@@ -104,8 +104,9 @@ export const POST: RequestHandler = async ({ request }) => {
         sectionKey:    typeof obj.section === 'string' ? obj.section : undefined,
         isOptional:    obj.exempt === true,
         exempt:        false,
+        ...(obj.componentPer100g ? { componentPer100g: obj.componentPer100g as Record<string, number> } : {}),
       };
-    }).filter(i => i.ndbNo && i.portionGrams > 0);
+    }).filter(i => (i.ndbNo || i.componentPer100g) && i.portionGrams > 0);
 
     const servingsNum = Number(servings ?? 1);
     const gramsPerServing = 100; // placeholder; refined at save time
