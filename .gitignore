@@ -33,8 +33,7 @@ dev_recipes.db-wal
 :memory:
 :memory:-info
 
-# Python pipeline build outputs (generated artifacts, not needed by Vercel)
-recipes_v3/output/builds/
+# Python pipeline upload logs (not needed by Vercel)
 recipes_v3/output/upload_log/
 
 # Backup/scratch files

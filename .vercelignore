@@ -2,8 +2,21 @@
 _archived/
 
 # Python pipeline (runs locally, never on Vercel)
-# Build JSONs were removed from git tracking (2026-07-08) — entire directory excluded
-recipes_v3/
+# IMPORTANT: recipes_v3/output/builds/*.json must NOT be excluded — they are
+# bundled at Vite build time via import.meta.glob in /api/recipes/v3-build/.
+# We exclude the contents of recipes_v3/ directory-by-directory (gitignore
+# negation cannot re-include files under an ignored directory).
+recipes_v3/data/
+recipes_v3/lib/
+recipes_v3/tools/
+recipes_v3/tests/
+recipes_v3/baselines/
+recipes_v3/__pycache__/
+recipes_v3/output/upload_log/
+recipes_v3/*.md
+recipes_v3/*.py
+recipes_v3/PHASE_*
+recipes_v3/config.py
 __pycache__/
 *.pyc
 
