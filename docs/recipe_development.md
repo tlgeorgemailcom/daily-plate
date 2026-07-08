@@ -62,7 +62,7 @@ There is no "final cook" phase in the pipeline. If a recipe has a final assembly
 
 6. **Primary cook bar shows wrong method for many non-BKFST multi-section recipes.** The fix in `a105df1e` clears the primary cook field for any recipe where the v3-build API returns 2+ sections with non-raw prep methods. However, ENTR, SIDE, SAND, SAUCE, SALAD, STOCK, and SWEET multi-section recipes were built before the `cook_stages` / `cook_method` infrastructure was fully in place — many will open the edit form with incorrect (stale) primary cook values until their build JSONs are rebuilt from current CSV state. Once cook_stages annotations are complete for each category, rebuild and regenerate the bundle to propagate corrections.
 
-3. **cook_stages annotations for non-BKFST recipes** (ENTR, SIDE, SAND, SAUCE, SALAD, STOCK, SWEET) — not yet started. BKFST is the first category completed.
+3. **cook_stages annotations for non-BKFST recipes** (ENTR, SIDE, SAND, SAUCE, SALAD, STOCK, SWEET) — not yet started. BKFST is the first category completed. **SOUP_001–014 section structure was converted to multi-section architecture (July 2026)** — each SOUP recipe now uses the same `pm/cm/boil_stages` pattern as BKFST. The top bar `cook_minutes` is set directly in `recipes.csv` and read by `upload.py` with no derivation.
 
 4. **`simmer` vs `boiled` display**: For any section still showing the wrong cook method label in the form dropdown, verify `recipe_sections.csv::cook_method` is set correctly. The form now reads `cook_method` correctly (fixed in this session), so what's in the CSV is what shows.
 
