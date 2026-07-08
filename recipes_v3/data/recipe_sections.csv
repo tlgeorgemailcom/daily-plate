@@ -659,9 +659,9 @@ SOUP_009,onion_celery_pepper,"Onion, celery and bell pepper",simmer,simmer,,1.0,
 SOUP_009,garlic,Garlic,simmer,simmer,,1.0,,,1.0,,,,5,
 SOUP_009,chicken_sausage,Chicken and sausage,simmer,simmer,,1.0,,,1.0,,simmer_sauce,,19,
 SOUP_009,okra,Okra,,raw,1.0,1.0,1.0,1.0,1.0,,,,,
-SOUP_010,stock,White Chicken Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_003
-SOUP_010,soup,Soup,,boiled,0.9,1.0,1.0,1.0,1.0,,,0:20,,
-SOUP_010,noodles,Noodles,,boiled,1.0,1.0,1.0,1.0,1.0,,,0:10,,
+SOUP_010,stock,White chicken stock,simmer,simmer,,1.0,,,1.0,,simmer_sauce,,20,
+SOUP_010,noodles,Egg noodles,,boiled,,1.0,,,1.0,,,,,
+SOUP_010,finish,Parsley,finish,raw,1.0,1.0,1.0,1.0,1.0,,,,,
 SOUP_011,stock,Beef Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_004
 SOUP_011,chili,Chili,,boiled,0.82,1.0,1.0,1.0,1.0,,,0:45,,
 SOUP_012,stock,Beef Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_004
