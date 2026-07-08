@@ -238,7 +238,7 @@
     {
       "section_key": "sauce",
       "section_label": "Hollandaise sauce",
-      "prep_method": "whisked",
+      "prep_method": "raw",
       "cook_method": "simmer",
       "cooking_method": "simmer",
       "cooking_method_normalized": "boiled",
@@ -256,7 +256,7 @@
       "raw_carb_grams": 3.07,
       "raw_fiber_grams": 0.05,
       "final_grams": 170.0,
-      "boil_minutes": 0,
+      "boil_minutes": 3.0,
       "cook_stages": [],
       "fill_class": ""
     }

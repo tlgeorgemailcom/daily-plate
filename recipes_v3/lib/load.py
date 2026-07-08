@@ -228,7 +228,7 @@ def load_recipes() -> dict[str, Recipe]:
                 servings_label=row.get("servings_label", "").strip(),
                 servings_count=_parse_int(row.get("servings_count", "1"), 1),
                 sr_rule=row.get("sr_rule", "").strip(),
-                cooking_method=(row.get("cooking_method") or row.get("cook_method") or "raw").strip().lower(),
+                cooking_method=(row.get("cooking_method") or row.get("cook_method") or "").strip().lower(),
                 yield_factor_water=_parse_float(row.get("yield_factor_water"), 1.0),
                 yield_factor_fat=_parse_float(row.get("yield_factor_fat"), 1.0),
                 yield_factor_protein=_parse_float(row.get("yield_factor_protein"), 1.0),
