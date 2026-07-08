@@ -1645,9 +1645,6 @@
         /* network error — fall through to suggestion data */
       }
     }
-    console.debug('[fillFromSuggestion]', suggestion.id, 'sourceType:', suggestion.sourceType,
-      'v3Data.sections:', (v3Data?.sections as unknown[] | undefined)?.length ?? 'no-v3data',
-      'suggestion.sections:', (suggestion.sections as unknown[] | null | undefined)?.length ?? 'null');
 
     const rawIngredients =
       (v3Data && Array.isArray(v3Data.ingredients) && (v3Data.ingredients as unknown[]).length > 0)
@@ -1762,7 +1759,6 @@
       }
       nextSections = derived;
     }
-    console.debug('[fillFromSuggestion] nextSections:', nextSections?.length ?? 'null', 'ingredients with section:', ingredients.filter(i=>i.section).length);
     if (nextSections) {
       sections = nextSections;
       const nonRawSecs = nextSections.filter(sec => sec.prepMethod && sec.prepMethod !== 'none' && sec.prepMethod !== 'finish');
