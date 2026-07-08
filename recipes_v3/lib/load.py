@@ -120,6 +120,8 @@ class Recipe:
     yield_factor_protein: float
     yield_factor_carbohydrate: float
     yield_factor_other: float
+    cook_minutes: int | None = None
+    cook_temp_f: int | None = None
     yield_factor_fiber: float = 1.0
     status: str = ""
     audit_status: str = ""
@@ -207,7 +209,7 @@ def _parse_float_opt(s: str | None) -> float | None:
     return float(s) if s else None
 
 
-def _parse_int(s: str, default: int = 0) -> int:
+def _parse_int(s: str, default: int | None = 0) -> int | None:
     s = (s or "").strip()
     if not s:
         return default
@@ -234,6 +236,8 @@ def load_recipes() -> dict[str, Recipe]:
                 yield_factor_protein=_parse_float(row.get("yield_factor_protein"), 1.0),
                 yield_factor_carbohydrate=_parse_float(row.get("yield_factor_carbohydrate"), 1.0),
                 yield_factor_other=_parse_float(row.get("yield_factor_other"), 1.0),
+                cook_minutes=_parse_int(row.get("cook_minutes", ""), None),
+                cook_temp_f=_parse_int(row.get("cook_temp_f", ""), None),
                 yield_factor_fiber=_parse_float(row.get("yield_factor_fiber"), 1.0),
                 status=row.get("status", "").strip(),
                 audit_status=row.get("audit_status", "").strip(),
