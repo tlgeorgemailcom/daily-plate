@@ -33,7 +33,8 @@ dev_recipes.db-wal
 :memory:
 :memory:-info
 
-# Python pipeline upload logs (not needed by Vercel)
+# Python pipeline build outputs (local only — Turso is the runtime source)
+recipes_v3/output/builds/
 recipes_v3/output/upload_log/
 
 # Backup/scratch files
