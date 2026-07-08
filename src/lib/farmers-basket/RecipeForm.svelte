@@ -1667,6 +1667,8 @@
     // section header bars (label / cooking method / yield factors) the
     // moderator screen does. Both player and dev recipes carry sections inline
     // via Turso sections_json (upload.py populates dev_recipes since 2026-07-01).
+    // Declare explicitCookMethod HERE (before the mapping lambdas) to avoid TDZ.
+    const explicitCookMethod = suggestion.cookingMethod || undefined;
     let nextSections: RecipeSection[] | null = null;
     // For dev recipes, prefer v3Data.sections because the v3-build API's
     // enrichSection() replaces each component_ref section's cook_method with
@@ -1760,7 +1762,6 @@
       }
       nextSections = derived;
     }
-    const explicitCookMethod = suggestion.cookingMethod || undefined;
     console.debug('[fillFromSuggestion] nextSections:', nextSections?.length ?? 'null', 'ingredients with section:', ingredients.filter(i=>i.section).length);
     if (nextSections) {
       sections = nextSections;
