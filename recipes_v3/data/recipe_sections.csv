@@ -704,8 +704,12 @@ SOUP_018,onion_carrot_celery,"Onion, carrots and celery",simmer,simmer,,1.0,,,1.
 SOUP_018,garlic_spices,Garlic and spices,simmer,simmer,,1.0,,,1.0,,,,4,
 SOUP_018,tomatoes,Crushed tomatoes,simmer,simmer,,1.0,,,1.0,,,,2,
 SOUP_018,finish,Lemon juice and seasoning,finish,raw,1.0,1.0,1.0,1.0,1.0,,,,,
-SOUP_019,fish_stock,Fish Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_006
-SOUP_019,bisque,Bisque,,boiled,0.85,1.0,1.0,1.0,1.0,,,0:30,,
+SOUP_019,mirepoix,Onion and vegetables,simmer,simmer,,1.0,,,1.0,,simmer_sauce,,8,
+SOUP_019,garlic_tomato,Garlic and tomato paste,simmer,simmer,,1.0,,,1.0,,,,2,
+SOUP_019,flour,Flour,simmer,simmer,,1.0,,,1.0,,,,4,
+SOUP_019,wine,Sherry or white wine,simmer,simmer,,1.0,,,1.0,,,,1,
+SOUP_019,fish_stock_spices,Fish stock and spices,,simmer,,1.0,,,1.0,,simmer_sauce,,17,
+SOUP_019,finish,Cream and lobster,finish,raw,1.0,1.0,1.0,1.0,1.0,,,,,
 SOUP_020,stock,Vegetable Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_007
 SOUP_020,pasta,Pasta,,boiled,1.0,1.0,1.0,1.0,1.0,,,0:10,,
 SOUP_020,soup,Soup,,boiled,0.88,1.0,1.0,1.0,1.0,,,0:30,,
