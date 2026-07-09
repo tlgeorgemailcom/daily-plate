@@ -9,7 +9,9 @@ function hasValidLink(row: unknown): boolean {
   if (!row || typeof row !== 'object') return false;
   const obj = row as Record<string, unknown>;
   const hasFood = (typeof obj.foodWord === 'string' && obj.foodWord.trim().length > 0)
-    || (typeof obj.ndbNo === 'string' && obj.ndbNo.trim().length > 0);
+    || (typeof obj.ndbNo === 'string' && obj.ndbNo.trim().length > 0)
+    || (typeof obj.componentRef === 'string' && obj.componentRef.trim().length > 0
+        && !!(obj as Record<string, unknown>).componentPer100g);
   const portion = Number(obj.portionGrams ?? 0);
   return hasFood && Number.isFinite(portion) && portion > 0;
 }
@@ -231,6 +233,48 @@ export const POST: RequestHandler = async ({ request }) => {
           canonical: null,
         });
       }
+    }
+  }
+
+  // ── Flat V3 path: no sections but has componentPer100g ingredients ─────────
+  // When any ingredient is a componentRef (recipe-as-ingredient), SR28 lookup
+  // can't handle it. Use V3 with empty sections so componentPer100g is applied.
+  const hasComponentRefs = rawIngs.some(r => !!(r as Record<string, unknown>).componentPer100g);
+  if (hasComponentRefs && (!Array.isArray(sectionsRaw) || sectionsRaw.length === 0)) {
+    const sr28Ndbs = rawIngs
+      .filter(r => { const o = r as Record<string, unknown>; return !o.exempt && Number(o.portionGrams ?? 0) > 0 && o.ndbNo; })
+      .map(r => String((r as Record<string, unknown>).ndbNo ?? ''))
+      .filter(ndb => ndb.length > 0);
+    let flatNutrientMap: Map<string, NutrientRow>;
+    try { flatNutrientMap = await fetchNutrientsByNdb(sr28Ndbs); }
+    catch { flatNutrientMap = new Map(); }
+    const flatIngList: CommunityIngredient[] = rawIngs.map(r => {
+      const o = r as Record<string, unknown>;
+      return {
+        ndbNo:        String(o.ndbNo ?? ''),
+        portionGrams: Number(o.portionGrams ?? 0),
+        isOptional:   o.exempt === true,
+        exempt:       false,
+        displayName:  String(o.name ?? ''),
+        ...(o.componentPer100g ? { componentPer100g: o.componentPer100g as Record<string, number> } : {}),
+      };
+    }).filter(i => (i.ndbNo || i.componentPer100g) && i.portionGrams > 0);
+    if (flatIngList.length > 0) {
+      const servingsNum = Number(servings ?? 1);
+      const flatResult = buildRecipeCommunityV3([], flatIngList, flatNutrientMap,
+        servingsNum > 0 ? servingsNum : 1, 100,
+        typeof cookingMethod === 'string' ? cookingMethod : undefined);
+      const p100 = flatResult.per100g;
+      const gps = flatResult.totalCookedGrams / Math.max(1, flatResult.servings);
+      const scale = gps / 100;
+      return json({
+        nutritionJson: {
+          perServing: { cal: (p100.energy_KCal ?? 0) * scale, pro: (p100.protein ?? 0) * scale, fat: (p100.totalLipidFat ?? 0) * scale, carb: (p100.carbohydrate ?? 0) * scale, fib: (p100.fiberTotalDietary ?? 0) * scale, sug: (p100.sugarsTotal ?? 0) * scale },
+          per100g: { Energy_KCal: p100.energy_KCal ?? 0, Protein: p100.protein ?? 0, TotalLipidFat: p100.totalLipidFat ?? 0, Carbohydrate: p100.carbohydrate ?? 0, FiberTotalDietary: p100.fiberTotalDietary ?? 0, SugarsTotal: p100.sugarsTotal ?? 0, Water: p100.water ?? 0 },
+          gramsPerServing: gps, servings: flatResult.servings,
+        },
+        canonical: null,
+      });
     }
   }
 
