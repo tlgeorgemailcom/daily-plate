@@ -2771,8 +2771,8 @@
                 <div class="nutrition-badge">
                   <span class="nutrition-badge-text">
                     ✓ {getIngredientNutritionLabel(ingredient)}
-                    · {ingredient.portionDesc === 'g'
-                        ? `${(ingredient.servingCount ?? 1) * (ingredient.portionGrams ?? 0)}g`
+                    · {ingredient.portionDesc === 'g' || ingredient.portionDesc === 'serving'
+                        ? `${Math.round((ingredient.servingCount ?? 1) * (ingredient.portionGrams ?? 0))}g`
                         : `${ingredient.servingCount}×${ingredient.portionDesc}`}
                   </span>
                   <span class="nutrition-badge-edit-label">Edit:</span>
