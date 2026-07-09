@@ -869,6 +869,8 @@
             servingCount: i.servingCount ?? 1,
             exempt: i.ingredientStatus === 'exempt' || i.ingredientStatus === 'optional',
             ...(i.section ? { section: i.section } : {}),
+            ...(i.componentRef ? { componentRef: i.componentRef } : {}),
+            ...(i.componentPer100g ? { componentPer100g: i.componentPer100g } : {}),
           };
         }),
       dishLink: dishLink ?? undefined,
