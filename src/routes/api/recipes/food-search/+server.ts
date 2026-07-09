@@ -71,10 +71,9 @@ async function searchRecipes(query: string, limit = 8): Promise<RecipeSearchResu
     seenIds.add(recipeId);
 
     const recipeName = String(row.recipe_name ?? '');
-    const gramsPerServing = Math.max(1, Number(row.grams_per_serving ?? 100));
+    let gramsPerServing = Math.max(1, Number(row.grams_per_serving ?? 100));
 
     let per100g: Record<string, number> = {};
-    let gramsPerServing = Math.max(1, Number(row.grams_per_serving ?? 100));
     try {
       const nj = JSON.parse(String(row.nutrition_json ?? '{}')) as Record<string, unknown>;
       per100g = (nj.per100g ?? {}) as Record<string, number>;
