@@ -5,6 +5,14 @@
   import FoodIcon from '$lib/farmers-basket/FoodIcon.svelte';
   import { FOODS } from '$lib/data/food-portions';
   import type { Food as FoodData } from '$lib/data/food-portions';
+
+  /** Extends FoodData with optional recipe-result fields returned by /api/recipes/food-search */
+  type RecipeSearchItem = FoodData & {
+    recipeId?: string;                            // set for recipe results (dev/community)
+    componentPer100g?: Record<string, number>;    // full 150-nutrient per-100g panel
+    gramsPerServing?: number;                     // default portion size for recipe
+    dietaryCategory?: string;
+  };
   
   // Types for ingredients and instructions
   export interface RecipeIngredient {
@@ -23,6 +31,10 @@
     isDish?: boolean;        // marks the synthesized dish-level row (Rule A/B/C)
     section?: string;        // v3 §18: section_key linking ingredient to a recipe section (cooking math FK)
     ingredient_group?: string; // v3 §19: display-only sub-label within a section (e.g. 'crust', 'filling')
+    /** Dev or community recipe used as a sub-recipe ingredient. Set instead of ndbNo. */
+    componentRef?: string;
+    /** Full 150-nutrient per-100g panel for the component_ref recipe. Stored alongside componentRef. */
+    componentPer100g?: Record<string, number>;
   }
 
   // v3.md §18 — per-section cooking method metadata for multi-stage recipes.
@@ -310,13 +322,13 @@
   // ─── Nutrition linking state (keyed by ingredient id) ───────────────────────
   let nutritionOpen = $state<Record<number, boolean>>({});
   let nutritionSearchQ = $state<Record<number, string>>({});
-  let nutritionPendingFood = $state<Record<number, FoodData | null>>({});
+  let nutritionPendingFood = $state<Record<number, RecipeSearchItem | null>>({});
   let nutritionPendingPortionIdx = $state<Record<number, number>>({});
   let nutritionPendingCount = $state<Record<number, number>>({});
   let nutritionCustomGrams = $state<Record<number, number | null>>({});
   let dishSearchResults = $state<FoodData[]>([]);
   let dishSearchLoading = $state(false);
-  let nutritionSearchResults = $state<Record<number, FoodData[]>>({});
+  let nutritionSearchResults = $state<Record<number, RecipeSearchItem[]>>({});
   let nutritionSearchLoading = $state<Record<number, boolean>>({});
   let dishSearchUsingFallback = $state(false);
   let nutritionSearchUsingFallback = $state<Record<number, boolean>>({});
@@ -389,10 +401,10 @@
     });
   }
 
-  async function fetchRemoteFoods(query: string, limit = 20): Promise<FoodData[]> {
+  async function fetchRemoteFoods(query: string, limit = 20): Promise<RecipeSearchItem[]> {
     const params = new URLSearchParams({ q: query.trim(), limit: String(limit) });
     const res = await fetch(`/api/recipes/food-search?${params.toString()}`);
-    const data = await res.json() as { foods?: FoodData[] };
+    const data = await res.json() as { foods?: RecipeSearchItem[] };
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     return hydrateRemoteFoods(data.foods ?? []);
   }
@@ -509,19 +521,22 @@
 
   function hasIngredientNutritionLink(ingredient: RecipeIngredient): boolean {
     return Boolean(
-      (ingredient.foodWord || ingredient.ndbNo) &&
+      (ingredient.foodWord || ingredient.ndbNo || ingredient.componentRef) &&
       ingredient.portionGrams && ingredient.portionGrams > 0
     );
   }
 
   function getIngredientNutritionLabel(ingredient: RecipeIngredient): string {
+    if (ingredient.componentRef) {
+      return ingredient.name || ingredient.componentRef;
+    }
     return FOODS.find((food) => food.word === ingredient.foodWord || food.ndb === ingredient.ndbNo)?.display
       ?? ingredient.name
       ?? ingredient.ndbNo
       ?? 'Linked ingredient';
   }
 
-  function selectPendingFood(ingId: number, food: FoodData) {
+  function selectPendingFood(ingId: number, food: RecipeSearchItem) {
     nutritionPendingFood = { ...nutritionPendingFood, [ingId]: food };
     const firstNamedIdx = food.portions.findIndex(p => p.desc !== 'custom (g)');
     const defaultIdx = firstNamedIdx >= 0 ? firstNamedIdx : 0;
@@ -556,15 +571,36 @@
       : count === 1
         ? portionDesc
         : `${count} ${portionDesc}`;
-    ingredients = ingredients.map(i => i.id === ingId ? {
-      ...i,
-      foodWord: food.word,
-      ndbNo: food.ndb,
-      portionDesc,
-      portionGrams,
-      servingCount: portionDesc === 'g' ? 1 : count,
-      quantity,
-    } : i);
+
+    if (food.recipeId) {
+      // Component-ref path: link to a dev/community recipe
+      ingredients = ingredients.map(i => i.id === ingId ? {
+        ...i,
+        componentRef: food.recipeId,
+        componentPer100g: food.componentPer100g,
+        portionDesc,
+        portionGrams,
+        servingCount: portionDesc === 'g' ? 1 : count,
+        quantity,
+        // Clear SR28-specific fields
+        foodWord: undefined,
+        ndbNo: undefined,
+      } : i);
+    } else {
+      // Standard SR28 path
+      ingredients = ingredients.map(i => i.id === ingId ? {
+        ...i,
+        foodWord: food.word,
+        ndbNo: food.ndb,
+        portionDesc,
+        portionGrams,
+        servingCount: portionDesc === 'g' ? 1 : count,
+        quantity,
+        // Clear component-ref fields if re-linking to SR28
+        componentRef: undefined,
+        componentPer100g: undefined,
+      } : i);
+    }
     nutritionOpen = { ...nutritionOpen, [ingId]: false };
   }
 
@@ -2793,7 +2829,10 @@
                     {:else if (nutritionSearchResults[ingredient.id] ?? []).length > 0}
                       <div class="nutrition-results">
                         {#each nutritionSearchResults[ingredient.id] ?? [] as food}
-                          <button type="button" class="nutrition-result-btn" onclick={() => selectPendingFood(ingredient.id, food)}>
+                          <button type="button" class="nutrition-result-btn{food.recipeId ? ' recipe-result' : ''}" onclick={() => selectPendingFood(ingredient.id, food)}>
+                            {#if food.recipeId}
+                              <span class="result-recipe-badge">Recipe</span>
+                            {/if}
                             <span class="result-name">{food.display}</span>
                             <span class="result-cal">{food.cal} cal/100g</span>
                           </button>
@@ -2802,7 +2841,7 @@
                     {:else if (nutritionSearchQ[ingredient.id] ?? '').trim().length > 1}
                       <p class="nutrition-no-results">No matches — try a shorter word</p>
                     {:else}
-                      <p class="nutrition-search-hint">Type to search 1,300+ USDA foods</p>
+                      <p class="nutrition-search-hint">Type to search USDA foods and recipes</p>
                     {/if}
                   {:else}
                     {@const pFood = nutritionPendingFood[ingredient.id]!}
@@ -4669,6 +4708,30 @@
     cursor: pointer;
     text-align: left;
     transition: all 0.1s;
+  }
+
+  .nutrition-result-btn.recipe-result {
+    border-color: #B3C6FF;
+    background: #F5F7FF;
+  }
+
+  .nutrition-result-btn.recipe-result:hover {
+    background: #E8EDFF;
+    border-color: #7B96F0;
+  }
+
+  .result-recipe-badge {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #4A6CF7;
+    background: #E8EDFF;
+    border: 1px solid #B3C6FF;
+    border-radius: 3px;
+    padding: 1px 5px;
+    margin-right: 6px;
+    flex-shrink: 0;
   }
 
   .nutrition-result-btn:hover {

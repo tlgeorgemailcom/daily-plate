@@ -17,7 +17,8 @@ function hasValidLink(row: unknown): boolean {
   if (!row || typeof row !== 'object') return false;
   const obj = row as Record<string, unknown>;
   const hasFood = (typeof obj.foodWord === 'string' && obj.foodWord.trim().length > 0)
-    || (typeof obj.ndbNo === 'string' && obj.ndbNo.trim().length > 0);
+    || (typeof obj.ndbNo === 'string' && obj.ndbNo.trim().length > 0)
+    || (typeof obj.componentRef === 'string' && obj.componentRef.trim().length > 0);
   const portion = Number(obj.portionGrams ?? 0);
   return hasFood && Number.isFinite(portion) && portion > 0;
 }
@@ -53,8 +54,10 @@ async function calcCommunityNutrition(
       sectionKey:   typeof obj.section === 'string' ? obj.section : undefined,
       isOptional:   obj.ingredientStatus === 'optional' || obj.exempt === true,
       exempt:       obj.ingredientStatus === 'exempt',
+      ...(obj.componentRef ? { componentRef: String(obj.componentRef) } : {}),
+      ...(obj.componentPer100g ? { componentPer100g: obj.componentPer100g as Record<string, number> } : {}),
     };
-  }).filter(i => i.ndbNo && i.portionGrams > 0);
+  }).filter(i => (i.ndbNo || i.componentPer100g) && i.portionGrams > 0);
 
   if (ingredients.length === 0) return { nutritionJson: null, plausibilityFlags: [], blocked: false, missingIngredients: [] };
 
