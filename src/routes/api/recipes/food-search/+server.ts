@@ -55,10 +55,10 @@ async function searchRecipes(query: string, limit = 8): Promise<RecipeSearchResu
       sql: `SELECT recipe_id, recipe_name, dietary_category, grams_per_serving, nutrition_json
             FROM player_recipes
             WHERE status = 'approved'
-              AND (LOWER(recipe_name) LIKE ? OR LOWER(food_word) LIKE ?)
+              AND LOWER(recipe_name) LIKE ?
             ORDER BY CASE WHEN LOWER(recipe_name) = ? THEN 0 ELSE 1 END, recipe_name ASC
             LIMIT ?`,
-      args: [likeQ, likeQ, q, limit],
+      args: [likeQ, q, limit],
     }),
   ]);
 
@@ -109,7 +109,10 @@ export const GET: RequestHandler = async ({ url }) => {
   try {
     const [sr28Foods, recipeFoods] = await Promise.all([
       searchSr28FoodsWithNutrients(query, 'all', limitParam),
-      searchRecipes(query, 8),
+      searchRecipes(query, 8).catch((e) => {
+        console.error('[/api/recipes/food-search] recipe search error (non-fatal):', e);
+        return [] as RecipeSearchResult[];
+      }),
     ]);
     // Recipes (exact-match-first) then SR28 results
     return json({ foods: [...recipeFoods, ...sr28Foods] });
