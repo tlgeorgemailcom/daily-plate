@@ -497,7 +497,37 @@
   function openNutritionSearch(ing: RecipeIngredient) {
     nutritionSearchQ = { ...nutritionSearchQ, [ing.id]: ing.name };
     nutritionOpen = { ...nutritionOpen, [ing.id]: true };
-    // If already linked, skip search and pre-load the portion picker
+
+    if (ing.componentRef) {
+      // Component-ref ingredient: reconstruct the recipe food object for the portion picker
+      // so "qty" goes straight to portion selection, not a search.
+      const servingGrams = ing.portionGrams ?? 100;
+      const cp = ing.componentPer100g ?? {};
+      const p = (k: string) => Number(cp[k] ?? 0);
+      const recipeFood: RecipeSearchItem = {
+        word: `RECIPE_${ing.componentRef}`,
+        display: ing.componentName || ing.componentRef,
+        groups: ['prepared'],
+        ndb: '', desc: ing.componentName || ing.componentRef,
+        cal: p('Energy_KCal'), pro: p('Protein'), fat: p('TotalLipidFat'),
+        carb: p('Carbohydrate'), fib: p('FiberTotalDietary'),
+        h2o: p('Water'), sug: p('SugarsTotal'),
+        portions: [
+          { amt: 1, desc: 'custom (g)', gm: 100 },
+          { amt: 1, desc: 'serving', gm: servingGrams },
+        ],
+        recipeId: ing.componentRef,
+        componentPer100g: ing.componentPer100g,
+        gramsPerServing: servingGrams,
+      };
+      nutritionPendingFood = { ...nutritionPendingFood, [ing.id]: recipeFood };
+      nutritionPendingPortionIdx = { ...nutritionPendingPortionIdx, [ing.id]: 1 };
+      nutritionPendingCount = { ...nutritionPendingCount, [ing.id]: ing.servingCount ?? 1 };
+      nutritionCustomGrams = { ...nutritionCustomGrams, [ing.id]: ing.portionDesc === 'g' ? (ing.portionGrams ?? null) : null };
+      return;
+    }
+
+    // If already linked via SR28, skip search and pre-load the portion picker
     if (ing.foodWord || ing.ndbNo) {
       const existing = (ing.foodWord ? FOODS.find(f => f.word === ing.foodWord) : undefined)
         ?? (ing.ndbNo ? FOODS.find(f => f.ndb === ing.ndbNo) : undefined)
