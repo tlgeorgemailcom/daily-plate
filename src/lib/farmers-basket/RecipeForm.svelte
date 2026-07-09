@@ -2875,7 +2875,7 @@
                         {#each nutritionSearchResults[ingredient.id] ?? [] as food}
                           <button type="button" class="nutrition-result-btn{food.recipeId ? ' recipe-result' : ''}" onclick={() => selectPendingFood(ingredient.id, food)}>
                             {#if food.recipeId}
-                              <span class="result-recipe-badge">Scratch</span>
+                              <span class="result-recipe-badge">Recipe</span>
                             {/if}
                             <span class="result-name">{food.display}</span>
                             <span class="result-cal">{food.cal} cal/100g</span>
