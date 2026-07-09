@@ -689,7 +689,7 @@ SOUP_015,bacon,Bacon,fried,fried,,1.0,,,1.0,,fried_meat,,11,
 SOUP_015,onion_celery,"Onion, celery and butter",simmer,simmer,,1.0,,,1.0,,simmer_sauce,,9,
 SOUP_015,garlic_flour,Garlic and flour,simmer,simmer,,1.0,,,1.0,,,,2,
 SOUP_015,stock_potatoes,Fish stock and potatoes,simmer,simmer,,1.0,,,1.0,,simmer_sauce,,16,
-SOUP_015,clam_cream,Clam and cream,simmer,simmer,,1.0,,,1.0,,,,4,
+SOUP_015,clam_cream,Clam and cream,,simmer,,1.0,,,1.0,,,,4,
 SOUP_016,fish_stock,Fish Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_006
 SOUP_016,chowder,Chowder,,boiled,0.85,1.0,1.0,1.0,1.0,,,0:30,,
 SOUP_017,beef_stock,Beef Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_004
