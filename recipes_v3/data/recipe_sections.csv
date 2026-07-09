@@ -690,8 +690,11 @@ SOUP_015,onion_celery,"Onion, celery and butter",simmer,simmer,,1.0,,,1.0,,simme
 SOUP_015,garlic_flour,Garlic and flour,simmer,simmer,,1.0,,,1.0,,,,2,
 SOUP_015,stock_potatoes,Fish stock and potatoes,simmer,simmer,,1.0,,,1.0,,simmer_sauce,,16,
 SOUP_015,clam_cream,Clam and cream,,simmer,,1.0,,,1.0,,,,4,
-SOUP_016,fish_stock,Fish Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_006
-SOUP_016,chowder,Chowder,,boiled,0.85,1.0,1.0,1.0,1.0,,,0:30,,
+SOUP_016,bacon,Bacon,fried,fried,,1.0,,,1.0,,fried_meat,,11,
+SOUP_016,onion_celery_pepper,"Onion, celery and bell pepper",simmer,simmer,,1.0,,,1.0,,simmer_sauce,,7,
+SOUP_016,garlic_pepper,Garlic and red pepper flakes,simmer,simmer,,1.0,,,1.0,,,,1,
+SOUP_016,stock_potatoes,Fish stock and potatoes,simmer,simmer,,1.0,,,1.0,,simmer_sauce,,16,
+SOUP_016,clam,Chopped clam,,simmer,,1.0,,,1.0,,,,4,
 SOUP_017,beef_stock,Beef Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_004
 SOUP_017,onion_soup,Caramelized Onion Soup,,pan grilled,0.25,1.0,1.0,1.0,1.0,,,0:45,,
 SOUP_017,topping,Topping,,baked,0.95,1.0,1.0,1.0,1.0,,,375:10,,
