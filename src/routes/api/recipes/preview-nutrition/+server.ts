@@ -177,7 +177,7 @@ export const POST: RequestHandler = async ({ request }) => {
         // Turso unavailable — fall through to flat SR28 path
         sectionNutrientMap = new Map();
       }
-      if (sectionNutrientMap.size > 0 || rawIngs.some(r => !!(r as Record<string, unknown>).componentPer100g)) {
+      if (sectionNutrientMap.size > 0) {
         const ingList: CommunityIngredient[] = rawIngs.map(r => {
           const o = r as Record<string, unknown>;
           return {
