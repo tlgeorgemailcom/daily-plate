@@ -35,6 +35,8 @@
     componentRef?: string;
     /** Full 150-nutrient per-100g panel for the component_ref recipe. Stored alongside componentRef. */
     componentPer100g?: Record<string, number>;
+    /** Display name of the linked recipe (e.g. "White Chicken Stock"). Shown in the nutrition link label. */
+    componentName?: string;
   }
 
   // v3.md §18 — per-section cooking method metadata for multi-stage recipes.
@@ -530,7 +532,7 @@
 
   function getIngredientNutritionLabel(ingredient: RecipeIngredient): string {
     if (ingredient.componentRef) {
-      return ingredient.name || ingredient.componentRef;
+      return ingredient.componentName || ingredient.componentRef;
     }
     return FOODS.find((food) => food.word === ingredient.foodWord || food.ndb === ingredient.ndbNo)?.display
       ?? ingredient.name
@@ -580,6 +582,7 @@
         ...i,
         componentRef: food.recipeId,
         componentPer100g: food.componentPer100g,
+        componentName: food.display,
         portionDesc,
         portionGrams,
         servingCount: portionDesc === 'g' ? 1 : count,
