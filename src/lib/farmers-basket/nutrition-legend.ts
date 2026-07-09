@@ -28,7 +28,7 @@ export const NUTRITION_LEGEND_ITEMS: NutritionLegendItem[] = [
   },
   {
     key: 'calc-plus',
-    label: 'Recipe',
+    label: 'Scratch',
     title: 'Recipe calculation only',
     description: 'No USDA SR Legacy dish entry matches this recipe by name. Nutrients are calculated entirely from the recipe ingredients in SR Legacy.'
   },
