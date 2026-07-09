@@ -301,11 +301,17 @@ export function buildRecipeCommunityV3(
       if (ing.exempt)     { skipped.push({ ndbNo: ing.ndbNo, displayName: ing.displayName, reason: 'exempt'      }); continue; }
       const nr = nutrientMap.get(ing.ndbNo);
       if (!nr && ing.componentPer100g) {
-        // Component_ref ingredient: use pre-built per-100g values directly (same
-        // as Python pipeline treating dev sub-recipes as SR Legacy food items).
+        // Component_ref ingredient: use pre-built per-100g values directly.
+        // componentPer100g keys are USDA column names (Energy_KCal, Water, ...);
+        // NutrientRow uses camelCase (energy_KCal, water, ...). Invert KEY_TO_COLUMN
+        // to remap before setting so the downstream math reads correct fields.
+        const colToKey = Object.fromEntries(
+          Object.entries(KEY_TO_COLUMN).map(([k, v]) => [v, k])
+        ) as Record<string, string>;
         const syntheticNr = { ndbNo: ing.ndbNo, longDesc: ing.displayName ?? '', fdGrpCd: '' } as NutrientRow;
-        for (const [k, v] of Object.entries(ing.componentPer100g)) {
-          (syntheticNr as Record<string, unknown>)[k] = v;
+        for (const [colName, v] of Object.entries(ing.componentPer100g)) {
+          const nrKey = colToKey[colName] ?? colName;
+          (syntheticNr as Record<string, unknown>)[nrKey] = v;
         }
         active.push({ grams: ing.portionGrams, nutrients: syntheticNr });
         continue;
