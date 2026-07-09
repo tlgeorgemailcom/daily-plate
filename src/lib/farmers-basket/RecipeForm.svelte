@@ -570,8 +570,8 @@
       portionDesc = portion.desc;
       portionGrams = portion.gm;
     }
-    const quantity = portionDesc === 'g'
-      ? `${portionGrams}g`
+    const quantity = portionDesc === 'g' || portionDesc === 'serving'
+      ? `${Math.round(portionGrams)}g`
       : count === 1
         ? portionDesc
         : `${count} ${portionDesc}`;
