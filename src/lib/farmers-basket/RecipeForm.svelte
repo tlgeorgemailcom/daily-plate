@@ -564,6 +564,7 @@
 
   function getIngredientNutritionLabel(ingredient: RecipeIngredient): string {
     if (ingredient.componentRef) {
+      // componentName is the clean recipe name without the '(recipe)' suffix
       return ingredient.componentName || ingredient.componentRef;
     }
     return FOODS.find((food) => food.word === ingredient.foodWord || food.ndb === ingredient.ndbNo)?.display
@@ -610,12 +611,11 @@
 
     if (food.recipeId) {
       // Component-ref path: link to a dev/community recipe.
-      // qty_display convention: "1 recipe White Chicken Stock (934g)" — matches dev authoring pattern.
+      // qty = plain gram weight; name gets '(recipe)' suffix to signal it's a recipe reference.
       const recipeGrams = Math.round(portionGrams);
-      const recipeQty = `1 recipe ${food.display} (${recipeGrams}g)`;
       ingredients = ingredients.map(i => i.id === ingId ? {
         ...i,
-        name: food.display,
+        name: `${food.display} (recipe)`,
         componentRef: food.recipeId,
         componentPer100g: food.componentPer100g,
         componentName: food.display,
@@ -623,7 +623,7 @@
         portionDesc,
         portionGrams,
         servingCount: portionDesc === 'g' ? 1 : count,
-        quantity: recipeQty,
+        quantity: `${recipeGrams}g`,
         // Clear SR28-specific fields
         foodWord: undefined,
         ndbNo: undefined,
