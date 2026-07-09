@@ -695,9 +695,10 @@ SOUP_016,onion_celery_pepper,"Onion, celery and bell pepper",simmer,simmer,,1.0,
 SOUP_016,garlic_pepper,Garlic and red pepper flakes,simmer,simmer,,1.0,,,1.0,,,,1,
 SOUP_016,stock_potatoes,Fish stock and potatoes,simmer,simmer,,1.0,,,1.0,,simmer_sauce,,16,
 SOUP_016,clam,Chopped clam,,simmer,,1.0,,,1.0,,,,4,
-SOUP_017,beef_stock,Beef Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_004
-SOUP_017,onion_soup,Caramelized Onion Soup,,pan grilled,0.25,1.0,1.0,1.0,1.0,,,0:45,,
-SOUP_017,topping,Topping,,baked,0.95,1.0,1.0,1.0,1.0,,,375:10,,
+SOUP_017,onions,Onions,simmer,simmer,,1.0,,,1.0,,simmer_sauce,,45,
+SOUP_017,wine,White wine,simmer,simmer,,1.0,,,1.0,,,,2,
+SOUP_017,stock,Beef stock,,simmer,,1.0,,,1.0,,simmer_sauce,,18,
+SOUP_017,topping,"Toasted baguette and Gruyère",finish,raw,1.0,1.0,1.0,1.0,1.0,,,,,
 SOUP_018,vegetable_stock,Vegetable Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_007
 SOUP_018,soup,Soup,,boiled,1.0,1.0,1.0,1.0,1.0,,,0:37,,
 SOUP_019,fish_stock,Fish Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_006
