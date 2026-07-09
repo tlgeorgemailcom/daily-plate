@@ -577,9 +577,11 @@
         : `${count} ${portionDesc}`;
 
     if (food.recipeId) {
-      // Component-ref path: link to a dev/community recipe
+      // Component-ref path: link to a dev/community recipe.
+      // Also update the ingredient name to the recipe name so the row is self-describing.
       ingredients = ingredients.map(i => i.id === ingId ? {
         ...i,
+        name: food.display,
         componentRef: food.recipeId,
         componentPer100g: food.componentPer100g,
         componentName: food.display,
