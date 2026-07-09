@@ -177,7 +177,7 @@ export const POST: RequestHandler = async ({ request }) => {
         // Turso unavailable — fall through to flat SR28 path
         sectionNutrientMap = new Map();
       }
-      if (sectionNutrientMap.size > 0) {
+      if (sectionNutrientMap.size > 0 || rawIngs.some(r => !!(r as Record<string, unknown>).componentPer100g)) {
         const ingList: CommunityIngredient[] = rawIngs.map(r => {
           const o = r as Record<string, unknown>;
           return {
@@ -187,8 +187,9 @@ export const POST: RequestHandler = async ({ request }) => {
             isOptional:   o.exempt === true,
             exempt:       false,
             displayName:  String(o.name ?? ''),
+            ...(o.componentPer100g ? { componentPer100g: o.componentPer100g as Record<string, number> } : {}),
           };
-        }).filter(i => i.ndbNo && i.portionGrams > 0);
+        }).filter(i => (i.ndbNo || i.componentPer100g) && i.portionGrams > 0);
         const servingsNum = Number(servings ?? 1);
         const buildResult = buildRecipeCommunityV3(
           sectionsList,
