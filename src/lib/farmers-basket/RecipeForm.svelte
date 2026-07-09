@@ -37,6 +37,8 @@
     componentPer100g?: Record<string, number>;
     /** Display name of the linked recipe (e.g. "White Chicken Stock"). Shown in the nutrition link label. */
     componentName?: string;
+    /** Original grams-per-serving for the linked recipe. Preserved even when a custom gram amount is entered. */
+    componentServingGrams?: number;
   }
 
   // v3.md §18 — per-section cooking method metadata for multi-stage recipes.
@@ -501,7 +503,7 @@
     if (ing.componentRef) {
       // Component-ref ingredient: reconstruct the recipe food object for the portion picker
       // so "qty" goes straight to portion selection, not a search.
-      const servingGrams = ing.portionGrams ?? 100;
+      const servingGrams = ing.componentServingGrams ?? ing.portionGrams ?? 100;
       const cp = ing.componentPer100g ?? {};
       const p = (k: string) => Number(cp[k] ?? 0);
       const recipeFood: RecipeSearchItem = {
@@ -617,6 +619,7 @@
         componentRef: food.recipeId,
         componentPer100g: food.componentPer100g,
         componentName: food.display,
+        componentServingGrams: food.gramsPerServing,
         portionDesc,
         portionGrams,
         servingCount: portionDesc === 'g' ? 1 : count,
