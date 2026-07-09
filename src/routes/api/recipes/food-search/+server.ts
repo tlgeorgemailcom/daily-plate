@@ -74,9 +74,14 @@ async function searchRecipes(query: string, limit = 8): Promise<RecipeSearchResu
     const gramsPerServing = Math.max(1, Number(row.grams_per_serving ?? 100));
 
     let per100g: Record<string, number> = {};
+    let gramsPerServing = Math.max(1, Number(row.grams_per_serving ?? 100));
     try {
       const nj = JSON.parse(String(row.nutrition_json ?? '{}')) as Record<string, unknown>;
       per100g = (nj.per100g ?? {}) as Record<string, number>;
+      // Prefer the value baked into nutrition_json (authoritative) over the column
+      if (typeof nj.gramsPerServing === 'number' && nj.gramsPerServing > 0) {
+        gramsPerServing = nj.gramsPerServing;
+      }
     } catch { /* malformed JSON — skip nutrition */ }
 
     const p = (k: string) => Number(per100g[k] ?? 0);
@@ -89,7 +94,10 @@ async function searchRecipes(query: string, limit = 8): Promise<RecipeSearchResu
       cal: p('Energy_KCal'), pro: p('Protein'), fat: p('TotalLipidFat'),
       carb: p('Carbohydrate'), fib: p('FiberTotalDietary'),
       h2o: p('Water'), sug: p('SugarsTotal'),
-      portions: [{ amt: 1, desc: '1 serving', gm: gramsPerServing }],
+      portions: [
+        { amt: 1, desc: 'custom (g)', gm: 100 },
+        { amt: 1, desc: '1 serving', gm: gramsPerServing },
+      ],
       nutrients: per100gToNutrientRow(recipeId, recipeName, per100g),
       recipeId,
       componentPer100g: per100g,
