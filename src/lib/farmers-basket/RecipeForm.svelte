@@ -390,6 +390,8 @@
 
   function hydrateRemoteFoods(foods: FoodData[]): FoodData[] {
     return foods.map((food) => {
+      // Skip local override for recipe results (ndb is '') — they have no SR28 entry.
+      if (!food.ndb) return food;
       const local = LOCAL_FOODS_BY_NDB.get(food.ndb);
       if (!local) return food;
       return {
