@@ -95,7 +95,7 @@ async function searchRecipes(query: string, limit = 8): Promise<RecipeSearchResu
       h2o: p('Water'), sug: p('SugarsTotal'),
       portions: [
         { amt: 1, desc: 'custom (g)', gm: 100 },
-        { amt: 1, desc: '1 serving', gm: gramsPerServing },
+        { amt: 1, desc: 'serving', gm: gramsPerServing },
       ],
       nutrients: per100gToNutrientRow(recipeId, recipeName, per100g),
       recipeId,
