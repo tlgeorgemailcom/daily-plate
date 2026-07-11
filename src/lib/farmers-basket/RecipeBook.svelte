@@ -301,7 +301,7 @@
   // with only one transformation: 'raw' → 'Unheated'.
   const SECTION_METHOD_LABEL: Record<string, string | null> = {
     'raw': 'unheated',
-    '':    null,
+    '':    'unheated',
   };
 
   function formatSectionHeader(
@@ -2197,7 +2197,7 @@
                       {@const collapsedLabel = qtyStripped && qtyStripped.toLowerCase().includes((sectionName.split(/\s+/)[0] ?? '').toLowerCase()) ? qtyStripped : (qtyStripped ? `${qtyStripped} ${sectionName}` : sectionName)}
                       <button class="ingredient-section-label" onclick={() => toggleIngredientSection(group.section!)}>
                         <span class="section-chevron">{isSectionCollapsed ? '▶' : '▼'}</span>
-                        {isSectionCollapsed && componentRefItem ? `${collapsedLabel}:` : formatSectionHeader(group.section, selectedLevel.sections)}
+                        {isSectionCollapsed && componentRefItem ? `${collapsedLabel}:` : formatSectionHeader(group.section, selectedLevel.sections ?? (selectedLevel.nutritionJson as Record<string, unknown>)?.sections as Level['sections'])}
                       </button>
                     {/if}
                     {#if !group.section || !collapsedIngredientSections.has(group.section)}

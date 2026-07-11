@@ -173,7 +173,7 @@ def ts_sections(sections):
             f"label: '{esc(s.get('label', ''))}'",
             f"cookingMethod: '{esc(s['cookingMethod'])}'",
         ]
-        if s.get('prepMethod'):
+        if s.get('prepMethod') is not None:  # always write, even empty string
             parts.append(f"prepMethod: '{esc(s['prepMethod'])}'")
         if s.get('stages'):
             stage_parts = ', '.join(
