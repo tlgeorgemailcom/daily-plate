@@ -4060,7 +4060,7 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Egg Salad Sandwich', quantity: 'custom (g)', foodWord: 'EGGSALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'white bread', quantity: '2 slices (30g each)', section: 'sandwich', ndbNo: '18069', portionDesc: 'g', portionGrams: 60.0 },
-      { name: 'hard-boiled egg', quantity: '2 large eggs', section: 'sandwich', ndbNo: '1129', portionDesc: 'g', portionGrams: 100.0 },
+      { name: 'hard-boiled egg', quantity: '2 large hard-boiled eggs', section: 'sandwich', ndbNo: '1129', portionDesc: 'g', portionGrams: 100.0 },
       { name: 'mayonnaise', quantity: '2 tbsp', section: 'sandwich', ndbNo: '4025', portionDesc: 'g', portionGrams: 27.6 },
       { name: 'scallions', quantity: '2 tsp chopped', section: 'sandwich', ndbNo: '11291', portionDesc: 'g', portionGrams: 4.0 },
       { name: 'yellow mustard', quantity: '½ tsp', section: 'sandwich', ndbNo: '2046', portionDesc: 'g', portionGrams: 2.5 },
@@ -4074,7 +4074,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with potato chips, a dill pickle, or a cup of tomato soup.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Egg Salad', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Egg Salad', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {

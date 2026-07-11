@@ -793,7 +793,7 @@ SAND_005,4,tomato_red_raw,4 thin slices (60g),60.0,40.0,80.0,assembly,assembly,f
 SAND_005,5,lettuce_iceberg_raw,1 large leaf (15g),15.0,10.0,20.0,assembly,assembly,false,,
 SAND_005,6,mayonnaise,1½ tbsp,21.0,14.0,28.0,assembly,assembly,false,,
 SAND_006,1,bread_white_commercial,2 slices (30g each),60.0,48.0,72.0,sandwich,sandwich,false,,
-SAND_006,2,egg_cooked_hardboiled,2 large eggs,100.0,80.0,120.0,sandwich,sandwich,false,,
+SAND_006,2,egg_cooked_hardboiled,2 large hard-boiled eggs,100.0,80.0,120.0,sandwich,sandwich,false,hard-boiled egg,
 SAND_006,3,mayonnaise,2 tbsp,27.6,21.0,34.0,sandwich,sandwich,false,,
 SAND_006,4,scallion_raw,2 tsp chopped,4.0,2.0,6.0,sandwich,sandwich,false,,
 SAND_006,5,mustard_yellow,½ tsp,2.5,1.5,3.5,sandwich,sandwich,false,,
