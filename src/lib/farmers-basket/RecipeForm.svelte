@@ -216,11 +216,11 @@
       'pan grilled': 'Pan grill',
       'grilled':     'Grill',
       'broiled':     'Broil',
-      'raw':         'No heat',
-      'no heat':     'No heat',
-      'noheat':      'No heat',
-      'none':        'No heat',
-      'finish':      'No heat',
+      'raw':         'Unheated',
+      'no heat':     'Unheated',
+      'noheat':      'Unheated',
+      'none':        'Unheated',
+      'finish':      'Unheated',
     };
     return MAP[m] ?? (m.charAt(0).toUpperCase() + m.slice(1));
   }
@@ -2632,7 +2632,7 @@
             class="form-input section-method-select"
             title="How this section is prepared before the primary cook"
           >
-            <option value="none">no heat</option>
+            <option value="none">unheated</option>
             {#each SECTION_PREP_METHODS as m}
               <option value={m}>{PREP_METHOD_DISPLAY[m] ?? m}</option>
             {/each}

@@ -304,8 +304,11 @@
     if (!sectionKey) return '';
     const meta = sectionsMeta?.find((s) => s.key === sectionKey);
     const label = meta?.label || (sectionKey.charAt(0).toUpperCase() + sectionKey.slice(1));
-    const method = meta?.cookingMethod;
-    return method ? `${label} — ${method}` : `${label}:`;
+    const rawMethod = meta?.cookingMethod;
+    const method = rawMethod ? normalizeCookingMethod(rawMethod) : null;
+    // Don't append the method when it's the default 'Bake' (blank top bar)
+    // or when there's no method set.
+    return (method && method !== 'Bake') ? `${label} — ${method}` : `${label}:`;
   }
 
   function formatIngredientLine(ingredient: { name: string; quantity?: string }) {
@@ -1677,9 +1680,9 @@
       'pan grilled': 'Pan grill',
       'grilled':     'Grill',
       'fried':       'Fry',
-      'raw':         'No heat',
-      'steamed':     'No heat',
-      'microwave':   'No heat',
+      'raw':         'Unheated',
+      'steamed':     'Unheated',
+      'microwave':   'Unheated',
       'finish':      'Added after cooking',
     };
     return map[raw.toLowerCase()] ?? raw;
