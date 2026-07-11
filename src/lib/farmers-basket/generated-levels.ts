@@ -4202,7 +4202,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with potato chips, a dill pickle, or a cup of soup.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Ham and Cheese', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Ham and Cheese', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
   {
@@ -4238,7 +4238,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with potato chips, fresh fruit, or a glass of milk.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Peanut Butter & Jelly', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Peanut Butter & Jelly', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
   {
@@ -4279,7 +4279,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with potato chips, a dill pickle, or alongside a bowl of tomato soup.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Pimento Cheese', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Pimento Cheese', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
   {
@@ -4324,7 +4324,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside other tea sandwiches, scones with clotted cream, or a pot of hot tea.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Cucumber Tea', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Cucumber Tea', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
   {
@@ -4601,7 +4601,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with potato chips, a dill pickle, or a simple green salad.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Turkey Sandwich', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Turkey Sandwich', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
   {
@@ -4642,7 +4642,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with potato chips, a dill pickle, or a simple green salad.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Turkey with Provolone Sandwich', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Turkey with Provolone Sandwich', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
   {
@@ -4684,7 +4684,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with tortilla chips, a dill pickle, or a simple green salad.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Turkey & Avocado Sandwich', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Turkey & Avocado Sandwich', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
   {
@@ -4727,7 +4727,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with tortilla chips, a dill pickle, or a simple green salad.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Turkey & Avocado with Provolone Sandwich', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Turkey & Avocado with Provolone Sandwich', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
   {
@@ -4771,7 +4771,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with tortilla chips, a dill pickle, or a simple green salad.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Turkey & Avocado with Bacon Sandwich', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Turkey & Avocado with Bacon Sandwich', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
   {
@@ -4812,7 +4812,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'sandwich', label: 'Roast Beef Sandwich', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Roast Beef Sandwich', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
   {
@@ -4853,7 +4853,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'sandwich', label: 'Avocado with Sprouts & Tomato Sandwich', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Avocado with Sprouts & Tomato Sandwich', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
   {
@@ -4933,7 +4933,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with potato chips, a dill pickle spear, or a cup of coleslaw.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Pastrami Sandwich', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Pastrami Sandwich', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
   {
@@ -4972,7 +4972,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with potato chips, a dill pickle spear, or a cup of coleslaw.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Corned Beef Sandwich', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Corned Beef Sandwich', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
   {
@@ -5012,7 +5012,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with potato chips, extra pickles, or a cold beverage.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Liverwurst Sandwich', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Liverwurst Sandwich', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
   {
@@ -5051,7 +5051,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with dark rye crackers, extra pickles, or a cold beverage.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Limburger Sandwich', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Limburger Sandwich', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
   {
