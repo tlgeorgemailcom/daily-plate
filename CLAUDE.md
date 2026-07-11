@@ -218,6 +218,55 @@ yfw = retained_water / raw_water_in_section
 
 **To add bin factors to a new NDB:** `UPDATE DataCentralCombo SET bin = '<factor>' WHERE NDB_No = <ndb>` in `/Users/macminidata/vscode/jetfooddata/jetcool/assets/comboo.db`, then sync to Turso comboo DB using the `libsql_experimental` client (same pattern as `insert_new.py`'s `_connect()` but targeting `TURSO_SR28_URL` / `TURSO_SR28_TOKEN`).
 
+## Fat Drain Model (DataCentralCombo.fat_drain)
+
+The `fat_drain` column in `DataCentralCombo` stores the fraction of fat **retained** after cooking (e.g. `0.33` for raw bacon pan-fried = 67% of fat renders and drains away). This is the dual of `bin`: `bin` models water absorbed by dry starches; `fat_drain` models fat lost by fatty meats.
+
+**Math (derived from USDA raw/cooked NDB pairs using protein-conservation method):**
+```
+cooked_weight = raw_protein_g / (cooked_protein_pct / 100)
+retained_fat  = cooked_fat_pct × cooked_weight
+fat_drain     = retained_fat / raw_fat_g
+```
+
+**Pipeline execution order (build.py priority for yff):**
+1. Explicit `yield_factor_fat` set in `recipe_sections.csv` → Path A, lock applied.
+2. Auto-derive from `fat_drain` — fires when `yield_factor_fat` is **empty** (None) in `recipe_sections.csv`. Computes weighted effective yff across all ingredients in the section: `yff = (drainer_fat × fat_drain + non_drainer_fat) / total_fat`.
+3. Default `yff = 1.0` (no fat drain).
+
+When `yff < 1.0`, Atwater energy recompute fires automatically (same as `yff` from an explicit lock).
+
+**TypeScript community path:** `fat_drain` is read from `DataCentralCombo` via the food search API and stored as `NutrientRow.fatDrain`. `buildRecipeCommunityV3.ts` auto-derives `yff` from `nutrients.fatDrain` when `sec.yieldFactorFat` is `undefined` — same weighted formula as Python.
+
+**Current fat_drain values in DataCentralCombo (added July 2026):**
+
+| NDB | fat_drain | Description |
+|---|---|---|
+| 10994 | 0.33 | Bacon, pre-sliced, reduced/low sodium, unprepared |
+| 10123 | 0.33 | Pork, cured, bacon, unprepared |
+| 7036 | 0.65 | Sausage, Italian, pork, raw |
+| 7063 | 0.91 | Pork sausage, link/patty, unprepared |
+
+**To add fat_drain to a new NDB:** Query the raw/cooked USDA pair to derive the value, then:
+```python
+# Local comboo.db
+conn = sqlite3.connect('/Users/macminidata/vscode/jetfooddata/jetcool/assets/comboo.db')
+conn.execute("UPDATE DataCentralCombo SET fat_drain = ? WHERE NDB_No = ?", (value, ndb))
+conn.commit()
+# Turso SR28 DB (use libsql_experimental)
+conn = libsql.connect(database=TURSO_SR28_URL, auth_token=TURSO_SR28_TOKEN)
+conn.execute("UPDATE DataCentralCombo SET fat_drain = ? WHERE NDB_No = ?", (value, ndb))
+conn.commit()
+```
+The `fat_drain` column must be added to `DataCentralCombo` first via `ALTER TABLE DataCentralCombo ADD COLUMN fat_drain REAL` if not already present.
+
+**`ingredients_ledger.csv` also has a `fat_drain` column (added July 2026)** as a recipe-author override. Priority: ledger value > DataCentralCombo value > None. For `bacon_raw_cured` (NDB 10994), the ledger has `fat_drain=0.33` matching the DB value. For any ingredient without a ledger entry (community users selecting NDB directly), only the DB value is used.
+
+**Authoring rule:** When using a raw fatty meat NDB in a fried/pan-grilled section, leave `yield_factor_fat` empty in `recipe_sections.csv`. The auto-derive will compute the correct yff from `fat_drain`. Only set explicit `yff` if you need to override (e.g. fat does NOT drain because it's incorporated into a sauce/roux).
+
+**Known fat_drain ingredients in the ledger:**
+- `bacon_raw_cured` (NDB 10994) — `fat_drain=0.33`, M1=slice/30g. Used in fried sections for recipes calling for raw bacon strips pan-fried until crisp. Always leaves `yff` empty in the section to trigger auto-derive. Example recipes: SAND_004, SAND_005, SOUP_015, SOUP_016.
+
 ## insert_new.py — Initial Turso Insert
 
 `recipes_v3/tools/insert_new.py` inserts a recipe row into Turso's `dev_recipes` table for the **first time**. It is NOT called by `upload.py`.
@@ -673,8 +722,10 @@ FNDDS published nutrient profiles use **Foundation Foods** values for common ing
 - **Every `@CHILD_ID` ingredient row must signal "recipe" in `qty_display` AND have a corresponding instruction step**: (1) `qty_display` must include the child recipe's display name and the word "recipe" — e.g. `"1/2 tsp Dijon-Style Mustard (recipe)"` or `"1 recipe Béchamel (1 cup, 245.08g)"`. Never use a bare measurement like `"1/2 tsp"` for a component_ref row. (2) The quantity prefix in `qty_display` must be a real culinary measure (tbsp, cup, oz, g) — never "N servings". "2 servings" is meaningless to a cook; "4 tbsp" is actionable. (3) The parent recipe's instructions must include a step "Make or prepare the [Child Recipe Name] (see the [Child Recipe Name] recipe)." placed before the step that first uses the child. This ensures users know a sub-recipe exists and can navigate to it. (Established June 2026, SAUCE_016/017/018/019/024 Dijon-Style Mustard component_ref pattern; "2 servings" anti-pattern found in SALAD_013/014/016 June 2026.)
 - **Always use `@STOCK_003` (White Chicken Stock) for chicken broth in recipes — never `chicken_broth_canned` (NDB 6194).** The project has its own chicken stock recipe (STOCK_003). Using it as a component-ref keeps nutrition consistent and avoids adding a sodium-heavy canned broth NDB to the ledger. Usage: one section with `source_recipe=STOCK_003`, `cook_method=raw`, `yfw=1.0`, and the gram weight needed (e.g. 249g = 1 cup). The same principle applies to beef broth — use `@STOCK_004`, and fish broth — use `@STOCK_006`.
 - **Always use raw NDB + cooking section for cooked proteins**: Never use a pre-cooked NDB (e.g. `chicken_breast_cooked_roasted` NDB 5064) in a `raw` section — the pipeline applies no retention and the NDB's already-cooked values are used verbatim, double-counting the cooking. Use the raw NDB (e.g. `chicken_breast_raw` NDB 5062) and set the section `cook_method` appropriately (e.g. `pan grilled`, yfw=0.75). This applies to every cooked protein served cold (chicken salad, Cobb salad, etc.).
+- **bacon_raw_cured (NDB 10994) — the correct ingredient key for pan-fried bacon:** Use `bacon_raw_cured` (not `bacon_cooked_pan_fried`) whenever bacon is physically fried in the recipe. Leave `yield_factor_fat` empty in the section — the auto-derive fires `yff=0.33` from `fat_drain`. Section spec: `pm='fried'`, `cm='fried'`, `fill_class='fried_meat'`, `boil_stages=8` (standard 6-8 min crispy), `yff=''`. Use 30g per raw slice (M1). `bacon_cooked_pan_fried` is only correct for pre-cooked bacon added cold to a raw assembly section (e.g. a club sandwich where bacon is a topping, not fried in the recipe). When pre-cooked bacon is used cold, add `display_name_override='cooked bacon'` to the ingredient row so the UI makes the distinction clear. (Established July 2026, SAND_004/005, SOUP_015/016.)
 - **Section rows in `recipe_ingredients.csv` must be contiguous**: All rows for a given `section` key must appear together without interruption. If section A rows appear, then section B rows, then section A rows again, the renderer opens a second header for section A. Always group all rows for each section consecutively, and order sections so the minor section (e.g. `chicken`) comes first in row_order so it doesn't split the major section.
 - **Section display order in `recipe_sections.csv` — canonical rule (July 2026):** Sections must appear in this order: (1) unheated/raw sections first (`pm=''` or `pm='raw'`), (2) cooked sections in descending cook time (longest first), (3) `finish` section always last. This mirrors the cooking workflow: unheated components are listed before the active cook steps, and anything "Added after cooking" (`pm='finish'`) is always the last collapsible header. Wrong order example: `patty (fried 7min) → onion (simmer 15min) → bread (finish)` — corrected to `onion (simmer 15min) → patty (fried 7min) → bread (finish)`. Another wrong example: `gravy (simmer 5min) → beef (unheated) → bread (finish)` — corrected to `beef (unheated) → gravy (simmer 5min) → bread (finish)`. When in doubt: sort by `(0 if pm=='' else 1, -boil_minutes)` then finish last.
+- **⚠️ CRITICAL: The display section order is driven by ingredient row order in `recipe_ingredients.csv`, NOT by the section order in `recipe_sections.csv`.** `recipe_sections.csv` controls physics and section labels. `recipe_ingredients.csv` row order controls which section header appears first in the UI — the renderer groups sections by the order their ingredients **first appear**. Both files must be kept in sync. When creating a multi-section recipe: author the ingredient rows in the SAME order as the desired display sections. Example: if you want Gravy → Beef → Bread in the UI, then all gravy ingredient rows must come before the beef row, which must come before the bread row in `recipe_ingredients.csv`. **Discovered July 2026** when SAND_017 displayed Bread→Beef→Gravy despite recipe_sections.csv having Gravy→Beef→Bread — the bread row was row 1 in recipe_ingredients.csv.
 - **`qty_display` must be a pure measure — never embed the ingredient name**: The display layer appends the ingredient's own name automatically. Writing `"3 stalks celery"` produces `"3 stalks celery celery stalk"` (or similar doubling). Always use bare measures: `"3 stalks"`, `"4 medium"`, `"2 cups"`, `"1 tsp"`, `"2 tbsp"`, `"1 sprig"`, etc. The only exception is component_ref rows, where `qty_display` must include the child recipe name and the word "recipe" (e.g. `"1 recipe Pie Crust Double (Unbaked)"`).
 - **Ingredient prep methods belong in `qty_display`, not in instructions**: When an ingredient requires a specific preparation (mincing, dicing, slicing, grating, etc.), embed it directly in the `qty_display` field. Do NOT repeat these prep notes in the instruction steps — e.g. "Add the garlic" is correct when `qty_display` already handles the prep. Established June 2026 during garlic audit of ENTR_052–069.
   - **Fresh/raw ingredients must always include a preparation state in `qty_display`**: Every fresh/raw item must explicitly state either (1) an active prep method (`chopped`, `minced`, `sliced`, `diced`, etc.) or (2) an explicit no-prep descriptor (`whole`, `leaves`, `sprigs`, etc.) so the cook sees exactly how it is used. Examples: `"1 cup cherry tomatoes, whole"`, `"2 tbsp fresh dill sprigs"`, `"1/2 cup fresh chives, chopped"`.
