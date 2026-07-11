@@ -494,10 +494,11 @@ def _build_recipe_multi(
 
         # Track fat-drain ingredients (raw bacon, etc.).
         # fat_drain is the fraction of fat *retained* after cooking (e.g. 0.33 for bacon).
-        # Populated from ingredients_ledger.csv::fat_drain.
-        if entry.fat_drain is not None:
+        # Priority: ledger entry.fat_drain > DataCentralCombo._fat_drain > None.
+        fat_drain_val = entry.fat_drain if entry.fat_drain is not None else nuts.get("_fat_drain")
+        if fat_drain_val is not None:
             fat_contrib_g = nuts.get("TotalLipidFat", 0.0) * scale
-            st["fat_drainers"].append((fat_contrib_g, entry.fat_drain))
+            st["fat_drainers"].append((fat_contrib_g, fat_drain_val))
 
         contrib_full: dict[str, float] = {}
         for n in EXTENDED_NUTRIENTS:

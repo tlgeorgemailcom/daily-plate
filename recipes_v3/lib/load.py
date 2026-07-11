@@ -377,7 +377,7 @@ def load_comboo_nutrients(ndb_nos: Iterable[str]) -> dict[str, dict[str, float]]
     try:
         cur = conn.cursor()
         nutrient_cols = list(EXTENDED_NUTRIENTS)
-        quoted = ['"NDB_NO"', '"Long_Desc"', '"bin"', *(f'"{c}"' for c in nutrient_cols)]
+        quoted = ["\"NDB_NO\"", "\"Long_Desc\"", "\"bin\"", "\"fat_drain\"", *(f'"{c}"' for c in nutrient_cols)]
         placeholders = ",".join("?" * len(ndbs))
         sql = f"SELECT {', '.join(quoted)} FROM DataCentralCombo WHERE NDB_NO IN ({placeholders})"
         out: dict[str, dict[str, float]] = {}
@@ -385,9 +385,10 @@ def load_comboo_nutrients(ndb_nos: Iterable[str]) -> dict[str, dict[str, float]]
             ndb = str(row[0])
             long_desc = row[1] or ""
             bin_raw = row[2]
+            fat_drain_raw = row[3]
             nuts: dict[str, float] = {}
             for i, m in enumerate(nutrient_cols):
-                nuts[m] = float(row[i + 3] or 0.0)
+                nuts[m] = float(row[i + 4] or 0.0)
             # Stash Long_Desc under a non-conflicting key for downstream use.
             nuts["_long_desc"] = long_desc  # type: ignore[assignment]
             # Stash bin absorption factor if present and numeric (e.g. '0.6213' for pasta).
@@ -395,6 +396,14 @@ def load_comboo_nutrients(ndb_nos: Iterable[str]) -> dict[str, dict[str, float]]
             if bin_raw is not None:
                 try:
                     nuts["_absorption_factor"] = float(bin_raw)  # type: ignore[assignment]
+                except (ValueError, TypeError):
+                    pass
+            # Stash fat_drain factor if present and numeric.
+            # fat_drain = fraction of fat RETAINED after cooking (e.g. 0.33 for bacon strips).
+            # Used by build.py to auto-derive yff when not explicitly set in recipe_sections.csv.
+            if fat_drain_raw is not None:
+                try:
+                    nuts["_fat_drain"] = float(fat_drain_raw)  # type: ignore[assignment]
                 except (ValueError, TypeError):
                     pass
             out[ndb] = nuts

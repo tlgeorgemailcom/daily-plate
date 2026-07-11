@@ -58,6 +58,9 @@ export interface NutrientRow {
                                  // (pasta, rice, oats, legumes). Stored in DataCentralCombo.bin.
                                  // When present, buildRecipeCommunity uses absorption model instead
                                  // of evaporation model for sections with cookMethod=boiled.
+  fatDrain?: number;             // fraction of fat RETAINED after cooking (e.g. 0.33 for raw bacon).
+                                 // Stored in DataCentralCombo.fat_drain. When present and
+                                 // yieldFactorFat is not explicitly set, build auto-derives yff.
 }
 
 // ── Recipe structure ──────────────────────────────────────────────────────────
@@ -109,7 +112,7 @@ export interface CommunityIngredient {
 // ── Build output ──────────────────────────────────────────────────────────────
 
 /** Per-nutrient map keyed by NutrientRow field name */
-export type MacroMap = Partial<Record<keyof Omit<NutrientRow, 'ndbNo' | 'longDesc' | 'fdGrpCd' | 'absorptionFactor'>, number>>;
+export type MacroMap = Partial<Record<keyof Omit<NutrientRow, 'ndbNo' | 'longDesc' | 'fdGrpCd' | 'absorptionFactor' | 'fatDrain'>, number>>;
 
 /** What was skipped and why, for transparency */
 export interface SkippedIngredient {

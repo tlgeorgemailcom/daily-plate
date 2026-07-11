@@ -218,6 +218,7 @@ function rowToNutrientRow(row: Row, ndb: string, longDesc: string, fdGrpCd: stri
     vitaminE_alphaTocopherol:      n('VitaminE_alphaTocopherol'),
     vitaminK_phylloquinone:        n('VitaminK_phylloquinone'),
     ...((() => { const f = parseFloat(String((row as Record<string, unknown>)['bin'] ?? '')); return isNaN(f) ? {} : { absorptionFactor: f }; })()),
+    ...((() => { const f = parseFloat(String((row as Record<string, unknown>)['fat_drain'] ?? '')); return isNaN(f) ? {} : { fatDrain: f }; })()),
   };
 }
 

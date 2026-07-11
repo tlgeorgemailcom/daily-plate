@@ -105,6 +105,7 @@ function rowToNutrientRow(row: Record<string, unknown>): NutrientRow {
     vitaminK_phylloquinone:        n('VitaminK_phylloquinone'),
     ...(row['AlcholEthyl'] != null ? { alcholEthyl: n('AlcholEthyl') } : {}),
     ...(row['bin'] != null ? (() => { const f = parseFloat(String(row['bin'])); return isNaN(f) ? {} : { absorptionFactor: f }; })() : {}),
+    ...(row['fat_drain'] != null ? (() => { const f = parseFloat(String(row['fat_drain'])); return isNaN(f) ? {} : { fatDrain: f }; })() : {}),
   };
 }
 

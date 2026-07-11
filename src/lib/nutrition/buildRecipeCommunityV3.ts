@@ -377,7 +377,26 @@ export function buildRecipeCommunityV3(
     }
 
     // ── Read yield factors (default 1.0 = no effect) ──────────────────────────
-    const yff = sec.yieldFactorFat          ?? 1.0;
+    // yff: if explicitly set on the section, use it. Otherwise auto-derive from
+    // ingredient fatDrain values (e.g. raw bacon: fatDrain=0.33 → drains 67% fat).
+    // Formula mirrors Python build.py:
+    //   retained_fat = (drainer_fat × fatDrain) + non_drainer_fat
+    //   yff = retained_fat / total_fat
+    let yff: number;
+    if (typeof sec.yieldFactorFat === 'number' && isFinite(sec.yieldFactorFat)) {
+      yff = sec.yieldFactorFat;
+    } else {
+      const fatDrainers = active.filter(a => typeof a.nutrients.fatDrain === 'number');
+      if (fatDrainers.length > 0) {
+        const totalFat       = active.reduce((s, a) => s + (a.nutrients.totalLipidFat ?? 0) * (a.grams / 100), 0);
+        const drainerFat     = fatDrainers.reduce((s, a) => s + (a.nutrients.totalLipidFat ?? 0) * (a.grams / 100), 0);
+        const retainedFromDrainers    = fatDrainers.reduce((s, a) => s + (a.nutrients.totalLipidFat ?? 0) * (a.grams / 100) * a.nutrients.fatDrain!, 0);
+        const retainedFromNonDrainers = totalFat - drainerFat;
+        yff = totalFat > 0 ? (retainedFromDrainers + retainedFromNonDrainers) / totalFat : 1.0;
+      } else {
+        yff = 1.0;
+      }
+    }
     const yfp = sec.yieldFactorProtein      ?? 1.0;
     const yfc = sec.yieldFactorCarbohydrate ?? 1.0;
     const yfo = sec.yieldFactorOther        ?? 1.0;
