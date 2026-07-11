@@ -397,6 +397,10 @@ def _build_recipe_multi(
             # List of (grams, absorption_factor) for submersion-boil absorbers
             # (pasta, rice, oats, legumes). Populated from DataCentralCombo.bin.
             "absorbers": [],
+            # List of (fat_contrib_g, fat_drain_factor) for ingredients whose fat
+            # renders and drains during cooking (e.g. raw bacon, ground beef).
+            # Populated from ingredients_ledger.csv::fat_drain.
+            "fat_drainers": [],
         }
         for s in sections
     }
@@ -487,6 +491,13 @@ def _build_recipe_multi(
         absorb_factor = nuts.get("_absorption_factor")
         if absorb_factor is not None:
             st["absorbers"].append((row.grams, absorb_factor))
+
+        # Track fat-drain ingredients (raw bacon, etc.).
+        # fat_drain is the fraction of fat *retained* after cooking (e.g. 0.33 for bacon).
+        # Populated from ingredients_ledger.csv::fat_drain.
+        if entry.fat_drain is not None:
+            fat_contrib_g = nuts.get("TotalLipidFat", 0.0) * scale
+            st["fat_drainers"].append((fat_contrib_g, entry.fat_drain))
 
         contrib_full: dict[str, float] = {}
         for n in EXTENDED_NUTRIENTS:
@@ -598,6 +609,21 @@ def _build_recipe_multi(
         else:
             yfw = 1.0
         yff = s.yield_factor_fat
+        # Auto-derive yff from fat_drain ingredient factors when not explicitly set.
+        # If the section has fat-draining ingredients (e.g. raw bacon) and no
+        # explicit yield_factor_fat in recipe_sections.csv, compute a weighted yff:
+        #   retained_fat = (drainer_fat × fat_drain) + non_drainer_fat
+        #   yff = retained_fat / total_fat
+        if yff is None:
+            total_fat = st["sums"].get("TotalLipidFat", 0.0)
+            if st["fat_drainers"] and total_fat > 0:
+                drainer_fat_total = sum(f for f, _ in st["fat_drainers"])
+                retained_from_drainers = sum(f * d for f, d in st["fat_drainers"])
+                retained_from_non_drainers = total_fat - drainer_fat_total
+                yff = (retained_from_drainers + retained_from_non_drainers) / total_fat
+            else:
+                yff = 1.0
+        st["resolved_yff"] = yff  # store for fat_lost_total summary below
         yfp = s.yield_factor_protein
         yfc = s.yield_factor_carbohydrate
         yfo_S = s.yield_factor_other
@@ -734,7 +760,7 @@ def _build_recipe_multi(
         for sec in sections_out if sec.get("ingredient_count", 0) > 0 and "yield_factor_water" in sec
     )
     fat_lost_total = sum(
-        st["raw_fat"] * (1 - st["section"].yield_factor_fat)
+        st["raw_fat"] * (1 - st.get("resolved_yff", 1.0))
         for st in sec_state.values() if st["ingredient_count"] > 0
     )
     protein_lost_total = sum(

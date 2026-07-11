@@ -136,6 +136,7 @@ class LedgerEntry:
     food_word: str
     default_long_desc: str
     default_display_name: str
+    fat_drain: float | None = None  # fraction of fat retained after cooking (e.g. 0.33 for pan-fried bacon)
 
 
 @dataclass(frozen=True)
@@ -162,7 +163,7 @@ class Section:
     prep_method: str   # what the cook does — shown in UI (e.g. 'simmered', 'boiled')
     cook_method: str   # dominant heat stage for USDA retention table lookup
     yield_factor_water: float | None  # None = derive from filling_class + cook_stages
-    yield_factor_fat: float
+    yield_factor_fat: float | None  # None = auto-derive from ingredient fat_drain factors
     yield_factor_protein: float
     yield_factor_carbohydrate: float
     yield_factor_other: float
@@ -258,6 +259,7 @@ def load_ledger() -> dict[str, LedgerEntry]:
                 food_word=row.get("food_word", "").strip(),
                 default_long_desc=row.get("default_long_desc", "").strip(),
                 default_display_name=row.get("default_display_name", "").strip(),
+                fat_drain=_parse_float_opt(row.get("fat_drain")),
             )
     return out
 
@@ -323,7 +325,7 @@ def load_sections() -> dict[str, list[Section]]:
                 prep_method=(row.get("prep_method") or row.get("cooking_method") or "raw").strip().lower(),
                 cook_method=(row.get("cook_method") or row.get("cooking_method") or "raw").strip().lower(),
                 yield_factor_water=_parse_float_opt(row.get("yield_factor_water")),
-                yield_factor_fat=_parse_float(row.get("yield_factor_fat"), 1.0),
+                yield_factor_fat=_parse_float_opt(row.get("yield_factor_fat")),
                 yield_factor_protein=_parse_float(row.get("yield_factor_protein"), 1.0),
                 yield_factor_carbohydrate=_parse_float(row.get("yield_factor_carbohydrate"), 1.0),
                 yield_factor_other=_parse_float(row.get("yield_factor_other"), 1.0),
