@@ -4756,16 +4756,15 @@ export const LEVELS: Level[] = [
       { name: 'whole wheat bread', quantity: '2 slices (32g each)', section: 'sandwich', ndbNo: '18075', portionDesc: 'g', portionGrams: 64.0 },
       { name: 'deli turkey breast', quantity: '3 oz', section: 'sandwich', ndbNo: '7081', portionDesc: 'g', portionGrams: 85.0 },
       { name: 'avocado', quantity: '½ avocado', section: 'sandwich', ndbNo: '9038', portionDesc: 'g', portionGrams: 68.0 },
-      { name: 'bacon', quantity: '2 slices', section: 'sandwich', ndbNo: '10862', portionDesc: 'g', portionGrams: 23.0 },
+      { name: 'bacon', quantity: '2 slices cooked bacon', section: 'sandwich', ndbNo: '10862', portionDesc: 'g', portionGrams: 23.0 },
       { name: 'iceberg lettuce', quantity: '1 large leaf (15g)', section: 'sandwich', ndbNo: '11252', portionDesc: 'g', portionGrams: 15.0 },
       { name: 'tomato', quantity: '2 thin slices (30g)', section: 'sandwich', ndbNo: '11529', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'mayonnaise', quantity: '2 tbsp', section: 'sandwich', ndbNo: '4025', portionDesc: 'g', portionGrams: 27.6 }
     ],
     recipeInstructions: [
-      'Cook the bacon in a skillet over medium heat until crispy. Drain on paper towels.',
       'Spread mayonnaise evenly on both slices of whole wheat bread.',
       'Slice or mash the avocado and layer it on one slice of bread.',
-      'Top the avocado with the turkey breast slices and bacon.',
+      'Top the avocado with the turkey breast slices and cooked bacon.',
       'Add the lettuce and tomato slices.',
       'Close the sandwich with the second bread slice, press gently, and cut in half to serve.',
       'Suggestions (not included): Serve with tortilla chips, a dill pickle, or a simple green salad.'

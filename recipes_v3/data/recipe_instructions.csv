@@ -685,12 +685,6 @@ SAND_021,2,Slice or mash the avocado and layer it on one slice of bread.
 SAND_021,3,"Top the avocado with the turkey breast slices, then layer both slices of provolone."
 SAND_021,4,Add the lettuce and tomato slices.
 SAND_021,5,"Close the sandwich with the second bread slice, press gently, and cut in half to serve."
-SAND_022,1,Cook the bacon in a skillet over medium heat until crispy. Drain on paper towels.
-SAND_022,2,Spread mayonnaise evenly on both slices of whole wheat bread.
-SAND_022,3,Slice or mash the avocado and layer it on one slice of bread.
-SAND_022,4,Top the avocado with the turkey breast slices and bacon.
-SAND_022,5,Add the lettuce and tomato slices.
-SAND_022,6,"Close the sandwich with the second bread slice, press gently, and cut in half to serve."
 SAND_023,1,Spread mayonnaise on one slice of whole wheat bread and mustard on the other.
 SAND_023,2,Layer the roast beef slices on the mustard side.
 SAND_023,3,Top with the lettuce and tomato slices.
@@ -3641,7 +3635,6 @@ SAND_018,5,"Suggestions (not included): Serve with potato chips, a dill pickle, 
 SAND_019,5,"Suggestions (not included): Serve with potato chips, a dill pickle, or a simple green salad."
 SAND_020,6,"Suggestions (not included): Serve with tortilla chips, a dill pickle, or a simple green salad."
 SAND_021,6,"Suggestions (not included): Serve with tortilla chips, a dill pickle, or a simple green salad."
-SAND_022,7,"Suggestions (not included): Serve with tortilla chips, a dill pickle, or a simple green salad."
 SAND_025,5,"Suggestions (not included): Serve with potato chips, a dill pickle spear, or a cup of coleslaw."
 SAND_026,5,"Suggestions (not included): Serve with potato chips, a dill pickle spear, or a cup of coleslaw."
 SAND_027,5,"Suggestions (not included): Serve with potato chips, a dill pickle spear, or a cup of coleslaw."
@@ -3856,3 +3849,9 @@ SAUCE_024,5,Fold in the freshly grated Parmesan. Season with salt and black pepp
 SAUCE_024,6,"If the dressing is too thick, thin with 1–2 tablespoons of water. Taste and adjust lemon juice or anchovy to preference."
 SAUCE_024,7,Store refrigerated in a sealed jar for up to 5 days. Whisk or shake before each use.
 SAUCE_024,8,"Suggestions (not included): The dressing for Caesar Salad, Chicken Caesar Salad, Shrimp Caesar Salad, and Chicken Caesar Wrap."
+SAND_022,1,Spread mayonnaise evenly on both slices of whole wheat bread.
+SAND_022,2,Slice or mash the avocado and layer it on one slice of bread.
+SAND_022,3,Top the avocado with the turkey breast slices and cooked bacon.
+SAND_022,4,Add the lettuce and tomato slices.
+SAND_022,5,"Close the sandwich with the second bread slice, press gently, and cut in half to serve."
+SAND_022,6,"Suggestions (not included): Serve with tortilla chips, a dill pickle, or a simple green salad."
