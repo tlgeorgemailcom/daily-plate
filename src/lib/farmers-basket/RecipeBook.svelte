@@ -297,6 +297,13 @@
   // render the section header as "<Label> — <method>" so the multi-stage
   // structure (e.g. baked crust + boiled filling + raw topping) is visible
   // instead of being buried in nutritionJson.sections[].
+  // Section headers use pipeline term as-is (fried, baked, pan grilled…)
+  // with only one transformation: 'raw' → 'Unheated'.
+  const SECTION_METHOD_LABEL: Record<string, string | null> = {
+    'raw': 'Unheated',
+    '':    null,
+  };
+
   function formatSectionHeader(
     sectionKey: string | undefined,
     sectionsMeta: Level['sections'],
@@ -304,11 +311,11 @@
     if (!sectionKey) return '';
     const meta = sectionsMeta?.find((s) => s.key === sectionKey);
     const label = meta?.label || (sectionKey.charAt(0).toUpperCase() + sectionKey.slice(1));
-    const rawMethod = meta?.cookingMethod;
-    const method = rawMethod ? normalizeCookingMethod(rawMethod) : null;
-    // Don't append the method when it's the default 'Bake' (blank top bar)
-    // or when there's no method set.
-    return (method && method !== 'Bake') ? `${label} — ${method}` : `${label}:`;
+    const rawMethod = meta?.cookingMethod ?? '';
+    const display = rawMethod in SECTION_METHOD_LABEL
+      ? SECTION_METHOD_LABEL[rawMethod]
+      : rawMethod || null;
+    return display ? `${label} — ${display}` : `${label}:`;
   }
 
   function formatIngredientLine(ingredient: { name: string; quantity?: string }) {
