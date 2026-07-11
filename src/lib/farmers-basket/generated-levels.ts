@@ -4101,7 +4101,7 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Tuna Salad Sandwich', quantity: 'custom (g)', foodWord: 'TUNASALAD', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'white bread', quantity: '2 slices (30g each)', section: 'sandwich', ndbNo: '18069', portionDesc: 'g', portionGrams: 60.0 },
-      { name: 'canned light tuna', quantity: '1 can drained (5 oz)', section: 'sandwich', ndbNo: '15121', portionDesc: 'g', portionGrams: 142.0 },
+      { name: 'tuna', quantity: '1 can (5 oz) drained tuna', section: 'sandwich', ndbNo: '15121', portionDesc: 'g', portionGrams: 142.0 },
       { name: 'mayonnaise', quantity: '3 tbsp', section: 'sandwich', ndbNo: '4025', portionDesc: 'g', portionGrams: 41.4 },
       { name: 'apple', quantity: '¼ cup chopped', section: 'sandwich', ndbNo: '9003', portionDesc: 'g', portionGrams: 31.25 },
       { name: 'scallions', quantity: '2 tsp chopped', section: 'sandwich', ndbNo: '11291', portionDesc: 'g', portionGrams: 4.0 },
@@ -4116,7 +4116,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with potato chips, a dill pickle, or a simple green salad.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Tuna Salad', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
+      { key: 'sandwich', label: 'Tuna Salad', cookingMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
   {
