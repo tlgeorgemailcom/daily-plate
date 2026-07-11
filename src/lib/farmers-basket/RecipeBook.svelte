@@ -313,7 +313,10 @@
     const label = meta?.label || (sectionKey.charAt(0).toUpperCase() + sectionKey.slice(1));
     // Use prepMethod for the display label — it reflects what the cook does at this step.
     // cookingMethod is for physics only and should not appear in the section header.
-    const rawMethod = meta?.prepMethod ?? '';
+    // Bundle may store this as 'prepMethod' (camelCase) or 'prep_method' (snake_case).
+    const rawMethod = (meta as Record<string, unknown>)?.['prep_method'] as string
+      ?? (meta as Record<string, unknown>)?.['prepMethod'] as string
+      ?? '';
     const display = rawMethod in SECTION_METHOD_LABEL
       ? SECTION_METHOD_LABEL[rawMethod]
       : rawMethod || null;
