@@ -781,7 +781,7 @@ SAND_002,3,cheese_american,2 oz American cheese (sliced),56.7,21.0,56.0,cheese,c
 SAND_003,1,bread_white_commercial,2 slices (30g each),60.0,50.0,70.0,bread_butter,bread_butter,false,,
 SAND_003,2,butter_salted,1 tbsp salted butter (softened),14.2,7.0,21.0,bread_butter,bread_butter,false,,
 SAND_003,3,cheese_cheddar,2 oz Cheddar cheese (shredded),56.7,21.0,56.0,cheese,cheese,false,,
-SAND_004,1,bacon_cooked_pan_fried,3 strips,34.5,23.0,46.0,bacon,bacon,false,,
+SAND_004,1,bacon_raw_cured,3 slices raw,90.0,60.0,120.0,bacon,bacon,false,,
 SAND_004,2,bread_white_commercial,2 slices (25g each),50.0,44.0,56.0,bread,bread,false,,
 SAND_004,3,mayonnaise,1½ tbsp,21.0,14.0,28.0,assembly,assembly,false,,
 SAND_004,4,lettuce_iceberg_raw,1 large leaf (15g),15.0,15.0,40.0,assembly,assembly,false,,
