@@ -6222,7 +6222,7 @@ export const LEVELS: Level[] = [
       { name: 'ground black pepper', quantity: 'pinch (0.1g)', section: 'eggs', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.1 },
       { name: 'croissant', quantity: '1 large (67g)', section: 'assembly', ndbNo: '18239', portionDesc: 'g', portionGrams: 67.0 },
       { name: 'sharp cheddar cheese', quantity: '1 slice (21g)', section: 'assembly', ndbNo: '1270', portionDesc: 'g', portionGrams: 21.0 },
-      { name: 'bacon', quantity: '2 strips (23g)', section: 'assembly', ndbNo: '10862', portionDesc: 'g', portionGrams: 23.0 }
+      { name: 'cooked bacon', quantity: '2 strips (23g)', section: 'assembly', ndbNo: '10862', portionDesc: 'g', portionGrams: 23.0 }
     ],
     recipeInstructions: [
       'Melt the butter in a non-toxic nonstick skillet over medium-low heat. Whisk the eggs with salt and pepper, pour into the pan, and scramble gently until just set. Remove from heat while still slightly glossy.',
