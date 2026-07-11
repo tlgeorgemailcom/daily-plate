@@ -311,7 +311,9 @@
     if (!sectionKey) return '';
     const meta = sectionsMeta?.find((s) => s.key === sectionKey);
     const label = meta?.label || (sectionKey.charAt(0).toUpperCase() + sectionKey.slice(1));
-    const rawMethod = meta?.cookingMethod ?? '';
+    // Use prepMethod for the display label — it reflects what the cook does at this step.
+    // cookingMethod is for physics only and should not appear in the section header.
+    const rawMethod = meta?.prepMethod ?? '';
     const display = rawMethod in SECTION_METHOD_LABEL
       ? SECTION_METHOD_LABEL[rawMethod]
       : rawMethod || null;

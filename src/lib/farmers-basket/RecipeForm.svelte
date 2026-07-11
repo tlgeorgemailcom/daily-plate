@@ -1118,7 +1118,7 @@
           // or when no real heat exists at the recipe level.
           // Exception: quiche pattern — all sections are raw-assembled but a real
           // oven bake applies to the whole dish (cookingMethod is a true heat like 'Bake').
-          const nonRawSections = sections.filter(sec => sec.prepMethod && sec.prepMethod !== 'none' && sec.prepMethod !== 'finish');
+          const nonRawSections = sections.filter(sec => sec.prepMethod && sec.prepMethod !== 'none' && sec.prepMethod !== 'finish' && sec.prepMethod !== 'raw');
           const hasAnySectionHeat = nonRawSections.length > 0;
           const allSectionsRaw = nonRawSections.length === 0;
           const primaryIsRawOrEmpty = !cookingMethod || cookingMethod === 'No heat';
@@ -1841,7 +1841,7 @@
     }
     if (nextSections) {
       sections = nextSections;
-      const nonRawSecs = nextSections.filter(sec => sec.prepMethod && sec.prepMethod !== 'none' && sec.prepMethod !== 'finish');
+      const nonRawSecs = nextSections.filter(sec => sec.prepMethod && sec.prepMethod !== 'none' && sec.prepMethod !== 'finish' && sec.prepMethod !== 'raw');
       const hasAnySectionHeat = nonRawSecs.length > 0;
       const allSectionsRaw = nonRawSecs.length === 0;
       const primaryIsRawOrEmpty = !cookingMethod || cookingMethod === 'No heat';
