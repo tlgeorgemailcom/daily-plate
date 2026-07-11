@@ -300,7 +300,7 @@
   // Section headers use pipeline term as-is (fried, baked, pan grilled…)
   // with only one transformation: 'raw' → 'Unheated'.
   const SECTION_METHOD_LABEL: Record<string, string | null> = {
-    'raw': 'Unheated',
+    'raw': 'unheated',
     '':    null,
   };
 
@@ -1687,9 +1687,9 @@
       'pan grilled': 'Pan grill',
       'grilled':     'Grill',
       'fried':       'Fry',
-      'raw':         'Unheated',
-      'steamed':     'Unheated',
-      'microwave':   'Unheated',
+      'raw':         'unheated',
+      'steamed':     'unheated',
+      'microwave':   'unheated',
       'finish':      'Added after cooking',
     };
     return map[raw.toLowerCase()] ?? raw;

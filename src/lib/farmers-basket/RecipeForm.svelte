@@ -216,11 +216,11 @@
       'pan grilled': 'Pan grill',
       'grilled':     'Grill',
       'broiled':     'Broil',
-      'raw':         'Unheated',
-      'no heat':     'Unheated',
-      'noheat':      'Unheated',
-      'none':        'Unheated',
-      'finish':      'Unheated',
+      'raw':         'unheated',
+      'no heat':     'unheated',
+      'noheat':      'unheated',
+      'none':        'unheated',
+      'finish':      'unheated',
     };
     return MAP[m] ?? (m.charAt(0).toUpperCase() + m.slice(1));
   }
