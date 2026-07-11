@@ -45,33 +45,31 @@ Beans | 3 min | pan grilled
 
 
 16. Burrito with beans and cheese
-Need to separate burrito from beans creating 3 preps
+No top bar
 Burrito | 1 min | pan grilled
 Beans | 3 min | pan grilled
 Cheese | no heat
 
 
 17. Burrito with cheese
-Need to separate into 2 preps
+Top bar blank
 Prep: Burrito | 1 min | pan grilled
 Prep: cheese | no heat
 
 18. Egg burrito | no primary
-Need to separate Egg burrito into 2 preps
+Top bar blank
 Prep: Burrito | 1 min | pan grilled
 Prep: Eggs | 3 min | pan grilled
 
 
 19. Beef and cheese burrito
 Prep: Ground beef | 6 min | pan grilled
-Current Burrito assembly should be split into 2 preps, Burrito and Cheese
-Prep: Burrito | 1 min | pan grilled
+Prep: Flour tortilla | 1 min | pan grilled
 Prep: Cheese | no heat
 
 
 20. Breakfast burrito with eggs, cheese, and potatoes
-Currently Breakfast burrito with eggs, cheese, and potatoes should be split as below
-Prep: Burrito | 1 min | pan grilled
+Prep: Flour tortilla | 1 min | pan grilled
 Prep: Eggs | 2 min | fried
 Prep: Cheese | no heat
 Prep: Potatoes | 9 min | fried
@@ -104,25 +102,30 @@ Prep: Bacon and cheese filling | no heat
 
 30. Crustless Quiche Lorraine | 375 | 37 min | Bake
 
-31. Frittata Herbs and Cheese | 6 min | Pan Grill
+31. Frittata Herbs and Cheese
+Cook= Broil | Cook (min)=4
+Prep: Frittata Herbs and Cheese | 6 min | Pan Grill
 
 32. Avocado Toast Basic
 
 33. Avocado Toast Tomato and Egg
-Currently has Avocado Toast Tomato and Egg: needs a spilt
+Top bar blank
 Prep: Avocado toast tomato | no heat
 Prep: Egg | 4 min | simmer (lid off)
 
 
 34. Croissant Egg & Cheese Sandwich
+Top bar blank
 Prep: Eggs | 2 min | pan grilled
 Prep: Assembly | no heat
 
 35. Croissant Bacon, Egg & Cheese Sandwich
+top bar blank
 Prep: Eggs | 2 min | pan grilled
 Prep: Assembly | no heat
 
 36. Croissant Sausage, Egg & Cheese Sandwich
+Top bar blank
 Prep: Sausage | 3 min | pan grilled
 Prep: Eggs | 3 min | pan grilled
 Prep: Assembly | no heat
@@ -130,6 +133,7 @@ Prep: Assembly | no heat
 
 
 37. Croissant Ham, Egg & Cheese Sandwich
+Top bar blank
 Prep: Ham | 2 min | pan grilled
 Prep: Eggs  | 2 min | pan grilled
 Prep: Assembly | no heat
@@ -152,8 +156,9 @@ Prep: Assembly | no heat
 45.Belgian Waffle | 5 min | Grill
 
 46. Huevos Rancheros
+Top bar blank
 Prep: Slasa Ranchera | 13 min | Pan grilled
-Needs 2 preps with ingredient removed from Assembly: Tortillas and Eggs
+Assembly: Tortillas and Eggs
 Prep: Tortillas | 2 min | fried
 Prep: Eggs | 2 min | fried
 Prep: Assembly | no heat
