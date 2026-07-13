@@ -63,6 +63,8 @@ export const BINDING: Record<string, number> = {
   fried_meat:         0.272, // fried ground meat (375°F×8min → yfw=0.73)
   fried_potato:       0.750, // fried potato high surface area (375°F×10min → yfw=0.25)
   grilled_batter:     0.408, // waffle-iron grilled batter (375°F×4min → yfw=0.62)
+  pan_grilled_chicken: 0.216, // pan-grilled chicken breast (212°F×11min → yfw=0.80)
+                              // NDB 5062 (raw) / NDB 5063 (fried) USDA pair
   // ── Oven-baked proteins ──────────────────────────────────────────────────
   // Calibrated from USDA raw/cooked NDB pairs; use oven stages (cook_stages).
   baked_pork:         0.880, // slow-roasted pork shoulder/butt (300°F×100min → yfw=0.60)
