@@ -309,7 +309,7 @@
     sectionsMeta: Level['sections'],
   ): string {
     if (!sectionKey) return '';
-    const meta = sectionsMeta?.find((s) => s.key === sectionKey);
+    const meta = sectionsMeta?.find((s) => ((s as Record<string, unknown>)['section_key'] ?? s.key) === sectionKey);
     const label = meta?.label || (sectionKey.charAt(0).toUpperCase() + sectionKey.slice(1));
     // Use prepMethod for the display label — it reflects what the cook does at this step.
     // cookingMethod is for physics only and should not appear in the section header.
