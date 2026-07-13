@@ -232,10 +232,25 @@ def _build_payload(rid: str, recipes, ings, ledger, instrs, sections_map) -> dic
         separators=(",", ":"),
     ) if sections_list else None
 
-    # cook_minutes and cook_temp_f are direct values from recipes.csv columns.
-    # No derivation — these are explicit top-bar data inputs.
+    # cook_minutes and cook_temp_f: auto-derive from the primary cook section
+    # (the section with prep_method='' and cook_method matching recipe.cooking_method)
+    # when not explicitly set in recipes.csv.  This keeps recipes.csv and recipe_sections.csv
+    # in sync automatically — authoring only needs to set boil_stages on the primary section.
     cook_minutes_val: int | None = rec.cook_minutes
     cook_temp_f_val:  int | None = rec.cook_temp_f
+    if sections_list and rec.cooking_method:
+        for s in sections_list:
+            if (s.prep_method or '').strip() in ('', 'raw') and s.cook_method == rec.cooking_method:
+                # Primary section found — derive cook_minutes from boil_stages
+                derived_min = _parse_boil_minutes(s.boil_stages) if s.boil_stages else None
+                if derived_min:
+                    cook_minutes_val = derived_min
+                # Derive cook_temp_f from first cook_stage if present
+                if s.cook_stages and not cook_temp_f_val:
+                    parsed = _parse_cook_stages(s.cook_stages)
+                    if parsed:
+                        cook_temp_f_val = parsed[0].get("tempF")
+                break
 
     # v3 owns all dev recipe columns except game/identity keys (food_word, category,
     # dietary_category, serving_label, servings, submitted_by).
