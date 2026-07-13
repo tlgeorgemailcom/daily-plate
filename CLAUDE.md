@@ -102,6 +102,20 @@ python recipes_v3/tools/generate_bundle.py               # write src/lib/farmers
 ```
 Always commit `src/lib/farmers-basket/generated-levels.ts` after generating. (`recipes_bundle.json` is a legacy name — the current output file is `generated-levels.ts`.)
 
+**Unlocking a locked section (converting to physics fill_class) — standard workflow (July 2026):**
+```
+# Step 1 — update recipe_sections.csv AND clear cooking_method in recipes.csv in the same script:
+#   - recipe_sections.csv: set pm=<cook_method>, clear yield_factor_water, set filling_class, set boil_stages or cook_stages
+#   - recipes.csv: set cooking_method='' (blank top bar) — DO THIS IN THE SAME SCRIPT RUN, never separately
+# Step 2 — build and verify yfw matches locked baseline:
+python recipes_v3/tools/build_all.py --recipe RECIPE_ID
+# Step 3 — upload to Turso:
+python recipes_v3/tools/upload.py --recipe RECIPE_ID --commit
+# Step 4 — commit and push (no generate_bundle.py needed — RecipeBook now reads prep_method from Turso):
+git add recipes_v3/data/recipe_sections.csv recipes_v3/data/recipes.csv && git commit -m "..." && git push
+```
+**Existing fill classes (no NDB pair analysis needed):** `pan_grilled_chicken` (chicken/turkey/fish, pan grilled 11 min), `fried_chicken` (fried battered chicken, 11 min), `baked_pork` (pork shoulder/butt, oven baked), `braised_beef` (beef brisket, covered braise), `fried_meat` (ground meat/sausage, fried), `simmer_sauce` (sauces/gravies, simmer). When spec says "Top bar: blank", `cooking_method` must be cleared — never skip this step.
+
 **⚠️ `recipes_v3/output/builds/` is in `.gitignore` — do NOT commit build JSONs.** As of July 2026, the `/api/recipes/v3-build/` API reads the full 150-nutrient per-100g panel directly from Turso's `nutrition_json` column (written by `upload.py --commit`). Build JSONs are local pipeline artifacts only. Never force-add or manually commit files from `recipes_v3/output/`.
 
 **⚠️ `generate_bundle.py` silently excludes any recipe that has no rows in `recipe_instructions.csv`.** A recipe can pass audit and upload successfully yet be completely absent from the bundle and the UI. Always write instruction rows *before* generating the bundle.
