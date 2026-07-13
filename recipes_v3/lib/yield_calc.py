@@ -125,7 +125,7 @@ BINDING: dict[str, float] = {
     # Calibrated from USDA raw/cooked NDB pair; use oven stages (cook_stages).
     "baked_pork":         0.880, # slow-roasted pork shoulder/butt — ENTR_094/SAND_032: 300°F×100min → yfw=0.60
                                   # NDB 10080 (raw) / NDB 10082 (roasted) USDA pair
-    "baked_beef":         0.940, # slow-baked beef brisket — SAND_033: 275°F×100min → yfw=0.62
+    "braised_beef":        0.940, # slow-braised beef brisket — SAND_033: 275°F×100min → yfw=0.62
                                   # NDB 13803 (raw) / NDB 13804 (braised) USDA pair; 100-min partial cook
                                   # (full braise pair gives yfw=0.578 but requires B>1 at 100min; 0.62 used)
     # meringue: DO NOT USE — model invalid for surface-browning sections

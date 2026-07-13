@@ -67,7 +67,7 @@ export const BINDING: Record<string, number> = {
   // Calibrated from USDA raw/cooked NDB pairs; use oven stages (cook_stages).
   baked_pork:         0.880, // slow-roasted pork shoulder/butt (300°F×100min → yfw=0.60)
                              // NDB 10080 (raw) / NDB 10082 (roasted) USDA pair
-  baked_beef:         0.940, // slow-baked beef brisket (275°F×100min → yfw=0.62)
+  braised_beef:        0.940, // slow-braised beef brisket (275°F×100min → yfw=0.62)
                              // NDB 13803 (raw) / NDB 13804 (braised) USDA pair; 100-min partial cook
   // meringue: NOT included — model invalid for surface-browning sections.
   // Never pass 'meringue' to this function. inferFillingClass() never emits it.
