@@ -121,6 +121,10 @@ BINDING: dict[str, float] = {
     "fried_meat":         0.272, # fried ground meat — BKFST_015 sausage: 375°F×8min → yfw=0.73
     "fried_potato":       0.750, # fried potato (high surface area) — BKFST_013 hash browns: 375°F×10min → yfw=0.25
     "grilled_batter":     0.408, # waffle-iron grilled batter — BKFST_014 waffle: 375°F×4min → yfw=0.62
+    # ── Oven-baked proteins ────────────────────────────────────────────────────
+    # Calibrated from USDA raw/cooked NDB pair; use oven stages (cook_stages).
+    "baked_pork":         0.880, # slow-roasted pork shoulder/butt — ENTR_094/SAND_032: 300°F×100min → yfw=0.60
+                                  # NDB 10080 (raw) / NDB 10082 (roasted) USDA pair
     # meringue: DO NOT USE — model invalid for surface-browning sections
 }
 
