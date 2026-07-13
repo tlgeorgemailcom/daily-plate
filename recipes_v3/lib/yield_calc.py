@@ -124,6 +124,8 @@ BINDING: dict[str, float] = {
     "pan_grilled_chicken": 0.216, # pan-grilled chicken breast — SAND_034: 212°F×11min → yfw=0.80
                                   # NDB 5062 (raw) / NDB 5063 (fried) USDA pair; full-cook pair yfw=0.548 (B>1)
                                   # 212°F = default stovetop temp for pan grilled in build.py
+    "fried_chicken":       0.195, # deep-fried battered chicken breast — SAND_035: 212°F×11min → yfw=0.82
+                                  # NDB 5062 (raw) / NDB 5063 (fried) USDA pair; batter crust traps moisture
     # ── Oven-baked proteins ────────────────────────────────────────────────────
     # Calibrated from USDA raw/cooked NDB pair; use oven stages (cook_stages).
     "baked_pork":         0.880, # slow-roasted pork shoulder/butt — ENTR_094/SAND_032: 300°F×100min → yfw=0.60
