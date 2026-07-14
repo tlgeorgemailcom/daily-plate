@@ -735,7 +735,11 @@ def _build_recipe_multi(
     # labelled "multi" even if every wrapper section reads cook_method=raw, so the UI
     # presents them as assembled dishes rather than a single raw food.
     has_composite_section = any(s.source_recipe for s in sections)
-    methods_used = sorted({s.cook_method for s in sections})
+    # Finish sections (prep_method='finish') are "added after cooking" — their
+    # cook_method='raw' must not bleed into the dish-level method label. Exclude
+    # them so recipes like Croque Madame (finish egg) and Hot Brown (finish bacon)
+    # correctly label as 'braise' / 'broil' rather than 'multi'.
+    methods_used = sorted({s.cook_method for s in sections if s.prep_method != 'finish'})
     if has_composite_section:
         dish_method_label = "multi"
     elif (
