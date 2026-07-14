@@ -145,7 +145,7 @@ SAND_060,BBQBACONBURGER,BBQ Bacon Burger,sandwiches & burgers,all,dish,,15 min,1
 SAND_061,TURKEYBURGER,Turkey Burger,sandwiches & burgers,pollo,builtin,,,1 burger,1,Rule D,,,,1.0,1.0,,,1.0,,active,,,,,,
 SAND_062,VEGGIEBURGER,Veggie Burger,sandwiches & burgers,veggie,dish,,15 min,1 burger,1,Rule D,,,,1.00,1.00,,,1.00,,,,Rule D — no canonical match used.,Veggie Burger computed from SR Legacy values only.,,,
 SAND_063,HOTDOG,Classic Hot Dog,sandwiches & burgers,all,dish,,10 min,1 hot dog,1,Rule D,,,,1.00,1.00,,,1.00,,,,Rule D — no canonical match used.,Classic Hot Dog computed from SR Legacy values only.,,,
-SAND_064,CHICAGOSTYLEHOTDOG,Chicago Style Hot Dog,sandwiches & burgers,all,dish,,10 min,1 hot dog,1,Rule D,grilled,,,1.00,1.00,,,1.00,,,,Rule D — no canonical match used.,Chicago Style Hot Dog computed from SR Legacy values only.,,,
+SAND_064,CHICAGOSTYLEHOTDOG,Chicago Style Hot Dog,sandwiches & burgers,all,dish,,10 min,1 hot dog,1,Rule D,,,,1.00,1.00,,,1.00,,,,Rule D — no canonical match used.,Chicago Style Hot Dog computed from SR Legacy values only.,,,
 SAND_065,CHILIDOG,Chili Dog,sandwiches & burgers,all,dish,,10 min,1 hot dog,1,Rule D,grilled,,,1.00,1.00,,,1.00,,,,Rule D — no canonical match used.,Chili Dog computed from SR Legacy values only.,,,
 SAND_066,CORNDOG,Corn Dog,sandwiches & burgers,all,dish,,15 min,1 corn dog,6,Rule D,fried,,,0.85,1.00,,,1.00,,,,Rule D — no canonical match used.,Corn Dog computed from SR Legacy values only.,,,
 SAND_067,SLAWDOG,Slaw Dog,sandwiches & burgers,all,dish,,10 min,1 hot dog,1,Rule D,grilled,,,1.00,1.00,,,1.00,,,,Rule D — no canonical match used.,Slaw Dog computed from SR Legacy values only.,,,
