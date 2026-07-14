@@ -740,7 +740,20 @@ def _build_recipe_multi(
     # them so recipes like Croque Madame (finish egg) and Hot Brown (finish bacon)
     # correctly label as 'braise' / 'broil' rather than 'multi'.
     methods_used = sorted({s.cook_method for s in sections if s.prep_method != 'finish'})
-    if has_composite_section:
+    if (
+        recipe.cooking_method not in ("raw", "multi", "")
+        and recipe.cooking_method in methods_used
+    ):
+        # Declared primary cook method always wins — even for composite recipes
+        # that reference a stock/sauce child (has_composite_section=True). Those
+        # recipes are still simmered / baked / etc.; the component ref is just an
+        # ingredient, not a structural assembly. Only fall through to the composite
+        # 'multi' label when no primary method is declared.
+        dish_method_label = recipe.cooking_method
+    elif has_composite_section:
+        # Phase 8c: composite recipes with no declared top-bar cook method are
+        # labelled "multi" so the UI presents them as assembled dishes rather
+        # than a single raw food.
         dish_method_label = "multi"
     elif (
         len(methods_used) == 1
