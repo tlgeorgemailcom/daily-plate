@@ -228,6 +228,12 @@ export async function getLevelsWithOverrides(): Promise<Level[]> {
             yieldFactorFat:   override.nutritionJson.yieldFactorFat   ?? level.nutritionJson?.yieldFactorFat,
           }
         : level.nutritionJson,
+      // Promote sections from Turso's nutritionJson (snake_case section_key / prep_method)
+      // over the stale bundle sections (camelCase key / prepMethod). This ensures
+      // formatSectionHeader reads the current prep_method after an upload without
+      // requiring a bundle regeneration. Falls back to bundle sections when Turso
+      // has no sections data (old recipes without multi-section builds).
+      sections: (override.nutritionJson as Record<string, unknown> | undefined)?.sections as Level['sections'] ?? level.sections,
       imageUrl: override.imageUrl ?? level.imageUrl
     } as Level;
   });
