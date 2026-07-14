@@ -122,16 +122,15 @@
     window.addEventListener('resize', updateGameScale);
     window.addEventListener('orientationchange', updateGameScale);
     
-    // Premium users: load Turso overrides, images, and admin-added recipes
-    // Guest/free users: use TypeScript LEVELS only (zero Turso reads)
-    if (get(isPremium)) {
-      try {
-        const levelsWithOverrides = await getLevelsWithOverrides();
-        game.setLevelsWithOverrides(levelsWithOverrides);
-      } catch (err) {
-        console.warn('Could not load level overrides:', err);
-      }
-    } else {
+    // All users: load Turso overrides so recipe section headers (prep_method,
+    // cook_method) and nutrition data are always current. The bundle still drives
+    // the game canvas synchronously; this fetch overlays recipe display data.
+    // The guest paywall is the Basket game itself, not the data source.
+    try {
+      const levelsWithOverrides = await getLevelsWithOverrides();
+      game.setLevelsWithOverrides(levelsWithOverrides);
+    } catch (err) {
+      console.warn('Could not load level overrides, using bundle:', err);
       game.setLevelsWithOverrides(getCanonicalLevels());
     }
 
