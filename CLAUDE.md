@@ -1,6 +1,22 @@
 # Daily Food Chain — AI Handoff
 
 ---
+
+> ## 🛑 STOP — READ THIS BEFORE ANY RECIPE WORK
+>
+> **If you are about to build, unlock, audit, or fix a recipe — READ `docs/recipe_development.md` FIRST.**
+>
+> Key rules that are easy to get wrong and live only in that file:
+> - **Section-first physics**: `cm` (cook_method) is the **second-stage physics driver**, not a display label. Every ingredient that participates in a cook step must have the correct `cm` on its section. A `cm=raw` section receives zero heat treatment — no evaporation, no retention reduction.
+> - **Two-stage unlock rule**: `pm` = what that section's ingredients do BEFORE assembly. `cm` = the top bar's assembled cook that applies to ALL non-finish sections simultaneously.
+> - **Top bar blank** → `pm=cm=<same method>` on all sections, `cooking_method=''` in recipes.csv.
+> - **Top bar non-blank** → ALL non-finish sections get `cm=<top_bar_method>` with `cook_stages=tempF:minutes`; each section's `pm` and `boil_stages` remain its own prep step.
+> - **`pm=''` (unheated) + `cm=<method>`** = ingredient is assembled cold and participates in the assembled cook only — this is correct for cheese on a grilled cheese, condiments on a broiled sub, etc.
+> - **Never merge ingredients into one section to "make physics work"** — fix `cm` instead.
+>
+> CLAUDE.md = pipeline internals + accumulated lessons. `docs/recipe_development.md` = authoring procedure source of truth.
+
+---
 ## 📂 External Reference Files
 | Topic | File |
 |---|---|
