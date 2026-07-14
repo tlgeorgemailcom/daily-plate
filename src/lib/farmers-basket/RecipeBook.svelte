@@ -2186,6 +2186,21 @@
               
               {#if selectedLevel.recipeIngredients && selectedLevel.recipeIngredients.length > 0}
                 <div class="full-ingredients">
+                  {@const _cookMethod = ((selectedLevel.nutritionJson as Record<string, unknown>)?.cookingMethod as string) ?? ''}
+                  {@const _allSecs = ((selectedLevel.sections ?? (selectedLevel.nutritionJson as Record<string, unknown>)?.sections) ?? []) as Record<string, unknown>[]}
+                  {@const _primarySec = _cookMethod ? _allSecs.find((s) => (!s['prep_method'] || s['prep_method'] === 'raw') && s['cook_method'] === _cookMethod) : null}
+                  {@const _cookMins = _primarySec ? ((_primarySec['cook_stages'] as {tempF:number,minutes:number}[])?.[0]?.minutes ?? (_primarySec['boil_minutes'] as number) ?? 0) : 0}
+                  {@const _cookTempF = (_primarySec?.['cook_stages'] as {tempF:number,minutes:number}[])?.[0]?.tempF ?? 0}
+                  <div class="assembled-cook-line">
+                    <span class="assembled-cook-label">🍳 Final assembled cook:</span>
+                    {#if _cookMethod && _cookMethod !== 'raw' && _cookMethod !== 'multi'}
+                      <span class="assembled-cook-value">
+                        {_cookMethod.charAt(0).toUpperCase() + _cookMethod.slice(1)}{_cookMins > 0 ? ` | ${_cookMins} min` : ''}{_cookTempF > 300 ? ` | ${_cookTempF}°F` : ''}
+                      </span>
+                    {:else}
+                      <span class="assembled-cook-none">None</span>
+                    {/if}
+                  </div>
                   <span class="ingredients-label">📝 Full Ingredient List:</span>
                   {#each groupRecipeIngredients(selectedLevel) as group}
                     {#if group.section}
@@ -3345,6 +3360,26 @@
     font-size: 0.85rem;
     color: #888;
     font-weight: bold;
+  }
+
+  .assembled-cook-line {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 6px;
+    font-size: 0.85rem;
+  }
+  .assembled-cook-label {
+    color: #888;
+    font-weight: bold;
+  }
+  .assembled-cook-value {
+    color: #e07b39;
+    font-weight: 600;
+  }
+  .assembled-cook-none {
+    color: #aaa;
+    font-style: italic;
   }
   
   .ingredient-icons {
