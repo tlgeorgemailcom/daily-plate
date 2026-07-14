@@ -207,7 +207,7 @@ SAND_040,assembly,Assembly,pan grilled,pan grilled,,1.00,,,1.00,,pan_grilled_chi
 SAND_041,assembly,Tuna melt,pan grilled,pan grilled,,1.00,,,1.00,,pan_grilled_chicken,,7,
 SAND_042,onion_saute,Sautéed onion,pan grilled,pan grilled,,1.00,,,1.00,,pan_grilled_chicken,,10,
 SAND_042,au_jus,Au jus,simmer,simmer,,1.00,,,1.00,,simmer_sauce,,4,
-SAND_042,assembly,Assembly,,grilled,,1.00,,,1.00,,pan_grilled_chicken,,3,
+SAND_042,assembly,Assembly,broil,broil,,1.00,,,1.00,,pan_grilled_chicken,,3,
 SAND_043,au_jus,Au jus,raw,raw,1.00,1.00,,,1.00,,,,,
 SAND_043,sweet_peppers,Sweet peppers,raw,pan grilled,1.00,1.00,,,1.00,,,,,
 SAND_043,assembly,Assembly,raw,raw,1.00,1.00,,,1.00,,,,,
