@@ -241,8 +241,14 @@ def _build_payload(rid: str, recipes, ings, ledger, instrs, sections_map) -> dic
     if sections_list and rec.cooking_method:
         for s in sections_list:
             if (s.prep_method or '').strip() in ('', 'raw') and s.cook_method == rec.cooking_method:
-                # Primary section found — derive cook_minutes from boil_stages
+                # Primary section found — derive cook_minutes.
+                # Stovetop recipes: use boil_stages (minutes at temp).
+                # Oven/broil recipes: use cook_stages[0].minutes (no boil_stages set).
                 derived_min = _parse_boil_minutes(s.boil_stages) if s.boil_stages else None
+                if derived_min is None and s.cook_stages:
+                    parsed_for_min = _parse_cook_stages(s.cook_stages)
+                    if parsed_for_min:
+                        derived_min = parsed_for_min[0].get("minutes")
                 if derived_min:
                     cook_minutes_val = derived_min
                 # Derive cook_temp_f from first cook_stage if present
