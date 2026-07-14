@@ -2185,12 +2185,12 @@
               </div>
               
               {#if selectedLevel.recipeIngredients && selectedLevel.recipeIngredients.length > 0}
+                {@const _cookMethod = ((selectedLevel.nutritionJson as Record<string, unknown>)?.cookingMethod as string) ?? ''}
+                {@const _allSecs = ((selectedLevel.sections ?? (selectedLevel.nutritionJson as Record<string, unknown>)?.sections) ?? []) as Record<string, unknown>[]}
+                {@const _primarySec = _cookMethod ? _allSecs.find((s) => (!s['prep_method'] || s['prep_method'] === 'raw') && s['cook_method'] === _cookMethod) : null}
+                {@const _cookMins = _primarySec ? ((_primarySec['cook_stages'] as {tempF:number,minutes:number}[])?.[0]?.minutes ?? (_primarySec['boil_minutes'] as number) ?? 0) : 0}
+                {@const _cookTempF = (_primarySec?.['cook_stages'] as {tempF:number,minutes:number}[])?.[0]?.tempF ?? 0}
                 <div class="full-ingredients">
-                  {@const _cookMethod = ((selectedLevel.nutritionJson as Record<string, unknown>)?.cookingMethod as string) ?? ''}
-                  {@const _allSecs = ((selectedLevel.sections ?? (selectedLevel.nutritionJson as Record<string, unknown>)?.sections) ?? []) as Record<string, unknown>[]}
-                  {@const _primarySec = _cookMethod ? _allSecs.find((s) => (!s['prep_method'] || s['prep_method'] === 'raw') && s['cook_method'] === _cookMethod) : null}
-                  {@const _cookMins = _primarySec ? ((_primarySec['cook_stages'] as {tempF:number,minutes:number}[])?.[0]?.minutes ?? (_primarySec['boil_minutes'] as number) ?? 0) : 0}
-                  {@const _cookTempF = (_primarySec?.['cook_stages'] as {tempF:number,minutes:number}[])?.[0]?.tempF ?? 0}
                   <div class="assembled-cook-line">
                     <span class="assembled-cook-label">🍳 Final assembled cook:</span>
                     {#if _cookMethod && _cookMethod !== 'raw' && _cookMethod !== 'multi'}
