@@ -783,7 +783,7 @@ SAND_073,chicken,Chicken,pan grilled,pan grilled,,,,,1.0,,pan_grilled_chicken,,1
 SAND_073,assembly,Assembly,,raw,,,,,1.0,,,,,
 SAND_074,patties,Patties,pan grilled,pan grilled,,,,,1.0,,fried_meat,,5,
 SAND_074,toppings,Toppings,,raw,,,,,1.0,,,,,
-SAND_075,pinwheels,Pinwheels,,raw,1.0,1.0,1.0,1.0,1.0,,,,,
+SAND_075,pinwheels,Pinwheels,,raw,,,,,1.0,,,,,
 SAND_076,shrimp,Shrimp,,pan grilled,0.82,1.0,1.0,1.0,1.0,,,,,
 SAND_076,salad,Salad,,raw,1.0,1.0,1.0,1.0,1.0,,,,,
 SAND_077,sandwich,Sandwich,,raw,1.0,1.0,1.0,1.0,1.0,,,,,
