@@ -4,11 +4,13 @@
 ## 📂 External Reference Files
 | Topic | File |
 |---|---|
-| Recipe authoring steps, decision gates, `qty_display` patterns | `docs/recipe_development.md` ← **start here** |
+| Recipe authoring steps, decision gates, `qty_display` patterns, **section-first physics (pm vs cm), two-stage unlock rules** | `docs/recipe_development.md` ← **start here for every unlock session** |
 | Pipeline math spec (phases, CSV schemas, authoring runbook §17) | `docs/v3.md` |
 | Sandwich planning | `docs/sandwiches.md` |
 | Sauce/condiment planning | `docs/sauces_condiments.md` |
 | Recipe master list | `docs/recipe_list.md` |
+
+> **CLAUDE.md documents pipeline internals, accumulated lessons, and cross-references. It is NOT the source of truth for authoring procedure. `docs/recipe_development.md` is. Read it before every unlock session.**
 
 ## 🗂 In-File Index
 | Section | What's there |
@@ -103,10 +105,16 @@ python recipes_v3/tools/generate_bundle.py               # write src/lib/farmers
 Always commit `src/lib/farmers-basket/generated-levels.ts` after generating. (`recipes_bundle.json` is a legacy name — the current output file is `generated-levels.ts`.)
 
 **Unlocking a locked section (converting to physics fill_class) — standard workflow (July 2026):**
+
+> **⚠️ Before unlocking ANY recipe with a non-blank top bar, read `docs/recipe_development.md` §"Section-first computation" and §"CRITICAL: Section-first computation — the core architectural rule".** The two-stage physics pattern (`pm` = section's prep step, `cm` = top bar assembled cook) is defined there, not here.
 ```
 # Step 1 — update recipe_sections.csv AND clear cooking_method in recipes.csv in the same script:
-#   - recipe_sections.csv: set pm=<cook_method>, clear yield_factor_water, set filling_class, set boil_stages or cook_stages
-#   - recipes.csv: set cooking_method='' (blank top bar) — DO THIS IN THE SAME SCRIPT RUN, never separately
+#   TWO-STAGE RULE: pm=<prep step cook method>, cm=<top bar cook method (= assembled cook)>
+#   - If "Top bar: blank" → pm=cm=<same cook method>, clear cooking_method in recipes.csv
+#   - If "Top bar: Broil|3min" → ALL sections: pm=<their prep>, cm=broil, cook_stages=500:3
+#     (finish/bread sections added after cooking stay cm=raw)
+#   - recipe_sections.csv: set pm/cm as above, clear yield_factor_water, set filling_class, set boil_stages
+#   - recipes.csv: set cooking_method=<top bar method> or '' if blank
 # Step 2 — build and verify yfw matches locked baseline:
 python recipes_v3/tools/build_all.py --recipe RECIPE_ID
 # Step 3 — upload to Turso:
