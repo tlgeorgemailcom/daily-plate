@@ -890,6 +890,17 @@ These patterns have caused repeated bugs. Read before touching `RecipeForm.svelt
 - `per100g` from the build JSON is for the audit comparison chart only — never to populate the form.
 - If Turso has an empty `cooking_method`, the form shows blank — intentional. Do not add derivation logic to guess the cook method from other sources.
 
+**`normalizeSection()` — single canonical section-mapping function (July 2026):**
+- Location: top of `<script>` in `RecipeForm.svelte`, just after the `RecipeSection` interface.
+- **Replaces three separate inline `.map()` blocks** that previously existed in: (1) the v3-build `$effect` handler, (2) `fillFromSuggestion`'s `v3Data.sections` path, (3) `fillFromSuggestion`'s `suggestion.sections` path. All three had independent (and divergent) `boilMinutes`/`prepTempF` derivation logic.
+- **Signature:** `normalizeSection(s: Record<string, unknown>, topCookMethod: string, autoLabel?: string | null): RecipeSection | null`
+- **`topCookMethod`** = the recipe-level `cooking_method` (top bar). Path 1 passes `data.cookMethod`; paths 2/3 pass `explicitCookMethod ?? ''`. This is needed to decide whether a section's `cook_method` is "owned" by the top bar (`return 'none'`) or displayed as the section's own pre-step.
+- **`boilMinutes` formula:** `bm || firstStage?.minutes` — uniform across all section types. For stovetop pre-steps `bm > 0` wins; for baked pre-steps (blind-bake crust) `bm = 0` so `firstStage.minutes` is the fallback. The old `prepIsBaked = cookM === 'baked'` fork was wrong because it checked `cook_method` (the assembled bake shared by all sections) instead of `prep_method` (the section's own pre-step). This caused all sections of assembled-bake recipes (e.g. SAND_079 Beef Empanadas) to show the oven time instead of the stovetop time. 8 sections across 7 recipes were affected (SAND_079 ×2, SWEET_001/002/005/007/008/035).
+- **`prepTempF`**: `(prepV === 'baked' || prepV === 'par-baked') ? firstStage?.tempF : undefined` — checks `prep_method`, not `cook_method`.
+- **Field reading priority**: always `snake_case ?? camelCase` (snake_case = Turso/CSV canonical; camelCase = legacy bundle format).
+- **Call sites** (each is one line): `data.sections.map(s => normalizeSection(s, data.cookMethod ?? '', autoLabel)).filter(...)`, `(suggestion.sections as any[]).map(s => normalizeSection(s, explicitCookMethod ?? '')).filter(...)`, `(v3Data.sections as Record<string,unknown>[]).map(s => normalizeSection(s, explicitCookMethod ?? '')).filter(...)`.
+- **fill_class requirement for fried/pan grilled sections:** Without a `fill_class`, `calc_yield_water` returns `yfw=1.0` for pan grilled/fried sections even when `boil_stages` is set. Always set `fill_class='pan_grilled_chicken'` for chicken/fish sections and `fill_class='fried_meat'` for ground meat/sausage/bacon sections. The `fill_class` plus `boil_stages` together trigger the stovetop evaporation path in `build.py` (line 592: `elif s.filling_class and (s.cook_stages or s.boil_stages)`). Discovered July 2026 during SALAD_002 unlock.
+
 ## Word Game Candidate Log
 
 Whenever a new `ingredient_key` is added to `ingredients_ledger.csv` or a new row is added to `food-portions-complete.csv`, log the word here for later review. At a suitable checkpoint, review the log and decide whether each word should be added to `src/lib/data/scrambled-words.csv` (USDA level) and/or `src/lib/data/scrambled-words-combined.csv` (FOODIE/FOODIE21 levels).
