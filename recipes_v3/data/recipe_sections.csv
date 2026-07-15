@@ -275,7 +275,7 @@ SAND_065,assembly,Assembly,,raw,,,,,1.00,,,,,
 SAND_066,corn_dog,Corn Dog,fried,fried,,,,,1.00,,fried_chicken,,3,
 SAUCE_001,onion,Onion and clove infusion,sub-simmer,simmer,,1.0,,,1.0,,simmer_sauce,,3,
 SAUCE_001,roux,Roux,pan grilled,simmer,,1.0,,,1.0,,pan_grilled_batter,,1,
-SAUCE_001,sauce,Sauce,simmer,simmer,,1.0,,,1.0,,simmer_sauce,,1,
+SAUCE_001,sauce,Sauce,,simmer,,1.0,,,1.0,,simmer_sauce,,20,
 SAUCE_001,finish,Finish,finish,raw,1.0,1.0,,,1.0,,,,,
 SAUCE_002,bechamel,Béchamel sauce,,raw,1.0,1.0,,,1.0,,,,,SAUCE_001
 SAUCE_002,cheese,Cheese for Mornay Sauce,grated,raw,1.0,1.0,,,1.0,,,,,
