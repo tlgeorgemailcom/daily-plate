@@ -368,7 +368,7 @@ SALAD_003,salad,Cobb Salad,,raw,1.0,1.0,1.0,1.0,1.0,,,,,
 SALAD_004,salad,Chef Salad,,raw,1.0,1.0,1.0,1.0,1.0,,,,,
 SALAD_005,salad,Greek Salad,,raw,1.0,1.0,1.0,1.0,1.0,,,,,
 SALAD_005,dressing,Italian Vinaigrette,,raw,1.0,1.0,1.0,1.0,1.0,,,,,SAUCE_017
-SALAD_006,beef,Beef,pan grilled,pan grilled,,0.593,1.0,1.0,1.0,,fried_meat,,7,
+SALAD_006,beef,Beef,pan grilled,pan grilled,,,1.0,1.0,1.0,,fried_ground_beef,,7,
 SALAD_006,salad,Taco Salad,,raw,1.0,1.0,1.0,1.0,1.0,,,,,
 SALAD_007,asparagus,Asparagus,boiled,boiled,,1.0,1.0,1.0,1.0,,,,4,
 SALAD_007,salad,Salad,,raw,1.0,1.0,1.0,1.0,1.0,,,,,
@@ -792,7 +792,7 @@ SAND_078,onion_pepper,Onion and bell pepper,pan grilled,simmer,,,,,1.0,,simmer_s
 SAND_078,tofu,Tofu,pan grilled,simmer,,,,,1.0,,pan_grilled_chicken,195:32,6,
 SAND_078,black_beans,Black beans,,simmer,,,,,1.0,,simmer_sauce,,32,
 SAND_078,assembly,Assembly,finish,raw,,,,,1.0,,,,
-SAND_080,dough,Dough,pan grilled,pan grilled,,1.0,1.0,1.0,1.0,,,,11,
+SAND_080,dough,Dough,pan grilled,pan grilled,,1.0,1.0,1.0,1.0,,pan_grilled_masa,,11,
 SAND_080,filling,Filling,,raw,1.0,1.0,1.0,1.0,1.0,,,,,
 PASTA_001,pasta,Pasta,,boiled,1.0,1.0,,,1.0,,,,,
 PASTA_001,marinara,Marinara Sauce,,raw,1.0,1.0,,,1.0,,,,,SAUCE_027
