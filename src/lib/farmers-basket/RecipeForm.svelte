@@ -71,6 +71,99 @@
     text: string;
   }
 
+  /**
+   * normalizeSection — single canonical mapping from any raw section object
+   * (snake_case from Turso/CSV, camelCase from bundle, or mixed) to RecipeSection.
+   *
+   * @param s              Raw section object from any source.
+   * @param topCookMethod  Recipe-level cooking_method (top bar). Used to decide
+   *                       whether a section's cook_method is "owned" by the top
+   *                       bar or displayed as the section's own pre-step.
+   * @param autoLabel      Optional label override (single-section recipes use the
+   *                       recipe name instead of the section_label from the CSV).
+   * @returns RecipeSection, or null when the key field is absent/empty.
+   *
+   * NOT YET WIRED IN — exists in parallel with the three inline .map() blocks
+   * so it can be verified before replacing them.
+   */
+  function normalizeSection(
+    s: Record<string, unknown>,
+    topCookMethod: string,
+    autoLabel?: string | null,
+  ): RecipeSection | null {
+    // ── key / label ────────────────────────────────────────────────────────────
+    const key = String(s.section_key ?? s.key ?? '');
+    if (!key) return null;
+    const label = String(autoLabel ?? s.section_label ?? s.label ?? '');
+
+    // ── cook method (physics driver, not shown in section header) ──────────────
+    const cookM = String(s.cook_method ?? s.cookMethod ?? s.cooking_method ?? 'raw');
+
+    // ── prep method (what the section does BEFORE the assembled cook) ──────────
+    const prepV = String(s.prep_method ?? s.prepMethod ?? '');
+    const prepMethod = ((): string => {
+      if (prepV && prepV !== 'raw') return prepV;                // explicit pre-step
+      const isBaked = cookM === 'baked' || cookM === 'par-baked';
+      if (!isBaked && cookM && cookM !== 'raw') {
+        // Non-baked cook_method: top bar set → top bar owns the heat ('none');
+        // top bar blank → section IS the cook, surface its method.
+        if (topCookMethod) return 'none';
+        return cookM;
+      }
+      return 'none';                                             // baked or raw → top bar owns
+    })();
+
+    // ── oven stages array (cook_stages preferred; stages as fallback) ──────────
+    const rawStages = Array.isArray(s.cook_stages) ? s.cook_stages
+                    : Array.isArray(s.stages)      ? s.stages
+                    : [];
+    const stages = (rawStages as Array<{ tempF: number; minutes: number }>);
+    const firstStage = stages[0] as { tempF: number; minutes: number } | undefined;
+
+    // ── boilMinutes: stovetop pre-step time; falls back to oven stage time ─────
+    // bm || firstStage.minutes covers every case uniformly:
+    //   stovetop pre-step (bm>0)  → uses bm
+    //   blind-baked section (bm=0) → falls back to firstStage.minutes
+    //   raw assembly (bm=0, no stages) → undefined
+    const bmRaw = s.boil_minutes ?? s.boilMinutes ?? 0;
+    const bm = typeof bmRaw === 'number' ? bmRaw : 0;
+    const boilMinutes: number | undefined = bm || firstStage?.minutes;
+
+    // ── prepTempF: only meaningful when the pre-step is itself a bake ──────────
+    const prepTempF = (prepV === 'baked' || prepV === 'par-baked')
+      ? (firstStage?.tempF ?? undefined)
+      : undefined;
+
+    // ── yield factors ─────────────────────────────────────────────────────────
+    const yfw = s.yield_factor_water  ?? s.yieldFactorWater;
+    const yff = s.yield_factor_fat    ?? s.yieldFactorFat;
+    const yfo = s.yield_factor_other  ?? s.yieldFactorOther;
+
+    // ── top-bar cook time / temp (single-section or top-bar-driven recipes) ───
+    const cookMinutes = (s.cook_minutes  ?? s.cookMinutes)  as number | undefined;
+    const cookTempF   = (s.cook_temp_f   ?? s.cookTempF)    as number | undefined;
+
+    // ── fill class ────────────────────────────────────────────────────────────
+    const fcRaw = String(s.fill_class ?? s.fillClass ?? '');
+    const fillClass = fcRaw || undefined;
+
+    return {
+      key,
+      label,
+      prepMethod,
+      cookingMethod: cookM,
+      yieldFactorWater:  typeof yfw === 'number' ? yfw : undefined,
+      yieldFactorFat:    typeof yff === 'number' ? yff : undefined,
+      yieldFactorOther:  typeof yfo === 'number' ? yfo : undefined,
+      boilMinutes,
+      prepTempF,
+      cookMinutes,
+      cookTempF,
+      stages: stages.length > 0 ? stages : undefined,
+      fillClass,
+    };
+  }
+
   interface PersistedNutritionJson {
     perServing?: {
       cal?: number;
@@ -1068,43 +1161,9 @@
           const autoLabel = data.sections.length === 1
             ? (recipeName || data.recipeName || data.sections[0].section_label)
             : null;
-          sections = data.sections.map((s) => {
-            const cookM = (typeof s.cook_method === 'string' ? s.cook_method : (s.cooking_method ?? '')) as string;
-            const prepV = (typeof s.prep_method === 'string' ? s.prep_method : '') as string;
-            // prepMethod for DISPLAY:
-            //  non-raw prep_method   → show the pre-step (e.g. simmer | 5 min)
-            //  raw/empty prep + non-baked cook_method, and cook_method does NOT match
-            //    the top bar → section IS that cook (e.g. Sausage Gravy sections)
-            //  raw/empty prep + cook_method matches top bar → 'none' (top bar owns it)
-            //  raw/empty prep + baked cook_method    → 'none' (top bar owns the bake)
-            const pm = (() => {
-              if (prepV && prepV !== 'raw') return prepV;
-              const isBaked = cookM === 'baked' || cookM === 'par-baked';
-              if (!isBaked && cookM && cookM !== 'raw') {
-                // Top bar set → top bar owns all heat, section shows no pre-step
-                // Top bar blank → section IS the cook, show its method
-                const topM = ((data.cookMethod ?? '') as string).toLowerCase();
-                if (topM) return 'none';
-                return cookM;
-              }
-              return 'none';
-            })();
-            const stageArr = Array.isArray(s.cook_stages) ? s.cook_stages as Array<{ tempF: number; minutes: number }> : [];
-            const firstStage = stageArr[0];
-            return {
-              key: s.section_key,
-              label: autoLabel ?? s.section_label,
-              prepMethod: pm,
-              cookingMethod: cookM || 'raw',
-              yieldFactorWater: s.yield_factor_water,
-              yieldFactorFat: s.yield_factor_fat,
-              yieldFactorOther: s.yield_factor_other,
-              boilMinutes: s.boil_minutes || firstStage?.minutes,
-              prepTempF: (prepV === 'baked' || prepV === 'par-baked') ? (firstStage?.tempF ?? undefined) : undefined,
-              stages: stageArr.length > 0 ? stageArr : undefined,
-              fillClass: s.fill_class ?? undefined,
-            };
-          });
+          sections = data.sections
+            .map(s => normalizeSection(s as Record<string, unknown>, (data.cookMethod ?? '') as string, autoLabel))
+            .filter((s): s is RecipeSection => s !== null);
           // If 2+ sections each have their own cook method, blank the recipe-level
           // primary cook — there's no single primary heat that applies to the whole dish.
           // Blank the primary cook bar whenever sections handle their own heat,
@@ -1755,48 +1814,13 @@
     if (!useV3Sections && Array.isArray(suggestion.sections) && suggestion.sections.length > 0) {
       // Turso sections_json: normalize snake_case (dev recipes) or camelCase
       // (player recipes) to the RecipeSection interface used by the form.
-      nextSections = (suggestion.sections as any[]).map((s) => ({
-        key: s.key ?? s.section_key ?? '',
-        label: s.label ?? s.section_label ?? '',
-        prepMethod: (() => { const v = s.prepMethod ?? s.cook_method ?? s.prep_method; return (!v || v === 'raw') ? 'none' : v; })(),
-        cookingMethod: s.cookingMethod ?? s.cook_method ?? s.cooking_method ?? 'baked',
-        yieldFactorWater: s.yieldFactorWater ?? s.yield_factor_water ?? undefined,
-        yieldFactorFat: s.yieldFactorFat ?? s.yield_factor_fat ?? undefined,
-        yieldFactorOther: s.yieldFactorOther ?? s.yield_factor_other ?? undefined,
-        boilMinutes: (() => { const stageArr = Array.isArray(s.cook_stages) ? s.cook_stages as Array<{tempF:number;minutes:number}> : (Array.isArray(s.stages) ? s.stages as Array<{tempF:number;minutes:number}> : []); const bm = s.boilMinutes ?? s.boil_minutes ?? 0; return (typeof bm === 'number' ? bm : 0) || stageArr[0]?.minutes; })(),
-        prepTempF: (() => { const stageArr = Array.isArray(s.cook_stages) ? s.cook_stages as Array<{tempF:number;minutes:number}> : (Array.isArray(s.stages) ? s.stages as Array<{tempF:number;minutes:number}> : []); const pm = s.prepMethod ?? s.prep_method ?? ''; return (pm === 'baked' || pm === 'par-baked') ? (stageArr[0]?.tempF ?? undefined) : undefined; })(),
-        cookMinutes: s.cookMinutes ?? s.cook_minutes ?? undefined,
-        cookTempF: s.cookTempF ?? s.cook_temp_f ?? undefined,
-        stages: s.stages ?? s.cook_stages ?? undefined,
-        fillClass: s.fillClass ?? s.fill_class ?? undefined,
-      })).filter((s: RecipeSection) => s.key);
+      nextSections = (suggestion.sections as any[])
+        .map(s => normalizeSection(s as Record<string, unknown>, explicitCookMethod ?? ''))
+        .filter((s): s is RecipeSection => s !== null);
     } else if (v3Data && Array.isArray(v3Data.sections) && (v3Data.sections as unknown[]).length > 0) {
-      nextSections = (v3Data.sections as Record<string, unknown>[]).map((s) => ({
-        key: String(s.section_key ?? s.key ?? ''),
-        label: String(s.section_label ?? s.label ?? ''),
-        prepMethod: (() => {
-          const cookV = typeof s.cook_method === 'string' ? s.cook_method : '';
-          const prepV = typeof s.prep_method === 'string' ? s.prep_method : (typeof s.prepMethod === 'string' ? s.prepMethod : '');
-          if (prepV && prepV !== 'raw') return prepV;
-          const isBaked = cookV === 'baked' || cookV === 'par-baked';
-          if (!isBaked && cookV && cookV !== 'raw') {
-            const topM = (explicitCookMethod ?? '').toLowerCase();
-            if (topM) return 'none';
-            return cookV;
-          }
-          return 'none';
-        })(),
-        cookingMethod: String(s.cook_method ?? s.cookMethod ?? s.cooking_method ?? 'raw'),
-        yieldFactorWater: typeof s.yield_factor_water === 'number' ? s.yield_factor_water : (typeof s.yieldFactorWater === 'number' ? s.yieldFactorWater : undefined),
-        yieldFactorFat: typeof s.yield_factor_fat === 'number' ? s.yield_factor_fat : (typeof s.yieldFactorFat === 'number' ? s.yieldFactorFat : undefined),
-        yieldFactorOther: typeof s.yield_factor_other === 'number' ? s.yield_factor_other : (typeof s.yieldFactorOther === 'number' ? s.yieldFactorOther : undefined),
-        boilMinutes: (() => { const stageArr = Array.isArray(s.cook_stages) ? s.cook_stages as Array<{tempF:number;minutes:number}> : []; const bm = typeof s.boil_minutes === 'number' ? s.boil_minutes : (typeof s.boilMinutes === 'number' ? s.boilMinutes : 0); return bm || stageArr[0]?.minutes; })(),
-        prepTempF: (() => { const stageArr = Array.isArray(s.cook_stages) ? s.cook_stages as Array<{tempF:number;minutes:number}> : []; const pm = typeof s.prep_method === 'string' ? s.prep_method : (typeof s.prepMethod === 'string' ? s.prepMethod : ''); return (pm === 'baked' || pm === 'par-baked') ? (stageArr[0]?.tempF ?? undefined) : undefined; })(),
-        cookMinutes: typeof s.cook_minutes === 'number' ? s.cook_minutes : (typeof s.cookMinutes === 'number' ? s.cookMinutes : undefined),
-        cookTempF: typeof s.cook_temp_f === 'number' ? s.cook_temp_f : (typeof s.cookTempF === 'number' ? s.cookTempF : undefined),
-        stages: Array.isArray(s.cook_stages) ? s.cook_stages : (Array.isArray(s.stages) ? s.stages : undefined),
-        fillClass: typeof s.fill_class === 'string' ? (s.fill_class || undefined) : (typeof s.fillClass === 'string' ? (s.fillClass || undefined) : undefined),
-      })).filter((s: RecipeSection) => s.key);
+      nextSections = (v3Data.sections as Record<string, unknown>[])
+        .map(s => normalizeSection(s, explicitCookMethod ?? ''))
+        .filter((s): s is RecipeSection => s !== null);
     }
     if ((!nextSections || nextSections.length === 0) && ingredients.some((i) => i.section)) {
       // Last-resort derivation: synthesise section objects from unique per-row
