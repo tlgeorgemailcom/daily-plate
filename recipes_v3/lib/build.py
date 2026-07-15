@@ -401,6 +401,9 @@ def _build_recipe_multi(
             # renders and drains during cooking (e.g. raw bacon, ground beef).
             # Populated from ingredients_ledger.csv::fat_drain.
             "fat_drainers": [],
+            # List of (water_contrib_g, boil_yfw) for raw vegetables that change
+            # water content when submerged-boiled. Populated from DataCentralCombo.boil_yfw.
+            "boil_yfw_ingredients": [],
         }
         for s in sections
     }
@@ -500,6 +503,14 @@ def _build_recipe_multi(
             fat_contrib_g = nuts.get("TotalLipidFat", 0.0) * scale
             st["fat_drainers"].append((fat_contrib_g, fat_drain_val))
 
+        # Track boiled-vegetable water-retention ingredients.
+        # boil_yfw = fraction of this ingredient's water retained after submerged boiling.
+        # Derived from USDA raw/cooked NDB pairs; stored in DataCentralCombo.boil_yfw.
+        boil_yfw_val = nuts.get("_boil_yfw")
+        if boil_yfw_val is not None:
+            water_contrib_g = nuts.get("Water", 0.0) * scale
+            st["boil_yfw_ingredients"].append((water_contrib_g, boil_yfw_val))
+
         contrib_full: dict[str, float] = {}
         for n in EXTENDED_NUTRIENTS:
             c = nuts.get(n, 0.0) * scale
@@ -568,6 +579,11 @@ def _build_recipe_multi(
         #      identified by a numeric _absorption_factor in DataCentralCombo.bin.
         #      Conserves dry non-water solids; absorbed water brings cooked
         #      moisture to the ingredient-specific target fraction.
+        #   1b. Boiled-vegetable water-retention model — fires when cook_method=boiled
+        #      and the section contains raw vegetables with a numeric boil_yfw in
+        #      DataCentralCombo. Uses per-ingredient USDA raw/cooked water fractions.
+        #      Weighted by each vegetable's water contribution; non-vegetable
+        #      ingredients (butter, salt, etc.) are assumed to retain their water.
         #   2. Manual yield_factor_water override from recipe_sections.csv.
         #   3. Physics-based evaporation model (calc_yield_water).
         #   4. Default yfw=1.0 (no water change).
@@ -584,6 +600,18 @@ def _build_recipe_multi(
                 # cooked_total_grams() handles yfw > 1 correctly:
                 # water_lost = raw_water*(1-yfw) becomes negative, i.e. water gained.
                 yfw = retained_water_g / st["raw_water"]
+            else:
+                yfw = 1.0
+        elif method == 'boiled' and st["boil_yfw_ingredients"]:
+            # Boiled-vegetable model: per-ingredient water retention from USDA pairs.
+            # Vegetable ingredients: use their individual boil_yfw factor.
+            # Non-vegetable ingredients (butter, oil, salt): assume water retained (×1.0).
+            total_water = st["raw_water"]
+            if total_water > 0:
+                veg_water = sum(w for w, _ in st["boil_yfw_ingredients"])
+                non_veg_water = total_water - veg_water
+                retained = sum(w * y for w, y in st["boil_yfw_ingredients"]) + non_veg_water
+                yfw = retained / total_water
             else:
                 yfw = 1.0
         elif s.yield_factor_water is not None:

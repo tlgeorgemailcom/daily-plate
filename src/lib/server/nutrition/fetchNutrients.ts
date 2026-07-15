@@ -106,6 +106,7 @@ function rowToNutrientRow(row: Record<string, unknown>): NutrientRow {
     ...(row['AlcholEthyl'] != null ? { alcholEthyl: n('AlcholEthyl') } : {}),
     ...(row['bin'] != null ? (() => { const f = parseFloat(String(row['bin'])); return isNaN(f) ? {} : { absorptionFactor: f }; })() : {}),
     ...(row['fat_drain'] != null ? (() => { const f = parseFloat(String(row['fat_drain'])); return isNaN(f) ? {} : { fatDrain: f }; })() : {}),
+    ...(row['boil_yfw'] != null ? (() => { const f = parseFloat(String(row['boil_yfw'])); return isNaN(f) ? {} : { boilYfw: f }; })() : {}),
   };
 }
 

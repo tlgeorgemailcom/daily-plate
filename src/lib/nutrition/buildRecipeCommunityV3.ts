@@ -356,7 +356,8 @@ export function buildRecipeCommunityV3(
             : [];
 
       // For boiled sections: check absorption model first (pasta, legumes, grains).
-      // Matches the Python absorption model in build.py.
+      // Then check boiled-vegetable model (raw vegetables with boilYfw).
+      // Matches the Python absorption/boil_yfw models in build.py.
       if (effectiveCookMethod === 'boiled') {
         const absorbers = active.filter(a => a.nutrients.absorptionFactor != null);
         if (absorbers.length > 0) {
@@ -367,8 +368,19 @@ export function buildRecipeCommunityV3(
           const retainedWaterG   = dryNonWaterG * weightedFactor / (1 - weightedFactor);
           yieldWater = initialWaterG > 0 ? retainedWaterG / initialWaterG : 1.0;
         } else {
-          const boilMins = (sec as any).boilMinutes ?? (sec as any).boil_minutes ?? 0;
-          yieldWater = calcYieldWater(stages, initialWaterG, fillClass, boilMins, 212, false);
+          // Boiled-vegetable model: per-ingredient water retention from USDA pairs.
+          // Vegetable ingredients use their individual boilYfw; others retain water (×1.0).
+          const vegBoilers = active.filter(a => typeof a.nutrients.boilYfw === 'number');
+          if (vegBoilers.length > 0) {
+            const totalWater  = initialWaterG;
+            const vegWater    = vegBoilers.reduce((s, a) => s + (a.nutrients.water ?? 0) * (a.grams / 100), 0);
+            const nonVegWater = totalWater - vegWater;
+            const retained    = vegBoilers.reduce((s, a) => s + (a.nutrients.water ?? 0) * (a.grams / 100) * a.nutrients.boilYfw!, 0) + nonVegWater;
+            yieldWater = totalWater > 0 ? retained / totalWater : 1.0;
+          } else {
+            const boilMins = (sec as any).boilMinutes ?? (sec as any).boil_minutes ?? 0;
+            yieldWater = calcYieldWater(stages, initialWaterG, fillClass, boilMins, 212, false);
+          }
         }
       } else {
         const boilMins = (sec as any).boilMinutes ?? (sec as any).boil_minutes ?? 0;

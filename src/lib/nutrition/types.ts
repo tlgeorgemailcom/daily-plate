@@ -61,6 +61,11 @@ export interface NutrientRow {
   fatDrain?: number;             // fraction of fat RETAINED after cooking (e.g. 0.33 for raw bacon).
                                  // Stored in DataCentralCombo.fat_drain. When present and
                                  // yieldFactorFat is not explicitly set, build auto-derives yff.
+  boilYfw?: number;              // fraction of ingredient water RETAINED after submerged boiling.
+                                 // Stored in DataCentralCombo.boil_yfw. Derived from USDA raw/cooked
+                                 // NDB pairs using protein-conservation method. When present,
+                                 // buildRecipeCommunityV3 uses the per-ingredient boil-yfw model
+                                 // instead of the evaporation model for boiled vegetable sections.
 }
 
 // ── Recipe structure ──────────────────────────────────────────────────────────
@@ -112,7 +117,7 @@ export interface CommunityIngredient {
 // ── Build output ──────────────────────────────────────────────────────────────
 
 /** Per-nutrient map keyed by NutrientRow field name */
-export type MacroMap = Partial<Record<keyof Omit<NutrientRow, 'ndbNo' | 'longDesc' | 'fdGrpCd' | 'absorptionFactor' | 'fatDrain'>, number>>;
+export type MacroMap = Partial<Record<keyof Omit<NutrientRow, 'ndbNo' | 'longDesc' | 'fdGrpCd' | 'absorptionFactor' | 'fatDrain' | 'boilYfw'>, number>>;
 
 /** What was skipped and why, for transparency */
 export interface SkippedIngredient {
