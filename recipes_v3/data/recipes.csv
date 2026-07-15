@@ -212,7 +212,7 @@ SALAD_002,CHICKENCAESARSALAD,Chicken Caesar Salad,salads,pollo-pesca,dish,,,1 bo
 SALAD_003,COBBSALAD,Cobb Salad,salads,all,dish,,,1 bowl (makes 2),2,Rule D,,,,1.0,1.0,1.0,1.0,1.0,,approved,,,,PENDING,,
 SALAD_004,CHEFSALAD,Chef Salad,salads,all,dish,,,1 bowl (makes 2),2,Rule D,raw,,,1.0,1.0,1.0,1.0,1.0,,approved,,,,PASS,,
 SALAD_005,GREEKSALAD,Greek Salad,salads,veggie,dish,,,1 bowl (makes 2),2,Rule D,raw,,,1.0,1.0,1.0,1.0,1.0,,approved,,,,PASS,,
-SALAD_006,TACOSALAD,Taco Salad,salads,all,dish,,,1 bowl (makes 2),2,Rule D,pan grilled,,,1.0,1.0,1.0,1.0,1.0,,approved,,,,PASS,,
+SALAD_006,TACOSALAD,Taco Salad,salads,all,dish,,,1 bowl (makes 2),2,Rule D,,,,1.0,1.0,1.0,1.0,1.0,,approved,,,,PASS,,
 SALAD_007,ASPARAGUSSALAD,Asparagus Salad,salads,vegan,dish,,,1 bowl (makes 2),2,Rule D,boiled,,,1.0,1.0,1.0,1.0,1.0,,approved,,,,PASS,,
 SALAD_008,BURRATASALAD,Burrata Salad,salads,veggie,dish,,,1 plate (makes 2),2,Rule D,raw,,,1.0,1.0,1.0,1.0,1.0,,approved,,,,PASS,,
 SALAD_009,CAPRESALAD,Caprese Salad,salads,veggie,dish,,,1 plate (makes 2),2,Rule D,raw,,,1.0,1.0,1.0,1.0,1.0,,approved,,,,PASS,,
