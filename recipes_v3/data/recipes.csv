@@ -225,7 +225,7 @@ SALAD_015,MEDORZOSALAD,Mediterranean Orzo Salad,salads,veggie,dish,,,1 bowl (mak
 SALAD_016,MEDPASTASALAD,Mediterranean Pasta Salad,salads,all,dish,,,1 bowl (makes 4),4,Rule D,boiled,,,1.0,1.0,1.0,1.0,1.0,,approved,,,,PASS,,
 SALAD_017,RAMENNOODLESALAD,Ramen Noodle Salad,salads,vegan,dish,,,1 bowl (makes 4),4,Rule D,raw,,,1.0,1.0,1.0,1.0,1.0,,approved,,,,PASS,,
 SALAD_018,SHRIMPCAESARSALAD,Shrimp Caesar Salad,salads,pesca,dish,,,1 bowl (makes 2),2,Rule D,,,,1.0,1.0,1.0,1.0,1.0,,approved,,,,PASS,,
-SALAD_019,SOUTHWESTERNSALAD,Southwestern Salad,salads,pollo,dish,,,1 bowl (makes 2),2,Rule D,pan grilled,,,1.0,1.0,1.0,1.0,1.0,,approved,,,,PASS,,
+SALAD_019,SOUTHWESTERNSALAD,Southwestern Salad,salads,pollo,dish,,,1 bowl (makes 2),2,Rule D,,,,1.0,1.0,1.0,1.0,1.0,,approved,,,,PASS,,
 SALAD_020,SHRIMPAVOCADOSALAD,Shrimp and Avocado Salad,salads,pesca,dish,,,1 bowl (makes 2),2,Rule D,pan grilled,,,1.0,1.0,1.0,1.0,1.0,,approved,,,,PASS,,
 SALAD_021,TUNAMACARONISALAD,Tuna Macaroni Salad,salads,pesca,dish,,,1 bowl (makes 4),4,Rule D,boiled,,,1.0,1.0,1.0,1.0,1.0,,approved,,,,PASS,,
 SALAD_022,WEDGESALAD,Wedge Salad,salads,all,dish,,,1 wedge (makes 2),2,Rule D,raw,,,1.0,1.0,1.0,1.0,1.0,,approved,,,,PASS,,
