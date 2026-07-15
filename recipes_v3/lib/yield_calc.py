@@ -143,6 +143,13 @@ BINDING: dict[str, float] = {
     # meringue: DO NOT USE — model invalid for surface-browning sections
 }
 
+# ── Straining hydration constant ─────────────────────────────────────────────
+# STRAIN_WATER_K: grams of water absorbed per gram of DISCARDED dry solids when
+# a blended slurry is strained and pressed through cheesecloth.
+# Calibrated from BVRG_020 Horchata pressed extraction:
+#   k=0.9 → yfw=0.932 (locked reference: 0.908; difference due to pressing)
+STRAIN_WATER_K: float = 0.9
+
 
 # ── Core functions ────────────────────────────────────────────────────────────
 

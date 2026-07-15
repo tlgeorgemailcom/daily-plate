@@ -108,6 +108,7 @@ function rowToNutrientRow(row: Record<string, unknown>): NutrientRow {
     ...(row['fat_drain'] != null ? (() => { const f = parseFloat(String(row['fat_drain'])); return isNaN(f) ? {} : { fatDrain: f }; })() : {}),
     ...(row['boil_yfw'] != null ? (() => { const f = parseFloat(String(row['boil_yfw'])); return isNaN(f) ? {} : { boilYfw: f }; })() : {}),
     ...(row['fill_class_hint'] != null && row['fill_class_hint'] !== '' ? { fillClassHint: String(row['fill_class_hint']) } : {}),
+    ...(row['strain_retain'] != null ? (() => { const f = parseFloat(String(row['strain_retain'])); return isNaN(f) ? {} : { strainRetain: f }; })() : {}),
   };
 }
 

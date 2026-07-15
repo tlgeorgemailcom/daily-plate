@@ -71,6 +71,12 @@ export interface NutrientRow {
                                  // buildRecipeCommunityV3 to infer yfw for community sections
                                  // where no explicit fillClass is set. Cook-method matching
                                  // ensures the right fill_class is selected at runtime.
+  strainRetain?: number;         // fraction of this ingredient's DRY SOLIDS retained in the liquid
+                                 // after pressing through a fine strainer/cheesecloth.
+                                 // Stored in DataCentralCombo.strain_retain. Used by
+                                 // buildRecipeCommunityV3 for sections with fillClass='strained'
+                                 // to auto-derive yfw/yff/yfp/yfc without locks.
+                                 // Calibrated: rice=0.30, almonds=0.49 (pressed extraction).
 }
 
 // ── Recipe structure ──────────────────────────────────────────────────────────
@@ -122,7 +128,7 @@ export interface CommunityIngredient {
 // ── Build output ──────────────────────────────────────────────────────────────
 
 /** Per-nutrient map keyed by NutrientRow field name */
-export type MacroMap = Partial<Record<keyof Omit<NutrientRow, 'ndbNo' | 'longDesc' | 'fdGrpCd' | 'absorptionFactor' | 'fatDrain' | 'boilYfw' | 'fillClassHint'>, number>>;
+export type MacroMap = Partial<Record<keyof Omit<NutrientRow, 'ndbNo' | 'longDesc' | 'fdGrpCd' | 'absorptionFactor' | 'fatDrain' | 'boilYfw' | 'fillClassHint' | 'strainRetain'>, number>>;
 
 /** What was skipped and why, for transparency */
 export interface SkippedIngredient {

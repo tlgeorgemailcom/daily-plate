@@ -414,6 +414,22 @@ export function buildRecipeCommunityV3(
             yieldWater = calcYieldWater(stages, initialWaterG, fillClass, boilMins, 212, false);
           }
         }
+      } else if (fillClass === 'strained') {
+        // Strained-blend model: blended then pressed through cheesecloth.
+        // STRAIN_WATER_K=0.9 g water absorbed per g of discarded dry solids.
+        // Mirrors Python build.py strained path exactly.
+        const STRAIN_WATER_K = 0.9;
+        const strainers = active.filter(a => typeof a.nutrients.strainRetain === 'number');
+        if (strainers.length > 0) {
+          const discardedDry = strainers.reduce((s, a) => {
+            const dryG = a.grams - (a.nutrients.water ?? 0) * (a.grams / 100);
+            return s + dryG * (1 - a.nutrients.strainRetain!);
+          }, 0);
+          const waterAbsorbed = STRAIN_WATER_K * discardedDry;
+          yieldWater = initialWaterG > 0 ? Math.max(0, (initialWaterG - waterAbsorbed) / initialWaterG) : 1.0;
+        } else {
+          yieldWater = 1.0;
+        }
       } else {
         const boilMins = (sec as any).boilMinutes ?? (sec as any).boil_minutes ?? 0;
         yieldWater = calcYieldWater(stages, initialWaterG, fillClass, boilMins);
@@ -421,13 +437,25 @@ export function buildRecipeCommunityV3(
     }
 
     // ── Read yield factors (default 1.0 = no effect) ──────────────────────────
+    // For strained sections: auto-derive yff/yfp/yfc from per-ingredient strainRetain.
+    // Otherwise: yff from fatDrain auto-derive; yfp/yfc from section metadata or 1.0.
+    const isStrained = fillClass === 'strained' && active.some(a => typeof a.nutrients.strainRetain === 'number');
+
     // yff: if explicitly set on the section, use it. Otherwise auto-derive from
     // ingredient fatDrain values (e.g. raw bacon: fatDrain=0.33 → drains 67% fat).
     // Formula mirrors Python build.py:
     //   retained_fat = (drainer_fat × fatDrain) + non_drainer_fat
     //   yff = retained_fat / total_fat
     let yff: number;
-    if (typeof sec.yieldFactorFat === 'number' && isFinite(sec.yieldFactorFat)) {
+    if (isStrained) {
+      // Strained model: use strainRetain for fat yield
+      const totalFat = active.reduce((s, a) => s + (a.nutrients.totalLipidFat ?? 0) * (a.grams / 100), 0);
+      const retainedFat = active.reduce((s, a) => {
+        const fatG = (a.nutrients.totalLipidFat ?? 0) * (a.grams / 100);
+        return s + fatG * (typeof a.nutrients.strainRetain === 'number' ? a.nutrients.strainRetain : 1.0);
+      }, 0);
+      yff = totalFat > 0 ? retainedFat / totalFat : 1.0;
+    } else if (typeof sec.yieldFactorFat === 'number' && isFinite(sec.yieldFactorFat)) {
       yff = sec.yieldFactorFat;
     } else {
       const fatDrainers = active.filter(a => typeof a.nutrients.fatDrain === 'number');
@@ -441,8 +469,26 @@ export function buildRecipeCommunityV3(
         yff = 1.0;
       }
     }
-    const yfp = sec.yieldFactorProtein      ?? 1.0;
-    const yfc = sec.yieldFactorCarbohydrate ?? 1.0;
+    const yfp = isStrained
+      ? (() => {
+          const totalPro = active.reduce((s, a) => s + (a.nutrients.protein ?? 0) * (a.grams / 100), 0);
+          const retainedPro = active.reduce((s, a) => {
+            const proG = (a.nutrients.protein ?? 0) * (a.grams / 100);
+            return s + proG * (typeof a.nutrients.strainRetain === 'number' ? a.nutrients.strainRetain : 1.0);
+          }, 0);
+          return totalPro > 0 ? retainedPro / totalPro : 1.0;
+        })()
+      : sec.yieldFactorProtein ?? 1.0;
+    const yfc = isStrained
+      ? (() => {
+          const totalCarb = active.reduce((s, a) => s + (a.nutrients.carbohydrate ?? 0) * (a.grams / 100), 0);
+          const retainedCarb = active.reduce((s, a) => {
+            const carbG = (a.nutrients.carbohydrate ?? 0) * (a.grams / 100);
+            return s + carbG * (typeof a.nutrients.strainRetain === 'number' ? a.nutrients.strainRetain : 1.0);
+          }, 0);
+          return totalCarb > 0 ? retainedCarb / totalCarb : 1.0;
+        })()
+      : sec.yieldFactorCarbohydrate ?? 1.0;
     const yfo = sec.yieldFactorOther        ?? 1.0;
 
     // ── Step 1+2: Sum retained nutrients ──────────────────────────────────────────────

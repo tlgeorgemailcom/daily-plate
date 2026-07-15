@@ -404,6 +404,10 @@ def _build_recipe_multi(
             # List of (water_contrib_g, boil_yfw) for raw vegetables that change
             # water content when submerged-boiled. Populated from DataCentralCombo.boil_yfw.
             "boil_yfw_ingredients": [],
+            # List of (dry_g, strain_retain) for ingredients that pass partially through
+            # a fine strainer/cheesecloth when pressed. Populated from DataCentralCombo.strain_retain.
+            # Used by build.py strained model to auto-derive yfw/yff/yfp/yfc.
+            "strain_ingredients": [],
         }
         for s in sections
     }
@@ -511,6 +515,17 @@ def _build_recipe_multi(
             water_contrib_g = nuts.get("Water", 0.0) * scale
             st["boil_yfw_ingredients"].append((water_contrib_g, boil_yfw_val))
 
+        # Track strained-blend ingredients.
+        # strain_retain = fraction of dry solids that passes through pressed cheesecloth.
+        # Calibrated from USDA and pressed-extraction data; stored in DataCentralCombo.strain_retain.
+        strain_retain_val = nuts.get("_strain_retain")
+        if strain_retain_val is not None:
+            dry_g = (row.grams - nuts.get("Water", 0.0) * scale)
+            fat_g   = nuts.get("TotalLipidFat", 0.0) * scale
+            pro_g   = nuts.get("Protein", 0.0) * scale
+            carb_g  = nuts.get("Carbohydrate", 0.0) * scale
+            st["strain_ingredients"].append((dry_g, fat_g, pro_g, carb_g, strain_retain_val))
+
         contrib_full: dict[str, float] = {}
         for n in EXTENDED_NUTRIENTS:
             c = nuts.get(n, 0.0) * scale
@@ -575,37 +590,27 @@ def _build_recipe_multi(
         # ── Yield factor for water ─────────────────────────────────────────
         # Priority order:
         #   1. Submersion-boil absorption model — fires when cook_method=boiled
-        #      and the section contains dry absorbers (pasta, rice, oats, beans)
-        #      identified by a numeric _absorption_factor in DataCentralCombo.bin.
-        #      Conserves dry non-water solids; absorbed water brings cooked
-        #      moisture to the ingredient-specific target fraction.
+        #      and the section contains dry absorbers (pasta, rice, oats, beans).
         #   1b. Boiled-vegetable water-retention model — fires when cook_method=boiled
-        #      and the section contains raw vegetables with a numeric boil_yfw in
-        #      DataCentralCombo. Uses per-ingredient USDA raw/cooked water fractions.
-        #      Weighted by each vegetable's water contribution; non-vegetable
-        #      ingredients (butter, salt, etc.) are assumed to retain their water.
+        #      and the section contains raw vegetables with a numeric boil_yfw.
+        #   1c. Strained-blend model — fires when filling_class='strained' AND the
+        #      section contains ingredients with _strain_retain. Computes yfw from
+        #      STRAIN_WATER_K (water absorbed per gram of discarded dry solids) AND
+        #      also auto-derives yff/yfp/yfc/yfo from per-ingredient strain_retain.
         #   2. Manual yield_factor_water override from recipe_sections.csv.
         #   3. Physics-based evaporation model (calc_yield_water).
         #   4. Default yfw=1.0 (no water change).
-        # Check against the normalised method so 'simmer' / 'sub-simmer' also
-        # trigger the absorption model (they all normalise to 'boiled').
+        _strained = (s.filling_class == 'strained' and bool(st["strain_ingredients"]))
         if method == 'boiled' and st["absorbers"]:
             total_absorber_g = sum(g for g, _ in st["absorbers"])
             weighted_factor  = sum(g * f for g, f in st["absorbers"]) / total_absorber_g
             dry_non_water_g  = st["raw_total"] - st["raw_water"]
             if st["raw_water"] > 0 and weighted_factor < 1.0:
                 retained_water_g = dry_non_water_g * weighted_factor / (1.0 - weighted_factor)
-                # yfw may be >> 1.0 when there is no explicit water ingredient
-                # (raw_water is only the moisture already in the dry ingredient).
-                # cooked_total_grams() handles yfw > 1 correctly:
-                # water_lost = raw_water*(1-yfw) becomes negative, i.e. water gained.
                 yfw = retained_water_g / st["raw_water"]
             else:
                 yfw = 1.0
         elif method == 'boiled' and st["boil_yfw_ingredients"]:
-            # Boiled-vegetable model: per-ingredient water retention from USDA pairs.
-            # Vegetable ingredients: use their individual boil_yfw factor.
-            # Non-vegetable ingredients (butter, oil, salt): assume water retained (×1.0).
             total_water = st["raw_water"]
             if total_water > 0:
                 veg_water = sum(w for w, _ in st["boil_yfw_ingredients"])
@@ -614,17 +619,19 @@ def _build_recipe_multi(
                 yfw = retained / total_water
             else:
                 yfw = 1.0
+        elif _strained:
+            # Strained-blend model: blended then pressed through cheesecloth.
+            # Water yield: the discarded wet pulp absorbs STRAIN_WATER_K g of water
+            # per gram of discarded dry solid.
+            from .yield_calc import STRAIN_WATER_K
+            total_dry_discarded = sum(d * (1 - r) for d, _, _, _, r in st["strain_ingredients"])
+            water_absorbed      = STRAIN_WATER_K * total_dry_discarded
+            yfw = max(0.0, (st["raw_water"] - water_absorbed) / st["raw_water"]) if st["raw_water"] > 0 else 1.0
         elif s.yield_factor_water is not None:
-            # Manual override — used for locked recipes and meringue (algorithm doesn't apply).
             yfw = s.yield_factor_water
         elif s.filling_class and (s.cook_stages or s.boil_stages):
-            # Derive yield_water from physics-based model.
-            # boil_stages fires first (open-pot, BOIL_K_REF), then oven stages.
-            # Handles: oven-only, boil-only, and boil-then-bake sequences.
             boil_min = float(s.boil_stages) if s.boil_stages else 0.0
             stages   = _parse_stages(s.cook_stages) if s.cook_stages else []
-            # Pass stovetop temperature and lid flag so all method variants compute
-            # the correct evaporation rate.
             _boil_temp = (
                 180.0 if s.cook_method in ('sub-simmer', 'sub_simmer') else
                 195.0 if s.cook_method == 'simmer' else
@@ -643,7 +650,27 @@ def _build_recipe_multi(
         # explicit yield_factor_fat in recipe_sections.csv, compute a weighted yff:
         #   retained_fat = (drainer_fat × fat_drain) + non_drainer_fat
         #   yff = retained_fat / total_fat
-        if yff is None:
+        if _strained:
+            # Strained-blend model: compute yff/yfp/yfc from per-ingredient strain_retain.
+            # Strained ingredients: fraction of each nutrient that passes through the mesh.
+            # Non-strained ingredients: all their nutrients pass through (retain=1.0).
+            total_fat  = st["sums"].get("TotalLipidFat", 0.0)
+            total_pro  = st["sums"].get("Protein", 0.0)
+            total_carb = st["sums"].get("Carbohydrate", 0.0)
+            ret_fat  = sum(f * r for _, f, _, _, r in st["strain_ingredients"])
+            ret_pro  = sum(p * r for _, _, p, _, r in st["strain_ingredients"])
+            ret_carb = sum(c * r for _, _, _, c, r in st["strain_ingredients"])
+            # Add back contribution from non-strained ingredients (retain=1.0)
+            strained_fat  = sum(f for _, f, _, _, _ in st["strain_ingredients"])
+            strained_pro  = sum(p for _, _, p, _, _ in st["strain_ingredients"])
+            strained_carb = sum(c for _, _, _, c, _ in st["strain_ingredients"])
+            ret_fat  += (total_fat  - strained_fat)
+            ret_pro  += (total_pro  - strained_pro)
+            ret_carb += (total_carb - strained_carb)
+            yff = ret_fat  / total_fat  if total_fat  > 0 else 1.0
+            yfp_strained = ret_pro   / total_pro   if total_pro   > 0 else 1.0
+            yfc_strained = ret_carb  / total_carb  if total_carb  > 0 else 1.0
+        elif yff is None:
             total_fat = st["sums"].get("TotalLipidFat", 0.0)
             if st["fat_drainers"] and total_fat > 0:
                 drainer_fat_total = sum(f for f, _ in st["fat_drainers"])
@@ -653,8 +680,8 @@ def _build_recipe_multi(
             else:
                 yff = 1.0
         st["resolved_yff"] = yff  # store for fat_lost_total summary below
-        yfp = s.yield_factor_protein
-        yfc = s.yield_factor_carbohydrate
+        yfp = s.yield_factor_protein if not _strained else yfp_strained
+        yfc = s.yield_factor_carbohydrate if not _strained else yfc_strained
         yfo_S = s.yield_factor_other
         yfi_S = s.yield_factor_fiber
         sums_S = st["sums"]
