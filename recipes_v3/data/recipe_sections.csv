@@ -378,8 +378,8 @@ SALAD_010,salad,Chickpea Salad,,raw,1.0,1.0,1.0,1.0,1.0,,,,,
 SALAD_011,chicken,Chicken,pan grilled,pan grilled,,1.0,1.0,1.0,1.0,,pan_grilled_chicken,,13,
 SALAD_011,pasta,Pasta,boiled,boiled,,1.0,1.0,1.0,1.0,,,,10,
 SALAD_011,salad,Salad,,raw,1.0,1.0,1.0,1.0,1.0,,,,,
-SALAD_012,chicken,Chicken,,pan grilled,0.75,1.0,1.0,1.0,1.0,,,,,
-SALAD_012,pasta,Pasta,,boiled,1.0,1.0,1.0,1.0,1.0,,,,,
+SALAD_012,chicken,Chicken,pan grilled,pan grilled,,1.0,1.0,1.0,1.0,,pan_grilled_chicken,,13,
+SALAD_012,pasta,Pasta,boiled,boiled,,1.0,1.0,1.0,1.0,,,,10,
 SALAD_012,salad,Salad,,raw,1.0,1.0,1.0,1.0,1.0,,,,,
 SALAD_013,gnocchi,Potato Gnocchi,,raw,1.0,1.0,1.0,1.0,1.0,,,,,SIDE_011
 SALAD_013,dressing,Italian Vinaigrette,,raw,1.0,1.0,1.0,1.0,1.0,,,,,SAUCE_017
