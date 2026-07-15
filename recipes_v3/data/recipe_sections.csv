@@ -400,7 +400,7 @@ SALAD_019,chicken,Chicken,pan grilled,pan grilled,,1.0,1.0,1.0,1.0,,pan_grilled_
 SALAD_019,salad,Southwestern Salad,,raw,1.0,1.0,1.0,1.0,1.0,,,,,
 SALAD_020,shrimp,Shrimp,pan grilled,pan grilled,,1.0,1.0,1.0,1.0,,pan_grilled_chicken,,5,
 SALAD_020,salad,Shrimp and Avocado Salad,,raw,1.0,1.0,1.0,1.0,1.0,,,,,
-SALAD_021,pasta,Pasta,,boiled,1.0,1.0,1.0,1.0,1.0,,,,,
+SALAD_021,pasta,Pasta,boiled,boiled,,1.0,1.0,1.0,1.0,,,,9,
 SALAD_021,salad,Tuna Macaroni Salad,,raw,1.0,1.0,1.0,1.0,1.0,,,,,
 SALAD_022,dressing,Blue Cheese Dressing,,raw,1.0,1.0,1.0,1.0,1.0,,,,,SAUCE_021
 SALAD_022,salad,Wedge Salad,,raw,1.0,1.0,1.0,1.0,1.0,,,,,
