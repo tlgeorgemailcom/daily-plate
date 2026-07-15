@@ -208,7 +208,7 @@ SAUCE_022,HONEYMUSTARD,Honey Mustard Dressing,sauces & condiments,veggie,builtin
 SAUCE_023,GREENGODDESS,Green Goddess Dressing,sauces & condiments,pesca,builtin,,,2 tbsp (makes 9),9,Rule D,raw,,,1.0,1.0,1.0,1.0,1.0,,approved,,,,PENDING,,
 SAUCE_024,CAESARDRESSING,Caesar Salad Dressing,sauces & condiments,pesca,builtin,,,2 tbsp (makes 7),7,Rule D,raw,,,1.0,1.0,1.0,1.0,1.0,,approved,,,,PENDING,,
 SALAD_001,CAESARSALAD,Caesar Salad,salads,pesca,dish,,,1 bowl (makes 2),2,Rule D,raw,,,1.0,1.0,1.0,1.0,1.0,,approved,,,,PENDING,,
-SALAD_002,CHICKENCAESARSALAD,Chicken Caesar Salad,salads,pollo-pesca,dish,,,1 bowl (makes 2),2,Rule D,raw,,,1.0,1.0,1.0,1.0,1.0,,approved,,,,PENDING,,
+SALAD_002,CHICKENCAESARSALAD,Chicken Caesar Salad,salads,pollo-pesca,dish,,,1 bowl (makes 2),2,Rule D,,,,1.0,1.0,1.0,1.0,1.0,,approved,,,,PENDING,,
 SALAD_003,COBBSALAD,Cobb Salad,salads,all,dish,,,1 bowl (makes 2),2,Rule D,raw,,,1.0,1.0,1.0,1.0,1.0,,approved,,,,PENDING,,
 SALAD_004,CHEFSALAD,Chef Salad,salads,all,dish,,,1 bowl (makes 2),2,Rule D,raw,,,1.0,1.0,1.0,1.0,1.0,,approved,,,,PASS,,
 SALAD_005,GREEKSALAD,Greek Salad,salads,veggie,dish,,,1 bowl (makes 2),2,Rule D,raw,,,1.0,1.0,1.0,1.0,1.0,,approved,,,,PASS,,
