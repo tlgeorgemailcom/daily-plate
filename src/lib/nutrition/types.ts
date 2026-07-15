@@ -66,6 +66,11 @@ export interface NutrientRow {
                                  // NDB pairs using protein-conservation method. When present,
                                  // buildRecipeCommunityV3 uses the per-ingredient boil-yfw model
                                  // instead of the evaporation model for boiled vegetable sections.
+  fillClassHint?: string;        // recommended fill_class for this NDB when used as dominant protein.
+                                 // Stored in DataCentralCombo.fill_class_hint. Used by
+                                 // buildRecipeCommunityV3 to infer yfw for community sections
+                                 // where no explicit fillClass is set. Cook-method matching
+                                 // ensures the right fill_class is selected at runtime.
 }
 
 // ── Recipe structure ──────────────────────────────────────────────────────────
@@ -117,7 +122,7 @@ export interface CommunityIngredient {
 // ── Build output ──────────────────────────────────────────────────────────────
 
 /** Per-nutrient map keyed by NutrientRow field name */
-export type MacroMap = Partial<Record<keyof Omit<NutrientRow, 'ndbNo' | 'longDesc' | 'fdGrpCd' | 'absorptionFactor' | 'fatDrain' | 'boilYfw'>, number>>;
+export type MacroMap = Partial<Record<keyof Omit<NutrientRow, 'ndbNo' | 'longDesc' | 'fdGrpCd' | 'absorptionFactor' | 'fatDrain' | 'boilYfw' | 'fillClassHint'>, number>>;
 
 /** What was skipped and why, for transparency */
 export interface SkippedIngredient {

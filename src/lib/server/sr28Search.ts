@@ -220,6 +220,7 @@ function rowToNutrientRow(row: Row, ndb: string, longDesc: string, fdGrpCd: stri
     ...((() => { const f = parseFloat(String((row as Record<string, unknown>)['bin'] ?? '')); return isNaN(f) ? {} : { absorptionFactor: f }; })()),
     ...((() => { const f = parseFloat(String((row as Record<string, unknown>)['fat_drain'] ?? '')); return isNaN(f) ? {} : { fatDrain: f }; })()),
     ...((() => { const f = parseFloat(String((row as Record<string, unknown>)['boil_yfw'] ?? '')); return isNaN(f) ? {} : { boilYfw: f }; })()),
+    ...((() => { const v = String((row as Record<string, unknown>)['fill_class_hint'] ?? ''); return v ? { fillClassHint: v } : {}; })()),
   };
 }
 

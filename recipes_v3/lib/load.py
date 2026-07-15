@@ -377,7 +377,7 @@ def load_comboo_nutrients(ndb_nos: Iterable[str]) -> dict[str, dict[str, float]]
     try:
         cur = conn.cursor()
         nutrient_cols = list(EXTENDED_NUTRIENTS)
-        quoted = ["\"NDB_NO\"", "\"Long_Desc\"", "\"bin\"", "\"fat_drain\"", "\"boil_yfw\"", *(f'"{c}"' for c in nutrient_cols)]
+        quoted = ["\"NDB_NO\"", "\"Long_Desc\"", "\"bin\"", "\"fat_drain\"", "\"boil_yfw\"", "\"fill_class_hint\"", *(f'"{c}"' for c in nutrient_cols)]
         placeholders = ",".join("?" * len(ndbs))
         sql = f"SELECT {', '.join(quoted)} FROM DataCentralCombo WHERE NDB_NO IN ({placeholders})"
         out: dict[str, dict[str, float]] = {}
@@ -387,9 +387,10 @@ def load_comboo_nutrients(ndb_nos: Iterable[str]) -> dict[str, dict[str, float]]
             bin_raw = row[2]
             fat_drain_raw = row[3]
             boil_yfw_raw = row[4]
+            fill_class_hint_raw = row[5]
             nuts: dict[str, float] = {}
             for i, m in enumerate(nutrient_cols):
-                nuts[m] = float(row[i + 5] or 0.0)
+                nuts[m] = float(row[i + 6] or 0.0)
             # Stash Long_Desc under a non-conflicting key for downstream use.
             nuts["_long_desc"] = long_desc  # type: ignore[assignment]
             # Stash bin absorption factor if present and numeric (e.g. '0.6213' for pasta).
@@ -416,6 +417,12 @@ def load_comboo_nutrients(ndb_nos: Iterable[str]) -> dict[str, dict[str, float]]
                     nuts["_boil_yfw"] = float(boil_yfw_raw)  # type: ignore[assignment]
                 except (ValueError, TypeError):
                     pass
+            # Stash fill_class_hint if present.
+            # fill_class_hint = recommended fill_class for community recipe sections
+            # where this NDB is the dominant protein. Used by buildRecipeCommunityV3.ts
+            # to infer the correct fill_class when section.fillClass is not explicitly set.
+            if fill_class_hint_raw is not None:
+                nuts["_fill_class_hint"] = str(fill_class_hint_raw)  # type: ignore[assignment]
             out[ndb] = nuts
         return out
     finally:

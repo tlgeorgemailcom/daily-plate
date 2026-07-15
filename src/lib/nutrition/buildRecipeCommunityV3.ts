@@ -340,10 +340,42 @@ export function buildRecipeCommunityV3(
       yieldWater = sec.yieldFactorWater;
     } else {
       // ── Path B: compute from filling class + oven stages ──────────────────
-      // fillClass: prefer explicit metadata; fall back to ingredient inference.
-      const fillClass = (sec.fillClass && sec.fillClass !== '')
-        ? sec.fillClass
-        : inferFillingClass(active, isWrapped);
+      // fillClass: prefer explicit metadata; fall back to fill_class_hint from
+      // dominant protein ingredient; then inferFillingClass() for pastry detection.
+      //
+      // HINT_COOK_MAP: which cook methods make a fill_class_hint valid.
+      // A pan_grilled_chicken hint only applies when the section is actually pan-grilled
+      // or fried — not when it is baked or braised.
+      const HINT_COOK_MAP: Record<string, string[]> = {
+        'pan_grilled_chicken': ['pan grilled', 'fried', 'grilled', 'broil', 'broiled'],
+        'fried_chicken':       ['fried'],
+        'baked_pork':          ['baked', 'par-baked'],
+        'braised_beef':        ['braise', 'braised', 'boiled', 'simmer', 'sub-simmer'],
+        'fried_meat':          ['fried', 'pan grilled'],
+      };
+      const rawCookMethod = sec.cookingMethod ?? 'raw';
+      let fillClass: string;
+      if (sec.fillClass && sec.fillClass !== '') {
+        fillClass = sec.fillClass;
+      } else {
+        // Check fill_class_hint from ingredients — use highest-protein ingredient's hint
+        // when the section cook method matches the hint's intended context.
+        let hintClass = '';
+        let hintProtein = 0;
+        for (const ing of active) {
+          const hint = ing.nutrients.fillClassHint;
+          if (!hint) continue;
+          const validMethods = HINT_COOK_MAP[hint] ?? [];
+          if (validMethods.includes(rawCookMethod)) {
+            const protein = (ing.nutrients.protein ?? 0) * (ing.grams / 100);
+            if (protein > hintProtein) {
+              hintProtein = protein;
+              hintClass = hint;
+            }
+          }
+        }
+        fillClass = hintClass || inferFillingClass(active, isWrapped);
+      }
 
       // Build oven stages from section metadata (same logic as V1).
       const stages: Array<[number, number]> =
@@ -487,10 +519,25 @@ export function buildRecipeCommunityV3(
     totalRawGrams    += rawGrams;
     totalCookedGrams += cookedGrams;
 
-    // Infer fillClass for the result record (for plausibility + display).
-    const fillingClass = (sec.fillClass && sec.fillClass !== '')
-      ? sec.fillClass
-      : inferFillingClass(active, isWrapped);
+    // Infer fillClass for the result record (for plausibility + display) —
+    // same hint-first logic as above.
+    let fillingClass: string;
+    if (sec.fillClass && sec.fillClass !== '') {
+      fillingClass = sec.fillClass;
+    } else {
+      let hintClass = '';
+      let hintProtein = 0;
+      for (const ing of active) {
+        const hint = ing.nutrients.fillClassHint;
+        if (!hint) continue;
+        const validMethods = (HINT_COOK_MAP[hint] ?? []);
+        if (validMethods.includes(rawCookMethod)) {
+          const protein = (ing.nutrients.protein ?? 0) * (ing.grams / 100);
+          if (protein > hintProtein) { hintProtein = protein; hintClass = hint; }
+        }
+      }
+      fillingClass = hintClass || inferFillingClass(active, isWrapped);
+    }
 
     sectionResults.push({
       sectionKey:        sec.sectionKey,
