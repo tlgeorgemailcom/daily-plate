@@ -2188,12 +2188,12 @@
                 {@const _cookMethod = ((selectedLevel.nutritionJson as Record<string, unknown>)?.cookingMethod as string) ?? ''}
                 {@const _allSecs = ((selectedLevel.sections ?? (selectedLevel.nutritionJson as Record<string, unknown>)?.sections) ?? []) as Record<string, unknown>[]}
                 {@const _primarySec = _cookMethod ? _allSecs.find((s) => (!s['prep_method'] || s['prep_method'] === 'raw') && s['cook_method'] === _cookMethod) : null}
-                {@const _cookMins = _primarySec ? ((_primarySec['cook_stages'] as {tempF:number,minutes:number}[])?.[0]?.minutes ?? (_primarySec['boil_minutes'] as number) ?? 0) : 0}
+                {@const _cookMins = _primarySec ? ((_primarySec['cook_stages'] as {tempF:number,minutes:number}[])?.[0]?.minutes ?? (_primarySec['boil_minutes'] as number) ?? 0) : (((selectedLevel.nutritionJson as Record<string, unknown>)?.cookMinutes as number) ?? 0)}
                 {@const _cookTempF = (_primarySec?.['cook_stages'] as {tempF:number,minutes:number}[])?.[0]?.tempF ?? 0}
                 <div class="full-ingredients">
                   <div class="assembled-cook-line">
                     <span class="assembled-cook-label">🍳 Final assembled cook:</span>
-                    {#if _cookMethod && _cookMethod !== 'raw' && _cookMethod !== 'multi' && _primarySec}
+                    {#if _cookMethod && _cookMethod !== 'raw' && _cookMethod !== 'multi' && (_primarySec || _cookMins > 0)}
                       <span class="assembled-cook-value">
                         {_cookMethod.charAt(0).toUpperCase() + _cookMethod.slice(1)}{_cookMins > 0 ? ` | ${_cookMins} min` : ''}{_cookTempF > 0 && _cookTempF !== 195 && _cookTempF !== 212 && _cookTempF !== 180 ? ` | ${_cookTempF}°F` : ''}
                       </span>

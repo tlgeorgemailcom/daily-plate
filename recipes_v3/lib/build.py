@@ -996,7 +996,8 @@ def to_turso_nutrition_json(build: dict[str, Any]) -> dict[str, Any]:
         "yieldFactorFat": build["yield_factor_fat"],
         "sources": sources,
         **(
-            {"sections": build["sections"], "cookingMethod": build.get("cooking_method", "")}
+            {"sections": build["sections"], "cookingMethod": build.get("cooking_method", ""),
+             "cookMinutes": build.get("cook_minutes")}
             if "sections" in build
             else {}
         ),
