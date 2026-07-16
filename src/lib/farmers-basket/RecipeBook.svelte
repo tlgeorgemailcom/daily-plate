@@ -300,8 +300,14 @@
   // Section headers use pipeline term as-is (fried, baked, pan grilled…)
   // with only one transformation: 'raw' → 'Unheated'.
   const SECTION_METHOD_LABEL: Record<string, string | null> = {
-    'raw': 'unheated',
-    '':    'unheated',
+    'raw':        'unheated',
+    '':           'unheated',
+    'none':       'unheated',
+    'finish':     'Added after cooking',
+    'boiled':     'boiled (lid off)',
+    'simmer':     'simmer (lid off)',
+    'sub-simmer': 'sub-simmer (lid off)',
+    'braise':     'braise (covered)',
   };
 
   function formatSectionHeader(
@@ -320,7 +326,11 @@
     const display = rawMethod in SECTION_METHOD_LABEL
       ? SECTION_METHOD_LABEL[rawMethod]
       : rawMethod || null;
-    return display ? `${label} — ${display}` : `${label}:`;
+    // Append stovetop time when present (boil_minutes from Turso; boilMinutes from bundle).
+    const boilMins = (meta as Record<string, unknown>)?.['boil_minutes'] as number | undefined
+      ?? (meta as Record<string, unknown>)?.['boilMinutes'] as number | undefined;
+    const timeStr = (boilMins && boilMins > 0 && rawMethod !== 'finish') ? ` | ${boilMins} min` : '';
+    return display ? `${label} — ${display}${timeStr}` : `${label}:`;
   }
 
   function formatIngredientLine(ingredient: { name: string; quantity?: string }) {
