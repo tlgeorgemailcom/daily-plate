@@ -77,6 +77,10 @@ STOCK_EXTRACTION: dict[str, dict[str, float]] = {
     # STOCK_006 Fish Stock: yff=1.000 (fat stays, no skimming); yfp=0.355 protein
     # extraction; yfc=0.293 captures wine carb evaporation/retention; yfo=0.02
     # fat-soluble vitamins leave with strained solids. Rule C — calibrated vs NDB 6963.
+    "vegetable_stock": {"yfp": 0.484, "yff": 0.950, "yfc": 0.290, "yfo": 0.02},
+    # STOCK_007 Vegetable Stock: yff=0.950 (minimal fat from veg); yfp=0.484 protein
+    # extraction from vegetables; yfc=0.290 carb extraction; yfo=0.02.
+    # Rule C — calibrated vs NDB 6700.
 }
 
 

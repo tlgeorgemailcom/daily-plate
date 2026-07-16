@@ -43,6 +43,8 @@ const STOCK_EXTRACTION: Record<string, { yfp: number; yff: number; yfc: number; 
   bone_broth:    { yfp: 0.395, yff: 0.089, yfc: 0.02, yfo: 0.02 },
   fish_stock:    { yfp: 0.355, yff: 1.000, yfc: 0.293, yfo: 0.02 },
   // STOCK_006 Fish Stock: yff=1.000 (no fat skimmed); yfc=0.293 (wine carbs); Rule C calibrated.
+  vegetable_stock: { yfp: 0.484, yff: 0.950, yfc: 0.290, yfo: 0.02 },
+  // STOCK_007 Vegetable Stock: minimal fat (yff=0.950); yfp=0.484; yfc=0.290; Rule C calibrated.
 };
 import {
   applyRetention,

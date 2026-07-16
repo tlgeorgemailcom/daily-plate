@@ -151,6 +151,9 @@ BINDING: dict[str, float] = {
     "fish_stock":    0.101,  # clear fish stock, 25min sub-simmer 180°F → yfw=0.900
                               # back-calc: f=0.100, binding=0.100/(1-exp(-0.1758×25))=0.1013
                               # Covers STOCK_006 Fish Stock.
+    "vegetable_stock": 0.180, # vegetable stock, 55min sub-simmer 180°F → yfw=0.820
+                              # back-calc: f=0.180, binding=0.180/(1-exp(-0.1758×55))=0.180
+                              # Covers STOCK_007 Vegetable Stock.
     # meringue: DO NOT USE — model invalid for surface-browning sections
 }
 
