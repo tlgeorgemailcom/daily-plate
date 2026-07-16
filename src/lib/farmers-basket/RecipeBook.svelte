@@ -322,8 +322,8 @@
     const display = rawMethod in SECTION_METHOD_LABEL
       ? SECTION_METHOD_LABEL[rawMethod]
       : rawMethod || null;
-    // Append stovetop prep time when present.
-    const timeStr = (meta?.boilMinutes && meta.boilMinutes > 0 && rawMethod !== 'finish') ? ` | ${meta.boilMinutes} min` : '';
+    // Append stovetop prep time only when there is an active cook method (not unheated/finish).
+    const timeStr = (rawMethod && rawMethod !== 'finish' && meta?.boilMinutes && meta.boilMinutes > 0) ? ` | ${meta.boilMinutes} min` : '';
     return display ? `${label} — ${display}${timeStr}` : `${label}:`;
   }
 
