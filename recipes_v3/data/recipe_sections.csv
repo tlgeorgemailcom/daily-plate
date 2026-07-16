@@ -359,8 +359,8 @@ SIDE_025,filling,Sweet Potato Filling,,baked,0.85,1.0,1.0,1.0,1.0,,,,,
 SIDE_025,topping,Oat Pecan Topping,,baked,0.95,1.0,1.0,1.0,1.0,,,,,
 SIDE_026,filling,Sweet Potato Filling,,baked,0.85,1.0,1.0,1.0,1.0,,,,,
 SIDE_026,topping,Marshmallow Topping,,baked,1.0,1.0,1.0,1.0,1.0,,,,,
-SAUCE_016,dressing,Dressing,,raw,1.0,1.0,1.0,1.0,1.0,,,,,
-SAUCE_016,mustard,Dijon-Style Mustard,,raw,1.0,1.0,1.0,1.0,1.0,,,,,SAUCE_010
+SAUCE_016,dressing,Dressing,,raw,,,,,,,,,,
+SAUCE_016,mustard,Dijon-Style Mustard,,raw,,,,,,,,,,SAUCE_010
 SAUCE_017,dressing,Dressing,,raw,1.0,1.0,1.0,1.0,1.0,,,,,
 SAUCE_017,mustard,Dijon-Style Mustard,,raw,1.0,1.0,1.0,1.0,1.0,,,,,SAUCE_010
 SAUCE_018,dressing,Dressing,,raw,1.0,1.0,1.0,1.0,1.0,,,,,
