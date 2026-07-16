@@ -143,6 +143,8 @@ export interface Level {
   linkType?: 'ingredient' | 'dish' | 'mixed' | 'builtin' | 'cocktail' | 'component';  // How ingredients were USDA-linked
   sr28Rule?: 'Rule A' | 'Rule B' | 'Rule C' | 'Rule D' | 'Rule F' | 'Rule G'; // Nutrient data confidence tier
   nutritionJson?: NutritionJson | null;         // Per-serving nutrients (null = unlinked)
+  cookMinutes?: number;           // top-bar primary cook time (from dev_recipes.cook_minutes)
+  cookTempF?: number;             // top-bar primary cook temp °F (from dev_recipes.cook_temp_f)
   sections?: {                    // Per-section cooking breakdown (v3 §18; multi-stage recipes only)
     key: string;                  // matches recipeIngredients[].section
     label: string;                // human label, e.g. "Pie crust"

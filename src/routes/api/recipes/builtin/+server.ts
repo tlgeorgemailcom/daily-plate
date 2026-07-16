@@ -11,6 +11,8 @@ interface BuiltinRecipeRow {
   category: string;
   dietary_category: string | null;
   cooking_method: string | null;
+  cook_minutes: number | null;
+  cook_temp_f: number | null;
   dish_family: string | null;
   prep_time: string | null;
   servings: string | null;
@@ -18,6 +20,7 @@ interface BuiltinRecipeRow {
   animal_spawns: string | null;
   recipe_instructions_json: string | null;
   recipe_ingredients_json: string | null;
+  sections_json: string | null;
   nutrition_json: string | null;
   image_url: string | null;
   created_at: string;
@@ -272,9 +275,10 @@ export const GET: RequestHandler = async () => {
   try {
     // Get published dev recipes that override existing local LEVELS rows.
     const overrideRows = await queryAll<BuiltinRecipeRow>(
-      `SELECT recipe_id, recipe_name, category, dietary_category, cooking_method, dish_family, prep_time, servings, 
+      `SELECT recipe_id, recipe_name, category, dietary_category, cooking_method, cook_minutes, cook_temp_f,
+              dish_family, prep_time, servings,
               recipe, animal_spawns, recipe_instructions_json, recipe_ingredients_json,
-              nutrition_json, image_url, created_at, submitted_by
+              sections_json, nutrition_json, image_url, created_at, submitted_by
        FROM dev_recipes 
        WHERE status = 'published'
          AND recipe_id NOT LIKE 'admin-%'
@@ -283,9 +287,10 @@ export const GET: RequestHandler = async () => {
 
     // Get admin-added new dev recipes.
     const newRows = await queryAll<BuiltinRecipeRow>(
-      `SELECT recipe_id, recipe_name, category, dietary_category, cooking_method, dish_family, prep_time, servings, 
+      `SELECT recipe_id, recipe_name, category, dietary_category, cooking_method, cook_minutes, cook_temp_f,
+              dish_family, prep_time, servings,
               recipe, animal_spawns, recipe_instructions_json, recipe_ingredients_json,
-              nutrition_json, image_url, created_at, submitted_by
+              sections_json, nutrition_json, image_url, created_at, submitted_by
        FROM dev_recipes 
        WHERE status = 'published' AND recipe_id LIKE 'admin-%'
        ORDER BY created_at ASC`
@@ -311,6 +316,9 @@ export const GET: RequestHandler = async () => {
       if (row.animal_spawns) override.animalSpawns = JSON.parse(row.animal_spawns);
       if (row.recipe_instructions_json) override.recipeInstructions = normalizeRecipeInstructions(row.recipe_instructions_json);
       if (row.recipe_ingredients_json) override.recipeIngredients = normalizeRecipeIngredients(row.recipe_ingredients_json);
+      if (row.cook_minutes != null) override.cookMinutes = row.cook_minutes as number;
+      if (row.cook_temp_f  != null) override.cookTempF   = row.cook_temp_f  as number;
+      if (row.sections_json) override.sections = JSON.parse(row.sections_json);
       if (row.nutrition_json && row.nutrition_json !== '{}') override.nutritionJson = JSON.parse(row.nutrition_json);
       if (row.image_url) override.imageUrl = row.image_url;
 

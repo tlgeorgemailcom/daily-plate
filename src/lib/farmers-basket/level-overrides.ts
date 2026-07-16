@@ -9,6 +9,8 @@ export interface BuiltinOverride {
   category?: string;
   dietaryCategory?: string;
   cookingMethod?: string;
+  cookMinutes?: number;
+  cookTempF?: number;
   dishFamily?: string;
   prepTime?: string;
   servings?: string;
@@ -16,6 +18,7 @@ export interface BuiltinOverride {
   animalSpawns?: { type: AnimalType; delay: number }[];
   recipeInstructions?: string[];
   recipeIngredients?: Level['recipeIngredients'];
+  sections?: Level['sections'];
   nutritionJson?: Level['nutritionJson'];
   imageUrl?: string;
   editedAt?: string;
@@ -208,6 +211,8 @@ export async function getLevelsWithOverrides(): Promise<Level[]> {
       category: override.category ?? level.category,
       dietaryCategory: override.dietaryCategory ?? level.dietaryCategory,
       cookingMethod: override.cookingMethod ?? level.cookingMethod,
+      cookMinutes:   override.cookMinutes   ?? (level as Level & { cookMinutes?: number }).cookMinutes,
+      cookTempF:     override.cookTempF     ?? (level as Level & { cookTempF?: number }).cookTempF,
       dishFamily: override.dishFamily ?? level.dishFamily,
       prepTime: override.prepTime ?? level.prepTime,
       servings: override.servings ?? level.servings,
@@ -228,12 +233,12 @@ export async function getLevelsWithOverrides(): Promise<Level[]> {
             yieldFactorFat:   override.nutritionJson.yieldFactorFat   ?? level.nutritionJson?.yieldFactorFat,
           }
         : level.nutritionJson,
-      // Promote sections from Turso's nutritionJson (snake_case section_key / prep_method)
-      // over the stale bundle sections (camelCase key / prepMethod). This ensures
-      // formatSectionHeader reads the current prep_method after an upload without
-      // requiring a bundle regeneration. Falls back to bundle sections when Turso
-      // has no sections data (old recipes without multi-section builds).
-      sections: (override.nutritionJson as Record<string, unknown> | undefined)?.sections as Level['sections'] ?? level.sections,
+      // sections_json (from upload.py) is the authoritative source — it contains
+      // the exact prep_method, boil_minutes, section_label from recipe_sections.csv.
+      // Falls back to nutritionJson.sections (build.py output) then bundle sections.
+      sections: (override.sections as Level['sections'] | undefined)
+        ?? (override.nutritionJson as Record<string, unknown> | undefined)?.sections as Level['sections']
+        ?? level.sections,
       imageUrl: override.imageUrl ?? level.imageUrl
     } as Level;
   });

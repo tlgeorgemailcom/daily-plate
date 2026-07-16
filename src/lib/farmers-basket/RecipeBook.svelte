@@ -316,7 +316,9 @@
   ): string {
     if (!sectionKey) return '';
     const meta = sectionsMeta?.find((s) => ((s as Record<string, unknown>)['section_key'] ?? s.key) === sectionKey);
-    const label = meta?.label || (sectionKey.charAt(0).toUpperCase() + sectionKey.slice(1));
+    const label = meta?.label
+      || (meta as Record<string,unknown>)?.['section_label'] as string
+      || (sectionKey.charAt(0).toUpperCase() + sectionKey.slice(1));
     // Use prepMethod for the display label — it reflects what the cook does at this step.
     // cookingMethod is for physics only and should not appear in the section header.
     // Bundle may store this as 'prepMethod' (camelCase) or 'prep_method' (snake_case).
@@ -2195,15 +2197,13 @@
               </div>
               
               {#if selectedLevel.recipeIngredients && selectedLevel.recipeIngredients.length > 0}
-                {@const _cookMethod = ((selectedLevel.nutritionJson as Record<string, unknown>)?.cookingMethod as string) ?? ''}
-                {@const _allSecs = ((selectedLevel.sections ?? (selectedLevel.nutritionJson as Record<string, unknown>)?.sections) ?? []) as Record<string, unknown>[]}
-                {@const _primarySec = _cookMethod ? _allSecs.find((s) => (!s['prep_method'] || s['prep_method'] === 'raw') && s['cook_method'] === _cookMethod) : null}
-                {@const _cookMins = _primarySec ? ((_primarySec['cook_stages'] as {tempF:number,minutes:number}[])?.[0]?.minutes ?? (_primarySec['boil_minutes'] as number) ?? 0) : (((selectedLevel.nutritionJson as Record<string, unknown>)?.cookMinutes as number) ?? 0)}
-                {@const _cookTempF = (_primarySec?.['cook_stages'] as {tempF:number,minutes:number}[])?.[0]?.tempF ?? 0}
+                {@const _cookMethod = selectedLevel.cookingMethod ?? ''}
+                {@const _cookMins = (selectedLevel as Record<string,unknown>)['cookMinutes'] as number ?? ((selectedLevel.nutritionJson as Record<string,unknown>)?.cookMinutes as number) ?? 0}
+                {@const _cookTempF = (selectedLevel as Record<string,unknown>)['cookTempF'] as number ?? 0}
                 <div class="full-ingredients">
                   <div class="assembled-cook-line">
                     <span class="assembled-cook-label">🍳 Final assembled cook:</span>
-                    {#if _cookMethod && _cookMethod !== 'raw' && _cookMethod !== 'multi' && (_primarySec || _cookMins > 0)}
+                    {#if _cookMethod && _cookMethod !== 'raw' && _cookMethod !== 'multi'}
                       <span class="assembled-cook-value">
                         {_cookMethod.charAt(0).toUpperCase() + _cookMethod.slice(1)}{_cookMins > 0 ? ` | ${_cookMins} min` : ''}{_cookTempF > 0 && _cookTempF !== 195 && _cookTempF !== 212 && _cookTempF !== 180 ? ` | ${_cookTempF}°F` : ''}
                       </span>
