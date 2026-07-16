@@ -517,7 +517,7 @@ export function buildRecipeCommunityV3(
     }
     const effectiveYfp = _stockEx?.yfp ?? yfp;
     const effectiveYfc = _stockEx?.yfc ?? yfc;
-    const effectiveYfo = _stockEx?.yfo ?? yfo; ──────────────────────────────────────────────
+    const effectiveYfo = _stockEx?.yfo ?? yfo;
     // Two-pass when hasPrepStep: pre-step retention × primary cook retention.
     // Each cook method has its own factor table in COOKING_RETENTION.
     // Single-pass otherwise (primary cook only).
