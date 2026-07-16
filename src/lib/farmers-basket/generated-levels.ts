@@ -9613,7 +9613,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve as a salad dressing, vegetable dip, or sandwich spread. Also excellent with buffalo wings, chicken tenders, pizza, and raw vegetables.'
     ],
     sections: [
-      { key: 'dressing', label: 'Dressing', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 }
+      { key: 'dressing', label: 'Dressing', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
   {
