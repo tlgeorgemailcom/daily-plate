@@ -9566,8 +9566,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): The dressing for Spinach Salad. Also excellent over grilled fish, steamed asparagus, or any salad where you want bright citrus flavor.'
     ],
     sections: [
-      { key: 'dressing', label: 'Dressing', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 },
-      { key: 'mustard', label: 'Dijon-Style Mustard', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 }
+      { key: 'dressing', label: 'Dressing', cookingMethod: 'raw', prepMethod: '' },
+      { key: 'mustard', label: 'Dijon-Style Mustard', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
   {
