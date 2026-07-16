@@ -33,6 +33,15 @@ import type {
 import { inferFillingClass } from './inferFillingClass.js';
 import { calcYieldWater }    from './yieldCalc.js';
 import { plausibilityCheck } from './plausibilityCheck.js';
+
+// ── Stock extraction yield factors (file-level — shared by yfw and yfp/yff/yfc/yfo paths) ──
+// Mirror of STOCK_EXTRACTION in recipes_v3/lib/build.py.
+// Stock fill classes bypass the boiled-vegetable yfw model (which gives yfw≈1.0
+// for stocks containing vegetables) and use calcYieldWater with the binding coefficient.
+const STOCK_EXTRACTION: Record<string, { yfp: number; yff: number; yfc: number; yfo: number }> = {
+  chicken_stock: { yfp: 0.366, yff: 0.089, yfc: 0.02, yfo: 0.02 },
+  bone_broth:    { yfp: 0.395, yff: 0.089, yfc: 0.02, yfo: 0.02 },
+};
 import {
   applyRetention,
   getRetentionFactor,
@@ -391,6 +400,12 @@ export function buildRecipeCommunityV3(
       // Then check boiled-vegetable model (raw vegetables with boilYfw).
       // Matches the Python absorption/boil_yfw models in build.py.
       if (effectiveCookMethod === 'boiled') {
+        // Stock fill classes bypass the absorber/vegBoiler models — the long-simmer
+        // evaporation is captured by the binding coefficient, not per-ingredient retention.
+        if (STOCK_EXTRACTION[fillClass]) {
+          const boilMins = (sec as any).boilMinutes ?? (sec as any).boil_minutes ?? 0;
+          yieldWater = calcYieldWater(stages, initialWaterG, fillClass, boilMins, 180, false);
+        } else {
         const absorbers = active.filter(a => a.nutrients.absorptionFactor != null);
         if (absorbers.length > 0) {
           const absorberGrams    = absorbers.reduce((s, a) => s + a.grams, 0);
@@ -414,6 +429,7 @@ export function buildRecipeCommunityV3(
             yieldWater = calcYieldWater(stages, initialWaterG, fillClass, boilMins, 212, false);
           }
         }
+        } // end stock else
       } else if (fillClass === 'strained') {
         // Strained-blend model: blended then pressed through cheesecloth.
         // STRAIN_WATER_K=0.9 g water absorbed per g of discarded dry solids.
@@ -495,10 +511,6 @@ export function buildRecipeCommunityV3(
     // When fillClass is a stock class, override yfp/yff/yfc/yfo with calibrated
     // extraction constants. These replace the default 1.0 for empty CSV columns.
     // Mirror: STOCK_EXTRACTION in recipes_v3/lib/build.py.
-    const STOCK_EXTRACTION: Record<string, { yfp: number; yff: number; yfc: number; yfo: number }> = {
-      chicken_stock: { yfp: 0.366, yff: 0.089, yfc: 0.02, yfo: 0.02 },
-      bone_broth:    { yfp: 0.395, yff: 0.089, yfc: 0.02, yfo: 0.02 },
-    };
     const _stockEx = !isStrained ? STOCK_EXTRACTION[fillClass] : undefined;
     if (_stockEx) {
       yff = _stockEx.yff;
