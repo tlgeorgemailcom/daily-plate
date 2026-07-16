@@ -9659,7 +9659,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): The dressing for Wedge Salad. Also excellent as a dip for buffalo wings, chicken tenders, and raw vegetables.'
     ],
     sections: [
-      { key: 'dressing', label: 'Dressing', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 }
+      { key: 'dressing', label: 'Dressing', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
   {
