@@ -9035,7 +9035,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): The seasoning blend used in Stewed Okra and Tomatoes, Fried Okra, Fried Squash, Chicken Gumbo, and Seafood Gumbo. Also excellent as a dry rub for chicken, shrimp, or fish before grilling or pan-frying.'
     ],
     sections: [
-      { key: 'blend', label: 'Spice blend', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 }
+      { key: 'blend', label: 'Spice blend', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
   {

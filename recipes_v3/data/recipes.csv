@@ -190,7 +190,7 @@ SIDE_017,SMASHEDPOTATOES,Smashed Potatoes,sides,vegan,dish,,45 min,3 potatoes (m
 SIDE_018,BAKEDBEANS,Baked Beans,sides,all,builtin,16005,60,1 cup (makes 7+),7,Rule C,baked,,,0.88,1.0,1.0,1.0,1.0,,approved,,,,PENDING,,
 SIDE_019,MACARONICHEESE,Mac and Cheese,sides,veggie,builtin,,,3/4 cup (makes 6),6,Rule D,boiled,,,0.90,1.0,1.0,1.0,1.0,,approved,,,,PENDING,,
 SIDE_020,MACANDTOMATO,Mac and Tomato,sides,veggie,builtin,,,1 cup (makes 4),4,Rule D,boiled,,,0.95,1.0,1.0,1.0,1.0,,approved,,,,PENDING,,
-SAUCE_014,CREOLESEASONING,Creole Seasoning,sauces & condiments,vegan,builtin,,,1 tsp (makes 27+),27,Rule D,raw,,,1.0,1.0,1.0,1.0,1.0,,approved,,,,PENDING,,
+SAUCE_014,CREOLESEASONING,Creole Seasoning,sauces & condiments,vegan,builtin,,,1 tsp (makes 27+),27,Rule D,,,,,,,,,,approved,,,,PENDING,,
 SIDE_021,STEWEDOKRA,Stewed Okra and Tomatoes,sides,vegan,builtin,,,1 cup (makes 4+),4,Rule D,boiled,,,0.88,1.0,1.0,1.0,1.0,,approved,,,,PENDING,,
 SIDE_022,FRIEDOKRA,Fried Okra,sides,veggie,builtin,,,1 cup (makes 4),4,Rule D,fried,,,0.75,1.0,1.0,1.0,1.0,,approved,,,,PENDING,,
 SIDE_023,FRIEDSQUASH,Fried Squash,sides,veggie,builtin,,,1 cup (makes 4),4,Rule D,fried,,,0.75,1.0,1.0,1.0,1.0,,approved,,,,PENDING,,
