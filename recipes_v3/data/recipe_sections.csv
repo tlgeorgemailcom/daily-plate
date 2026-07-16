@@ -279,8 +279,8 @@ SAUCE_001,sauce,Sauce,simmer,simmer,,,,,,,simmer_sauce,,1,
 SAUCE_001,finish,Finish,finish,raw,,,,,,,,,,
 SAUCE_002,bechamel,Béchamel sauce,sub-simmer,sub-simmer,,,,,,,,,1,SAUCE_001
 SAUCE_002,cheese,Cheese for Mornay Sauce,,sub-simmer,,,,,,,,,,
-SAUCE_003,onion,Sweated onion purée,thinly sliced,pan grilled,0.45,1.0,,,1.0,,,,,
-SAUCE_003,bechamel,Béchamel sauce,,raw,1.0,1.0,,,1.0,,,,,SAUCE_001
+SAUCE_003,onion,Sweated onion purée,braise,sub-simmer,,,,,,,simmer_sauce,,35,
+SAUCE_003,bechamel,Béchamel sauce,,sub-simmer,,,,,,,,,,SAUCE_001
 SAUCE_004,bechamel,Béchamel sauce,,raw,1.0,1.0,,,1.0,,,,,SAUCE_001
 SAUCE_004,cream,Cream,,boiled,0.82,1.0,,,1.0,,,,,
 SAUCE_005,bechamel,Béchamel sauce,,raw,1.0,1.0,,,1.0,,,,,SAUCE_001
