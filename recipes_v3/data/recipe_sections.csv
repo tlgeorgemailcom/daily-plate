@@ -285,8 +285,8 @@ SAUCE_004,bechamel,Béchamel sauce,sub-simmer,raw,,,,,,,,,1,SAUCE_001
 SAUCE_004,cream,Added Cream,,sub-simmer,,,,,,,,,,
 SAUCE_004,finish,Finish,finish,raw,,,,,,,,,,
 SAUCE_005,bechamel,Béchamel and purée,,sub-simmer,,,,,,,,,1,
-SAUCE_006,stock,White Chicken Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_001
-SAUCE_006,roux,Blonde roux,,boiled,0.88,1.0,1.0,1.0,1.0,,,,,
+SAUCE_006,roux,Roux,pan grilled,sub-simmer,,,,,,,pan_grilled_batter,,3,
+SAUCE_006,stock,Chicken stock,,raw,,,,,,,,,,STOCK_001
 STOCK_001,stock,Stock,,boiled,0.680,0.089,0.366,0.02,0.02,,,0:240,,
 STOCK_002,stock,Stock,,boiled,0.680,0.089,0.366,0.02,0.02,,,0:240,,
 STOCK_003,stock,Stock,,boiled,0.680,0.089,0.366,0.02,0.02,,,0:180,,
