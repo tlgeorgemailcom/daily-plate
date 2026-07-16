@@ -9797,8 +9797,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): The dressing for Caesar Salad, Chicken Caesar Salad, Shrimp Caesar Salad, and Chicken Caesar Wrap.'
     ],
     sections: [
-      { key: 'dressing', label: 'Dressing', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 },
-      { key: 'mustard', label: 'Dijon-Style Mustard', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 }
+      { key: 'dressing', label: 'Dressing', cookingMethod: 'raw', prepMethod: '' },
+      { key: 'mustard', label: 'Dijon-Style Mustard', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
   {
