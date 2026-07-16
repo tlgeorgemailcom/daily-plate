@@ -73,6 +73,10 @@ STOCK_EXTRACTION: dict[str, dict[str, float]] = {
     "bone_broth":    {"yfp": 0.395, "yff": 0.089, "yfc": 0.02, "yfo": 0.02},
     # STOCK_005 Beef Bone Broth: 24h simmer extracts 39.5% of raw protein
     # (vs 36.6% for standard 3–4h simmers). Calibrated vs Kettle & Fire label.
+    "fish_stock":    {"yfp": 0.355, "yff": 1.000, "yfc": 0.293, "yfo": 0.02},
+    # STOCK_006 Fish Stock: yff=1.000 (fat stays, no skimming); yfp=0.355 protein
+    # extraction; yfc=0.293 captures wine carb evaporation/retention; yfo=0.02
+    # fat-soluble vitamins leave with strained solids. Rule C — calibrated vs NDB 6963.
 }
 
 

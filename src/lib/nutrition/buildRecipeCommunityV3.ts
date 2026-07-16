@@ -41,6 +41,8 @@ import { plausibilityCheck } from './plausibilityCheck.js';
 const STOCK_EXTRACTION: Record<string, { yfp: number; yff: number; yfc: number; yfo: number }> = {
   chicken_stock: { yfp: 0.366, yff: 0.089, yfc: 0.02, yfo: 0.02 },
   bone_broth:    { yfp: 0.395, yff: 0.089, yfc: 0.02, yfo: 0.02 },
+  fish_stock:    { yfp: 0.355, yff: 1.000, yfc: 0.293, yfo: 0.02 },
+  // STOCK_006 Fish Stock: yff=1.000 (no fat skimmed); yfc=0.293 (wine carbs); Rule C calibrated.
 };
 import {
   applyRetention,

@@ -83,6 +83,8 @@ export const BINDING: Record<string, number> = {
   chicken_stock: 0.320, // clear stock 3–4h sub-simmer 180°F → yfw=0.680 (STOCK_001–004)
                         // back-calc: f=0.320, k×t converged at any t>60min
   bone_broth:    0.320, // 24h sub-simmer → same yfw=0.680 (deeper yfp=0.395 in STOCK_EXTRACTION)
+  fish_stock:    0.101, // clear fish stock, 25min sub-simmer 180°F → yfw=0.900 (STOCK_006)
+                        // back-calc: f=0.100, binding=0.100/(1-exp(-0.1758×25))=0.1013
   // meringue: NOT included — model invalid for surface-browning sections.
   // Never pass 'meringue' to this function. inferFillingClass() never emits it.
 };

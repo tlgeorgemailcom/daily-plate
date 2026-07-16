@@ -148,6 +148,9 @@ BINDING: dict[str, float] = {
                               # STOCK_001 white, STOCK_002 brown, STOCK_003 broth, STOCK_004 beef.
     "bone_broth":    0.320,  # 24h sub-simmer → same yfw=0.680 (fully converged)
                               # yfp=0.395 (deeper 24h extraction) set in STOCK_EXTRACTION.
+    "fish_stock":    0.101,  # clear fish stock, 25min sub-simmer 180°F → yfw=0.900
+                              # back-calc: f=0.100, binding=0.100/(1-exp(-0.1758×25))=0.1013
+                              # Covers STOCK_006 Fish Stock.
     # meringue: DO NOT USE — model invalid for surface-browning sections
 }
 
