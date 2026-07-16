@@ -9701,7 +9701,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve as a dipping sauce for chicken tenders, nuggets, or pretzels. Also excellent as a salad dressing or sandwich spread.'
     ],
     sections: [
-      { key: 'dressing', label: 'Dressing', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 }
+      { key: 'dressing', label: 'Dressing', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
   {

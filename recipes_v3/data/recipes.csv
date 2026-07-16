@@ -204,7 +204,7 @@ SAUCE_018,BALSAMICVINAIGRETTE,Balsamic Vinaigrette,sauces & condiments,vegan,bui
 SAUCE_019,LEMONVINAIGRETTE,Lemon Vinaigrette,sauces & condiments,vegan,builtin,,,2 tbsp (makes 6+),6,Rule D,,,,,,,,,,approved,,,,PENDING,,
 SAUCE_020,RANCHDRESSING,Ranch Dressing,sauces & condiments,veggie,builtin,,,2 tbsp (makes 12+),12,Rule D,,,,,,,,,,approved,,,,PENDING,,
 SAUCE_021,BLUECHEESEDRESSING,Blue Cheese Dressing,sauces & condiments,veggie,builtin,,,2 tbsp (makes 10+),10,Rule D,,,,,,,,,,approved,,,,PENDING,,
-SAUCE_022,HONEYMUSTARD,Honey Mustard Dressing,sauces & condiments,veggie,builtin,,,2 tbsp (makes 7),7,Rule D,raw,,,1.0,1.0,1.0,1.0,1.0,,approved,,,,PENDING,,
+SAUCE_022,HONEYMUSTARD,Honey Mustard Dressing,sauces & condiments,veggie,builtin,,,2 tbsp (makes 7),7,Rule D,,,,,,,,,,approved,,,,PENDING,,
 SAUCE_023,GREENGODDESS,Green Goddess Dressing,sauces & condiments,pesca,builtin,,,2 tbsp (makes 9),9,Rule D,raw,,,1.0,1.0,1.0,1.0,1.0,,approved,,,,PENDING,,
 SAUCE_024,CAESARDRESSING,Caesar Salad Dressing,sauces & condiments,pesca,builtin,,,2 tbsp (makes 7),7,Rule D,raw,,,1.0,1.0,1.0,1.0,1.0,,approved,,,,PENDING,,
 SALAD_001,CAESARSALAD,Caesar Salad,salads,pesca,dish,,,1 bowl (makes 2),2,Rule D,raw,,,1.0,1.0,1.0,1.0,1.0,,approved,,,,PENDING,,
