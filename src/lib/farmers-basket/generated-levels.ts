@@ -9475,8 +9475,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): The dressing for Greek Salad, Gnocchi Antipasto Salad, and Mediterranean Pasta Salad. Also excellent as a marinade for grilled vegetables, chicken, or shrimp.'
     ],
     sections: [
-      { key: 'dressing', label: 'Dressing', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 },
-      { key: 'mustard', label: 'Dijon-Style Mustard', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 }
+      { key: 'dressing', label: 'Dressing', cookingMethod: 'raw', prepMethod: '' },
+      { key: 'mustard', label: 'Dijon-Style Mustard', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
   {
