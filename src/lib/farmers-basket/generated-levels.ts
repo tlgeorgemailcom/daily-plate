@@ -9749,7 +9749,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Excellent over garden salads, grain bowls, and crudités. Also excellent as a sandwich spread, burger sauce, or dip for vegetables.'
     ],
     sections: [
-      { key: 'dressing', label: 'Dressing', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 }
+      { key: 'dressing', label: 'Dressing', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
   {
