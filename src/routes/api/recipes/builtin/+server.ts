@@ -322,15 +322,20 @@ export const GET: RequestHandler = async () => {
         // Normalize snake_case sections_json to Level['sections'] camelCase shape
         // so all downstream consumers use the typed fields without conditional lookups.
         const raw = JSON.parse(row.sections_json) as Record<string,unknown>[];
-        override.sections = raw.map(s => ({
-          key:           String(s['section_key'] ?? s['key'] ?? ''),
-          label:         String(s['section_label'] ?? s['label'] ?? ''),
-          cookingMethod: String(s['cook_method'] ?? s['cookingMethod'] ?? 'raw'),
-          prepMethod:    String(s['prep_method'] ?? s['prepMethod'] ?? ''),
-          boilMinutes:   typeof s['boil_minutes'] === 'number' ? s['boil_minutes'] : (typeof s['boilMinutes'] === 'number' ? s['boilMinutes'] : 0),
-          stages:        Array.isArray(s['cook_stages']) ? s['cook_stages'] : (Array.isArray(s['stages']) ? s['stages'] : []),
-          fillClass:     String(s['fill_class'] ?? s['fillClass'] ?? ''),
-        })) as Level['sections'];
+        override.sections = raw.map(s => {
+          const pm = String(s['prep_method'] ?? s['prepMethod'] ?? '');
+          const isUnheated = !pm || pm === 'raw' || pm === 'none';
+          return {
+            key:           String(s['section_key'] ?? s['key'] ?? ''),
+            label:         String(s['section_label'] ?? s['label'] ?? ''),
+            cookingMethod: String(s['cook_method'] ?? s['cookingMethod'] ?? 'raw'),
+            prepMethod:    pm,
+            // Unheated sections have no prep time — boil_minutes there drives the top bar, not display.
+            boilMinutes:   isUnheated ? 0 : (typeof s['boil_minutes'] === 'number' ? s['boil_minutes'] : 0),
+            stages:        Array.isArray(s['cook_stages']) ? s['cook_stages'] : (Array.isArray(s['stages']) ? s['stages'] : []),
+            fillClass:     String(s['fill_class'] ?? s['fillClass'] ?? ''),
+          };
+        }) as Level['sections'];
       }
       if (row.nutrition_json && row.nutrition_json !== '{}') override.nutritionJson = JSON.parse(row.nutrition_json);
       if (row.image_url) override.imageUrl = row.image_url;
