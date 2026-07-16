@@ -59,6 +59,23 @@ from .yield_calc import calc_yield_water
 from .yield_model import cooked_total_grams
 
 
+# ── Stock extraction yield factors ───────────────────────────────────────────
+# When a section's fill_class is a stock class, these constants replace the
+# load.py defaults of 1.0 for yfp/yff/yfc/yfo (which come from cleared CSV
+# locks). Applied after all other resolution paths in _build_recipe_multi.
+# Mirror: STOCK_EXTRACTION in src/lib/nutrition/buildRecipeCommunityV3.ts.
+STOCK_EXTRACTION: dict[str, dict[str, float]] = {
+    "chicken_stock": {"yfp": 0.366, "yff": 0.089, "yfc": 0.02, "yfo": 0.02},
+    # STOCK_001 White Chicken Stock, STOCK_002 Brown Chicken Stock,
+    # STOCK_003 Chicken Broth, STOCK_004 Beef Stock.
+    # Calibrated: protein extraction 36.6%, fat rendered+skimmed 8.9%,
+    # carb extraction 2%, fat-soluble vitamins leave with strained solids 2%.
+    "bone_broth":    {"yfp": 0.395, "yff": 0.089, "yfc": 0.02, "yfo": 0.02},
+    # STOCK_005 Beef Bone Broth: 24h simmer extracts 39.5% of raw protein
+    # (vs 36.6% for standard 3–4h simmers). Calibrated vs Kettle & Fire label.
+}
+
+
 def _parse_stages(cook_stages: str) -> list[tuple[int, int]]:
     """Parse '425:15,350:37' → [(425, 15), (350, 37)]."""
     return [
@@ -601,7 +618,24 @@ def _build_recipe_multi(
         #   3. Physics-based evaporation model (calc_yield_water).
         #   4. Default yfw=1.0 (no water change).
         _strained = (s.filling_class == 'strained' and bool(st["strain_ingredients"]))
-        if method == 'boiled' and st["absorbers"]:
+        # Stock extraction: must run BEFORE absorber / boil_yfw paths because stocks
+        # contain boiled vegetables (which would otherwise trigger the per-ingredient
+        # boil_yfw model and yield yfw≈1.0, ignoring the long-simmer evaporation).
+        # The binding coefficient captures the net 4–24h reduction; individual
+        # vegetable water retention is irrelevant at the stock scale.
+        if s.filling_class in STOCK_EXTRACTION and (s.cook_stages or s.boil_stages):
+            boil_min = float(s.boil_stages) if s.boil_stages else 0.0
+            stages   = _parse_stages(s.cook_stages) if s.cook_stages else []
+            _boil_temp = (
+                180.0 if s.cook_method in ('sub-simmer', 'sub_simmer') else
+                195.0 if s.cook_method == 'simmer' else
+                185.0 if s.cook_method in ('braise', 'braised') else
+                212.0
+            )
+            yfw = calc_yield_water(stages, st["raw_water"], s.filling_class,
+                                   boil_minutes=boil_min, boil_temp_f=_boil_temp,
+                                   boil_covered=False)
+        elif method == 'boiled' and st["absorbers"]:
             total_absorber_g = sum(g for g, _ in st["absorbers"])
             weighted_factor  = sum(g * f for g, f in st["absorbers"]) / total_absorber_g
             dry_non_water_g  = st["raw_total"] - st["raw_water"]
@@ -684,6 +718,16 @@ def _build_recipe_multi(
         yfc = s.yield_factor_carbohydrate if not _strained else yfc_strained
         yfo_S = s.yield_factor_other
         yfi_S = s.yield_factor_fiber
+
+        # Stock extraction model: when fill_class is a stock class, override
+        # yfp/yff/yfc/yfo with calibrated extraction constants. This replaces
+        # the load.py default of 1.0 for cleared CSV lock columns.
+        _stock_ex = STOCK_EXTRACTION.get(s.filling_class or "") if not _strained else None
+        if _stock_ex:
+            yff   = _stock_ex["yff"]
+            yfp   = _stock_ex["yfp"]
+            yfc   = _stock_ex["yfc"]
+            yfo_S = _stock_ex["yfo"]
         sums_S = st["sums"]
         retained_S: dict[str, float] = {}
         for n in EXTENDED_NUTRIENTS:

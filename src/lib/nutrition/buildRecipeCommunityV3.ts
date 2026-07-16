@@ -491,7 +491,21 @@ export function buildRecipeCommunityV3(
       : sec.yieldFactorCarbohydrate ?? 1.0;
     const yfo = sec.yieldFactorOther        ?? 1.0;
 
-    // ── Step 1+2: Sum retained nutrients ──────────────────────────────────────────────
+    // ── Stock extraction model ────────────────────────────────────────────────
+    // When fillClass is a stock class, override yfp/yff/yfc/yfo with calibrated
+    // extraction constants. These replace the default 1.0 for empty CSV columns.
+    // Mirror: STOCK_EXTRACTION in recipes_v3/lib/build.py.
+    const STOCK_EXTRACTION: Record<string, { yfp: number; yff: number; yfc: number; yfo: number }> = {
+      chicken_stock: { yfp: 0.366, yff: 0.089, yfc: 0.02, yfo: 0.02 },
+      bone_broth:    { yfp: 0.395, yff: 0.089, yfc: 0.02, yfo: 0.02 },
+    };
+    const _stockEx = !isStrained ? STOCK_EXTRACTION[fillClass] : undefined;
+    if (_stockEx) {
+      yff = _stockEx.yff;
+    }
+    const effectiveYfp = _stockEx?.yfp ?? yfp;
+    const effectiveYfc = _stockEx?.yfc ?? yfc;
+    const effectiveYfo = _stockEx?.yfo ?? yfo; ──────────────────────────────────────────────
     // Two-pass when hasPrepStep: pre-step retention × primary cook retention.
     // Each cook method has its own factor table in COOKING_RETENTION.
     // Single-pass otherwise (primary cook only).
@@ -531,23 +545,23 @@ export function buildRecipeCommunityV3(
       sectionTotals['fattyAcids_totalPolyunsaturated']= (sectionTotals['fattyAcids_totalPolyunsaturated'] ?? 0) * yff;
       sectionTotals['cholesterol']                    = (sectionTotals['cholesterol'] ?? 0) * yff;
     }
-    if (yfp !== 1.0) {
-      sectionTotals['protein'] = (sectionTotals['protein'] ?? 0) * yfp;
+    if (effectiveYfp !== 1.0) {
+      sectionTotals['protein'] = (sectionTotals['protein'] ?? 0) * effectiveYfp;
     }
-    if (yfc !== 1.0) {
-      sectionTotals['carbohydrate'] = (sectionTotals['carbohydrate'] ?? 0) * yfc;
-      sectionTotals['sugarsTotal']  = (sectionTotals['sugarsTotal']  ?? 0) * yfc;
-      sectionTotals['fiberTotalDietary'] = (sectionTotals['fiberTotalDietary'] ?? 0) * yfc;
+    if (effectiveYfc !== 1.0) {
+      sectionTotals['carbohydrate'] = (sectionTotals['carbohydrate'] ?? 0) * effectiveYfc;
+      sectionTotals['sugarsTotal']  = (sectionTotals['sugarsTotal']  ?? 0) * effectiveYfc;
+      sectionTotals['fiberTotalDietary'] = (sectionTotals['fiberTotalDietary'] ?? 0) * effectiveYfc;
     }
-    if (yfo !== 1.0) {
+    if (effectiveYfo !== 1.0) {
       for (const fatKey of FAT_SOLUBLE_KEYS) {
-        sectionTotals[fatKey] = (sectionTotals[fatKey] ?? 0) * yfo;
+        sectionTotals[fatKey] = (sectionTotals[fatKey] ?? 0) * effectiveYfo;
       }
     }
 
     // ── Step 5: Atwater energy recompute (matches Python build.py) ─────────────
     // Fires when any macro yield factor < 1.0 to avoid overcounting drained calories.
-    if (yff < 1.0 || yfp < 1.0 || yfc < 1.0) {
+    if (yff < 1.0 || effectiveYfp < 1.0 || effectiveYfc < 1.0) {
       sectionTotals['energy_KCal'] =
         (sectionTotals['protein']      ?? 0) * 4 +
         (sectionTotals['totalLipidFat']?? 0) * 9 +

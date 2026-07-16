@@ -287,7 +287,7 @@ SAUCE_004,finish,Finish,finish,raw,,,,,,,,,,
 SAUCE_005,bechamel,Béchamel and purée,,sub-simmer,,,,,,,,,1,
 SAUCE_006,roux,Roux,pan grilled,sub-simmer,,,,,,,pan_grilled_batter,,3,
 SAUCE_006,stock,Chicken stock,,raw,,,,,,,,,,STOCK_001
-STOCK_001,stock,Stock,,boiled,0.680,0.089,0.366,0.02,0.02,,,0:240,,
+STOCK_001,stock,Stock,,sub-simmer,,,,,,,chicken_stock,,240,
 STOCK_002,stock,Stock,,boiled,0.680,0.089,0.366,0.02,0.02,,,0:240,,
 STOCK_003,stock,Stock,,boiled,0.680,0.089,0.366,0.02,0.02,,,0:180,,
 STOCK_004,stock,Stock,,boiled,0.680,0.089,0.366,0.02,0.02,,,0:240,,

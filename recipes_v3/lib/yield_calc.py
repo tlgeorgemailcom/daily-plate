@@ -140,6 +140,14 @@ BINDING: dict[str, float] = {
     "braised_beef":        0.940, # slow-braised beef brisket — SAND_033: 275°F×100min → yfw=0.62
                                   # NDB 13803 (raw) / NDB 13804 (braised) USDA pair; 100-min partial cook
                                   # (full braise pair gives yfw=0.578 but requires B>1 at 100min; 0.62 used)
+    # ── Stock / broth extraction classes ────────────────────────────────────
+    # Binding drives yfw via calc_yield_water; all other stock yield factors
+    # (yfp, yff, yfc, yfo) are supplied by STOCK_EXTRACTION in build.py.
+    "chicken_stock": 0.320,  # clear stock, 3–4h sub-simmer 180°F → yfw=0.680
+                              # back-calc: f=0.320, k×t=0.1758×240≠42 (converged); covers
+                              # STOCK_001 white, STOCK_002 brown, STOCK_003 broth, STOCK_004 beef.
+    "bone_broth":    0.320,  # 24h sub-simmer → same yfw=0.680 (fully converged)
+                              # yfp=0.395 (deeper 24h extraction) set in STOCK_EXTRACTION.
     # meringue: DO NOT USE — model invalid for surface-browning sections
 }
 
