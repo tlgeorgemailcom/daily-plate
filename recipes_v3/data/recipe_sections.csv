@@ -88,9 +88,9 @@ BKFST_016,muffin,English muffin dough,,pan grilled,,1.0,,,1.0,,pan_grilled_batte
 BKFST_006,sauce,Hollandaise sauce,,sub-simmer,,1.0,,,1.0,,simmer_sauce,,3,
 BKFST_006,lemon,Lemon juice,finish,raw,1.0,1.0,,,1.0,,,,,
 BKFST_003,egg,Poached egg,simmer,simmer,1.0,1.0,,,1.0,,,,3,
-BKFST_003,muffin,English muffin (wheat),pan grilled,pan grilled,1.0,1.0,,,1.0,,,,6,BKFST_004
+BKFST_003,muffin,English muffin (wheat),pan grilled,raw,1.0,1.0,,,1.0,,,,6,BKFST_004
 BKFST_003,bacon,Canadian bacon,pan grilled,pan grilled,1.0,1.0,,,1.0,,,,2,
-BKFST_003,hollandaise,Hollandaise sauce,simmer,simmer,1.0,1.0,,,1.0,,,,3,BKFST_006
+BKFST_003,hollandaise,Hollandaise sauce,simmer,raw,1.0,1.0,,,1.0,,,,3,BKFST_006
 BKFST_005,main,French toast,,pan grilled,,1.0,,,1.0,,pan_grilled_batter,,4,
 BKFST_007,oatmeal,Oatmeal,,boiled,,1.0,,,1.0,,,,5,
 BKFST_010,batter,Pancake batter,,pan grilled,,1.0,,,1.0,,pan_grilled_batter,,3,
@@ -234,7 +234,7 @@ BKFST_011,eggs,Eggs,pan grilled,pan grilled,,1.00,,,1.00,,fried_meat,,2,
 BKFST_011,assembly,Assembly,,raw,,1.00,,,1.00,,,,,
 BKFST_036,eggs,Eggs,pan grilled,pan grilled,,1.00,,,1.00,,fried_meat,,2,
 BKFST_036,assembly,Assembly,,raw,,1.00,,,1.00,,,,,
-BKFST_037,sausage,Sausage,pan grilled,pan grilled,,1.00,,,1.00,,,,3,BKFST_015
+BKFST_037,sausage,Sausage,pan grilled,raw,,1.00,,,1.00,,,,3,BKFST_015
 BKFST_037,eggs,Eggs,pan grilled,pan grilled,,1.00,,,1.00,,fried_meat,,3,
 BKFST_037,assembly,Assembly,,raw,,1.00,,,1.00,,,,,
 BKFST_038,ham,Ham,pan grilled,pan grilled,,1.00,,,1.00,,fried_meat,,2,
@@ -277,12 +277,13 @@ SAUCE_001,onion,Onion and clove infusion,sub-simmer,simmer,,,,,,,simmer_sauce,,3
 SAUCE_001,roux,Roux,pan grilled,simmer,,,,,,,pan_grilled_batter,,1,
 SAUCE_001,sauce,Sauce,simmer,simmer,,,,,,,simmer_sauce,,1,
 SAUCE_001,finish,Finish,finish,raw,,,,,,,,,,
-SAUCE_002,bechamel,Béchamel sauce,sub-simmer,sub-simmer,,,,,,,,,1,SAUCE_001
+SAUCE_002,bechamel,Béchamel sauce,sub-simmer,raw,,,,,,,,,1,SAUCE_001
 SAUCE_002,cheese,Cheese for Mornay Sauce,,sub-simmer,,,,,,,,,,
 SAUCE_003,onion,Sweated onion purée,braise,sub-simmer,,,,,,,simmer_sauce,,35,
-SAUCE_003,bechamel,Béchamel sauce,,sub-simmer,,,,,,,,,,SAUCE_001
-SAUCE_004,bechamel,Béchamel sauce,,raw,1.0,1.0,,,1.0,,,,,SAUCE_001
-SAUCE_004,cream,Cream,,boiled,0.82,1.0,,,1.0,,,,,
+SAUCE_003,bechamel,Béchamel sauce,,raw,,,,,,,,,,SAUCE_001
+SAUCE_004,bechamel,Béchamel sauce,sub-simmer,raw,,,,,,,,,1,SAUCE_001
+SAUCE_004,cream,Added Cream,,sub-simmer,,,,,,,,,,
+SAUCE_004,finish,Finish,finish,raw,,,,,,,,,,
 SAUCE_005,bechamel,Béchamel sauce,,raw,1.0,1.0,,,1.0,,,,,SAUCE_001
 SAUCE_005,aurore,Tomato purée,,raw,1.0,1.0,,,1.0,,,,,
 SAUCE_006,stock,White Chicken Stock,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_001

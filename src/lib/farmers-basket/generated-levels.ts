@@ -2720,9 +2720,9 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'egg', label: 'Poached egg', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 3, yieldFactorWater: 1.0 },
-      { key: 'muffin', label: 'English muffin (wheat)', cookingMethod: 'pan grilled', prepMethod: 'pan grilled', boilMinutes: 6, yieldFactorWater: 1.0 },
+      { key: 'muffin', label: 'English muffin (wheat)', cookingMethod: 'raw', prepMethod: 'pan grilled', boilMinutes: 6, yieldFactorWater: 1.0 },
       { key: 'bacon', label: 'Canadian bacon', cookingMethod: 'pan grilled', prepMethod: 'pan grilled', boilMinutes: 2, yieldFactorWater: 1.0 },
-      { key: 'hollandaise', label: 'Hollandaise sauce', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 3, yieldFactorWater: 1.0 }
+      { key: 'hollandaise', label: 'Hollandaise sauce', cookingMethod: 'raw', prepMethod: 'simmer', boilMinutes: 3, yieldFactorWater: 1.0 }
     ],
   },
   {
@@ -6283,7 +6283,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a green salad, fresh berries, or hash browns.'
     ],
     sections: [
-      { key: 'sausage', label: 'Sausage', cookingMethod: 'pan grilled', prepMethod: 'pan grilled', boilMinutes: 3 },
+      { key: 'sausage', label: 'Sausage', cookingMethod: 'raw', prepMethod: 'pan grilled', boilMinutes: 3 },
       { key: 'eggs', label: 'Eggs', cookingMethod: 'pan grilled', prepMethod: 'pan grilled', boilMinutes: 3 },
       { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', prepMethod: '' }
     ],
@@ -7186,7 +7186,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Pour over cauliflower, broccoli, or leeks for a vegetable gratin. Use in croque monsieur, macaroni and cheese, or anywhere a creamy cheese sauce is needed.'
     ],
     sections: [
-      { key: 'bechamel', label: 'Béchamel sauce', cookingMethod: 'sub-simmer', prepMethod: 'sub-simmer', boilMinutes: 1 },
+      { key: 'bechamel', label: 'Béchamel sauce', cookingMethod: 'raw', prepMethod: 'sub-simmer', boilMinutes: 1 },
       { key: 'cheese', label: 'Cheese for Mornay Sauce', cookingMethod: 'sub-simmer', prepMethod: '' }
     ],
   },
@@ -7231,7 +7231,7 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'onion', label: 'Sweated onion purée', cookingMethod: 'sub-simmer', prepMethod: 'braise', boilMinutes: 35 },
-      { key: 'bechamel', label: 'Béchamel sauce', cookingMethod: 'sub-simmer', prepMethod: '' }
+      { key: 'bechamel', label: 'Béchamel sauce', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
   {
@@ -7254,14 +7254,14 @@ export const LEVELS: Level[] = [
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
-    nutritionJson: {"cal":103.4,"pro":2.1,"fat":9.0,"carb":3.9,"fib":0.1,"h2o":44.4,"sug":2.8,"perServing":{"cal":103.4,"pro":2.1,"fat":9.0,"carb":3.9,"fib":0.1,"h2o":44.4,"sug":2.8,"AddedSugars":0.0,"IntrinsicSugars":2.8},"micros":{"vitaminA":145.94,"vitaminC":0.15,"vitaminD":53.99,"vitaminE":0.38,"vitaminK":1.3,"vitaminB6":0.02,"vitaminB12":0.35,"thiamin":0.04,"riboflavin":0.15,"niacin":0.16,"folate":6.46,"calcium":91.33,"iron":0.14,"magnesium":8.35,"phosphorus":71.76,"potassium":105.14,"sodium":117.4,"zinc":0.32,"copper":0.02,"selenium":4.33,"cholesterol":44.13,"saturatedFat":9.28,"monoFat":3.95,"polyFat":0.57,"omega3":0.04,"omega6":0.28},"gramsPerServing":60.0,"servings":5,"per100g":{"Energy_KCal":172.35,"Water":74.1,"Protein":3.46,"TotalLipidFat":14.97,"Carbohydrate":6.55,"FiberTotalDietary":0.11,"SugarsTotal":4.71,"Cholesterol":44.13,"FattyAcids_totalSaturated":9.28,"FattyAcids_totalMonounsaturated":3.95,"FattyAcids_totalPolyunsaturated":0.57,"LinoleicAcid":0.28,"alphaLinolenicAcid":0.04,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":145.94,"Retinol":143.4,"Carotene_beta":27.01,"VitaminD":53.99,"VitaminE_alphaTocopherol":0.38,"VitaminK_phylloquinone":1.3,"VitaminC_totalAscorbicAcid":0.15,"Thiamin":0.04,"Riboflavin":0.15,"Niacin":0.16,"PantothenicAcid":0.29,"VitaminB6":0.02,"Folate_total":6.46,"Folate_food":3.85,"Folate_DFE":8.29,"FolicAcid":4.01,"VitaminB12":0.35,"Choline_total":13.76,"Betaine":0.49,"LuteinZeaxanthin":1.59,"Lycopene":0.0,"Calcium_Ca":91.33,"Iron_Fe":0.14,"Magnesium_Mg":8.35,"Phosphorus_P":71.76,"Potassium_K":105.14,"Sodium_Na":117.4,"Zinc_Zn":0.32,"Copper_Cu":0.02,"Manganese_Mn":0.04,"Selenium_Se":4.33,"Tryptophan":0.04,"Threonine":0.14,"Isoleucine":0.17,"Leucine":0.31,"Lysine":0.24,"Methionine":0.09,"Cystine":0.02,"Phenylalanine":0.17,"Tyrosine":0.16,"Valine":0.21,"Arginine":0.1,"Histidine":0.09,"Alanine":0.11,"AsparticAcid":0.28,"GlutamicAcid":0.78,"Glycine":0.07,"Proline":0.35,"Serine":0.19,"omega3":0.04,"omega6":0.28,"AddedSugars":0.0,"IntrinsicSugars":4.71},"addedSugars":0.0,"intrinsicSugars":2.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"","name":"Béchamel Sauce","grams":49.0},{"ndb":"1053","name":"Cream, fluid, heavy whipping","grams":11.9},{"ndb":"9152","name":"Lemon juice, raw","grams":0.2},{"ndb":"2047","name":"Salt, table","grams":0.1},{"ndb":"2032","name":"Spices, pepper, white","grams":0.0}],"sections":[{"section_key":"bechamel","section_label":"Béchamel sauce","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":245.08,"raw_water_grams":193.05,"raw_fat_grams":23.41,"raw_protein_grams":8.68,"raw_carb_grams":17.87,"raw_fiber_grams":0.29,"final_grams":245.08,"boil_minutes":0,"cook_stages":[],"fill_class":""},{"section_key":"cream","section_label":"Cream","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.82,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":61.2,"raw_water_grams":35.56,"raw_fat_grams":21.47,"raw_protein_grams":1.7,"raw_carb_grams":1.77,"raw_fiber_grams":0.02,"final_grams":54.8,"boil_minutes":0,"cook_stages":[],"fill_class":""}],"cookingMethod":"multi","cookMinutes":null},
+    nutritionJson: {"cal":98.1,"pro":1.9,"fat":8.6,"carb":3.6,"fib":0.1,"h2o":46.4,"sug":2.6,"perServing":{"cal":98.1,"pro":1.9,"fat":8.6,"carb":3.6,"fib":0.1,"h2o":46.4,"sug":2.6,"AddedSugars":0.0,"IntrinsicSugars":2.6},"micros":{"vitaminA":124.15,"vitaminC":0.23,"vitaminD":49.46,"vitaminE":0.31,"vitaminK":1.15,"vitaminB6":0.01,"vitaminB12":0.27,"thiamin":0.02,"riboflavin":0.13,"niacin":0.08,"folate":3.55,"calcium":72.1,"iron":0.11,"magnesium":6.31,"phosphorus":56.87,"potassium":79.59,"sodium":112.08,"zinc":0.25,"copper":0.02,"selenium":3.76,"cholesterol":41.42,"saturatedFat":8.7,"monoFat":3.69,"polyFat":0.46,"omega3":0.03,"omega6":0.23},"gramsPerServing":61.3,"servings":5,"per100g":{"Energy_KCal":160.14,"Water":75.67,"Protein":3.15,"TotalLipidFat":14.01,"Carbohydrate":5.92,"FiberTotalDietary":0.1,"SugarsTotal":4.27,"Cholesterol":41.42,"FattyAcids_totalSaturated":8.7,"FattyAcids_totalMonounsaturated":3.69,"FattyAcids_totalPolyunsaturated":0.46,"LinoleicAcid":0.23,"alphaLinolenicAcid":0.03,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":124.15,"Retinol":122.03,"Carotene_beta":22.56,"VitaminD":49.46,"VitaminE_alphaTocopherol":0.31,"VitaminK_phylloquinone":1.15,"VitaminC_totalAscorbicAcid":0.23,"Thiamin":0.02,"Riboflavin":0.13,"Niacin":0.08,"PantothenicAcid":0.21,"VitaminB6":0.01,"Folate_total":3.55,"Folate_food":2.41,"Folate_DFE":4.35,"FolicAcid":3.6,"VitaminB12":0.27,"Choline_total":11.03,"Betaine":0.44,"LuteinZeaxanthin":0.73,"Lycopene":0.0,"Calcium_Ca":72.1,"Iron_Fe":0.11,"Magnesium_Mg":6.31,"Phosphorus_P":56.87,"Potassium_K":79.59,"Sodium_Na":112.08,"Zinc_Zn":0.25,"Copper_Cu":0.02,"Manganese_Mn":0.03,"Selenium_Se":3.76,"Tryptophan":0.04,"Threonine":0.13,"Isoleucine":0.16,"Leucine":0.28,"Lysine":0.22,"Methionine":0.08,"Cystine":0.01,"Phenylalanine":0.15,"Tyrosine":0.15,"Valine":0.19,"Arginine":0.09,"Histidine":0.08,"Alanine":0.1,"AsparticAcid":0.25,"GlutamicAcid":0.71,"Glycine":0.07,"Proline":0.31,"Serine":0.17,"omega3":0.03,"omega6":0.23,"AddedSugars":0.0,"IntrinsicSugars":4.27},"addedSugars":0.0,"intrinsicSugars":2.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"","name":"Béchamel Sauce","grams":49.0},{"ndb":"1053","name":"Cream, fluid, heavy whipping","grams":11.9},{"ndb":"9152","name":"Lemon juice, raw","grams":0.2},{"ndb":"2047","name":"Salt, table","grams":0.1},{"ndb":"2032","name":"Spices, pepper, white","grams":0.0}],"sections":[{"section_key":"bechamel","section_label":"Béchamel sauce","prep_method":"sub-simmer","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":245.08,"raw_water_grams":196.21,"raw_fat_grams":21.44,"raw_protein_grams":7.94,"raw_carb_grams":16.37,"raw_fiber_grams":0.27,"final_grams":245.08,"boil_minutes":1.0,"cook_stages":[],"fill_class":""},{"section_key":"cream","section_label":"Added Cream","prep_method":"raw","cook_method":"sub-simmer","cooking_method":"sub-simmer","cooking_method_normalized":"boiled","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":59.5,"raw_water_grams":34.4,"raw_fat_grams":21.47,"raw_protein_grams":1.69,"raw_carb_grams":1.63,"raw_fiber_grams":0.0,"final_grams":59.5,"boil_minutes":0,"cook_stages":[],"fill_class":""},{"section_key":"finish","section_label":"Finish","prep_method":"finish","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":1.7,"raw_water_grams":1.16,"raw_fat_grams":0.0,"raw_protein_grams":0.01,"raw_carb_grams":0.14,"raw_fiber_grams":0.02,"final_grams":1.7,"boil_minutes":0,"cook_stages":[],"fill_class":""}],"cookingMethod":"sub-simmer","cookMinutes":13},
     recipeIngredients: [
       { name: 'Sauce Crème', quantity: 'custom (g)', foodWord: 'CREMESAUCE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'Béchamel Sauce', quantity: '1 recipe Béchamel (1 cup, 245.08g)', section: 'bechamel', foodWord: 'BECHAMEL', portionDesc: 'g', portionGrams: 245.08, isDish: true, componentRef: 'SAUCE_001' },
       { name: 'heavy cream', quantity: '1/4 cup', section: 'cream', ndbNo: '1053', portionDesc: 'g', portionGrams: 59.5 },
-      { name: 'lemon juice', quantity: '1/4 tsp', section: 'cream', ndbNo: '9152', portionDesc: 'g', portionGrams: 1.25 },
-      { name: 'salt', quantity: 'pinch', section: 'cream', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.375 },
-      { name: 'white pepper', quantity: 'tiny pinch', section: 'cream', ndbNo: '2032', portionDesc: 'g', portionGrams: 0.075 }
+      { name: 'lemon juice', quantity: '1/4 tsp', section: 'finish', ndbNo: '9152', portionDesc: 'g', portionGrams: 1.25 },
+      { name: 'salt', quantity: 'pinch', section: 'finish', ndbNo: '2047', portionDesc: 'g', portionGrams: 0.375 },
+      { name: 'white pepper', quantity: 'tiny pinch', section: 'finish', ndbNo: '2032', portionDesc: 'g', portionGrams: 0.075 }
     ],
     recipeInstructions: [
       'Prepare one full recipe of Béchamel sauce (see instructions in the recipe: Béchamel Sauce).',
@@ -7271,8 +7271,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): An enriched béchamel for delicate dishes. Spoon over poached chicken, veal, fish fillets, or steamed vegetables.'
     ],
     sections: [
-      { key: 'bechamel', label: 'Béchamel sauce', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 },
-      { key: 'cream', label: 'Cream', cookingMethod: 'boiled', prepMethod: '', yieldFactorWater: 0.82 }
+      { key: 'bechamel', label: 'Béchamel sauce', cookingMethod: 'raw', prepMethod: 'sub-simmer', boilMinutes: 1 },
+      { key: 'cream', label: 'Added Cream', cookingMethod: 'sub-simmer', prepMethod: '' },
+      { key: 'finish', label: 'Finish', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
   {
