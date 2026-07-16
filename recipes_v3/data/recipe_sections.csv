@@ -363,8 +363,8 @@ SAUCE_016,dressing,Dressing,,raw,,,,,,,,,,
 SAUCE_016,mustard,Dijon-Style Mustard,,raw,,,,,,,,,,SAUCE_010
 SAUCE_017,dressing,Dressing,,raw,,,,,,,,,,
 SAUCE_017,mustard,Dijon-Style Mustard,,raw,,,,,,,,,,SAUCE_010
-SAUCE_018,dressing,Dressing,,raw,1.0,1.0,1.0,1.0,1.0,,,,,
-SAUCE_018,mustard,Dijon-Style Mustard,,raw,1.0,1.0,1.0,1.0,1.0,,,,,SAUCE_010
+SAUCE_018,dressing,Dressing,,raw,,,,,,,,,,
+SAUCE_018,mustard,Dijon-Style Mustard,,raw,,,,,,,,,,SAUCE_010
 SAUCE_019,dressing,Dressing,,raw,1.0,1.0,1.0,1.0,1.0,,,,,
 SAUCE_019,mustard,Dijon-Style Mustard,,raw,1.0,1.0,1.0,1.0,1.0,,,,,SAUCE_010
 SAUCE_020,dressing,Dressing,,raw,1.0,1.0,1.0,1.0,1.0,,,,,

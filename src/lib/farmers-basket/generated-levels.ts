@@ -9519,8 +9519,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Excellent over arugula, mixed greens, or caprese. Also works as a marinade for grilled chicken or salmon, or as a drizzle over roasted vegetables.'
     ],
     sections: [
-      { key: 'dressing', label: 'Dressing', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 },
-      { key: 'mustard', label: 'Dijon-Style Mustard', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 }
+      { key: 'dressing', label: 'Dressing', cookingMethod: 'raw', prepMethod: '' },
+      { key: 'mustard', label: 'Dijon-Style Mustard', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
   {
