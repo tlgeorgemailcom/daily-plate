@@ -315,23 +315,15 @@
     sectionsMeta: Level['sections'],
   ): string {
     if (!sectionKey) return '';
-    const meta = sectionsMeta?.find((s) => ((s as Record<string, unknown>)['section_key'] ?? s.key) === sectionKey);
-    const label = meta?.label
-      || (meta as Record<string,unknown>)?.['section_label'] as string
-      || (sectionKey.charAt(0).toUpperCase() + sectionKey.slice(1));
-    // Use prepMethod for the display label — it reflects what the cook does at this step.
-    // cookingMethod is for physics only and should not appear in the section header.
-    // Bundle may store this as 'prepMethod' (camelCase) or 'prep_method' (snake_case).
-    const rawMethod = (meta as Record<string, unknown>)?.['prep_method'] as string
-      ?? (meta as Record<string, unknown>)?.['prepMethod'] as string
-      ?? '';
+    const meta = sectionsMeta?.find((s) => s.key === sectionKey);
+    const label = meta?.label || (sectionKey.charAt(0).toUpperCase() + sectionKey.slice(1));
+    // prepMethod reflects what the cook does at this step; cookingMethod is physics only.
+    const rawMethod = meta?.prepMethod ?? '';
     const display = rawMethod in SECTION_METHOD_LABEL
       ? SECTION_METHOD_LABEL[rawMethod]
       : rawMethod || null;
-    // Append stovetop time when present (boil_minutes from Turso; boilMinutes from bundle).
-    const boilMins = (meta as Record<string, unknown>)?.['boil_minutes'] as number | undefined
-      ?? (meta as Record<string, unknown>)?.['boilMinutes'] as number | undefined;
-    const timeStr = (boilMins && boilMins > 0 && rawMethod !== 'finish') ? ` | ${boilMins} min` : '';
+    // Append stovetop prep time when present.
+    const timeStr = (meta?.boilMinutes && meta.boilMinutes > 0 && rawMethod !== 'finish') ? ` | ${meta.boilMinutes} min` : '';
     return display ? `${label} — ${display}${timeStr}` : `${label}:`;
   }
 
@@ -2198,8 +2190,8 @@
               
               {#if selectedLevel.recipeIngredients && selectedLevel.recipeIngredients.length > 0}
                 {@const _cookMethod = selectedLevel.cookingMethod ?? ''}
-                {@const _cookMins = (selectedLevel as Record<string,unknown>)['cookMinutes'] as number ?? ((selectedLevel.nutritionJson as Record<string,unknown>)?.cookMinutes as number) ?? 0}
-                {@const _cookTempF = (selectedLevel as Record<string,unknown>)['cookTempF'] as number ?? 0}
+                {@const _cookMins = selectedLevel.cookMinutes ?? 0}
+                {@const _cookTempF = selectedLevel.cookTempF ?? 0}
                 <div class="full-ingredients">
                   <div class="assembled-cook-line">
                     <span class="assembled-cook-label">🍳 Final assembled cook:</span>
@@ -2222,7 +2214,7 @@
                       {@const collapsedLabel = qtyStripped && qtyStripped.toLowerCase().includes((sectionName.split(/\s+/)[0] ?? '').toLowerCase()) ? qtyStripped : (qtyStripped ? `${qtyStripped} ${sectionName}` : sectionName)}
                       <button class="ingredient-section-label" onclick={() => toggleIngredientSection(group.section!)}>
                         <span class="section-chevron">{isSectionCollapsed ? '▶' : '▼'}</span>
-                        {isSectionCollapsed && componentRefItem ? `${collapsedLabel}:` : formatSectionHeader(group.section, selectedLevel.sections ?? (selectedLevel.nutritionJson as Record<string, unknown>)?.sections as Level['sections'])}
+                        {isSectionCollapsed && componentRefItem ? `${collapsedLabel}:` : formatSectionHeader(group.section, selectedLevel.sections)}
                       </button>
                     {/if}
                     {#if !group.section || !collapsedIngredientSections.has(group.section)}
