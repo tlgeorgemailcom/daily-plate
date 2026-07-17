@@ -153,6 +153,8 @@ BINDING: dict[str, float] = {
                                   # Calibrated to SIDE_037/038/039 original locked yfw=0.85.
     "stuffed_mushroom":      0.500, # baked stuffed mushrooms (dense filling retains moisture) — SIDE_039: 400°F×20min → yfw=0.90
                                   # Calibrated to SIDE_039 original locked yfw=0.90.
+    "simmered_vegetable":    0.155, # gently simmered cooked vegetables (succotash, etc.) — SIDE_040: 180°F×6min → yfw=0.90
+                                  # Calibrated to SIDE_040 original locked yfw=0.90.
     "wilt_squeezed_spinach":  1.480, # pan-wilted then hand-squeezed spinach — SIDE_030: 180°F×3min → yfw=0.39
                                   # binding > 1.0 is a valid extrapolation: squeeze removes more water than pure evaporation.
                                   # spinach_raw boil_yfw=0.961 (natural boil, no squeeze); this fill_class overrides it for wilt+squeeze.

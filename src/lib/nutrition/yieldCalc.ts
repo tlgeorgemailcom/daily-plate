@@ -90,6 +90,8 @@ export const BINDING: Record<string, number> = {
                               // Calibrated to SIDE_037/038/039 original locked yfw=0.85.
   stuffed_mushroom:      0.500, // baked stuffed mushrooms, dense filling (400°F×20min → yfw=0.90)
                               // Calibrated to SIDE_039 original locked yfw=0.90.
+  simmered_vegetable:    0.155, // gently simmered cooked vegetables (succotash) (180°F×6min → yfw=0.90)
+                              // Calibrated to SIDE_040 original locked yfw=0.90.
   wilt_squeezed_spinach:  1.480, // pan-wilted then hand-squeezed spinach (180°F×3min → yfw=0.39)
                               // binding > 1.0 extrapolates beyond pure evaporation to model mechanical squeezing.
                               // spinach_raw boil_yfw=0.961 (natural boil); this fill_class overrides for wilt+squeeze.
