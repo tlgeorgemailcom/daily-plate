@@ -344,8 +344,7 @@ Section-level `yield_factor_water` non-unity lock status by category:
 - **SALAD**: ✅ clean
 - **STOCK**: ✅ clean
 - **SAUCE**: ✅ clean
-- **SIDE_001–030**: ✅ clean
-- **SIDE_031–040**: 🔧 locks remain — pending unlock sessions.
+- **SIDE_001–040**: ✅ clean
 - **ENTR, CRUST**: 🔧 locks remain — pending unlock sessions.
 
 ## Critical Invariants
