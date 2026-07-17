@@ -1,4 +1,8 @@
 recipe_id,step_order,step_text
+SIDE_020,1,"Bring a large pot of water to a boil. Add 1 tsp of table salt per quart of water after it boils, then add the dry elbow macaroni. Cook 8 minutes (al dente). Drain and set aside."
+SIDE_020,2,"In a large saucepan over medium-low heat, combine the drained macaroni with the crushed tomatoes. Season with salt and black pepper and stir to combine."
+SIDE_020,3,"Simmer over medium-low heat, stirring occasionally, for 9 minutes until the sauce has thickened and coated the pasta. Taste and adjust salt before serving."
+SIDE_020,4,Suggestions (not included): A classic weeknight comfort dish. Serve with a simple green salad or garlic bread.
 SOUP_009,1,Prepare the Creole Seasoning (see the Creole Seasoning recipe) if not already made.
 SOUP_009,2,"Make the dark roux: heat vegetable oil in a large heavy-bottomed pot over medium-high heat. Add the flour and cook, stirring constantly, for 15–20 minutes until the roux turns a deep chocolate brown. Reduce heat immediately if it begins to smell scorched."
 SOUP_009,3,"Add the onion, celery, and bell pepper (the 'holy trinity') to the roux. Cook, stirring frequently, for 5 minutes until the vegetables soften."
@@ -1172,10 +1176,6 @@ SIDE_019,2,"In a medium saucepan over medium heat, melt the butter. Whisk in the
 SIDE_019,3,"Gradually whisk in the milk, adding it in a slow stream. Bring to a gentle simmer, whisking frequently, and cook for 5 to 7 minutes until the sauce thickens enough to coat a spoon."
 SIDE_019,4,Remove from heat. Stir in the shredded cheddar a handful at a time until fully melted. Season with salt and black pepper.
 SIDE_019,5,Add the drained macaroni to the cheese sauce and stir to coat. Transfer to a buttered 2-quart baking dish. Bake at 350°F for 20 minutes until set and lightly golden on top.
-SIDE_020,1,Bring a large pot of salted water to a boil. Cook the elbow macaroni according to package directions until al dente. Drain and set aside.
-SIDE_020,2,"In a large skillet or saucepan over medium heat, melt the butter. Add the drained macaroni and stir to coat."
-SIDE_020,3,"Pour in the crushed tomatoes, season with salt and black pepper, and stir to combine."
-SIDE_020,4,"Simmer over medium-low heat, stirring occasionally, for 8 to 10 minutes until the sauce has thickened and coated the pasta. Taste and adjust salt before serving."
 SAUCE_014,1,Measure all spices into a small bowl.
 SAUCE_014,2,Stir with a fork or whisk until evenly blended.
 SAUCE_014,3,"Transfer to an airtight jar and store in a cool, dry place for up to 6 months."
@@ -3785,7 +3785,6 @@ SIDE_015,7,"Suggestions (not included): Serve alongside roast beef, steak, or ro
 SIDE_016,7,Suggestions (not included): Top with additional sour cream and serve as a hearty side or main. Great alongside grilled steak or BBQ chicken.
 SIDE_018,7,"Suggestions (not included): Serve alongside cornbread, hot dogs, or BBQ. A classic side for summer cookouts and potlucks."
 SIDE_019,6,"Suggestions (not included): Serve alongside BBQ, hot dogs, or as a comforting main. Top with buttered breadcrumbs before baking for extra crunch."
-SIDE_020,5,Suggestions (not included): A classic weeknight comfort dish. Serve with a simple green salad or garlic bread.
 SIDE_022,7,"Suggestions (not included): Serve alongside fried chicken, BBQ ribs, or pulled pork. Also pairs well with ranch dressing or hot sauce for dipping."
 SIDE_023,7,"Suggestions (not included): Serve as a side with fried chicken, BBQ, or catfish. Also great as an appetizer with ranch dressing or remoulade sauce."
 SIDE_024,10,"Suggestions (not included): A classic Thanksgiving and holiday side. Pairs especially well with roasted turkey, glazed ham, or prime rib."

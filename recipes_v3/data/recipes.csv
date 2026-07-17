@@ -189,7 +189,7 @@ SIDE_016,TWICEBAKEDPOTATO,Twice Baked Potatoes,sides,all,dish,,75 min,1 potato (
 SIDE_017,SMASHEDPOTATOES,Smashed Potatoes,sides,vegan,dish,,45 min,3 potatoes (makes 4),4,Rule D,baked,22,450,,,,,,,approved,,Smashed Potatoes; Rule D — no canonical; potato_white_raw(11354) 1200.0g+olive_oil(4053) 40.5g+rosemary_fresh(2063) 3.4g+garlic_powder(2020) 3.1g+salt_table(2047) 9.0g+black_pepper_ground(2030) 1.15g; yfw=0.82 → 1030.9g cooked; 4 servings x 257.7g (3 potatoes); dietary_category=vegan; food_word=SMASHEDPOTATOES (bespoke Rule D),Smashed Potatoes computed from SR Legacy ingredient values. No canonical match.,PASS,Rule D — no canonical match.,
 SIDE_018,BAKEDBEANS,Baked Beans,sides,all,builtin,16005,60,1 cup (makes 7+),7,Rule C,baked,270,300,,,1.0,1.0,1.0,,approved,,,,PENDING,,
 SIDE_019,MACARONICHEESE,Mac and Cheese,sides,veggie,builtin,,,3/4 cup (makes 6),6,Rule D,baked,20,350,,,1.0,1.0,1.0,,approved,,,,PENDING,,
-SIDE_020,MACANDTOMATO,Mac and Tomato,sides,veggie,builtin,,,1 cup (makes 4),4,Rule D,boiled,,,0.95,1.0,1.0,1.0,1.0,,approved,,,,PENDING,,
+SIDE_020,MACANDTOMATO,Mac and Tomato,sides,veggie,builtin,,,1 cup (makes 4),4,Rule D,simmer,9,,,,1.0,1.0,1.0,,approved,,,,PENDING,,
 SAUCE_014,CREOLESEASONING,Creole Seasoning,sauces & condiments,vegan,builtin,,,1 tsp (makes 27+),27,Rule D,,,,,,,,,,approved,,,,PENDING,,
 SIDE_021,STEWEDOKRA,Stewed Okra and Tomatoes,sides,vegan,builtin,,,1 cup (makes 4+),4,Rule D,boiled,,,0.88,1.0,1.0,1.0,1.0,,approved,,,,PENDING,,
 SIDE_022,FRIEDOKRA,Fried Okra,sides,veggie,builtin,,,1 cup (makes 4),4,Rule D,fried,,,0.75,1.0,1.0,1.0,1.0,,approved,,,,PENDING,,
