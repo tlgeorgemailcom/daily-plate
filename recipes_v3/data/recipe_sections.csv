@@ -11,6 +11,8 @@ SIDE_020,tomato,Tomato,,simmer,,,,,,,simmer_sauce,,9,
 SIDE_021,trinity,Trinity,pan grilled,boiled,,,,,,,,,6,
 SIDE_021,assembly,Assembly,,boiled,,,,,,,simmer_sauce,,22,
 SIDE_021,seasoning,Creole Seasoning,,raw,,,,,,,,,,SAUCE_014
+SIDE_022,battered_okra,Battered okra,,fried,,,,,,,fried_chicken,,3,
+SIDE_022,seasoning,Creole Seasoning,,raw,,,,,,,,,,SAUCE_014
 SWEET_001,crust,Pie crust,raw,baked,,1.0,,,1.0,,pastry,"425:15,350:37",,
 SWEET_001,filling,Apple filling,simmer,baked,,1.0,,,1.0,,thickened_fruit,"425:15,350:37",5,
 SWEET_003,crust,Pie crust,baked,baked,,1.0,,,1.0,,pastry,425:25,,
@@ -362,8 +364,6 @@ SIDE_016,assembly,Assembly,,baked,,,,,,,dairy_custard,400:18,,
 SIDE_017,potatoes,Potatoes,simmer,baked,,,,,,,simmer_sauce,,20,
 SIDE_017,smash,Smash,,baked,,,,,,,simmer_sauce,450:22,,
 SAUCE_014,blend,Spice blend,,raw,,,,,,,,,,
-SIDE_022,coating,Fried Okra,,fried,0.75,1.0,,,1.0,,,,,
-SIDE_022,seasoning,Creole Seasoning,,raw,1.0,1.0,,,1.0,,,,,SAUCE_014
 SIDE_023,coating,Fried Squash,,fried,0.75,1.0,,,1.0,,,,,
 SIDE_023,seasoning,Creole Seasoning,,raw,1.0,1.0,,,1.0,,,,,SAUCE_014
 SAUCE_015,roux,Roux,pan grilled,sub-simmer,,,,,,,pan_grilled_batter,,2,
