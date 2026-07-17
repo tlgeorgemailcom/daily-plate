@@ -419,9 +419,14 @@ export function buildRecipeCommunityV3(
           const retainedWaterG   = dryNonWaterG * weightedFactor / (1 - weightedFactor);
           yieldWater = initialWaterG > 0 ? retainedWaterG / initialWaterG : 1.0;
         } else {
-          // Boiled-vegetable model: per-ingredient water retention from USDA pairs.
-          // Vegetable ingredients use their individual boilYfw; others retain water (×1.0).
-          const vegBoilers = active.filter(a => typeof a.nutrients.boilYfw === 'number');
+          // Boiled-vegetable model fires only when no explicit fill_class is set on
+          // the section. An explicit fill_class (e.g. simmer_sauce) means the recipe
+          // author wants the physics evaporation model, not the per-ingredient veg
+          // retention fallback. (Priority change July 2026 — mirrors build.py.)
+          const hasExplicitFillClass = !!(sec.fillClass && sec.fillClass !== '');
+          const vegBoilers = !hasExplicitFillClass
+            ? active.filter(a => typeof a.nutrients.boilYfw === 'number')
+            : [];
           if (vegBoilers.length > 0) {
             const totalWater  = initialWaterG;
             const vegWater    = vegBoilers.reduce((s, a) => s + (a.nutrients.water ?? 0) * (a.grams / 100), 0);

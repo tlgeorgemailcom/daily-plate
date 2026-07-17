@@ -652,26 +652,12 @@ def _build_recipe_multi(
                 yfw = retained_water_g / st["raw_water"]
             else:
                 yfw = 1.0
-        elif method == 'boiled' and st["boil_yfw_ingredients"]:
-            total_water = st["raw_water"]
-            if total_water > 0:
-                veg_water = sum(w for w, _ in st["boil_yfw_ingredients"])
-                non_veg_water = total_water - veg_water
-                retained = sum(w * y for w, y in st["boil_yfw_ingredients"]) + non_veg_water
-                yfw = retained / total_water
-            else:
-                yfw = 1.0
-        elif _strained:
-            # Strained-blend model: blended then pressed through cheesecloth.
-            # Water yield: the discarded wet pulp absorbs STRAIN_WATER_K g of water
-            # per gram of discarded dry solid.
-            from .yield_calc import STRAIN_WATER_K
-            total_dry_discarded = sum(d * (1 - r) for d, _, _, _, r in st["strain_ingredients"])
-            water_absorbed      = STRAIN_WATER_K * total_dry_discarded
-            yfw = max(0.0, (st["raw_water"] - water_absorbed) / st["raw_water"]) if st["raw_water"] > 0 else 1.0
-        elif s.yield_factor_water is not None:
-            yfw = s.yield_factor_water
         elif s.filling_class and (s.cook_stages or s.boil_stages):
+            # Explicit fill_class takes priority over the per-vegetable boil_yfw model.
+            # If the recipe author set a fill_class (e.g. simmer_sauce), use the physics
+            # evaporation model rather than the ingredient-level vegetable retention
+            # fallback. This ensures stewed dishes with okra/other absorbing veg still
+            # correctly reduce under a simmer_sauce binding. (July 2026)
             boil_min = float(s.boil_stages) if s.boil_stages else 0.0
             stages   = _parse_stages(s.cook_stages) if s.cook_stages else []
             _boil_temp = (
@@ -684,6 +670,25 @@ def _build_recipe_multi(
             yfw = calc_yield_water(stages, st["raw_water"], s.filling_class,
                                    boil_minutes=boil_min, boil_temp_f=_boil_temp,
                                    boil_covered=_boil_covered)
+        elif method == 'boiled' and st["boil_yfw_ingredients"]:
+            # Fallback per-vegetable water-retention model — fires only when no
+            # explicit fill_class is set. (Moved below fill_class check July 2026.)
+            total_water = st["raw_water"]
+            if total_water > 0:
+                veg_water = sum(w for w, _ in st["boil_yfw_ingredients"])
+                non_veg_water = total_water - veg_water
+                retained = sum(w * y for w, y in st["boil_yfw_ingredients"]) + non_veg_water
+                yfw = retained / total_water
+            else:
+                yfw = 1.0
+        elif _strained:
+            # Strained-blend model: blended then pressed through cheesecloth.
+            from .yield_calc import STRAIN_WATER_K
+            total_dry_discarded = sum(d * (1 - r) for d, _, _, _, r in st["strain_ingredients"])
+            water_absorbed      = STRAIN_WATER_K * total_dry_discarded
+            yfw = max(0.0, (st["raw_water"] - water_absorbed) / st["raw_water"]) if st["raw_water"] > 0 else 1.0
+        elif s.yield_factor_water is not None:
+            yfw = s.yield_factor_water
         else:
             yfw = 1.0
         yff = s.yield_factor_fat
