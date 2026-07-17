@@ -70,6 +70,8 @@ export const BINDING: Record<string, number> = {
   deep_fried_potato: 1.280, // deep-fried potato strips (french fries) (212°F×4min → yfw=0.21)
                              // binding > 1.0 models rapid water displacement by hot-oil immersion at 325°F.
                              // Calibrated to SIDE_031 original locked yfw=0.21.
+  deep_fried_battered_ring: 1.025, // deep-fried battered rings (onion rings) (212°F×5min → yfw=0.29)
+                             // USDA NDB 21130 (fast-food onion rings) water=24.52% corroborates. Calibrated to SIDE_033 locked yfw=0.29.
   grilled_batter:     0.408, // waffle-iron grilled batter (375°F×4min → yfw=0.62)
   pan_grilled_chicken: 0.216, // pan-grilled chicken breast (212°F×11min → yfw=0.80)
                               // NDB 5062 (raw) / NDB 5063 (fried) USDA pair

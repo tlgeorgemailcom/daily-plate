@@ -130,6 +130,9 @@ BINDING: dict[str, float] = {
     "deep_fried_potato": 1.280, # deep-fried potato strips (french fries) — SIDE_031: 212°F×4min → yfw=0.21
                                   # binding > 1.0 models rapid water displacement by hot-oil immersion at 325°F.
                                   # 212°F is build.py default for cm=fried; calibrated to SIDE_031 original locked yfw=0.21.
+    "deep_fried_battered_ring": 1.025, # deep-fried battered rings (onion rings) — SIDE_033: 212°F×5min → yfw=0.29
+                                  # USDA NDB 21130 (fast-food onion rings) water=24.52% corroborates high water loss.
+                                  # Calibrated to SIDE_033 original locked yfw=0.29.
     "grilled_batter":     0.408, # waffle-iron grilled batter — BKFST_014 waffle: 375°F×4min → yfw=0.62
     "pan_grilled_chicken": 0.216, # pan-grilled chicken breast — SAND_034: 212°F×11min → yfw=0.80
                                   # NDB 5062 (raw) / NDB 5063 (fried) USDA pair; full-cook pair yfw=0.548 (B>1)
