@@ -86,6 +86,8 @@ export const BINDING: Record<string, number> = {
                               // carrot_raw boil_yfw=1.25 (absorbs water); fill_class required to override. Calibrated to SIDE_032 locked yfw=0.80.
   casserole_baked:       0.550, // baked casserole with cream sauce (green bean casserole) (350°F×25+5min → yfw=0.88)
                               // Calibrated to SIDE_034 original locked yfw=0.88.
+  roasted_vegetable:     1.175, // high-heat roasted vegetables (asparagus, Brussels sprouts, mushrooms) (425°F×12min → yfw=0.85)
+                              // Calibrated to SIDE_037/038/039 original locked yfw=0.85.
   wilt_squeezed_spinach:  1.480, // pan-wilted then hand-squeezed spinach (180°F×3min → yfw=0.39)
                               // binding > 1.0 extrapolates beyond pure evaporation to model mechanical squeezing.
                               // spinach_raw boil_yfw=0.961 (natural boil); this fill_class overrides for wilt+squeeze.
