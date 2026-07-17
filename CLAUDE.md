@@ -343,7 +343,7 @@ Section-level `yield_factor_water` non-unity lock status by category:
 - **STOCK**: ✅ clean
 - **SAUCE**: ✅ clean
 - **SIDE_001–021, SIDE_027**: ✅ clean
-- **SIDE_022–026, SIDE_028–040**: 🔧 locks remain — pending unlock. Note: SIDE_028 (Braised Collard Greens), SIDE_029 (Creamed Corn), SIDE_030 (Creamed Spinach) were committed with data but the `yield_factor_water` lock was never cleared from `recipe_sections.csv` — they need proper unlock (fill_class + stages + clear lock) before they match the physics-parity standard.
+- **SIDE_022–026, SIDE_028–040**: 🔧 locks remain — pending unlock sessions. SIDE_028 (Braised Collard Greens), SIDE_029 (Creamed Corn), SIDE_030 (Creamed Spinach) have ingredient/instruction data authored but have never been through the unlock process — they still need fill_class + stages + lock cleared.
 - **ENTR, CRUST**: 🔧 locks remain — pending unlock sessions.
 
 ## Critical Invariants
