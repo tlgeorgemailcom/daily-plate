@@ -8863,7 +8863,7 @@ export const LEVELS: Level[] = [
       { name: 'ground black pepper', quantity: '½ tsp', section: 'smash', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 }
     ],
     recipeInstructions: [
-      'Preheat oven to 450°F. Put potatoes in cold salted water. Bring to a boil, then gently simmer until just tender when pierced, about 20 minutes. Drain and let steam dry for 5 minutes.',
+      'Preheat oven to 450°F. Put potatoes in a large pot. Cover with cold water generously salted with table salt (½ tbsp per quart of water). Bring to a boil, then gently simmer until just tender when pierced, about 20 minutes. Drain well.',
       'Transfer potatoes to a well-oiled baking sheet. Use the bottom of a glass or measuring cup to firmly smash each potato to about ½-inch thickness.',
       'Drizzle olive oil over the smashed potatoes. Sprinkle with rosemary, garlic powder, salt, and black pepper.',
       'Roast at 450°F for 20 to 25 minutes until edges are crisp and golden.',
