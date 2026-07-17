@@ -141,6 +141,9 @@ BINDING: dict[str, float] = {
                                   # FNDDS FC 75414500 (fried okra) corroborates rapid water loss from small high-surface-area pieces
     "braised_leafy_vegetable": 0.350, # slow-braised leafy greens (collards, kale) — SIDE_028: 195°F×55min → yfw=0.65
                                   # No USDA raw/braised collard greens NDB pair; calibrated to SIDE_028 original locked yfw=0.65
+    "glazed_vegetable":      0.280, # short-simmered glazed vegetables (carrots, etc.) — SIDE_032: 195°F×6min → yfw=0.80
+                                  # Required because carrot_raw boil_yfw=1.25 (absorbs water) would give yfw>1 without fill_class override.
+                                  # Calibrated to SIDE_032 original locked yfw=0.80.
     "wilt_squeezed_spinach":  1.480, # pan-wilted then hand-squeezed spinach — SIDE_030: 180°F×3min → yfw=0.39
                                   # binding > 1.0 is a valid extrapolation: squeeze removes more water than pure evaporation.
                                   # spinach_raw boil_yfw=0.961 (natural boil, no squeeze); this fill_class overrides it for wilt+squeeze.

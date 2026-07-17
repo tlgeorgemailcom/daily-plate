@@ -80,6 +80,8 @@ export const BINDING: Record<string, number> = {
                               // FNDDS FC 75414500 (fried okra) corroborates rapid water loss from small high-surface-area pieces
   braised_leafy_vegetable: 0.350, // slow-braised leafy greens (collards, kale) (195°F×55min → yfw=0.65)
                               // No USDA raw/braised collard NDB pair; calibrated to SIDE_028 locked yfw=0.65
+  glazed_vegetable:      0.280, // short-simmered glazed vegetables (carrots, etc.) (195°F×6min → yfw=0.80)
+                              // carrot_raw boil_yfw=1.25 (absorbs water); fill_class required to override. Calibrated to SIDE_032 locked yfw=0.80.
   wilt_squeezed_spinach:  1.480, // pan-wilted then hand-squeezed spinach (180°F×3min → yfw=0.39)
                               // binding > 1.0 extrapolates beyond pure evaporation to model mechanical squeezing.
                               // spinach_raw boil_yfw=0.961 (natural boil); this fill_class overrides for wilt+squeeze.
