@@ -331,7 +331,14 @@ export const GET: RequestHandler = async () => {
             cookingMethod: String(s['cook_method'] ?? s['cookingMethod'] ?? 'raw'),
             prepMethod:    pm,
             // Unheated sections have no prep time — boil_minutes there drives the top bar, not display.
-            boilMinutes:   isUnheated ? 0 : (typeof s['boil_minutes'] === 'number' ? s['boil_minutes'] : 0),
+            // For baked pre-step sections (pm='baked'/'par-baked'), boil_minutes=0 but cook_stages[0].minutes
+            // carries the pre-step duration. Fall back to cook_stages[0].minutes when boil_minutes=0.
+            boilMinutes: isUnheated ? 0 : (() => {
+              const bm = typeof s['boil_minutes'] === 'number' ? s['boil_minutes'] as number : 0;
+              if (bm > 0) return bm;
+              const stgs = Array.isArray(s['cook_stages']) ? s['cook_stages'] as {tempF:number,minutes:number}[] : [];
+              return stgs.length > 0 ? (stgs[0].minutes ?? 0) : 0;
+            })(),
             stages:        Array.isArray(s['cook_stages']) ? s['cook_stages'] : (Array.isArray(s['stages']) ? s['stages'] : []),
             fillClass:     String(s['fill_class'] ?? s['fillClass'] ?? ''),
           };
