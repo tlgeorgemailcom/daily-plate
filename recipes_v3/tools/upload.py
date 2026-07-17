@@ -221,9 +221,12 @@ def _build_payload(rid: str, recipes, ings, ledger, instrs, sections_map) -> dic
                 "yield_factor_protein": s.yield_factor_protein,
                 "yield_factor_carbohydrate": s.yield_factor_carbohydrate,
                 "yield_factor_other": s.yield_factor_other,
-                # Physics-model inputs — allow V1 compound model to recompute
-                # yieldWater correctly when the user edits boilMinutes or stages.
-                "boil_minutes": _parse_boil_minutes(s.boil_stages),
+                # boil_minutes = pre-step duration, regardless of whether it comes from
+                # boil_stages (stovetop pre-steps) or cook_stages[0].minutes (baked pre-steps).
+                # This keeps boil_minutes the single authoritative source in sections_json.
+                "boil_minutes": _parse_boil_minutes(s.boil_stages) or
+                    ((_parse_cook_stages(s.cook_stages) or [{}])[0].get("minutes", 0)
+                     if s.prep_method and s.prep_method not in ("", "raw", "none", "finish") else 0),
                 "cook_stages": _parse_cook_stages(s.cook_stages),
                 "fill_class": s.filling_class or "",
             }
