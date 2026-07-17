@@ -670,6 +670,10 @@ def _build_recipe_multi(
             yfw = calc_yield_water(stages, st["raw_water"], s.filling_class,
                                    boil_minutes=boil_min, boil_temp_f=_boil_temp,
                                    boil_covered=_boil_covered)
+        elif s.yield_factor_water is not None:
+            # Explicit lock takes priority over the ingredient-level boil_yfw fallback.
+            # Locks are set on unconverted sections pending fill_class + stages authoring.
+            yfw = s.yield_factor_water
         elif method == 'boiled' and st["boil_yfw_ingredients"]:
             # Fallback per-vegetable water-retention model — fires only when no
             # explicit fill_class is set. (Moved below fill_class check July 2026.)
@@ -687,8 +691,6 @@ def _build_recipe_multi(
             total_dry_discarded = sum(d * (1 - r) for d, _, _, _, r in st["strain_ingredients"])
             water_absorbed      = STRAIN_WATER_K * total_dry_discarded
             yfw = max(0.0, (st["raw_water"] - water_absorbed) / st["raw_water"]) if st["raw_water"] > 0 else 1.0
-        elif s.yield_factor_water is not None:
-            yfw = s.yield_factor_water
         else:
             yfw = 1.0
         yff = s.yield_factor_fat
