@@ -342,8 +342,8 @@ Section-level `yield_factor_water` non-unity lock status by category:
 - **SALAD**: ✅ clean
 - **STOCK**: ✅ clean
 - **SAUCE**: ✅ clean
-- **SIDE_001–021, SIDE_027**: ✅ clean
-- **SIDE_022–026, SIDE_028–040**: 🔧 locks remain — pending unlock sessions. SIDE_028 (Braised Collard Greens), SIDE_029 (Creamed Corn), SIDE_030 (Creamed Spinach) have ingredient/instruction data authored but have never been through the unlock process — they still need fill_class + stages + lock cleared.
+- **SIDE_001–030**: ✅ clean
+- **SIDE_031–040**: 🔧 locks remain — pending unlock sessions.
 - **ENTR, CRUST**: 🔧 locks remain — pending unlock sessions.
 
 ## Critical Invariants
