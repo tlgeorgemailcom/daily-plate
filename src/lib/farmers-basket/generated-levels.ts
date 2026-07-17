@@ -8737,7 +8737,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside BBQ ribs, fried chicken, pulled pork sandwiches, or burgers.'
     ],
     sections: [
-      { key: 'slaw', label: 'Slaw', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 }
+      { key: 'slaw', label: 'Slaw', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
   {
