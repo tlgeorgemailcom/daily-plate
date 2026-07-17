@@ -8172,7 +8172,7 @@ export const LEVELS: Level[] = [
     ],
     recipeInstructions: [
       'Heat oven to 400°F. Cut the top off the garlic head to expose the cloves, drizzle with olive oil, wrap in foil, and roast 40–45 minutes until cloves are golden and very soft.',
-      'Use Yukon Gold potatoes — their waxy, buttery flesh gives the smoothest, creamiest result. White potatoes are listed in the ingredients since they are a close nutritional match and they are in the database while Yukon Gold is not. Put the unpeeled potatoes in a large pot — uniform size matters so they cook evenly. Cover with cold heavily salted water (Use table salt for the water — it is denser than kosher or sea salt; use ½ tbsp (1½ tsp) table salt per quart of water, or 1 tbsp kosher salt. The potatoes will absorb a small amount as they cook. The salt listed in the ingredients is for seasoning when mashing.), bring to a boil, then drop to a gentle simmer. Cook 20–30 minutes until a knife slides through without any resistance.',
+      'Put the unpeeled potatoes in a large pot — uniform size ensures even cooking. Cover with cold water generously salted with table salt (½ tbsp per quart of water). Bring to a boil, then drop to a gentle simmer. Cook 20–30 minutes until a knife slides through without any resistance.',
       'Squeeze the roasted garlic cloves out of their skins and mash to a paste with a fork.',
       'Drain potatoes; peel while hot. Pass through a potato ricer or food mill into the pot.',
       'Dry the riced potato over low heat 1–2 minutes, stirring with a wooden spoon to drive off excess moisture.',
