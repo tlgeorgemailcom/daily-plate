@@ -127,6 +127,9 @@ BINDING: dict[str, float] = {
                                   # NDB 20017 (masa harina raw) / NDB 36415 (arepa, restaurant) USDA proxy
                                   # Binding near-identical to fried_ground_beef by coincidence; same k formula
     "fried_potato":       0.750, # fried potato (high surface area) — BKFST_013 hash browns: 375°F×10min → yfw=0.25
+    "deep_fried_potato": 1.280, # deep-fried potato strips (french fries) — SIDE_031: 212°F×4min → yfw=0.21
+                                  # binding > 1.0 models rapid water displacement by hot-oil immersion at 325°F.
+                                  # 212°F is build.py default for cm=fried; calibrated to SIDE_031 original locked yfw=0.21.
     "grilled_batter":     0.408, # waffle-iron grilled batter — BKFST_014 waffle: 375°F×4min → yfw=0.62
     "pan_grilled_chicken": 0.216, # pan-grilled chicken breast — SAND_034: 212°F×11min → yfw=0.80
                                   # NDB 5062 (raw) / NDB 5063 (fried) USDA pair; full-cook pair yfw=0.548 (B>1)

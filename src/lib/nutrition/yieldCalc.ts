@@ -67,6 +67,9 @@ export const BINDING: Record<string, number> = {
   pan_grilled_masa:   0.544, // pan-grilled thick masa cake (gordita, arepa) (212°F×11min → yfw=0.4968)
                              // NDB 20017 (masa harina raw) / NDB 36415 (arepa restaurant) USDA proxy
   fried_potato:       0.750, // fried potato high surface area (375°F×10min → yfw=0.25)
+  deep_fried_potato: 1.280, // deep-fried potato strips (french fries) (212°F×4min → yfw=0.21)
+                             // binding > 1.0 models rapid water displacement by hot-oil immersion at 325°F.
+                             // Calibrated to SIDE_031 original locked yfw=0.21.
   grilled_batter:     0.408, // waffle-iron grilled batter (375°F×4min → yfw=0.62)
   pan_grilled_chicken: 0.216, // pan-grilled chicken breast (212°F×11min → yfw=0.80)
                               // NDB 5062 (raw) / NDB 5063 (fried) USDA pair
