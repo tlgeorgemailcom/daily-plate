@@ -418,6 +418,7 @@ def main() -> int:
             conn.execute(_UPDATE_SQL, (
                 payload["recipe_name"],
                 payload["servings_count"],
+                payload["servings"],
                 payload["grams_per_serving"],
                 payload["recipe_ingredients_json"],
                 payload["recipe_instructions_json"],
