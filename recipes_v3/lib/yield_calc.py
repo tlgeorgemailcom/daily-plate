@@ -133,6 +133,9 @@ BINDING: dict[str, float] = {
                                   # 212°F = default stovetop temp for pan grilled in build.py
     "fried_chicken":       0.195, # deep-fried battered chicken breast — SAND_035: 212°F×11min → yfw=0.82
                                   # NDB 5062 (raw) / NDB 5063 (fried) USDA pair; batter crust traps moisture
+    "fried_battered_vegetable": 0.493, # small battered-fried vegetable pieces (okra, squash) — SIDE_022/023: 212°F×3min → yfw=0.75
+                                  # No USDA fried-okra NDB; calibrated to SIDE_022 original locked yfw=0.75 (culinary estimate)
+                                  # FNDDS FC 75414500 (fried okra) corroborates rapid water loss from small high-surface-area pieces
     # ── Oven-baked proteins ────────────────────────────────────────────────────
     # Calibrated from USDA raw/cooked NDB pair; use oven stages (cook_stages).
     "baked_pork":         0.880, # slow-roasted pork shoulder/butt — ENTR_094/SAND_032: 300°F×100min → yfw=0.60

@@ -72,6 +72,9 @@ export const BINDING: Record<string, number> = {
                               // NDB 5062 (raw) / NDB 5063 (fried) USDA pair
   fried_chicken:       0.195, // deep-fried battered chicken breast (212°F×11min → yfw=0.82)
                               // NDB 5062 (raw) / NDB 5063 (fried); batter crust traps moisture
+  fried_battered_vegetable: 0.493, // small battered-fried vegetable pieces (okra, squash) (212°F×3min → yfw=0.75)
+                              // No USDA fried-okra NDB; calibrated to SIDE_022/023 locked yfw=0.75 (culinary estimate)
+                              // FNDDS FC 75414500 (fried okra) corroborates rapid water loss from small high-surface-area pieces
   // ── Oven-baked proteins ──────────────────────────────────────────────────
   // Calibrated from USDA raw/cooked NDB pairs; use oven stages (cook_stages).
   baked_pork:         0.880, // slow-roasted pork shoulder/butt (300°F×100min → yfw=0.60)

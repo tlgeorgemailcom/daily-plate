@@ -11,7 +11,7 @@ SIDE_020,tomato,Tomato,,simmer,,,,,,,simmer_sauce,,9,
 SIDE_021,trinity,Trinity,pan grilled,boiled,,,,,,,,,6,
 SIDE_021,assembly,Assembly,,boiled,,,,,,,simmer_sauce,,22,
 SIDE_021,seasoning,Creole Seasoning,,raw,,,,,,,,,,SAUCE_014
-SIDE_022,battered_okra,Battered okra,,fried,,,,,,,fried_chicken,,3,
+SIDE_022,battered_okra,Battered okra,,fried,,,,,,,fried_battered_vegetable,,3,
 SIDE_022,seasoning,Creole Seasoning,,raw,,,,,,,,,,SAUCE_014
 SWEET_001,crust,Pie crust,raw,baked,,1.0,,,1.0,,pastry,"425:15,350:37",,
 SWEET_001,filling,Apple filling,simmer,baked,,1.0,,,1.0,,thickened_fruit,"425:15,350:37",5,
