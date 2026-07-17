@@ -84,6 +84,8 @@ export const BINDING: Record<string, number> = {
                               // No USDA raw/braised collard NDB pair; calibrated to SIDE_028 locked yfw=0.65
   glazed_vegetable:      0.280, // short-simmered glazed vegetables (carrots, etc.) (195°F×6min → yfw=0.80)
                               // carrot_raw boil_yfw=1.25 (absorbs water); fill_class required to override. Calibrated to SIDE_032 locked yfw=0.80.
+  casserole_baked:       0.550, // baked casserole with cream sauce (green bean casserole) (350°F×25+5min → yfw=0.88)
+                              // Calibrated to SIDE_034 original locked yfw=0.88.
   wilt_squeezed_spinach:  1.480, // pan-wilted then hand-squeezed spinach (180°F×3min → yfw=0.39)
                               // binding > 1.0 extrapolates beyond pure evaporation to model mechanical squeezing.
                               // spinach_raw boil_yfw=0.961 (natural boil); this fill_class overrides for wilt+squeeze.
