@@ -197,7 +197,7 @@ SIDE_023,FRIEDSQUASH,Fried Squash,sides,veggie,builtin,,,1 cup (makes 4),4,Rule 
 SAUCE_015,CHEESESAUCE,Cheese Sauce for Vegetables,sauces & condiments,veggie,builtin,,,1/4 cup (makes 6+),6,Rule D,sub-simmer,3,,,,,,,,approved,,,,PENDING,,
 SIDE_024,SWEETPOTATOCASSEROLE,Sweet Potato Casserole,sides,veggie,builtin,,,1 cup (makes 8),8,Rule D,baked,27,350,,,1.0,1.0,1.0,,approved,,,,PENDING,,
 SIDE_025,SWEETPOTATOCASSEROLEV,Vegan Sweet Potato Casserole,sides,vegan,builtin,,,3/4 cup (makes 8),8,Rule D,baked,27,350,,,1.0,1.0,1.0,,approved,,,,PENDING,,
-SIDE_026,SWEETPOTATOCASSEROLEMAR,Marshmallow Sweet Potato Casserole,sides,veggie,builtin,,,3/4 cup (makes 8),8,Rule D,baked,,,1.0,1.0,1.0,1.0,1.0,,approved,,,,PENDING,,
+SIDE_026,SWEETPOTATOCASSEROLEMAR,Marshmallow Sweet Potato Casserole,sides,veggie,builtin,,,3/4 cup (makes 8),8,Rule D,baked,22,350,,,1.0,1.0,1.0,,approved,,,,PENDING,,
 SAUCE_016,BASICVINAIGRETTE,Basic Vinaigrette,sauces & condiments,vegan,builtin,,,2 tbsp (makes 7+),7,Rule D,,,,,,,,,,approved,,,,PENDING,,
 SAUCE_017,ITALIANVINAIGRETTE,Italian Vinaigrette,sauces & condiments,vegan,builtin,,,2 tbsp (makes 6+),6,Rule D,,,,,,,,,,approved,,,,PENDING,,
 SAUCE_018,BALSAMICVINAIGRETTE,Balsamic Vinaigrette,sauces & condiments,vegan,builtin,,,2 tbsp (makes 7+),7,Rule D,,,,,,,,,,approved,,,,PENDING,,
