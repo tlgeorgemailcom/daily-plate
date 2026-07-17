@@ -333,6 +333,19 @@ Current map covers: `breakfast`, `breakfast & brunch`, `breakfast-brunch`, `soup
 
 **`'finish'` prep_method — Added after cooking (added July 2026).** Use for ingredients stirred in or added after the primary cook is complete: cheese melted into a soup off-heat, whipped cream on a cooled pie, finishing butter, beaten eggs dropped into simmering broth. Physics = `raw` (yfw=1.0, all retention factors 1.0 — no evaporation, no heat destruction). Displays as "Added after cooking" with an amber info note in the form. The ingredient must still be in `recipe_ingredients.csv` for nutrition to be correct. Example: SOUP_004 cheddar cheese, SOUP_005 egg_whole_raw.
 
+## Physics Conversion Lock Audit (last run 2026-07-17)
+Section-level `yield_factor_water` non-unity lock status by category:
+- **BKFST**: ✅ clean
+- **SAND**: ✅ clean
+- **SOUP**: ✅ clean
+- **SWEET**: ✅ clean
+- **SALAD**: ✅ clean
+- **STOCK**: ✅ clean
+- **SAUCE**: ✅ clean
+- **SIDE_001–021, SIDE_027**: ✅ clean
+- **SIDE_022–026, SIDE_028–040**: 🔧 locks remain — pending unlock. Note: SIDE_028 (Braised Collard Greens), SIDE_029 (Creamed Corn), SIDE_030 (Creamed Spinach) were committed with data but the `yield_factor_water` lock was never cleared from `recipe_sections.csv` — they need proper unlock (fill_class + stages + clear lock) before they match the physics-parity standard.
+- **ENTR, CRUST**: 🔧 locks remain — pending unlock sessions.
+
 ## Critical Invariants
 - **Never edit a v3 recipe row in the Turso UI** — it returns 423 and blocks re-uploads. Edit the CSV only.
 - **Turso is the sole ingredient source** — no hardcoded nutrition values in code.
