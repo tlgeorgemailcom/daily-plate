@@ -111,6 +111,8 @@ Community users creating and editing their own recipes receive no AI assistance.
 - When `yff`, `yfp`, or `yfc` < 1.0, Atwater energy is recomputed from retained P/F/C to avoid overcounting drained calories
 - `yfo` applies only to `_FAT_SOLUBLE_NUTRIENTS` (VitK, VitA/RAE, carotenoids, VitD, VitE, tocopherols). Default `yfo=1.0` is a no-op for all non-stock recipes
 
+**⚠️ `upload.py` has three parallel structures that must stay in sync: `_UPDATE_COLS` (change detection), `_UPDATE_SQL` (SET clause), and the `conn.execute()` parameter tuple.** A column present in `_UPDATE_COLS` and `_UPDATE_SQL` but missing from the parameter tuple causes: (1) the change to be reported in the diff output but silently never written to Turso, and (2) every column after it in the tuple to be shifted one position, writing wrong values into the wrong columns. Discovered July 2026: `servings` was in both `_UPDATE_COLS` and `_UPDATE_SQL` but missing from the tuple — causing the reported `servings` diff to be a ghost and corrupting all subsequent columns. Fix: always keep the tuple order identical to the SET clause order in `_UPDATE_SQL`.
+
 **Edit-build-upload loop:**
 ```
 python recipes_v3/tools/validate_ledger.py              # check ingredient_key integrity
