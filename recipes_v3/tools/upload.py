@@ -262,12 +262,13 @@ def _build_payload(rid: str, recipes, ings, ledger, instrs, sections_map) -> dic
                 break
 
     # v3 owns all dev recipe columns except game/identity keys (food_word, category,
-    # dietary_category, serving_label, servings, submitted_by).
-    # cooking_method is now written by upload.py — recipes.csv is authoritative.
+    # dietary_category, submitted_by).
+    # cooking_method and servings are now written by upload.py — recipes.csv is authoritative.
     return {
         "recipe_id": rid,
         "recipe_name": rec.recipe_name,
         "servings_count": float(rec.servings_count),
+        "servings": rec.servings_label or "1 serving",
         "grams_per_serving": float(build["grams_per_serving"]),
         "recipe_ingredients_json": json.dumps(recipe_ingredients, separators=(",", ":")),
         "recipe_instructions_json": recipe_instructions,
@@ -288,6 +289,7 @@ _UPDATE_SQL = """\
 UPDATE dev_recipes SET
   recipe_name              = ?,
   servings_count           = ?,
+  servings                 = ?,
   grams_per_serving        = ?,
   recipe_ingredients_json  = ?,
   recipe_instructions_json = ?,
@@ -307,6 +309,7 @@ WHERE recipe_id = ?
 _UPDATE_COLS = (
     "recipe_name",
     "servings_count",
+    "servings",
     "grams_per_serving",
     "recipe_ingredients_json", "recipe_instructions_json", "nutrition_json",
     "nutrient_version", "retention_model_version", "source_match_version",
