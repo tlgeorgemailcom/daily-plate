@@ -870,12 +870,12 @@ PASTA_001,cheese,Cheese Layer,baked covered,baked,,,,,1.0,,dairy_custard,375:18,
 PASTA_002,bread_base,Garlic Bread Base,baked,baked,,,1.0,1.0,1.0,,pastry,"400:6,400:9",,
 PASTA_002,sauce,Marinara Sauce,,raw,,1.0,1.0,1.0,1.0,,,,,SAUCE_027
 PASTA_002,toppings,Cheese Topping,,baked,,,1.0,1.0,1.0,,,400:9,,
-PASTA_003,crust,Pizza Crust,,baked,0.85,1.0,1.0,1.0,1.0,,,,,
-PASTA_003,sauce,Marinara Sauce,,raw,1.0,1.0,1.0,1.0,1.0,,,,,SAUCE_027
-PASTA_003,toppings,Cheese Topping,,baked,0.90,1.0,1.0,1.0,1.0,,,,,
-PASTA_004,crust,Pizza Crust,,baked,0.72,1.0,1.0,1.0,1.0,,,,,
-PASTA_004,sauce,Marinara Sauce,,raw,1.0,1.0,1.0,1.0,1.0,,,,,SAUCE_027
-PASTA_004,toppings,Cheese Topping,,baked,0.90,1.0,1.0,1.0,1.0,,,,,
+PASTA_003,crust,Pizza Crust,,baked,,,1.0,1.0,1.0,,pastry,450:20,,
+PASTA_003,sauce,Marinara Sauce,,raw,,1.0,1.0,1.0,1.0,,,,,SAUCE_027
+PASTA_003,toppings,Cheese Topping,,baked,,,1.0,1.0,1.0,,pizza_cheese_topping,450:20,,
+PASTA_004,crust,Pizza Crust,,baked,,,1.0,1.0,1.0,,thin_pizza_crust,450:20,,
+PASTA_004,sauce,Marinara Sauce,,raw,,1.0,1.0,1.0,1.0,,,,,SAUCE_027
+PASTA_004,toppings,Cheese Topping,,baked,,,1.0,1.0,1.0,,pizza_cheese_topping,450:20,,
 PASTA_005,pasta,Pasta,,boiled,1.0,1.0,1.0,1.0,1.0,,,,,
 PASTA_005,shrimp,Garlic Butter Shrimp,,pan grilled,0.88,1.0,1.0,1.0,1.0,,,,,
 PASTA_006,pasta,Pasta,,boiled,1.0,1.0,1.0,1.0,1.0,,,,,
