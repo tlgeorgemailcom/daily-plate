@@ -308,7 +308,7 @@ export const GET: RequestHandler = async () => {
       if (row.recipe_name) override.name = row.recipe_name;
       if (row.category) override.category = toDisplayRecipeCategory(row.category);
       if (row.dietary_category) override.dietaryCategory = row.dietary_category;
-      if (row.cooking_method) override.cookingMethod = row.cooking_method;
+      override.cookingMethod = row.cooking_method ?? '';
       if (row.dish_family) override.dishFamily = row.dish_family;
       if (row.prep_time) override.prepTime = row.prep_time;
       if (row.servings) override.servings = row.servings;

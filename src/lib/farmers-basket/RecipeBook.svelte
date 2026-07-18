@@ -318,7 +318,7 @@
     sectionsMeta: Level['sections'],
   ): string {
     if (!sectionKey) return '';
-    const meta = sectionsMeta?.find((s) => s.key === sectionKey);
+    const meta = sectionsMeta?.find((s) => (s.key ?? s.section_key) === sectionKey);
     const label = meta?.label || (sectionKey.charAt(0).toUpperCase() + sectionKey.slice(1));
     // prepMethod reflects what the cook does at this step; cookingMethod is physics only.
     const rawMethod = meta?.prepMethod ?? '';
@@ -2214,7 +2214,7 @@
                     {#if group.section}
                       {@const isSectionCollapsed = collapsedIngredientSections.has(group.section)}
                       {@const componentRefItem = group.items.find(i => i.isDish && i.componentRef)}
-                      {@const sectionMeta = selectedLevel.sections?.find(s => s.key === group.section)}
+                      {@const sectionMeta = selectedLevel.sections?.find(s => (s.key ?? s.section_key) === group.section)}
                       {@const sectionName = sectionMeta?.label ?? ((group.section ?? '').charAt(0).toUpperCase() + (group.section ?? '').slice(1))}
                       {@const qtyStripped = (componentRefItem?.quantity ?? '').replace(/\s*\([^)]*\)/g, '').trim()}
                       {@const collapsedLabel = qtyStripped && qtyStripped.toLowerCase().includes((sectionName.split(/\s+/)[0] ?? '').toLowerCase()) ? qtyStripped : (qtyStripped ? `${qtyStripped} ${sectionName}` : sectionName)}
