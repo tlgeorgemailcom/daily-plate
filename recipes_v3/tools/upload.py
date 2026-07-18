@@ -211,7 +211,13 @@ def _build_payload(rid: str, recipes, ings, ledger, instrs, sections_map) -> dic
                 "section_key": s.section_key,
                 "section_label": s.section_label,
                 "prep_method": s.prep_method,
-                "cook_method": _component_cook_method(s.source_recipe) if s.source_recipe else s.cook_method,
+                # cook_method: if the parent section uses the component raw/unheated (cm='raw'),
+                # keep 'raw' — do NOT inherit the child's cooking method. The child's method
+                # changes as child recipes are converted and would destabilize the parent display.
+                # Only substitute the child's method when the parent section itself performs
+                # additional cooking (cm != 'raw').
+                "cook_method": (s.cook_method if s.cook_method == 'raw'
+                                else (_component_cook_method(s.source_recipe) if s.source_recipe else s.cook_method)),
                 "yield_factor_water": (
                     s.yield_factor_water
                     if s.yield_factor_water is not None
