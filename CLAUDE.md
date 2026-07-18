@@ -87,6 +87,10 @@ Community users creating and editing their own recipes receive no AI assistance.
 
 **In summary:** The recipes are not the product. They are the curriculum. The product is an algorithm comprehensive enough to handle the full diversity of how humans cook — without AI assistance at runtime.
 
+**Skeleton recipe principle (keep front of mind for all remaining conversions):** A well-authored dev recipe is a skeleton that a community user opens and adjusts — changing just a few ingredients or quantities to make it their own. Section architecture, ingredient ordering, display accuracy, and physics correctness all determine how usable that skeleton is. The user never sees AI assistance; the dev recipe IS the guidance.
+
+**~55 recipes remain as of July 2026 (16 PASTA/PIZZA + 39 ENTR).** These are not just cleanup — they are the final calibration pass. Each conversion stress-tests physics paths not yet exercised (complex braises, pasta in assembled bakes, multi-protein composites). When a conversion surfaces a model gap or coding flaw, fix it at the pipeline level so all similar recipes benefit. Initial code was written to solve point-in-time problems; patterns of inefficiency only become visible across many conversions. Every anomaly is an opportunity to improve the algorithm for all users.
+
 ## Pipeline: recipes_v3
 
 **Data lives in 6 CSVs** (`recipes_v3/data/`):
