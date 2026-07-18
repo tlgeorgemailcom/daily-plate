@@ -287,10 +287,11 @@ export function buildRecipeCommunityV3(
     const effectiveCookMethod: CookingMethod = primaryCookMethod ?? mapDishMethodToCookingMethod(sec.cookMethod);
     // Stovetop temperature for evaporation model when effectiveCookMethod=‘boiled’.
     const secCookStr = sec.cookMethod.toLowerCase();
+    const isBakeCovered = secCookStr === 'bake covered' || secCookStr === 'bake_covered';
     const effectiveTempF = primaryCookMethod
       ? primaryCookTempF
       : (secCookStr === 'sub-simmer' ? 180 : secCookStr === 'simmer' ? 195 : secCookStr === 'braise' ? 185 : 212);
-    const effectiveLidOn = primaryCookMethod ? primaryCookLidOn : (secCookStr === 'braise');
+    const effectiveLidOn = primaryCookMethod ? primaryCookLidOn : (secCookStr === 'braise' || isBakeCovered);
 
     // Pre-step: section’s own prepMethod fires BEFORE the primary cook.
     // e.g. simmer the apple filling 5 min, then bake the assembled pie 52 min.

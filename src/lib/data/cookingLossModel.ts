@@ -606,7 +606,7 @@ export function mapDishMethodToCookingMethod(cookMethod: string | null): Cooking
 
   if (
     /bak|roast|dry.?heat|oven|rotisserie|toasted|oil.?roast/.test(m)
-  ) return 'baked';
+  ) return 'baked'; // includes 'bake covered' via /bak/
 
   if (
     /boil|brais|stew|simmer|moist.?heat|cooked|poach|parboil|blanch/.test(m)

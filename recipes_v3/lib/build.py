@@ -660,13 +660,15 @@ def _build_recipe_multi(
             # correctly reduce under a simmer_sauce binding. (July 2026)
             boil_min = float(s.boil_stages) if s.boil_stages else 0.0
             stages   = _parse_stages(s.cook_stages) if s.cook_stages else []
+            _is_bake_covered = s.cook_method in ('bake covered', 'bake_covered')
             _boil_temp = (
                 180.0 if s.cook_method in ('sub-simmer', 'sub_simmer') else
                 195.0 if s.cook_method == 'simmer' else
                 185.0 if s.cook_method in ('braise', 'braised') else
+                (stages[0]['tempF'] if stages else 350.0) if _is_bake_covered else
                 212.0
             )
-            _boil_covered = s.cook_method in ('braise', 'braised')
+            _boil_covered = s.cook_method in ('braise', 'braised') or _is_bake_covered
             yfw = calc_yield_water(stages, st["raw_water"], s.filling_class,
                                    boil_minutes=boil_min, boil_temp_f=_boil_temp,
                                    boil_covered=_boil_covered)

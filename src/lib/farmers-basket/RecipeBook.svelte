@@ -308,6 +308,8 @@
     'simmer':     'simmer (lid off)',
     'sub-simmer': 'sub-simmer (lid off)',
     'braise':     'braise (covered)',
+    'bake covered': 'baked (covered)',
+    'bake_covered': 'baked (covered)',
   };
 
   function formatSectionHeader(
@@ -1689,6 +1691,8 @@
     if (!raw) return 'Bake';
     const map: Record<string, string> = {
       'baked':       'Bake',
+      'bake covered': 'Bake (covered)',
+      'bake_covered': 'Bake (covered)',
       'boiled':      'Boil',
       'simmer':      'Simmer',
       'sub-simmer':  'Sub-simmer',
