@@ -279,17 +279,17 @@
     'Bake (covered)': 'Bake (covered)',
   };
   // v3.md §18.1 — lowercase enum stored in recipe_sections.csv::cooking_method.
-  const SECTION_COOKING_METHODS = ['raw', 'boiled', 'steamed', 'baked', 'bake covered', 'fried', 'pan grilled', 'grilled', 'broiled', 'microwave'];
-  const SECTION_PREP_METHODS    = ['boiled', 'simmer', 'sub-simmer', 'braise', 'steamed', 'blanched', 'baked', 'bake covered', 'par-baked', 'fried', 'pan grilled', 'grilled', 'broiled', 'marinated', 'chilled', 'microwave', 'finish'];
+  const SECTION_COOKING_METHODS = ['raw', 'boiled', 'steamed', 'baked', 'baked covered', 'fried', 'pan grilled', 'grilled', 'broiled', 'microwave'];
+  const SECTION_PREP_METHODS    = ['boiled', 'simmer', 'sub-simmer', 'braise', 'steamed', 'blanched', 'baked', 'baked covered', 'par-baked', 'fried', 'pan grilled', 'grilled', 'broiled', 'marinated', 'chilled', 'microwave', 'finish'];
   // Display labels for prep methods — stored values are clean identifiers;
   // UI annotations clarify open-pot vs covered assumption for the water model.
   const PREP_METHOD_DISPLAY: Record<string, string> = {
-    'boiled':       'boiled (lid off)',
-    'simmer':       'simmer (lid off)',
-    'sub-simmer':   'sub-simmer (lid off)',
-    'braise':       'braise (covered)',
-    'bake covered': 'bake (covered)',
-    'finish':       'Added after cooking',
+    'boiled':         'boiled (lid off)',
+    'simmer':         'simmer (lid off)',
+    'sub-simmer':     'sub-simmer (lid off)',
+    'braise':         'braise (covered)',
+    'baked covered':  'baked (covered)',
+    'finish':         'Added after cooking',
   };
   // v3.md §18.6 — datalist suggestions; free-typing is always allowed.
   const SECTION_LABEL_VOCAB = [
@@ -305,10 +305,11 @@
   function normalizeCookMethodLabel(raw: string): string {
     const m = (raw ?? '').trim().toLowerCase();
     const MAP: Record<string, string> = {
-      'baked':         'Bake',
-      'bake covered':  'Bake (covered)',
-      'bake_covered':  'Bake (covered)',
-      'boiled':        'Boil',
+      'baked':          'Bake',
+      'baked covered':   'Bake (covered)',
+      'bake covered':    'Bake (covered)',
+      'bake_covered':    'Bake (covered)',
+      'boiled':          'Boil',
       'fried':       'Fry',
       'pan grilled': 'Pan grill',
       'grilled':     'Grill',

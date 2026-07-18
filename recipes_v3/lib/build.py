@@ -660,7 +660,7 @@ def _build_recipe_multi(
             # correctly reduce under a simmer_sauce binding. (July 2026)
             boil_min = float(s.boil_stages) if s.boil_stages else 0.0
             stages   = _parse_stages(s.cook_stages) if s.cook_stages else []
-            _is_bake_covered = s.cook_method in ('bake covered', 'bake_covered')
+            _is_bake_covered = s.cook_method in ('bake covered', 'bake_covered', 'baked covered')
             _boil_temp = (
                 180.0 if s.cook_method in ('sub-simmer', 'sub_simmer') else
                 195.0 if s.cook_method == 'simmer' else

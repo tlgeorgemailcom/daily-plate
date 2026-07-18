@@ -287,7 +287,7 @@ export function buildRecipeCommunityV3(
     const effectiveCookMethod: CookingMethod = primaryCookMethod ?? mapDishMethodToCookingMethod(sec.cookMethod);
     // Stovetop temperature for evaporation model when effectiveCookMethod=‘boiled’.
     const secCookStr = sec.cookMethod.toLowerCase();
-    const isBakeCovered = secCookStr === 'bake covered' || secCookStr === 'bake_covered';
+    const isBakeCovered = secCookStr === 'bake covered' || secCookStr === 'bake_covered' || secCookStr === 'baked covered';
     const effectiveTempF = primaryCookMethod
       ? primaryCookTempF
       : (secCookStr === 'sub-simmer' ? 180 : secCookStr === 'simmer' ? 195 : secCookStr === 'braise' ? 185 : 212);
