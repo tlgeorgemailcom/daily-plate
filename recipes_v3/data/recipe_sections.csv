@@ -881,9 +881,9 @@ PASTA_003,toppings,Cheese Topping,,baked,,,1.0,1.0,1.0,,pizza_cheese_topping,450
 PASTA_004,crust,Pizza Crust,,baked,,,1.0,1.0,1.0,,thin_pizza_crust,450:20,,
 PASTA_004,sauce,Marinara Sauce,,raw,,1.0,1.0,1.0,1.0,,,,,SAUCE_027
 PASTA_004,toppings,Cheese Topping,,baked,,,1.0,1.0,1.0,,pizza_cheese_topping,450:20,,
-PASTA_006,pasta,Pasta,,boiled,1.0,1.0,1.0,1.0,1.0,,,,,
-PASTA_006,chicken,Grilled Chicken,,pan grilled,0.75,1.0,1.0,1.0,1.0,,,,,
-PASTA_006,pesto,Basil Pesto,,raw,1.0,1.0,1.0,1.0,1.0,,,,,
+PASTA_006,pasta,Pasta,boiled,boiled,,,1.0,1.0,1.0,,,,2,
+PASTA_006,chicken,Grilled Chicken,pan grilled,pan grilled,,,1.0,1.0,1.0,,pan_grilled_chicken,,11,
+PASTA_006,pesto,Basil Pesto,,raw,,,1.0,1.0,1.0,,,,,
 PASTA_007,pasta,Pasta,,boiled,1.00,1.00,1.00,1.00,1.00,,,,,
 PASTA_007,sauce,Lemon Butter Sauce,,pan grilled,1.00,1.00,1.00,1.00,1.00,,,,,
 PASTA_008,pasta,Pasta,,boiled,1.00,1.00,1.00,1.00,1.00,,,,,
