@@ -316,7 +316,7 @@ ENTR_001,13,black_pepper_ground,½ tsp,1.15,1,2,gravy,gravy,false,,
 PASTA_001,1,pasta_dry_unenriched,12 oz ziti pasta,340.2,,,pasta,,False,ziti pasta,
 PASTA_001,2,water,6¼ cups,1500.0,,,pasta,,False,,
 PASTA_001,3,cheese_ricotta_wholemilk,15 oz (1 container) ricotta cheese,425.2,,,cheese,,False,,
-PASTA_001,4,@SAUCE_027,1 recipe Italian Marinara Sauce (840g),840.2,,,cheese,,false,Italian Marinara Sauce,
+PASTA_001,4,@SAUCE_027,1 recipe Italian Marinara Sauce (840g),840.2,,,marinara,,false,Italian Marinara Sauce,cheese
 PASTA_001,5,cheese_mozzarella_wholemilk,"10 oz mozzarella, shredded",283.5,,,cheese,,False,mozzarella,
 PASTA_001,6,cheese_parmesan_hard,"½ cup Parmesan cheese, grated",50.0,,,cheese,,False,,
 PASTA_001,7,egg_whole_raw,1 large egg,50.0,,,cheese,,False,,
