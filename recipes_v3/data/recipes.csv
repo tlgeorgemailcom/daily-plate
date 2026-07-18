@@ -409,7 +409,7 @@ BKFST_052,GRANOLA,Granola,Breakfast,vegan,builtin,8037,,1/4 cup (makes 24+ servi
 BKFST_054,GRANOLABALANCED,"Granola, Omega Balanced",Breakfast,vegan,builtin,,,1/4 cup (makes 24 servings),24,Rule D,baked,30,325,,,,,,,approved,,,,PASS,Rule D — no canonical,
 ENTR_126,SHRIMPFRIED,Seafood Fried Shrimp,entrees & main courses,pesca,builtin,15150,,1 serving (makes 4),4,Rule C,fried,,,0.620,1.0,1.0,1.0,1.0,,approved,,ENTR_126 Rule C — Fiber -10% and Sugar -20% structural (thin flour coating; shrimp glycogen in NDB 15150 not captured by raw NDB 15270); E/P/F/C/W all within ±4%,,PASS,,
 ENTR_127,SHRIMPCORNMEALFRIED,Seafood Cornmeal Fried Shrimp,entrees & main courses,pesca,builtin,,,1 serving (makes 4),4,Rule D,fried,,,0.620,1.0,1.0,1.0,1.0,,approved,,,,PASS,,
-PASTA_011,SPAGHETTIANDMEATBALLS,Spaghetti and Meatballs,pasta & pizza,all,builtin,,,1 serving (makes 4),4,Rule D,boiled,,,1.0,1.0,1.0,1.0,1.0,,approved,,,,PASS,,
+PASTA_011,SPAGHETTIANDMEATBALLS,Spaghetti and Meatballs,pasta & pizza,all,builtin,,,1 serving (makes 4),4,Rule D,,,,,,1.0,1.0,1.0,,approved,,,,PASS,,
 SAUCE_025,ENCHILADASAUCE,Red Enchilada Sauce,sauces & condiments,vegan,builtin,,,1/4 cup (makes 11+),11,Rule D,simmer,13,,,,,,,,approved,,Rule D — no canonical,Red Enchilada Sauce computed from SR Legacy values only.,PASS,,
 SAUCE_026,BBQSAUCE,BBQ Sauce,sauces & condiments,vegan,builtin,,,1 tbsp (makes 40+),40,Rule D,sub-simmer,22,,,,,,,,approved,,Rule D — no canonical,BBQ Sauce computed from SR Legacy values only.,PASS,,
 SAUCE_027,MARINARASAUCE,Italian Marinara Sauce,sauces & condiments,vegan,builtin,,,½ cup (makes 7),7,Rule D,simmer,22,,,,,,,,approved,,,,PASS,,
