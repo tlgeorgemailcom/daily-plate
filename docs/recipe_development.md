@@ -110,18 +110,132 @@ When reviewing a food category (BKFST, ENTR, SIDE, etc.) for correctness, use th
 
 ### Spec file format
 
-Each recipe entry in the spec follows this pattern:
+Category spec files (e.g. `docs/pasta_pizza.md`, `docs/breakfast.md`, `docs/sandwiches.md`) use a pipe-delimited format that maps directly to `recipe_sections.csv` and `recipes.csv` columns. Every conversion session starts by reading the spec for the recipe being worked on.
+
+---
+
+#### Top bar line
+
+The first line after the recipe name specifies the **primary assembled cook** — the method shown in the top bar of the edit form.
+
+| Spec line | `recipes.csv` effect | Form top bar |
+|---|---|---|
+| `Top bar: blank` | `cooking_method=''`, `cook_minutes=''`, `cook_temp_f=''` | blank |
+| `Top bar: Simmer (lid off) \| 90 min` | `cooking_method='simmer'`, `cook_minutes=90` | "Simmer · 90 min" |
+| `Top bar: Bake \| 375 \| 18 min` | `cooking_method='baked'`, `cook_temp_f=375`, `cook_minutes=18` | "Bake · 18 min · 375°F" |
+| `Top bar: Bake \| 450 \| 20 min` | `cooking_method='baked'`, `cook_temp_f=450`, `cook_minutes=20` | "Bake · 20 min · 450°F" |
+
+**Blank top bar** means every section carries its own prep display independently. The primary `cooking_method` must be cleared to `''` in `recipes.csv` (upload.py writes this to Turso on every `--commit`).
+
+**Non-blank top bar** means there is one assembled cook that applies to all non-raw sections simultaneously. Each non-raw section gets `cm=<top bar method>` plus the top bar `cook_stages` (e.g. `375:18`). The `pm` (prep_method) on each section is that section's own pre-step.
+
+---
+
+#### Prep lines
+
+Each `Prep:` line defines one section in `recipe_sections.csv`.
+
+**Full format:**
 ```
-N. Recipe Name | primary cook time | primary cook method | primary temp (°F if bake)
-```
-For multi-section recipes with no primary cook:
-```
-N. Recipe Name: no primary cook
-Prep: Section label | time min | cook method
-Prep: Section label | time min | cook method
+Prep: Section Label | cook_method | [temp |] time min | ingredients: ingredient, ingredient, ...
 ```
 
-"No primary cook" means 2 or more sections each have their own distinct prep step — the form's primary cook bar should be blank.
+**Unheated / Added after cooking:**
+```
+Prep: Section Label | unheated | ingredients: ingredient, ingredient
+Prep: Section Label | Added after cooking | ingredients: ingredient, ingredient
+```
+
+---
+
+#### Mapping a Prep line to recipe_sections.csv
+
+| Spec field | CSV column(s) | Notes |
+|---|---|---|
+| `Section Label` | `section_label` | The collapsible header shown in the form. No trailing colon. |
+| `cook_method` | `prep_method` (pm) + `cook_method` (cm) | See table below |
+| `time min` | `boil_stages` (stovetop) or `cook_stages` (oven) | Minutes only for stovetop; `tempF:minutes` for oven |
+| `temp` (optional) | `cook_stages` first field | Only for baked/par-baked sections |
+| `ingredients` | row_order + section key in `recipe_ingredients.csv` | Lists which ingredient keys belong to this section |
+
+---
+
+#### cook_method keyword → pm / cm values
+
+| Spec keyword | `prep_method` (pm) | `cook_method` (cm) | `boil_stages` | `fill_class` hint |
+|---|---|---|---|---|
+| `boiled` | `boiled` | `boiled` | time in minutes | *(none — absorption model for pasta/rice/beans)* |
+| `simmer (lid off)` | `simmer` | `simmer` | time in minutes | `simmer_sauce` for butter/cream/sauce; none for plain liquid reduction |
+| `sub-simmer (lid off)` | `sub-simmer` | `sub-simmer` | time in minutes | `simmer_sauce` for cream/butter sauces |
+| `pan grilled` | `pan grilled` | `pan grilled` | time in minutes | `pan_grilled_chicken` (chicken/fish); `fried_meat` (ground meat, sausage, bacon); none (aromatics, short sautés) |
+| `baked` | `baked` | `baked` | *(empty — use `cook_stages`)* | `pastry` (doughs); `casserole_baked` (assembled bakes); `cake_batter` (batters) |
+| `baked (covered)` | `baked covered` | `baked covered` | *(empty — use `cook_stages`)* | `casserole_baked` |
+| `unheated` | `''` (empty) | `raw` | *(empty)* | *(none)* |
+| `Added after cooking` | `finish` | `raw` | *(empty)* | *(none)* |
+
+**Two-stage rule when top bar is non-blank:**
+- `pm` = the section's own pre-step (what the spec line says)
+- `cm` = the top bar method (the assembled cook applied to all sections simultaneously)
+
+**Example — Baked Ziti (`Top bar: Bake | 375 | 18 min`):**
+
+| Spec line | pm | cm | cook_stages | boil_stages |
+|---|---|---|---|---|
+| `Prep: Pasta \| boiled \| 2 min` | `boiled` | `baked` | `375:18` | `2` |
+| `Prep: Marinara Sauce \| unheated` | `''` | `baked` | `375:18` | *(empty)* |
+| `Prep: Cheese layer \| baked (covered) \| 375 \| 25 min` | `baked covered` | `baked` | `375:18` | *(empty)* + own `cook_stages=375:25` |
+
+**Example — Spaghetti Bolognese (`Top bar: Simmer (lid off) | 90 min`):**
+
+| Spec line | pm | cm | boil_stages |
+|---|---|---|---|
+| `Prep Pasta \| boiled \| 8 min` | `boiled` | `simmer` | `8` |
+| `Prep: Vegetables \| pan grilled \| 9 min` | `pan grilled` | `simmer` | `9` |
+| `Prep: Tomatoes \| unheated` | `''` | `simmer` | *(empty)* |
+
+**Example — Cacio e Pepe (`Top bar: blank`):**
+
+| Spec line | pm | cm | boil_stages |
+|---|---|---|---|
+| `Prep Pasta \| boiled \| 8 min` | `boiled` | `boiled` | `8` |
+| `Prep: Sauce \| unheated` | `''` | `raw` | *(empty)* |
+
+---
+
+#### `(lid off)` qualifier
+
+`simmer (lid off)` and `sub-simmer (lid off)` are display labels — the `(lid off)` part is not stored anywhere. It just confirms that the open-pot evaporation model applies (the default for `simmer` and `sub-simmer`). The CSV value is simply `simmer` or `sub-simmer`.
+
+---
+
+#### Section display order rule
+
+Sections must appear in `recipe_ingredients.csv` in the order they should display in the UI:
+
+1. Unheated/raw sections first (`pm=''`)
+2. Cooked sections in descending cook time (longest first)
+3. `finish` section last ("Added after cooking")
+
+The `recipe_sections.csv` order controls physics; the `recipe_ingredients.csv` row order controls the UI display order.
+
+---
+
+#### `fill_class` selection guide (for stovetop sections)
+
+Without a `fill_class`, `calc_yield_water` returns `yfw=1.0` for all stovetop sections even when `boil_stages` is set. Always assign `fill_class` for any section that should lose water during cooking.
+
+| Section contents | `fill_class` |
+|---|---|
+| Butter + cream sauce, simmering | `simmer_sauce` |
+| Onion, aromatics, short sauté | *(none — negligible water loss at 1–2 min)* |
+| Ground beef, sausage (fat stays or drains) | `fried_meat` |
+| Chicken breast, fish fillet (pan grilled) | `pan_grilled_chicken` |
+| Bacon (fat retained, not drained) | `fried_meat` |
+| Baked pasta/grain casserole | `casserole_baked` |
+| Pizza dough / pastry crust | `pastry` or `thin_pizza_crust` |
+| Pizza cheese topping | `pizza_cheese_topping` |
+| Spinach wilted in pan | `wilt_squeezed_spinach` |
+| Vegetables roasted | `roasted_vegetable` |
 
 ### Audit command
 
