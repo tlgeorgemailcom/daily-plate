@@ -230,12 +230,16 @@ Without a `fill_class`, `calc_yield_water` returns `yfw=1.0` for all stovetop se
 | Onion, aromatics, short sauté | *(none — negligible water loss at 1–2 min)* |
 | Ground beef, sausage (fat stays or drains) | `fried_meat` |
 | Chicken breast, fish fillet (pan grilled) | `pan_grilled_chicken` |
+| Battered/breaded fried cutlet or fillet protein (chicken fried steak, schnitzel, Milanese, fried fish fillet) | `fried_chicken` |
 | Bacon (fat retained, not drained) | `fried_meat` |
+| Roux cooked briefly in fat before liquid is added | `pan_grilled_batter` |
 | Baked pasta/grain casserole | `casserole_baked` |
 | Pizza dough / pastry crust | `pastry` or `thin_pizza_crust` |
 | Pizza cheese topping | `pizza_cheese_topping` |
 | Spinach wilted in pan | `wilt_squeezed_spinach` |
 | Vegetables roasted | `roasted_vegetable` |
+
+`fried_chicken` is a legacy class name, not a poultry-only rule. Use it for fried battered or breaded protein cutlets/fillets where the food behaves like the calibrated fried chicken path. Do not use it for ground meat patties, loose sausage, or bacon; those remain `fried_meat`.
 
 ### Audit command
 
