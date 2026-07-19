@@ -1396,14 +1396,17 @@ ENTR_003,4,Add the remaining 2 1/2 tablespoons olive oil to the wok. Add the bro
 ENTR_003,5,"Return the beef to the wok. Pour the sauce over everything and simmer, uncovered, 2 minutes, stirring until the sauce thickens and coats the beef and broccoli."
 ENTR_003,6,Serve immediately.
 ENTR_003,7,Suggestions (not included): Serve over steamed white rice.
-ENTR_004,1,"Heat olive oil in a large heavy pot or Dutch oven over medium-high heat. Add the ground beef and cook, breaking it up, until browned, about 8 minutes. Drain excess fat if desired."
-ENTR_004,2,"Add the finely diced onion, carrot, and celery to the pot. Cook, stirring occasionally, until softened, about 8 minutes. Add the crushed garlic and cook 1 minute more."
-ENTR_004,3,"Add the tomato paste and stir into the meat, cooking 2 minutes until it darkens slightly."
-ENTR_004,4,"Pour in the white wine and stir, scraping up any browned bits. Cook until the wine is mostly absorbed, about 3 minutes."
-ENTR_004,5,"Add the crushed tomatoes, beef broth, milk, oregano, basil, bay leaf, sugar, salt, pepper, and nutmeg. Stir to combine."
-ENTR_004,6,"Reduce heat to low and simmer uncovered, stirring occasionally, for 45 minutes to 1 hour until the sauce is thick and the fat begins to pool on the surface. Remove the bay leaf."
-ENTR_004,7,"Meanwhile, bring a large pot of salted water to a boil. Cook pasta according to package directions until al dente. Reserve ½ cup pasta water, then drain."
-ENTR_004,8,"Toss the drained pasta with the Bolognese sauce, adding a splash of pasta water if needed to loosen. Serve with grated Parmesan if desired."
+ENTR_004,1,Make or prepare the Beef Stock (see the Beef Stock recipe).
+ENTR_004,2,"Bring a large pot of salted water to a boil. Cook the pasta until al dente, about 8 minutes. Reserve 1/2 cup pasta water, then drain."
+ENTR_004,3,"Heat the olive oil in a large heavy pot or Dutch oven over medium-high heat. Add the ground beef and pan-grill, breaking it up, until browned and concentrated, about 22 minutes."
+ENTR_004,4,"Add the finely diced onion, carrot, and celery to the pot. Pan-grill, stirring occasionally, until softened, about 14 minutes."
+ENTR_004,5,Add the crushed garlic and pan-grill 6 minutes.
+ENTR_004,6,Add the tomato paste and pan-grill 5 minutes until it darkens slightly.
+ENTR_004,7,"Pour in the white wine and stir, scraping up any browned bits. Pan-grill until the wine is mostly absorbed, about 3 minutes."
+ENTR_004,8,"Add the crushed tomatoes, Beef Stock, milk, oregano, basil, bay leaf, sugar, salt, pepper, and nutmeg. Stir to combine."
+ENTR_004,9,"Reduce heat to low and sub-simmer uncovered, stirring occasionally, for 50 minutes until the sauce is thick and the fat begins to pool on the surface. Remove the bay leaf."
+ENTR_004,10,"Toss the drained pasta with the Bolognese sauce, adding a splash of pasta water if needed to loosen. Serve with grated Parmesan if desired."
+ENTR_004,11,Suggestions (not included): Top with freshly grated Parmesan cheese and serve with crusty bread on the side.
 ENTR_005,1,Pat the beef chuck dry and cut into 2-inch cubes. Season generously with salt and black pepper.
 ENTR_005,2,"Cook the bacon in a large Dutch oven over medium heat until crisp. Remove bacon and set aside, leaving the fat in the pot."
 ENTR_005,3,"Working in batches, sear the beef cubes in the bacon fat over medium-high heat until browned on all sides, about 3 minutes per side. Remove and set aside."
@@ -3701,7 +3704,6 @@ SALAD_025,6,"Suggestions (not included): Serve chilled alongside grilled chicken
 SALAD_026,6,Suggestions (not included): Serve on a bed of lettuce or alongside grilled chicken and crusty bread.
 SALAD_006,6,"Suggestions (not included): Serve with salsa, guacamole, sour cream, or warm tortillas."
 ENTR_001,8,"Suggestions (not included): Serve with mashed potatoes, collard greens, or steamed green beans."
-ENTR_004,9,Suggestions (not included): Top with freshly grated Parmesan cheese and serve with crusty bread on the side.
 ENTR_005,11,"Suggestions (not included): Serve over buttered egg noodles, creamy mashed potatoes, or crusty French bread."
 ENTR_010,7,"Suggestions (not included): Serve with Irish soda bread, whole grain mustard, and horseradish sauce on the side."
 ENTR_011,9,Suggestions (not included): Serve with steamed green beans or a simple green salad.
