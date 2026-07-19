@@ -1468,12 +1468,11 @@ ENTR_011,5,"Sprinkle the flour over the mixture and stir to coat. Add the tomato
 ENTR_011,6,Make or prepare the Beef Stock (see the Beef Stock recipe).
 ENTR_011,7,"Add the Beef Stock, thyme, rosemary, salt, and black pepper. Simmer uncovered for 9 minutes until the filling thickens to a gravy consistency."
 ENTR_011,8,"Spread the mashed potatoes evenly over the filling. Drag a fork across the surface to create ridges, then bake uncovered at 400°F for 28 minutes until the top is golden and the edges are bubbling. Let stand 5 minutes before serving."
-ENTR_012,1,"Whisk together olive oil, lime juice, minced garlic, cumin, oregano, salt, and pepper in a bowl to form the marinade."
-ENTR_012,2,"Place the skirt steak in a zip-lock bag or shallow dish. Pour the marinade over the steak, turning to coat. Refrigerate at least 2 hours, or up to 8 hours for deeper flavor."
-ENTR_012,3,Remove the steak from the marinade and discard the marinade. Pat the surface dry with paper towels. Season both sides with salt and pepper.
-ENTR_012,4,"Heat a grill or grill pan to high heat. The grill should be very hot — skirt steak needs quick, intense heat to develop a crust without overcooking the interior."
-ENTR_012,5,"Grill the steak 3 to 4 minutes per side for medium-rare, or until it reaches an internal temperature of 130 to 135°F. Skirt steak is thin; do not walk away."
-ENTR_012,6,Transfer to a cutting board and let rest 5 minutes. Slice thinly against the grain at a steep angle. Serve immediately.
+ENTR_012,1,"Whisk together the olive oil, lime juice, minced garlic, cumin, oregano, salt, and black pepper in a bowl to form the marinade."
+ENTR_012,2,"Place the skirt steak in a zip-top bag or shallow dish. Pour the marinade over the steak, turning to coat. Refrigerate at least 2 hours, or up to 8 hours for deeper flavor."
+ENTR_012,3,"Remove the steak from the marinade and discard all marinade. Pat the surface dry with paper towels. Season both sides with the retained salt and black pepper."
+ENTR_012,4,"Heat a grill pan or heavy skillet over high heat. Pan-grill the steak for 7 minutes total, turning once, until browned outside and medium-rare inside."
+ENTR_012,5,"Transfer to a cutting board and let rest 5 minutes. Slice thinly against the grain at a steep angle. Serve immediately."
 ENTR_013,1,"Cut the chuck roast into 1½-inch cubes, trimming any large pieces of hard fat. Pat dry and season lightly with salt and pepper."
 ENTR_013,2,"Heat olive oil in a large heavy-bottomed pot or Dutch oven over medium-high heat. Working in batches, sear the beef on all sides until deeply browned, about 3 to 4 minutes per batch. Do not crowd the pan. Remove seared beef and set aside."
 ENTR_013,3,Reduce heat to medium. Add the diced onion to the pot and cook 4 to 5 minutes until softened. Add minced garlic and minced ginger and cook 1 minute more.
@@ -3708,7 +3707,7 @@ SALAD_006,6,"Suggestions (not included): Serve with salsa, guacamole, sour cream
 ENTR_001,8,"Suggestions (not included): Serve with mashed potatoes, collard greens, or steamed green beans."
 ENTR_010,7,"Suggestions (not included): Serve with Irish soda bread, whole grain mustard, and horseradish sauce on the side."
 ENTR_011,9,Suggestions (not included): Serve with steamed green beans or a simple green salad.
-ENTR_012,7,"Suggestions (not included): Serve with white rice, black beans, and fried plantains."
+ENTR_012,6,"Suggestions (not included): Serve with white rice, black beans, and fried plantains."
 ENTR_015,9,Suggestions (not included): Serve with creamy mashed potatoes and roasted asparagus.
 ENTR_016,9,"Suggestions (not included): Serve with Mexican rice, refried beans, sour cream, and fresh guacamole."
 ENTR_019,7,"Suggestions (not included): Serve with egg noodles, mashed potatoes, or crusty bread."

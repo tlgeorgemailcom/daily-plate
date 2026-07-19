@@ -75,6 +75,8 @@ export const BINDING: Record<string, number> = {
   grilled_batter:     0.408, // waffle-iron grilled batter (375°F×4min → yfw=0.62)
   pan_grilled_chicken: 0.216, // pan-grilled chicken breast (212°F×11min → yfw=0.80)
                               // NDB 5062 (raw) / NDB 5063 (fried) USDA pair
+  pan_grilled_steak:   0.272, // pan-grilled thin steak (212°F×7min → yfw=0.78)
+                              // Calibrated to ENTR_012 original locked yield for outside skirt steak (NDB 23224).
   fried_chicken:       0.195, // deep-fried battered chicken breast (212°F×11min → yfw=0.82)
                               // NDB 5062 (raw) / NDB 5063 (fried); batter crust traps moisture
   fried_battered_vegetable: 0.493, // small battered-fried vegetable pieces (okra, squash) (212°F×3min → yfw=0.75)

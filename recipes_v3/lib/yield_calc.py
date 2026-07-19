@@ -137,6 +137,8 @@ BINDING: dict[str, float] = {
     "pan_grilled_chicken": 0.216, # pan-grilled chicken breast — SAND_034: 212°F×11min → yfw=0.80
                                   # NDB 5062 (raw) / NDB 5063 (fried) USDA pair; full-cook pair yfw=0.548 (B>1)
                                   # 212°F = default stovetop temp for pan grilled in build.py
+    "pan_grilled_steak":   0.272, # pan-grilled thin steak — ENTR_012: 212°F×7min → yfw=0.78
+                                  # Calibrated to Beef Churrasco original locked yield for outside skirt steak (NDB 23224).
     "fried_chicken":       0.195, # deep-fried battered chicken breast — SAND_035: 212°F×11min → yfw=0.82
                                   # NDB 5062 (raw) / NDB 5063 (fried) USDA pair; batter crust traps moisture
     "fried_battered_vegetable": 0.493, # small battered-fried vegetable pieces (okra, squash) — SIDE_022/023: 212°F×3min → yfw=0.75
