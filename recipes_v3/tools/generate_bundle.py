@@ -121,6 +121,8 @@ def ts_recipe_ingredients(ings):
         if ing.get('isDish'):    parts.append('isDish: true')
         if ing.get('componentRef'): parts.append(f"componentRef: '{esc(ing['componentRef'])}'")
         if ing.get('exempt'):    parts.append('exempt: true')
+        if ing.get('discarded'): parts.append('discarded: true')
+        if ing.get('discardPercent') is not None: parts.append(f"discardPercent: {ing['discardPercent']}")
         lines.append('      { ' + ', '.join(parts) + ' }')
     return '[\n' + ',\n'.join(lines) + '\n    ]'
 

@@ -293,6 +293,18 @@
     return section.charAt(0).toUpperCase() + section.slice(1) + ':';
   }
 
+  type RecipeIngredientItem = NonNullable<Level['recipeIngredients']>[number];
+
+  function formatDiscardedSectionSuffix(items?: RecipeIngredientItem[]) {
+    if (!items?.length || !items.every((item) => item.discarded === true)) return '';
+    const percents = items.map((item) => Number.isFinite(item.discardPercent) ? item.discardPercent! : 100);
+    const first = percents[0];
+    if (percents.every((percent) => percent === first)) {
+      return first === 100 ? ' | discarded 100%' : ` | ${first}% discarded`;
+    }
+    return ' | discarded';
+  }
+
   // Phase 8b (v3.md §18): when a recipe has per-section cooking methods,
   // render the section header as "<Label> — <method>" so the multi-stage
   // structure (e.g. baked crust + boiled filling + raw topping) is visible
@@ -316,10 +328,12 @@
   function formatSectionHeader(
     sectionKey: string | undefined,
     sectionsMeta: Level['sections'],
+    sectionItems?: RecipeIngredientItem[],
   ): string {
     if (!sectionKey) return '';
     const meta = sectionsMeta?.find((s) => (s.key ?? s.section_key) === sectionKey);
     const label = meta?.label || (sectionKey.charAt(0).toUpperCase() + sectionKey.slice(1));
+    const discardedSuffix = formatDiscardedSectionSuffix(sectionItems);
     // prepMethod reflects what the cook does at this step; cookingMethod is physics only.
     const rawMethod = meta?.prepMethod ?? '';
     const display = rawMethod in SECTION_METHOD_LABEL
@@ -327,7 +341,7 @@
       : rawMethod || null;
     // Only show prep time when there is an active cook method — never for unheated or finish sections.
     const timeStr = (display && display !== 'unheated' && display !== 'Added after cooking' && meta?.boilMinutes && meta.boilMinutes > 0) ? ` | ${meta.boilMinutes} min` : '';
-    return display ? `${label} — ${display}${timeStr}` : `${label}:`;
+    return display ? `${label} — ${display}${timeStr}${discardedSuffix}` : `${label}${discardedSuffix}:`;
   }
 
   function formatIngredientLine(ingredient: { name: string; quantity?: string }) {
@@ -2220,7 +2234,7 @@
                       {@const collapsedLabel = qtyStripped && qtyStripped.toLowerCase().includes((sectionName.split(/\s+/)[0] ?? '').toLowerCase()) ? qtyStripped : (qtyStripped ? `${qtyStripped} ${sectionName}` : sectionName)}
                       <button class="ingredient-section-label" onclick={() => toggleIngredientSection(group.section!)}>
                         <span class="section-chevron">{isSectionCollapsed ? '▶' : '▼'}</span>
-                        {isSectionCollapsed && componentRefItem ? `${collapsedLabel}:` : formatSectionHeader(group.section, selectedLevel.sections)}
+                        {isSectionCollapsed && componentRefItem ? `${collapsedLabel}:` : formatSectionHeader(group.section, selectedLevel.sections, group.items)}
                       </button>
                     {/if}
                     {#if !group.section || !collapsedIngredientSections.has(group.section)}
