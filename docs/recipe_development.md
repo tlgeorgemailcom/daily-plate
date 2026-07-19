@@ -469,7 +469,7 @@ The mixed pattern is the correct authoring approach whenever a stock or broth co
 
 File: `recipes_v3/data/recipe_ingredients.csv`
 
-Columns: `recipe_id, row_order, ingredient_key, qty_display, grams, grams_min, grams_max, section, ingredient_group, is_optional, display_name_override, cook_section`
+Columns: `recipe_id, row_order, ingredient_key, qty_display, grams, grams_min, grams_max, section, ingredient_group, is_optional, display_name_override, cook_section, is_discarded, discard_percent`
 
 > **⚠ Write no CSV rows until the rendered ingredient list has been approved.** See the mandatory render rule in the Pre-Build Checklist above.
 
@@ -482,6 +482,12 @@ Columns: `recipe_id, row_order, ingredient_key, qty_display, grams, grams_min, g
 - `onion_raw` thin slice = **9.0g** (M9 per slice)
 
 For fractional measures without a direct M-series entry, compute from the nearest unit using the exact M-series value.
+
+### 4a-1 — Discarded ingredients
+
+Use `is_discarded=true` for ingredients that must appear in the recipe but are removed before eating: marinades, brines, steeping liquids, spice sachets, or other used-and-discarded components. Set `discard_percent` to the percentage discarded. A fully discarded marinade or brine uses `discard_percent=100`; if part is retained in the finished dish, use the actual discarded fraction.
+
+The pipeline keeps `grams` and `qty_display` for rendering, but scales nutrition and cooked mass by the retained fraction: `effective_grams = grams × (1 - discard_percent / 100)`. Do not use `is_optional` for this case — optional means the cook may omit the ingredient entirely.
 
 ### 4a-2 — cook_section: decoupling display section from pipeline section (Phase 8d)
 

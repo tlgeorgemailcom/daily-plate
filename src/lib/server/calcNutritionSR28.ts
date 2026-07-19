@@ -51,6 +51,14 @@ interface IngRow {
   servingCount?: number;
   exempt?: boolean;
   isDish?: boolean;
+  discarded?: boolean;
+  discardPercent?: number;
+}
+
+function retainedIngredientFraction(ing: IngRow): number {
+  if (!ing.discarded) return 1;
+  const discardPercent = Number.isFinite(ing.discardPercent) ? ing.discardPercent! : 100;
+  return Math.max(0, Math.min(1, 1 - discardPercent / 100));
 }
 
 interface SR28NutrientRow {
@@ -247,7 +255,8 @@ export async function calcNutritionSR28(
     if (ing.isDish) continue; // dish rows are handled above; skip in ingredient sum
     if (!ing.portionGrams || !ing.servingCount) continue;
 
-    const g = ing.portionGrams * ing.servingCount;
+    const g = ing.portionGrams * ing.servingCount * retainedIngredientFraction(ing);
+    if (g <= 0) continue;
     const scale = g / 100;
     rawTotalGrams += g;
 

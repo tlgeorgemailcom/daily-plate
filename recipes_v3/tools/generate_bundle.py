@@ -550,6 +550,9 @@ for recipe in recipes:
                 pass
             if ing.get('section'):
                 item['section'] = ing['section']
+            if (ing.get('is_discarded') or '').strip().lower() in ('1', 'true', 'yes', 'y'):
+                item['discarded'] = True
+                item['discardPercent'] = float(ing.get('discard_percent') or 100)
             recipe_ings.append(item)
             continue
         led = ledger.get(ing_key, {})
@@ -567,6 +570,9 @@ for recipe in recipes:
             pass
         if ing.get('section'):
             item['section'] = ing['section']
+        if (ing.get('is_discarded') or '').strip().lower() in ('1', 'true', 'yes', 'y'):
+            item['discarded'] = True
+            item['discardPercent'] = float(ing.get('discard_percent') or 100)
         # Note: v3's is_optional is NOT mapped to bundle's `exempt` field.
         # `exempt` in v1 meant "row_type=exempt" (excluded from nutrition);
         # v3's is_optional means "may be omitted" — different semantics.

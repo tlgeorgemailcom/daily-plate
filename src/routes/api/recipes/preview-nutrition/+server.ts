@@ -106,6 +106,8 @@ export const POST: RequestHandler = async ({ request }) => {
         sectionKey:    typeof obj.section === 'string' ? obj.section : undefined,
         isOptional:    obj.exempt === true,
         exempt:        false,
+        discarded:     obj.discarded === true,
+        discardPercent: typeof obj.discardPercent === 'number' ? obj.discardPercent : undefined,
         ...(obj.componentPer100g ? { componentPer100g: obj.componentPer100g as Record<string, number> } : {}),
       };
     }).filter(i => (i.ndbNo || i.componentPer100g) && i.portionGrams > 0);

@@ -45,6 +45,14 @@ interface IngRow {
   servingCount?: number;
   exempt?: boolean;
   isDish?: boolean;
+  discarded?: boolean;
+  discardPercent?: number;
+}
+
+function retainedIngredientFraction(ing: IngRow): number {
+  if (!ing.discarded) return 1;
+  const discardPercent = Number.isFinite(ing.discardPercent) ? ing.discardPercent! : 100;
+  return Math.max(0, Math.min(1, 1 - discardPercent / 100));
 }
 
 function round1(v: number): number {
@@ -144,7 +152,8 @@ export function calcNutritionJson(
       continue;
     }
 
-    const g = ing.portionGrams * ing.servingCount; // total grams for whole recipe
+    const g = ing.portionGrams * ing.servingCount * retainedIngredientFraction(ing); // total retained grams for whole recipe
+    if (g <= 0) continue;
     const scale = g / 100;
     totalRawGrams  += g;
     rawH2o         += food.h2o * scale;

@@ -54,6 +54,8 @@ async function calcCommunityNutrition(
       sectionKey:   typeof obj.section === 'string' ? obj.section : undefined,
       isOptional:   obj.ingredientStatus === 'optional' || obj.exempt === true,
       exempt:       obj.ingredientStatus === 'exempt',
+      discarded:    obj.discarded === true,
+      discardPercent: typeof obj.discardPercent === 'number' ? obj.discardPercent : undefined,
       ...(obj.componentRef ? { componentRef: String(obj.componentRef) } : {}),
       ...(obj.componentPer100g ? { componentPer100g: obj.componentPer100g as Record<string, number> } : {}),
     };

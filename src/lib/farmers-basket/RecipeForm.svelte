@@ -39,6 +39,10 @@
     componentName?: string;
     /** Original grams-per-serving for the linked recipe. Preserved even when a custom gram amount is entered. */
     componentServingGrams?: number;
+    /** Ingredient is shown in the recipe but partly/fully discarded before eating. */
+    discarded?: boolean;
+    /** Percentage discarded, 0-100. Defaults to 100 when discarded is checked. */
+    discardPercent?: number;
   }
 
   // v3.md §18 — per-section cooking method metadata for multi-stage recipes.
@@ -763,6 +767,18 @@
   function setIngredientStatus(ingId: number, status: 'required' | 'optional' | 'exempt') {
     ingredients = ingredients.map(i => i.id === ingId ? { ...i, ingredientStatus: status } : i);
   }
+
+  function setIngredientDiscarded(ingId: number, discarded: boolean) {
+    ingredients = ingredients.map(i => i.id === ingId
+      ? { ...i, discarded, discardPercent: discarded ? (i.discardPercent ?? 100) : undefined }
+      : i
+    );
+  }
+
+  function setIngredientDiscardPercent(ingId: number, discardPercent: number) {
+    const clamped = Math.max(0, Math.min(100, discardPercent));
+    ingredients = ingredients.map(i => i.id === ingId ? { ...i, discardPercent: clamped } : i);
+  }
   let linkNutritionInfoOpen = $state(false);
 
   function confirmDishLink() {
@@ -966,6 +982,8 @@
             portionGrams: i.portionGrams,
             servingCount: i.servingCount ?? 1,
             exempt: i.ingredientStatus === 'exempt' || i.ingredientStatus === 'optional',
+            discarded: i.discarded === true,
+            discardPercent: i.discarded === true ? (i.discardPercent ?? 100) : undefined,
             ...(i.section ? { section: i.section } : {}),
             ...(i.componentRef ? { componentRef: i.componentRef } : {}),
             ...(i.componentPer100g ? { componentPer100g: i.componentPer100g } : {}),
@@ -1232,6 +1250,8 @@
               ingredientStatus: 'required' as const,
               section: ing.section,
               ingredient_group: ing.section,
+              discarded: ing.discarded,
+              discardPercent: ing.discardPercent,
             };
           });
           nextIngredientId = ingredients.length + 1;
@@ -1259,6 +1279,8 @@
                 ingredientStatus: (ing as RecipeIngredient).ingredientStatus ?? 'required' as 'required' | 'optional' | 'exempt',
                 section: ing.section,
                 ingredient_group: (ing as RecipeIngredient).ingredient_group || ing.section,
+                discarded: (ing as RecipeIngredient).discarded,
+                discardPercent: (ing as RecipeIngredient).discardPercent,
               })),
             ];
             nextIngredientId = extraIdx;
@@ -1539,7 +1561,8 @@
             servingCount: i.servingCount ?? 1,
           } : {}),
           ...(i.ingredientStatus === 'exempt' ? { exempt: true } : {}),
-          ...(i.ingredientStatus === 'optional' ? { is_optional: true } : {})
+          ...(i.ingredientStatus === 'optional' ? { is_optional: true } : {}),
+          ...(i.discarded ? { discarded: true, discardPercent: i.discardPercent ?? 100 } : {})
         } : {})
       })),
       instructions: instructions.filter(i => i.text.trim()),
@@ -1716,6 +1739,8 @@
         (ing as { serving_count?: number }).serving_count ??
         undefined,
       ingredientStatus: (ing as RecipeIngredient).ingredientStatus ?? 'required',
+      discarded: (ing as RecipeIngredient).discarded,
+      discardPercent: (ing as RecipeIngredient).discardPercent,
       // v3.md §18 — carry per-row section assignment so suggestion-fills
       // can reconstruct section grouping in the editor.
       section:
@@ -2854,6 +2879,33 @@
                     <option value="optional">Optional</option>
                     <option value="exempt">Exempt</option>
                   </select>
+                </div>
+              {/if}
+
+              {#if hasIngredientNutritionLink(ingredient)}
+                <div class="discard-controls-row">
+                  <label class="discard-checkbox-label">
+                    <input
+                      type="checkbox"
+                      checked={ingredient.discarded === true}
+                      onchange={(e) => setIngredientDiscarded(ingredient.id, (e.target as HTMLInputElement).checked)}
+                    />
+                    Discarded
+                  </label>
+                  {#if ingredient.discarded}
+                    <label class="discard-percent-label">
+                      % discarded
+                      <input
+                        type="number"
+                        min="0"
+                        max="100"
+                        step="1"
+                        class="discard-percent-input"
+                        value={ingredient.discardPercent ?? 100}
+                        oninput={(e) => setIngredientDiscardPercent(ingredient.id, Number((e.target as HTMLInputElement).value))}
+                      />
+                    </label>
+                  {/if}
                 </div>
               {/if}
 

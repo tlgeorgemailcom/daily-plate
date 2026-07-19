@@ -132,6 +132,8 @@ export interface Level {
     isDish?: boolean;       // true = this row is the dish-level USDA entry
     componentRef?: string;  // child recipe id when this row is a composite component reference (e.g. 'BKFST_001')
     is_optional?: boolean;  // true = moderator-added optional ingredient (excluded from nutrition math)
+    discarded?: boolean;    // true = ingredient is displayed but partly/fully discarded before eating
+    discardPercent?: number; // 0-100 percentage discarded; defaults to 100 when discarded is true
   }[];
   servings?: string;              // e.g., "Serves 2"
   prepTime?: string;              // e.g., "10 minutes"

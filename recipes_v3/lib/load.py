@@ -152,6 +152,14 @@ class IngredientRow:
     display_name_override: str | None
     cook_section: str = ""  # Phase 8d: when non-empty, overrides `section` for pipeline
                              # nutrient math while keeping `section` for display grouping.
+    is_discarded: bool = False
+    discard_percent: float = 0.0
+
+    @property
+    def retained_fraction(self) -> float:
+        if not self.is_discarded:
+            return 1.0
+        return max(0.0, min(1.0, 1.0 - (self.discard_percent / 100.0)))
 
 
 @dataclass(frozen=True)
@@ -215,6 +223,10 @@ def _parse_int(s: str, default: int | None = 0) -> int | None:
     if not s:
         return default
     return int(float(s))
+
+
+def _parse_bool(s: str | None) -> bool:
+    return (s or "").strip().lower() in {"1", "true", "yes", "y"}
 
 
 def load_recipes() -> dict[str, Recipe]:
@@ -290,9 +302,11 @@ def load_ingredients() -> dict[str, list[IngredientRow]]:
                 grams=_parse_float(row.get("grams"), 0.0),
                 section=row.get("section", "main").strip(),
                 ingredient_group=(row.get("ingredient_group") or row.get("section") or "").strip(),
-                is_optional=row.get("is_optional", "false").strip().lower() == "true",
+                is_optional=_parse_bool(row.get("is_optional")),
                 display_name_override=(row.get("display_name_override") or "").strip() or None,
                 cook_section=(row.get("cook_section") or "").strip(),
+                is_discarded=_parse_bool(row.get("is_discarded")),
+                discard_percent=_parse_float(row.get("discard_percent"), 100.0 if _parse_bool(row.get("is_discarded")) else 0.0),
             )
             out.setdefault(rid, []).append(ingr)
     for rid in out:

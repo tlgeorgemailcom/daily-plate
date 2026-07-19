@@ -88,6 +88,8 @@ type NutritionLinkIngredient = {
   servingCount?: number;
   exempt?: boolean;
   isDish?: boolean;
+  discarded?: boolean;
+  discardPercent?: number;
 };
 
 function toFoodWord(value: string): string {
@@ -144,7 +146,9 @@ async function computeBuiltinNutrition(
     portionGrams: typeof ing.portionGrams === 'number' ? ing.portionGrams : undefined,
     servingCount: typeof ing.servingCount === 'number' ? ing.servingCount : undefined,
     exempt: ing.exempt === true,
-    isDish: ing.isDish === true
+    isDish: ing.isDish === true,
+    discarded: ing.discarded === true,
+    discardPercent: typeof ing.discardPercent === 'number' ? ing.discardPercent : undefined
   }));
 
   const linkType = deriveLinkType(recipeIngredients);
@@ -264,6 +268,12 @@ function normalizeRecipeIngredients(value: string | null): BuiltinOverride['reci
           : undefined,
         is_optional: typeof source.is_optional === 'boolean'
           ? source.is_optional
+          : undefined,
+        discarded: typeof source.discarded === 'boolean'
+          ? source.discarded
+          : undefined,
+        discardPercent: typeof source.discardPercent === 'number'
+          ? source.discardPercent
           : undefined
       };
     })

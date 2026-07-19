@@ -46,6 +46,12 @@ const STOCK_EXTRACTION: Record<string, { yfp: number; yff: number; yfc: number; 
   vegetable_stock: { yfp: 0.484, yff: 0.950, yfc: 0.290, yfo: 0.02 },
   // STOCK_007 Vegetable Stock: minimal fat (yff=0.950); yfp=0.484; yfc=0.290; Rule C calibrated.
 };
+
+function retainedIngredientFraction(ing: CommunityIngredient): number {
+  if (!ing.discarded) return 1;
+  const discardPercent = Number.isFinite(ing.discardPercent) ? ing.discardPercent! : 100;
+  return Math.max(0, Math.min(1, 1 - discardPercent / 100));
+}
 import {
   applyRetention,
   getRetentionFactor,
@@ -313,6 +319,8 @@ export function buildRecipeCommunityV3(
     for (const ing of bucket) {
       if (ing.isOptional) { skipped.push({ ndbNo: ing.ndbNo, displayName: ing.displayName, reason: 'optional'    }); continue; }
       if (ing.exempt)     { skipped.push({ ndbNo: ing.ndbNo, displayName: ing.displayName, reason: 'exempt'      }); continue; }
+      const effectiveGrams = ing.portionGrams * retainedIngredientFraction(ing);
+      if (effectiveGrams <= 0) { skipped.push({ ndbNo: ing.ndbNo, displayName: ing.displayName, reason: 'discarded' }); continue; }
       const nr = nutrientMap.get(ing.ndbNo);
       if (!nr && ing.componentPer100g) {
         // Component_ref ingredient: use pre-built per-100g values directly.
@@ -327,11 +335,11 @@ export function buildRecipeCommunityV3(
           const nrKey = colToKey[colName] ?? colName;
           (syntheticNr as Record<string, unknown>)[nrKey] = v;
         }
-        active.push({ grams: ing.portionGrams, nutrients: syntheticNr });
+        active.push({ grams: effectiveGrams, nutrients: syntheticNr });
         continue;
       }
       if (!nr)            { skipped.push({ ndbNo: ing.ndbNo, displayName: ing.displayName, reason: 'missing_ndb' }); continue; }
-      active.push({ grams: ing.portionGrams, nutrients: nr });
+      active.push({ grams: effectiveGrams, nutrients: nr });
     }
     globalSkipped.push(...skipped);
 

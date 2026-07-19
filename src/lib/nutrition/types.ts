@@ -123,6 +123,8 @@ export interface CommunityIngredient {
    *  When present and ndbNo has no SR28 match, these values are used directly — same as Python
    *  pipeline treating dev sub-recipes as SR Legacy food items. */
   componentPer100g?: Record<string, number>;
+  discarded?: boolean;      // displayed but partly/fully discarded before eating
+  discardPercent?: number;  // 0-100 percentage discarded; defaults to 100 when discarded is true
 }
 
 // ── Build output ──────────────────────────────────────────────────────────────

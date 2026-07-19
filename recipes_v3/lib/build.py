@@ -215,8 +215,9 @@ def _build_recipe_single(
             cid = child_recipe_id(row.ingredient_key)
             child = _load_child_build(cid)
             p100 = child.get("per100g", {})
-            scale = row.grams / 100.0
-            raw_total_grams += row.grams
+            effective_grams = row.grams * row.retained_fraction
+            scale = effective_grams / 100.0
+            raw_total_grams += effective_grams
             raw_water += float(p100.get("Water", 0.0)) * scale
             raw_fat += float(p100.get("TotalLipidFat", 0.0)) * scale
             contrib_full: dict[str, float] = {}
@@ -233,6 +234,9 @@ def _build_recipe_single(
                 "ndb_no": "",
                 "long_desc": child.get("recipe_name", cid),
                 "grams": _round(row.grams, 2),
+                "effective_grams": _round(effective_grams, 2),
+                "is_discarded": row.is_discarded,
+                "discard_percent": _round(row.discard_percent, 2),
                 "section": row.section,
                 "ingredient_group": row.ingredient_group,
                 "qty_display": row.qty_display,
@@ -251,8 +255,9 @@ def _build_recipe_single(
             skipped.append({"ingredient_key": row.ingredient_key, "reason": f"missing_ndb_{entry.ndb_no}"})
             continue
 
-        scale = row.grams / 100.0
-        raw_total_grams += row.grams
+        effective_grams = row.grams * row.retained_fraction
+        scale = effective_grams / 100.0
+        raw_total_grams += effective_grams
         raw_water += nuts.get("Water", 0.0) * scale
         raw_fat += nuts.get("TotalLipidFat", 0.0) * scale
 
@@ -274,6 +279,9 @@ def _build_recipe_single(
             "ndb_no": entry.ndb_no,
             "long_desc": entry.default_long_desc,
             "grams": _round(row.grams, 2),
+            "effective_grams": _round(effective_grams, 2),
+            "is_discarded": row.is_discarded,
+            "discard_percent": _round(row.discard_percent, 2),
             "section": row.section,
             "ingredient_group": row.ingredient_group,
             "qty_display": row.qty_display,
@@ -458,14 +466,16 @@ def _build_recipe_multi(
             child = _load_child_build(cid)
             p100 = child.get("per100g", {})
             st = sec_state[math_section]
-            scale = row.grams / 100.0
-            st["raw_total"] += row.grams
+            effective_grams = row.grams * row.retained_fraction
+            scale = effective_grams / 100.0
+            st["raw_total"] += effective_grams
             st["raw_water"] += float(p100.get("Water", 0.0)) * scale
             st["raw_fat"] += float(p100.get("TotalLipidFat", 0.0)) * scale
             st["raw_protein"] += float(p100.get("Protein", 0.0)) * scale
             st["raw_carb"] += float(p100.get("Carbohydrate", 0.0)) * scale
             st["raw_fiber"] += float(p100.get("FiberTotalDietary", 0.0)) * scale
-            st["ingredient_count"] += 1
+            if effective_grams > 0:
+                st["ingredient_count"] += 1
             contrib_full: dict[str, float] = {}
             for n in EXTENDED_NUTRIENTS:
                 c = float(p100.get(n, 0.0)) * scale
@@ -479,6 +489,9 @@ def _build_recipe_multi(
                 "ndb_no": "",
                 "long_desc": child.get("recipe_name", cid),
                 "grams": _round(row.grams, 2),
+                "effective_grams": _round(effective_grams, 2),
+                "is_discarded": row.is_discarded,
+                "discard_percent": _round(row.discard_percent, 2),
                 "section": row.section,
                 "ingredient_group": row.ingredient_group,
                 "qty_display": row.qty_display,
@@ -509,20 +522,22 @@ def _build_recipe_multi(
                 f"cook_section={math_section!r} but no matching section_key in recipe_sections.csv"
             )
         st = sec_state[math_section]
-        scale = row.grams / 100.0
-        st["raw_total"] += row.grams
+        effective_grams = row.grams * row.retained_fraction
+        scale = effective_grams / 100.0
+        st["raw_total"] += effective_grams
         st["raw_water"] += nuts.get("Water", 0.0) * scale
         st["raw_fat"] += nuts.get("TotalLipidFat", 0.0) * scale
         st["raw_protein"] += nuts.get("Protein", 0.0) * scale
         st["raw_carb"] += nuts.get("Carbohydrate", 0.0) * scale
         st["raw_fiber"] += nuts.get("FiberTotalDietary", 0.0) * scale
-        st["ingredient_count"] += 1
+        if effective_grams > 0:
+            st["ingredient_count"] += 1
 
         # Track submersion-boil absorbers (pasta, rice, oats, legumes).
         # _absorption_factor is populated from DataCentralCombo.bin by load_comboo_nutrients().
         absorb_factor = nuts.get("_absorption_factor")
         if absorb_factor is not None:
-            st["absorbers"].append((row.grams, absorb_factor))
+            st["absorbers"].append((effective_grams, absorb_factor))
 
         # Track fat-drain ingredients (raw bacon, etc.).
         # fat_drain is the fraction of fat *retained* after cooking (e.g. 0.33 for bacon).
@@ -569,6 +584,9 @@ def _build_recipe_multi(
             "ndb_no": entry.ndb_no,
             "long_desc": entry.default_long_desc,
             "grams": _round(row.grams, 2),
+            "effective_grams": _round(effective_grams, 2),
+            "is_discarded": row.is_discarded,
+            "discard_percent": _round(row.discard_percent, 2),
             "section": row.section,
             "ingredient_group": row.ingredient_group,
             "qty_display": row.qty_display,
