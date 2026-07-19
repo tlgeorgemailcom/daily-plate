@@ -11210,7 +11210,7 @@ export const LEVELS: Level[] = [
       { name: 'ground nutmeg', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2025', portionDesc: 'g', portionGrams: 0.55 }
     ],
     recipeInstructions: [
-      'Bring a large pot of salted water to a boil. Cook the pasta until al dente, about 8 minutes. Reserve 1/2 cup pasta water, then drain.',
+      'Bring a large pot of water to a boil. Add 1 tsp of table salt per quart of water after it boils, then add the dry pasta. Cook 8 minutes (al dente). Reserve 1/2 cup pasta water, then drain and set aside.',
       'Heat the olive oil in a large heavy pot or Dutch oven over medium-high heat. Add the ground beef and pan-grill, breaking it up, until browned and concentrated, about 22 minutes.',
       'Add the finely diced onion, carrot, and celery to the pot. Pan-grill, stirring occasionally, until softened, about 14 minutes.',
       'Add the crushed garlic and pan-grill 6 minutes.',
