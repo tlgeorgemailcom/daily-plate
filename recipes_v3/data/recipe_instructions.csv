@@ -1389,13 +1389,6 @@ SALAD_026,2,Slice the celery and halve the grapes. Roughly chop the walnuts.
 SALAD_026,3,"Combine apples, celery, grapes, walnuts, and raisins in a large bowl."
 SALAD_026,4,Add the mayonnaise and salt. Toss gently until everything is evenly coated.
 SALAD_026,5,Refrigerate at least 30 minutes before serving to allow flavors to meld. Serve chilled.
-ENTR_002,1,Bring a large pot of water to a boil. Cook rice noodles according to package directions (about 4-6 minutes). Drain and rinse with cold water. Set aside.
-ENTR_002,2,"In a small bowl, whisk together the tamari, sesame oil, beef broth, cornstarch, and sugar until smooth. Set the sauce aside."
-ENTR_002,3,Slice the beef thin against the grain into bite-sized strips. Season with the salt.
-ENTR_002,4,"Heat a large wok or skillet over high heat. Add 1 tablespoon olive oil. Add beef in a single layer and cook undisturbed for 1 minute, then stir-fry 1-2 minutes until browned. Transfer beef to a plate."
-ENTR_002,5,Add remaining tablespoon olive oil to the wok. Add the onion sliced into strips and carrot strips; stir-fry 2 minutes. Add broccoli; stir-fry 2 minutes. Add chopped garlic and chopped ginger; stir-fry 30 seconds.
-ENTR_002,6,"Return beef to the wok. Pour sauce over everything and toss to coat. Cook 1-2 minutes, stirring, until the sauce thickens and coats all the ingredients."
-ENTR_002,7,Add the cooked noodles and thinly sliced scallions; toss to combine. Serve immediately.
 ENTR_003,1,Slice the beef thin against the grain into bite-sized strips.
 ENTR_003,2,"In a small bowl, whisk together the soy sauce, apple cider vinegar, sugar, cornstarch, and water until smooth. Set the sauce aside."
 ENTR_003,3,"Heat a large wok or skillet over high heat until very hot. Add 3 tablespoons olive oil. Add the beef in a single layer and cook undisturbed for 1 minute, then stir-fry 1-2 minutes until just browned. Transfer to a plate."
@@ -3708,7 +3701,6 @@ SALAD_025,6,"Suggestions (not included): Serve chilled alongside grilled chicken
 SALAD_026,6,Suggestions (not included): Serve on a bed of lettuce or alongside grilled chicken and crusty bread.
 SALAD_006,6,"Suggestions (not included): Serve with salsa, guacamole, sour cream, or warm tortillas."
 ENTR_001,8,"Suggestions (not included): Serve with mashed potatoes, collard greens, or steamed green beans."
-ENTR_002,8,"Suggestions (not included): Serve topped with crushed peanuts, fresh cilantro, or a drizzle of chili oil."
 ENTR_004,9,Suggestions (not included): Top with freshly grated Parmesan cheese and serve with crusty bread on the side.
 ENTR_005,11,"Suggestions (not included): Serve over buttered egg noodles, creamy mashed potatoes, or crusty French bread."
 ENTR_010,7,"Suggestions (not included): Serve with Irish soda bread, whole grain mustard, and horseradish sauce on the side."
@@ -3854,3 +3846,14 @@ SAND_022,3,Top the avocado with the turkey breast slices and cooked bacon.
 SAND_022,4,Add the lettuce and tomato slices.
 SAND_022,5,"Close the sandwich with the second bread slice, press gently, and cut in half to serve."
 SAND_022,6,"Suggestions (not included): Serve with tortilla chips, a dill pickle, or a simple green salad."
+ENTR_002,1,Make or prepare the Beef Stock (see the Beef Stock recipe).
+ENTR_002,2,"Bring a large pot of water to a boil. Cook the rice noodles until just tender, about 5 minutes. Drain, rinse with cold water, and set aside."
+ENTR_002,3,"In a small bowl, whisk together the tamari, sesame oil, Beef Stock, cornstarch, and sugar until smooth. Set the sauce aside."
+ENTR_002,4,Slice the beef thinly against the grain. Season with the salt.
+ENTR_002,5,"Heat 1 tablespoon olive oil in a large wok or skillet over high heat. Add the beef in a single layer and pan-grill until browned, about 9 minutes total. Transfer beef to a plate."
+ENTR_002,6,Add the remaining 1 tablespoon olive oil to the wok. Add the onion and carrots and pan-grill 5 minutes.
+ENTR_002,7,Add the broccoli and pan-grill 3 minutes.
+ENTR_002,8,Add the garlic and ginger and pan-grill 1 minute.
+ENTR_002,9,"Return the beef to the wok. Pour in the sauce and simmer, uncovered, 2 minutes, stirring until the sauce thickens and coats the beef and vegetables."
+ENTR_002,10,Add the cooked noodles and toss to combine. Remove from heat and fold in the scallions.
+ENTR_002,11,"Suggestions (not included): Serve topped with crushed peanuts, fresh cilantro, or a drizzle of chili oil."
