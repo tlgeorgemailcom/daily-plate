@@ -11093,16 +11093,13 @@ export const LEVELS: Level[] = [
       { name: 'scallions', quantity: '3 medium scallions (thinly sliced)', section: 'garnish', ndbNo: '11291', portionDesc: 'g', portionGrams: 45.0 }
     ],
     recipeInstructions: [
-      'Make or prepare the Beef Stock (see the Beef Stock recipe).',
-      'Bring a large pot of water to a boil. Cook the rice noodles until just tender, about 5 minutes. Drain, rinse with cold water, and set aside.',
-      'In a small bowl, whisk together the tamari, sesame oil, Beef Stock, cornstarch, and sugar until smooth. Set the sauce aside.',
-      'Slice the beef thinly against the grain. Season with the salt.',
-      'Heat 1 tablespoon olive oil in a large wok or skillet over high heat. Add the beef in a single layer and pan-grill until browned, about 9 minutes total. Transfer beef to a plate.',
-      'Add the remaining 1 tablespoon olive oil to the wok. Add the onion and carrots and pan-grill 5 minutes.',
-      'Add the broccoli and pan-grill 3 minutes.',
-      'Add the garlic and ginger and pan-grill 1 minute.',
-      'Return the beef to the wok. Pour in the sauce and simmer, uncovered, 2 minutes, stirring until the sauce thickens and coats the beef and vegetables.',
-      'Add the cooked noodles and toss to combine. Remove from heat and fold in the scallions.',
+      'Bring a large pot of water to a boil. Cook rice noodles according to package directions (about 4-6 minutes). Drain and rinse with cold water. Set aside.',
+      'In a small bowl, whisk together the tamari, sesame oil, beef broth, cornstarch, and sugar until smooth. Set the sauce aside.',
+      'Slice the beef thin against the grain into bite-sized strips. Season with the salt.',
+      'Heat a large wok or skillet over high heat. Add 1 tablespoon olive oil. Add beef in a single layer and cook undisturbed for 1 minute, then stir-fry 1-2 minutes until browned. Transfer beef to a plate.',
+      'Add remaining tablespoon olive oil to the wok. Add the onion sliced into strips and carrot strips; stir-fry 2 minutes. Add broccoli; stir-fry 2 minutes. Add chopped garlic and chopped ginger; stir-fry 30 seconds.',
+      'Return beef to the wok. Pour sauce over everything and toss to coat. Cook 1-2 minutes, stirring, until the sauce thickens and coats all the ingredients.',
+      'Add the cooked noodles and thinly sliced scallions; toss to combine. Serve immediately.',
       'Suggestions (not included): Serve topped with crushed peanuts, fresh cilantro, or a drizzle of chili oil.'
     ],
     sections: [
@@ -11153,9 +11150,9 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Slice the beef thin against the grain into bite-sized strips.',
       'In a small bowl, whisk together the soy sauce, apple cider vinegar, sugar, cornstarch, and water until smooth. Set the sauce aside.',
-      'Heat 3 tablespoons olive oil in a large wok or skillet over high heat until very hot. Add the beef in a single layer and pan-grill 3 minutes until just browned. Transfer to a plate.',
-      'Add the remaining 2 1/2 tablespoons olive oil to the wok. Add the broccoli and minced garlic and pan-grill 3 minutes until the broccoli is bright green and tender-crisp.',
-      'Return the beef to the wok. Pour the sauce over everything and simmer, uncovered, 2 minutes, stirring until the sauce thickens and coats the beef and broccoli.',
+      'Heat a large wok or skillet over high heat until very hot. Add 3 tablespoons olive oil. Add the beef in a single layer and cook undisturbed for 1 minute, then stir-fry 1-2 minutes until just browned. Transfer to a plate.',
+      'Add the remaining 2½ tablespoons olive oil to the wok. Add the broccoli and minced garlic; stir-fry 3-4 minutes until the broccoli is bright green and tender-crisp.',
+      'Return the beef to the wok. Pour the sauce over everything and toss to coat. Cook 1-2 minutes, stirring, until the sauce thickens and coats the beef and broccoli.',
       'Serve immediately.',
       'Suggestions (not included): Serve over steamed white rice.'
     ],
@@ -11210,15 +11207,13 @@ export const LEVELS: Level[] = [
       { name: 'ground nutmeg', quantity: '1/4 tsp', section: 'sauce', ndbNo: '2025', portionDesc: 'g', portionGrams: 0.55 }
     ],
     recipeInstructions: [
-      'Bring a large pot of water to a boil. Add 1 tsp of table salt per quart of water after it boils, then add the dry pasta. Cook 8 minutes (al dente). Reserve 1/2 cup pasta water, then drain and set aside.',
-      'Heat the olive oil in a large heavy pot or Dutch oven over medium-high heat. Add the ground beef and pan-grill, breaking it up, until browned and concentrated, about 22 minutes.',
-      'Add the finely diced onion, carrot, and celery to the pot. Pan-grill, stirring occasionally, until softened, about 14 minutes.',
-      'Add the crushed garlic and pan-grill 6 minutes.',
-      'Add the tomato paste and pan-grill 5 minutes until it darkens slightly.',
-      'Pour in the white wine and stir, scraping up any browned bits. Pan-grill until the wine is mostly absorbed, about 3 minutes.',
-      'Make or prepare the Beef Stock (see the Beef Stock recipe).',
-      'Add the crushed tomatoes, Beef Stock, milk, oregano, basil, bay leaf, sugar, salt, pepper, and nutmeg. Stir to combine.',
-      'Reduce heat to low and sub-simmer uncovered, stirring occasionally, for 50 minutes until the sauce is thick and the fat begins to pool on the surface. Remove the bay leaf.',
+      'Heat olive oil in a large heavy pot or Dutch oven over medium-high heat. Add the ground beef and cook, breaking it up, until browned, about 8 minutes. Drain excess fat if desired.',
+      'Add the finely diced onion, carrot, and celery to the pot. Cook, stirring occasionally, until softened, about 8 minutes. Add the crushed garlic and cook 1 minute more.',
+      'Add the tomato paste and stir into the meat, cooking 2 minutes until it darkens slightly.',
+      'Pour in the white wine and stir, scraping up any browned bits. Cook until the wine is mostly absorbed, about 3 minutes.',
+      'Add the crushed tomatoes, beef broth, milk, oregano, basil, bay leaf, sugar, salt, pepper, and nutmeg. Stir to combine.',
+      'Reduce heat to low and simmer uncovered, stirring occasionally, for 45 minutes to 1 hour until the sauce is thick and the fat begins to pool on the surface. Remove the bay leaf.',
+      'Meanwhile, bring a large pot of salted water to a boil. Cook pasta according to package directions until al dente. Reserve ½ cup pasta water, then drain.',
       'Toss the drained pasta with the Bolognese sauce, adding a splash of pasta water if needed to loosen. Serve with grated Parmesan if desired.',
       'Suggestions (not included): Top with freshly grated Parmesan cheese and serve with crusty bread on the side.'
     ],
@@ -11273,16 +11268,16 @@ export const LEVELS: Level[] = [
       { name: 'crimini mushrooms', quantity: '8 oz crimini mushrooms (halved or quartered)', section: 'mushrooms', ndbNo: '11266', portionDesc: 'g', portionGrams: 226.8 }
     ],
     recipeInstructions: [
-      'Pan-grill the chopped bacon in a large Dutch oven until the fat renders and the bacon is browned, about 8 minutes. Leave the bacon and rendered fat in the pot.',
-      'Pat the beef chuck dry and season with salt and black pepper. Pan-grill the beef in the bacon fat until browned, about 6 minutes, then return it to the pot.',
-      'Add the onions, carrots, and olive oil. Pan-grill, stirring occasionally, until the vegetables soften, about 6 minutes.',
-      'Add the garlic and pan-grill 2 minutes.',
-      'Stir in the flour and tomato paste and pan-grill 1 minute until the flour is absorbed and the paste darkens slightly.',
-      'Make or prepare the Beef Stock (see the Beef Stock recipe).',
-      'Add the red wine, Beef Stock, thyme, and bay leaves, scraping up any browned bits from the bottom of the pot.',
-      'Cover and braise over low heat for 150 minutes, until the beef is very tender. Remove the thyme sprigs and bay leaves.',
-      'Add the mushrooms after cooking and fold them into the hot braise.',
-      'Taste and adjust seasoning. Serve in bowls.',
+      'Pat the beef chuck dry and cut into 2-inch cubes. Season generously with salt and black pepper.',
+      'Cook the bacon in a large Dutch oven over medium heat until crisp. Remove bacon and set aside, leaving the fat in the pot.',
+      'Working in batches, sear the beef cubes in the bacon fat over medium-high heat until browned on all sides, about 3 minutes per side. Remove and set aside.',
+      'Add the olive oil to the pot. Sauté the diced onion and carrots sliced into 1 inch chunks over medium heat until softened, about 5 minutes. Add the minced garlic and cook 1 minute more.',
+      'Stir in the flour and tomato paste and cook for 1 minute until the flour is absorbed.',
+      'Pour in the red wine and beef broth, scraping up any browned bits from the bottom of the pot.',
+      'Return the seared beef and bacon to the pot. Add the thyme sprigs and bay leaves. Bring to a simmer.',
+      'Cover and braise over low heat (or in a 325°F oven) for 2 to 2½ hours, until the beef is very tender.',
+      'Add the mushrooms for the last 30 minutes of braising.',
+      'Remove the thyme sprigs and bay leaves. Taste and adjust seasoning. Serve in bowls.',
       'Suggestions (not included): Serve over buttered egg noodles, creamy mashed potatoes, or crusty French bread.'
     ],
     sections: [
@@ -11337,13 +11332,13 @@ export const LEVELS: Level[] = [
       { name: 'bay leaves', quantity: '2 whole bay leaves', section: 'birria', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 }
     ],
     recipeInstructions: [
-      'Remove the stems and seeds from the ancho and pasilla chiles.',
-      'Make or prepare the Beef Stock (see the Beef Stock recipe).',
-      'Sub-simmer the chiles with 1 cup of the Beef Stock for 20 minutes until softened.',
-      'Pat the beef chuck dry and season with salt and black pepper. Pan-grill until browned on all sides, about 6 minutes.',
-      'Transfer the softened chiles and their soaking stock to a blender. Add the tomatoes, onion, garlic, cumin, oregano, thyme, cinnamon, cloves, apple cider vinegar, and the remaining 1 cup Beef Stock. Blend until smooth.',
-      'Pour the blended birria sauce over the browned beef. Add the bay leaves and stir to combine.',
-      'Cover and braise over low heat for 160 minutes, until the beef is very tender and shreds easily.',
+      'Remove the stems and seeds from the ancho and pasilla chiles. Toast them in a dry skillet over medium heat for 30 seconds per side until fragrant.',
+      'Soak the toasted chiles in 1 cup of the hot beef broth for 20 minutes until softened.',
+      'Transfer the soaked chiles and their soaking liquid to a blender. Add the quartered tomatoes, coarsely chopped onion, whole garlic cloves, cumin, oregano, thyme, cinnamon, cloves, and apple cider vinegar. Blend until smooth.',
+      'Cut the beef chuck into 2-inch cubes. Season generously with salt and black pepper.',
+      'Set a Dutch oven or pot over medium-high heat with olive oil. Add the meat and sear on all sides until browned. Work in batches. Once all meat is seared, strain the blended sauce into the pot with the seared meat.',
+      'Add the remaining beef broth, bay leaves, and additional salt to taste. Stir to combine.',
+      'Bring to a boil over high heat, then reduce to a low simmer. Cover and braise for 2½ to 3 hours, until the beef is very tender and shreds easily.',
       'Remove the bay leaves. Shred the beef with two forks directly in the broth.',
       'Taste and adjust salt as needed. Serve the birria in bowls with its broth.',
       'Suggestions (not included): Accompany with warm tortillas, diced white onion, fresh cilantro, and lime wedges.'
@@ -11394,14 +11389,14 @@ export const LEVELS: Level[] = [
       { name: 'Beef Stock', quantity: '1 cup Beef Stock (recipe)', section: 'stock_ref', foodWord: 'BEEFSTOCK', portionDesc: 'g', portionGrams: 240.0, isDish: true, componentRef: 'STOCK_004' }
     ],
     recipeInstructions: [
-      'Pat the beef chuck dry and season with salt and black pepper. Melt the butter in a large Dutch oven, then pan-grill the beef until browned on all sides, about 6 minutes.',
-      'Add the thinly sliced onions and pan-grill, stirring often, until deeply caramelized, about 26 minutes.',
-      'Add the garlic and pan-grill 1 minute.',
-      'Stir in the flour and pan-grill 1 minute until absorbed.',
-      'Make or prepare the Beef Stock (see the Beef Stock recipe).',
-      'Pour in the beer, Beef Stock, apple cider vinegar, mustard, and brown sugar, scraping up any browned bits. Add the thyme and bay leaves.',
-      'Cover and braise over low heat for 135 minutes, until the beef is very tender.',
-      'Remove the bay leaves. Taste and adjust seasoning.',
+      'Cut the beef chuck into 2-inch cubes. Pat dry and season generously with salt and black pepper.',
+      'Melt the butter in a large Dutch oven over medium-high heat. Working in batches, sear the beef on all sides until well browned. Remove and set aside.',
+      'In the same pot, add the thinly sliced onions and cook over medium heat, stirring often, until deeply caramelized, about 25 minutes. Add the minced garlic and cook 1 minute more.',
+      'Stir in the flour and cook for 1 minute until absorbed.',
+      'Pour in the beer and beef broth, scraping up any browned bits. Add the apple cider vinegar, mustard, and brown sugar. Stir to combine.',
+      'Return the seared beef to the pot. Add the thyme and bay leaves. The liquid should nearly cover the meat.',
+      'Bring to a simmer, then cover and braise over low heat for 2 to 2½ hours, until the beef is very tender.',
+      'Remove the bay leaves and thyme sprigs. Taste and adjust seasoning.',
       'Suggestions (not included): Serve in bowls over egg noodles or with crusty bread.'
     ],
     sections: [
@@ -11449,11 +11444,11 @@ export const LEVELS: Level[] = [
       { name: 'ground black pepper', quantity: '1/2 tsp black pepper', section: 'marinade', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15, discarded: true, discardPercent: 100.0 }
     ],
     recipeInstructions: [
-      'In a bowl or zip-top bag, combine the orange juice, lime juice, garlic, cumin, oregano, paprika, cilantro, salt, and black pepper to make the marinade.',
+      'In a bowl or zip-lock bag, combine the orange juice, lime juice, olive oil, minced garlic, cumin, oregano, paprika, salt, and black pepper to make the marinade.',
       'Add the flank steak to the marinade, turning to coat. Cover and refrigerate for at least 2 hours, or up to 8 hours for best flavor.',
       'Remove the steak from the marinade and pat dry with paper towels. Discard the marinade.',
-      'Heat a cast iron skillet or grill pan over high heat until very hot. Add the olive oil.',
-      'Pan-grill the flank steak for about 9 minutes total, turning once, until browned and cooked to the desired doneness. Let it rest for 5 to 10 minutes.',
+      'Heat a cast iron skillet or grill pan over high heat until very hot. Brush with a little oil.',
+      'Cook the flank steak for 4 to 5 minutes per side for medium-rare, or until the desired doneness. Let it rest for 5 to 10 minutes.',
       'Slice the steak thinly against the grain.',
       'Suggestions (not included): Serve with warm tortillas, fresh cilantro, diced onion, and lime wedges.'
     ],
@@ -11501,13 +11496,13 @@ export const LEVELS: Level[] = [
       { name: 'Beef Stock', quantity: '1 cup Beef Stock (recipe)', section: 'stock_ref', foodWord: 'BEEFSTOCK', portionDesc: 'g', portionGrams: 240.0, isDish: true, componentRef: 'STOCK_004' }
     ],
     recipeInstructions: [
-      'Make or prepare the Beef Stock (see the Beef Stock recipe). Set aside.',
-      'Season the beef chuck with the salt and black pepper. Heat the olive oil in a Dutch oven over medium-high heat, then brown the beef for about 6 minutes. Remove and set aside.',
-      'Add the onion and green bell pepper to the same pot. Pan-grill for about 7 minutes, stirring occasionally, until softened.',
-      'Add the garlic and pan-grill for about 3 minutes until fragrant.',
-      'Sprinkle in the flour and pan-grill for about 2 minutes to coat the vegetables.',
-      'Add the tomatoes, Beef Stock, cumin, chili powder, oregano, and paprika. Stir to combine, then return the browned beef to the pot.',
-      'Cover and braise over low heat for 100 minutes, stirring occasionally, until the beef is very tender and the gravy has thickened.',
+      'Cut the beef chuck into 1 to 2 inch cubes. Season with salt and black pepper.',
+      'Heat the olive oil in a Dutch oven or large pot over medium-high heat. Sear the beef in batches until browned on all sides. Remove and set aside.',
+      'In the same pot, add the diced onion and diced bell pepper. Cook for 4 to 5 minutes until softened. Add the minced garlic and cook for 1 more minute.',
+      'Sprinkle in the flour and stir to coat the vegetables. Cook for 1 to 2 minutes.',
+      'Add the diced tomatoes, beef broth, cumin, chili powder, oregano, and paprika. Stir to combine.',
+      'Return the seared beef to the pot. Bring to a boil, then reduce heat to low.',
+      'Cover and simmer for 1.5 to 2 hours, stirring occasionally, until the beef is very tender and the gravy has thickened.',
       'Taste and adjust seasoning.',
       'Suggestions (not included): Serve on its own or over steamed rice or with warm flour tortillas.'
     ],
@@ -11568,10 +11563,9 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Prepare the brine: Combine the water, salt, sugar, mustard seed, coriander seed, cloves, dill seed, mace, red pepper flakes, ginger, and cinnamon sticks in a large saucepan. Bring to a boil over high heat, stirring until the salt and sugar fully dissolve. Remove from heat and add 4 cups of ice to cool the brine rapidly. Once completely cold, proceed to curing.',
       'Cure the brisket: Place the brisket in a large zip-top bag or non-reactive container and pour the cold brine over it. Press out any air, seal tightly, and refrigerate for 10 days. Flip the brisket once each day. After 10 days, remove the brisket and rinse it well under cold running water. Discard all brine.',
-      'Place the rinsed brisket in a pot large enough to cover the brisket by at least 2 inches of water. Add the black pepper, allspice, bay leaves, and salt. Bring to a full boil over high heat, then reduce to a sub-simmer. Cook for 165 minutes, until the brisket yields easily to a fork.',
-      'Move the brisket to a cutting board and tent loosely with foil. Keep the pot at a sub-simmer.',
-      'Add the potatoes and carrots to the sub-simmering liquid and cook for 28 minutes, until nearly tender.',
-      'Add the cabbage wedges, celery, and onion and sub-simmer for 18 minutes more, until all vegetables are tender.',
+      'Place the rinsed brisket in a pot large enough to cover the brisket by at least 2 inches of water. Add the black pepper, allspice, bay leaves, and salt. Bring to a full boil over high heat, then reduce to a gentle simmer. Cover and cook for 2 1/2 to 3 hours, until the brisket yields easily to a fork.',
+      'Move the brisket to a cutting board and tent loosely with foil. Keep the pot at a low simmer.',
+      'Add the potatoes and carrots to the simmering liquid and cook for 10 minutes. Add the cabbage wedges, celery, and onion and cook uncovered for 15 to 20 minutes more, until all vegetables are tender.',
       'Discard the bay leaves. Slice the brisket against the grain into 1/4-inch slices. Serve on a platter with the vegetables and a ladle of the cooking broth poured over the top.',
       'Suggestions (not included): Serve with Irish soda bread, whole grain mustard, and horseradish sauce on the side.'
     ],
@@ -11622,14 +11616,14 @@ export const LEVELS: Level[] = [
       { name: 'ground black pepper', quantity: '1/2 tsp ground black pepper', section: 'add_spices', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 }
     ],
     recipeInstructions: [
-      'Preheat oven to 400°F. Peel and quarter the potatoes. Add them to a pot of water with the salt, bring to a boil, and boil uncovered for 17 minutes until completely tender. Drain and mash until smooth.',
-      'Heat the olive oil in a large oven-safe skillet or Dutch oven over medium-high heat. Add the ground beef and pan-grill, breaking it apart, for 14 minutes until browned and concentrated.',
-      'Add the finely chopped onion, finely chopped carrot, and finely chopped celery to the beef. Pan-grill, stirring occasionally, for 8 minutes until softened.',
-      'Add the minced garlic and pan-grill 2 minutes.',
-      'Sprinkle the flour over the mixture and stir to coat. Add the tomato paste and pan-grill 1 minute until the paste darkens slightly.',
-      'Make or prepare the Beef Stock (see the Beef Stock recipe).',
-      'Add the Beef Stock, thyme, rosemary, salt, and black pepper. Simmer uncovered for 9 minutes until the filling thickens to a gravy consistency.',
-      'Spread the mashed potatoes evenly over the filling. Drag a fork across the surface to create ridges, then bake uncovered at 400°F for 28 minutes until the top is golden and the edges are bubbling. Let stand 5 minutes before serving.',
+      'Preheat oven to 400°F. Peel and quarter the potatoes. Add to a pot of cold salted water, bring to a boil, and cook 15 to 20 minutes until completely tender when pierced with a fork.',
+      'While the potatoes cook, heat olive oil in a large oven-safe skillet or Dutch oven over medium-high heat. Add the ground beef and cook, breaking it apart, until no pink remains. Tilt the pan and spoon off excess fat.',
+      'Add finely chopped onion, finely chopped carrot, and finely chopped celery to the beef. Cook 5 to 7 minutes, stirring occasionally, until the vegetables soften. Add the minced garlic and cook 1 minute more.',
+      'Sprinkle flour over the mixture and stir to coat. Add tomato paste and cook 1 minute. Pour in beef broth and Worcestershire sauce. Add thyme, rosemary, salt, and pepper. Stir to combine.',
+      'Simmer uncovered 8 to 10 minutes until the filling thickens to a gravy consistency. Remove from heat and stir in the frozen peas. Remove the rosemary sprig.',
+      'Drain the potatoes and return to the pot. Add butter, milk, egg, salt, and pepper. Mash until smooth and creamy.',
+      'Spread the mashed potato topping evenly over the filling. Drag a fork across the surface to create ridges, which will crisp and brown in the oven.',
+      'Bake uncovered 25 to 30 minutes until the top is golden and the edges are bubbling. Let stand 5 minutes before serving.',
       'Suggestions (not included): Serve with steamed green beans or a simple green salad.'
     ],
     sections: [
@@ -11677,10 +11671,11 @@ export const LEVELS: Level[] = [
       { name: 'ground black pepper', quantity: '1/2 tsp ground black pepper', section: 'marinade', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15, discarded: true, discardPercent: 100.0 }
     ],
     recipeInstructions: [
-      'Whisk together the olive oil, lime juice, minced garlic, cumin, oregano, salt, and black pepper in a bowl to form the marinade.',
-      'Place the skirt steak in a zip-top bag or shallow dish. Pour the marinade over the steak, turning to coat. Refrigerate at least 2 hours, or up to 8 hours for deeper flavor.',
-      'Remove the steak from the marinade and discard all marinade. Pat the surface dry with paper towels. Season both sides with the retained salt and black pepper.',
-      'Heat a grill pan or heavy skillet over high heat. Pan-grill the steak for 7 minutes total, turning once, until browned outside and medium-rare inside.',
+      'Whisk together olive oil, lime juice, minced garlic, cumin, oregano, salt, and pepper in a bowl to form the marinade.',
+      'Place the skirt steak in a zip-lock bag or shallow dish. Pour the marinade over the steak, turning to coat. Refrigerate at least 2 hours, or up to 8 hours for deeper flavor.',
+      'Remove the steak from the marinade and discard the marinade. Pat the surface dry with paper towels. Season both sides with salt and pepper.',
+      'Heat a grill or grill pan to high heat. The grill should be very hot — skirt steak needs quick, intense heat to develop a crust without overcooking the interior.',
+      'Grill the steak 3 to 4 minutes per side for medium-rare, or until it reaches an internal temperature of 130 to 135°F. Skirt steak is thin; do not walk away.',
       'Transfer to a cutting board and let rest 5 minutes. Slice thinly against the grain at a steep angle. Serve immediately.',
       'Suggestions (not included): Serve with white rice, black beans, and fried plantains.'
     ],
@@ -11727,14 +11722,13 @@ export const LEVELS: Level[] = [
       { name: 'fresh cilantro', quantity: '1/4 cup fresh cilantro, chopped', section: 'cilantro', ndbNo: '11165', portionDesc: 'g', portionGrams: 4.0 }
     ],
     recipeInstructions: [
-      'Cut the chuck roast into 1 1/2-inch cubes, trimming any large pieces of hard fat. Pat dry and season with the beef-section salt and black pepper.',
-      'Heat olive oil in a large heavy-bottomed pot or Dutch oven over medium-high heat. Pan-grill the beef for 4 minutes, turning to brown the sides. Remove the beef and set aside.',
-      'Add the diced onions to the pot and pan-grill 7 minutes, stirring occasionally, until softened and lightly browned.',
-      'Add the minced garlic and pan-grill 3 minutes.',
-      'Add the curry powder and tomato paste. Pan-grill 2 minutes until fragrant and the paste darkens slightly.',
-      'Add the sliced carrots and pan-grill 1 minute, stirring to coat them in the curry paste.',
-      'Return the beef and any accumulated juices to the pot. Pour in the coconut milk and add the remaining salt and black pepper. Stir to combine. Cover and braise over low heat for 75 minutes, stirring occasionally, until the beef is fork-tender and the sauce has thickened.',
-      'Taste and adjust seasoning. Add the cilantro after cooking and fold it into the hot curry just before serving.',
+      'Cut the chuck roast into 1½-inch cubes, trimming any large pieces of hard fat. Pat dry and season lightly with salt and pepper.',
+      'Heat olive oil in a large heavy-bottomed pot or Dutch oven over medium-high heat. Working in batches, sear the beef on all sides until deeply browned, about 3 to 4 minutes per batch. Do not crowd the pan. Remove seared beef and set aside.',
+      'Reduce heat to medium. Add the diced onion to the pot and cook 4 to 5 minutes until softened. Add minced garlic and minced ginger and cook 1 minute more.',
+      'Add curry powder and tomato paste. Stir and cook 1 to 2 minutes until fragrant and the paste darkens slightly.',
+      'Add the diced tomatoes and stir, scraping up any browned bits from the bottom of the pot. Return the beef and any accumulated juices to the pot.',
+      'Pour in the coconut milk. Add salt and pepper. Stir to combine. Bring to a boil, then reduce heat to low. Cover and simmer 1 to 1½ hours, stirring occasionally, until the beef is fork-tender and the sauce has thickened.',
+      'Taste and adjust seasoning. Stir in the cilantro just before serving.',
       'Suggestions (not included): Serve on its own or over steamed rice.'
     ],
     sections: [
@@ -11790,16 +11784,15 @@ export const LEVELS: Level[] = [
       { name: 'capers', quantity: '2 tbsp capers', section: 'finish', ndbNo: '2054', portionDesc: 'g', portionGrams: 17.2 }
     ],
     recipeInstructions: [
-      'Make or prepare the Beef Stock (see the Beef Stock recipe).',
-      'Season the flank steak with the salt and black pepper on both sides.',
-      'Heat olive oil in a large Dutch oven over medium-high heat. Pan-grill the flank steak for 7 minutes, turning to brown both sides. Remove and set aside.',
-      'Reduce heat to medium. Add the thinly sliced onion and lengthwise sliced bell peppers to the pot. Pan-grill 8 minutes, stirring occasionally, until softened.',
-      'Add the minced garlic and pan-grill 3 minutes.',
-      'Add the cumin and oregano. Pan-grill 2 minutes until fragrant.',
-      'Add the tomato paste and pan-grill 1 minute until darkened.',
-      'Add the diced tomatoes, white wine, and Beef Stock. Stir, scraping up any browned bits from the bottom. Return the steak to the pot and tuck in the bay leaves. Cover and braise over low heat for 100 minutes, turning the steak once halfway through, until the beef is completely tender and shreds easily.',
+      'Season the flank steak generously with salt and pepper on both sides.',
+      'Heat olive oil in a large Dutch oven over medium-high heat. Sear the flank steak 3 to 4 minutes per side until deeply browned. Remove and set aside.',
+      'Reduce heat to medium. Add the thinly sliced onion and lengthwise sliced bell peppers to the pot. Cook 5 to 6 minutes, stirring occasionally, until softened. Add minced garlic and cook 1 minute more.',
+      'Add cumin and oregano. Stir and cook 30 seconds until fragrant. Add tomato paste and cook 1 minute until darkened.',
+      'Add the diced tomatoes, white wine, and beef broth. Stir, scraping up any browned bits from the bottom. Return the steak to the pot. Tuck in the bay leaves. The liquid should come about halfway up the steak.',
+      'Bring to a boil, then reduce heat to low. Cover and simmer 1½ to 2 hours, turning the steak once halfway through, until the beef is completely tender and shreds easily.',
       'Remove the steak to a cutting board. Discard the bay leaves. Using two forks, shred the meat into long, thin strips along the grain.',
-      'After cooking, return the shredded beef to the pot. Add the cilantro, green olives, and capers. Fold into the hot sauce and taste for seasoning.',
+      'Return the shredded beef to the pot. Add the green olives and capers. Stir to combine and simmer uncovered 10 minutes to meld the flavors. Taste and adjust seasoning.',
+      'Stir in the cilantro just before serving.',
       'Suggestions (not included): Serve over steamed white rice or with black beans.'
     ],
     sections: [
@@ -11852,16 +11845,14 @@ export const LEVELS: Level[] = [
       { name: 'fresh parsley', quantity: '2 tbsp fresh parsley, chopped', section: 'parsley', ndbNo: '11297', portionDesc: 'g', portionGrams: 7.6 }
     ],
     recipeInstructions: [
-      'Make or prepare the Beef Stock (see the Beef Stock recipe) and the Dijon-Style Mustard (see the Dijon-Style Mustard recipe). Set both aside.',
-      'Pound each 6oz steak to a thickness of 3/4 to 1 inch. Season both sides with the salt and black pepper.',
-      'Melt 2 tablespoons of butter in a large skillet over high heat until foaming subsides. Pan-grill the steaks for 6 minutes, turning once. Remove to a plate and tent loosely with foil.',
-      'Reduce heat to medium. Add the remaining 1 tablespoon of butter to the pan. Add the shallots and minced garlic and pan-grill 10 minutes, stirring often, until softened and lightly browned.',
-      'Add the sliced 1/4-inch-thick mushrooms and pan-grill 9 minutes until golden and most of the moisture has evaporated.',
-      'Remove the pan from heat. Add the brandy carefully. Return to heat and pan-grill 6 minutes until the sharp alcohol aroma subsides.',
-      'Add the Beef Stock and Worcestershire sauce. Stir, scraping up any browned bits, and simmer uncovered 5 minutes.',
-      'Add the heavy cream and Dijon-Style Mustard. Stir to combine and simmer uncovered 3 minutes until the sauce thickens enough to coat a spoon.',
-      'Return the steaks and any accumulated juices to the pan. Spoon the sauce over them and warm through briefly. Taste and adjust seasoning.',
-      'Plate the steaks, spoon the mushroom pan sauce over the top, and add the chopped parsley after cooking. Serve immediately.',
+      'Make or prepare the Dijon-Style Mustard (see the Dijon-Style Mustard recipe). Set aside.',
+      'Pound each 6oz steak to a thickness of 3/4 to 1 inch. Season both sides generously with salt and pepper.',
+      'Melt 2 tablespoons of butter in a large skillet over high heat until foaming subsides. Sear the steaks 2 to 3 minutes per side for medium-rare. Remove to a plate and tent loosely with foil.',
+      'Reduce heat to medium. Add the remaining 1 tablespoon of butter to the pan. Add shallots and minced garlic, cook 1 minute. Add the sliced 1/4 inch thick mushrooms and cook 3 to 4 minutes until golden and most of the moisture has evaporated.',
+      'Remove the pan from heat. Add the brandy carefully. Return to heat and tilt the pan to flambé, or let the alcohol cook off for 1 to 2 minutes until the sharp aroma subsides.',
+      'Add the beef broth and Worcestershire sauce. Stir, scraping up any browned bits. Simmer 2 minutes. Add the heavy cream and Dijon mustard. Stir to combine and simmer 3 to 4 minutes until the sauce thickens enough to coat a spoon.',
+      'Return the steaks and any accumulated juices to the pan. Spoon the sauce over them and warm through 1 minute. Taste and adjust seasoning.',
+      'Plate the steaks, spoon the mushroom pan sauce over the top, and garnish with chopped parsley. Serve immediately.',
       'Suggestions (not included): Serve with creamy mashed potatoes and roasted asparagus.'
     ],
     sections: [
@@ -11913,12 +11904,12 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Make or prepare the Red Enchilada Sauce (see the Red Enchilada Sauce recipe). Set aside.',
       'Preheat the oven to 375°F (190°C). Lightly grease a 9×13-inch baking dish.',
-      'Heat a large skillet over medium-high heat. Add the ground beef and pan-grill 12 minutes, breaking it up, until browned and no longer pink. Drain the excess fat from the pan.',
-      'Add the diced onion and pan-grill 5 minutes until softened. Add the minced garlic, chili powder, cumin, salt, and black pepper. Pan-grill 1 minute more. Remove from heat.',
+      'Heat a large skillet over medium-high heat. Add the ground beef and cook, breaking it up, until no longer pink, about 6 to 8 minutes. Drain the excess fat from the pan.',
+      'Add the onion to the beef and cook 4 to 5 minutes until softened. Add the garlic, chili powder, cumin, salt, and pepper. Stir and cook 1 minute more. Remove from heat.',
       'Spread about 1/2 cup of the enchilada sauce in the bottom of the prepared baking dish.',
       'Warm the corn tortillas briefly in the microwave or a dry skillet to make them pliable. Place about 3 tablespoons of the beef filling down the center of each tortilla. Roll tightly and place seam-side down in the baking dish.',
       'Pour the remaining enchilada sauce evenly over the rolled enchiladas. Sprinkle the shredded cheese over the top.',
-      'Cover the dish with foil and bake for 20 minutes until the cheese is melted and the sauce is bubbling. Serve immediately.',
+      'Cover the dish with foil and bake for 20 minutes. Remove the foil and bake an additional 10 minutes until the cheese is melted and bubbly. Serve immediately.',
       'Suggestions (not included): Serve with Mexican rice, refried beans, sour cream, and fresh guacamole.'
     ],
     sections: [
@@ -11967,13 +11958,13 @@ export const LEVELS: Level[] = [
       { name: 'sour cream', quantity: '4 tbsp sour cream (for serving)', section: 'finish', ndbNo: '1056', portionDesc: 'g', portionGrams: 48.0 }
     ],
     recipeInstructions: [
-      'Make or prepare the Beef Stock (see the Beef Stock recipe). Set aside.',
-      'Pat the beef chuck cubes dry with paper towels.',
-      'Heat the olive oil in a large Dutch oven or heavy pot over medium-high heat. Add the beef, salt, and black pepper and pan-grill 6 minutes, turning until browned on several sides. Remove to a plate and set aside.',
-      'Reduce heat to medium. Add the sliced onions and pan-grill 13 minutes, stirring occasionally, until softened and lightly golden.',
-      'Add the minced garlic and diced green bell pepper and pan-grill 4 minutes. Add the paprika, caraway seeds, and marjoram and pan-grill 2 minutes more.',
-      'Stir in the tomato paste and pan-grill 1 minute. Return the browned beef and any accumulated juices to the pot.',
-      'Pour in the Beef Stock. Stir to combine, scraping up any browned bits from the bottom. Cover and braise 115 minutes, stirring occasionally, until the beef is very tender and the sauce has thickened.',
+      'Pat the beef chuck cubes dry with paper towels. Season generously with salt and pepper.',
+      'Heat the olive oil in a large Dutch oven or heavy pot over medium-high heat. Working in batches, sear the beef on all sides until deeply browned, about 3 to 4 minutes per side. Remove to a plate and set aside.',
+      'Reduce heat to medium. Add the sliced onions to the same pot and cook, stirring occasionally, for 8 to 10 minutes until softened and lightly golden. Add the bell pepper and garlic and cook 2 more minutes.',
+      'Add the paprika, caraway seeds, and marjoram. Stir to coat the vegetables and cook 1 minute until fragrant.',
+      'Stir in the tomato paste and cook 1 to 2 minutes. Return the seared beef and any accumulated juices to the pot.',
+      'Pour in the beef broth. Stir to combine, scraping up any browned bits from the bottom. Bring to a boil, then reduce heat to low.',
+      'Cover and simmer for 1 hour 45 minutes to 2 hours, stirring occasionally, until the beef is very tender and the sauce has thickened. Add a splash of water or broth if it gets too thick during cooking.',
       'Taste and adjust seasoning. Ladle into bowls and top each serving with a tablespoon of sour cream.',
       'Suggestions (not included): Serve with egg noodles, bread dumplings, or crusty bread.'
     ],
@@ -12030,10 +12021,10 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Combine the lime juice, 2 tablespoons olive oil, garlic, 1 teaspoon cumin, 1 teaspoon chili powder, and 1/2 teaspoon salt in a shallow dish. Add the skirt steak and turn to coat. Marinate at room temperature for 30 minutes, or refrigerate for up to 4 hours.',
       'Remove the steak from the marinade and pat dry with paper towels. Discard the marinade.',
-      'Heat a large cast-iron skillet or grill pan over high heat until smoking. Sear the steak 7 minutes total, turning once, until deeply browned and cooked to desired doneness. Transfer to a cutting board and rest 5 minutes.',
-      'In the same skillet, heat the olive oil over medium-high heat. Add the onions and pan-grill 8 minutes until softened and charred at the edges. Add the green bell pepper, red bell pepper, 1 teaspoon cumin, 1 teaspoon chili powder, 3/4 teaspoon salt, and black pepper. Pan-grill 4 minutes more until the peppers are tender and slightly charred.',
+      'Heat 1 tablespoon olive oil in a large cast-iron skillet or grill pan over high heat until smoking. Sear the steak 3 to 4 minutes per side for medium-rare, or until desired doneness. Transfer to a cutting board and rest 5 minutes.',
+      'In the same skillet, heat the remaining 1 tablespoon olive oil over medium-high heat. Add the onions and cook 4 to 5 minutes until softened and charred at the edges. Add the bell peppers, 1 teaspoon cumin, 1 teaspoon chili powder, 3/4 teaspoon salt, and black pepper. Cook 4 to 5 more minutes until the peppers are tender and slightly charred.',
       'Slice the rested steak thinly against the grain.',
-      'Warm the flour tortillas briefly in a dry skillet or microwave to make them pliable. Divide the steak and pepper-onion mixture among the tortillas.',
+      'Warm the flour tortillas in a dry skillet or microwave. Divide the steak and pepper-onion mixture among the tortillas.',
       'Suggestions (not included): Serve with sour cream, guacamole, salsa, shredded cheese, and lime wedges.'
     ],
     sections: [
@@ -12086,13 +12077,12 @@ export const LEVELS: Level[] = [
       { name: 'ground black pepper', quantity: '1/4 tsp ground black pepper', section: 'gravy', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
     ],
     recipeInstructions: [
-      'Make or prepare the Beef Stock (see the Beef Stock recipe). Set aside.',
-      'Combine the ground beef, bread crumbs, egg, Worcestershire sauce, garlic powder, onion powder, 3/4 tsp salt, and 1/4 tsp black pepper in a bowl. Mix gently until just combined — do not overwork. Shape into 4 oval patties about 3/4 inch thick.',
-      'Heat a large skillet over medium-high heat. Pan-grill the patties 9 minutes total until browned and cooked through. Remove to a plate and tent with foil.',
-      'Reduce heat to medium. Add the butter and sliced onions to the skillet and pan-grill 13 minutes, stirring occasionally, until softened and golden.',
-      'Add the sliced mushrooms and minced garlic and pan-grill 5 minutes, until the mushrooms are browned. Sprinkle in the flour and pan-grill 1 minute, stirring to coat.',
-      'Gradually pour in the Beef Stock, stirring constantly to prevent lumps. Add the Worcestershire sauce, 1/2 tsp salt, and 1/4 tsp black pepper. Simmer 4 minutes until the gravy thickens.',
-      'Return the patties to the skillet, nestling them into the gravy. Simmer 3 minutes to heat through and meld the flavors. Serve immediately, spooning the onion-mushroom gravy over the patties.',
+      'Combine the ground beef, bread crumbs, egg, Worcestershire sauce, garlic powder, onion powder, salt, and pepper in a bowl. Mix gently until just combined — do not overwork. Shape into 4 oval patties about 3/4 inch thick.',
+      'Heat a large skillet over medium-high heat. Cook the patties 4 to 5 minutes per side until browned and cooked through. Remove to a plate and tent with foil. Drain all but 1 tablespoon of fat from the pan.',
+      'Reduce heat to medium. Add the butter to the skillet. Add the onions and cook 8 to 10 minutes, stirring occasionally, until softened and golden. Add the mushrooms and garlic, cook 4 to 5 more minutes until the mushrooms are browned.',
+      'Sprinkle the flour over the vegetables and stir to coat. Cook 1 minute.',
+      'Gradually pour in the beef broth, stirring constantly to prevent lumps. Add the Worcestershire sauce, salt, and pepper. Bring to a simmer and cook 4 to 5 minutes until the gravy thickens.',
+      'Return the patties to the skillet, nestling them into the gravy. Simmer 3 to 4 minutes to heat through and meld the flavors. Serve immediately, spooning the onion-mushroom gravy over the patties.',
       'Suggestions (not included): Serve with egg noodles, mashed potatoes, or crusty bread.'
     ],
     sections: [
