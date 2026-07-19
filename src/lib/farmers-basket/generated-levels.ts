@@ -11213,7 +11213,7 @@ export const LEVELS: Level[] = [
       'Pour in the white wine and stir, scraping up any browned bits. Cook until the wine is mostly absorbed, about 3 minutes.',
       'Add the crushed tomatoes, beef broth, milk, oregano, basil, bay leaf, sugar, salt, pepper, and nutmeg. Stir to combine.',
       'Reduce heat to low and simmer uncovered, stirring occasionally, for 45 minutes to 1 hour until the sauce is thick and the fat begins to pool on the surface. Remove the bay leaf.',
-      'Meanwhile, bring a large pot of salted water to a boil. Cook pasta according to package directions until al dente. Reserve ½ cup pasta water, then drain.',
+      'Bring a large pot of water to a boil. Add 1 tsp of table salt per quart of water after it boils, then add the dry pasta. Cook 8 minutes (al dente). Reserve ½ cup pasta water, then drain and set aside.',
       'Toss the drained pasta with the Bolognese sauce, adding a splash of pasta water if needed to loosen. Serve with grated Parmesan if desired.',
       'Suggestions (not included): Top with freshly grated Parmesan cheese and serve with crusty bread on the side.'
     ],
