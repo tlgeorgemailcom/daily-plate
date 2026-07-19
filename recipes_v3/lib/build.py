@@ -683,7 +683,7 @@ def _build_recipe_multi(
                 180.0 if s.cook_method in ('sub-simmer', 'sub_simmer') else
                 195.0 if s.cook_method == 'simmer' else
                 185.0 if s.cook_method in ('braise', 'braised') else
-                (stages[0]['tempF'] if stages else 350.0) if _is_bake_covered else
+                (stages[0][0] if stages else 350.0) if _is_bake_covered else
                 212.0
             )
             _boil_covered = s.cook_method in ('braise', 'braised') or _is_bake_covered
