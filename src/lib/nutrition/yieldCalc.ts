@@ -105,6 +105,8 @@ export const BINDING: Record<string, number> = {
                              // NDB 10080 (raw) / NDB 10082 (roasted) USDA pair
   braised_beef:        0.940, // slow-braised beef brisket (275°F×100min → yfw=0.62)
                              // NDB 13803 (raw) / NDB 13804 (braised) USDA pair; 100-min partial cook
+  sub_simmered_beef:   0.400, // beef simmered in cooking liquid (ENTR_010: 180°F×165min → yfw=0.60)
+                             // Use when cooking liquid is not counted in the finished serving grams.
   // ── Stock / broth classes ──────────────────────────────────────────────────
   // Binding drives yfw; STOCK_EXTRACTION in buildRecipeCommunityV3.ts handles yfp/yff/yfc/yfo.
   chicken_stock: 0.320, // clear stock 3–4h sub-simmer 180°F → yfw=0.680 (STOCK_001–004)

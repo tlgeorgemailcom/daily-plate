@@ -531,27 +531,27 @@ ENTR_009,11,chili_powder,1 tsp,2.7,,,assembly,,false,,,,
 ENTR_009,12,oregano_dried,2 tsp,2.0,,,assembly,,false,,,,
 ENTR_009,13,paprika,1/2 tsp,1.15,,,assembly,,false,,,,
 ENTR_009,14,@STOCK_004,1 cup Beef Stock (recipe),240.0,,,stock_ref,,false,,,,
-ENTR_010,1,water,8 cups water,1920.0,,,brine,,false,,,,
-ENTR_010,2,salt_table,1 cup kosher salt,288.0,,,brine,,false,,,,
-ENTR_010,3,sugar_granulated,1/2 cup sugar,100.0,,,brine,,false,,,,
-ENTR_010,4,mustard_seed_ground,2 tbsp ground mustard seed,12.0,,,brine,,false,,,,
-ENTR_010,5,coriander_seed,2 tsp coriander seed,3.6,,,brine,,false,,,,
-ENTR_010,6,cloves_ground,1 tsp ground cloves,2.1,,,brine,,false,,,,
-ENTR_010,7,dill_seed,2 tsp dill seed,4.2,,,brine,,false,,,,
-ENTR_010,8,mace_ground,1 tsp ground mace,1.7,,,brine,,false,,,,
-ENTR_010,9,red_pepper_flakes,1 tsp red pepper flakes,1.8,,,brine,,false,,,,
-ENTR_010,10,ginger_root_fresh,"1 large knob fresh ginger, peeled",12.0,,,brine,,false,,,,
-ENTR_010,11,cinnamon_ground,2 cinnamon sticks,5.2,,,brine,,false,cinnamon,,,
-ENTR_010,12,beef_brisket_flat_raw,3 lbs beef brisket flat,1360.8,,,beef,,false,,,,
-ENTR_010,13,black_pepper_ground,1 tsp ground black pepper,2.3,,,beef,,false,,,,
-ENTR_010,14,allspice_ground,1 tsp ground allspice,1.9,,,beef,,false,,,,
-ENTR_010,15,bay_leaf_dried,3 bay leaves,1.8,,,beef,,false,bay leaves,,,
-ENTR_010,16,salt_table,1 tsp salt,6.0,,,beef,,false,,,,
-ENTR_010,17,cabbage_raw,"½ head green cabbage, cut into wedges",453.6,,,vegetables,,false,,,,
-ENTR_010,18,potato_white_raw,"4 medium white potatoes, halved (173g each)",600.0,,,vegetables,,false,,,,
-ENTR_010,19,carrot_raw,"4 large carrots, peeled and cut into 2-inch pieces",244.0,,,vegetables,,false,,,,
-ENTR_010,20,celery_raw,"4 stalks celery, cut into 2-inch pieces",160.0,,,vegetables,,false,celery,,,
-ENTR_010,21,onion_raw,"1 medium onion, quartered",110.0,,,vegetables,,false,,,,
+ENTR_010,1,beef_brisket_flat_raw,3 lbs beef brisket flat,1360.8,,,brisket,,false,,,,
+ENTR_010,2,black_pepper_ground,1 tsp black pepper,2.3,,,brisket,,false,,,,
+ENTR_010,3,allspice_ground,1 tsp allspice,1.9,,,brisket,,false,,,,
+ENTR_010,4,bay_leaf_dried,3 bay leaves,1.8,,,brisket,,false,bay leaves,,,
+ENTR_010,5,salt_table,1 tsp salt,6.0,,,brisket,,false,,,,
+ENTR_010,6,potato_white_raw,"4 medium white potatoes, halved (150g each)",600.0,,,potatoes_carrots,,false,,,,
+ENTR_010,7,carrot_raw,"4 large carrots, peeled and cut into 2-inch pieces",244.0,,,potatoes_carrots,,false,,,,
+ENTR_010,8,cabbage_raw,"1/2 head green cabbage, cut into wedges",453.6,,,vegetables,,false,,,,
+ENTR_010,9,celery_raw,"4 stalks celery, cut into 2-inch pieces",160.0,,,vegetables,,false,celery,,,
+ENTR_010,10,onion_raw,"1 medium onion, quartered",110.0,,,vegetables,,false,,,,
+ENTR_010,11,water,8 cups water,1920.0,,,brine,,false,,,true,100
+ENTR_010,12,salt_table,1 cup kosher salt,288.0,,,brine,,false,,,true,100
+ENTR_010,13,sugar_granulated,1/2 cup sugar,100.0,,,brine,,false,,,true,100
+ENTR_010,14,mustard_seed_ground,2 tbsp ground mustard seed,12.0,,,brine,,false,,,true,100
+ENTR_010,15,coriander_seed,2 tsp coriander seed,3.6,,,brine,,false,,,true,100
+ENTR_010,16,cloves_ground,1 tsp ground cloves,2.1,,,brine,,false,,,true,100
+ENTR_010,17,dill_seed,2 tsp dill seed,4.2,,,brine,,false,,,true,100
+ENTR_010,18,mace_ground,1 tsp ground mace,1.7,,,brine,,false,,,true,100
+ENTR_010,19,red_pepper_flakes,1 tsp red pepper flakes,1.8,,,brine,,false,,,true,100
+ENTR_010,20,ginger_root_fresh,"1 large knob fresh ginger, peeled",12.0,,,brine,,false,,,true,100
+ENTR_010,21,cinnamon_ground,2 cinnamon sticks,5.2,,,brine,,false,cinnamon,,true,100
 ENTR_011,1,beef_ground_80lean_raw,1 lb ground beef (80% lean),453.6,,,filling,,false,,,,
 ENTR_011,2,onion_raw,"1 medium onion, finely chopped",110.0,,,filling,,false,,,,
 ENTR_011,3,carrot_raw,"2 medium carrots, finely chopped",122.0,,,filling,,false,,,,
