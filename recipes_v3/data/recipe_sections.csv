@@ -549,7 +549,12 @@ ENTR_007,carbonnade,Carbonnade,,braise,,,,,,,simmer_sauce,,135,
 ENTR_007,stock_ref,Beef Stock,,raw,,,,,,,,,,STOCK_004
 ENTR_008,beef,Beef,pan grilled,pan grilled,,,,,,,pan_grilled_chicken,,9,
 ENTR_008,marinade,Marinade,,raw,,,,,,,,,,
-ENTR_009,main,Carne Guisada,,boiled,0.55,1.0,,,1.0,,,,,
+ENTR_009,beef,Brown Beef,pan grilled,pan grilled,,,,,,,fried_meat,,6,
+ENTR_009,vegetables,Vegetables,pan grilled,pan grilled,,,,,,,,,7,
+ENTR_009,garlic,Garlic,pan grilled,pan grilled,,,,,,,,,3,
+ENTR_009,flour,Flour,pan grilled,pan grilled,,,,,,,pan_grilled_batter,,2,
+ENTR_009,assembly,Assembly,,braise,,,,,,,simmer_sauce,,100,
+ENTR_009,stock_ref,Beef Stock,,raw,,,,,,,,,,STOCK_004
 ENTR_010,brine,Brine,,raw,0.0,0.0,0.0,0.0,0.0,,,,,
 ENTR_010,beef,Corned Beef,,boiled,0.60,1.0,1.0,1.0,1.0,,,,,
 ENTR_010,vegetables,Vegetables,,boiled,0.90,1.0,1.0,1.0,1.0,,,,,
