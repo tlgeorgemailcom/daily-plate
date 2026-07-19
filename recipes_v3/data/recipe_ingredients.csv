@@ -506,17 +506,17 @@ ENTR_007,11,brown_sugar,1 tbsp,14.0,,,carbonnade,,false,,,,
 ENTR_007,12,thyme_dried,2 tsp,2.8,,,carbonnade,,false,,,,
 ENTR_007,13,bay_leaf_dried,2 whole bay leaves,1.2,,,carbonnade,,false,bay leaves,,,
 ENTR_007,14,@STOCK_004,1 cup Beef Stock (recipe),240.0,,,stock_ref,,false,,,,
-ENTR_008,1,beef_flank_steak_raw,1½ lbs,680.4,,,main,,false,,,,
-ENTR_008,2,orange_juice_raw,¼ cup,61.0,,,main,,false,,,,
-ENTR_008,3,lime_juice_raw,¼ cup,61.6,,,main,,false,,,,
-ENTR_008,4,olive_oil,2 tbsp,27.0,,,main,,false,,,,
-ENTR_008,5,garlic_raw,"4 cloves garlic, minced",12.0,,,main,,false,,,,
-ENTR_008,6,cumin_ground,2 tsp,4.2,,,main,,false,,,,
-ENTR_008,7,oregano_dried,2 tsp,2.0,,,main,,false,,,,
-ENTR_008,8,paprika,1 tsp,2.3,,,main,,false,,,,
-ENTR_008,9,cilantro_raw,"¼ cup fresh cilantro, chopped",8.0,,,main,,false,,,,
-ENTR_008,10,salt_table,¾ tsp,4.5,,,main,,false,,,,
-ENTR_008,11,black_pepper_ground,½ tsp,1.15,,,main,,false,,,,
+ENTR_008,1,beef_flank_steak_raw,1 1/2 lbs beef flank steak,680.4,,,beef,,false,,,,
+ENTR_008,2,olive_oil,2 tbsp olive oil,27.0,,,beef,,false,,,,
+ENTR_008,3,orange_juice_raw,1/4 cup orange juice,61.0,,,marinade,,false,,,true,100
+ENTR_008,4,lime_juice_raw,1/4 cup lime juice,61.6,,,marinade,,false,,,true,100
+ENTR_008,5,garlic_raw,4 cloves garlic (minced),12.0,,,marinade,,false,,,true,100
+ENTR_008,6,cumin_ground,2 tsp,4.2,,,marinade,,false,,,true,100
+ENTR_008,7,oregano_dried,2 tsp,2.0,,,marinade,,false,,,true,100
+ENTR_008,8,paprika,1 tsp,2.3,,,marinade,,false,,,true,100
+ENTR_008,9,cilantro_raw,1/4 cup fresh cilantro (chopped),8.0,,,marinade,,false,,,true,100
+ENTR_008,10,salt_table,3/4 tsp salt,4.5,,,marinade,,false,,,true,100
+ENTR_008,11,black_pepper_ground,1/2 tsp black pepper,1.15,,,marinade,,false,,,true,100
 ENTR_009,1,beef_chuck_roast_raw,"1½ lbs beef chuck roast, cut into 1 to 2-inch cubes",680.4,,,main,,false,,,,
 ENTR_009,2,tomato_red_raw,"2 medium tomatoes, diced (123g each)",246.0,,,main,,false,,,,
 ENTR_009,3,onion_raw,"1½ medium onions, diced",220.0,,,main,,false,,,,
