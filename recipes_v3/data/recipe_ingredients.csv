@@ -944,15 +944,15 @@ ENTR_037,11,beef_broth_canned,2 cups,480.0,,,assembly,,false,,,,
 ENTR_037,12,thyme_dried,1 tsp,1.4,,,assembly,,false,,,,
 ENTR_037,13,rosemary_fresh,"1 sprig fresh rosemary, whole",3.4,,,assembly,,false,,,,
 ENTR_037,14,bay_leaf_dried,2 bay leaves,1.2,,,assembly,,false,bay leaves,,,
-ENTR_038,1,beef_skirt_steak_raw,1-1/2 lb,680.4,,,steak,,False,,,,
-ENTR_038,2,olive_oil,3 tbsp,40.8,,,steak,,False,,,,
-ENTR_038,3,lime_juice_raw,3 tbsp,45.0,,,steak,,False,,,,
-ENTR_038,4,soy_sauce,2 tbsp,32.0,,,steak,,False,,,,
-ENTR_038,5,garlic_raw,"4 cloves garlic, minced",12.0,,,steak,,False,,,,
-ENTR_038,6,cumin_ground,1 tsp,2.0,,,steak,,False,,,,
-ENTR_038,7,chili_powder,1 tsp,2.7,,,steak,,False,,,,
-ENTR_038,8,black_pepper_ground,1/2 tsp,1.15,,,steak,,False,,,,
-ENTR_038,9,salt_table,1 tsp,6.0,,,steak,,False,,,,
+ENTR_038,1,beef_skirt_steak_raw,1-1/2 lb,680.4,,,grill_steak,,false,,,,
+ENTR_038,2,olive_oil,3 tbsp,40.8,,,marinade,,false,,,true,100
+ENTR_038,3,lime_juice_raw,3 tbsp,45.0,,,marinade,,false,,,true,100
+ENTR_038,4,soy_sauce,2 tbsp,32.0,,,marinade,,false,,,true,100
+ENTR_038,5,garlic_raw,"4 cloves garlic, minced",12.0,,,marinade,,false,,,true,100
+ENTR_038,6,cumin_ground,1 tsp,2.0,,,marinade,,false,,,true,100
+ENTR_038,7,chili_powder,1 tsp,2.7,,,marinade,,false,,,true,100
+ENTR_038,8,black_pepper_ground,1/2 tsp,1.15,,,marinade,,false,,,true,100
+ENTR_038,9,salt_table,1 tsp,6.0,,,marinade,,false,,,true,100
 ENTR_039,1,sirloin_tip_raw,1-1/2 lb,680.4,,,beef,,False,,,,
 ENTR_039,2,salt_table,1 tsp,6.0,,,beef,,False,,,,
 ENTR_039,3,black_pepper_ground,1/2 tsp,1.15,,,beef,,False,,,,
