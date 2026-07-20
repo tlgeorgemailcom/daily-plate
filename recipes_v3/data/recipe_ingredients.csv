@@ -755,21 +755,21 @@ ENTR_024,7,garlic_raw,"4 cloves garlic, minced",12.0,,,marinade,,false,,,true,10
 ENTR_024,8,thyme_fresh,1 tsp fresh thyme leaves,0.8,,,marinade,,false,,,true,100
 ENTR_024,9,rosemary_fresh,"1 tsp fresh rosemary, minced",1.7,,,marinade,,false,,,true,100
 ENTR_024,10,black_pepper_ground,1 tsp ground black pepper,2.3,,,marinade,,false,,,true,100
-ENTR_025,1,olive_oil,3 tbsp olive oil,40.8,,,marinade,,False,,,,
-ENTR_025,2,lemon_juice_raw,2 tbsp lemon juice,30.0,,,marinade,,False,,,,
-ENTR_025,3,garlic_raw,"3 cloves garlic, minced",9.0,,,marinade,,False,,,,
-ENTR_025,4,oregano_dried_ground,1 tsp dried oregano,1.8,,,marinade,,False,,,,
-ENTR_025,5,paprika,1 tsp paprika,2.3,,,marinade,,False,,,,
-ENTR_025,6,cumin_ground,1/2 tsp ground cumin,1.0,,,marinade,,False,,,,
-ENTR_025,7,salt_table,1/2 tsp salt,3.0,,,marinade,,False,,,,
-ENTR_025,8,black_pepper_ground,1/2 tsp ground black pepper,1.15,,,marinade,,False,,,,
-ENTR_025,9,beef_top_sirloin_raw,"1.5 lbs beef top sirloin, cut into 1-1/2 inch cubes",680.4,,,kabobs,,False,beef top sirloin,,,
-ENTR_025,10,zucchini_raw,"1 large zucchini, cut in chunks",196.0,,,kabobs,,False,,,,
-ENTR_025,11,bell_pepper_red_raw,"1 red bell pepper, cut in chunks",119.0,,,kabobs,,False,,,,
-ENTR_025,12,bell_pepper_green_raw,"1 green bell pepper, cut in chunks",119.0,,,kabobs,,False,,,,
-ENTR_025,13,onion_raw,"1 medium onion, cut in wedges",160.0,,,kabobs,,False,,,,
-ENTR_025,14,mushroom_crimini_raw,"8 oz crimini mushrooms, halved",227.0,,,kabobs,,False,,,,
-ENTR_025,15,salt_table,1/2 tsp salt,3.0,,,kabobs,,False,,,,
+ENTR_025,1,beef_top_sirloin_raw,"1.5 lbs beef top sirloin, cut into 1-1/2 inch cubes",680.4,,,kabobs,,false,beef top sirloin,,,
+ENTR_025,2,zucchini_raw,"1 large zucchini, cut in chunks",196.0,,,kabobs,,false,,,,
+ENTR_025,3,bell_pepper_green_raw,"1 green bell pepper, cut in chunks",119.0,,,kabobs,,false,,,,
+ENTR_025,4,bell_pepper_red_raw,"1 red bell pepper, cut in chunks",119.0,,,kabobs,,false,,,,
+ENTR_025,5,onion_raw,"1 medium onion, cut in wedges",160.0,,,kabobs,,false,,,,
+ENTR_025,6,mushroom_crimini_raw,"8 oz crimini mushrooms, halved",227.0,,,kabobs,,false,,,,
+ENTR_025,7,salt_table,1/2 tsp salt,3.0,,,kabobs,,false,,,,
+ENTR_025,8,olive_oil,3 tbsp olive oil,40.8,,,marinade,,false,,,true,100
+ENTR_025,9,lemon_juice_raw,2 tbsp lemon juice,30.0,,,marinade,,false,,,true,100
+ENTR_025,10,garlic_raw,"3 cloves garlic, minced",9.0,,,marinade,,false,,,true,100
+ENTR_025,11,oregano_dried_ground,1 tsp dried oregano,1.8,,,marinade,,false,,,true,100
+ENTR_025,12,paprika,1 tsp paprika,2.3,,,marinade,,false,,,true,100
+ENTR_025,13,cumin_ground,1/2 tsp ground cumin,1.0,,,marinade,,false,,,true,100
+ENTR_025,14,salt_table,1/2 tsp salt,3.0,,,marinade,,false,,,true,100
+ENTR_025,15,black_pepper_ground,1/2 tsp ground black pepper,1.15,,,marinade,,false,,,true,100
 ENTR_026,3,beef_ground_80lean_raw,1.5 lbs ground beef (80/20),680.4,,,beef,,False,ground beef (80/20),,,
 ENTR_026,4,garlic_raw,"4 cloves garlic, minced",12.0,,,beef,,False,,,,
 ENTR_026,5,ginger_root_fresh,"2 tbsp fresh ginger, grated",12.0,,,beef,,False,,,,
