@@ -745,16 +745,16 @@ ENTR_023,13,hoisin_sauce,2 tbsp hoisin sauce,32.0,,,sauce,,False,,,,
 ENTR_023,14,black_pepper_ground,1/2 tsp ground black pepper,1.15,,,sauce,,False,,,,
 ENTR_023,15,scallion_raw,"3 scallions, sliced",45.0,,,scallions,,False,,,,
 ENTR_023,16,sesame_oil,2 tsp sesame oil,9.0,,,scallions,,False,,,,
-ENTR_024,1,soy_sauce,1/4 cup soy sauce,64.0,,,marinade,,False,,,,
-ENTR_024,2,olive_oil,3 tbsp olive oil,40.8,,,marinade,,False,,,,
-ENTR_024,3,vinegar_red_wine,2 tbsp red wine vinegar,30.0,,,marinade,,False,,,,
-ENTR_024,4,worcestershire_sauce,2 tbsp Worcestershire sauce,30.0,,,marinade,,False,,,,
-ENTR_024,5,garlic_raw,"4 cloves garlic, minced",12.0,,,marinade,,False,,,,
-ENTR_024,6,thyme_fresh,1 tsp fresh thyme leaves,0.8,,,marinade,,False,,,,
-ENTR_024,7,rosemary_fresh,"1 tsp fresh rosemary, minced",1.7,,,marinade,,False,,,,
-ENTR_024,8,black_pepper_ground,1 tsp ground black pepper,2.3,,,marinade,,False,,,,
-ENTR_024,9,beef_top_round_raw,2 lbs beef top round,907.2,,,steak,,False,beef top round,,,
-ENTR_024,10,salt_table,1 tsp salt,6.0,,,steak,,False,,,,
+ENTR_024,1,beef_top_round_raw,2 lbs beef top round,907.2,,,grill,,false,beef top round,,,
+ENTR_024,2,salt_table,1 tsp salt,6.0,,,grill,,false,,,,
+ENTR_024,3,soy_sauce,1/4 cup soy sauce,64.0,,,marinade,,false,,,true,100
+ENTR_024,4,olive_oil,3 tbsp olive oil,40.8,,,marinade,,false,,,true,100
+ENTR_024,5,vinegar_red_wine,2 tbsp red wine vinegar,30.0,,,marinade,,false,,,true,100
+ENTR_024,6,worcestershire_sauce,2 tbsp Worcestershire sauce,30.0,,,marinade,,false,,,true,100
+ENTR_024,7,garlic_raw,"4 cloves garlic, minced",12.0,,,marinade,,false,,,true,100
+ENTR_024,8,thyme_fresh,1 tsp fresh thyme leaves,0.8,,,marinade,,false,,,true,100
+ENTR_024,9,rosemary_fresh,"1 tsp fresh rosemary, minced",1.7,,,marinade,,false,,,true,100
+ENTR_024,10,black_pepper_ground,1 tsp ground black pepper,2.3,,,marinade,,false,,,true,100
 ENTR_025,1,olive_oil,3 tbsp olive oil,40.8,,,marinade,,False,,,,
 ENTR_025,2,lemon_juice_raw,2 tbsp lemon juice,30.0,,,marinade,,False,,,,
 ENTR_025,3,garlic_raw,"3 cloves garlic, minced",9.0,,,marinade,,False,,,,
