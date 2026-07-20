@@ -730,9 +730,9 @@ ENTR_047,onion,Onion,pan grilled,pan grilled,,,,,,,simmered_vegetable,,5,
 ENTR_047,garlic_ginger,Garlic & Ginger,pan grilled,pan grilled,,,,,,,,,1,
 ENTR_047,spices,Spices,pan grilled,pan grilled,,,,,,,,,1,
 ENTR_047,sauce,Sauce,,raw,,,,,,,,,,
-ENTR_048,filling,Filling,,pan grilled,0.80,1.0,1.0,1.0,1.0,,,,,
-ENTR_048,sauce,Red Enchilada Sauce,,raw,1.0,1.0,1.0,1.0,1.0,,,,,SAUCE_025
-ENTR_048,assembly,Assembly,,baked,0.95,1.0,1.0,1.0,1.0,,,,,
+ENTR_048,grill_chicken,Grill Chicken,pan grilled,baked,,,,,,,pan_grilled_chicken,375:22,13,
+ENTR_048,sauce,Red Enchilada Sauce,,raw,,,,,,,,,,SAUCE_025
+ENTR_048,assembly,Assembly,,baked,,,,,,,casserole_baked,375:22,,
 ENTR_049,chicken,Chicken,,pan grilled,0.75,1.0,1.0,1.0,1.0,,,,,
 ENTR_049,broth,Chicken Broth,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_003
 ENTR_049,sauce,Cream Spinach Sauce,,boiled,0.88,1.0,1.0,1.0,1.0,,,,,
