@@ -1745,14 +1745,14 @@ ENTR_050,4,Add 1 tsp olive oil to the wok. Add the finely chopped onion and chop
 ENTR_050,5,"Push the vegetables to the side. Pour the eggs into the empty side of the wok and scramble, stirring until just set, then mix with the vegetables."
 ENTR_050,6,"Add the cooked rice, peas, and chicken. Pour the tamari over the rice and toss everything together over high heat for 2 to 3 minutes."
 ENTR_050,7,Stir in the sesame oil and scallions. Serve immediately.
-ENTR_051,1,"Cut the chicken thighs into bite-sized pieces. In a bowl, combine the tamari, rice wine vinegar, and half the minced garlic. Add the chicken, toss to coat, and marinate for at least 15 minutes."
+ENTR_051,1,Cut the chicken thighs into bite-sized pieces.
 ENTR_051,2,Make or prepare the Chicken Broth (see the Chicken Broth recipe).
-ENTR_051,3,"Remove the chicken from the marinade (reserve the marinade). Pat the chicken dry and toss with the cornstarch, salt, and black pepper until evenly coated."
-ENTR_051,4,Heat the olive oil in a large wok or skillet over high heat. Fry the chicken pieces in batches for 4 to 5 minutes per batch until golden brown and cooked through to an internal temperature of 165°F. Transfer to a plate.
-ENTR_051,5,"Drain excess oil from the wok, leaving about 1 tablespoon. Add the remaining garlic and the finely grated ginger and stir-fry for 30 seconds until fragrant."
-ENTR_051,6,"Add the hoisin sauce, brown sugar, sesame oil, red pepper flakes, reserved marinade, and chicken broth. Stir to combine. Mix the cornstarch with 2 tablespoons cold water and pour into the sauce, stirring until the sauce thickens, about 1 to 2 minutes."
-ENTR_051,7,Return the chicken to the wok and toss to coat in the sauce. Cook for 1 minute until heated through.
-ENTR_051,8,Garnish with scallions and sesame seeds. Serve immediately.
+ENTR_051,3,"Whisk the hoisin sauce, brown sugar, sesame oil, red pepper flakes, cornstarch, water, tamari, rice wine vinegar, minced garlic, salt, and black pepper in a small bowl until smooth."
+ENTR_051,4,Heat the olive oil in a large wok or skillet over high heat. Add the chicken and pan-grill for 4 minutes until browned and cooked through to an internal temperature of 165°F. Transfer to a plate.
+ENTR_051,5,Add the minced garlic and grated ginger to the wok and pan-grill for 1 minute until fragrant.
+ENTR_051,6,"Add the sauce mixture and Chicken Broth. Simmer uncovered for 2 minutes, stirring until glossy and thickened."
+ENTR_051,7,Return the chicken to the wok and toss to coat in the sauce. Simmer uncovered for 1 minute until heated through.
+ENTR_051,8,Finish with the scallions and sesame seeds. Serve immediately.
 ENTR_051,9,Suggestions (not included): Serve with steamed rice.
 ENTR_052,1,"Slice the chicken breast thinly across the grain. In a bowl, combine 1 tablespoon tamari, 1 tablespoon cornstarch, and 1 teaspoon sesame oil. Add the chicken, toss to coat, and marinate for 10 to 15 minutes."
 ENTR_052,2,Make or prepare the Chicken Broth (see the Chicken Broth recipe).

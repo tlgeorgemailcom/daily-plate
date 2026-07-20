@@ -745,9 +745,11 @@ ENTR_050,garlic,Garlic,pan grilled,pan grilled,,,,,,,,,1,
 ENTR_050,eggs,Eggs,pan grilled,pan grilled,,,,,,,fried_meat,,1,
 ENTR_050,assembly,Assembly,,pan grilled,,,,,,,simmered_vegetable,,3,
 ENTR_050,finish,Scallions & Sesame Oil,finish,raw,,,,,,,,,,
-ENTR_051,chicken,Chicken,,fried,0.85,1.0,1.0,1.0,1.0,,,,,
-ENTR_051,broth,Chicken Broth,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_003
-ENTR_051,sauce,Sauce,,pan grilled,0.92,1.0,1.0,1.0,1.0,,,,,
+ENTR_051,grill_chicken,Grill Chicken,pan grilled,simmer,,,,,,,pan_grilled_chicken,195:1,4,
+ENTR_051,garlic_ginger,Garlic & Ginger,pan grilled,simmer,,,,,,,,195:1,1,
+ENTR_051,broth,Chicken Broth,,raw,,,,,,,,,,STOCK_003
+ENTR_051,sauce,Sauce,simmer,simmer,,,,,,,simmer_sauce,195:1,2,
+ENTR_051,finish,Scallions & Sesame Seeds,finish,raw,,,,,,,,,,
 ENTR_052,chicken,Chicken,,pan grilled,0.75,1.0,1.0,1.0,1.0,,,,,
 ENTR_052,broth,Chicken Broth,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_003
 ENTR_052,stir_fry,Stir Fry,,pan grilled,0.90,1.0,1.0,1.0,1.0,,,,,
