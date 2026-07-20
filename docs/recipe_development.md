@@ -165,6 +165,7 @@ Prep: Section Label | Added after cooking | ingredients: ingredient, ingredient
 | Spec keyword | `prep_method` (pm) | `cook_method` (cm) | `boil_stages` | `fill_class` hint |
 |---|---|---|---|---|
 | `boiled` | `boiled` | `boiled` | time in minutes | *(none — absorption model for pasta/rice/beans)* |
+| `boiled (covered)` | `boiled covered` | `boiled covered` | time in minutes | *(none — absorption model for covered rice/grains)* |
 | `simmer (lid off)` | `simmer` | `simmer` | time in minutes | `simmer_sauce` for butter/cream/sauce; none for plain liquid reduction |
 | `sub-simmer (lid off)` | `sub-simmer` | `sub-simmer` | time in minutes | `simmer_sauce` for cream/butter sauces |
 | `pan grilled` | `pan grilled` | `pan grilled` | time in minutes | `pan_grilled_chicken` (chicken/fish); `fried_meat` (ground meat, sausage, bacon); none (aromatics, short sautés) |
@@ -205,6 +206,8 @@ Prep: Section Label | Added after cooking | ingredients: ingredient, ingredient
 #### `(lid off)` qualifier
 
 `simmer (lid off)` and `sub-simmer (lid off)` are display labels — the `(lid off)` part is not stored anywhere. It just confirms that the open-pot evaporation model applies (the default for `simmer` and `sub-simmer`). The CSV value is simply `simmer` or `sub-simmer`.
+
+`boiled (covered)` stores as `boiled covered`. It uses boiled retention at 212°F plus the covered-lid evaporation factor (5% of open-pot evaporation). Use it for covered rice, covered grains, or covered boiling prep steps where `braise` would be semantically wrong.
 
 ---
 

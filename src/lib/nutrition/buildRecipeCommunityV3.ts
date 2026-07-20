@@ -236,11 +236,12 @@ export function buildRecipeCommunityV3(
     ? mapDishMethodToCookingMethod(dishCookMethod)
     : undefined;
   const rawDish = dishCookMethod?.trim().toLowerCase() ?? '';
+  const primaryIsBoilCovered = rawDish === 'boil covered' || rawDish === 'boil_covered' || rawDish === 'boiled covered' || rawDish === 'boiled_covered' || rawDish === 'boil (covered)' || rawDish === 'boiled (covered)';
   const primaryCookTempF =
     rawDish === 'sub-simmer' ? 180 :
     rawDish === 'simmer'     ? 195 :
     rawDish === 'braise'     ? 185 : 212;
-  const primaryCookLidOn = rawDish === 'braise';
+  const primaryCookLidOn = rawDish === 'braise' || primaryIsBoilCovered;
 
   const sectionResults: SectionBuildResult[] = [];
   const globalSkipped: SkippedIngredient[]   = [];
@@ -294,10 +295,11 @@ export function buildRecipeCommunityV3(
     // Stovetop temperature for evaporation model when effectiveCookMethod=‘boiled’.
     const secCookStr = sec.cookMethod.toLowerCase();
     const isBakeCovered = secCookStr === 'bake covered' || secCookStr === 'bake_covered' || secCookStr === 'baked covered';
+    const isBoilCovered = secCookStr === 'boil covered' || secCookStr === 'boil_covered' || secCookStr === 'boiled covered' || secCookStr === 'boiled_covered' || secCookStr === 'boil (covered)' || secCookStr === 'boiled (covered)';
     const effectiveTempF = primaryCookMethod
       ? primaryCookTempF
       : (secCookStr === 'sub-simmer' ? 180 : secCookStr === 'simmer' ? 195 : secCookStr === 'braise' ? 185 : 212);
-    const effectiveLidOn = primaryCookMethod ? primaryCookLidOn : (secCookStr === 'braise' || isBakeCovered);
+    const effectiveLidOn = primaryCookMethod ? primaryCookLidOn : (secCookStr === 'braise' || isBakeCovered || isBoilCovered);
 
     // Pre-step: section’s own prepMethod fires BEFORE the primary cook.
     // e.g. simmer the apple filling 5 min, then bake the assembled pie 52 min.
@@ -312,7 +314,7 @@ export function buildRecipeCommunityV3(
     const hasPrepStep = prepCookMethodRaw !== null && prepCookMethodRaw !== effectiveCookMethod;
     const prepCookMethod: CookingMethod | null = hasPrepStep ? prepCookMethodRaw : null;
     const prepTempF = prepMethodStr === 'sub-simmer' ? 180 : prepMethodStr === 'simmer' ? 195 : prepMethodStr === 'braise' ? 185 : 212;
-    const prepLidOn = prepMethodStr === 'braise';
+    const prepLidOn = prepMethodStr === 'braise' || prepMethodStr === 'boil covered' || prepMethodStr === 'boil_covered' || prepMethodStr === 'boiled covered' || prepMethodStr === 'boiled_covered' || prepMethodStr === 'boil (covered)' || prepMethodStr === 'boiled (covered)';
 
     const skipped: SkippedIngredient[] = [];
     const active: Array<{ grams: number; nutrients: NutrientRow }> = [];

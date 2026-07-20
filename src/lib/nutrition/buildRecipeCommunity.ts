@@ -147,11 +147,12 @@ export function buildRecipeCommunity(
   // Simmer / Sub-simmer use the correct evaporation constants (primaryCookMethod
   // normalises them all to 'boiled', losing the distinction).
   const rawDish = dishCookMethod?.trim().toLowerCase() ?? '';
+  const primaryIsBoilCovered = rawDish === 'boil covered' || rawDish === 'boil_covered' || rawDish === 'boiled covered' || rawDish === 'boiled_covered' || rawDish === 'boil (covered)' || rawDish === 'boiled (covered)';
   const primaryCookTempF =
     rawDish === 'sub-simmer' ? 180 :
     rawDish === 'simmer'     ? 195 :
     rawDish === 'braise'     ? 185 : 212;
-  const primaryCookLidOn = rawDish === 'braise';
+  const primaryCookLidOn = rawDish === 'braise' || primaryIsBoilCovered;
 
   const sectionResults: SectionBuildResult[] = [];
   const globalSkipped: SkippedIngredient[]   = [];
@@ -273,7 +274,8 @@ export function buildRecipeCommunity(
       return 212;
     }
     function prepMethodIsLidOn(method: string | undefined | null): boolean {
-      return method?.toLowerCase() === 'braise';
+      const m = method?.toLowerCase();
+      return m === 'braise' || m === 'boil covered' || m === 'boil_covered' || m === 'boiled covered' || m === 'boiled_covered' || m === 'boil (covered)' || m === 'boiled (covered)';
     }
 
     // Chained (hasPrepStep): yfw_total = yfw_prep × yfw_primary (compounding).

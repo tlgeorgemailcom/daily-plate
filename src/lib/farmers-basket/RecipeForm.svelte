@@ -274,21 +274,23 @@
   const GAME_FOODS = Object.keys(FOOD_EMOJI) as FoodType[];
   const ANIMAL_TYPES: AnimalType[] = ['rabbit', 'squirrel', 'raccoon', 'bird', 'mouse', 'fox'];
   
-  const COOKING_METHODS = ['Bake', 'Bake (covered)', 'Boil', 'Simmer', 'Sub-simmer', 'Braise', 'Pan grill', 'Grill', 'Broil', 'Fry', 'No heat'];
+  const COOKING_METHODS = ['Bake', 'Bake (covered)', 'Boil', 'Boil (covered)', 'Simmer', 'Sub-simmer', 'Braise', 'Pan grill', 'Grill', 'Broil', 'Fry', 'No heat'];
   const COOK_METHOD_DISPLAY: Record<string, string> = {
     'Boil':           'Boil (lid off)',
+    'Boil (covered)': 'Boil (covered)',
     'Simmer':         'Simmer (lid off)',
     'Sub-simmer':     'Sub-simmer (lid off)',
     'Braise':         'Braise (covered)',
     'Bake (covered)': 'Bake (covered)',
   };
   // v3.md §18.1 — lowercase enum stored in recipe_sections.csv::cooking_method.
-  const SECTION_COOKING_METHODS = ['raw', 'boiled', 'steamed', 'baked', 'baked covered', 'fried', 'pan grilled', 'grilled', 'broiled', 'microwave'];
-  const SECTION_PREP_METHODS    = ['boiled', 'simmer', 'sub-simmer', 'braise', 'steamed', 'blanched', 'baked', 'baked covered', 'par-baked', 'fried', 'pan grilled', 'grilled', 'broiled', 'marinated', 'chilled', 'microwave', 'finish'];
+  const SECTION_COOKING_METHODS = ['raw', 'boiled', 'boiled covered', 'steamed', 'baked', 'baked covered', 'fried', 'pan grilled', 'grilled', 'broiled', 'microwave'];
+  const SECTION_PREP_METHODS    = ['boiled', 'boiled covered', 'simmer', 'sub-simmer', 'braise', 'steamed', 'blanched', 'baked', 'baked covered', 'par-baked', 'fried', 'pan grilled', 'grilled', 'broiled', 'marinated', 'chilled', 'microwave', 'finish'];
   // Display labels for prep methods — stored values are clean identifiers;
   // UI annotations clarify open-pot vs covered assumption for the water model.
   const PREP_METHOD_DISPLAY: Record<string, string> = {
     'boiled':         'boiled (lid off)',
+    'boiled covered': 'boiled (covered)',
     'simmer':         'simmer (lid off)',
     'sub-simmer':     'sub-simmer (lid off)',
     'braise':         'braise (covered)',
@@ -314,6 +316,12 @@
       'bake covered':    'Bake (covered)',
       'bake_covered':    'Bake (covered)',
       'boiled':          'Boil',
+      'boil covered':    'Boil (covered)',
+      'boil_covered':    'Boil (covered)',
+      'boil (covered)':  'Boil (covered)',
+      'boiled covered':  'Boil (covered)',
+      'boiled_covered':  'Boil (covered)',
+      'boiled (covered)': 'Boil (covered)',
       'fried':       'Fry',
       'pan grilled': 'Pan grill',
       'grilled':     'Grill',
@@ -2703,9 +2711,9 @@
         {#if sec.prepMethod === 'finish'}
           <p class="finish-info-note">ℹ️ Stirred in or added after the primary cook is complete — e.g. cheese, cream, finishing butter, whipped cream. No heat is applied; nutrition is calculated from the raw ingredient weight.</p>
         {/if}
-        {#if sec.prepMethod && ['boiled','simmer','sub-simmer','braise','steamed','blanched','baked','par-baked','fried','pan grilled','grilled','broiled','microwave'].includes(sec.prepMethod)}
+        {#if sec.prepMethod && ['boiled','boiled covered','simmer','sub-simmer','braise','steamed','blanched','baked','par-baked','fried','pan grilled','grilled','broiled','microwave'].includes(sec.prepMethod)}
           <div class="section-times-bar">
-            <label class="section-time-field" title="Lid-off cooking time only (boiled / simmer / sub-simmer). Do not include covered time — use 'braise' for covered cooking.">
+            <label class="section-time-field" title="Stovetop prep time. Use boiled covered or braise for covered cooking.">
               <span class="section-time-label">Prep (min)</span>
               <input
                 type="number" min="0" max="600" step="1" placeholder="–"
@@ -3067,7 +3075,8 @@
             <p>This is the <strong>final application of heat</strong> after all sections are assembled. Set it once and it applies to every section.</p>
             <ul>
               <li><strong>Bake</strong> — oven. Enter Bake (min) and Temp (°F).</li>
-              <li><strong>Boil (lid off)</strong> — rolling boil, 212 °F, uncovered. Pasta, blanching. <em>Lid on? Choose Braise instead — a covered pot loses less than 5 % of open-pot moisture.</em></li>
+              <li><strong>Boil (lid off)</strong> — rolling boil, 212 °F, uncovered. Pasta, blanching.</li>
+              <li><strong>Boil (covered)</strong> — rolling boil, 212 °F, lid on. Steam recondenses on the lid and drips back; only ~5 % of open-pot evaporation escapes. Rice, covered grains.</li>
               <li><strong>Simmer (lid off)</strong> — 195 °F, uncovered. Sauce reductions, soups. <em>Lid on? Choose Braise instead.</em></li>
               <li><strong>Sub-simmer (lid off)</strong> — 180 °F, uncovered. Concentrating stock. <em>Lid on? Choose Braise instead.</em></li>
               <li><strong>Braise (covered)</strong> — 185 °F, lid on. Steam recondenses on the lid and drips back; only ~5 % of open-pot evaporation escapes. Use for any covered braise, pot roast, or Dutch-oven method.</li>
@@ -3082,6 +3091,7 @@
               <li><strong>no heat</strong> — ingredients go in as-is (cold, raw, or already cooked). This is correct for most sections.</li>
               <li><strong>Added after cooking</strong> — ingredient is stirred in or added after the primary cook is complete, off-heat (e.g. shredded cheese into a soup, whipped cream on a cooled pie, finishing butter). No evaporation is modelled; nutrition uses the raw weight as-is.</li>
               <li><strong>boiled (lid off)</strong> — rolling boil, 212 °F, uncovered. Blanching, par-boiling.</li>
+              <li><strong>boiled (covered)</strong> — rolling boil, 212 °F, <em>lid on</em>. Model uses only 5 % of open-pot evaporation. Use for covered rice, covered grains, or other covered boiling prep steps.</li>
               <li><strong>simmer (lid off)</strong> — 195 °F, uncovered. Sauce reductions, hollandaise bases.</li>
               <li><strong>sub-simmer (lid off)</strong> — 180 °F, uncovered. Concentrating stock, uncovered slow stews.</li>
               <li><strong>braise (covered)</strong> — 185 °F, <em>lid on</em>. Model uses only 5 % of open-pot evaporation (steam recondenses on lid and drips back). Use for any covered braise, covered stew, or Dutch-oven prep step.</li>
