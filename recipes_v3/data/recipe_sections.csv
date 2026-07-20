@@ -757,9 +757,12 @@ ENTR_052,snow_peas_chestnuts_shoots,"Snow Peas, Chestnuts, Shoots",pan grilled,s
 ENTR_052,broth,Chicken Broth,,raw,,,,,,,,,,STOCK_003
 ENTR_052,assembly,Assembly,,simmer,,,,,,,simmer_sauce,195:2,,
 ENTR_052,finish,Scallions,finish,raw,,,,,,,,,,
-ENTR_053,chicken,Chicken,,pan grilled,0.82,1.0,1.0,1.0,1.0,,,,,
-ENTR_053,broth,Chicken Broth,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_003
-ENTR_053,sauce,Lemon Caper Sauce,,pan grilled,0.88,1.0,1.0,1.0,1.0,,,,,
+ENTR_053,grill_chicken,Grill Chicken,pan grilled,sub-simmer,,,,,,,pan_grilled_chicken,180:2,7,
+ENTR_053,wine_lemon_juice,Wine & Lemon Juice,boiled,sub-simmer,,,,,,,simmer_sauce,180:2,2,
+ENTR_053,broth,Chicken Broth,,raw,,,,,,,,,,STOCK_003
+ENTR_053,broth_capers,Broth & Capers,simmer,sub-simmer,,,,,,,simmer_sauce,180:2,3,
+ENTR_053,butter,Butter,,sub-simmer,,,,,,,,180:2,,
+ENTR_053,finish,Parsley,finish,raw,,,,,,,,,,
 ENTR_054,crust,Crust,,raw,1.0,1.0,1.0,1.0,1.0,,,,,CRUST_004
 ENTR_054,broth,Chicken Broth,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_003
 ENTR_054,filling,Filling,,baked,0.90,1.0,1.0,1.0,1.0,,,,,
