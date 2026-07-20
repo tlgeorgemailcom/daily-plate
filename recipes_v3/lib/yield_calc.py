@@ -155,6 +155,10 @@ BINDING: dict[str, float] = {
                                   # Calibrated to SIDE_037/038/039 original locked yfw=0.85.
     "stuffed_mushroom":      0.500, # baked stuffed mushrooms (dense filling retains moisture) — SIDE_039: 400°F×20min → yfw=0.90
                                   # Calibrated to SIDE_039 original locked yfw=0.90.
+    "duxelles_mushroom":     0.838, # minced mushroom duxelles cooked dry then baked — ENTR_042: 212°F×15min + 425°F×27min → yfw=0.18
+                                  # Calibrated to Beef Wellington original locked duxelles yield; paste is cooked until nearly dry.
+    "wellington_pastry":     0.380, # pastry-wrapped Wellington assembly — ENTR_042: 425°F×27min → yfw=0.90
+                                  # Calibrated to original locked Wellington bake; pastry wrapping limits evaporation.
     "thin_pizza_crust":      1.250, # thin pizza crust baked at high heat — PASTA_004: 450°F×20min → yfw=0.72
                                   # Calibrated to PASTA_004 original locked yfw=0.72.
     "pizza_cheese_topping":  0.450, # pizza cheese/herb toppings baked at high heat — PASTA_003/004: 450°F×20min → yfw=0.90
