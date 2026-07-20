@@ -735,7 +735,8 @@ ENTR_048,sauce,Red Enchilada Sauce,,raw,,,,,,,,,,SAUCE_025
 ENTR_048,assembly,Assembly,,baked,,,,,,,casserole_baked,375:22,,
 ENTR_049,grill_chicken,Grill Chicken,pan grilled,simmer,,,,,,,pan_grilled_chicken,195:3,12,
 ENTR_049,garlic,Garlic,pan grilled,simmer,,,,,,,,195:3,1,
-ENTR_049,broth_cream,Broth & Cream,simmer,simmer,,,,,,,simmer_sauce,195:3,4,
+ENTR_049,broth,Chicken Broth,,raw,,,,,,,,,,STOCK_003
+ENTR_049,cream,Cream Sauce,simmer,simmer,,,,,,,simmer_sauce,195:3,4,
 ENTR_049,spinach,Spinach,,simmer,,,,,,,,195:3,,
 ENTR_050,rice,Rice,,boiled,1.0,1.0,1.0,1.0,1.0,,,,,
 ENTR_050,stir_fry,Stir Fry,,pan grilled,0.90,1.0,1.0,1.0,1.0,,,,,
