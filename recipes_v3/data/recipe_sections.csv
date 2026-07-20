@@ -677,9 +677,9 @@ ENTR_034,vegetables,Vegetables,pan grilled,braise,,,,,,,simmer_sauce,185:165,5,
 ENTR_034,garlic_tomato_paste,Garlic & tomato Paste,pan grilled,braise,,,,,,,simmer_sauce,185:165,1,
 ENTR_034,red_wine,Red Wine,pan grilled,braise,,,,,,,simmer_sauce,185:165,2,
 ENTR_034,assembly,Assembly,,braise,,,,,,,simmer_sauce,185:165,,
-ENTR_035,rub,Dry Rub,,raw,1.0,1.0,1.0,1.0,1.0,,,,,
-ENTR_035,ribs,Ribs,,baked,0.72,0.85,1.0,1.0,1.0,,,,,
-ENTR_035,bbq_sauce,BBQ Sauce,,raw,1.0,1.0,1.0,1.0,1.0,,,,,SAUCE_026
+ENTR_035,rub,Dry Rub,,baked,,,,,,,,275:165,,
+ENTR_035,ribs,Ribs,,baked,,0.85,,,,,braised_beef,275:165,,
+ENTR_035,bbq_sauce,BBQ Sauce,finish,raw,,,,,,,,,,SAUCE_026
 ENTR_036,patties,Patties,,pan grilled,0.75,1.0,1.0,1.0,1.0,,,,,
 ENTR_036,gravy,Gravy,,boiled,0.88,1.0,1.0,1.0,1.0,,,,,
 ENTR_037,braise,Braise,,baked,0.72,1.0,1.0,1.0,1.0,,,,,
