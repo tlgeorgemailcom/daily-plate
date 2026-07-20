@@ -707,9 +707,9 @@ ENTR_042,grill_tenderloin,Grill Tenderloin,pan grilled,baked,,,,,,,pan_grilled_s
 ENTR_042,dijon,Dijon-Style Mustard,,raw,,,,,,,,,,SAUCE_010
 ENTR_042,assembly,Assembly,,baked,,,,,,,wellington_pastry,425:27,,
 ENTR_043,grill_beef,Grill Beef,pan grilled,simmer,,,,,,,pan_grilled_steak,195:2,2,
-ENTR_043,onions,Onions,pan grilled,simmer,,,,,,,simmered_vegetable,195:2,3,
-ENTR_043,mushrooms,Mushrooms,pan grilled,simmer,,,,,,,simmered_vegetable,195:2,2,
-ENTR_043,broccoli_peppers,Broccoli & Peppers,pan grilled,simmer,,,,,,,simmered_vegetable,195:2,2,
+ENTR_043,onions,Onions,pan grilled,simmer,,,,,,,simmered_vegetable,195:2,7,
+ENTR_043,mushrooms,Mushrooms,pan grilled,simmer,,,,,,,simmered_vegetable,195:2,5,
+ENTR_043,broccoli_peppers,Broccoli & Peppers,pan grilled,simmer,,,,,,,simmered_vegetable,195:2,3,
 ENTR_043,garlic_ginger,Garlic & Ginger,pan grilled,simmer,,,,,,,,195:2,1,
 ENTR_043,sauce,Sauce,,simmer,,,,,,,simmer_sauce,195:2,,
 ENTR_044,taco_meat,Taco Meat,,pan grilled,0.80,0.75,1.0,1.0,1.0,,,,,
