@@ -663,8 +663,10 @@ ENTR_031,brown_beef,Brown Beef,pan grilled,braise,,0.593,,,,,fried_meat,185:18,8
 ENTR_031,onion_peppers,Onion & Peppers,pan grilled,braise,,,,,,,simmer_sauce,185:18,5,
 ENTR_031,garlic,Garlic,pan grilled,braise,,,,,,,,185:18,1,
 ENTR_031,assembly,Assembly,,braise,,,,,,,simmer_sauce,185:18,,
-ENTR_032,crust,Crust,,raw,1.0,1.0,1.0,1.0,1.0,,,,,CRUST_004
-ENTR_032,filling,Filling,,baked,0.9,1.0,1.0,1.0,1.0,,,,,
+ENTR_032,crust,Pie Crust,,raw,,,,,,,,,,CRUST_004
+ENTR_032,brown_beef,Brown Beef,pan grilled,baked,,,,,,,casserole_baked,400:32,4,
+ENTR_032,vegetables,Vegetables,pan grilled,baked,,,,,,,casserole_baked,400:32,6,
+ENTR_032,potatoes_peas_spices,"Potatoes, Peas, spices",simmer,baked,,,,,,,casserole_baked,400:32,15,
 ENTR_033,roast,Pot Roast,,baked,0.8,1.0,1.0,1.0,1.0,,,,,
 ENTR_034,ragu,Ragu,,baked,0.75,1.0,1.0,1.0,1.0,,,,,
 ENTR_035,rub,Dry Rub,,raw,1.0,1.0,1.0,1.0,1.0,,,,,
