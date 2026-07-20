@@ -678,15 +678,15 @@ ENTR_019,14,@STOCK_004,1 1/2 cups Beef Stock (recipe),366.0,,,stock_ref,,False,,
 ENTR_019,15,worcestershire_sauce,1 tbsp Worcestershire sauce,15.0,,,gravy,,False,,,,
 ENTR_019,16,salt_table,1/2 tsp salt,3.0,,,gravy,,False,,,,
 ENTR_019,17,black_pepper_ground,1/4 tsp ground black pepper,0.575,,,gravy,,False,,,,
-ENTR_020,1,soy_sauce,1/4 cup soy sauce,64.0,,,marinade,,False,,,,
-ENTR_020,2,olive_oil,3 tbsp olive oil,40.8,,,marinade,,False,,,,
-ENTR_020,3,lime_juice_raw,3 tbsp lime juice,45.0,,,marinade,,False,,,,
-ENTR_020,4,garlic_raw,"4 cloves garlic, minced",12.0,,,marinade,,False,,,,
-ENTR_020,5,cumin_ground,2 tsp ground cumin,4.0,,,marinade,,False,,,,
-ENTR_020,6,chili_powder,1 tsp chili powder,2.7,,,marinade,,False,,,,
-ENTR_020,7,black_pepper_ground,1 tsp ground black pepper,2.3,,,marinade,,False,,,,
-ENTR_020,8,beef_flank_steak_raw,2 lbs beef flank steak,907.2,,,steak,,False,beef flank steak,,,
-ENTR_020,9,salt_table,3/4 tsp salt,4.5,,,steak,,False,,,,
+ENTR_020,1,beef_flank_steak_raw,2 lbs beef flank steak,907.2,,,steak,,false,beef flank steak,,,
+ENTR_020,2,salt_table,3/4 tsp salt,4.5,,,steak,,false,,,,
+ENTR_020,3,soy_sauce,1/4 cup soy sauce,64.0,,,marinade,,false,,,true,100
+ENTR_020,4,olive_oil,3 tbsp olive oil,40.8,,,marinade,,false,,,true,100
+ENTR_020,5,lime_juice_raw,3 tbsp lime juice,45.0,,,marinade,,false,,,true,100
+ENTR_020,6,garlic_raw,"4 cloves garlic, minced",12.0,,,marinade,,false,,,true,100
+ENTR_020,7,cumin_ground,2 tsp ground cumin,4.0,,,marinade,,false,,,true,100
+ENTR_020,8,chili_powder,1 tsp chili powder,2.7,,,marinade,,false,,,true,100
+ENTR_020,9,black_pepper_ground,1 tsp ground black pepper,2.3,,,marinade,,false,,,true,100
 ENTR_021,1,beef_ground_80lean_raw,3/4 lb ground beef (80/20),340.2,,,meatballs,,False,ground beef (80/20),,,
 ENTR_021,2,pork_ground_raw,1/2 lb ground pork,226.8,,,meatballs,,False,,,,
 ENTR_021,3,bread_crumbs_dry,1/2 cup dry bread crumbs,54.0,,,meatballs,,False,,,,
