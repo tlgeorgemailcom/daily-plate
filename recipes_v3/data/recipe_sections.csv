@@ -750,9 +750,13 @@ ENTR_051,garlic_ginger,Garlic & Ginger,pan grilled,simmer,,,,,,,,195:1,1,
 ENTR_051,broth,Chicken Broth,,raw,,,,,,,,,,STOCK_003
 ENTR_051,sauce,Sauce,simmer,simmer,,,,,,,simmer_sauce,195:1,2,
 ENTR_051,finish,Scallions & Sesame Seeds,finish,raw,,,,,,,,,,
-ENTR_052,chicken,Chicken,,pan grilled,0.75,1.0,1.0,1.0,1.0,,,,,
-ENTR_052,broth,Chicken Broth,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_003
-ENTR_052,stir_fry,Stir Fry,,pan grilled,0.90,1.0,1.0,1.0,1.0,,,,,
+ENTR_052,grill_chicken,Grill Chicken,pan grilled,simmer,,,,,,,pan_grilled_chicken,195:2,4,
+ENTR_052,mushrooms,Mushrooms,pan grilled,simmer,,,,,,,simmered_vegetable,195:2,3,
+ENTR_052,garlic_ginger,Garlic & Ginger,pan grilled,simmer,,,,,,,,195:2,1,
+ENTR_052,snow_peas_chestnuts_shoots,"Snow Peas, Chestnuts, Shoots",pan grilled,simmer,,,,,,,simmered_vegetable,195:2,2,
+ENTR_052,broth,Chicken Broth,,raw,,,,,,,,,,STOCK_003
+ENTR_052,assembly,Assembly,,simmer,,,,,,,simmer_sauce,195:2,,
+ENTR_052,finish,Scallions,finish,raw,,,,,,,,,,
 ENTR_053,chicken,Chicken,,pan grilled,0.82,1.0,1.0,1.0,1.0,,,,,
 ENTR_053,broth,Chicken Broth,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_003
 ENTR_053,sauce,Lemon Caper Sauce,,pan grilled,0.88,1.0,1.0,1.0,1.0,,,,,

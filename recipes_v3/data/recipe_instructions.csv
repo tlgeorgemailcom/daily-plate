@@ -1754,14 +1754,15 @@ ENTR_051,6,"Add the sauce mixture and Chicken Broth. Simmer uncovered for 2 minu
 ENTR_051,7,Return the chicken to the wok and toss to coat in the sauce. Simmer uncovered for 1 minute until heated through.
 ENTR_051,8,Finish with the scallions and sesame seeds. Serve immediately.
 ENTR_051,9,Suggestions (not included): Serve with steamed rice.
-ENTR_052,1,"Slice the chicken breast thinly across the grain. In a bowl, combine 1 tablespoon tamari, 1 tablespoon cornstarch, and 1 teaspoon sesame oil. Add the chicken, toss to coat, and marinate for 10 to 15 minutes."
+ENTR_052,1,"Slice the chicken breast thinly across the grain. Toss with 1 tablespoon tamari, 1 teaspoon sesame oil, and 1 tablespoon cornstarch."
 ENTR_052,2,Make or prepare the Chicken Broth (see the Chicken Broth recipe).
-ENTR_052,3,"In a small bowl, whisk together the remaining tamari, oyster sauce, remaining sesame oil, chicken broth, and 1 tablespoon cornstarch. Set the sauce aside."
-ENTR_052,4,Heat 1 tablespoon olive oil in a large wok or skillet over high heat. Add the chicken in a single layer and stir-fry for 3 to 4 minutes until cooked through to an internal temperature of 165°F. Transfer to a plate.
-ENTR_052,5,Add the remaining olive oil to the wok. Add the 1/4 inch thick sliced mushrooms and stir-fry for 2 minutes. Add the minced garlic and finely grated ginger and cook for 30 seconds.
-ENTR_052,6,"Add the snow peas, water chestnuts, and bamboo shoots. Stir-fry for 2 minutes until just tender-crisp."
-ENTR_052,7,Return the chicken to the wok. Pour in the sauce and toss everything together for 1 to 2 minutes until the sauce thickens and coats everything.
-ENTR_052,8,Stir in the scallions. Serve immediately. (Rice not included.)
+ENTR_052,3,"In a small bowl, whisk together the remaining tamari, remaining sesame oil, oyster sauce, and cornstarch until smooth."
+ENTR_052,4,Heat 1 tablespoon olive oil in a large wok or skillet over high heat. Add the chicken in a single layer and pan-grill for 4 minutes until cooked through to an internal temperature of 165°F. Transfer to a plate.
+ENTR_052,5,Add 1 tablespoon olive oil to the wok. Add the sliced mushrooms and pan-grill for 3 minutes.
+ENTR_052,6,Add the minced garlic and grated ginger and pan-grill for 1 minute until fragrant.
+ENTR_052,7,"Add the snow peas, water chestnuts, and bamboo shoots. Pan-grill for 2 minutes until just tender-crisp."
+ENTR_052,8,"Return the chicken to the wok. Add the sauce mixture and Chicken Broth, then simmer uncovered for 2 minutes until the sauce thickens and coats everything."
+ENTR_052,9,Finish with the scallions. Serve immediately. (Rice not included.)
 ENTR_053,1,"Pound the chicken breasts to an even 1/4-inch thickness, or slice horizontally into cutlets. Season with salt and pepper, then dredge lightly in flour, shaking off the excess."
 ENTR_053,2,Make or prepare the Chicken Broth (see the Chicken Broth recipe).
 ENTR_053,3,Heat olive oil and 1 tablespoon butter in a large skillet over medium-high heat. Sear the chicken in batches for 3 to 4 minutes per side until golden and cooked through to an internal temperature of 165°F. Transfer to a plate and tent loosely with foil.
@@ -3736,7 +3737,7 @@ ENTR_044,6,"Suggestions (not included): Serve with Mexican rice, refried beans, 
 ENTR_048,9,"Suggestions (not included): Serve with Mexican rice, refried beans, and sour cream or guacamole on the side."
 ENTR_049,8,"Suggestions (not included): Serve with pasta, mashed potatoes, or crusty bread to soak up the creamy spinach sauce."
 ENTR_050,8,Suggestions (not included): Serve on its own or with egg drop soup or hot and sour soup on the side.
-ENTR_052,9,Suggestions (not included): Serve over steamed rice or with steamed dumplings on the side.
+ENTR_052,10,Suggestions (not included): Serve over steamed rice or with steamed dumplings on the side.
 ENTR_054,8,Suggestions (not included): Serve with a simple green salad or crusty bread on the side.
 ENTR_055,6,Suggestions (not included): Serve over steamed rice or with warm pita bread and a simple salad.
 ENTR_056,8,"Suggestions (not included): Serve with sour cream, guacamole, or a simple green salad on the side."
