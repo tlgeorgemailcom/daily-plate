@@ -274,25 +274,25 @@
   const GAME_FOODS = Object.keys(FOOD_EMOJI) as FoodType[];
   const ANIMAL_TYPES: AnimalType[] = ['rabbit', 'squirrel', 'raccoon', 'bird', 'mouse', 'fox'];
   
-  const COOKING_METHODS = ['Bake', 'Bake (covered)', 'Boil', 'Boil (covered)', 'Simmer', 'Sub-simmer', 'Braise', 'Sauté', 'Pan sear', 'Grill', 'Broil', 'Fry', 'No heat'];
+  const COOKING_METHODS = ['Bake', 'Bake (covered)', 'Boil', 'Boil (covered)', 'Simmer', 'Sub-simmer', 'Braise', 'Steam', 'Microwave', 'Sauté', 'Stir-fry', 'Pan sear', 'Grill', 'Broil', 'Fry', 'Deep-fry', 'No heat'];
   const COOK_METHOD_DISPLAY: Record<string, string> = {
-    'Boil':           'Boil (lid off)',
+    'Boil':           'Boil (uncovered)',
     'Boil (covered)': 'Boil (covered)',
-    'Simmer':         'Simmer (lid off)',
-    'Sub-simmer':     'Sub-simmer (lid off)',
+    'Simmer':         'Simmer (uncovered)',
+    'Sub-simmer':     'Sub-simmer (uncovered)',
     'Braise':         'Braise (covered)',
     'Bake (covered)': 'Bake (covered)',
   };
   // v3.md §18.1 — lowercase enum stored in recipe_sections.csv::cooking_method.
-  const SECTION_COOKING_METHODS = ['raw', 'boiled', 'boiled covered', 'steamed', 'baked', 'baked covered', 'fried', 'sauteed', 'pan seared', 'grilled', 'broiled', 'microwave'];
-  const SECTION_PREP_METHODS    = ['boiled', 'boiled covered', 'simmer', 'sub-simmer', 'braise', 'steamed', 'blanched', 'baked', 'baked covered', 'par-baked', 'fried', 'sauteed', 'pan seared', 'grilled', 'broiled', 'marinated', 'chilled', 'microwave', 'finish'];
+  const SECTION_COOKING_METHODS = ['raw', 'boiled', 'boiled covered', 'steamed', 'baked', 'baked covered', 'fried', 'deep-fried', 'sauteed', 'stir-fried', 'pan seared', 'grilled', 'broiled', 'microwave'];
+  const SECTION_PREP_METHODS    = ['boiled', 'boiled covered', 'simmer', 'sub-simmer', 'braise', 'steamed', 'blanched', 'baked', 'baked covered', 'par-baked', 'fried', 'deep-fried', 'sauteed', 'stir-fried', 'pan seared', 'grilled', 'broiled', 'microwave', 'finish'];
   // Display labels for prep methods — stored values are clean identifiers;
   // UI annotations clarify open-pot vs covered assumption for the water model.
   const PREP_METHOD_DISPLAY: Record<string, string> = {
-    'boiled':         'boiled (lid off)',
+    'boiled':         'boiled (uncovered)',
     'boiled covered': 'boiled (covered)',
-    'simmer':         'simmer (lid off)',
-    'sub-simmer':     'sub-simmer (lid off)',
+    'simmer':         'simmer (uncovered)',
+    'sub-simmer':     'sub-simmer (uncovered)',
     'braise':         'braise (covered)',
     'baked covered':  'baked (covered)',
     'finish':         'Added after cooking',
@@ -327,6 +327,13 @@
       'sauté':       'Sauté',
       'sauteed':     'Sauté',
       'sautéed':     'Sauté',
+      'stir-fried':  'Stir-fry',
+      'stir fry':    'Stir-fry',
+      'stir fried':  'Stir-fry',
+      'deep-fried':  'Deep-fry',
+      'deep fry':    'Deep-fry',
+      'steamed':     'Steam',
+      'microwave':   'Microwave',
       'pan grilled': 'Pan sear',
       'pan_seared':  'Pan sear',
       'pan seared':  'Pan sear',
@@ -2718,7 +2725,7 @@
         {#if sec.prepMethod === 'finish'}
           <p class="finish-info-note">ℹ️ Stirred in or added after the primary cook is complete — e.g. cheese, cream, finishing butter, whipped cream. No heat is applied; nutrition is calculated from the raw ingredient weight.</p>
         {/if}
-        {#if sec.prepMethod && ['boiled','boiled covered','simmer','sub-simmer','braise','steamed','blanched','baked','par-baked','fried','sauteed','pan seared','pan grilled','grilled','broiled','microwave'].includes(sec.prepMethod)}
+        {#if sec.prepMethod && ['boiled','boiled covered','simmer','sub-simmer','braise','steamed','blanched','baked','par-baked','fried','deep-fried','sauteed','stir-fried','pan seared','pan grilled','grilled','broiled','microwave'].includes(sec.prepMethod)}
           <div class="section-times-bar">
             <label class="section-time-field" title="Stovetop prep time. Use boiled covered or braise for covered cooking.">
               <span class="section-time-label">Prep (min)</span>

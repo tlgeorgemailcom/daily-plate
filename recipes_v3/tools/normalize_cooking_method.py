@@ -23,17 +23,25 @@ ENV_FILE = REPO_ROOT / ".env.local"
 
 # ── Pipeline → UI mapping (must match normalizeCookingMethod in /moderate) ───
 _MAP = {
-    "baked":       "Bake",
-    "boiled":      "Boil",
-    "simmer":      "Simmer",
-    "sub-simmer":  "Sub-simmer",
-    "braise":      "Braise",
-    "pan grilled": "Pan grill",
-    "grilled":     "Grill",
-    "fried":       "Fry",
-    "raw":         "No heat",
-    "steamed":     "No heat",
-    "microwave":   "No heat",
+    "baked":          "Bake",
+    "baked covered":  "Bake (covered)",
+    "bake covered":   "Bake (covered)",
+    "boiled":         "Boil",
+    "boiled covered": "Boil (covered)",
+    "simmer":         "Simmer",
+    "sub-simmer":     "Sub-simmer",
+    "braise":         "Braise",
+    "steamed":        "Steam",
+    "microwave":      "Microwave",
+    "pan grilled":    "Pan grill",
+    "grilled":        "Grill",
+    "broiled":        "Broil",
+    "fried":          "Fry",
+    "deep-fried":     "Deep-fry",
+    "deep fry":       "Deep-fry",
+    "stir-fried":     "Stir-fry",
+    "stir fry":       "Stir-fry",
+    "raw":            "No heat",
 }
 
 # Overrides for recipes with 'multi' (legacy composite value) — per-recipe decisions:
@@ -49,8 +57,9 @@ _RECIPE_OVERRIDES = {
 }
 
 # UI-format values that are already correct — never touch these
-_ALREADY_OK = {"Bake", "Boil", "Simmer", "Sub-simmer", "Braise",
-               "Pan grill", "Grill", "Fry", "No heat"}
+_ALREADY_OK = {"Bake", "Bake (covered)", "Boil", "Boil (covered)", "Simmer", "Sub-simmer",
+               "Braise", "Steam", "Microwave", "Sauté", "Stir-fry", "Pan sear", "Pan grill",
+               "Grill", "Broil", "Fry", "Deep-fry", "No heat"}
 
 
 def normalize(raw: str | None, recipe_id: str = "") -> str | None:

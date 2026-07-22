@@ -69,7 +69,9 @@ def _method_stovetop_temp(method: str | None, *, bake_covered_temp: float | None
         return 185.0
     if m in ("saute", "sauté", "sauteed", "sautéed"):
         return 200.0
-    if m in ("stir fry", "stir-fried", "stir fried", "pan sear", "pan seared", "pan-seared", "sear", "seared"):
+    if m in ("stir fry", "stir-fried", "stir fried"):
+        return 220.0
+    if m in ("pan sear", "pan seared", "pan-seared", "sear", "seared"):
         return 230.0
     if m in ("bake covered", "baked covered") and bake_covered_temp is not None:
         return bake_covered_temp

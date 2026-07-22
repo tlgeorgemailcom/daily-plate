@@ -59,7 +59,8 @@ function methodStovetopTempF(method: string | undefined | null): number {
   if (m === 'simmer') return 195;
   if (m === 'braise' || m === 'braised') return 185;
   if (m === 'saute' || m === 'sauté' || m === 'sauteed' || m === 'sautéed') return 200;
-  if (m === 'stir fry' || m === 'stir-fried' || m === 'stir fried' || m === 'pan sear' || m === 'pan seared' || m === 'pan-seared' || m === 'sear' || m === 'seared') return 230;
+  if (m === 'stir fry' || m === 'stir-fried' || m === 'stir fried') return 220;
+  if (m === 'pan sear' || m === 'pan seared' || m === 'pan-seared' || m === 'sear' || m === 'seared') return 230;
   return 212;
 }
 import {
@@ -376,11 +377,11 @@ export function buildRecipeCommunityV3(
       // A pan_grilled_chicken hint only applies when the section is actually pan-grilled
       // or fried — not when it is baked or braised.
       const HINT_COOK_MAP: Record<string, string[]> = {
-        'pan_grilled_chicken': ['pan grilled', 'sauteed', 'sautéed', 'pan sear', 'pan seared', 'fried', 'grilled', 'broil', 'broiled'],
-        'fried_chicken':       ['fried'],
+        'pan_grilled_chicken': ['pan grilled', 'sauteed', 'sautéed', 'stir-fried', 'pan sear', 'pan seared', 'fried', 'grilled', 'broil', 'broiled'],
+        'fried_chicken':       ['fried', 'deep-fried'],
         'baked_pork':          ['baked', 'par-baked'],
         'braised_beef':        ['braise', 'braised', 'boiled', 'simmer', 'sub-simmer'],
-        'fried_meat':          ['fried', 'pan grilled', 'sauteed', 'sautéed', 'pan sear', 'pan seared'],
+        'fried_meat':          ['fried', 'deep-fried', 'pan grilled', 'sauteed', 'sautéed', 'stir-fried', 'pan sear', 'pan seared'],
       };
       const rawCookMethod = (sec.cookingMethod ?? 'raw').trim().toLowerCase().replace(/_/g, ' ');
       let fillClass: string;
