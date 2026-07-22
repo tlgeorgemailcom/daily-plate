@@ -879,3 +879,45 @@ For recipes where all sections are assembled raw but the whole dish applies a si
 5. The form's quiche branch picks up `cookingMethod='Bake'` (not raw/empty), finds `eligibleSecs2` with stages, and populates `cookMinutes` and `cookTempF`.
 
 **Key invariant:** a quiche-pattern recipe must have exactly ONE section with non-empty `cook_stages` (so `eligibleSecs2.length === 1`). If two sections both carry stages the branch does not fire and time/temp will not be derived.
+
+---
+
+## TODO / Deferred Work
+
+### `pan grilled` → `pan seared` physics migration
+
+`pan grilled` (legacy, ~100+ dev recipe sections) falls to the default **212°F** evaporation temp in `_method_stovetop_temp()`. `pan seared` is explicitly **230°F**. Both use the `fried` retention bucket but are NOT physics-equivalent — `pan seared` produces ~16% higher evaporation rate.
+
+**Steps required per recipe when migrating:**
+1. Update `recipe_sections.csv` — change `cook_method` and `prep_method` from `pan grilled` to `pan seared`
+2. Rerun physics: `python recipes_v3/tools/build_all.py --recipe RECIPE_ID`
+3. Verify per-100g macros — water column will shift; confirm audit rule still passes
+4. Upload: `python recipes_v3/tools/upload.py --recipe RECIPE_ID --commit`
+5. Commit CSV change
+
+**Do NOT rename en masse** without a targeted audit pass — the physics change can shift water yield enough to move a Rule A/B pass to a fail. This requires a dedicated session.
+
+**During the audit, also evaluate whether sections should be `sauteed` instead of `pan seared`:**
+Now that `sauteed` (200°F) is a first-class method scoped to aromatics and vegetable softening, some existing `pan grilled`/`pan seared` sections may be better reclassified:
+- Onion/garlic/shallot softening in butter or oil → `sauteed`
+- Short vegetable sweating (celery, peppers, mushrooms as aromatics) → `sauteed`
+- Protein sections (chicken breast, fish fillet, ground meat) → stay `pan seared`
+Reclassifying to `sauteed` also changes evaporation temp (200°F vs 230°F), so physics rerun is required for those sections too.
+
+---
+
+### Cook method UI additions (from `docs/cook_temp_proposal.md`)
+
+- Add `stir-fried` as a first-class UI method:
+  - `RecipeForm.svelte`: add to `SECTION_COOKING_METHODS`, `SECTION_PREP_METHODS`, `COOKING_METHODS` (between Sauté and Pan sear), `normalizeCookMethodLabel`
+  - `build.py::_method_stovetop_temp`: change `stir-fried` from 230°F → **220°F** (separate from `pan seared` 230°F)
+  - `buildRecipeCommunityV3.ts` + `buildRecipeCommunity.ts`: same temp split in `methodStovetopTempF()`
+  - `buildRecipeCommunityV3.ts::HINT_COOK_MAP`: add `stir-fried` to `pan_grilled_chicken` and `fried_meat` hint lists
+  - `insert_new.py` and `moderate/+page.svelte`: add `stir-fried` to normalization maps
+  - `docs/recipe_development.md`: add `stir-fried` row to cook_method keyword table and fill_class guide
+
+- Add `deep-fried` as a first-class UI method:
+  - `RecipeForm.svelte`: add to `SECTION_COOKING_METHODS`, `SECTION_PREP_METHODS`, `COOKING_METHODS`
+  - Physics: alias to `fried` retention at 212°F — no temp change needed
+  - `insert_new.py` and `moderate/+page.svelte`: add to normalization maps
+  - `docs/recipe_development.md`: add `deep-fried` row to cook_method keyword table
