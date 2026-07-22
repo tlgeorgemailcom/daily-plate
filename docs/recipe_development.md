@@ -921,3 +921,71 @@ Reclassifying to `sauteed` also changes evaporation temp (200°F vs 230°F), so 
   - Physics: alias to `fried` retention at 212°F — no temp change needed
   - `insert_new.py` and `moderate/+page.svelte`: add to normalization maps
   - `docs/recipe_development.md`: add `deep-fried` row to cook_method keyword table
+
+---
+
+### `sauteed` reclassification candidates
+
+Sections currently stored as `pan grilled` or `pan seared` that should be reclassified to `sauteed` based on instruction analysis. All involve aromatic/vegetable softening (onion, garlic, peppers, mushrooms, carrots, celery) cooked at **medium heat** — not protein searing.
+
+**Steps required per section:**
+1. Update `recipe_sections.csv` — change `cook_method` (and/or `prep_method`) from `pan grilled` → `sauteed`
+2. Rerun physics: `python recipes_v3/tools/build_all.py --recipe RECIPE_ID`
+3. Verify macros — evaporation temp drops from 230°F → 200°F; water column may shift slightly
+4. Upload: `python recipes_v3/tools/upload.py --recipe RECIPE_ID --commit`
+5. Commit CSV change
+
+Sections marked **two-stage** have `cook_method` = simmer/braise/baked (the assembled cook); only `prep_method` changes.
+
+#### Batch A — medium-heat-only recipes
+
+| Recipe | Recipe Name | Section key | Current method | Label |
+|---|---|---|---|---|
+| ENTR_015 | Beef Steak Diane | shallots_garlic | pan grilled | Shallots and Garlic |
+| ENTR_058 | Chicken Masala | sauce | pan grilled | Masala Sauce |
+| ENTR_095 | Pork Fried Rice | filling | pan grilled | Filling |
+| ENTR_110 | Seafood Paella | paella | pan grilled | Seafood and Sofrito |
+| ENTR_120 | Vegetarian Shakshuka | shakshuka | pan grilled | Shakshuka |
+| PASTA_007 | Lemon Pasta | garlic | pan grilled | Garlic |
+| PASTA_010 | Cheese Ravioli | wilted_spinach | pan grilled | Wilt spinach |
+| PASTA_010 | Cheese Ravioli | brown_butter | pan grilled | Brown butter |
+| PASTA_010 | Cheese Ravioli | garlic_sage | pan grilled | Garlic sage |
+| SAND_042 | French Dip | onion_saute | *(broil cm)* two-stage | Sautéed onion |
+| SIDE_006 | Potato Salad (German Style) | onion | pan grilled | Onion |
+| SAUCE_025 | Red Enchilada Sauce | onion_mixture | *(simmer cm)* two-stage | Onion and garlic |
+| SAUCE_027 | Italian Marinara Sauce | onion | *(simmer cm)* two-stage | Onion |
+| SAUCE_027 | Italian Marinara Sauce | garlic | *(simmer cm)* two-stage | Garlic |
+| SIDE_028 | Braised Collard Greens | onions | *(simmer cm)* two-stage | Onions |
+| SIDE_028 | Braised Collard Greens | garlic | *(simmer cm)* two-stage | Garlic |
+| SIDE_030 | Creamed Spinach | onion | *(sub-simmer cm)* two-stage | Onion |
+| SIDE_030 | Creamed Spinach | garlic | *(sub-simmer cm)* two-stage | Garlic |
+
+#### Batch B — medium-high initial sear → reduce to medium for aromatics
+
+| Recipe | Recipe Name | Section key | Current method | Label |
+|---|---|---|---|---|
+| ENTR_013 | Beef Curry | onions | pan grilled | Onions |
+| ENTR_013 | Beef Curry | garlic | pan grilled | Garlic |
+| ENTR_014 | Beef Ropa Vieja | onions_peppers | pan grilled | Onions and Peppers |
+| ENTR_014 | Beef Ropa Vieja | garlic | pan grilled | Garlic |
+| ENTR_017 | Beef Goulash | onions | pan grilled | Onions |
+| ENTR_017 | Beef Goulash | garlic_bell_pepper | pan grilled | Garlic and Bell Pepper |
+| ENTR_017 | Beef Goulash | spices | pan grilled | Spices |
+| ENTR_019 | Beef Hamburger Steak | onions | pan grilled | Onions |
+| ENTR_019 | Beef Hamburger Steak | mushrooms_garlic | pan grilled | Mushrooms and Garlic |
+| ENTR_029 | Beef Osso Buco | vegetables | *(braise cm)* two-stage | Vegetables |
+| ENTR_029 | Beef Osso Buco | garlic | *(braise cm)* two-stage | Garlic |
+| ENTR_031 | Beef Picadillo | onion_peppers | *(braise cm)* two-stage | Onion & Peppers |
+| ENTR_031 | Beef Picadillo | garlic | *(braise cm)* two-stage | Garlic |
+| ENTR_034 | Beef Ragu | vegetables | *(braise cm)* two-stage | Vegetables |
+| ENTR_034 | Beef Ragu | garlic_tomato_paste | *(braise cm)* two-stage | Garlic & Tomato Paste |
+| ENTR_036 | Beef Salisbury Steak | onions_mushrooms | *(simmer cm)* two-stage | Onions & Mushrooms |
+| ENTR_036 | Beef Salisbury Steak | garlic | *(simmer cm)* two-stage | Garlic |
+| ENTR_037 | Beef Short Ribs | vegetables | *(baked covered cm)* two-stage | Vegetables |
+| ENTR_037 | Beef Short Ribs | garlic_tomato_paste | *(baked covered cm)* two-stage | Garlic & Tomato Paste |
+| ENTR_049 | Chicken Florentine | garlic | *(simmer cm)* two-stage | Garlic |
+| ENTR_073 | Lamb Shepherd's Pie | filling | pan grilled | Filling |
+| ENTR_111 | Seafood Shrimp Scampi | scampi | pan grilled | Shrimp Scampi |
+| ENTR_118 | Vegetarian Dal | dal_base | pan grilled | Dal Sauce |
+| ENTR_119 | Vegetarian Chana Masala | chana_masala | pan grilled | Chana Masala |
+| PASTA_005 | Garlic Butter Shrimp Pasta | garlic | *(simmer cm)* two-stage | Garlic |
