@@ -335,6 +335,7 @@
       'steamed':     'Steam',
       'microwave':   'Microwave',
       'pan grilled': 'Pan sear',
+      'pan grill':   'Pan sear',
       'pan_seared':  'Pan sear',
       'pan seared':  'Pan sear',
       'pan-seared':  'Pan sear',

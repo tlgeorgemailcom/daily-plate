@@ -1719,7 +1719,7 @@
       'simmer':      'Simmer',
       'sub-simmer':  'Sub-simmer',
       'braise':      'Braise',
-      'pan grilled':    'Pan grill',
+      'pan grilled':    'Pan sear',
       'grilled':        'Grill',
       'broiled':        'Broil',
       'fried':          'Fry',
