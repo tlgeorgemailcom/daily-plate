@@ -59,6 +59,23 @@ from .yield_calc import calc_yield_water
 from .yield_model import cooked_total_grams
 
 
+def _method_stovetop_temp(method: str | None, *, bake_covered_temp: float | None = None) -> float:
+    m = (method or "").strip().lower().replace("_", " ")
+    if m in ("sub-simmer", "sub simmer"):
+        return 180.0
+    if m == "simmer":
+        return 195.0
+    if m in ("braise", "braised"):
+        return 185.0
+    if m in ("saute", "sauté", "sauteed", "sautéed"):
+        return 200.0
+    if m in ("stir fry", "stir-fried", "stir fried", "pan sear", "pan seared", "pan-seared", "sear", "seared"):
+        return 230.0
+    if m in ("bake covered", "baked covered") and bake_covered_temp is not None:
+        return bake_covered_temp
+    return 212.0
+
+
 # ── Stock extraction yield factors ───────────────────────────────────────────
 # When a section's fill_class is a stock class, these constants replace the
 # load.py defaults of 1.0 for yfp/yff/yfc/yfo (which come from cleared CSV
@@ -653,12 +670,7 @@ def _build_recipe_multi(
             boil_min = float(s.boil_stages) if s.boil_stages else 0.0
             stages   = _parse_stages(s.cook_stages) if s.cook_stages else []
             _is_boil_covered = s.cook_method in ('boil covered', 'boil_covered', 'boil (covered)', 'boiled covered', 'boiled_covered', 'boiled (covered)')
-            _boil_temp = (
-                180.0 if s.cook_method in ('sub-simmer', 'sub_simmer') else
-                195.0 if s.cook_method == 'simmer' else
-                185.0 if s.cook_method in ('braise', 'braised') else
-                212.0
-            )
+            _boil_temp = _method_stovetop_temp(s.cook_method)
             yfw = calc_yield_water(stages, st["raw_water"], s.filling_class,
                                    boil_minutes=boil_min, boil_temp_f=_boil_temp,
                                    boil_covered=_is_boil_covered)
@@ -681,12 +693,9 @@ def _build_recipe_multi(
             stages   = _parse_stages(s.cook_stages) if s.cook_stages else []
             _is_bake_covered = s.cook_method in ('bake covered', 'bake_covered', 'baked covered')
             _is_boil_covered = s.cook_method in ('boil covered', 'boil_covered', 'boil (covered)', 'boiled covered', 'boiled_covered', 'boiled (covered)')
-            _boil_temp = (
-                180.0 if s.cook_method in ('sub-simmer', 'sub_simmer') else
-                195.0 if s.cook_method == 'simmer' else
-                185.0 if s.cook_method in ('braise', 'braised') else
-                (stages[0][0] if stages else 350.0) if _is_bake_covered else
-                212.0
+            _boil_temp = _method_stovetop_temp(
+                s.cook_method,
+                bake_covered_temp=(stages[0][0] if stages else 350.0) if _is_bake_covered else None,
             )
             _boil_covered = s.cook_method in ('braise', 'braised') or _is_bake_covered or _is_boil_covered
             yfw = calc_yield_water(stages, st["raw_water"], s.filling_class,

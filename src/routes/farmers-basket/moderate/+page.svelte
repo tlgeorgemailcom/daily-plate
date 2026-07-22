@@ -172,8 +172,8 @@
     imageUploadError = null;
   }
   
-  // Maps Turso DB cooking_method values (e.g. 'baked', 'boiled', 'pan grilled')
-  // to the UI COOKING_METHODS labels (e.g. 'Bake', 'Boil', 'Pan grill').
+  // Maps Turso DB cooking_method values (e.g. 'baked', 'boiled', 'pan seared')
+  // to the UI COOKING_METHODS labels (e.g. 'Bake', 'Boil', 'Pan sear').
   function normalizeCookingMethod(raw?: string): string {
     if (!raw) return 'Bake';
     const map: Record<string, string> = {
@@ -182,7 +182,10 @@
       'simmer':      'Simmer',
       'sub-simmer':  'Sub-simmer',
       'braise':      'Braise',
-      'pan grilled': 'Pan grill',
+      'sauteed':     'Sauté',
+      'sautéed':     'Sauté',
+      'pan seared':  'Pan sear',
+      'pan grilled': 'Pan sear',
       'grilled':     'Grill',
       'fried':       'Fry',
       'raw':         'No heat',

@@ -52,6 +52,16 @@ function retainedIngredientFraction(ing: CommunityIngredient): number {
   const discardPercent = Number.isFinite(ing.discardPercent) ? ing.discardPercent! : 100;
   return Math.max(0, Math.min(1, 1 - discardPercent / 100));
 }
+
+function methodStovetopTempF(method: string | undefined | null): number {
+  const m = method?.trim().toLowerCase().replace(/_/g, ' ') ?? '';
+  if (m === 'sub-simmer' || m === 'sub simmer') return 180;
+  if (m === 'simmer') return 195;
+  if (m === 'braise' || m === 'braised') return 185;
+  if (m === 'saute' || m === 'sauté' || m === 'sauteed' || m === 'sautéed') return 200;
+  if (m === 'stir fry' || m === 'stir-fried' || m === 'stir fried' || m === 'pan sear' || m === 'pan seared' || m === 'pan-seared' || m === 'sear' || m === 'seared') return 230;
+  return 212;
+}
 import {
   applyRetention,
   getRetentionFactor,
@@ -237,10 +247,7 @@ export function buildRecipeCommunityV3(
     : undefined;
   const rawDish = dishCookMethod?.trim().toLowerCase() ?? '';
   const primaryIsBoilCovered = rawDish === 'boil covered' || rawDish === 'boil_covered' || rawDish === 'boiled covered' || rawDish === 'boiled_covered' || rawDish === 'boil (covered)' || rawDish === 'boiled (covered)';
-  const primaryCookTempF =
-    rawDish === 'sub-simmer' ? 180 :
-    rawDish === 'simmer'     ? 195 :
-    rawDish === 'braise'     ? 185 : 212;
+  const primaryCookTempF = methodStovetopTempF(rawDish);
   const primaryCookLidOn = rawDish === 'braise' || primaryIsBoilCovered;
 
   const sectionResults: SectionBuildResult[] = [];
@@ -296,9 +303,7 @@ export function buildRecipeCommunityV3(
     const secCookStr = sec.cookMethod.toLowerCase();
     const isBakeCovered = secCookStr === 'bake covered' || secCookStr === 'bake_covered' || secCookStr === 'baked covered';
     const isBoilCovered = secCookStr === 'boil covered' || secCookStr === 'boil_covered' || secCookStr === 'boiled covered' || secCookStr === 'boiled_covered' || secCookStr === 'boil (covered)' || secCookStr === 'boiled (covered)';
-    const effectiveTempF = primaryCookMethod
-      ? primaryCookTempF
-      : (secCookStr === 'sub-simmer' ? 180 : secCookStr === 'simmer' ? 195 : secCookStr === 'braise' ? 185 : 212);
+    const effectiveTempF = primaryCookMethod ? primaryCookTempF : methodStovetopTempF(secCookStr);
     const effectiveLidOn = primaryCookMethod ? primaryCookLidOn : (secCookStr === 'braise' || isBakeCovered || isBoilCovered);
 
     // Pre-step: section’s own prepMethod fires BEFORE the primary cook.
@@ -313,7 +318,7 @@ export function buildRecipeCommunityV3(
         : null;
     const hasPrepStep = prepCookMethodRaw !== null && prepCookMethodRaw !== effectiveCookMethod;
     const prepCookMethod: CookingMethod | null = hasPrepStep ? prepCookMethodRaw : null;
-    const prepTempF = prepMethodStr === 'sub-simmer' ? 180 : prepMethodStr === 'simmer' ? 195 : prepMethodStr === 'braise' ? 185 : 212;
+    const prepTempF = methodStovetopTempF(prepMethodStr);
     const prepLidOn = prepMethodStr === 'braise' || prepMethodStr === 'boil covered' || prepMethodStr === 'boil_covered' || prepMethodStr === 'boiled covered' || prepMethodStr === 'boiled_covered' || prepMethodStr === 'boil (covered)' || prepMethodStr === 'boiled (covered)';
 
     const skipped: SkippedIngredient[] = [];
@@ -371,13 +376,13 @@ export function buildRecipeCommunityV3(
       // A pan_grilled_chicken hint only applies when the section is actually pan-grilled
       // or fried — not when it is baked or braised.
       const HINT_COOK_MAP: Record<string, string[]> = {
-        'pan_grilled_chicken': ['pan grilled', 'fried', 'grilled', 'broil', 'broiled'],
+        'pan_grilled_chicken': ['pan grilled', 'sauteed', 'sautéed', 'pan sear', 'pan seared', 'fried', 'grilled', 'broil', 'broiled'],
         'fried_chicken':       ['fried'],
         'baked_pork':          ['baked', 'par-baked'],
         'braised_beef':        ['braise', 'braised', 'boiled', 'simmer', 'sub-simmer'],
-        'fried_meat':          ['fried', 'pan grilled'],
+        'fried_meat':          ['fried', 'pan grilled', 'sauteed', 'sautéed', 'pan sear', 'pan seared'],
       };
-      const rawCookMethod = sec.cookingMethod ?? 'raw';
+      const rawCookMethod = (sec.cookingMethod ?? 'raw').trim().toLowerCase().replace(/_/g, ' ');
       let fillClass: string;
       if (sec.fillClass && sec.fillClass !== '') {
         fillClass = sec.fillClass;
@@ -446,7 +451,7 @@ export function buildRecipeCommunityV3(
             yieldWater = totalWater > 0 ? retained / totalWater : 1.0;
           } else {
             const boilMins = (sec as any).boilMinutes ?? (sec as any).boil_minutes ?? 0;
-            yieldWater = calcYieldWater(stages, initialWaterG, fillClass, boilMins, 212, false);
+            yieldWater = calcYieldWater(stages, initialWaterG, fillClass, boilMins, effectiveTempF, effectiveLidOn);
           }
         }
         } // end stock else
@@ -468,7 +473,7 @@ export function buildRecipeCommunityV3(
         }
       } else {
         const boilMins = (sec as any).boilMinutes ?? (sec as any).boil_minutes ?? 0;
-        yieldWater = calcYieldWater(stages, initialWaterG, fillClass, boilMins);
+        yieldWater = calcYieldWater(stages, initialWaterG, fillClass, boilMins, effectiveTempF, effectiveLidOn);
       }
     }
 

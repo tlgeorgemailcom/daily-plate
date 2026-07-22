@@ -168,7 +168,9 @@ Prep: Section Label | Added after cooking | ingredients: ingredient, ingredient
 | `boiled (covered)` | `boiled covered` | `boiled covered` | time in minutes | *(none — absorption model for covered rice/grains)* |
 | `simmer (lid off)` | `simmer` | `simmer` | time in minutes | `simmer_sauce` for butter/cream/sauce; none for plain liquid reduction |
 | `sub-simmer (lid off)` | `sub-simmer` | `sub-simmer` | time in minutes | `simmer_sauce` for cream/butter sauces |
-| `pan grilled` | `pan grilled` | `pan grilled` | time in minutes | `pan_grilled_chicken` (chicken/fish); `fried_meat` (ground meat, sausage, bacon); none (aromatics, short sautés) |
+| `sauteed` | `sauteed` | `sauteed` | time in minutes | none for aromatics/short sautés; `fried_meat` for ground meat/sausage |
+| `pan seared` | `pan seared` | `pan seared` | time in minutes | `pan_grilled_chicken` (chicken/fish); `fried_meat` (ground meat, sausage, bacon) |
+| `pan grilled` | `pan grilled` | `pan grilled` | time in minutes | Legacy value only; keep existing recipes unchanged unless auditing them intentionally |
 | `baked` | `baked` | `baked` | *(empty — use `cook_stages`)* | `pastry` (doughs); `casserole_baked` (assembled bakes); `cake_batter` (batters) |
 | `baked (covered)` | `baked covered` | `baked covered` | *(empty — use `cook_stages`)* | `casserole_baked` |
 | `unheated` | `''` (empty) | `raw` | *(empty)* | *(none)* |
@@ -232,7 +234,7 @@ Without a `fill_class`, `calc_yield_water` returns `yfw=1.0` for all stovetop se
 | Butter + cream sauce, simmering | `simmer_sauce` |
 | Onion, aromatics, short sauté | *(none — negligible water loss at 1–2 min)* |
 | Ground beef, sausage (fat stays or drains) | `fried_meat` |
-| Chicken breast, fish fillet (pan grilled) | `pan_grilled_chicken` |
+| Chicken breast, fish fillet (pan seared) | `pan_grilled_chicken` |
 | Battered/breaded fried cutlet or fillet protein (chicken fried steak, schnitzel, Milanese, fried fish fillet) | `fried_chicken` |
 | Bacon (fat retained, not drained) | `fried_meat` |
 | Roux cooked briefly in fat before liquid is added | `pan_grilled_batter` |
@@ -269,15 +271,15 @@ Replace `PREFIX_` with the category prefix (e.g. `BKFST_`, `ENTR_`, `SIDE_`).
 
 | Wrong value | Correct value | Affected recipes |
 |---|---|---|
-| `grilled` | `pan grilled` | Pancakes, English Muffins (griddle = pan grill, not BBQ grill) |
-| `fried` | `pan grilled` | French Toast (skillet = pan grill, not deep fry) |
+| `grilled` | `pan seared` or `sauteed` | Skillet/griddle cooking is not BBQ grill; choose `sauteed` for moderate moving ingredients, `pan seared` for high direct pan contact |
+| `fried` | `pan seared` or `sauteed` | Skillet cooking is not deep fry; choose by heat/intensity |
 | `steamed` | `simmer` | Hollandaise Sauce |
 | `raw` on component-ref section | actual cook method of that section | Eggs Benedict muffin + hollandaise sections |
-| `fried` | `pan grilled` | Eggs Benedict Canadian bacon section |
+| `fried` | `pan seared` | Eggs Benedict Canadian bacon section |
 | `baked` on filling section | `raw` | Quiche filling sections (see quiche pattern below) |
 | `raw` on sausage component-ref | `pan grilled` | BKFST_037 Croissant Sausage |
 
-**Rule: `grilled` = outdoor/open-flame grill (waffles use `grilled` correctly — waffle iron). `pan grilled` = stovetop skillet or griddle. When in doubt: pancakes, crepes, French toast, English muffins, quesadillas, sautéed items → `pan grilled`.**
+**Rule: `grilled` = outdoor/open-flame grill, broiler grate, or waffle iron. Use `sauteed` for moderate skillet/griddle cooking with frequent movement (aromatics, vegetables, crepes/pancakes where gentle griddle heat is intended). Use `pan seared` for higher-heat direct pan contact (browned proteins, Canadian bacon, cutlets, crisped surfaces). `pan grilled` is a legacy stored value retained for existing recipes.**
 
 ### Composite recipe (component-ref) section fixes
 
@@ -338,7 +340,7 @@ Run these gates **before writing a single CSV row**. Skipping any one causes a p
 - [ ] `food_word` confirmed present in `food-portions-complete.csv` (Rule A/B/C/F/G) OR confirmed Rule D (bespoke key, absence is correct)
 - [ ] `canonical_ndb_no` identified — or explicitly confirmed as Rule D (none)
 - [ ] `dietary_category` is one of: `all`, `pollo-pesca`, `pollo`, `pesca`, `veggie`, `vegan`
-- [ ] `cooking_method` is one of: `raw`, `boiled`, `steamed`, `baked`, `fried`, `pan grilled`, `grilled`, `microwave`
+- [ ] `cooking_method` is one of: `raw`, `boiled`, `steamed`, `baked`, `fried`, `sauteed`, `pan seared`, `pan grilled` (legacy), `grilled`, `microwave`
 - [ ] Every ingredient looked up in `ingredients_ledger.csv` — missing keys identified and proposed for human approval **before** writing any row
 - [ ] For every new ingredient: NDB queried from `comboo.db` (`DataCentralCombo`), `default_display_name` confirmed, `food_word` confirmed against `food-portions-complete.csv`
 - [ ] For every new ingredient: `food-portions-complete.csv` checked for duplicate NDB — `grep NDB_NO` — before adding
@@ -794,9 +796,9 @@ This is the most common parity pitfall. Two distinct formats exist:
 
 | Context | Format | Examples |
 |---|---|---|
-| `recipes.csv` (pipeline source of truth) | pipeline format | `baked`, `pan grilled`, `boiled`, `raw` |
-| Turso `dev_recipes.cooking_method` | UI format | `Bake`, `Pan grill`, `Boil`, `No heat` |
-| `RecipeForm.svelte` `COOKING_METHODS` | UI format | `Bake`, `Pan grill`, `Boil`, `No heat` |
+| `recipes.csv` (pipeline source of truth) | pipeline format | `baked`, `sauteed`, `pan seared`, `boiled`, `raw` |
+| Turso `dev_recipes.cooking_method` | UI format | `Bake`, `Sauté`, `Pan sear`, `Boil`, `No heat` |
+| `RecipeForm.svelte` `COOKING_METHODS` | UI format | `Bake`, `Sauté`, `Pan sear`, `Boil`, `No heat` |
 
 **Rule:** `cooking_method` must be stored in UI format in Turso for all recipes — dev and community alike. Community recipes are saved through RecipeForm.svelte, which writes UI-format values. Dev recipes are inserted via `insert_new.py`, which normalizes pipeline format to UI format at insert time using `_normalize_cook_method()`.
 
@@ -809,7 +811,9 @@ This is the most common parity pitfall. Two distinct formats exist:
 | `simmer` | `Simmer` |
 | `sub-simmer` | `Sub-simmer` |
 | `braise` | `Braise` |
-| `pan grilled` | `Pan grill` |
+| `sauteed` | `Sauté` |
+| `pan seared` | `Pan sear` |
+| `pan grilled` | `Pan sear` *(legacy display only)* |
 | `grilled` | `Grill` |
 | `fried` | `Fry` |
 | `raw` | `No heat` |

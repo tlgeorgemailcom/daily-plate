@@ -49,6 +49,16 @@ import {
   type CookingMethod,
 } from '$lib/data/cookingLossModel.js';
 
+function methodStovetopTempF(method: string | undefined | null): number {
+  const m = method?.trim().toLowerCase().replace(/_/g, ' ') ?? '';
+  if (m === 'sub-simmer' || m === 'sub simmer') return 180;
+  if (m === 'simmer') return 195;
+  if (m === 'braise' || m === 'braised') return 185;
+  if (m === 'saute' || m === 'sauté' || m === 'sauteed' || m === 'sautéed') return 200;
+  if (m === 'stir fry' || m === 'stir-fried' || m === 'stir fried' || m === 'pan sear' || m === 'pan seared' || m === 'pan-seared' || m === 'sear' || m === 'seared') return 230;
+  return 212;
+}
+
 // ── Nutrient keys we actually sum (all numeric keys of NutrientRow) ───────────
 const MACRO_KEYS: Array<keyof Omit<NutrientRow, 'ndbNo' | 'longDesc' | 'fdGrpCd'>> = [
   'energy_KCal',
@@ -148,10 +158,7 @@ export function buildRecipeCommunity(
   // normalises them all to 'boiled', losing the distinction).
   const rawDish = dishCookMethod?.trim().toLowerCase() ?? '';
   const primaryIsBoilCovered = rawDish === 'boil covered' || rawDish === 'boil_covered' || rawDish === 'boiled covered' || rawDish === 'boiled_covered' || rawDish === 'boil (covered)' || rawDish === 'boiled (covered)';
-  const primaryCookTempF =
-    rawDish === 'sub-simmer' ? 180 :
-    rawDish === 'simmer'     ? 195 :
-    rawDish === 'braise'     ? 185 : 212;
+  const primaryCookTempF = methodStovetopTempF(rawDish);
   const primaryCookLidOn = rawDish === 'braise' || primaryIsBoilCovered;
 
   const sectionResults: SectionBuildResult[] = [];
@@ -265,14 +272,6 @@ export function buildRecipeCommunity(
     // Maps a prep method string to its canonical stovetop temperature °F.
     // Both 'simmer' and 'sub-simmer' map to CookingMethod 'boiled' via
     // mapDishMethodToCookingMethod, but need distinct temperatures here.
-    function prepMethodToTempF(method: string | undefined | null): number {
-      if (!method) return 212;
-      const m = method.toLowerCase();
-      if (m === 'sub-simmer') return 180;
-      if (m === 'simmer')     return 195;
-      if (m === 'braise')     return 185;  // covered — temp ≈ open 275°F oven max
-      return 212;
-    }
     function prepMethodIsLidOn(method: string | undefined | null): boolean {
       const m = method?.toLowerCase();
       return m === 'braise' || m === 'boil covered' || m === 'boil_covered' || m === 'boiled covered' || m === 'boiled_covered' || m === 'boil (covered)' || m === 'boiled (covered)';
@@ -321,7 +320,7 @@ export function buildRecipeCommunity(
           // Single call: stovetop evaporation (boilMinutes) then oven stages —
           // identical to Python calc_yield_water(stages, water, class, boil_minutes).
           yieldWater = calcYieldWater(stages, initialWaterG, fillingClass, boilMinutes,
-            prepMethodToTempF(sec.prepMethod), prepMethodIsLidOn(sec.prepMethod));
+            methodStovetopTempF(sec.prepMethod), prepMethodIsLidOn(sec.prepMethod));
         }
       } else {
         // Non-boiled prep (steamed, fried, etc.): no stovetop evap model; oven-only.

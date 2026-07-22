@@ -274,7 +274,7 @@
   const GAME_FOODS = Object.keys(FOOD_EMOJI) as FoodType[];
   const ANIMAL_TYPES: AnimalType[] = ['rabbit', 'squirrel', 'raccoon', 'bird', 'mouse', 'fox'];
   
-  const COOKING_METHODS = ['Bake', 'Bake (covered)', 'Boil', 'Boil (covered)', 'Simmer', 'Sub-simmer', 'Braise', 'Pan grill', 'Grill', 'Broil', 'Fry', 'No heat'];
+  const COOKING_METHODS = ['Bake', 'Bake (covered)', 'Boil', 'Boil (covered)', 'Simmer', 'Sub-simmer', 'Braise', 'Sauté', 'Pan sear', 'Grill', 'Broil', 'Fry', 'No heat'];
   const COOK_METHOD_DISPLAY: Record<string, string> = {
     'Boil':           'Boil (lid off)',
     'Boil (covered)': 'Boil (covered)',
@@ -284,8 +284,8 @@
     'Bake (covered)': 'Bake (covered)',
   };
   // v3.md §18.1 — lowercase enum stored in recipe_sections.csv::cooking_method.
-  const SECTION_COOKING_METHODS = ['raw', 'boiled', 'boiled covered', 'steamed', 'baked', 'baked covered', 'fried', 'pan grilled', 'grilled', 'broiled', 'microwave'];
-  const SECTION_PREP_METHODS    = ['boiled', 'boiled covered', 'simmer', 'sub-simmer', 'braise', 'steamed', 'blanched', 'baked', 'baked covered', 'par-baked', 'fried', 'pan grilled', 'grilled', 'broiled', 'marinated', 'chilled', 'microwave', 'finish'];
+  const SECTION_COOKING_METHODS = ['raw', 'boiled', 'boiled covered', 'steamed', 'baked', 'baked covered', 'fried', 'sauteed', 'pan seared', 'grilled', 'broiled', 'microwave'];
+  const SECTION_PREP_METHODS    = ['boiled', 'boiled covered', 'simmer', 'sub-simmer', 'braise', 'steamed', 'blanched', 'baked', 'baked covered', 'par-baked', 'fried', 'sauteed', 'pan seared', 'grilled', 'broiled', 'marinated', 'chilled', 'microwave', 'finish'];
   // Display labels for prep methods — stored values are clean identifiers;
   // UI annotations clarify open-pot vs covered assumption for the water model.
   const PREP_METHOD_DISPLAY: Record<string, string> = {
@@ -307,7 +307,7 @@
 
   // Maps pipeline cooking_method values (past-tense / lowercase) to the UI
   // display labels used in COOKING_METHODS. Handles baked→Bake, boiled→Boil,
-  // fried→Fry, pan grilled→Pan grill, grilled→Grill, raw→No heat.
+  // fried→Fry, legacy pan grilled→Pan sear, grilled→Grill, raw→No heat.
   function normalizeCookMethodLabel(raw: string): string {
     const m = (raw ?? '').trim().toLowerCase();
     const MAP: Record<string, string> = {
@@ -323,7 +323,14 @@
       'boiled_covered':  'Boil (covered)',
       'boiled (covered)': 'Boil (covered)',
       'fried':       'Fry',
-      'pan grilled': 'Pan grill',
+      'saute':       'Sauté',
+      'sauté':       'Sauté',
+      'sauteed':     'Sauté',
+      'sautéed':     'Sauté',
+      'pan grilled': 'Pan sear',
+      'pan_seared':  'Pan sear',
+      'pan seared':  'Pan sear',
+      'pan-seared':  'Pan sear',
       'grilled':     'Grill',
       'broiled':     'Broil',
       'raw':         'unheated',
@@ -2711,7 +2718,7 @@
         {#if sec.prepMethod === 'finish'}
           <p class="finish-info-note">ℹ️ Stirred in or added after the primary cook is complete — e.g. cheese, cream, finishing butter, whipped cream. No heat is applied; nutrition is calculated from the raw ingredient weight.</p>
         {/if}
-        {#if sec.prepMethod && ['boiled','boiled covered','simmer','sub-simmer','braise','steamed','blanched','baked','par-baked','fried','pan grilled','grilled','broiled','microwave'].includes(sec.prepMethod)}
+        {#if sec.prepMethod && ['boiled','boiled covered','simmer','sub-simmer','braise','steamed','blanched','baked','par-baked','fried','sauteed','pan seared','pan grilled','grilled','broiled','microwave'].includes(sec.prepMethod)}
           <div class="section-times-bar">
             <label class="section-time-field" title="Stovetop prep time. Use boiled covered or braise for covered cooking.">
               <span class="section-time-label">Prep (min)</span>
@@ -3080,7 +3087,8 @@
               <li><strong>Simmer (lid off)</strong> — 195 °F, uncovered. Sauce reductions, soups. <em>Lid on? Choose Braise instead.</em></li>
               <li><strong>Sub-simmer (lid off)</strong> — 180 °F, uncovered. Concentrating stock. <em>Lid on? Choose Braise instead.</em></li>
               <li><strong>Braise (covered)</strong> — 185 °F, lid on. Steam recondenses on the lid and drips back; only ~5 % of open-pot evaporation escapes. Use for any covered braise, pot roast, or Dutch-oven method.</li>
-              <li><strong>Pan grill</strong> — stovetop skillet or griddle; dry heat, no water model applied.</li>
+              <li><strong>Sauté</strong> — moderate stovetop skillet heat; use for aromatics and frequently stirred ingredients.</li>
+              <li><strong>Pan sear</strong> — high stovetop skillet heat; use for browning proteins or other ingredients with strong direct pan contact.</li>
               <li><strong>Grill</strong> — outdoor grill, broiler, or grate; dry heat, no water model applied.</li>
               <li><strong>Fry</strong> — shallow or deep fry; dry heat, no water model applied.</li>
             </ul>
@@ -3097,7 +3105,7 @@
               <li><strong>braise (covered)</strong> — 185 °F, <em>lid on</em>. Model uses only 5 % of open-pot evaporation (steam recondenses on lid and drips back). Use for any covered braise, covered stew, or Dutch-oven prep step.</li>
               <li><strong>steamed</strong> — steam basket or steamer insert.</li>
               <li><strong>baked / par-baked</strong> — pre-baked separately (e.g. blind-baking a pie crust). Enter Prep (min) and Prep (°F).</li>
-              <li><strong>pan grilled / fried</strong> — sautéed or fried before combining. If fat drains off and is discarded, the model removes those calories from that section.</li>
+              <li><strong>sauté / pan sear / fry</strong> — skillet or oil cooking before combining. If fat drains off and is discarded, the model removes those calories from that section.</li>
               <li><strong>marinated / chilled</strong> — cold prep only; no heat calculations apply.</li>
               <li><strong>microwave</strong> — microwave oven. Dry heat; no evaporation model is applied. Enter the actual microwave time for record-keeping, but the model does not subtract moisture for this step.</li>
             </ul>

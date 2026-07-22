@@ -591,6 +591,8 @@ export function mapDishMethodToCookingMethod(cookMethod: string | null): Cooking
 
   const m = cookMethod.toLowerCase();
 
+  if (m === 'pan grilled' || m === 'pan_grilled') return 'fried';
+
   if (/microwav/.test(m)) return 'microwave';
 
   if (/steam/.test(m)) return 'steamed';
@@ -600,8 +602,8 @@ export function mapDishMethodToCookingMethod(cookMethod: string | null): Cooking
   ) return 'grilled';
 
   if (
-    /pan.?fr|stir.?fr|saut|scrambl|pan.?brow|pan.?broil|fast.?fr|fr.*flour|fr.*batt|batter.*fr|french.?fr|breaded.*fr|reheated.*bread|par.?fr|home.?prep/.test(m) ||
-    m === 'fried' || m === 'fry' || m === 'pan grilled' || m === 'pan_grilled'
+    /pan.?fr|stir.?fr|saut|scrambl|pan.?brow|pan.?broil|pan.?sear|\bsear|fast.?fr|fr.*flour|fr.*batt|batter.*fr|french.?fr|breaded.*fr|reheated.*bread|par.?fr|home.?prep/.test(m) ||
+    m === 'fried' || m === 'fry' || m === 'sauté' || m === 'sautéed' || m === 'pan sear'
   ) return 'fried';
 
   if (
