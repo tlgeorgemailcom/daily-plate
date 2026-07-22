@@ -121,7 +121,7 @@ The first line after the recipe name specifies the **primary assembled cook** �
 | Spec line | `recipes.csv` effect | Form top bar |
 |---|---|---|
 | `Top bar: blank` | `cooking_method=''`, `cook_minutes=''`, `cook_temp_f=''` | blank |
-| `Top bar: Simmer (lid off) \| 90 min` | `cooking_method='simmer'`, `cook_minutes=90` | "Simmer · 90 min" |
+| `Top bar: Simmer (uncovered) \| 90 min` | `cooking_method='simmer'`, `cook_minutes=90` | "Simmer · 90 min" |
 | `Top bar: Bake \| 375 \| 18 min` | `cooking_method='baked'`, `cook_temp_f=375`, `cook_minutes=18` | "Bake · 18 min · 375°F" |
 | `Top bar: Bake \| 450 \| 20 min` | `cooking_method='baked'`, `cook_temp_f=450`, `cook_minutes=20` | "Bake · 20 min · 450°F" |
 
@@ -166,8 +166,8 @@ Prep: Section Label | Added after cooking | ingredients: ingredient, ingredient
 |---|---|---|---|---|
 | `boiled` | `boiled` | `boiled` | time in minutes | *(none — absorption model for pasta/rice/beans)* |
 | `boiled (covered)` | `boiled covered` | `boiled covered` | time in minutes | *(none — absorption model for covered rice/grains)* |
-| `simmer (lid off)` | `simmer` | `simmer` | time in minutes | `simmer_sauce` for butter/cream/sauce; none for plain liquid reduction |
-| `sub-simmer (lid off)` | `sub-simmer` | `sub-simmer` | time in minutes | `simmer_sauce` for cream/butter sauces |
+| `simmer (uncovered)` | `simmer` | `simmer` | time in minutes | `simmer_sauce` for butter/cream/sauce; none for plain liquid reduction |
+| `sub-simmer (uncovered)` | `sub-simmer` | `sub-simmer` | time in minutes | `simmer_sauce` for cream/butter sauces |
 | `sauteed` | `sauteed` | `sauteed` | time in minutes | none for aromatics/short sautés; `fried_meat` for ground meat/sausage |
 | `pan seared` | `pan seared` | `pan seared` | time in minutes | `pan_grilled_chicken` (chicken/fish); `fried_meat` (ground meat, sausage, bacon) |
 | `pan grilled` | `pan grilled` | `pan grilled` | time in minutes | Legacy value only; keep existing recipes unchanged unless auditing them intentionally |
@@ -188,7 +188,7 @@ Prep: Section Label | Added after cooking | ingredients: ingredient, ingredient
 | `Prep: Marinara Sauce \| unheated` | `''` | `baked` | `375:18` | *(empty)* |
 | `Prep: Cheese layer \| baked (covered) \| 375 \| 25 min` | `baked covered` | `baked` | `375:18` | *(empty)* + own `cook_stages=375:25` |
 
-**Example — Spaghetti Bolognese (`Top bar: Simmer (lid off) | 90 min`):**
+**Example — Spaghetti Bolognese (`Top bar: Simmer (uncovered) | 90 min`):**
 
 | Spec line | pm | cm | boil_stages |
 |---|---|---|---|
@@ -205,9 +205,9 @@ Prep: Section Label | Added after cooking | ingredients: ingredient, ingredient
 
 ---
 
-#### `(lid off)` qualifier
+#### `(uncovered)` qualifier
 
-`simmer (lid off)` and `sub-simmer (lid off)` are display labels — the `(lid off)` part is not stored anywhere. It just confirms that the open-pot evaporation model applies (the default for `simmer` and `sub-simmer`). The CSV value is simply `simmer` or `sub-simmer`.
+`simmer (uncovered)` and `sub-simmer (uncovered)` are display labels — the `(uncovered)` part is not stored anywhere. It just confirms that the open-pot evaporation model applies (the default for `simmer` and `sub-simmer`). The CSV value is simply `simmer` or `sub-simmer`.
 
 `boiled (covered)` stores as `boiled covered`. It uses boiled retention at 212°F plus the covered-lid evaporation factor (5% of open-pot evaporation). Use it for covered rice, covered grains, or covered boiling prep steps where `braise` would be semantically wrong.
 
