@@ -101,10 +101,13 @@
     const label = String(autoLabel ?? s.section_label ?? s.label ?? '');
 
     // ── cook method (physics driver, not shown in section header) ──────────────
-    const cookM = String(s.cook_method ?? s.cookMethod ?? s.cooking_method ?? 'raw');
+    const cookM_raw = String(s.cook_method ?? s.cookMethod ?? s.cooking_method ?? 'raw');
+    // Normalize legacy alias: 'pan grilled' stored in Turso → canonical 'pan seared'
+    const cookM = cookM_raw === 'pan grilled' ? 'pan seared' : cookM_raw;
 
     // ── prep method (what the section does BEFORE the assembled cook) ──────────
-    const prepV = String(s.prep_method ?? s.prepMethod ?? '');
+    const prepV_raw = String(s.prep_method ?? s.prepMethod ?? '');
+    const prepV = prepV_raw === 'pan grilled' ? 'pan seared' : prepV_raw;
     const prepMethod = ((): string => {
       if (prepV && prepV !== 'raw') return prepV;                // explicit pre-step
       const isBaked = cookM === 'baked' || cookM === 'par-baked';
