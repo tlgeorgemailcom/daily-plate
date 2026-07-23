@@ -298,6 +298,7 @@
     grilled_batter: 'waffle-iron batter',
     pan_grilled_chicken: 'pan-seared chicken or fish fillet',
     pan_grilled_steak: 'pan-seared thin steak',
+    fried_chicken: 'battered fried protein (chicken proxy)',
   };
 
   function formatFillClassLabel(key: string): string {
