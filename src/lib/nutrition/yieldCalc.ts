@@ -59,6 +59,8 @@ export const BINDING: Record<string, number> = {
   // ── Stovetop / fried / grilled fill classes ─────────────────────────────
   // Calibrated from locked BKFST values using stovetop evaporation model.
   simmer_sauce:       0.127, // simmered gravy/sauce (195°F×5min → yfw=0.92)
+  sauteed_vegetable:  0.127, // moderate-heat sauteed aromatics/vegetables (garlic, onion, shallot, mushrooms)
+                             // 200°F×2min → yfw≈0.956; 200°F×9min → yfw≈0.892. Same binding as simmer_sauce, semantic split.
   pan_grilled_batter: 0.206, // pan-seared bread/batter (230°F×6min → yfw≈0.834)
   fried_meat:         0.272, // fried ground meat patty/sausage (375°F×8min → yfw=0.73)
   fried_ground_beef:  0.544, // pan-browned ground beef crumbles (212°F×7min → yfw=0.5606)

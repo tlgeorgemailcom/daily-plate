@@ -168,7 +168,7 @@ Prep: Section Label | Added after cooking | ingredients: ingredient, ingredient
 | `boiled (covered)` | `boiled covered` | `boiled covered` | time in minutes | *(none — absorption model for covered rice/grains)* |
 | `simmer (uncovered)` | `simmer` | `simmer` | time in minutes | `simmer_sauce` for butter/cream/sauce; none for plain liquid reduction |
 | `sub-simmer (uncovered)` | `sub-simmer` | `sub-simmer` | time in minutes | `simmer_sauce` for cream/butter sauces |
-| `sauteed` | `sauteed` | `sauteed` | time in minutes | none for aromatics/short sautés; `fried_meat` for ground meat/sausage |
+| `sauteed` | `sauteed` | `sauteed` | time in minutes | `sauteed_vegetable` for garlic/onion/shallot/mushroom/vegetable sautés; `fried_meat` for ground meat/sausage |
 | `pan seared` | `pan seared` | `pan seared` | time in minutes | `pan_grilled_chicken` (chicken/fish); `fried_meat` (ground meat, sausage, bacon) |
 | `baked` | `baked` | `baked` | *(empty — use `cook_stages`)* | `pastry` (doughs); `casserole_baked` (assembled bakes); `cake_batter` (batters) |
 | `baked (covered)` | `baked covered` | `baked covered` | *(empty — use `cook_stages`)* | `casserole_baked` |
@@ -231,7 +231,7 @@ Without a `fill_class`, `calc_yield_water` returns `yfw=1.0` for all stovetop se
 | Section contents | `fill_class` |
 |---|---|
 | Butter + cream sauce, simmering | `simmer_sauce` |
-| Onion, aromatics, short sauté | *(none — negligible water loss at 1–2 min)* |
+| Garlic, onion, shallot, mushroom, or vegetable sauté | `sauteed_vegetable` |
 | Ground beef, sausage (fat stays or drains) | `fried_meat` |
 | Chicken breast, fish fillet (pan seared) | `pan_grilled_chicken` |
 | Battered/breaded fried cutlet or fillet protein (chicken fried steak, schnitzel, Milanese, fried fish fillet) | `fried_chicken` |
@@ -935,6 +935,7 @@ Sections marked **two-stage** have `cook_method` = simmer/braise/baked (the asse
 | ENTR_015 | Beef Steak Diane | shallots_garlic | sauteed | Shallots and Garlic |
 | ENTR_015 | Beef Steak Diane | mushrooms | sauteed | Mushrooms |
 | ENTR_015 | Beef Steak Diane | brandy | sauteed | Brandy |
+| PASTA_007 | Lemon Pasta | garlic | sauteed | Garlic |
 
 #### Batch A — medium-heat-only recipes
 
@@ -944,7 +945,6 @@ Sections marked **two-stage** have `cook_method` = simmer/braise/baked (the asse
 | ENTR_095 | Pork Fried Rice | filling | pan seared | Filling |
 | ENTR_110 | Seafood Paella | paella | pan seared | Seafood and Sofrito |
 | ENTR_120 | Vegetarian Shakshuka | shakshuka | pan seared | Shakshuka |
-| PASTA_007 | Lemon Pasta | garlic | pan seared | Garlic |
 | PASTA_010 | Cheese Ravioli | wilted_spinach | pan seared | Wilt spinach |
 | PASTA_010 | Cheese Ravioli | brown_butter | pan seared | Brown butter |
 | PASTA_010 | Cheese Ravioli | garlic_sage | pan seared | Garlic sage |

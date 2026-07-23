@@ -117,6 +117,9 @@ BINDING: dict[str, float] = {
     # Calibrated from locked BKFST values using stovetop_rate_constant(temp).
     # These use the boil-path (boil_minutes) in calc_yield_water, not oven stages.
     "simmer_sauce":       0.127, # simmered gravy/sauce — BKFST_012 gravy: 195°F×5min → yfw=0.92
+    "sauteed_vegetable":  0.127, # moderate-heat sauteed aromatics/vegetables (garlic, onion, shallot, mushrooms)
+                                  # 200°F×2min → yfw≈0.956; 200°F×9min → yfw≈0.892.
+                                  # Same binding as simmer_sauce, separated so sauteed vegetable sections are explicit.
     "pan_grilled_batter": 0.206, # pan-seared bread/batter — BKFST_004 English muffin: 230°F×6min → yfw≈0.834
     "fried_meat":         0.272, # fried ground meat patty/sausage — BKFST_015 sausage: 375°F×8min → yfw=0.73
     "fried_ground_beef":  0.544, # pan-browned ground beef crumbles — 212°F×7min → yfw=0.5606
