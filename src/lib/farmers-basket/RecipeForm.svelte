@@ -5,6 +5,7 @@
   import FoodIcon from '$lib/farmers-basket/FoodIcon.svelte';
   import { FOODS } from '$lib/data/food-portions';
   import type { Food as FoodData } from '$lib/data/food-portions';
+  import { BINDING } from '$lib/nutrition/yieldCalc';
 
   /** Extends FoodData with optional recipe-result fields returned by /api/recipes/food-search */
   type RecipeSearchItem = FoodData & {
@@ -288,6 +289,10 @@
   // v3.md §18.1 — lowercase enum stored in recipe_sections.csv::cooking_method.
   const SECTION_COOKING_METHODS = ['raw', 'boiled', 'boiled covered', 'steamed', 'baked', 'baked covered', 'fried', 'deep-fried', 'sauteed', 'stir-fried', 'pan seared', 'grilled', 'broiled', 'microwave'];
   const SECTION_PREP_METHODS    = ['boiled', 'boiled covered', 'simmer', 'sub-simmer', 'braise', 'steamed', 'blanched', 'baked', 'baked covered', 'par-baked', 'fried', 'deep-fried', 'sauteed', 'stir-fried', 'pan seared', 'grilled', 'broiled', 'microwave', 'finish'];
+  const FILL_CLASS_OPTIONS = Object.entries(BINDING).map(([key, coefficient]) => ({
+    key,
+    label: `${key} (${coefficient.toFixed(3)})`,
+  }));
   // Display labels for prep methods — stored values are clean identifiers;
   // UI annotations clarify open-pot vs covered assumption for the water model.
   const PREP_METHOD_DISPLAY: Record<string, string> = {
@@ -2779,19 +2784,12 @@
                 class="form-input"
               >
                 <option value="">— none —</option>
-                <option value="dense_fruit">dense_fruit — apple/pear open (0.94)</option>
-                <option value="thickened_fruit">thickened_fruit — cornstarch berry/cherry (0.25)</option>
-                <option value="moderate_fruit">moderate_fruit — stone fruit partial (0.40)</option>
-                <option value="strudel_fruit">strudel_fruit — wrapped pastry (0.55)</option>
-                <option value="mincemeat">mincemeat — dried fruit + fat (0.57)</option>
-                <option value="syrup_custard">syrup_custard — corn syrup/egg (0.53)</option>
-                <option value="vegetable_custard">vegetable_custard — pumpkin/squash (0.12)</option>
-                <option value="dairy_custard">dairy_custard — cream/milk/egg (0.33)</option>
-                <option value="starch_custard">starch_custard — cornstarch custard (0.099)</option>
-                <option value="cake_batter">cake_batter — flour/butter/egg (0.74)</option>
-                <option value="pastry">pastry — blind-baked crust (0.782)</option>
-                <option value="crumb_crust">crumb_crust — cookie/cracker crust (0.432)</option>
-                <option value="none">none — no-bake / cold-set (0.00)</option>
+                {#if sec.fillClass && !(sec.fillClass in BINDING)}
+                  <option value={sec.fillClass}>{sec.fillClass} — unknown current value</option>
+                {/if}
+                {#each FILL_CLASS_OPTIONS as option}
+                  <option value={option.key}>{option.label}</option>
+                {/each}
               </select>
             </label>
             <div class="advanced-field advanced-stages" style="grid-column: 1 / -1"
