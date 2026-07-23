@@ -107,6 +107,8 @@ export const BINDING: Record<string, number> = {
   wilt_squeezed_spinach:  1.480, // pan-wilted then hand-squeezed spinach (180°F×3min → yfw=0.39)
                               // binding > 1.0 extrapolates beyond pure evaporation to model mechanical squeezing.
                               // spinach_raw boil_yfw=0.961 (natural boil); this fill_class overrides for wilt+squeeze.
+  scalded_squeezed_spinach: 2.312, // boiling-water pour-over spinach, drained and squeezed (212°F×1min → yfw≈0.514)
+                              // Calibrated from TodayPage test: 90g raw spinach → 50g squeezed. Do not reuse for cabbage, dairy, peeling, or green vegetables without calibration.
   // ── Oven-baked proteins ──────────────────────────────────────────────────
   // Calibrated from USDA raw/cooked NDB pairs; use oven stages (cook_stages).
   baked_pork:         0.880, // slow-roasted pork shoulder/butt (300°F×100min → yfw=0.60)

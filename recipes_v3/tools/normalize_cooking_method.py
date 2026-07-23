@@ -28,6 +28,7 @@ _MAP = {
     "bake covered":   "Bake (covered)",
     "boiled":         "Boil",
     "boiled covered": "Boil (covered)",
+    "scalded":        "Scalded",
     "simmer":         "Simmer",
     "sub-simmer":     "Sub-simmer",
     "braise":         "Braise",

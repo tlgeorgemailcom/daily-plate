@@ -63,6 +63,8 @@ def _method_stovetop_temp(method: str | None, *, bake_covered_temp: float | None
     m = (method or "").strip().lower().replace("_", " ")
     if m in ("sub-simmer", "sub simmer"):
         return 180.0
+    if m in ("scald", "scalded"):
+        return 212.0
     if m == "simmer":
         return 195.0
     if m in ("braise", "braised"):

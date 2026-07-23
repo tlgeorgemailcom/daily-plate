@@ -171,6 +171,8 @@ BINDING: dict[str, float] = {
     "wilt_squeezed_spinach":  1.480, # pan-wilted then hand-squeezed spinach — SIDE_030: 180°F×3min → yfw=0.39
                                   # binding > 1.0 is a valid extrapolation: squeeze removes more water than pure evaporation.
                                   # spinach_raw boil_yfw=0.961 (natural boil, no squeeze); this fill_class overrides it for wilt+squeeze.
+    "scalded_squeezed_spinach": 2.312, # boiling-water pour-over spinach, drained and squeezed — 212°F×1min → yfw≈0.514
+                                  # Calibrated from TodayPage test: 90g raw spinach → 50g squeezed. Do not reuse for cabbage, dairy, peeling, or green vegetables without calibration.
     # ── Oven-baked proteins ────────────────────────────────────────────────────
     # Calibrated from USDA raw/cooked NDB pair; use oven stages (cook_stages).
     "baked_pork":         0.880, # slow-roasted pork shoulder/butt — ENTR_094/SAND_032: 300°F×100min → yfw=0.60

@@ -52,6 +52,7 @@ import {
 function methodStovetopTempF(method: string | undefined | null): number {
   const m = method?.trim().toLowerCase().replace(/_/g, ' ') ?? '';
   if (m === 'sub-simmer' || m === 'sub simmer') return 180;
+  if (m === 'scald' || m === 'scalded') return 212;
   if (m === 'simmer') return 195;
   if (m === 'braise' || m === 'braised') return 185;
   if (m === 'saute' || m === 'sauté' || m === 'sauteed' || m === 'sautéed') return 200;

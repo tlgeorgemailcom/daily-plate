@@ -277,7 +277,7 @@
   const GAME_FOODS = Object.keys(FOOD_EMOJI) as FoodType[];
   const ANIMAL_TYPES: AnimalType[] = ['rabbit', 'squirrel', 'raccoon', 'bird', 'mouse', 'fox'];
   
-  const COOKING_METHODS = ['Bake', 'Bake (covered)', 'Boil', 'Boil (covered)', 'Simmer', 'Sub-simmer', 'Braise', 'Steam', 'Microwave', 'Sauté', 'Stir-fry', 'Pan sear', 'Grill', 'Broil', 'Fry', 'Deep-fry', 'No heat'];
+  const COOKING_METHODS = ['Bake', 'Bake (covered)', 'Boil', 'Boil (covered)', 'Scalded', 'Simmer', 'Sub-simmer', 'Braise', 'Steam', 'Microwave', 'Sauté', 'Stir-fry', 'Pan sear', 'Grill', 'Broil', 'Fry', 'Deep-fry', 'No heat'];
   const COOK_METHOD_DISPLAY: Record<string, string> = {
     'Boil':           'Boil (uncovered)',
     'Boil (covered)': 'Boil (covered)',
@@ -287,8 +287,8 @@
     'Bake (covered)': 'Bake (covered)',
   };
   // v3.md §18.1 — lowercase enum stored in recipe_sections.csv::cooking_method.
-  const SECTION_COOKING_METHODS = ['raw', 'boiled', 'boiled covered', 'steamed', 'baked', 'baked covered', 'fried', 'deep-fried', 'sauteed', 'stir-fried', 'pan seared', 'grilled', 'broiled', 'microwave'];
-  const SECTION_PREP_METHODS    = ['boiled', 'boiled covered', 'simmer', 'sub-simmer', 'braise', 'steamed', 'blanched', 'baked', 'baked covered', 'par-baked', 'fried', 'deep-fried', 'sauteed', 'stir-fried', 'pan seared', 'grilled', 'broiled', 'microwave', 'finish'];
+  const SECTION_COOKING_METHODS = ['raw', 'boiled', 'boiled covered', 'scalded', 'steamed', 'baked', 'baked covered', 'fried', 'deep-fried', 'sauteed', 'stir-fried', 'pan seared', 'grilled', 'broiled', 'microwave'];
+  const SECTION_PREP_METHODS    = ['boiled', 'boiled covered', 'scalded', 'simmer', 'sub-simmer', 'braise', 'steamed', 'blanched', 'baked', 'baked covered', 'par-baked', 'fried', 'deep-fried', 'sauteed', 'stir-fried', 'pan seared', 'grilled', 'broiled', 'microwave', 'finish'];
 
   // Fill class keys are persisted pipeline identifiers. Keep them stable, but
   // show human labels because this control may eventually be exposed to users.
@@ -346,6 +346,7 @@
       'boiled covered':  'Boil (covered)',
       'boiled_covered':  'Boil (covered)',
       'boiled (covered)': 'Boil (covered)',
+      'scalded':     'Scalded',
       'fried':       'Fry',
       'saute':       'Sauté',
       'sauté':       'Sauté',

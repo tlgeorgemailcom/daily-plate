@@ -1717,6 +1717,7 @@
       'baked covered': 'Bake (covered)',
       'boiled':        'Boil (uncovered)',
       'boiled covered': 'Boil (covered)',
+      'scalded':       'Scalded',
       'simmer':      'Simmer (uncovered)',
       'sub-simmer':  'Sub-simmer (uncovered)',
       'braise':      'Braise (covered)',

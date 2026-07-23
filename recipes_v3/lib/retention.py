@@ -64,6 +64,8 @@ COOK_METHOD_ALIASES = {
     "poach":      "boiled",
     "blanch":     "boiled",
     "blanched":   "boiled",
+    "scald":      "boiled",
+    "scalded":    "boiled",
     "fry":        "fried",
     "fried":      "fried",
     "saute":      "fried",

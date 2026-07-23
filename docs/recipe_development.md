@@ -166,6 +166,7 @@ Prep: Section Label | Added after cooking | ingredients: ingredient, ingredient
 |---|---|---|---|---|
 | `boiled` | `boiled` | `boiled` | time in minutes | *(none — absorption model for pasta/rice/beans)* |
 | `boiled (covered)` | `boiled covered` | `boiled covered` | time in minutes | *(none — absorption model for covered rice/grains)* |
+| `scalded` | `scalded` | `scalded` | time in minutes | calibrated food-specific fill class when water loss is not simple boiling |
 | `simmer (uncovered)` | `simmer` | `simmer` | time in minutes | `simmer_sauce` for butter/cream/sauce; none for plain liquid reduction |
 | `sub-simmer (uncovered)` | `sub-simmer` | `sub-simmer` | time in minutes | `simmer_sauce` for cream/butter sauces |
 | `sauteed` | `sauteed` | `sauteed` | time in minutes | `sauteed_aromatic` for garlic/onion/shallot/sofrito/sliced mushroom aromatics; `fried_meat` for ground meat/sausage |
@@ -244,6 +245,8 @@ Without a `fill_class`, `calc_yield_water` returns `yfw=1.0` for all stovetop se
 | Pizza dough / pastry crust | `pastry` or `thin_pizza_crust` |
 | Pizza cheese topping | `pizza_cheese_topping` |
 | Spinach wilted in pan | `wilt_squeezed_spinach` |
+| Spinach scalded with boiling water, drained, and squeezed | `scalded_squeezed_spinach` |
+| Other scalded foods (cabbage, milk, cream, tomatoes/peaches for peeling, poultry skin, meat tenderizing, green beans/broccoli color-setting) | Calibrate a distinct fill class only when the scalding changes retained water or edible yield |
 | Vegetables roasted | `roasted_vegetable` |
 
 `fried_chicken` is a legacy class name, not a poultry-only rule. It is calibrated to battered chicken and currently serves only as a proxy for battered/breaded protein cutlets or fillets with similar crust and thickness. Do not assume battered fish, shrimp, chicken, and chicken-fried steak have identical moisture loss; calibrate separate classes when the recipe shape or protein structure differs enough to matter. Do not use it for ground meat patties, loose sausage, or bacon; those remain `fried_meat`.
@@ -342,7 +345,7 @@ Run these gates **before writing a single CSV row**. Skipping any one causes a p
 - [ ] `food_word` confirmed present in `food-portions-complete.csv` (Rule A/B/C/F/G) OR confirmed Rule D (bespoke key, absence is correct)
 - [ ] `canonical_ndb_no` identified — or explicitly confirmed as Rule D (none)
 - [ ] `dietary_category` is one of: `all`, `pollo-pesca`, `pollo`, `pesca`, `veggie`, `vegan`
-- [ ] `cooking_method` is one of: `raw`, `boiled`, `steamed`, `baked`, `fried`, `sauteed`, `pan seared`, `grilled`, `microwave`
+- [ ] `cooking_method` is one of: `raw`, `boiled`, `scalded`, `steamed`, `baked`, `fried`, `sauteed`, `pan seared`, `grilled`, `microwave`
 - [ ] Every ingredient looked up in `ingredients_ledger.csv` — missing keys identified and proposed for human approval **before** writing any row
 - [ ] For every new ingredient: NDB queried from `comboo.db` (`DataCentralCombo`), `default_display_name` confirmed, `food_word` confirmed against `food-portions-complete.csv`
 - [ ] For every new ingredient: `food-portions-complete.csv` checked for duplicate NDB — `grep NDB_NO` — before adding
@@ -404,7 +407,7 @@ Required columns and constraints:
 | `dietary_category` | One of: `all`, `pollo-pesca`, `pollo`, `pesca`, `veggie`, `vegan` |
 | `link_type` | `builtin` |
 | `sr_rule` | `Rule A`, `Rule B`, `Rule C`, `Rule D`, `Rule F`, or `Rule G` — full prefix required, never bare letter |
-| `cooking_method` | One of: `raw`, `boiled`, `steamed`, `baked`, `fried`, `sauteed`, `pan seared`, `grilled`, `microwave` |
+| `cooking_method` | One of: `raw`, `boiled`, `scalded`, `steamed`, `baked`, `fried`, `sauteed`, `pan seared`, `grilled`, `microwave` |
 | `yield_factor_water` | Calibrated to canonical or physics model — see yield factor reference in CLAUDE.md |
 | `yield_factor_fat` | `1.0` unless fat drains away (ground beef, pan-fried sausage) |
 | `yield_factor_protein` | `1.0` unless stock/broth (use `0.366` or `0.395`) |
@@ -800,7 +803,7 @@ This is the most common parity pitfall. Two distinct formats exist:
 |---|---|---|
 | `recipes.csv` (pipeline source of truth) | pipeline format | `baked`, `sauteed`, `pan seared`, `boiled`, `raw` |
 | Turso `dev_recipes.cooking_method` | UI format | `Bake`, `Sauté`, `Pan sear`, `Boil`, `No heat` |
-| `RecipeForm.svelte` `COOKING_METHODS` | UI format | `Bake`, `Sauté`, `Pan sear`, `Boil`, `No heat` |
+| `RecipeForm.svelte` `COOKING_METHODS` | UI format | `Bake`, `Sauté`, `Scalded`, `Pan sear`, `Boil`, `No heat` |
 
 **Rule:** `cooking_method` must be stored in UI format in Turso for all recipes — dev and community alike. Community recipes are saved through RecipeForm.svelte, which writes UI-format values. Dev recipes are inserted via `insert_new.py`, which normalizes pipeline format to UI format at insert time using `_normalize_cook_method()`.
 
@@ -814,6 +817,7 @@ This is the most common parity pitfall. Two distinct formats exist:
 | `sub-simmer` | `Sub-simmer` |
 | `braise` | `Braise` |
 | `sauteed` | `Sauté` |
+| `scalded` | `Scalded` |
 | `pan seared` | `Pan sear` |
 | `grilled` | `Grill` |
 | `fried` | `Fry` |
@@ -948,9 +952,9 @@ Sections marked **two-stage** have `cook_method` = simmer/braise/baked (the asse
 | ENTR_095 | Pork Fried Rice | filling | pan seared | Filling |
 | ENTR_110 | Seafood Paella | paella | pan seared | Seafood and Sofrito |
 | ENTR_120 | Vegetarian Shakshuka | shakshuka | pan seared | Shakshuka |
-| PASTA_010 | Cheese Ravioli | wilted_spinach | pan seared | Wilt spinach |
-| PASTA_010 | Cheese Ravioli | brown_butter | pan seared | Brown butter |
-| PASTA_010 | Cheese Ravioli | garlic_sage | pan seared | Garlic sage |
+| PASTA_010 | Cheese Ravioli | wilted_spinach | scalded | Wilt spinach |
+| PASTA_010 | Cheese Ravioli | brown_butter | sauteed | Brown butter |
+| PASTA_010 | Cheese Ravioli | garlic_sage | sauteed | Garlic sage |
 | SAND_042 | French Dip | onion_saute | *(broil cm)* two-stage | Sautéed onion |
 | SAND_059 | Mushroom Swiss Burger | onion | pan seared | Caramelized onion |
 | SAND_059 | Mushroom Swiss Burger | mushrooms | pan seared | Mushrooms |
