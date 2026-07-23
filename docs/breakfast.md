@@ -20,11 +20,11 @@ Prep: Milk gravy | 5 min | simmer(lid off)
 
 7. Eggs Benedict | no primary cook
 Prep: Poached egg | 3 min | simmer (lid off)
-Prep: English muffin | 6 min | pan grilled
-Prep: Canadian bacon | 2 min | pan grilled
+Prep: English muffin | 6 min | pan seared
+Prep: Canadian bacon | 2 min | pan seared
 Prep: Hollandaise sauce | 3 min | simmer (lid off)
 
-8. French Toast | 4 min | Pan grill
+8. French Toast | 4 min | Pan sear
 
 9. Oatmeal | 5 min | Boil (lid off)
 
@@ -40,36 +40,36 @@ Prep: Hollandaise sauce | 3 min | simmer (lid off)
 
 15. Burrito with beans
 Need to separate burrito from beans creating 2 preps
-Burrito | 1 min | pan grilled
-Beans | 3 min | pan grilled
+Burrito | 1 min | pan seared
+Beans | 3 min | pan seared
 
 
 16. Burrito with beans and cheese
 No top bar
-Burrito | 1 min | pan grilled
-Beans | 3 min | pan grilled
+Burrito | 1 min | pan seared
+Beans | 3 min | pan seared
 Cheese | no heat
 
 
 17. Burrito with cheese
 Top bar blank
-Prep: Burrito | 1 min | pan grilled
+Prep: Burrito | 1 min | pan seared
 Prep: cheese | no heat
 
 18. Egg burrito | no primary
 Top bar blank
-Prep: Burrito | 1 min | pan grilled
-Prep: Eggs | 3 min | pan grilled
+Prep: Burrito | 1 min | pan seared
+Prep: Eggs | 3 min | pan seared
 
 
 19. Beef and cheese burrito
-Prep: Ground beef | 6 min | pan grilled
-Prep: Flour tortilla | 1 min | pan grilled
+Prep: Ground beef | 6 min | pan seared
+Prep: Flour tortilla | 1 min | pan seared
 Prep: Cheese | no heat
 
 
 20. Breakfast burrito with eggs, cheese, and potatoes
-Prep: Flour tortilla | 1 min | pan grilled
+Prep: Flour tortilla | 1 min | pan seared
 Prep: Eggs | 2 min | fried
 Prep: Cheese | no heat
 Prep: Potatoes | 9 min | fried
@@ -116,26 +116,26 @@ Prep: Egg | 4 min | simmer (lid off)
 
 34. Croissant Egg & Cheese Sandwich
 Top bar blank
-Prep: Eggs | 2 min | pan grilled
+Prep: Eggs | 2 min | pan seared
 Prep: Assembly | no heat
 
 35. Croissant Bacon, Egg & Cheese Sandwich
 top bar blank
-Prep: Eggs | 2 min | pan grilled
+Prep: Eggs | 2 min | pan seared
 Prep: Assembly | no heat
 
 36. Croissant Sausage, Egg & Cheese Sandwich
 Top bar blank
-Prep: Sausage | 3 min | pan grilled
-Prep: Eggs | 3 min | pan grilled
+Prep: Sausage | 3 min | pan seared
+Prep: Eggs | 3 min | pan seared
 Prep: Assembly | no heat
 
 
 
 37. Croissant Ham, Egg & Cheese Sandwich
 Top bar blank
-Prep: Ham | 2 min | pan grilled
-Prep: Eggs  | 2 min | pan grilled
+Prep: Ham | 2 min | pan seared
+Prep: Eggs  | 2 min | pan seared
 Prep: Assembly | no heat
 
 38. Croissant Smoked Salmon & Cream Cheese
@@ -145,11 +145,11 @@ Prep: Assembly | no heat
 
 40. Bagel & Lox
 
-41. Denver Scrambler | 7 min | Pan grill
+41. Denver Scrambler | 7 min | Pan sear
 
-42. Migas without Tortillas | 7 min | Pan grill
+42. Migas without Tortillas | 7 min | Pan sear
 
-43. Migas with Tortillas | 7 min | Pan grill
+43. Migas with Tortillas | 7 min | Pan sear
 
 44. Yogurt Parfait | no heat
 
@@ -157,7 +157,7 @@ Prep: Assembly | no heat
 
 46. Huevos Rancheros
 Top bar blank
-Prep: Slasa Ranchera | 13 min | Pan grilled
+Prep: Slasa Ranchera | 13 min | Pan seared
 Assembly: Tortillas and Eggs
 Prep: Tortillas | 2 min | fried
 Prep: Eggs | 2 min | fried
@@ -165,7 +165,7 @@ Prep: Assembly | no heat
 
 47. Breakfast Strata | Bake | 350| 50 min
 
-48. Crepes | 2 min | Pan grill
+48. Crepes | 2 min | Pan sear
 
 49. Dutch Baby | 425 |  20 min | Bake
 

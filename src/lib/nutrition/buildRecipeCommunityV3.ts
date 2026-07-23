@@ -374,14 +374,14 @@ export function buildRecipeCommunityV3(
       // dominant protein ingredient; then inferFillingClass() for pastry detection.
       //
       // HINT_COOK_MAP: which cook methods make a fill_class_hint valid.
-      // A pan_grilled_chicken hint only applies when the section is actually pan-grilled
+      // A pan_grilled_chicken hint only applies when the section is actually pan-seared
       // or fried — not when it is baked or braised.
       const HINT_COOK_MAP: Record<string, string[]> = {
-        'pan_grilled_chicken': ['pan grilled', 'sauteed', 'sautéed', 'stir-fried', 'pan sear', 'pan seared', 'fried', 'grilled', 'broil', 'broiled'],
+        'pan_grilled_chicken': ['sauteed', 'sautéed', 'stir-fried', 'pan sear', 'pan seared', 'fried', 'grilled', 'broil', 'broiled'],
         'fried_chicken':       ['fried', 'deep-fried'],
         'baked_pork':          ['baked', 'par-baked'],
         'braised_beef':        ['braise', 'braised', 'boiled', 'simmer', 'sub-simmer'],
-        'fried_meat':          ['fried', 'deep-fried', 'pan grilled', 'sauteed', 'sautéed', 'stir-fried', 'pan sear', 'pan seared'],
+        'fried_meat':          ['fried', 'deep-fried', 'sauteed', 'sautéed', 'stir-fried', 'pan sear', 'pan seared'],
       };
       const rawCookMethod = (sec.cookingMethod ?? 'raw').trim().toLowerCase().replace(/_/g, ' ');
       let fillClass: string;

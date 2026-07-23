@@ -8,7 +8,7 @@
 
 The v3-build API (`/api/recipes/v3-build/[recipe_id]`) reads the build JSON from `recipes_v3/output/builds/` and returns section-level cook data to `RecipeForm.svelte`. For that data to be correct, each recipe in `recipe_sections.csv` must have:
 
-- The right `cook_method` for every section (e.g. `pan grilled`, `simmer`, `raw`)
+- The right `cook_method` for every section (e.g. `pan seared`, `simmer`, `raw`)
 - `cook_stages` in `tempF:minutes` format (e.g. `0:4` for a 4-minute stovetop step with no oven temp, `375:37` for oven baking)
 
 When both are present, the form shows the correct **Prep header** per section and the correct **primary Cook bar** (or leaves it blank when sections handle all the heat themselves).
@@ -37,7 +37,7 @@ Prep: Section name | cook method | time (if applicable) | temp (if bake)
 ```
 Beef Stew
 Top section: blank (sections handle all heat)
-Prep: Beef | 8 min | pan grilled
+Prep: Beef | 8 min | pan seared
 Prep: Stew | 90 min | braise
 
 Cheese Quiche
@@ -46,7 +46,7 @@ Prep: Pie crust | no heat
 Prep: Cheese filling | no heat
 
 Grilled Chicken
-Top section: | Pan grill | 7 min
+Top section: | Pan sear | 7 min
 Prep: (single section — no separate preps)
 ```
 
@@ -66,7 +66,7 @@ For each recipe, open `recipes_v3/data/recipe_sections.csv`. For each section ro
 
 | Spec line | CSV columns to set |
 |---|---|
-| `Prep: Eggs | pan grilled | 2 min` | `cook_method=pan grilled`, `cook_stages=0:2` |
+| `Prep: Eggs | pan seared | 2 min` | `cook_method=pan seared`, `cook_stages=0:2` |
 | `Prep: Filling | simmer | 5 min` | `cook_method=simmer`, `cook_stages=0:5` |
 | `Prep: Crust | baked | 15 min | 425°F` | `cook_method=baked`, `cook_stages=425:15` |
 | `Prep: Assembly | no heat` | `cook_method=raw`, `cook_stages=` (empty) |
@@ -169,17 +169,17 @@ Open the recipe in the app (`/moderate` or the recipe card). Confirm:
 
 ### Sandwiches & Burgers (`SAND_`)
 
-Most sandwiches have 2–3 sections: one for the protein (pan grilled, fried, baked, or raw if pre-cooked deli), one for any sauce prep, and one for assembly (always `raw`). The primary cook bar should be blank for all sandwiches — sections handle all heat.
+Most sandwiches have 2–3 sections: one for the protein (pan seared, fried, baked, or raw if pre-cooked deli), one for any sauce prep, and one for assembly (always `raw`). The primary cook bar should be blank for all sandwiches — sections handle all heat.
 
 Hot dogs: the frank section is `grilled`. Corn dogs: `fried`.
 
 ### Salads (`SALAD_`)
 
-Most salad sections are `raw`. Protein sections (chicken, shrimp) are `pan grilled`. Dressing sections that reference `@SAUCE_*` are `raw`. The primary cook bar should be blank for all salads.
+Most salad sections are `raw`. Protein sections (chicken, shrimp) are `pan seared`. Dressing sections that reference `@SAUCE_*` are `raw`. The primary cook bar should be blank for all salads.
 
 ### Entrees & Main Courses (`ENTR_`)
 
-Varies widely. Braised dishes (stews, braises): single section, `cook_method=braise`, long time (e.g. `0:90`). Roasted dishes: `cook_method=baked`, with oven temp and time (e.g. `325:240`). Pan-fried proteins: `cook_method=pan grilled`. Multi-component dishes (e.g. shrimp & grits): separate sections for each component.
+Varies widely. Braised dishes (stews, braises): single section, `cook_method=braise`, long time (e.g. `0:90`). Roasted dishes: `cook_method=baked`, with oven temp and time (e.g. `325:240`). Pan-fried proteins: `cook_method=pan seared`. Multi-component dishes (e.g. shrimp & grits): separate sections for each component.
 
 ### Sides (`SIDE_`)
 
@@ -203,5 +203,5 @@ Baked goods: `cook_method=baked` with oven temp and time. No-bake desserts (pudd
 | Oven bake | `tempF:minutes` | `375:30` (30 min at 375°F) |
 | Multi-stage oven | `temp1:min1,temp2:min2` | `425:10,350:25` |
 | No heat / raw | *(empty)* | |
-| Fried / pan grilled | `0:minutes` | `0:3` (3 min pan grill) |
+| Fried / pan seared | `0:minutes` | `0:3` (3 min pan grill) |
 | Grilled | `0:minutes` | `0:7` (7 min grill) |

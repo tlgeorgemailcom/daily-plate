@@ -38,7 +38,7 @@ There is no "final cook" phase in the pipeline. If a recipe has a final assembly
 | Sausage browned then combined into gravy | Two sections: `sausage` (fried) + `gravy` (simmer). Each section gets its own retention. |
 | Eggs poached, muffin grilled, sauce simmered, assembled cold | Four sections, each with their own cook method. No "assembly cook". |
 | Quiche: crust pressed + filling mixed + whole thing baked | Two sections: `crust` (baked, with temp:time) + `filling` (raw). The bake applies to the crust section. Filling's assembly involves no heat. |
-| Burrito: tortilla pan-grilled + beans heated + cheese cold | Three sections: `tortilla` (pan grilled) + `beans` (pan grilled) + `cheese` (raw). |
+| Burrito: tortilla pan-seared + beans heated + cheese cold | Three sections: `tortilla` (pan seared) + `beans` (pan seared) + `cheese` (raw). |
 | Stew: all ingredients cooked together | One section, cook_method=simmer or braise, with the stew's total time. |
 
 **Why this matters for each new category:** When adapting ENTR, SIDE, SAND, SAUCE, etc. recipes to v3, the first question for every multi-component recipe is: *"Which ingredients are cooked separately before assembly, and which are cooked together?"* Each independently-cooked component must be its own section with the correct `cook_method`. Ingredients that are assembled cold and never cooked get `cook_method=raw`. There is no catch-all "final bake" that re-cooks everything — the section structure IS the cooking model.
@@ -47,7 +47,7 @@ There is no "final cook" phase in the pipeline. If a recipe has a final assembly
 
 - **BKFST recipes 1–52**: `cook_stages` added to all sections per `docs/breakfast.md` spec — commit `bda9c476` + `16e4c822` (2026-07-03)
 - **Section splits completed** for burritos (BKFST_017–022), Avocado Toast Tomato & Egg (BKFST_035), Huevos Rancheros (BKFST_047) — each component (tortilla, beans, eggs, cheese, potatoes) now has its own section with the correct `cook_method` and `cook_stages`
-- **Cook method corrections**: BKFST_033 Frittata changed `baked→pan grilled`; BKFST_021 beef and BKFST_037/038 ham changed to `pan grilled`; BKFST_012 gravy changed `boiled→simmer`
+- **Cook method corrections**: BKFST_033 Frittata changed `baked→pan seared`; BKFST_021 beef and BKFST_037/038 ham changed to `pan seared`; BKFST_012 gravy changed `boiled→simmer`
 - All 36 affected BKFST recipes rebuilt, uploaded to Turso, bundle regenerated
 - **Form fix** (`RecipeForm.svelte`): section cook-method dropdown was reading `prep_method` (physical action like "crumbled") instead of `cook_method` (heat method). Fixed — commits `b347ac3a` + `4466cd66`
 - **Form fix** (`RecipeForm.svelte`): primary cook bar — `Cook *` dropdown was defaulting to `'Bake'` when no value was present, and `Temp (°F)` field was hidden unless `Bake` was selected, and `Cook (min)` was hidden for `'No heat'`. All three primary cook fields (`Cook`, `Cook (min)`, `Temp (°F)`) are now always visible and blank by default — commits `4942c81f` + `a105df1e` (2026-07-03)
@@ -170,7 +170,6 @@ Prep: Section Label | Added after cooking | ingredients: ingredient, ingredient
 | `sub-simmer (uncovered)` | `sub-simmer` | `sub-simmer` | time in minutes | `simmer_sauce` for cream/butter sauces |
 | `sauteed` | `sauteed` | `sauteed` | time in minutes | none for aromatics/short sautés; `fried_meat` for ground meat/sausage |
 | `pan seared` | `pan seared` | `pan seared` | time in minutes | `pan_grilled_chicken` (chicken/fish); `fried_meat` (ground meat, sausage, bacon) |
-| `pan grilled` | `pan grilled` | `pan grilled` | time in minutes | Legacy value only; keep existing recipes unchanged unless auditing them intentionally |
 | `baked` | `baked` | `baked` | *(empty — use `cook_stages`)* | `pastry` (doughs); `casserole_baked` (assembled bakes); `cake_batter` (batters) |
 | `baked (covered)` | `baked covered` | `baked covered` | *(empty — use `cook_stages`)* | `casserole_baked` |
 | `unheated` | `''` (empty) | `raw` | *(empty)* | *(none)* |
@@ -193,7 +192,7 @@ Prep: Section Label | Added after cooking | ingredients: ingredient, ingredient
 | Spec line | pm | cm | boil_stages |
 |---|---|---|---|
 | `Prep Pasta \| boiled \| 8 min` | `boiled` | `simmer` | `8` |
-| `Prep: Vegetables \| pan grilled \| 9 min` | `pan grilled` | `simmer` | `9` |
+| `Prep: Vegetables \| pan seared \| 9 min` | `pan seared` | `simmer` | `9` |
 | `Prep: Tomatoes \| unheated` | `''` | `simmer` | *(empty)* |
 
 **Example — Cacio e Pepe (`Top bar: blank`):**
@@ -277,9 +276,9 @@ Replace `PREFIX_` with the category prefix (e.g. `BKFST_`, `ENTR_`, `SIDE_`).
 | `raw` on component-ref section | actual cook method of that section | Eggs Benedict muffin + hollandaise sections |
 | `fried` | `pan seared` | Eggs Benedict Canadian bacon section |
 | `baked` on filling section | `raw` | Quiche filling sections (see quiche pattern below) |
-| `raw` on sausage component-ref | `pan grilled` | BKFST_037 Croissant Sausage |
+| `raw` on sausage component-ref | `pan seared` | BKFST_037 Croissant Sausage |
 
-**Rule: `grilled` = outdoor/open-flame grill, broiler grate, or waffle iron. Use `sauteed` for moderate skillet/griddle cooking with frequent movement (aromatics, vegetables, crepes/pancakes where gentle griddle heat is intended). Use `pan seared` for higher-heat direct pan contact (browned proteins, Canadian bacon, cutlets, crisped surfaces). `pan grilled` is a legacy stored value retained for existing recipes.**
+**Rule: `grilled` = outdoor/open-flame grill, broiler grate, or waffle iron. Use `sauteed` for moderate skillet/griddle cooking with frequent movement (aromatics, vegetables, crepes/pancakes where gentle griddle heat is intended). Use `pan seared` for higher-heat direct pan contact (browned proteins, Canadian bacon, cutlets, crisped surfaces). Do not author new `pan seared` rows.**
 
 ### Composite recipe (component-ref) section fixes
 
@@ -340,7 +339,7 @@ Run these gates **before writing a single CSV row**. Skipping any one causes a p
 - [ ] `food_word` confirmed present in `food-portions-complete.csv` (Rule A/B/C/F/G) OR confirmed Rule D (bespoke key, absence is correct)
 - [ ] `canonical_ndb_no` identified — or explicitly confirmed as Rule D (none)
 - [ ] `dietary_category` is one of: `all`, `pollo-pesca`, `pollo`, `pesca`, `veggie`, `vegan`
-- [ ] `cooking_method` is one of: `raw`, `boiled`, `steamed`, `baked`, `fried`, `sauteed`, `pan seared`, `pan grilled` (legacy), `grilled`, `microwave`
+- [ ] `cooking_method` is one of: `raw`, `boiled`, `steamed`, `baked`, `fried`, `sauteed`, `pan seared`, `grilled`, `microwave`
 - [ ] Every ingredient looked up in `ingredients_ledger.csv` — missing keys identified and proposed for human approval **before** writing any row
 - [ ] For every new ingredient: NDB queried from `comboo.db` (`DataCentralCombo`), `default_display_name` confirmed, `food_word` confirmed against `food-portions-complete.csv`
 - [ ] For every new ingredient: `food-portions-complete.csv` checked for duplicate NDB — `grep NDB_NO` — before adding
@@ -402,7 +401,7 @@ Required columns and constraints:
 | `dietary_category` | One of: `all`, `pollo-pesca`, `pollo`, `pesca`, `veggie`, `vegan` |
 | `link_type` | `builtin` |
 | `sr_rule` | `Rule A`, `Rule B`, `Rule C`, `Rule D`, `Rule F`, or `Rule G` — full prefix required, never bare letter |
-| `cooking_method` | One of: `raw`, `boiled`, `steamed`, `baked`, `fried`, `pan grilled`, `grilled`, `microwave` |
+| `cooking_method` | One of: `raw`, `boiled`, `steamed`, `baked`, `fried`, `sauteed`, `pan seared`, `grilled`, `microwave` |
 | `yield_factor_water` | Calibrated to canonical or physics model — see yield factor reference in CLAUDE.md |
 | `yield_factor_fat` | `1.0` unless fat drains away (ground beef, pan-fried sausage) |
 | `yield_factor_protein` | `1.0` unless stock/broth (use `0.366` or `0.395`) |
@@ -813,7 +812,6 @@ This is the most common parity pitfall. Two distinct formats exist:
 | `braise` | `Braise` |
 | `sauteed` | `Sauté` |
 | `pan seared` | `Pan sear` |
-| `pan grilled` | `Pan sear` *(legacy display only)* |
 | `grilled` | `Grill` |
 | `fried` | `Fry` |
 | `raw` | `No heat` |
@@ -884,21 +882,14 @@ For recipes where all sections are assembled raw but the whole dish applies a si
 
 ## TODO / Deferred Work
 
-### `pan grilled` → `pan seared` physics migration
+### Completed: `pan seared` → `pan seared` physics migration
 
-`pan grilled` (legacy, ~100+ dev recipe sections) falls to the default **212°F** evaporation temp in `_method_stovetop_temp()`. `pan seared` is explicitly **230°F**. Both use the `fried` retention bucket but are NOT physics-equivalent — `pan seared` produces ~16% higher evaporation rate.
+Completed 2026-07-23. All stored `pan seared` recipe and section methods were migrated to `pan seared`, the affected recipes were rebuilt through physics, and the rebuilt nutrition was uploaded to Turso. `pan seared` is now the canonical stored value for higher-heat direct pan contact and uses the explicit **230°F** evaporation path in `_method_stovetop_temp()`.
 
-**Steps required per recipe when migrating:**
-1. Update `recipe_sections.csv` — change `cook_method` and `prep_method` from `pan grilled` to `pan seared`
-2. Rerun physics: `python recipes_v3/tools/build_all.py --recipe RECIPE_ID`
-3. Verify per-100g macros — water column will shift; confirm audit rule still passes
-4. Upload: `python recipes_v3/tools/upload.py --recipe RECIPE_ID --commit`
-5. Commit CSV change
+`pan seared` is no longer an authoring value. If an old reference is found, replace it with either `pan seared` or `sauteed` and rebuild that recipe before upload.
 
-**Do NOT rename en masse** without a targeted audit pass — the physics change can shift water yield enough to move a Rule A/B pass to a fail. This requires a dedicated session.
-
-**During the audit, also evaluate whether sections should be `sauteed` instead of `pan seared`:**
-Now that `sauteed` (200°F) is a first-class method scoped to aromatics and vegetable softening, some existing `pan grilled`/`pan seared` sections may be better reclassified:
+**During future audits, evaluate whether sections should be `sauteed` instead of `pan seared`:**
+Now that `sauteed` (200°F) is a first-class method scoped to aromatics and vegetable softening, some `pan seared` sections may be better reclassified:
 - Onion/garlic/shallot softening in butter or oil → `sauteed`
 - Short vegetable sweating (celery, peppers, mushrooms as aromatics) → `sauteed`
 - Protein sections (chicken breast, fish fillet, ground meat) → stay `pan seared`
@@ -926,10 +917,10 @@ Reclassifying to `sauteed` also changes evaporation temp (200°F vs 230°F), so 
 
 ### `sauteed` reclassification candidates
 
-Sections currently stored as `pan grilled` or `pan seared` that should be reclassified to `sauteed` based on instruction analysis. All involve aromatic/vegetable softening (onion, garlic, peppers, mushrooms, carrots, celery) cooked at **medium heat** — not protein searing.
+Sections currently stored as `pan seared` that should be reclassified to `sauteed` based on instruction analysis. All involve aromatic/vegetable softening (onion, garlic, peppers, mushrooms, carrots, celery) cooked at **medium heat** — not protein searing.
 
 **Steps required per section:**
-1. Update `recipe_sections.csv` — change `cook_method` (and/or `prep_method`) from `pan grilled` → `sauteed`
+1. Update `recipe_sections.csv` — change `cook_method` (and/or `prep_method`) from `pan seared` → `sauteed`
 2. Rerun physics: `python recipes_v3/tools/build_all.py --recipe RECIPE_ID`
 3. Verify macros — evaporation temp drops from 230°F → 200°F; water column may shift slightly
 4. Upload: `python recipes_v3/tools/upload.py --recipe RECIPE_ID --commit`
@@ -941,17 +932,17 @@ Sections marked **two-stage** have `cook_method` = simmer/braise/baked (the asse
 
 | Recipe | Recipe Name | Section key | Current method | Label |
 |---|---|---|---|---|
-| ENTR_015 | Beef Steak Diane | shallots_garlic | pan grilled | Shallots and Garlic |
-| ENTR_058 | Chicken Masala | sauce | pan grilled | Masala Sauce |
-| ENTR_095 | Pork Fried Rice | filling | pan grilled | Filling |
-| ENTR_110 | Seafood Paella | paella | pan grilled | Seafood and Sofrito |
-| ENTR_120 | Vegetarian Shakshuka | shakshuka | pan grilled | Shakshuka |
-| PASTA_007 | Lemon Pasta | garlic | pan grilled | Garlic |
-| PASTA_010 | Cheese Ravioli | wilted_spinach | pan grilled | Wilt spinach |
-| PASTA_010 | Cheese Ravioli | brown_butter | pan grilled | Brown butter |
-| PASTA_010 | Cheese Ravioli | garlic_sage | pan grilled | Garlic sage |
+| ENTR_015 | Beef Steak Diane | shallots_garlic | pan seared | Shallots and Garlic |
+| ENTR_058 | Chicken Masala | sauce | pan seared | Masala Sauce |
+| ENTR_095 | Pork Fried Rice | filling | pan seared | Filling |
+| ENTR_110 | Seafood Paella | paella | pan seared | Seafood and Sofrito |
+| ENTR_120 | Vegetarian Shakshuka | shakshuka | pan seared | Shakshuka |
+| PASTA_007 | Lemon Pasta | garlic | pan seared | Garlic |
+| PASTA_010 | Cheese Ravioli | wilted_spinach | pan seared | Wilt spinach |
+| PASTA_010 | Cheese Ravioli | brown_butter | pan seared | Brown butter |
+| PASTA_010 | Cheese Ravioli | garlic_sage | pan seared | Garlic sage |
 | SAND_042 | French Dip | onion_saute | *(broil cm)* two-stage | Sautéed onion |
-| SIDE_006 | Potato Salad (German Style) | onion | pan grilled | Onion |
+| SIDE_006 | Potato Salad (German Style) | onion | pan seared | Onion |
 | SAUCE_025 | Red Enchilada Sauce | onion_mixture | *(simmer cm)* two-stage | Onion and garlic |
 | SAUCE_027 | Italian Marinara Sauce | onion | *(simmer cm)* two-stage | Onion |
 | SAUCE_027 | Italian Marinara Sauce | garlic | *(simmer cm)* two-stage | Garlic |
@@ -964,15 +955,15 @@ Sections marked **two-stage** have `cook_method` = simmer/braise/baked (the asse
 
 | Recipe | Recipe Name | Section key | Current method | Label |
 |---|---|---|---|---|
-| ENTR_013 | Beef Curry | onions | pan grilled | Onions |
-| ENTR_013 | Beef Curry | garlic | pan grilled | Garlic |
-| ENTR_014 | Beef Ropa Vieja | onions_peppers | pan grilled | Onions and Peppers |
-| ENTR_014 | Beef Ropa Vieja | garlic | pan grilled | Garlic |
-| ENTR_017 | Beef Goulash | onions | pan grilled | Onions |
-| ENTR_017 | Beef Goulash | garlic_bell_pepper | pan grilled | Garlic and Bell Pepper |
-| ENTR_017 | Beef Goulash | spices | pan grilled | Spices |
-| ENTR_019 | Beef Hamburger Steak | onions | pan grilled | Onions |
-| ENTR_019 | Beef Hamburger Steak | mushrooms_garlic | pan grilled | Mushrooms and Garlic |
+| ENTR_013 | Beef Curry | onions | pan seared | Onions |
+| ENTR_013 | Beef Curry | garlic | pan seared | Garlic |
+| ENTR_014 | Beef Ropa Vieja | onions_peppers | pan seared | Onions and Peppers |
+| ENTR_014 | Beef Ropa Vieja | garlic | pan seared | Garlic |
+| ENTR_017 | Beef Goulash | onions | pan seared | Onions |
+| ENTR_017 | Beef Goulash | garlic_bell_pepper | pan seared | Garlic and Bell Pepper |
+| ENTR_017 | Beef Goulash | spices | pan seared | Spices |
+| ENTR_019 | Beef Hamburger Steak | onions | pan seared | Onions |
+| ENTR_019 | Beef Hamburger Steak | mushrooms_garlic | pan seared | Mushrooms and Garlic |
 | ENTR_029 | Beef Osso Buco | vegetables | *(braise cm)* two-stage | Vegetables |
 | ENTR_029 | Beef Osso Buco | garlic | *(braise cm)* two-stage | Garlic |
 | ENTR_031 | Beef Picadillo | onion_peppers | *(braise cm)* two-stage | Onion & Peppers |
@@ -984,8 +975,8 @@ Sections marked **two-stage** have `cook_method` = simmer/braise/baked (the asse
 | ENTR_037 | Beef Short Ribs | vegetables | *(baked covered cm)* two-stage | Vegetables |
 | ENTR_037 | Beef Short Ribs | garlic_tomato_paste | *(baked covered cm)* two-stage | Garlic & Tomato Paste |
 | ENTR_049 | Chicken Florentine | garlic | *(simmer cm)* two-stage | Garlic |
-| ENTR_073 | Lamb Shepherd's Pie | filling | pan grilled | Filling |
-| ENTR_111 | Seafood Shrimp Scampi | scampi | pan grilled | Shrimp Scampi |
-| ENTR_118 | Vegetarian Dal | dal_base | pan grilled | Dal Sauce |
-| ENTR_119 | Vegetarian Chana Masala | chana_masala | pan grilled | Chana Masala |
+| ENTR_073 | Lamb Shepherd's Pie | filling | pan seared | Filling |
+| ENTR_111 | Seafood Shrimp Scampi | scampi | pan seared | Shrimp Scampi |
+| ENTR_118 | Vegetarian Dal | dal_base | pan seared | Dal Sauce |
+| ENTR_119 | Vegetarian Chana Masala | chana_masala | pan seared | Chana Masala |
 | PASTA_005 | Garlic Butter Shrimp Pasta | garlic | *(simmer cm)* two-stage | Garlic |

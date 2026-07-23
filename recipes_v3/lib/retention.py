@@ -84,8 +84,6 @@ COOK_METHOD_ALIASES = {
     "pan-seared":   "fried",
     "sear":         "fried",
     "seared":       "fried",
-    "pan_grilled":  "fried",
-    "pan grilled":  "fried",
     "deep_fry":     "fried",
     "deep-fried":  "fried",
     "deep fry":    "fried",

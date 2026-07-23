@@ -591,8 +591,6 @@ export function mapDishMethodToCookingMethod(cookMethod: string | null): Cooking
 
   const m = cookMethod.toLowerCase();
 
-  if (m === 'pan grilled' || m === 'pan_grilled') return 'fried';
-
   if (/microwav/.test(m)) return 'microwave';
 
   if (/steam/.test(m)) return 'steamed';

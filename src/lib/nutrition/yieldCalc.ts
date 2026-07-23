@@ -59,12 +59,12 @@ export const BINDING: Record<string, number> = {
   // ── Stovetop / fried / grilled fill classes ─────────────────────────────
   // Calibrated from locked BKFST values using stovetop evaporation model.
   simmer_sauce:       0.127, // simmered gravy/sauce (195°F×5min → yfw=0.92)
-  pan_grilled_batter: 0.206, // pan-grilled bread/batter (350°F×6min → yfw=0.80)
+  pan_grilled_batter: 0.206, // pan-seared bread/batter (230°F×6min → yfw≈0.834)
   fried_meat:         0.272, // fried ground meat patty/sausage (375°F×8min → yfw=0.73)
   fried_ground_beef:  0.544, // pan-browned ground beef crumbles (212°F×7min → yfw=0.5606)
                              // NDB 23572 (80% lean raw) / NDB 23575 (crumbles pan-browned) USDA pair
                              // Use for crumbled beef (tacos, bolognese, sloppy joe); NOT for patties
-  pan_grilled_masa:   0.544, // pan-grilled thick masa cake (gordita, arepa) (212°F×11min → yfw=0.4968)
+  pan_grilled_masa:   0.544, // pan-seared thick masa cake (gordita, arepa) (230°F×11min → yfw≈0.483)
                              // NDB 20017 (masa harina raw) / NDB 36415 (arepa restaurant) USDA proxy
   fried_potato:       0.750, // fried potato high surface area (375°F×10min → yfw=0.25)
   deep_fried_potato: 1.280, // deep-fried potato strips (french fries) (212°F×4min → yfw=0.21)
@@ -73,9 +73,9 @@ export const BINDING: Record<string, number> = {
   deep_fried_battered_ring: 1.025, // deep-fried battered rings (onion rings) (212°F×5min → yfw=0.29)
                              // USDA NDB 21130 (fast-food onion rings) water=24.52% corroborates. Calibrated to SIDE_033 locked yfw=0.29.
   grilled_batter:     0.408, // waffle-iron grilled batter (375°F×4min → yfw=0.62)
-  pan_grilled_chicken: 0.216, // pan-grilled chicken breast (212°F×11min → yfw=0.80)
+  pan_grilled_chicken: 0.216, // pan-seared chicken breast (230°F×11min → yfw≈0.795)
                               // NDB 5062 (raw) / NDB 5063 (fried) USDA pair
-  pan_grilled_steak:   0.272, // pan-grilled thin steak (212°F×7min → yfw=0.78)
+  pan_grilled_steak:   0.272, // pan-seared thin steak (230°F×7min → yfw≈0.768)
                               // Calibrated to ENTR_012 original locked yield for outside skirt steak (NDB 23224).
   fried_chicken:       0.195, // deep-fried battered chicken breast (212°F×11min → yfw=0.82)
                               // NDB 5062 (raw) / NDB 5063 (fried); batter crust traps moisture

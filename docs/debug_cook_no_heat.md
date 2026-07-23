@@ -28,10 +28,10 @@ cookingMethod: recipe.cookingMethod || 'Bake',
 ```
 
 Turso stores `cooking_method` in **pipeline format** (lowercase past-tense):  
-`'baked'`, `'boiled'`, `'pan grilled'`, `'fried'`, `'raw'`, etc.
+`'baked'`, `'boiled'`, `'pan seared'`, `'fried'`, `'raw'`, etc.
 
 RecipeForm's `COOKING_METHODS` list uses **UI format** (present-tense, capitalized):  
-`['Bake', 'Boil', 'Simmer', 'Sub-simmer', 'Braise', 'Pan grill', 'Grill', 'Fry', 'No heat']`
+`['Bake', 'Boil', 'Simmer', 'Sub-simmer', 'Braise', 'Pan sear', 'Grill', 'Fry', 'No heat']`
 
 RecipeForm init code:
 ```javascript
@@ -62,7 +62,7 @@ function normalizeCookingMethod(raw?: string): string {
     'simmer':      'Simmer',
     'sub-simmer':  'Sub-simmer',
     'braise':      'Braise',
-    'pan grilled': 'Pan grill',
+    'pan seared': 'Pan sear',
     'grilled':     'Grill',
     'fried':       'Fry',
     'raw':         'No heat',
@@ -163,7 +163,7 @@ Use the libsql_experimental pattern from CLAUDE.md (TURSO_SR28_URL / TURSO_SR28_
 **All dev recipes** — every recipe in Turso's `dev_recipes` table stores `cooking_method` in pipeline format. Every recipe opened in `/moderate` was showing the wrong cooking method in the primary cook bar. The fix is general.
 
 Spot-check a few when you return:
-- `ENTR_001` → should show **Pan grill** (stored as `'pan grilled'`)
+- `ENTR_001` → should show **Pan sear** (stored as `'pan seared'`)
 - `SIDE_001` → should show **Boil** (stored as `'boiled'`)
 - `SAUCE_011` → should show **Boil** (stored as `'boiled'`)
-- `BKFST_014` → should show **Pan grill** (stored as `'pan grilled'`, since waffles use waffle iron = griddle)
+- `BKFST_014` → should show **Pan sear** (stored as `'pan seared'`, since waffles use waffle iron = griddle)

@@ -33,7 +33,7 @@ type TursoIngredient = {
 
 function normalizeCookMethod(m: string): string {
   const aliases: Record<string, string> = {
-    'pan grilled': 'fried', 'simmer': 'boiled', 'sub-simmer': 'boiled',
+    'simmer': 'boiled', 'sub-simmer': 'boiled',
     'saute': 'fried', 'sauté': 'fried', 'sauteed': 'fried', 'sautéed': 'fried',
     'stir_fry': 'fried', 'stir fry': 'fried', 'stir-fried': 'fried', 'stir fried': 'fried',
     'pan sear': 'fried', 'pan seared': 'fried', 'pan_seared': 'fried', 'pan-seared': 'fried',

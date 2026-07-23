@@ -309,7 +309,7 @@
   // render the section header as "<Label> — <method>" so the multi-stage
   // structure (e.g. baked crust + boiled filling + raw topping) is visible
   // instead of being buried in nutritionJson.sections[].
-  // Section headers use pipeline term as-is (fried, baked, pan grilled…)
+  // Section headers use pipeline term as-is (fried, baked, pan seared…)
   // with only one transformation: 'raw' → 'Unheated'.
   const SECTION_METHOD_LABEL: Record<string, string | null> = {
     'raw':        'unheated',
@@ -326,7 +326,6 @@
     'simmer':     'simmer (uncovered)',
     'sub-simmer': 'sub-simmer (uncovered)',
     'braise':     'braise (covered)',
-    'pan grilled': 'pan seared',
     'bake covered':  'baked (covered)',
     'bake_covered':  'baked (covered)',
     'baked covered': 'baked (covered)',
@@ -1707,8 +1706,8 @@
     return [...mappedDraft, ...missingOriginals];
   }
 
-  // Maps Turso DB cooking_method values (e.g. 'baked', 'boiled', 'pan grilled')
-  // to the UI COOKING_METHODS labels (e.g. 'Bake', 'Boil', 'Pan grill').
+  // Maps Turso DB cooking_method values (e.g. 'baked', 'boiled', 'pan seared')
+  // to the UI COOKING_METHODS labels (e.g. 'Bake', 'Boil', 'Pan sear').
   function normalizeCookingMethod(raw?: string): string {
     if (!raw) return 'Bake';
     const map: Record<string, string> = {
@@ -1721,7 +1720,7 @@
       'simmer':      'Simmer (uncovered)',
       'sub-simmer':  'Sub-simmer (uncovered)',
       'braise':      'Braise (covered)',
-      'pan grilled':    'Pan sear',
+      'pan seared':     'Pan sear',
       'grilled':        'Grill',
       'broiled':        'Broil',
       'fried':          'Fry',

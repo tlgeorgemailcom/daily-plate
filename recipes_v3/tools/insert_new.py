@@ -105,7 +105,6 @@ _COOK_METHOD_MAP = {
     "stir-fried":     "Stir-fry",
     "stir fry":       "Stir-fry",
     "pan seared":     "Pan sear",
-    "pan grilled":    "Pan sear",
     "grilled":        "Grill",
     "broiled":        "Broil",
     "fried":          "Fry",

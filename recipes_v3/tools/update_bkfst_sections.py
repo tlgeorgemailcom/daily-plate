@@ -92,10 +92,10 @@ for recipe_id, section_key, stages in simple_stages:
 # ── TYPE 2: cook_method correction + cook_stages ─────────────────────────────
 corrections = [
     # (recipe_id, section_key, new_cook_method, cook_stages)
-    ('BKFST_033', 'frittata', 'pan grilled', '0:6'),
-    ('BKFST_037', 'sausage',  'pan grilled', '0:3'),
-    ('BKFST_038', 'ham',      'pan grilled', '0:2'),
-    ('BKFST_021', 'beef',     'pan grilled', '0:6'),
+    ('BKFST_033', 'frittata', 'pan seared', '0:6'),
+    ('BKFST_037', 'sausage',  'pan seared', '0:3'),
+    ('BKFST_038', 'ham',      'pan seared', '0:2'),
+    ('BKFST_021', 'beef',     'pan seared', '0:6'),
 ]
 
 for recipe_id, section_key, new_method, stages in corrections:
@@ -108,41 +108,41 @@ for recipe_id, section_key, new_method, stages in corrections:
 
 # ── TYPE 3: Section splits ────────────────────────────────────────────────────
 
-# BKFST_017: burrito → tortilla(pan grilled 1min) + beans(pan grilled 3min)
+# BKFST_017: burrito → tortilla(pan seared 1min) + beans(pan seared 3min)
 replace_section(sec_data, 'BKFST_017', 'burrito', [
-    make_sec('BKFST_017', 'tortilla', 'Flour tortilla', '', 'pan grilled', cook_stages='0:1'),
-    make_sec('BKFST_017', 'beans',    'Beans',          '', 'pan grilled', cook_stages='0:3'),
+    make_sec('BKFST_017', 'tortilla', 'Flour tortilla', '', 'pan seared', cook_stages='0:1'),
+    make_sec('BKFST_017', 'beans',    'Beans',          '', 'pan seared', cook_stages='0:3'),
 ])
 
 # BKFST_018: burrito → tortilla + beans + cheese(raw)
 replace_section(sec_data, 'BKFST_018', 'burrito', [
-    make_sec('BKFST_018', 'tortilla', 'Flour tortilla', '', 'pan grilled', cook_stages='0:1'),
-    make_sec('BKFST_018', 'beans',    'Beans',          '', 'pan grilled', cook_stages='0:3'),
+    make_sec('BKFST_018', 'tortilla', 'Flour tortilla', '', 'pan seared', cook_stages='0:1'),
+    make_sec('BKFST_018', 'beans',    'Beans',          '', 'pan seared', cook_stages='0:3'),
     make_sec('BKFST_018', 'cheese',   'Cheese',         '', 'raw'),
 ])
 
 # BKFST_019: burrito → tortilla + cheese(raw)
 replace_section(sec_data, 'BKFST_019', 'burrito', [
-    make_sec('BKFST_019', 'tortilla', 'Flour tortilla', '', 'pan grilled', cook_stages='0:1'),
+    make_sec('BKFST_019', 'tortilla', 'Flour tortilla', '', 'pan seared', cook_stages='0:1'),
     make_sec('BKFST_019', 'cheese',   'Cheese',         '', 'raw'),
 ])
 
-# BKFST_020: burrito → tortilla + eggs(pan grilled 3min)
+# BKFST_020: burrito → tortilla + eggs(pan seared 3min)
 replace_section(sec_data, 'BKFST_020', 'burrito', [
-    make_sec('BKFST_020', 'tortilla', 'Flour tortilla', '', 'pan grilled', cook_stages='0:1'),
-    make_sec('BKFST_020', 'eggs',     'Scrambled eggs', '', 'pan grilled', cook_stages='0:3'),
+    make_sec('BKFST_020', 'tortilla', 'Flour tortilla', '', 'pan seared', cook_stages='0:1'),
+    make_sec('BKFST_020', 'eggs',     'Scrambled eggs', '', 'pan seared', cook_stages='0:3'),
 ])
 
 # BKFST_021: remove assembly, add tortilla + cheese(raw)
-# (beef already updated in TYPE 2 above with pan grilled + 0:6)
+# (beef already updated in TYPE 2 above with pan seared + 0:6)
 replace_section(sec_data, 'BKFST_021', 'assembly', [
-    make_sec('BKFST_021', 'tortilla', 'Flour tortilla', '', 'pan grilled', cook_stages='0:1'),
+    make_sec('BKFST_021', 'tortilla', 'Flour tortilla', '', 'pan seared', cook_stages='0:1'),
     make_sec('BKFST_021', 'cheese',   'Cheese',         '', 'raw'),
 ])
 
 # BKFST_022: burrito → tortilla + eggs(fried 2min) + cheese(raw) + potatoes(fried 9min)
 replace_section(sec_data, 'BKFST_022', 'burrito', [
-    make_sec('BKFST_022', 'tortilla', 'Flour tortilla', '', 'pan grilled', cook_stages='0:1'),
+    make_sec('BKFST_022', 'tortilla', 'Flour tortilla', '', 'pan seared', cook_stages='0:1'),
     make_sec('BKFST_022', 'eggs',     'Scrambled eggs', '', 'fried',       cook_stages='0:2'),
     make_sec('BKFST_022', 'cheese',   'Cheese',         '', 'raw'),
     make_sec('BKFST_022', 'potatoes', 'Potatoes',       '', 'fried',       cook_stages='0:9'),

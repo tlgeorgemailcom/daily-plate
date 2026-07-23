@@ -2,8 +2,8 @@
 normalize_cooking_method.py
 ───────────────────────────
 One-time migration: update every dev_recipes row whose cooking_method is stored
-in pipeline format ('baked', 'pan grilled', 'boiled', …) to the UI format that
-RecipeForm.svelte expects ('Bake', 'Pan grill', 'Boil', …).
+in pipeline format ('baked', 'pan seared', 'boiled', …) to the UI format that
+RecipeForm.svelte expects ('Bake', 'Pan sear', 'Boil', …).
 
 Only SWEET recipes were ever saved through /moderate, which wrote the UI value
 back. Every other recipe category still has the raw CSV pipeline value.
@@ -33,7 +33,7 @@ _MAP = {
     "braise":         "Braise",
     "steamed":        "Steam",
     "microwave":      "Microwave",
-    "pan grilled":    "Pan grill",
+    "pan seared":     "Pan sear",
     "grilled":        "Grill",
     "broiled":        "Broil",
     "fried":          "Fry",
@@ -58,7 +58,7 @@ _RECIPE_OVERRIDES = {
 
 # UI-format values that are already correct — never touch these
 _ALREADY_OK = {"Bake", "Bake (covered)", "Boil", "Boil (covered)", "Simmer", "Sub-simmer",
-               "Braise", "Steam", "Microwave", "Sauté", "Stir-fry", "Pan sear", "Pan grill",
+               "Braise", "Steam", "Microwave", "Sauté", "Stir-fry", "Pan sear",
                "Grill", "Broil", "Fry", "Deep-fry", "No heat"}
 
 

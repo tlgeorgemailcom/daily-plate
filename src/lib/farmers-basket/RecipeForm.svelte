@@ -102,12 +102,11 @@
 
     // ── cook method (physics driver, not shown in section header) ──────────────
     const cookM_raw = String(s.cook_method ?? s.cookMethod ?? s.cooking_method ?? 'raw');
-    // Normalize legacy alias: 'pan grilled' stored in Turso → canonical 'pan seared'
-    const cookM = cookM_raw === 'pan grilled' ? 'pan seared' : cookM_raw;
+  const cookM = cookM_raw;
 
     // ── prep method (what the section does BEFORE the assembled cook) ──────────
     const prepV_raw = String(s.prep_method ?? s.prepMethod ?? '');
-    const prepV = prepV_raw === 'pan grilled' ? 'pan seared' : prepV_raw;
+  const prepV = prepV_raw;
     const prepMethod = ((): string => {
       if (prepV && prepV !== 'raw') return prepV;                // explicit pre-step
       const isBaked = cookM === 'baked' || cookM === 'par-baked';
@@ -310,7 +309,7 @@
 
   // Maps pipeline cooking_method values (past-tense / lowercase) to the UI
   // display labels used in COOKING_METHODS. Handles baked→Bake, boiled→Boil,
-  // fried→Fry, legacy pan grilled→Pan sear, grilled→Grill, raw→No heat.
+  // fried→Fry, pan seared→Pan sear, grilled→Grill, raw→No heat.
   function normalizeCookMethodLabel(raw: string): string {
     const m = (raw ?? '').trim().toLowerCase();
     const MAP: Record<string, string> = {
@@ -337,8 +336,6 @@
       'deep fry':    'Deep-fry',
       'steamed':     'Steam',
       'microwave':   'Microwave',
-      'pan grilled': 'Pan sear',
-      'pan grill':   'Pan sear',
       'pan_seared':  'Pan sear',
       'pan seared':  'Pan sear',
       'pan-seared':  'Pan sear',
@@ -2729,7 +2726,7 @@
         {#if sec.prepMethod === 'finish'}
           <p class="finish-info-note">ℹ️ Stirred in or added after the primary cook is complete — e.g. cheese, cream, finishing butter, whipped cream. No heat is applied; nutrition is calculated from the raw ingredient weight.</p>
         {/if}
-        {#if sec.prepMethod && ['boiled','boiled covered','simmer','sub-simmer','braise','steamed','blanched','baked','par-baked','fried','deep-fried','sauteed','stir-fried','pan seared','pan grilled','grilled','broiled','microwave'].includes(sec.prepMethod)}
+        {#if sec.prepMethod && ['boiled','boiled covered','simmer','sub-simmer','braise','steamed','blanched','baked','par-baked','fried','deep-fried','sauteed','stir-fried','pan seared','grilled','broiled','microwave'].includes(sec.prepMethod)}
           <div class="section-times-bar">
             <label class="section-time-field" title="Stovetop prep time. Use boiled covered or braise for covered cooking.">
               <span class="section-time-label">Prep (min)</span>
