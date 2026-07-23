@@ -289,9 +289,25 @@
   // v3.md §18.1 — lowercase enum stored in recipe_sections.csv::cooking_method.
   const SECTION_COOKING_METHODS = ['raw', 'boiled', 'boiled covered', 'steamed', 'baked', 'baked covered', 'fried', 'deep-fried', 'sauteed', 'stir-fried', 'pan seared', 'grilled', 'broiled', 'microwave'];
   const SECTION_PREP_METHODS    = ['boiled', 'boiled covered', 'simmer', 'sub-simmer', 'braise', 'steamed', 'blanched', 'baked', 'baked covered', 'par-baked', 'fried', 'deep-fried', 'sauteed', 'stir-fried', 'pan seared', 'grilled', 'broiled', 'microwave', 'finish'];
+
+  // Fill class keys are persisted pipeline identifiers. Keep them stable, but
+  // show human labels because this control may eventually be exposed to users.
+  const FILL_CLASS_LABELS: Record<string, string> = {
+    pan_grilled_batter: 'pan-seared batter or bread',
+    pan_grilled_masa: 'pan-seared masa cake',
+    grilled_batter: 'waffle-iron batter',
+    pan_grilled_chicken: 'pan-seared chicken or fish fillet',
+    pan_grilled_steak: 'pan-seared thin steak',
+  };
+
+  function formatFillClassLabel(key: string): string {
+    return FILL_CLASS_LABELS[key]
+      ?? key.replace(/^pan_grilled_/, 'pan_seared_').replace(/^grilled_batter$/, 'waffle_iron_batter').replace(/_/g, ' ');
+  }
+
   const FILL_CLASS_OPTIONS = Object.entries(BINDING).map(([key, coefficient]) => ({
     key,
-    label: `${key} (${coefficient.toFixed(3)})`,
+    label: `${formatFillClassLabel(key)} (${coefficient.toFixed(3)})`,
   }));
   // Display labels for prep methods — stored values are clean identifiers;
   // UI annotations clarify open-pot vs covered assumption for the water model.
