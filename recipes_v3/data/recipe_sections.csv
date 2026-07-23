@@ -584,9 +584,9 @@ ENTR_014,tomatoes_wine,"Tomatoes, Broth, and Wine",,braise,,,,,,,simmer_sauce,,1
 ENTR_014,stock_ref,Beef Stock,,raw,,,,,,,,,,STOCK_004
 ENTR_014,finish,"Cilantro, Olives, and Capers",finish,raw,,,,,,,,,,
 ENTR_015,sear_steaks,Sear Steaks,pan seared,pan seared,,,,,,,pan_grilled_steak,,6,
-ENTR_015,shallots_garlic,Shallots and Garlic,pan seared,pan seared,,,,,,,simmered_vegetable,,10,
-ENTR_015,mushrooms,Mushrooms,pan seared,pan seared,,,,,,,simmered_vegetable,,9,
-ENTR_015,brandy,Brandy,pan seared,pan seared,,,,,,,simmer_sauce,,6,
+ENTR_015,shallots_garlic,Shallots and Garlic,sauteed,sauteed,,,,,,,simmered_vegetable,,10,
+ENTR_015,mushrooms,Mushrooms,sauteed,sauteed,,,,,,,simmered_vegetable,,9,
+ENTR_015,brandy,Brandy,sauteed,sauteed,,,,,,,simmer_sauce,,6,
 ENTR_015,stock_ref,Beef Stock,,raw,,,,,,,,,,STOCK_004
 ENTR_015,broth_worcestershire,Broth and Worcestershire,simmer,simmer,,,,,,,simmer_sauce,,5,
 ENTR_015,dijon_ref,Dijon-Style Mustard,,raw,,,,,,,,,,SAUCE_010

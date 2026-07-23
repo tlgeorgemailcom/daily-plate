@@ -278,7 +278,7 @@ Replace `PREFIX_` with the category prefix (e.g. `BKFST_`, `ENTR_`, `SIDE_`).
 | `baked` on filling section | `raw` | Quiche filling sections (see quiche pattern below) |
 | `raw` on sausage component-ref | `pan seared` | BKFST_037 Croissant Sausage |
 
-**Rule: `grilled` = outdoor/open-flame grill, broiler grate, or waffle iron. Use `sauteed` for moderate skillet/griddle cooking with frequent movement (aromatics, vegetables, crepes/pancakes where gentle griddle heat is intended). Use `pan seared` for higher-heat direct pan contact (browned proteins, Canadian bacon, cutlets, crisped surfaces). Do not author new `pan seared` rows.**
+**Rule: `grilled` = outdoor/open-flame grill, broiler grate, or waffle iron. Use `sauteed` for moderate skillet/griddle cooking with frequent movement (aromatics, vegetables, crepes/pancakes where gentle griddle heat is intended). Use `pan seared` for higher-heat direct pan contact (browned proteins, Canadian bacon, cutlets, crisped surfaces). Do not author new `pan grilled` rows.**
 
 ### Composite recipe (component-ref) section fixes
 
@@ -882,11 +882,11 @@ For recipes where all sections are assembled raw but the whole dish applies a si
 
 ## TODO / Deferred Work
 
-### Completed: `pan seared` → `pan seared` physics migration
+### Completed: `pan grilled` → `pan seared` physics migration
 
-Completed 2026-07-23. All stored `pan seared` recipe and section methods were migrated to `pan seared`, the affected recipes were rebuilt through physics, and the rebuilt nutrition was uploaded to Turso. `pan seared` is now the canonical stored value for higher-heat direct pan contact and uses the explicit **230°F** evaporation path in `_method_stovetop_temp()`.
+Completed 2026-07-23. All stored `pan grilled` recipe and section methods were migrated to `pan seared`, the affected recipes were rebuilt through physics, and the rebuilt nutrition was uploaded to Turso. `pan seared` is now the canonical stored value for higher-heat direct pan contact and uses the explicit **230°F** evaporation path in `_method_stovetop_temp()`.
 
-`pan seared` is no longer an authoring value. If an old reference is found, replace it with either `pan seared` or `sauteed` and rebuild that recipe before upload.
+`pan grilled` is no longer an authoring value. If an old reference is found, replace it with either `pan seared` or `sauteed` and rebuild that recipe before upload.
 
 **During future audits, evaluate whether sections should be `sauteed` instead of `pan seared`:**
 Now that `sauteed` (200°F) is a first-class method scoped to aromatics and vegetable softening, some `pan seared` sections may be better reclassified:
@@ -928,11 +928,18 @@ Sections currently stored as `pan seared` that should be reclassified to `sautee
 
 Sections marked **two-stage** have `cook_method` = simmer/braise/baked (the assembled cook); only `prep_method` changes.
 
+#### Completed `sauteed` reclassifications
+
+| Recipe | Recipe Name | Section key | New method | Label |
+|---|---|---|---|---|
+| ENTR_015 | Beef Steak Diane | shallots_garlic | sauteed | Shallots and Garlic |
+| ENTR_015 | Beef Steak Diane | mushrooms | sauteed | Mushrooms |
+| ENTR_015 | Beef Steak Diane | brandy | sauteed | Brandy |
+
 #### Batch A — medium-heat-only recipes
 
 | Recipe | Recipe Name | Section key | Current method | Label |
 |---|---|---|---|---|
-| ENTR_015 | Beef Steak Diane | shallots_garlic | pan seared | Shallots and Garlic |
 | ENTR_058 | Chicken Masala | sauce | pan seared | Masala Sauce |
 | ENTR_095 | Pork Fried Rice | filling | pan seared | Filling |
 | ENTR_110 | Seafood Paella | paella | pan seared | Seafood and Sofrito |
@@ -942,21 +949,36 @@ Sections marked **two-stage** have `cook_method` = simmer/braise/baked (the asse
 | PASTA_010 | Cheese Ravioli | brown_butter | pan seared | Brown butter |
 | PASTA_010 | Cheese Ravioli | garlic_sage | pan seared | Garlic sage |
 | SAND_042 | French Dip | onion_saute | *(broil cm)* two-stage | Sautéed onion |
+| SAND_059 | Mushroom Swiss Burger | onion | pan seared | Caramelized onion |
+| SAND_059 | Mushroom Swiss Burger | mushrooms | pan seared | Mushrooms |
+| SIDE_010 | Tartiflette | onion_garlic | *(baked cm)* two-stage | Onion & garlic |
 | SIDE_006 | Potato Salad (German Style) | onion | pan seared | Onion |
+| SIDE_019 | Mac and Cheese | roux | *(baked cm)* two-stage | Roux |
+| SIDE_029 | Creamed Corn | roux | *(simmer cm)* two-stage | Roux |
 | SAUCE_025 | Red Enchilada Sauce | onion_mixture | *(simmer cm)* two-stage | Onion and garlic |
 | SAUCE_027 | Italian Marinara Sauce | onion | *(simmer cm)* two-stage | Onion |
 | SAUCE_027 | Italian Marinara Sauce | garlic | *(simmer cm)* two-stage | Garlic |
+| SAUCE_001 | Béchamel Sauce | roux | *(simmer cm)* two-stage | Roux |
+| SAUCE_006 | Velouté | roux | *(sub-simmer cm)* two-stage | Roux |
+| SAUCE_015 | Cheese Sauce for Vegetables | roux | *(sub-simmer cm)* two-stage | Roux |
 | SIDE_028 | Braised Collard Greens | onions | *(simmer cm)* two-stage | Onions |
 | SIDE_028 | Braised Collard Greens | garlic | *(simmer cm)* two-stage | Garlic |
 | SIDE_030 | Creamed Spinach | onion | *(sub-simmer cm)* two-stage | Onion |
 | SIDE_030 | Creamed Spinach | garlic | *(sub-simmer cm)* two-stage | Garlic |
+| SIDE_035 | Rice Pilaf | onion | *(braise cm)* two-stage | Onion |
+| SIDE_035 | Rice Pilaf | garlic | *(braise cm)* two-stage | Garlic |
+| SIDE_036 | Risotto | onion | *(simmer cm)* two-stage | Onion |
+| SIDE_036 | Risotto | garlic_thyme | *(simmer cm)* two-stage | Garlic & thyme |
+| STOCK_006 | Fish Stock | onion | *(sub-simmer cm)* two-stage | Onion and aromatics |
 
 #### Batch B — medium-high initial sear → reduce to medium for aromatics
 
 | Recipe | Recipe Name | Section key | Current method | Label |
 |---|---|---|---|---|
+| ENTR_001 | Chicken Fried Steak | roux | pan seared | Roux |
 | ENTR_013 | Beef Curry | onions | pan seared | Onions |
 | ENTR_013 | Beef Curry | garlic | pan seared | Garlic |
+| ENTR_013 | Beef Curry | curry_tomato_paste | pan seared | Curry and Tomato Paste |
 | ENTR_014 | Beef Ropa Vieja | onions_peppers | pan seared | Onions and Peppers |
 | ENTR_014 | Beef Ropa Vieja | garlic | pan seared | Garlic |
 | ENTR_017 | Beef Goulash | onions | pan seared | Onions |
@@ -974,6 +996,8 @@ Sections marked **two-stage** have `cook_method` = simmer/braise/baked (the asse
 | ENTR_036 | Beef Salisbury Steak | garlic | *(simmer cm)* two-stage | Garlic |
 | ENTR_037 | Beef Short Ribs | vegetables | *(baked covered cm)* two-stage | Vegetables |
 | ENTR_037 | Beef Short Ribs | garlic_tomato_paste | *(baked covered cm)* two-stage | Garlic & Tomato Paste |
+| ENTR_039 | Beef Stroganoff | onions_mushrooms | *(simmer cm)* two-stage | Onions & Mushrooms |
+| ENTR_039 | Beef Stroganoff | garlic | *(simmer cm)* two-stage | Garlic |
 | ENTR_049 | Chicken Florentine | garlic | *(simmer cm)* two-stage | Garlic |
 | ENTR_073 | Lamb Shepherd's Pie | filling | pan seared | Filling |
 | ENTR_111 | Seafood Shrimp Scampi | scampi | pan seared | Shrimp Scampi |
