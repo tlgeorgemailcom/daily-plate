@@ -168,7 +168,7 @@ Prep: Section Label | Added after cooking | ingredients: ingredient, ingredient
 | `boiled (covered)` | `boiled covered` | `boiled covered` | time in minutes | *(none — absorption model for covered rice/grains)* |
 | `simmer (uncovered)` | `simmer` | `simmer` | time in minutes | `simmer_sauce` for butter/cream/sauce; none for plain liquid reduction |
 | `sub-simmer (uncovered)` | `sub-simmer` | `sub-simmer` | time in minutes | `simmer_sauce` for cream/butter sauces |
-| `sauteed` | `sauteed` | `sauteed` | time in minutes | `sauteed_vegetable` for garlic/onion/shallot/mushroom/vegetable sautés; `fried_meat` for ground meat/sausage |
+| `sauteed` | `sauteed` | `sauteed` | time in minutes | `sauteed_aromatic` for garlic/onion/shallot/sofrito/sliced mushroom aromatics; `fried_meat` for ground meat/sausage |
 | `pan seared` | `pan seared` | `pan seared` | time in minutes | `pan_grilled_chicken` (chicken/fish); `fried_meat` (ground meat, sausage, bacon) |
 | `baked` | `baked` | `baked` | *(empty — use `cook_stages`)* | `pastry` (doughs); `casserole_baked` (assembled bakes); `cake_batter` (batters) |
 | `baked (covered)` | `baked covered` | `baked covered` | *(empty — use `cook_stages`)* | `casserole_baked` |
@@ -231,7 +231,8 @@ Without a `fill_class`, `calc_yield_water` returns `yfw=1.0` for all stovetop se
 | Section contents | `fill_class` |
 |---|---|
 | Butter + cream sauce, simmering | `simmer_sauce` |
-| Garlic, onion, shallot, mushroom, or vegetable sauté | `sauteed_vegetable` |
+| Garlic, onion, shallot, sofrito, or sliced mushroom aromatic sauté | `sauteed_aromatic` |
+| Larger sautéed vegetable pieces (broccoli florets, green beans, zucchini chunks, etc.) | Calibrate a distinct vegetable-specific fill class before use |
 | Ground beef, sausage (fat stays or drains) | `fried_meat` |
 | Chicken breast, fish fillet (pan seared) | `pan_grilled_chicken` |
 | Battered/breaded fried cutlet or fillet protein (chicken fried steak, schnitzel, Milanese, fried fish fillet) | `fried_chicken` |
@@ -917,7 +918,7 @@ Reclassifying to `sauteed` also changes evaporation temp (200°F vs 230°F), so 
 
 ### `sauteed` reclassification candidates
 
-Sections currently stored as `pan seared` that should be reclassified to `sauteed` based on instruction analysis. All involve aromatic/vegetable softening (onion, garlic, peppers, mushrooms, carrots, celery) cooked at **medium heat** — not protein searing.
+Sections currently stored as `pan seared` that should be reclassified to `sauteed` based on instruction analysis. Most involve aromatic softening (onion, garlic, peppers, mushrooms, carrots, celery) cooked at **medium heat** — not protein searing. Larger sautéed vegetable pieces need a separate calibrated fill class before being treated as water-loss equivalents.
 
 **Steps required per section:**
 1. Update `recipe_sections.csv` — change `cook_method` (and/or `prep_method`) from `pan seared` → `sauteed`
