@@ -934,7 +934,7 @@ Sections marked **two-stage** have `cook_method` = simmer/braise/baked (the asse
 |---|---|---|---|---|
 | ENTR_015 | Beef Steak Diane | shallots_garlic | sauteed | Shallots and Garlic |
 | ENTR_015 | Beef Steak Diane | mushrooms | sauteed | Mushrooms |
-| ENTR_015 | Beef Steak Diane | brandy | sauteed | Brandy |
+| ENTR_015 | Beef Steak Diane | brandy | simmer | Brandy |
 | PASTA_007 | Lemon Pasta | garlic | sauteed | Garlic |
 
 #### Batch A — medium-heat-only recipes
