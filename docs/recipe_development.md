@@ -991,6 +991,8 @@ Sections marked **two-stage** have `cook_method` = simmer/braise/baked (the asse
 | ENTR_019 | Beef Hamburger Steak | flour | sauteed | Flour |
 | ENTR_029 | Beef Osso Buco | vegetables | sauteed *(braise cm)* two-stage | Vegetables |
 | ENTR_029 | Beef Osso Buco | garlic | sauteed *(braise cm)* two-stage | Garlic |
+| ENTR_031 | Beef Picadillo | onion_peppers | sauteed *(braise cm)* two-stage | Onions & Peppers |
+| ENTR_031 | Beef Picadillo | garlic | sauteed *(braise cm)* two-stage | Garlic |
 
 #### Batch A — medium-heat-only recipes
 
@@ -1004,8 +1006,6 @@ Sections marked **two-stage** have `cook_method` = simmer/braise/baked (the asse
 
 | Recipe | Recipe Name | Section key | Current method | Label |
 |---|---|---|---|---|
-| ENTR_031 | Beef Picadillo | onion_peppers | *(braise cm)* two-stage | Onion & Peppers |
-| ENTR_031 | Beef Picadillo | garlic | *(braise cm)* two-stage | Garlic |
 | ENTR_034 | Beef Ragu | vegetables | *(braise cm)* two-stage | Vegetables |
 | ENTR_034 | Beef Ragu | garlic_tomato_paste | *(braise cm)* two-stage | Garlic & Tomato Paste |
 | ENTR_036 | Beef Salisbury Steak | onions_mushrooms | *(simmer cm)* two-stage | Onions & Mushrooms |
