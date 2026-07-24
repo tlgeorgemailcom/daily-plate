@@ -999,6 +999,8 @@ Sections marked **two-stage** have `cook_method` = simmer/braise/baked (the asse
 | ENTR_036 | Beef Salisbury Steak | onions_mushrooms | sauteed *(simmer cm)* two-stage | Onions & Mushrooms |
 | ENTR_036 | Beef Salisbury Steak | garlic | sauteed *(simmer cm)* two-stage | Garlic |
 | ENTR_036 | Beef Salisbury Steak | flour | sauteed *(simmer cm)* two-stage | Flour |
+| ENTR_037 | Beef Short Ribs | vegetables | sauteed *(baked covered cm)* two-stage | Vegetables |
+| ENTR_037 | Beef Short Ribs | garlic_tomato_paste | sauteed *(baked covered cm)* two-stage | Garlic & Tomato Paste |
 
 #### Batch A — medium-heat-only recipes
 
@@ -1012,8 +1014,6 @@ Sections marked **two-stage** have `cook_method` = simmer/braise/baked (the asse
 
 | Recipe | Recipe Name | Section key | Current method | Label |
 |---|---|---|---|---|
-| ENTR_037 | Beef Short Ribs | vegetables | *(baked covered cm)* two-stage | Vegetables |
-| ENTR_037 | Beef Short Ribs | garlic_tomato_paste | *(baked covered cm)* two-stage | Garlic & Tomato Paste |
 | ENTR_039 | Beef Stroganoff | onions_mushrooms | *(simmer cm)* two-stage | Onions & Mushrooms |
 | ENTR_039 | Beef Stroganoff | garlic | *(simmer cm)* two-stage | Garlic |
 | ENTR_049 | Chicken Florentine | garlic | *(simmer cm)* two-stage | Garlic |
