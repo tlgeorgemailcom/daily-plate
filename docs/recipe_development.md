@@ -973,6 +973,7 @@ Sections marked **two-stage** have `cook_method` = simmer/braise/baked (the asse
 | SIDE_036 | Risotto | garlic_thyme | sauteed *(simmer cm)* two-stage | Garlic & thyme |
 | SIDE_036 | Risotto | wine | simmer *(simmer cm)* two-stage | Wine |
 | STOCK_006 | Fish Stock | onion | sauteed *(sub-simmer cm)* two-stage | Onion and aromatics |
+| PASTA_005 | Garlic Butter Shrimp Pasta | garlic | sauteed *(simmer cm)* two-stage | Garlic |
 
 #### Batch A — medium-heat-only recipes
 
@@ -1014,4 +1015,3 @@ Sections marked **two-stage** have `cook_method` = simmer/braise/baked (the asse
 | ENTR_111 | Seafood Shrimp Scampi | scampi | pan seared | Shrimp Scampi |
 | ENTR_118 | Vegetarian Dal | dal_base | pan seared | Dal Sauce |
 | ENTR_119 | Vegetarian Chana Masala | chana_masala | pan seared | Chana Masala |
-| PASTA_005 | Garlic Butter Shrimp Pasta | garlic | *(simmer cm)* two-stage | Garlic |
