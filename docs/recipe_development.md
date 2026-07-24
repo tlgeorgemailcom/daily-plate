@@ -955,6 +955,7 @@ Sections marked **two-stage** have `cook_method` = simmer/braise/baked (the asse
 | SIDE_006 | Potato Salad (German Style) | bacon | sauteed | Bacon |
 | SIDE_006 | Potato Salad (German Style) | onion | sauteed | Onion |
 | SIDE_019 | Mac and Cheese | roux | sauteed *(baked cm)* two-stage | Roux |
+| SIDE_029 | Creamed Corn | roux | sauteed *(simmer cm)* two-stage | Roux |
 
 #### Batch A — medium-heat-only recipes
 
@@ -964,7 +965,6 @@ Sections marked **two-stage** have `cook_method` = simmer/braise/baked (the asse
 | ENTR_095 | Pork Fried Rice | filling | pan seared | Filling |
 | ENTR_110 | Seafood Paella | paella | pan seared | Seafood and Sofrito |
 | ENTR_120 | Vegetarian Shakshuka | shakshuka | pan seared | Shakshuka |
-| SIDE_029 | Creamed Corn | roux | *(simmer cm)* two-stage | Roux |
 | SAUCE_025 | Red Enchilada Sauce | onion_mixture | *(simmer cm)* two-stage | Onion and garlic |
 | SAUCE_027 | Italian Marinara Sauce | onion | *(simmer cm)* two-stage | Onion |
 | SAUCE_027 | Italian Marinara Sauce | garlic | *(simmer cm)* two-stage | Garlic |
