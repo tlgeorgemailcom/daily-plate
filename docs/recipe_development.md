@@ -943,6 +943,9 @@ Sections marked **two-stage** have `cook_method` = simmer/braise/baked (the asse
 | ENTR_015 | Beef Steak Diane | mushrooms | sauteed | Mushrooms |
 | ENTR_015 | Beef Steak Diane | brandy | simmer | Brandy |
 | PASTA_007 | Lemon Pasta | garlic | sauteed | Garlic |
+| PASTA_010 | Cheese Ravioli | wilted_spinach | scalded | Wilt spinach |
+| PASTA_010 | Cheese Ravioli | brown_butter | sauteed | Brown butter |
+| PASTA_010 | Cheese Ravioli | garlic_sage | sauteed | Garlic sage |
 
 #### Batch A — medium-heat-only recipes
 
@@ -952,10 +955,8 @@ Sections marked **two-stage** have `cook_method` = simmer/braise/baked (the asse
 | ENTR_095 | Pork Fried Rice | filling | pan seared | Filling |
 | ENTR_110 | Seafood Paella | paella | pan seared | Seafood and Sofrito |
 | ENTR_120 | Vegetarian Shakshuka | shakshuka | pan seared | Shakshuka |
-| PASTA_010 | Cheese Ravioli | wilted_spinach | scalded | Wilt spinach |
-| PASTA_010 | Cheese Ravioli | brown_butter | sauteed | Brown butter |
-| PASTA_010 | Cheese Ravioli | garlic_sage | sauteed | Garlic sage |
-| SAND_042 | French Dip | onion_saute | *(broil cm)* two-stage | Sautéed onion |
+
+| SAND_042 | French Dip | onion_saute | sauteed *(broil cm)* two-stage | Sautéed onion |
 | SAND_059 | Mushroom Swiss Burger | onion | pan seared | Caramelized onion |
 | SAND_059 | Mushroom Swiss Burger | mushrooms | pan seared | Mushrooms |
 | SIDE_010 | Tartiflette | onion_garlic | *(baked cm)* two-stage | Onion & garlic |
