@@ -949,6 +949,9 @@ Sections marked **two-stage** have `cook_method` = simmer/braise/baked (the asse
 | SAND_042 | French Dip | onion_saute | sauteed *(broil cm)* two-stage | Sautéed onion |
 | SAND_059 | Mushroom Swiss Burger | onion | sauteed | Caramelized onion |
 | SAND_059 | Mushroom Swiss Burger | mushrooms | sauteed | Mushrooms |
+| SIDE_010 | Tartiflette | bacon | sauteed *(baked cm)* two-stage | Bacon |
+| SIDE_010 | Tartiflette | onion_garlic | sauteed *(baked cm)* two-stage | Onion & garlic |
+| SIDE_010 | Tartiflette | white_wine | simmer *(baked cm)* two-stage | White wine |
 
 #### Batch A — medium-heat-only recipes
 
@@ -958,7 +961,6 @@ Sections marked **two-stage** have `cook_method` = simmer/braise/baked (the asse
 | ENTR_095 | Pork Fried Rice | filling | pan seared | Filling |
 | ENTR_110 | Seafood Paella | paella | pan seared | Seafood and Sofrito |
 | ENTR_120 | Vegetarian Shakshuka | shakshuka | pan seared | Shakshuka |
-| SIDE_010 | Tartiflette | onion_garlic | *(baked cm)* two-stage | Onion & garlic |
 | SIDE_006 | Potato Salad (German Style) | onion | pan seared | Onion |
 | SIDE_019 | Mac and Cheese | roux | *(baked cm)* two-stage | Roux |
 | SIDE_029 | Creamed Corn | roux | *(simmer cm)* two-stage | Roux |
