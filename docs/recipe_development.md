@@ -986,6 +986,9 @@ Sections marked **two-stage** have `cook_method` = simmer/braise/baked (the asse
 | ENTR_017 | Beef Goulash | garlic_bell_pepper | sauteed | Garlic and Bell Peppers |
 | ENTR_017 | Beef Goulash | spices | sauteed | Spices |
 | ENTR_017 | Beef Goulash | tomato_paste_section | sauteed | Tomato Paste |
+| ENTR_019 | Beef Hamburger Steak | onions | sauteed | Onions |
+| ENTR_019 | Beef Hamburger Steak | mushrooms_garlic | sauteed | Mushrooms and Garlic |
+| ENTR_019 | Beef Hamburger Steak | flour | sauteed | Flour |
 
 #### Batch A — medium-heat-only recipes
 
@@ -999,8 +1002,6 @@ Sections marked **two-stage** have `cook_method` = simmer/braise/baked (the asse
 
 | Recipe | Recipe Name | Section key | Current method | Label |
 |---|---|---|---|---|
-| ENTR_019 | Beef Hamburger Steak | onions | pan seared | Onions |
-| ENTR_019 | Beef Hamburger Steak | mushrooms_garlic | pan seared | Mushrooms and Garlic |
 | ENTR_029 | Beef Osso Buco | vegetables | *(braise cm)* two-stage | Vegetables |
 | ENTR_029 | Beef Osso Buco | garlic | *(braise cm)* two-stage | Garlic |
 | ENTR_031 | Beef Picadillo | onion_peppers | *(braise cm)* two-stage | Onion & Peppers |
