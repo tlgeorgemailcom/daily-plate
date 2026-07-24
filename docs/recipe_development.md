@@ -978,6 +978,10 @@ Sections marked **two-stage** have `cook_method` = simmer/braise/baked (the asse
 | ENTR_013 | Beef Curry | onions | sauteed | Onions |
 | ENTR_013 | Beef Curry | garlic | sauteed | Garlic & Ginger |
 | ENTR_013 | Beef Curry | curry_tomato_paste | sauteed | Curry and Tomato Paste |
+| ENTR_014 | Beef Ropa Vieja | onions_peppers | sauteed | Onions and Peppers |
+| ENTR_014 | Beef Ropa Vieja | garlic | sauteed | Garlic |
+| ENTR_014 | Beef Ropa Vieja | cumin_oregano | sauteed | Cumin and Oregano |
+| ENTR_014 | Beef Ropa Vieja | tomato_paste | sauteed | Tomato Paste |
 
 #### Batch A — medium-heat-only recipes
 
@@ -991,8 +995,6 @@ Sections marked **two-stage** have `cook_method` = simmer/braise/baked (the asse
 
 | Recipe | Recipe Name | Section key | Current method | Label |
 |---|---|---|---|---|
-| ENTR_014 | Beef Ropa Vieja | onions_peppers | pan seared | Onions and Peppers |
-| ENTR_014 | Beef Ropa Vieja | garlic | pan seared | Garlic |
 | ENTR_017 | Beef Goulash | onions | pan seared | Onions |
 | ENTR_017 | Beef Goulash | garlic_bell_pepper | pan seared | Garlic and Bell Pepper |
 | ENTR_017 | Beef Goulash | spices | pan seared | Spices |
