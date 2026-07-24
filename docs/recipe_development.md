@@ -965,6 +965,8 @@ Sections marked **two-stage** have `cook_method` = simmer/braise/baked (the asse
 | SAUCE_015 | Cheese Sauce for Vegetables | roux | sauteed *(sub-simmer cm)* two-stage | Roux |
 | SIDE_028 | Braised Collard Greens | onions | sauteed *(simmer cm)* two-stage | Onions |
 | SIDE_028 | Braised Collard Greens | garlic | sauteed *(simmer cm)* two-stage | Garlic |
+| SIDE_030 | Creamed Spinach | onion | sauteed *(sub-simmer cm)* two-stage | Onion |
+| SIDE_030 | Creamed Spinach | garlic | sauteed *(sub-simmer cm)* two-stage | Garlic |
 
 #### Batch A — medium-heat-only recipes
 
@@ -974,8 +976,6 @@ Sections marked **two-stage** have `cook_method` = simmer/braise/baked (the asse
 | ENTR_095 | Pork Fried Rice | filling | pan seared | Filling |
 | ENTR_110 | Seafood Paella | paella | pan seared | Seafood and Sofrito |
 | ENTR_120 | Vegetarian Shakshuka | shakshuka | pan seared | Shakshuka |
-| SIDE_030 | Creamed Spinach | onion | *(sub-simmer cm)* two-stage | Onion |
-| SIDE_030 | Creamed Spinach | garlic | *(sub-simmer cm)* two-stage | Garlic |
 | SIDE_035 | Rice Pilaf | onion | *(braise cm)* two-stage | Onion |
 | SIDE_035 | Rice Pilaf | garlic | *(braise cm)* two-stage | Garlic |
 | SIDE_036 | Risotto | onion | *(simmer cm)* two-stage | Onion |
