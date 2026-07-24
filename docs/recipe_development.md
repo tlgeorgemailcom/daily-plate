@@ -960,6 +960,7 @@ Sections marked **two-stage** have `cook_method` = simmer/braise/baked (the asse
 | SAUCE_025 | Red Enchilada Sauce | tomatoes | simmer *(simmer cm)* two-stage | Tomatoes and spices |
 | SAUCE_027 | Italian Marinara Sauce | onion | sauteed *(simmer cm)* two-stage | Onion |
 | SAUCE_027 | Italian Marinara Sauce | garlic | sauteed *(simmer cm)* two-stage | Garlic |
+| SAUCE_001 | Béchamel Sauce | roux | sauteed *(simmer cm)* two-stage | Roux |
 
 #### Batch A — medium-heat-only recipes
 
@@ -969,7 +970,6 @@ Sections marked **two-stage** have `cook_method` = simmer/braise/baked (the asse
 | ENTR_095 | Pork Fried Rice | filling | pan seared | Filling |
 | ENTR_110 | Seafood Paella | paella | pan seared | Seafood and Sofrito |
 | ENTR_120 | Vegetarian Shakshuka | shakshuka | pan seared | Shakshuka |
-| SAUCE_001 | Béchamel Sauce | roux | *(simmer cm)* two-stage | Roux |
 | SAUCE_006 | Velouté | roux | *(sub-simmer cm)* two-stage | Roux |
 | SAUCE_015 | Cheese Sauce for Vegetables | roux | *(sub-simmer cm)* two-stage | Roux |
 | SIDE_028 | Braised Collard Greens | onions | *(simmer cm)* two-stage | Onions |

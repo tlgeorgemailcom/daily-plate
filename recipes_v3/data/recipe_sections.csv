@@ -370,7 +370,7 @@ SAND_065,frank,Frank,pan seared,pan seared,,,,,1.00,,fried_meat,,9,
 SAND_065,assembly,Assembly,,raw,,,,,1.00,,,,,
 SAND_066,corn_dog,Corn Dog,fried,fried,,,,,1.00,,fried_chicken,,3,
 SAUCE_001,onion,Onion and clove infusion,sub-simmer,simmer,,,,,,,simmer_sauce,,3,
-SAUCE_001,roux,Roux,pan seared,simmer,,,,,,,pan_grilled_batter,,1,
+SAUCE_001,roux,Roux,sauteed,simmer,,,,,,,pan_grilled_batter,,1,
 SAUCE_001,sauce,Sauce,simmer,simmer,,,,,,,simmer_sauce,,1,
 SAUCE_001,finish,Finish,finish,raw,,,,,,,,,,
 SAUCE_002,bechamel,Béchamel sauce,sub-simmer,raw,,,,,,,,,1,SAUCE_001
