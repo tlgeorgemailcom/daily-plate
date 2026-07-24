@@ -969,6 +969,9 @@ Sections marked **two-stage** have `cook_method` = simmer/braise/baked (the asse
 | SIDE_030 | Creamed Spinach | garlic | sauteed *(sub-simmer cm)* two-stage | Garlic |
 | SIDE_035 | Rice Pilaf | onion | sauteed *(braise cm)* two-stage | Onion |
 | SIDE_035 | Rice Pilaf | garlic | sauteed *(braise cm)* two-stage | Garlic |
+| SIDE_036 | Risotto | onion | sauteed *(simmer cm)* two-stage | Onion |
+| SIDE_036 | Risotto | garlic_thyme | sauteed *(simmer cm)* two-stage | Garlic & thyme |
+| SIDE_036 | Risotto | wine | simmer *(simmer cm)* two-stage | Wine |
 
 #### Batch A — medium-heat-only recipes
 
@@ -978,8 +981,6 @@ Sections marked **two-stage** have `cook_method` = simmer/braise/baked (the asse
 | ENTR_095 | Pork Fried Rice | filling | pan seared | Filling |
 | ENTR_110 | Seafood Paella | paella | pan seared | Seafood and Sofrito |
 | ENTR_120 | Vegetarian Shakshuka | shakshuka | pan seared | Shakshuka |
-| SIDE_036 | Risotto | onion | *(simmer cm)* two-stage | Onion |
-| SIDE_036 | Risotto | garlic_thyme | *(simmer cm)* two-stage | Garlic & thyme |
 | STOCK_006 | Fish Stock | onion | *(sub-simmer cm)* two-stage | Onion and aromatics |
 
 #### Batch B — medium-high initial sear → reduce to medium for aromatics
