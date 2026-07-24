@@ -975,6 +975,9 @@ Sections marked **two-stage** have `cook_method` = simmer/braise/baked (the asse
 | STOCK_006 | Fish Stock | onion | sauteed *(sub-simmer cm)* two-stage | Onion and aromatics |
 | PASTA_005 | Garlic Butter Shrimp Pasta | garlic | sauteed *(simmer cm)* two-stage | Garlic |
 | ENTR_001 | Chicken Fried Steak | roux | sauteed | Roux |
+| ENTR_013 | Beef Curry | onions | sauteed | Onions |
+| ENTR_013 | Beef Curry | garlic | sauteed | Garlic & Ginger |
+| ENTR_013 | Beef Curry | curry_tomato_paste | sauteed | Curry and Tomato Paste |
 
 #### Batch A — medium-heat-only recipes
 
@@ -988,9 +991,6 @@ Sections marked **two-stage** have `cook_method` = simmer/braise/baked (the asse
 
 | Recipe | Recipe Name | Section key | Current method | Label |
 |---|---|---|---|---|
-| ENTR_013 | Beef Curry | onions | pan seared | Onions |
-| ENTR_013 | Beef Curry | garlic | pan seared | Garlic |
-| ENTR_013 | Beef Curry | curry_tomato_paste | pan seared | Curry and Tomato Paste |
 | ENTR_014 | Beef Ropa Vieja | onions_peppers | pan seared | Onions and Peppers |
 | ENTR_014 | Beef Ropa Vieja | garlic | pan seared | Garlic |
 | ENTR_017 | Beef Goulash | onions | pan seared | Onions |
