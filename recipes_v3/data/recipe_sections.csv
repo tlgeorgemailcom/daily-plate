@@ -413,7 +413,7 @@ SAUCE_013,mayonnaise,Mayonnaise,,raw,,,,,,,,,,SAUCE_009
 SAUCE_013,chili_sauce,Chili Sauce,,raw,,,,,,,,,,SAUCE_012
 SAUCE_013,seasoning,To finish,,raw,,,,,,,,,,
 ENTR_001,steak,Chicken Fried Steak,fried,fried,,,,,,,fried_chicken,,7,
-ENTR_001,roux,Roux,pan seared,pan seared,,,,,,,pan_grilled_batter,,2,
+ENTR_001,roux,Roux,sauteed,sauteed,,,,,,,pan_grilled_batter,,2,
 ENTR_001,gravy,Cream Gravy,simmer,simmer,,,,,,,simmer_sauce,,5,
 SIDE_001,potatoes,Gold potatoes,simmer,simmer,,,,,,,simmer_sauce,,25,
 SIDE_001,finish,Milk & butter,finish,raw,,,,,,,,,,
