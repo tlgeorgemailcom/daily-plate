@@ -604,7 +604,6 @@ ENTR_019,grill_patties,Grill Patties,pan seared,pan seared,,,,,,,fried_meat,,9,
 ENTR_019,onions,Onions,sauteed,sauteed,,,,,,,sauteed_aromatic,,13,
 ENTR_019,mushrooms_garlic,Mushrooms and Garlic,sauteed,sauteed,,,,,,,sauteed_aromatic,,5,
 ENTR_019,flour,Flour,sauteed,sauteed,,,,,,,pan_grilled_batter,,1,
-ENTR_019,stock_ref,Beef Stock,,raw,,,,,,,,,,STOCK_004
 ENTR_019,gravy,Gravy,simmer,simmer,,,,,,,simmer_sauce,,4,
 ENTR_020,steak,Grill Steaks,pan seared,pan seared,,,,,,,pan_grilled_steak,,9,
 ENTR_020,marinade,Marinade,,raw,,,,,,,,,,
