@@ -568,13 +568,13 @@ ENTR_011,15,black_pepper_ground,1/2 tsp ground black pepper,1.15,,,add_spices,,f
 ENTR_012,1,beef_skirt_steak_raw,2 lbs beef skirt steak,907.2,,,beef,,false,,,,
 ENTR_012,2,salt_table,1/2 tsp salt,3.0,,,beef,,false,,,,
 ENTR_012,3,black_pepper_ground,1/4 tsp ground black pepper,0.575,,,beef,,false,,,,
-ENTR_012,4,olive_oil,1/4 cup olive oil,54.4,,,marinade,,false,,,true,100
-ENTR_012,5,lime_juice_raw,1/4 cup lime juice,61.0,,,marinade,,false,,,true,100
-ENTR_012,6,garlic_raw,"6 cloves garlic, minced",18.0,,,marinade,,false,,,true,100
-ENTR_012,7,cumin_ground,1 tsp ground cumin,2.1,,,marinade,,false,,,true,100
-ENTR_012,8,oregano_dried,1 tsp dried oregano,2.7,,,marinade,,false,,,true,100
-ENTR_012,9,salt_table,1 tsp salt,6.0,,,marinade,,false,,,true,100
-ENTR_012,10,black_pepper_ground,1/2 tsp ground black pepper,1.15,,,marinade,,false,,,true,100
+ENTR_012,4,olive_oil,1/4 cup olive oil,54.4,,,marinade,,false,,beef,true,97
+ENTR_012,5,lime_juice_raw,1/4 cup lime juice,61.0,,,marinade,,false,,beef,true,97
+ENTR_012,6,garlic_raw,"6 cloves garlic, minced",18.0,,,marinade,,false,,beef,true,97
+ENTR_012,7,cumin_ground,1 tsp ground cumin,2.1,,,marinade,,false,,beef,true,97
+ENTR_012,8,oregano_dried,1 tsp dried oregano,2.7,,,marinade,,false,,beef,true,97
+ENTR_012,9,salt_table,1 tsp salt,6.0,,,marinade,,false,,beef,true,97
+ENTR_012,10,black_pepper_ground,1/2 tsp ground black pepper,1.15,,,marinade,,false,,beef,true,97
 ENTR_013,1,beef_chuck_roast_raw,"2 lbs beef chuck roast, cut into 1 1/2-inch cubes",907.2,,,beef,,false,,,,
 ENTR_013,2,salt_table,1/2 tsp salt,3.0,,,beef,,false,,,,
 ENTR_013,3,black_pepper_ground,1/4 tsp ground black pepper,0.575,,,beef,,false,,,,
