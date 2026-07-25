@@ -538,7 +538,6 @@ ENTR_005,flour_tomato_paste,Flour and Tomato Paste,sauteed,sauteed,,,,,,,pan_gri
 ENTR_005,wine_broth,Wine and Broth,simmer,simmer,,,,,,,simmer_sauce,,150,
 ENTR_005,mushrooms,Mushrooms,finish,raw,,,,,,,,,,
 ENTR_006,chiles,Chiles,sub-simmer,sub-simmer,,,,,,,,,20,
-ENTR_006,stock_ref,Beef Stock,,raw,,,,,,,,,,STOCK_004
 ENTR_006,beef,Brown Beef,pan seared,pan seared,,,,,,,fried_meat,,6,
 ENTR_006,birria,Birria,,braise,,,,,,,simmer_sauce,,160,
 ENTR_007,beef,Brown Beef,pan seared,pan seared,,,,,,,fried_meat,,6,
