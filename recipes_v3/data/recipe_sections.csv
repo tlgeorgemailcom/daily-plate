@@ -581,9 +581,7 @@ ENTR_015,sear_steaks,Sear Steaks,pan seared,pan seared,,,,,,,pan_grilled_steak,,
 ENTR_015,shallots_garlic,Shallots and Garlic,sauteed,sauteed,,,,,,,sauteed_aromatic,,10,
 ENTR_015,mushrooms,Mushrooms,sauteed,sauteed,,,,,,,sauteed_aromatic,,9,
 ENTR_015,brandy,Brandy,simmer,simmer,,,,,,,simmer_sauce,,6,
-ENTR_015,stock_ref,Beef Stock,,raw,,,,,,,,,,STOCK_004
 ENTR_015,broth_worcestershire,Broth and Worcestershire,simmer,simmer,,,,,,,simmer_sauce,,5,
-ENTR_015,dijon_ref,Dijon-Style Mustard,,raw,,,,,,,,,,SAUCE_010
 ENTR_015,cream_mustard,Cream and Mustard,simmer,simmer,,,,,,,simmer_sauce,,3,
 ENTR_015,parsley,Parsley,finish,raw,,,,,,,,,,
 ENTR_016,brown_beef,Brown Beef,pan seared,pan seared,,,,,,,fried_meat,,12,
