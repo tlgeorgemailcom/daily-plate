@@ -507,26 +507,27 @@ The pipeline keeps `grams` and `qty_display` for rendering, but scales nutrition
 
 `cook_section` is the 12th column. When non-empty, it tells the pipeline to accumulate this ingredient's nutrients into the named section for math purposes, while `section` continues to control which collapsible header the ingredient appears under in the UI.
 
-**When to use it:** a sub-recipe (@STOCK_003, @STOCK_006, etc.) is the actual cooking liquid for an absorber NDB (rice, pasta, legumes) BUT you want it to display in its own pre-collapsed section rather than inline with the grain.
+**Default rule for dev recipe templates:** keep cooking liquids in the visible heated section that uses them. If chicken broth simmers with chicken, put `@STOCK_003` in the Chicken section. If stock boils with rice, put the stock row in the Rice/Risotto section. This is the only pattern a community user can see, understand, and recreate in the form.
+
+**Rare internal-use exception:** `cook_section` may decouple display from math for legacy/admin data, but do not use it for a user-facing dev template when the hidden destination section carries heat, minutes, or evaporation physics. A separate raw Chicken Broth header with hidden `cook_section=chicken` leaves the visible recipe misleading: the user sees broth as unheated even though nutrition depends on simmering it. Prefer the mixed/cooking-liquid section pattern below.
 
 | | `section` | `cook_section` |
 |---|---|---|
 | Display grouping | ✅ used | ignored |
 | Pipeline nutrient math | ignored | ✅ used (falls back to `section` if empty) |
 
-**Pattern — stock as cooking liquid with separate display section:**
+**Preferred pattern — stock as cooking liquid in the visible heated section:**
 
 ```
 # recipe_sections.csv
-SIDE_036, broth,   Chicken Broth, raw,    yfw=1.0   ← display only
-SIDE_036, risotto, Risotto,       boiled, yfw=1.0   ← bin model fires here
+SIDE_036, risotto, Risotto, boiled, ...   ← bin model fires here
 
 # recipe_ingredients.csv
-SIDE_036, 1, @STOCK_003, "4 cups ...", 960g, section=broth, cook_section=risotto
+SIDE_036, 1, @STOCK_003, "4 cups Chicken Broth (recipe)", 960g, section=risotto
 SIDE_036, 2, rice_white_short_raw, ...,    section=risotto, cook_section=(empty)
 ```
 
-Result: Chicken Broth header pre-collapses (all items `isDish: true`); Risotto header starts expanded with the 10 regular ingredients visible. The bin model sees the 960g of broth water inside the risotto section and computes the correct auto_yfw.
+Result: the Risotto section visibly contains both the broth and rice, and the bin model sees the 960g of broth water inside the risotto section and computes the correct auto_yfw. A community user can recreate this directly.
 
 **When NOT to use it:** if the @-ref and the absorber are already in the same section (e.g. ENTR_110 Paella, where `@STOCK_006` is in the same `rice` section as the rice), no `cook_section` is needed — they already share a section accumulator.
 

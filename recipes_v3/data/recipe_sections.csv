@@ -764,7 +764,6 @@ ENTR_053,broth_capers,Broth & Capers,simmer,sub-simmer,,,,,,,simmer_sauce,180:2,
 ENTR_053,butter,Butter,,sub-simmer,,,,,,,,180:2,,
 ENTR_053,finish,Parsley,finish,raw,,,,,,,,,,
 ENTR_054,crust,Pie Crust Double,,raw,1.0,1.0,1.0,1.0,1.0,,,,,CRUST_004
-ENTR_054,broth,Chicken Broth,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_003
 ENTR_054,chicken,Chicken,simmer,baked,,,,,,,simmer_sauce,425:32,16,
 ENTR_054,vegetables,Vegetables,sauteed,baked,,,,,,,sauteed_aromatic,425:32,5,
 ENTR_054,flour,Flour,sauteed,baked,,,,,,,pan_grilled_batter,425:32,1,
