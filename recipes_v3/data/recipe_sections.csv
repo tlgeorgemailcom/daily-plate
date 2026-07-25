@@ -669,7 +669,6 @@ ENTR_034,red_wine,Red Wine,simmer,braise,,,,,,,simmer_sauce,185:165,2,
 ENTR_034,assembly,Assembly,,braise,,,,,,,simmer_sauce,185:165,,
 ENTR_035,rub,Dry Rub,,baked,,,,,,,,275:165,,
 ENTR_035,ribs,Ribs,,baked,,0.85,,,,,braised_beef,275:165,,
-ENTR_035,bbq_sauce,BBQ Sauce,finish,raw,,,,,,,,,,SAUCE_026
 ENTR_036,brown_patties,Brown Patties,pan seared,simmer,,1.0,,,,,fried_ground_beef,195:4,9,
 ENTR_036,onions_mushrooms,Onions & Mushrooms,sauteed,simmer,,,,,,,sauteed_aromatic,195:4,8,
 ENTR_036,garlic,Garlic,sauteed,simmer,,,,,,,sauteed_aromatic,195:4,1,
