@@ -593,7 +593,7 @@ ENTR_017,onions,Onions,sauteed,sauteed,,,,,,,sauteed_aromatic,,13,
 ENTR_017,garlic_bell_pepper,Garlic and Bell Peppers,sauteed,sauteed,,,,,,,sauteed_aromatic,,4,
 ENTR_017,spices,Spices,sauteed,sauteed,,,,,,,,,2,
 ENTR_017,tomato_paste_section,Tomato Paste,sauteed,sauteed,,,,,,,pan_grilled_batter,,1,
-ENTR_017,stock_ref,Beef Stock,,raw,,,,,,,,,,STOCK_004
+ENTR_017,stock_ref,Beef Broth,,raw,,,,,,,,,,
 ENTR_017,finish,Sour Cream,finish,raw,,,,,,,,,,
 ENTR_018,sear_steak,Sear Steak,pan seared,pan seared,,,,,,,pan_grilled_steak,,7,
 ENTR_018,onions,Onions,pan seared,pan seared,,,,,,,,,8,
