@@ -693,7 +693,6 @@ ENTR_041,grill_beef,Grill Beef,pan seared,boiled,,,,,,,pan_grilled_steak,212:1,4
 ENTR_041,marinade,Marinade,,boiled,,,,,,,simmer_sauce,212:1,,
 ENTR_042,duxelles,Duxelles,pan seared,baked,,,,,,,duxelles_mushroom,425:27,15,
 ENTR_042,grill_tenderloin,Grill Tenderloin,pan seared,baked,,,,,,,pan_grilled_steak,425:27,4,
-ENTR_042,dijon,Dijon-Style Mustard,,raw,,,,,,,,,,SAUCE_010
 ENTR_042,assembly,Assembly,,baked,,,,,,,wellington_pastry,425:27,,
 ENTR_043,grill_beef,Grill Beef,pan seared,simmer,,,,,,,pan_grilled_steak,195:2,2,
 ENTR_043,onions,Onions,pan seared,simmer,,,,,,,simmered_vegetable,195:2,7,
