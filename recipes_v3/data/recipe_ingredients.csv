@@ -448,7 +448,7 @@ ENTR_004,7,celery_raw,1 cup celery (finely diced),101.0,,,vegetables,,false,cele
 ENTR_004,8,garlic_raw,4 cloves garlic (crushed),12.0,,,garlic,,false,,,,
 ENTR_004,9,tomato_paste,2 tbsp,33.0,,,tomato_paste,,false,,,,
 ENTR_004,10,white_wine_dry,2 fl oz,58.8,,,white_wine,,false,,,,
-ENTR_004,11,@STOCK_004,1/4 cup Beef Stock (recipe),60.0,,,stock_ref,,false,,,,
+ENTR_004,11,beef_broth_canned,1/4 cup,61.25,,,sauce,,false,,,,
 ENTR_004,12,tomatoes_canned_crushed,14.5 oz can,411.0,,,sauce,,false,,,,
 ENTR_004,13,milk_whole,1/4 cup,61.0,,,sauce,,false,,,,
 ENTR_004,14,oregano_dried,2 tsp,2.0,,,sauce,,false,,,,
