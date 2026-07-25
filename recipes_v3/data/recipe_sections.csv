@@ -585,9 +585,8 @@ ENTR_015,broth_worcestershire,Broth and Worcestershire,simmer,simmer,,,,,,,simme
 ENTR_015,cream_mustard,Cream and Mustard,simmer,simmer,,,,,,,simmer_sauce,,3,
 ENTR_015,parsley,Parsley,finish,raw,,,,,,,,,,
 ENTR_016,brown_beef,Brown Beef,pan seared,pan seared,,,,,,,fried_meat,,12,
-ENTR_016,onion,Onion,pan seared,pan seared,,,,,,,,,5,
-ENTR_016,spices,Spices,pan seared,pan seared,,,,,,,,,1,
-ENTR_016,sauce_ref,Red Enchilada Sauce,,raw,,,,,,,,,,SAUCE_025
+ENTR_016,onion,Onion,sauteed,sauteed,,,,,,,sauteed_aromatic,,5,
+ENTR_016,spices,Spices,sauteed,sauteed,,,,,,,sauteed_aromatic,,1,
 ENTR_016,assembly,Assembly,,baked covered,,,,,,,casserole_baked,375:20,,
 ENTR_017,brown_beef,Brown Beef,pan seared,pan seared,,,,,,,fried_meat,,6,
 ENTR_017,onions,Onions,sauteed,sauteed,,,,,,,sauteed_aromatic,,13,
