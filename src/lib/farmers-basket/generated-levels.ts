@@ -13497,7 +13497,7 @@ export const LEVELS: Level[] = [
       'Cut the broccoli into bite-sized florets.',
       'Heat a wok or large skillet over high heat. Add 1 tsp coconut oil. Stir-fry the chicken pieces for 8 minutes until cooked through to an internal temperature of 165°F and lightly browned. Transfer to a plate.',
       'Add the remaining 1 tsp coconut oil to the wok. Add the broccoli florets and stir-fry for 4 minutes until bright green and crisp-tender.',
-      'Add the minced garlic and grated ginger and stir-fry for 1 minute until fragrant.',
+      'Add the minced garlic and grated ginger and stir-fry for 30 seconds until fragrant.',
       'Return the chicken to the wok. Pour in the sauce and toss everything together for 1 to 2 minutes until the sauce thickens and coats the chicken and broccoli evenly.',
       'Suggestions (not included): Serve immediately on its own or over steamed rice.'
     ],
