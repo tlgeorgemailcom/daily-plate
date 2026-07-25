@@ -576,7 +576,6 @@ ENTR_014,garlic,Garlic,sauteed,sauteed,,,,,,,sauteed_aromatic,,3,
 ENTR_014,cumin_oregano,Cumin and Oregano,sauteed,sauteed,,,,,,,,,2,
 ENTR_014,tomato_paste,Tomato Paste,sauteed,sauteed,,,,,,,pan_grilled_batter,,1,
 ENTR_014,tomatoes_wine,"Tomatoes, Broth, and Wine",,braise,,,,,,,simmer_sauce,,100,
-ENTR_014,stock_ref,Beef Stock,,raw,,,,,,,,,,STOCK_004
 ENTR_014,finish,"Cilantro, Olives, and Capers",finish,raw,,,,,,,,,,
 ENTR_015,sear_steaks,Sear Steaks,pan seared,pan seared,,,,,,,pan_grilled_steak,,6,
 ENTR_015,shallots_garlic,Shallots and Garlic,sauteed,sauteed,,,,,,,sauteed_aromatic,,10,
