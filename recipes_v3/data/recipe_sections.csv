@@ -655,7 +655,7 @@ ENTR_031,garlic,Garlic,sauteed,braise,,,,,,,sauteed_aromatic,185:18,1,
 ENTR_031,assembly,Assembly,,braise,,,,,,,simmer_sauce,185:18,,
 ENTR_032,crust,Pie Crust,,raw,,,,,,,,,,CRUST_004
 ENTR_032,brown_beef,Brown Beef,pan seared,baked,,,,,,,casserole_baked,400:32,4,
-ENTR_032,vegetables,Vegetables,pan seared,baked,,,,,,,casserole_baked,400:32,6,
+ENTR_032,vegetables,Vegetables,sauteed,baked,,,,,,,casserole_baked,400:32,6,
 ENTR_032,potatoes_peas_spices,"Potatoes, Peas, spices",simmer,baked,,,,,,,casserole_baked,400:32,15,
 ENTR_033,brown_roast,Brown Roast,pan seared,braise,,,,,,,braised_beef,325:165,12,
 ENTR_033,onion,Onion,pan seared,braise,,,,,,,simmer_sauce,325:165,7,
