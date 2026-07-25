@@ -2705,15 +2705,15 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Eggs Benedict', quantity: 'custom (g)', foodWord: 'EGGSBENEDICT', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'poached eggs', quantity: '4 large eggs', section: 'egg', ndbNo: '1131', portionDesc: 'g', portionGrams: 200.0 },
-      { name: 'split in half', quantity: '2 English muffins', section: 'muffin', foodWord: 'ENGLISHMUFFINWT', ndbNo: '18264', portionDesc: 'g', portionGrams: 114.0, isDish: true, componentRef: 'BKFST_004' },
+      { name: 'English Muffin (Wheat)', quantity: '2 muffins from English Muffin (Wheat) recipe (split in half)', section: 'muffin', foodWord: 'ENGLISHMUFFINWT', ndbNo: '18264', portionDesc: 'g', portionGrams: 114.0, isDish: true, componentRef: 'BKFST_004' },
       { name: 'Canadian bacon', quantity: '4 slices', section: 'bacon', ndbNo: '10130', portionDesc: 'g', portionGrams: 114.0 },
-      { name: 'hollandaise (4 x 1/4 cup)', quantity: '1 cup', section: 'hollandaise', foodWord: 'HOLLANDAISESAUCE', portionDesc: 'g', portionGrams: 240.0, isDish: true, componentRef: 'BKFST_006' }
+      { name: 'Hollandaise Sauce', quantity: '1 cup Hollandaise Sauce (recipe)', section: 'hollandaise', foodWord: 'HOLLANDAISESAUCE', portionDesc: 'g', portionGrams: 240.0, isDish: true, componentRef: 'BKFST_006' }
     ],
     recipeInstructions: [
       'Fill a wide saucepan with about 3 inches of water, add a splash of white vinegar, and bring to a gentle simmer over medium heat. One at a time, crack each egg into a small cup and slide it gently into the simmering water. Poach for 3–4 minutes until the whites are fully set but the yolks are still runny. Remove with a slotted spoon and set aside on a warm plate.',
-      'Split the English muffins in half. Spread a thin layer of butter on the cut sides and toast in a skillet over medium heat or under the broiler until golden brown.',
+      'Make or prepare the English Muffin (Wheat) recipe (see the English Muffin (Wheat) recipe). Split 2 muffins in half. Spread a thin layer of butter on the cut sides and toast in a skillet over medium heat or under the broiler until golden brown.',
       'Heat a skillet over medium heat. Add the Canadian bacon slices and cook 1–2 minutes per side until lightly browned and heated through.',
-      'If the hollandaise sauce has cooled, gently rewarm it by setting the bowl over a pot of warm (not simmering) water for a minute, stirring constantly. Do not overheat or the sauce will break.',
+      'Make or prepare the Hollandaise Sauce recipe (see the Hollandaise Sauce recipe). If the sauce has cooled, gently rewarm it by setting the bowl over a pot of warm (not simmering) water for a minute, stirring constantly. Do not overheat or the sauce will break.',
       'Place two toasted muffin halves on each plate. Lay a slice of Canadian bacon on each half, then set a poached egg on top.',
       'Spoon about 1/4 cup hollandaise sauce over each egg. Season with a pinch of salt, white pepper, and paprika if desired. Serve immediately.',
       'Suggestions (not included):'
