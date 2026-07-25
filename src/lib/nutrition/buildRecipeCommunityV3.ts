@@ -429,7 +429,9 @@ export function buildRecipeCommunityV3(
         // evaporation is captured by the binding coefficient, not per-ingredient retention.
         if (STOCK_EXTRACTION[fillClass]) {
           const boilMins = (sec as any).boilMinutes ?? (sec as any).boil_minutes ?? 0;
-          yieldWater = calcYieldWater(stages, initialWaterG, fillClass, boilMins, 180, false);
+          const boilTempF = boilMins > 0 && prepCookMethod ? prepTempF : 180;
+          const boilLidOn = boilMins > 0 && prepCookMethod ? prepLidOn : false;
+          yieldWater = calcYieldWater(stages, initialWaterG, fillClass, boilMins, boilTempF, boilLidOn);
         } else {
         const absorbers = active.filter(a => a.nutrients.absorptionFactor != null);
         if (absorbers.length > 0) {
@@ -456,7 +458,9 @@ export function buildRecipeCommunityV3(
             yieldWater = totalWater > 0 ? retained / totalWater : 1.0;
           } else {
             const boilMins = (sec as any).boilMinutes ?? (sec as any).boil_minutes ?? 0;
-            yieldWater = calcYieldWater(stages, initialWaterG, fillClass, boilMins, effectiveTempF, effectiveLidOn);
+            const boilTempF = boilMins > 0 && prepCookMethod ? prepTempF : effectiveTempF;
+            const boilLidOn = boilMins > 0 && prepCookMethod ? prepLidOn : effectiveLidOn;
+            yieldWater = calcYieldWater(stages, initialWaterG, fillClass, boilMins, boilTempF, boilLidOn);
           }
         }
         } // end stock else
@@ -478,7 +482,9 @@ export function buildRecipeCommunityV3(
         }
       } else {
         const boilMins = (sec as any).boilMinutes ?? (sec as any).boil_minutes ?? 0;
-        yieldWater = calcYieldWater(stages, initialWaterG, fillClass, boilMins, effectiveTempF, effectiveLidOn);
+        const boilTempF = boilMins > 0 && prepCookMethod ? prepTempF : effectiveTempF;
+        const boilLidOn = boilMins > 0 && prepCookMethod ? prepLidOn : effectiveLidOn;
+        yieldWater = calcYieldWater(stages, initialWaterG, fillClass, boilMins, boilTempF, boilLidOn);
       }
     }
 

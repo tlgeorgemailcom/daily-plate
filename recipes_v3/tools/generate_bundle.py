@@ -120,6 +120,7 @@ def ts_recipe_ingredients(ings):
         if ing.get('servingCount') is not None and ing['servingCount'] != 1: parts.append(f"servingCount: {ing['servingCount']}")
         if ing.get('isDish'):    parts.append('isDish: true')
         if ing.get('componentRef'): parts.append(f"componentRef: '{esc(ing['componentRef'])}'")
+        if ing.get('cookSection'): parts.append(f"cookSection: '{esc(ing['cookSection'])}'")
         if ing.get('exempt'):    parts.append('exempt: true')
         if ing.get('discarded'): parts.append('discarded: true')
         if ing.get('discardPercent') is not None: parts.append(f"discardPercent: {ing['discardPercent']}")
@@ -552,6 +553,8 @@ for recipe in recipes:
                 pass
             if ing.get('section'):
                 item['section'] = ing['section']
+            if ing.get('cook_section'):
+                item['cookSection'] = ing['cook_section']
             if (ing.get('is_discarded') or '').strip().lower() in ('1', 'true', 'yes', 'y'):
                 item['discarded'] = True
                 item['discardPercent'] = float(ing.get('discard_percent') or 100)
@@ -572,6 +575,8 @@ for recipe in recipes:
             pass
         if ing.get('section'):
             item['section'] = ing['section']
+        if ing.get('cook_section'):
+            item['cookSection'] = ing['cook_section']
         if (ing.get('is_discarded') or '').strip().lower() in ('1', 'true', 'yes', 'y'):
             item['discarded'] = True
             item['discardPercent'] = float(ing.get('discard_percent') or 100)

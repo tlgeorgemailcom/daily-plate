@@ -695,13 +695,14 @@ def _build_recipe_multi(
             # correctly reduce under a simmer_sauce binding. (July 2026)
             boil_min = float(s.boil_stages) if s.boil_stages else 0.0
             stages   = _parse_stages(s.cook_stages) if s.cook_stages else []
-            _is_bake_covered = s.cook_method in ('bake covered', 'bake_covered', 'baked covered')
-            _is_boil_covered = s.cook_method in ('boil covered', 'boil_covered', 'boil (covered)', 'boiled covered', 'boiled_covered', 'boiled (covered)')
+            _boil_method = s.prep_method if s.prep_method and _prep_norm not in ('raw',) else s.cook_method
+            _is_bake_covered = _boil_method in ('bake covered', 'bake_covered', 'baked covered')
+            _is_boil_covered = _boil_method in ('boil covered', 'boil_covered', 'boil (covered)', 'boiled covered', 'boiled_covered', 'boiled (covered)')
             _boil_temp = _method_stovetop_temp(
-                s.cook_method,
+                _boil_method,
                 bake_covered_temp=(stages[0][0] if stages else 350.0) if _is_bake_covered else None,
             )
-            _boil_covered = s.cook_method in ('braise', 'braised') or _is_bake_covered or _is_boil_covered
+            _boil_covered = _boil_method in ('braise', 'braised') or _is_bake_covered or _is_boil_covered
             yfw = calc_yield_water(stages, st["raw_water"], s.filling_class,
                                    boil_minutes=boil_min, boil_temp_f=_boil_temp,
                                    boil_covered=_boil_covered)

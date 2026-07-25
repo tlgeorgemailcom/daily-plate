@@ -118,6 +118,7 @@ def _build_payload(rid: str, recipes, ings, ledger, instrs, sections_map) -> dic
                 "exempt": False,
                 "isDish": True,
                 "componentRef": child_id,
+                "cookSection": r.cook_section,
                 "discarded": r.is_discarded,
                 "discardPercent": r.discard_percent,
             })
@@ -136,6 +137,7 @@ def _build_payload(rid: str, recipes, ings, ledger, instrs, sections_map) -> dic
             "servingCount": 1,
             "exempt": False,
             "isDish": False,
+            "cookSection": r.cook_section,
             "discarded": r.is_discarded,
             "discardPercent": r.discard_percent,
         })

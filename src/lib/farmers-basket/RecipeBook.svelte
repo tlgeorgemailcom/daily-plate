@@ -338,15 +338,19 @@
   ): string {
     if (!sectionKey) return '';
     const meta = sectionsMeta?.find((s) => (s.key ?? s.section_key) === sectionKey);
+    const routedSectionKey = sectionItems?.find((item) => item.isDish && item.componentRef && item.cookSection)?.cookSection;
+    const displayMeta = routedSectionKey
+      ? sectionsMeta?.find((s) => (s.key ?? s.section_key) === routedSectionKey) || meta
+      : meta;
     const label = meta?.label || (sectionKey.charAt(0).toUpperCase() + sectionKey.slice(1));
     const discardedSuffix = formatDiscardedSectionSuffix(sectionItems);
     // prepMethod reflects what the cook does at this step; cookingMethod is physics only.
-    const rawMethod = meta?.prepMethod ?? '';
+    const rawMethod = displayMeta?.prepMethod ?? '';
     const display = rawMethod in SECTION_METHOD_LABEL
       ? SECTION_METHOD_LABEL[rawMethod]
       : rawMethod || null;
     // Only show prep time when there is an active cook method — never for unheated or finish sections.
-    const timeStr = (display && display !== 'unheated' && display !== 'Added after cooking' && meta?.boilMinutes && meta.boilMinutes > 0) ? ` | ${meta.boilMinutes} min` : '';
+    const timeStr = (display && display !== 'unheated' && display !== 'Added after cooking' && displayMeta?.boilMinutes && displayMeta.boilMinutes > 0) ? ` | ${displayMeta.boilMinutes} min` : '';
     return display ? `${label} — ${display}${timeStr}${discardedSuffix}` : `${label}${discardedSuffix}:`;
   }
 
