@@ -560,7 +560,7 @@ ENTR_011,7,celery_raw,"2 stalks celery, finely chopped",80.0,,,vegetables,,false
 ENTR_011,8,garlic_raw,"3 cloves garlic, minced",9.0,,,garlic,,false,,,,
 ENTR_011,9,flour_ap_white_enriched_unbleached,2 tbsp,15.6,,,flour_tomato_paste,,false,flour,,,
 ENTR_011,10,tomato_paste,2 tbsp tomato paste,33.0,,,flour_tomato_paste,,false,,,,
-ENTR_011,11,@STOCK_004,1 cup Beef Stock (recipe),245.0,,,stock_ref,,false,,,,
+ENTR_011,11,beef_broth_canned,1 cup,245.0,,,add_spices,,false,,,,
 ENTR_011,12,thyme_fresh,"1 tsp fresh thyme, leaves stripped",0.8,,,add_spices,,false,fresh thyme,,,
 ENTR_011,13,rosemary_fresh,"1 tsp fresh rosemary, chopped",0.7,,,add_spices,,false,fresh rosemary,,,
 ENTR_011,14,salt_table,1 tsp salt,6.0,,,add_spices,,false,,,,
