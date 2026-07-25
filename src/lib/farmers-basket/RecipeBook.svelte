@@ -426,16 +426,6 @@
     return `1 ${singular} (makes ${Math.round(count)})`;
   }
 
-  function getChildIngredientLines(componentRef: string): string[] {
-    const child = levels.find((l) => l.id === componentRef);
-    if (!child?.recipeIngredients) return [];
-    return child.recipeIngredients
-      // Skip the child's own parent-dish header row; keep everything else,
-      // including any nested component-refs (rendered as their own line).
-      .filter((ing) => !ing.isDish || !!ing.componentRef)
-      .map((ing) => formatIngredientLine(ing));
-  }
-
   function groupRecipeIngredients(level: Level) {
     // Hide the parent dish-header row (isDish without componentRef), but keep
     // component-ref children — they're real ingredients for a composite recipe.
@@ -2260,16 +2250,6 @@
                         {@const ingLineParts = formatIngredientLine(ing).split('\n')}
                         <li>
                           {ingLineParts[0]}{#each ingLineParts.slice(1) as note}<div class="ingredient-note">{note}</div>{/each}
-                          {#if ing.componentRef}
-                            {@const childLines = getChildIngredientLines(ing.componentRef)}
-                            {#if childLines.length > 0}
-                              <ul class="component-sublist">
-                                {#each childLines as line}
-                                  <li>{line}</li>
-                                {/each}
-                              </ul>
-                            {/if}
-                          {/if}
                         </li>
                       {/each}
                     </ul>
@@ -3501,25 +3481,6 @@
     font-size: 0.65rem;
     flex-shrink: 0;
     color: #8B6550;
-  }
-
-  .component-sublist-label {
-    margin-top: 4px;
-    font-size: 0.78rem;
-    font-style: italic;
-    color: #888;
-  }
-
-  .component-sublist {
-    margin: 2px 0 6px !important;
-    padding-left: 18px !important;
-    font-size: 0.8rem !important;
-    color: #777 !important;
-    list-style: circle;
-  }
-
-  .component-sublist li {
-    margin-bottom: 2px !important;
   }
 
   .recipe-nutrition {
