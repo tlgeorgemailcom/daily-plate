@@ -81,6 +81,13 @@ export const BINDING: Record<string, number> = {
                               // Calibrated to ENTR_012 original locked yield for outside skirt steak (NDB 23224).
   fried_chicken:       0.195, // deep-fried battered chicken breast (212°F×11min → yfw=0.82)
                               // NDB 5062 (raw) / NDB 5063 (fried); batter crust traps moisture
+  fried_breaded_shrimp: 0.749, // fried breaded shrimp (212°F×3min → yfw≈0.62)
+                              // TodayPage cornmeal test; shrimp continued dripping moisture while resting over oil.
+                              // Use for dry-breaded/flour/cornmeal shrimp, not wet-batter tempura or beer batter.
+  fried_breaded_chicken_tender: 0.342, // fried breaded chicken tender (212°F×3min → yfw≈0.827)
+                              // TodayPage cornmeal test; boneless breast tender strip, not thigh.
+  fried_breaded_fish_fillet: 0.349, // fried breaded fish fillet (212°F×3min → yfw≈0.823)
+                              // TodayPage cornmeal drum-fillet test; keep true wet-batter fish separate.
   fried_battered_vegetable: 0.493, // small battered-fried vegetable pieces (okra, squash) (212°F×3min → yfw=0.75)
                               // No USDA fried-okra NDB; calibrated to SIDE_022/023 locked yfw=0.75 (culinary estimate)
                               // FNDDS FC 75414500 (fried okra) corroborates rapid water loss from small high-surface-area pieces

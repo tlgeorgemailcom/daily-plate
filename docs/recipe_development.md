@@ -238,7 +238,11 @@ Without a `fill_class`, `calc_yield_water` returns `yfw=1.0` for all stovetop se
 | Chicken breast, fish fillet (pan seared) | `pan_grilled_chicken` |
 | Thin steak (pan seared, skirt/flank-style) | `pan_grilled_steak` |
 | Thick steak (pan seared) | Calibrate a distinct steak-specific fill class before use |
-| Battered/breaded fried cutlet or fillet protein (chicken fried steak, schnitzel, Milanese, fried fish fillet) | `fried_chicken` |
+| Breaded fried shrimp (flour, cornmeal, cracker crumb, panko, or other dry coating) | `fried_breaded_shrimp` |
+| Breaded fried chicken breast tender/strip (flour, cornmeal, cracker crumb, panko, or other dry coating) | `fried_breaded_chicken_tender` |
+| Breaded fried fish fillet (flour, cornmeal, cracker crumb, panko, or other dry coating) | `fried_breaded_fish_fillet` |
+| Wet-battered fried cutlet or fillet protein (beer batter, tempura-style, thick batter) | Calibrate a distinct `fried_battered_*` class before use |
+| Legacy battered/breaded fried cutlet proxy (chicken fried steak, schnitzel, Milanese) | `fried_chicken` |
 | Bacon (fat retained, not drained) | `fried_meat` |
 | Roux cooked briefly in fat before liquid is added | `pan_grilled_batter` |
 | Baked pasta/grain casserole | `casserole_baked` |
@@ -249,7 +253,7 @@ Without a `fill_class`, `calc_yield_water` returns `yfw=1.0` for all stovetop se
 | Other scalded foods (cabbage, milk, cream, tomatoes/peaches for peeling, poultry skin, meat tenderizing, green beans/broccoli color-setting) | Calibrate a distinct fill class only when the scalding changes retained water or edible yield |
 | Vegetables roasted | `roasted_vegetable` |
 
-`fried_chicken` is a legacy class name, not a poultry-only rule. It is calibrated to battered chicken and currently serves only as a proxy for battered/breaded protein cutlets or fillets with similar crust and thickness. Do not assume battered fish, shrimp, chicken, and chicken-fried steak have identical moisture loss; calibrate separate classes when the recipe shape or protein structure differs enough to matter. Do not use it for ground meat patties, loose sausage, or bacon; those remain `fried_meat`.
+Use `breaded` for dry-coated fried foods (flour dredge, cornmeal, cracker crumb, panko). Reserve `battered` for wet batter (beer batter, tempura-style, thick batter). The breaded shrimp class is protein-specific: TodayPage testing showed shrimp uniquely continued dripping moisture while resting over the oil, so do not reuse it for fish or chicken. `fried_chicken` is a legacy class name, not a poultry-only rule. It remains only as a proxy for older battered/breaded cutlets that have not received a food-specific class yet. Do not use fried protein classes for ground meat patties, loose sausage, or bacon; those remain `fried_meat`.
 
 ### Audit command
 

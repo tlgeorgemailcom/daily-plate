@@ -380,6 +380,9 @@ export function buildRecipeCommunityV3(
       const HINT_COOK_MAP: Record<string, string[]> = {
         'pan_grilled_chicken': ['sauteed', 'sautéed', 'stir-fried', 'pan sear', 'pan seared', 'fried', 'grilled', 'broil', 'broiled'],
         'fried_chicken':       ['fried', 'deep-fried'],
+        'fried_breaded_shrimp': ['fried', 'deep-fried'],
+        'fried_breaded_chicken_tender': ['fried', 'deep-fried'],
+        'fried_breaded_fish_fillet': ['fried', 'deep-fried'],
         'baked_pork':          ['baked', 'par-baked'],
         'braised_beef':        ['braise', 'braised', 'boiled', 'simmer', 'sub-simmer'],
         'fried_meat':          ['fried', 'deep-fried', 'sauteed', 'sautéed', 'stir-fried', 'pan sear', 'pan seared'],

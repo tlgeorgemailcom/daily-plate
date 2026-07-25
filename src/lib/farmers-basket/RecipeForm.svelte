@@ -299,6 +299,9 @@
     pan_grilled_chicken: 'pan-seared chicken or fish fillet',
     pan_grilled_steak: 'pan-seared thin steak',
     fried_chicken: 'battered fried protein (chicken proxy)',
+    fried_breaded_shrimp: 'breaded fried shrimp',
+    fried_breaded_chicken_tender: 'breaded fried chicken tender',
+    fried_breaded_fish_fillet: 'breaded fried fish fillet',
   };
 
   function formatFillClassLabel(key: string): string {
