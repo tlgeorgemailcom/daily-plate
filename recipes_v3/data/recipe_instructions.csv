@@ -473,7 +473,7 @@ BKFST_006,4,"With the top bowl over the barely simmering water, slowly drizzle t
 BKFST_006,5,"Once all the butter is incorporated, the sauce should be thick enough to coat the back of a spoon. To thin add a little water. Remove from heat immediately."
 BKFST_006,6,"Season with a pinch of salt and lemon juice. Serve right away over poached eggs, or keep warm by setting the bowl over the hot water (heat off) for up to 15 minutes, whisking occasionally."
 BKFST_003,1,"Fill a wide saucepan with about 3 inches of water, add a splash of white vinegar, and bring to a gentle simmer over medium heat. One at a time, crack each egg into a small cup and slide it gently into the simmering water. Poach for 3–4 minutes until the whites are fully set but the yolks are still runny. Remove with a slotted spoon and set aside on a warm plate."
-BKFST_003,2,"Make or prepare the English Muffin (Wheat) recipe (see the English Muffin (Wheat) recipe). Split 2 muffins in half. Spread a thin layer of butter on the cut sides and toast in a skillet over medium heat or under the broiler until golden brown."
+BKFST_003,2,Make or prepare the English Muffin (Wheat) recipe (see the English Muffin (Wheat) recipe). Split 2 muffins in half. Spread a thin layer of butter on the cut sides and toast in a skillet over medium heat or under the broiler until golden brown.
 BKFST_003,3,Heat a skillet over medium heat. Add the Canadian bacon slices and cook 1–2 minutes per side until lightly browned and heated through.
 BKFST_003,4,"Make or prepare the Hollandaise Sauce recipe (see the Hollandaise Sauce recipe). If the sauce has cooled, gently rewarm it by setting the bowl over a pot of warm (not simmering) water for a minute, stirring constantly. Do not overheat or the sauce will break."
 BKFST_003,5,"Place two toasted muffin halves on each plate. Lay a slice of Canadian bacon on each half, then set a poached egg on top."
@@ -1709,7 +1709,7 @@ ENTR_045,6,Add the minced garlic and grated ginger and stir-fry for 30 seconds u
 ENTR_045,7,Return the chicken to the wok. Pour in the sauce and toss everything together for 1 to 2 minutes until the sauce thickens and coats the chicken and broccoli evenly.
 ENTR_045,8,Suggestions (not included): Serve immediately on its own or over steamed rice.
 ENTR_046,1,Pat the boneless skinless chicken thighs dry and season both sides with salt and black pepper.
-ENTR_046,2,Heat the olive oil in a large oven-safe skillet or Dutch oven over medium-high heat. Sear the chicken thighs for 5 minutes until golden brown. Flip and sear for 2 minutes more. Transfer to a plate.
+ENTR_046,2,Heat the avocado oil in a large oven-safe skillet or Dutch oven over medium-high heat. Sear the chicken thighs for 5 minutes until golden brown. Flip and sear for 2 minutes more. Transfer to a plate.
 ENTR_046,3,Preheat the oven to 350°F.
 ENTR_046,4,"In the same pan over medium heat, add the diced onion and sliced bell pepper. Sauté for 6 minutes until softened. Add the sliced mushrooms and sauté for 3 minutes more until tender."
 ENTR_046,5,Add the minced garlic and sauté for 2 minutes until fragrant. Pour in the white wine and scrape up any browned bits from the bottom of the pan. Simmer uncovered for 2 minutes.
@@ -1717,22 +1717,22 @@ ENTR_046,6,"Add the crushed tomatoes, dried oregano, and dried basil. Stir to co
 ENTR_046,7,Cover and bake at 350°F for 35 to 40 minutes until the chicken is cooked through to an internal temperature of 165°F.
 ENTR_046,8,"Suggestions (not included): Serve over pasta, polenta, or rice."
 ENTR_047,1,Cut the boneless skinless chicken thighs into bite-sized pieces. Season with salt and black pepper.
-ENTR_047,2,Heat 1 tbsp olive oil in a large skillet or Dutch oven over medium-high heat. Sear the chicken pieces for 3 to 4 minutes per side until browned and cooked through to an internal temperature of 165°F. Transfer to a plate.
-ENTR_047,3,Add the remaining 1 tbsp olive oil to the pan over medium heat. Add the diced onion and cook for 5 minutes until softened. Add the minced garlic and grated ginger and cook for 1 minute until fragrant.
+ENTR_047,2,Heat 1 tbsp avocado oil in a large skillet or Dutch oven over medium-high heat. Sear the chicken pieces for 3 to 4 minutes per side until browned and cooked through to an internal temperature of 165°F. Transfer to a plate.
+ENTR_047,3,Add the remaining 1 tbsp avocado oil to the pan over medium heat. Add the diced onion and cook for 5 minutes until softened. Add the minced garlic and grated ginger and cook for 1 minute until fragrant.
 ENTR_047,4,"Add the curry powder, cumin, and coriander. Stir and cook for 1 minute to toast the spices."
 ENTR_047,5,Pour in the crushed tomatoes and coconut milk. Add the salt and stir to combine. Bring to a simmer.
 ENTR_047,6,Return the chicken to the pan. Simmer uncovered for 15 to 20 minutes until the sauce thickens and the flavors meld. Adjust seasoning to taste.
 ENTR_047,7,Suggestions (not included): Serve on its own or over steamed rice with naan bread.
 ENTR_048,1,Make or prepare the Red Enchilada Sauce (see the Red Enchilada Sauce recipe). Set aside.
 ENTR_048,2,"Season the boneless skinless chicken breasts on both sides with chili powder, cumin, garlic powder, salt, and black pepper."
-ENTR_048,3,"Heat the olive oil in a large skillet over medium-high heat. Cook the chicken breasts for 6 to 7 minutes per side until cooked through to an internal temperature of 165°F. Remove from heat, let rest for 5 minutes, then shred with two forks."
+ENTR_048,3,"Heat the avocado oil in a large skillet over medium-high heat. Cook the chicken breasts for 6 to 7 minutes per side until cooked through to an internal temperature of 165°F. Remove from heat, let rest for 5 minutes, then shred with two forks."
 ENTR_048,4,Preheat the oven to 375°F. Spread a thin layer of enchilada sauce over the bottom of a 9×13-inch baking dish.
 ENTR_048,5,Warm the corn tortillas in a dry skillet or directly over a gas flame for 20 to 30 seconds per side until pliable.
 ENTR_048,6,"Fill each tortilla with chicken, diced onion, and a small handful of shredded cheddar cheese. Roll up tightly and place seam-side down in the baking dish."
 ENTR_048,7,Pour the remaining enchilada sauce evenly over the rolled enchiladas. Top with the remaining shredded cheddar cheese.
 ENTR_048,8,Bake at 375°F for 20 to 25 minutes until the cheese is melted and bubbly. Serve immediately.
 ENTR_049,1,Season the boneless skinless chicken breasts on both sides with salt and black pepper.
-ENTR_049,2,Heat the olive oil in a large skillet over medium-high heat. Sear the chicken breasts for 5 to 6 minutes per side until golden brown and cooked through to an internal temperature of 165°F. Transfer to a plate and cover loosely with foil.
+ENTR_049,2,Heat the avocado oil in a large skillet over medium-high heat. Sear the chicken breasts for 5 to 6 minutes per side until golden brown and cooked through to an internal temperature of 165°F. Transfer to a plate and cover loosely with foil.
 ENTR_049,3,Make or prepare the Chicken Broth (see the Chicken Broth recipe).
 ENTR_049,4,Reduce heat to medium. Add the butter to the same skillet and let it melt. Add the minced garlic and cook for 1 minute until fragrant.
 ENTR_049,5,"Pour in the chicken broth and heavy cream. Stir to combine, scraping up any browned bits from the bottom of the pan."
@@ -1740,15 +1740,15 @@ ENTR_049,6,"Stir in the Parmesan, salt, black pepper, and nutmeg. Simmer for 4 m
 ENTR_049,7,"Stir in the baby spinach, thoroughly coating with sauce. Return the chicken breasts to the skillet and spoon the sauce over them. Simmer for 2 to 3 minutes to heat through. Serve immediately with the creamed spinach sauce spooned over the top."
 ENTR_050,1,"Bring 4 cups of salted water to a boil, add the rice, cover and simmer for 18 minutes. Fluff with a fork and let cool. For best results, use day-old rice."
 ENTR_050,2,Cut the chicken breast into bite-sized pieces and season with salt and black pepper.
-ENTR_050,3,Heat 1 teaspoon of the olive oil in a large wok or skillet over high heat. Add the chicken and stir-fry for 6 minutes until cooked through to an internal temperature of 165°F. Transfer to a plate.
-ENTR_050,4,Add 1 tsp olive oil to the wok. Add the finely chopped onion and chopped carrot and stir-fry for 4 minutes. Add the minced garlic and cook for 1 minute.
+ENTR_050,3,Heat 1 teaspoon of the avocado oil in a large wok or skillet over high heat. Add the chicken and stir-fry for 6 minutes until cooked through to an internal temperature of 165°F. Transfer to a plate.
+ENTR_050,4,Add 1 tsp avocado oil to the wok. Add the finely chopped onion and chopped carrot and stir-fry for 4 minutes. Add the minced garlic and cook for 1 minute.
 ENTR_050,5,"Push the vegetables to the side. Pour the eggs into the empty side of the wok and stir-fry for 1 minute, stirring until just set, then mix with the vegetables."
 ENTR_050,6,"Add the cooked rice, peas, and chicken. Pour the tamari over the rice and toss everything together over high heat for 3 minutes."
 ENTR_050,7,Stir in the sesame oil and scallions. Serve immediately.
 ENTR_051,1,"Cut the chicken thighs into bite-sized pieces. In a bowl, combine the tamari, rice wine vinegar, and half the minced garlic. Add the chicken, toss to coat, and marinate for at least 15 minutes."
 ENTR_051,2,Make or prepare the Chicken Broth (see the Chicken Broth recipe).
 ENTR_051,3,"Remove the chicken from the marinade (reserve the marinade). Pat the chicken dry and toss with the cornstarch, salt, and black pepper until evenly coated."
-ENTR_051,4,Heat the olive oil in a large wok or skillet over high heat. Fry the chicken pieces in batches for 4 to 5 minutes per batch until golden brown and cooked through to an internal temperature of 165°F. Transfer to a plate.
+ENTR_051,4,Heat the avocado oil in a large wok or skillet over high heat. Fry the chicken pieces in batches for 4 to 5 minutes per batch until golden brown and cooked through to an internal temperature of 165°F. Transfer to a plate.
 ENTR_051,5,"Drain excess oil from the wok, leaving about 1 tablespoon. Add the remaining garlic and the finely grated ginger and stir-fry for 30 seconds until fragrant."
 ENTR_051,6,"Add the hoisin sauce, brown sugar, sesame oil, red pepper flakes, reserved marinade, and chicken broth. Stir to combine. Mix the cornstarch with 2 tablespoons cold water and pour into the sauce, stirring until the sauce thickens, about 1 to 2 minutes."
 ENTR_051,7,Return the chicken to the wok and toss to coat in the sauce. Cook for 1 minute until heated through.
@@ -1757,15 +1757,15 @@ ENTR_051,9,Suggestions (not included): Serve with steamed rice.
 ENTR_052,1,"Slice the chicken breast thinly across the grain. Toss with 1 tablespoon tamari, 1 teaspoon sesame oil, and 1 tablespoon cornstarch."
 ENTR_052,2,Make or prepare the Chicken Broth (see the Chicken Broth recipe).
 ENTR_052,3,"In a small bowl, whisk together the remaining tamari, remaining sesame oil, oyster sauce, and cornstarch until smooth."
-ENTR_052,4,Heat 1 tablespoon olive oil in a large wok or skillet over high heat. Add the chicken in a single layer and pan-grill for 4 minutes until cooked through to an internal temperature of 165°F. Transfer to a plate.
-ENTR_052,5,Add 1 tablespoon olive oil to the wok. Add the sliced mushrooms and pan-grill for 3 minutes.
+ENTR_052,4,Heat 1 tablespoon avocado oil in a large wok or skillet over high heat. Add the chicken in a single layer and pan-grill for 4 minutes until cooked through to an internal temperature of 165°F. Transfer to a plate.
+ENTR_052,5,Add 1 tablespoon avocado oil to the wok. Add the sliced mushrooms and pan-grill for 3 minutes.
 ENTR_052,6,Add the minced garlic and grated ginger and pan-grill for 1 minute until fragrant.
 ENTR_052,7,"Add the snow peas, water chestnuts, and bamboo shoots. Pan-grill for 2 minutes until just tender-crisp."
 ENTR_052,8,"Return the chicken to the wok. Add the sauce mixture and Chicken Broth, then simmer uncovered for 2 minutes until the sauce thickens and coats everything."
 ENTR_052,9,Finish with the scallions. Serve immediately. (Rice not included.)
 ENTR_053,1,"Pound the chicken breasts to an even 1/4-inch thickness, or slice horizontally into cutlets. Season with salt and pepper, then dredge lightly in flour, shaking off the excess."
 ENTR_053,2,Make or prepare the Chicken Broth (see the Chicken Broth recipe).
-ENTR_053,3,Heat olive oil and 1 tablespoon butter in a large skillet over medium-high heat. Pan-grill the chicken in batches for 7 minutes total until golden and cooked through to an internal temperature of 165°F. Transfer to a plate and tent loosely with foil.
+ENTR_053,3,Heat avocado oil and 1 tablespoon butter in a large skillet over medium-high heat. Pan-grill the chicken in batches for 7 minutes total until golden and cooked through to an internal temperature of 165°F. Transfer to a plate and tent loosely with foil.
 ENTR_053,4,"Pour off excess oil if needed, leaving a thin film. Add the white wine and lemon juice to the skillet. Bring to a boil, scraping up any browned bits, and cook uncovered for 2 minutes until slightly reduced."
 ENTR_053,5,Add the Chicken Broth and capers. Simmer uncovered for 3 minutes.
 ENTR_053,6,Reduce to a gentle sub-simmer. Return the chicken to the pan and add the remaining butter in pieces with the remaining salt and pepper. Cook uncovered for 2 minutes until the sauce is glossy and coats the chicken.
@@ -1778,7 +1778,7 @@ ENTR_054,4,"Melt butter in a large saucepan over medium heat. Add the onion, car
 ENTR_054,5,"Gradually whisk in the reserved chicken broth until smooth. Add the potatoes, peas, thyme, salt, and pepper. Simmer for 8 to 10 minutes, stirring often, until the potatoes are just tender and the filling is thickened. Stir in the chicken."
 ENTR_054,6,"Pour the filling into the prepared crust. Top with the second crust, fold the edges under, and crimp to seal. Cut several slits in the top to vent."
 ENTR_054,7,Bake for 30 to 35 minutes until the crust is deep golden brown. Let rest for 10 minutes before slicing and serving.
-ENTR_055,1,"Cut chicken breasts into 1-inch cubes. Whisk together the olive oil, lemon juice, garlic, oregano, paprika, cumin, salt, and black pepper in a large bowl. Add the chicken cubes and toss to coat. Marinate in the refrigerator for at least 1 hour, or up to 4 hours."
+ENTR_055,1,"Cut chicken breasts into 1-inch cubes. Whisk together the avocado oil, lemon juice, garlic, oregano, paprika, cumin, salt, and black pepper in a large bowl. Add the chicken cubes and toss to coat. Marinate in the refrigerator for at least 1 hour, or up to 4 hours."
 ENTR_055,2,"Cut the zucchini, bell peppers, and onion into 1-1/2-inch pieces. Halve any large mushrooms. Season the vegetables lightly with salt."
 ENTR_055,3,"Thread the marinated chicken and vegetables alternately onto 8 metal or soaked wooden skewers (each skewer gets 2 to 3 pieces of chicken and a mix of vegetables), leaving a small gap between each piece."
 ENTR_055,4,"Heat a grill to medium-high heat (400 to 450°F). Brush the grates lightly with oil. Grill the kabobs 4 to 5 minutes per side, turning once or twice, until the chicken is cooked through to an internal temperature of 165°F and the vegetables are tender with char marks."
@@ -1792,15 +1792,15 @@ ENTR_056,6,"Repeat with the remaining tortillas, chicken mixture, and cheddar ch
 ENTR_056,7,Cover with foil and bake for 30 minutes. Remove the foil and bake an additional 10 to 15 minutes until the cheese is bubbly and lightly browned. Let rest 5 minutes before serving.
 ENTR_057,1,"Pound the chicken breasts to an even 1/4-inch thickness, or slice horizontally into cutlets. Season with salt and pepper, then dredge lightly in flour, shaking off the excess."
 ENTR_057,2,Make or prepare the Chicken Broth (see the Chicken Broth recipe).
-ENTR_057,3,Heat olive oil and 1 tablespoon butter in a large skillet over medium-high heat. Sear the chicken in batches for 3 to 4 minutes per side until golden and cooked through to an internal temperature of 165°F. Transfer to a plate and tent loosely with foil.
+ENTR_057,3,Heat avocado oil and 1 tablespoon butter in a large skillet over medium-high heat. Sear the chicken in batches for 3 to 4 minutes per side until golden and cooked through to an internal temperature of 165°F. Transfer to a plate and tent loosely with foil.
 ENTR_057,4,Add the 1/4 inch thick sliced mushrooms to the same skillet and cook over medium-high heat for 4 to 5 minutes until browned. Add the finely diced shallots and cook for 1 minute more.
 ENTR_057,5,"Pour in the Marsala wine and chicken broth. Bring to a simmer, scraping up any browned bits, and cook uncovered for 4 minutes until the sauce reduces slightly."
 ENTR_057,6,Remove from heat and swirl in the remaining 3 tablespoons butter until the sauce is glossy. Season with salt and pepper to taste.
 ENTR_057,7,"Cover and return the chicken to a gentle sub-simmer for 1 minute, spooning the sauce over to coat. Garnish with fresh parsley and serve immediately."
 ENTR_057,8,Suggestions (not included): Serve with pasta or rice.
 ENTR_058,1,"Cut the chicken into 1-1/2-inch pieces. In a bowl, combine the yogurt, lemon juice, chili powder, cumin, coriander, turmeric, and salt. Add the chicken and toss to coat. Marinate for at least 30 minutes, or up to 4 hours in the refrigerator."
-ENTR_058,2,Remove the chicken from the marinade and discard the marinade. Heat 1 tablespoon olive oil in a large skillet or wok over high heat. Add the chicken in a single layer and stir-fry for 7 minutes until cooked through to an internal temperature of 165°F. Transfer to a plate.
-ENTR_058,3,"Add the remaining 1 tablespoon olive oil to the same pan over medium heat. Add the finely diced onions and cook for 10 minutes, stirring often, until deeply golden. Add the minced garlic and cook for 1 minute until fragrant."
+ENTR_058,2,Remove the chicken from the marinade and discard the marinade. Heat 1 tablespoon avocado oil in a large skillet or wok over high heat. Add the chicken in a single layer and stir-fry for 7 minutes until cooked through to an internal temperature of 165°F. Transfer to a plate.
+ENTR_058,3,"Add the remaining 1 tablespoon avocado oil to the same pan over medium heat. Add the finely diced onions and cook for 10 minutes, stirring often, until deeply golden. Add the minced garlic and cook for 1 minute until fragrant."
 ENTR_058,4,"Add the cumin, coriander, paprika, turmeric, and chili powder and saute for 1 minute until fragrant."
 ENTR_058,5,"Add deseeded and finely chopped tomatoes and simmer uncovered for 7 minutes, breaking them down with a spoon, until the sauce thickens and the oil begins to separate."
 ENTR_058,6,Return the chicken to the pan and stir to coat in the sauce. Simmer uncovered for 5 minutes until the chicken is heated through and the flavors meld.
@@ -1809,12 +1809,12 @@ ENTR_058,8,Suggestions (not included): Serve with steamed basmati rice or warm n
 ENTR_059,1,"Cook the brown rice: combine rice, water, and salt in a medium saucepan. Bring to a boil, reduce to a low simmer, cover, and cook for 40 minutes until the water is absorbed. Remove from heat and let steam covered for 5 minutes, then fluff with a fork."
 ENTR_059,2,"Slice the chicken breast into thin strips. In a bowl, whisk together the tamari, sesame oil, garlic powder, and grated ginger. Add the chicken and toss to coat. Marinate for 10 minutes."
 ENTR_059,3,"Whisk together the peanut butter, tamari, lime juice, honey, sesame oil, grated ginger, minced garlic, and water until smooth. Add more water 1 teaspoon at a time if needed to reach a pourable consistency."
-ENTR_059,4,Heat olive oil in a skillet over medium-high heat. Add the chicken and pan-sear for 7 minutes until cooked through to an internal temperature of 165°F. Slice or keep as strips.
+ENTR_059,4,Heat avocado oil in a skillet over medium-high heat. Add the chicken and pan-sear for 7 minutes until cooked through to an internal temperature of 165°F. Slice or keep as strips.
 ENTR_059,5,Boil the edamame uncovered for 5 minutes until heated through and tender. Drain and set aside.
 ENTR_059,6,Cut the broccoli into 1/2 inch florets. Steam for 3 minutes until tender-crisp. Drain and set aside.
 ENTR_059,7,"Divide the cooked rice among 4 bowls. Arrange the chicken, edamame, broccoli, cabbage, carrot, and peanut sauce over the rice. Garnish with sliced scallions and sesame seeds."
 ENTR_060,1,"Cut chicken breast into 1-inch cubes. In a large bowl, whisk together the egg, cornstarch, salt, and pepper. Add chicken and toss until evenly coated."
-ENTR_060,2,"Heat olive oil in a large skillet or wok over medium-high heat. Working in batches, stir-fry chicken pieces for about 7 minutes total until golden brown and cooked through. Transfer to a plate and set aside."
+ENTR_060,2,"Heat avocado oil in a large skillet or wok over medium-high heat. Working in batches, stir-fry chicken pieces for about 7 minutes total until golden brown and cooked through. Transfer to a plate and set aside."
 ENTR_060,3,"In a small bowl, whisk together tamari, chicken broth, honey, rice wine vinegar, sesame oil, minced garlic, minced ginger, and cornstarch until smooth."
 ENTR_060,4,"Pour the sauce into the skillet over medium heat. Simmer uncovered, stirring constantly, until the sauce thickens and becomes glossy, about 2 minutes."
 ENTR_060,5,Return the chicken to the pan and toss to coat with the sauce. Simmer uncovered 1 minute more until heated through and fully glazed.
@@ -1823,20 +1823,20 @@ ENTR_060,7,Suggestions (not included): Serve over steamed white rice.
 ENTR_061,1,Cut chicken breast lengthwise into 1-inch wide strips. Pat dry with paper towels.
 ENTR_061,2,"In a shallow bowl, whisk together flour, cornstarch, salt, pepper, garlic powder, onion powder, and paprika. In a second shallow bowl, whisk together eggs and buttermilk."
 ENTR_061,3,"Working one strip at a time: dredge in the seasoned flour, shake off excess, dip in the egg-buttermilk wash, then dredge in the seasoned flour a second time, pressing firmly so the coating adheres fully."
-ENTR_061,4,"Heat olive oil in a large skillet over medium-high heat. Keeping the oil temp at a minimum of 350° decreases oil absorption. Working in batches, fry chicken strips about 7 minutes total, turning once, until deep golden brown and cooked through (165°F internal temperature). Transfer to a wire rack; do not stack."
+ENTR_061,4,"Heat avocado oil in a large skillet over medium-high heat. Keeping the oil temp at a minimum of 350° decreases oil absorption. Working in batches, fry chicken strips about 7 minutes total, turning once, until deep golden brown and cooked through (165°F internal temperature). Transfer to a wire rack; do not stack."
 ENTR_061,5,"Suggestions (not included): Serve hot with dipping sauce of your choice — honey mustard, ranch dressing, or BBQ sauce."
 ENTR_062,1,Make or prepare the Waffles plain (see the Waffles plain recipe). Keep warm in a 200°F oven on a wire rack while you fry the chicken.
 ENTR_062,2,"In a shallow bowl, whisk together flour, cornstarch, salt, pepper, garlic powder, onion powder, paprika, and cayenne. In a second shallow bowl, whisk together eggs and buttermilk."
 ENTR_062,3,"Pat chicken thighs dry with paper towels. Dredge in seasoned flour, dip in the egg-buttermilk wash, then dredge in the seasoned flour a second time, pressing firmly so the coating adheres fully."
-ENTR_062,4,"Heat olive oil in a large skillet over medium-high heat to 350°. Working in batches, fry chicken thighs about 11 minutes total, turning once, until deep golden brown and cooked through (165°F internal). Transfer to a wire rack."
+ENTR_062,4,"Heat avocado oil in a large skillet over medium-high heat to 350°. Working in batches, fry chicken thighs about 11 minutes total, turning once, until deep golden brown and cooked through (165°F internal). Transfer to a wire rack."
 ENTR_062,5,Place one waffle on each plate and top with a piece of fried chicken. Drizzle 1 tablespoon of maple syrup over each serving.
-ENTR_063,1,"Heat olive oil in a large skillet or Dutch oven over medium-high heat. Sear chicken thighs about 7 minutes total, turning once, until golden brown. Transfer to a plate."
+ENTR_063,1,"Heat avocado oil in a large skillet or Dutch oven over medium-high heat. Sear chicken thighs about 7 minutes total, turning once, until golden brown. Transfer to a plate."
 ENTR_063,2,"Add crushed garlic cloves to the pan and cook 1 minute until fragrant. Add tamari, vinegar, water, bay leaves, and black pepper. Stir to combine."
 ENTR_063,3,"Return chicken to the pan. Bring to a simmer, cover, and braise 30 minutes, turning chicken halfway through, until cooked through and tender."
 ENTR_063,4,Remove bay leaves.
 ENTR_063,5,Suggestions (not included): Serve over steamed white rice.
 ENTR_064,1,"In a bowl, combine chicken thighs with yogurt, turmeric, and salt. Toss to coat and marinate at least 30 minutes (or overnight in the refrigerator)."
-ENTR_064,2,"Heat olive oil in a large skillet or Dutch oven over medium-high heat. Add marinated chicken and sear about 7 minutes total, turning once, until lightly browned. Transfer to a plate; chicken need not be fully cooked through."
+ENTR_064,2,"Heat avocado oil in a large skillet or Dutch oven over medium-high heat. Add marinated chicken and sear about 7 minutes total, turning once, until lightly browned. Transfer to a plate; chicken need not be fully cooked through."
 ENTR_064,3,"In the same pan over medium heat, add coarsely chopped onion and cook 9 minutes, stirring often, until soft and golden. Add minced garlic and grated ginger; cook 1 minute until fragrant."
 ENTR_064,4,"Add coriander, cumin, turmeric, cardamom, cinnamon, and black pepper. Stir 1 minute to toast the spices."
 ENTR_064,5,Transfer the onion-spice mixture to a blender with the cashews and a splash of coconut milk. Blend until smooth.
@@ -1845,7 +1845,7 @@ ENTR_064,7,"Return chicken to the pan. Cover and braise on low heat 22 minutes, 
 ENTR_064,8,Suggestions (not included): Serve over steamed basmati rice or with naan.
 ENTR_065,1,Butterfly or pound chicken breasts to 1/4-inch thickness and cut into 4 cutlets. Season both sides with salt and pepper.
 ENTR_065,2,Place 2 fresh sage leaves on each cutlet. Lay a slice of prosciutto over the sage and press to adhere. Lightly dredge the prosciutto side in flour; shake off any excess.
-ENTR_065,3,Heat olive oil and 1 tablespoon of the butter in a large skillet over medium-high heat until shimmering.
+ENTR_065,3,Heat avocado oil and 1 tablespoon of the butter in a large skillet over medium-high heat until shimmering.
 ENTR_065,4,Add cutlets prosciutto-side down. Cook 4 minutes until the prosciutto is crisp and golden. Flip and cook 3 minutes until chicken is cooked through and an instant-read thermometer reads 165°F. Transfer to a plate and tent with foil.
 ENTR_065,5,Pour white wine into the pan and scrape up any browned bits. Simmer uncovered 5 minutes.
 ENTR_065,6,Add chicken broth (see Chicken Broth recipe) and lemon juice. Simmer uncovered 3 minutes until the sauce reduces slightly.
@@ -1853,14 +1853,14 @@ ENTR_065,7,Remove from heat and swirl in remaining 1 tablespoon of butter until 
 ENTR_065,8,Return chicken to the pan briefly to coat in sauce. Serve immediately.
 ENTR_066,1,"Cook pasta in a large pot of salted boiling water 8 minutes, until al dente. Reserve 1/2 cup pasta water, then drain and set aside."
 ENTR_066,2,Season chicken breasts with salt and pepper and lightly coat in flour; shake off any excess.
-ENTR_066,3,Heat olive oil in a large skillet over medium-high heat. Add chicken and cook about 9 minutes total until golden brown and an instant-read thermometer reads 165°F. Transfer to a cutting board and slice into strips.
+ENTR_066,3,Heat avocado oil in a large skillet over medium-high heat. Add chicken and cook about 9 minutes total until golden brown and an instant-read thermometer reads 165°F. Transfer to a cutting board and slice into strips.
 ENTR_066,4,"Reduce heat to medium. Add butter to the same skillet. Once melted, add minced garlic and red pepper flakes; cook 1 minute until fragrant."
 ENTR_066,5,Pour in white wine and scrape up any browned bits. Simmer uncovered 5 minutes.
 ENTR_066,6,Add chicken broth (see Chicken Broth recipe) and lemon juice. Simmer uncovered 3 minutes until sauce reduces slightly.
 ENTR_066,7,"Add drained pasta and toss to coat, adding reserved pasta water a splash at a time if needed to loosen the sauce."
 ENTR_066,8,"Return sliced chicken to the pan, top with parsley, and serve immediately."
 ENTR_067,1,Preheat oven to 375°F. Cook pasta in a large pot of salted boiling water 6 minutes until just al dente (it will finish cooking in the oven). Drain and set aside.
-ENTR_067,2,"Season chicken with salt and pepper. Heat olive oil in a large skillet over medium-high heat. Cook chicken about 9 minutes total until golden brown and an instant-read thermometer reads 165°F. Let rest 5 minutes, then shred or dice into bite-size pieces."
+ENTR_067,2,"Season chicken with salt and pepper. Heat avocado oil in a large skillet over medium-high heat. Cook chicken about 9 minutes total until golden brown and an instant-read thermometer reads 165°F. Let rest 5 minutes, then shred or dice into bite-size pieces."
 ENTR_067,3,"In the same skillet over medium heat, melt butter. Add finely chopped onion and cook 10 minutes until softened. Add chopped garlic and 1/4 inch thick sliced mushrooms; cook 6 minutes until mushrooms release their liquid and it evaporates."
 ENTR_067,4,Sprinkle flour over the vegetables and stir 1 minute. Pour in white wine and scrape up any browned bits.
 ENTR_067,5,"Add chicken broth (see Chicken Broth recipe), nutmeg, salt, black pepper, heavy cream, and Parmesan. Stir and simmer uncovered 5 minutes until sauce thickens."
@@ -1868,7 +1868,7 @@ ENTR_067,6,Fold cooked pasta and shredded chicken into the sauce until evenly co
 ENTR_067,7,"Combine bread crumbs, Parmesan, and melted butter; sprinkle evenly over the top."
 ENTR_067,8,Bake 27 minutes until bubbling and the topping is golden brown. Let rest 5 minutes before serving.
 ENTR_068,1,"In a bowl, combine chicken thighs with yogurt, cumin, coriander, turmeric, paprika, cayenne, and salt. Toss to coat and marinate at least 30 minutes (or overnight in the refrigerator)."
-ENTR_068,2,Heat olive oil in a large skillet or Dutch oven over medium-high heat. Add marinated chicken in batches and sear 7 minutes total until charred at the edges and an instant-read thermometer reads 165°F. Transfer to a plate and cut into bite-size pieces.
+ENTR_068,2,Heat avocado oil in a large skillet or Dutch oven over medium-high heat. Add marinated chicken in batches and sear 7 minutes total until charred at the edges and an instant-read thermometer reads 165°F. Transfer to a plate and cut into bite-size pieces.
 ENTR_068,3,Reduce heat to medium. Add butter to the same pan. Add finely diced onion and cook 9 minutes until golden. Add minced garlic and ginger; cook 1 minute until fragrant.
 ENTR_068,4,"Add cumin, coriander, turmeric, paprika, cardamom, cinnamon, and cayenne. Stir 1 minute to toast the spices."
 ENTR_068,5,"Pour in crushed tomatoes and simmer 10 minutes, stirring occasionally, until sauce darkens and thickens."
@@ -1876,7 +1876,7 @@ ENTR_068,6,Stir in heavy cream and simmer 5 minutes until sauce is rich and smoo
 ENTR_068,7,Return chicken pieces to the pan and simmer uncovered 5 minutes to heat through and meld flavors.
 ENTR_068,8,Suggestions (not included): Serve over steamed basmati rice or with naan.
 ENTR_069,1,Season chicken breasts with salt and pepper and lightly coat in flour; shake off any excess.
-ENTR_069,2,Heat olive oil in a large skillet over medium-high heat. Cook chicken 9 minutes total until golden brown and an instant-read thermometer reads 165°F. Transfer to a plate.
+ENTR_069,2,Heat avocado oil in a large skillet over medium-high heat. Cook chicken 9 minutes total until golden brown and an instant-read thermometer reads 165°F. Transfer to a plate.
 ENTR_069,3,Reduce heat to medium. Add butter to the same skillet. Add minced garlic and cook 1 minute until fragrant.
 ENTR_069,4,Add diced sun-dried tomatoes and stir 1 minute.
 ENTR_069,5,Pour in chicken broth (see Chicken Broth recipe) and scrape up any browned bits. Simmer uncovered 6 minutes.
