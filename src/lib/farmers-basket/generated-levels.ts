@@ -14881,7 +14881,7 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Lamb Kabobs', quantity: 'custom (g)', foodWord: 'LAMBKABOBS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'lamb (cubed for kabobs)', quantity: '2 lb', section: 'kabob', ndbNo: '17059', portionDesc: 'g', portionGrams: 907.2 },
-      { name: 'olive oil', quantity: '3 tbsp', section: 'kabob', ndbNo: '4053', portionDesc: 'g', portionGrams: 40.5 },
+      { name: 'olive oil', quantity: '3 tbsp extra-virgin olive oil', section: 'kabob', ndbNo: '4053', portionDesc: 'g', portionGrams: 40.5 },
       { name: 'lemon juice', quantity: '2 tbsp', section: 'kabob', ndbNo: '9152', portionDesc: 'g', portionGrams: 30.0 },
       { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'kabob', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
       { name: 'ground cumin', quantity: '1 tsp ground cumin', section: 'kabob', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.0 },
@@ -14894,7 +14894,7 @@ export const LEVELS: Level[] = [
       { name: 'ground black pepper', quantity: '1/4 tsp', section: 'kabob', ndbNo: '2030', portionDesc: 'g', portionGrams: 0.575 }
     ],
     recipeInstructions: [
-      'In a bowl, whisk together olive oil, lemon juice, minced garlic, cumin, coriander, paprika, turmeric, cinnamon, cayenne, salt, and pepper.',
+      'In a bowl, whisk together extra-virgin olive oil, lemon juice, minced garlic, cumin, coriander, paprika, turmeric, cinnamon, cayenne, salt, and pepper.',
       'Add lamb cubes and toss to coat. Cover and marinate at least 1 hour, or overnight in the refrigerator.',
       'Preheat grill to medium-high heat. Thread lamb onto metal or soaked wooden skewers.',
       'Grill skewers 3 to 4 minutes per side, turning every few minutes, until lamb is well-seared and an instant-read thermometer reads 145°F for medium.',
@@ -14977,7 +14977,7 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Lamb Greek Souvlaki', quantity: 'custom (g)', foodWord: 'LAMBSOUVLAKI', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'lamb (cubed for kabobs)', quantity: '2 lb', section: 'souvlaki', ndbNo: '17059', portionDesc: 'g', portionGrams: 907.2 },
-      { name: 'olive oil', quantity: '1/4 cup', section: 'souvlaki', ndbNo: '4053', portionDesc: 'g', portionGrams: 54.0 },
+      { name: 'olive oil', quantity: '1/4 cup extra-virgin olive oil', section: 'souvlaki', ndbNo: '4053', portionDesc: 'g', portionGrams: 54.0 },
       { name: 'lemon juice', quantity: '3 tbsp', section: 'souvlaki', ndbNo: '9152', portionDesc: 'g', portionGrams: 45.0 },
       { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'souvlaki', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
       { name: 'dried oregano', quantity: '2 tsp', section: 'souvlaki', ndbNo: '2027', portionDesc: 'g', portionGrams: 3.6 },
@@ -14985,7 +14985,7 @@ export const LEVELS: Level[] = [
       { name: 'ground black pepper', quantity: '1/2 tsp', section: 'souvlaki', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 }
     ],
     recipeInstructions: [
-      'In a bowl, whisk together olive oil, lemon juice, minced garlic, oregano, salt, and pepper to make the marinade.',
+      'In a bowl, whisk together extra-virgin olive oil, lemon juice, minced garlic, oregano, salt, and pepper to make the marinade.',
       'Add lamb cubes and toss to coat. Cover and marinate in the refrigerator at least 2 hours, or overnight.',
       'Preheat grill to medium-high heat. Thread lamb onto metal or soaked wooden skewers, 4 to 5 pieces per skewer.',
       'Grill skewers 3 to 4 minutes per side (12 to 14 minutes total), turning every few minutes, until well-seared and an instant-read thermometer reads 145°F for medium.',
@@ -15318,7 +15318,7 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Lamb Chops', quantity: 'custom (g)', foodWord: 'LAMBCHOPS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'lamb loin chop', quantity: '8 lamb loin chops', section: 'chops', ndbNo: '17078', portionDesc: 'g', portionGrams: 688.0 },
-      { name: 'olive oil', quantity: '2 tbsp', section: 'chops', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'olive oil', quantity: '2 tbsp extra-virgin olive oil', section: 'chops', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
       { name: 'garlic', quantity: '3 cloves garlic, minced', section: 'chops', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'fresh rosemary', quantity: '2 sprigs fresh rosemary, leaves stripped and finely chopped', section: 'chops', ndbNo: '2063', portionDesc: 'g', portionGrams: 3.4 },
       { name: 'fresh thyme leaves', quantity: '4 sprigs fresh thyme leaves, stripped', section: 'chops', ndbNo: '2049', portionDesc: 'g', portionGrams: 3.2 },
@@ -15327,7 +15327,7 @@ export const LEVELS: Level[] = [
       { name: 'ground black pepper', quantity: '½ tsp', section: 'chops', ndbNo: '2030', portionDesc: 'g', portionGrams: 1.15 }
     ],
     recipeInstructions: [
-      'In a small bowl, combine the olive oil, garlic, rosemary, thyme, and lemon juice to make the marinade.',
+      'In a small bowl, combine the extra-virgin olive oil, garlic, rosemary, thyme, and lemon juice to make the marinade.',
       'Pat the lamb chops dry with paper towels. Season on both sides with salt and black pepper, then coat with the marinade. Let rest at room temperature for 30 minutes to 1 hour.',
       'Heat a large cast iron skillet or heavy skillet over high heat until very hot and just beginning to smoke.',
       'Working in batches if needed to avoid crowding, sear the chops for 3 to 4 minutes per side for medium-rare, or until cooked to your preferred doneness.',
@@ -20562,7 +20562,7 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Beef Shawarma', quantity: 'custom (g)', foodWord: 'BEEFSHAWARMA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'sirloin tip steak', quantity: '12 oz sirloin tip steak, thinly sliced', section: 'beef', ndbNo: '23061', portionDesc: 'g', portionGrams: 340.2 },
-      { name: 'olive oil', quantity: '2 tbsp', section: 'beef', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
+      { name: 'olive oil', quantity: '2 tbsp extra-virgin olive oil', section: 'beef', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2 },
       { name: 'lemon juice', quantity: '3 tbsp', section: 'beef', ndbNo: '9152', portionDesc: 'g', portionGrams: 45.0 },
       { name: 'garlic', quantity: '4 cloves, minced', section: 'beef', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
       { name: 'ground cumin', quantity: '1½ tsp', section: 'beef', ndbNo: '2014', portionDesc: 'g', portionGrams: 3.0 },
@@ -20582,7 +20582,7 @@ export const LEVELS: Level[] = [
       { name: 'lemon juice', quantity: '1 tbsp', section: 'assembly', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.0 }
     ],
     recipeInstructions: [
-      'In a bowl, whisk together the olive oil, lemon juice, minced garlic, cumin, coriander, paprika, turmeric, cinnamon, cardamom, cayenne, salt, and black pepper to make the marinade. Add the sirloin strips, toss well to coat, and marinate at room temperature for at least 30 minutes, or refrigerate for up to 4 hours.',
+      'In a bowl, whisk together the extra-virgin olive oil, lemon juice, minced garlic, cumin, coriander, paprika, turmeric, cinnamon, cardamom, cayenne, salt, and black pepper to make the marinade. Add the sirloin strips, toss well to coat, and marinate at room temperature for at least 30 minutes, or refrigerate for up to 4 hours.',
       'Heat a large cast-iron skillet or grill pan over high heat until very hot. Working in batches if needed, add the marinated beef in a single layer. Cook undisturbed for 2 to 3 minutes until charred and caramelized on the bottom, then flip and cook 1 to 2 minutes more. Transfer to a cutting board.',
       'Let the beef rest 5 minutes, then slice thinly across the grain.',
       'Warm the pita breads in a dry skillet over medium heat for 30 seconds per side, or wrap in foil and warm in a 350°F oven for 5 minutes.',
@@ -20718,7 +20718,7 @@ export const LEVELS: Level[] = [
     recipeIngredients: [
       { name: 'Fish Wrap', quantity: 'custom (g)', foodWord: 'FISHWRAP', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'snapper fillet', quantity: '2 fillets (6 oz each)', section: 'fish', ndbNo: '15101', portionDesc: 'g', portionGrams: 340.2 },
-      { name: 'olive oil', quantity: '1 tbsp', section: 'fish', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
+      { name: 'olive oil', quantity: '1 tbsp extra-virgin olive oil', section: 'fish', ndbNo: '4053', portionDesc: 'g', portionGrams: 13.6 },
       { name: 'lime juice', quantity: '1 tbsp', section: 'fish', ndbNo: '9160', portionDesc: 'g', portionGrams: 15.0 },
       { name: 'ground cumin', quantity: '½ tsp', section: 'fish', ndbNo: '2014', portionDesc: 'g', portionGrams: 2.0 },
       { name: 'garlic powder', quantity: '½ tsp', section: 'fish', ndbNo: '2020', portionDesc: 'g', portionGrams: 1.55 },
@@ -20734,7 +20734,7 @@ export const LEVELS: Level[] = [
       { name: 'fresh cilantro', quantity: '2 tbsp fresh cilantro, chopped', section: 'assembly', ndbNo: '11165', portionDesc: 'g', portionGrams: 8.0 }
     ],
     recipeInstructions: [
-      'In a bowl, combine the olive oil, lime juice, cumin, garlic powder, paprika, salt, and black pepper. Add the snapper fillets and turn to coat. Marinate for 10 minutes at room temperature.',
+      'In a bowl, combine the extra-virgin olive oil, lime juice, cumin, garlic powder, paprika, salt, and black pepper. Add the snapper fillets and turn to coat. Marinate for 10 minutes at room temperature.',
       'Heat a non-stick skillet over medium-high heat. Cook the snapper for 3–4 minutes per side, until opaque and it flakes easily with a fork. Break into large pieces.',
       'In a small bowl, stir together the sour cream and lime juice to make a lime crema.',
       'Warm the flour tortillas in a dry skillet for 30 seconds per side.',
