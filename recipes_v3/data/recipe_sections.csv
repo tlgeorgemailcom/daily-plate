@@ -777,7 +777,7 @@ ENTR_059,raw_vegetables,Raw Vegetables,,raw,,,,,,,,,,
 ENTR_060,chicken,Chicken,stir-fried,simmer,,,,,,,pan_grilled_chicken,195:1,7,
 ENTR_060,sauce,Sauce,simmer,simmer,,,,,,,simmer_sauce,195:1,2,
 ENTR_060,garnish,Garnish,finish,raw,,,,,,,,,,
-ENTR_061,chicken,Chicken,,fried,0.85,1.0,1.0,1.0,1.0,,,,,
+ENTR_061,chicken,Chicken,,fried,,,,,,,fried_breaded_chicken_tender,,7,
 ENTR_062,waffles,Waffles plain,,raw,1.0,1.0,1.0,1.0,1.0,,,,,BKFST_014
 ENTR_062,chicken,Chicken,,fried,0.85,1.0,1.0,1.0,1.0,,,,,
 ENTR_062,maple_syrup,Maple Syrup,,raw,1.0,1.0,1.0,1.0,1.0,,,,,
