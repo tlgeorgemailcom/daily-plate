@@ -774,9 +774,9 @@ ENTR_059,peanut_sauce,Peanut Sauce,,raw,,,,,,,,,,
 ENTR_059,edamame,Edamame,boiled,boiled,,,,,,,simmered_vegetable,,5,
 ENTR_059,broccoli,Broccoli,steamed,steamed,,,,,,,simmered_vegetable,,3,
 ENTR_059,raw_vegetables,Raw Vegetables,,raw,,,,,,,,,,
-ENTR_060,chicken,Chicken,,fried,0.85,1.0,1.0,1.0,1.0,,,,,
-ENTR_060,broth,Chicken Broth,,raw,1.0,1.0,1.0,1.0,1.0,,,,,STOCK_003
-ENTR_060,sauce,Sauce,,pan seared,0.90,1.0,1.0,1.0,1.0,,,,,
+ENTR_060,chicken,Chicken,stir-fried,simmer,,,,,,,pan_grilled_chicken,195:1,7,
+ENTR_060,sauce,Sauce,simmer,simmer,,,,,,,simmer_sauce,195:1,2,
+ENTR_060,garnish,Garnish,finish,raw,,,,,,,,,,
 ENTR_061,chicken,Chicken,,fried,0.85,1.0,1.0,1.0,1.0,,,,,
 ENTR_062,waffles,Waffles plain,,raw,1.0,1.0,1.0,1.0,1.0,,,,,BKFST_014
 ENTR_062,chicken,Chicken,,fried,0.85,1.0,1.0,1.0,1.0,,,,,
