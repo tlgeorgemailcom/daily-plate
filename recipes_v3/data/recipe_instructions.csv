@@ -443,7 +443,7 @@ BKFST_012,7,Suggestions (not included): Serve hot over split biscuits.
 BKFST_013,1,Wash and scrub the potatoes and remove any blemishes.
 BKFST_013,2,"Using the large holes of a box grater, grate the potatoes with the skin on. Transfer to a strainer and rinse under cold water until clear. Wrap tightly in cheesecloth and squeeze firmly to remove as much liquid as possible."
 BKFST_013,3,Season the potatoes with salt and toss to combine.
-BKFST_013,4,Heat the olive oil in a large skillet over medium-high heat until shimmering.
+BKFST_013,4,Heat the avocado oil in a large skillet over medium-high heat until shimmering.
 BKFST_013,5,"Add the potatoes in an even layer and press down firmly. Cook undisturbed until the bottom is deep golden brown, about 5–6 minutes. Flip in sections and cook the second side until crisp and golden, 4–5 minutes more."
 BKFST_002,1,For each serving:
 BKFST_002,2,Split 2 warm biscuits open and arrange on a plate.
@@ -525,7 +525,7 @@ BKFST_021,2,"Warm the flour tortilla in a dry skillet over medium heat for 30 se
 BKFST_021,3,Spoon the cooked beef onto the center of the warm tortilla.
 BKFST_021,4,Sprinkle the Mexican cheese blend over the beef.
 BKFST_021,5,Fold in the sides and roll up tightly into a burrito.
-BKFST_022,1,"Scrub the potato and cut into ½-inch dice. Heat ½ tbsp of the olive oil in a medium skillet over medium-high heat. Add the potato and salt, and cook, stirring occasionally, until golden and tender, about 8–10 minutes."
+BKFST_022,1,"Scrub the potato and cut into ½-inch dice. Heat ½ tbsp of the avocado oil in a medium skillet over medium-high heat. Add the potato and salt, and cook, stirring occasionally, until golden and tender, about 8–10 minutes."
 BKFST_022,2,"Push the potatoes to one side of the pan. Add the remaining ½ tbsp olive oil, then crack in the eggs and scramble gently until just set, about 2 minutes. Fold the eggs into the potatoes."
 BKFST_022,3,"Warm the flour tortilla in a dry skillet over medium heat for 30 seconds per side, or microwave for 15–20 seconds, until pliable."
 BKFST_022,4,Spoon the potato-egg mixture onto the center of the warm tortilla.
@@ -740,7 +740,7 @@ SAND_033,3,"Remove the brisket from the pan and let it rest for 10 minutes, then
 SAND_033,4,Spread the BBQ sauce on the bottom bun and pile on the sliced brisket.
 SAND_033,5,"Top with the sliced onion and pickle slices, then close with the top bun."
 SAND_034,1,"Season the chicken breast with salt, pepper, and garlic powder."
-SAND_034,2,Heat a grill pan or skillet over medium-high heat with the olive oil. Grill the chicken for 5–6 minutes per side until cooked through and grill marks form (internal temperature 165°F).
+SAND_034,2,Heat a grill pan or skillet over medium-high heat with the avocado oil. Grill the chicken for 5–6 minutes per side until cooked through and grill marks form (internal temperature 165°F).
 SAND_034,3,"Spread mayonnaise on both buns, then layer the lettuce, sliced tomato, and sliced pickles on the bottom bun."
 SAND_034,4,Place the grilled chicken on top of the toppings.
 SAND_034,5,Close with the top bun and serve.
@@ -772,7 +772,7 @@ SAND_038,5,"Place the lettuce on the bottom bun, top with the fried cod fillet, 
 SAND_038,6,(Oil in the ingredient list reflects only the amount absorbed into the crust.)
 SAND_039,1,"In a large bowl, gently combine crab meat, dry bread crumbs, egg, mayonnaise, scallion, Worcestershire sauce, mustard, lemon juice, parsley, garlic powder, salt, and pepper. Do not overmix — fold just until the mixture holds together."
 SAND_039,2,Shape into one large cake (about 1 inch thick). Refrigerate for 15 minutes to firm up.
-SAND_039,3,Heat olive oil in a skillet over medium-high heat until shimmering.
+SAND_039,3,Heat avocado oil in a skillet over medium-high heat until shimmering.
 SAND_039,4,"Cook the crab cake until deeply golden on the bottom, about 4 minutes. Flip carefully and cook the second side until golden and heated through, about 3–4 more minutes."
 SAND_039,5,"Spread tartar sauce on both halves of the hamburger bun. Place the crab cake on the bottom bun, then top with the lettuce leaf and tomato slices. (Oil in the ingredient list reflects only the amount absorbed into the crab cake.)"
 SAND_040,1,"In a bowl, combine 4 oz cooked lobster meat, 2 tsp mayonnaise, 1 tbsp diced celery, 1 tsp lemon juice, 1 tsp chopped chives, ¼ tsp salt, ⅛ tsp black pepper, and a pinch of paprika."
@@ -794,23 +794,23 @@ SAND_042,6,Remove from oven and fold the top half of the roll over the melted ch
 SAND_042,7,Ladle the warm au jus into a small ramekin and serve alongside for dipping.
 SAND_043,1,"In a small saucepan, combine the beef broth, garlic powder, dried oregano, dried basil, red pepper flakes, and salt. Bring to a gentle simmer over medium heat, stirring to combine."
 SAND_043,2,"Add the sliced roast beef to the simmering broth. Warm through for 2–3 minutes, then remove with tongs and set aside. Keep the au jus warm on low heat."
-SAND_043,3,Heat 1 tsp olive oil in a skillet over medium-high heat. Add the sliced green peppers and sauté 4–5 minutes until softened and lightly charred.
+SAND_043,3,Heat 1 tsp avocado oil in a skillet over medium-high heat. Add the sliced green peppers and sauté 4–5 minutes until softened and lightly charred.
 SAND_043,4,Split the French roll and pile on the roast beef on both sides of the split roll. Top with the sautéed peppers. Serve with the au jus in a small ramekin alongside for dipping or ladle over the sandwich. (Add hot or mild giardiniera if desired.)
 SAND_044,1,"Make the remoulade: In a small bowl, whisk together the mayonnaise, yellow mustard, sweet pickle relish, lemon juice, hot sauce, paprika, and garlic powder. Cover and refrigerate until ready to serve."
 SAND_044,2,Set up the dredging station: Combine the flour and cornmeal in a shallow bowl. Beat the egg in a separate shallow bowl.
 SAND_044,3,"Season the shrimp with salt, black pepper, and red pepper flakes. Dip each shrimp in the beaten egg, then dredge in the flour-cornmeal mixture, pressing to coat."
-SAND_044,4,"Heat the olive oil in a skillet over medium-high heat until shimmering. Working in batches, cook the shrimp 1–2 minutes per side until golden and cooked through. Transfer to a plate."
+SAND_044,4,"Heat the avocado oil in a skillet over medium-high heat until shimmering. Working in batches, cook the shrimp 1–2 minutes per side until golden and cooked through. Transfer to a plate."
 SAND_044,5,Slice the French bread roll and lightly toast the cut sides if desired. Spread the remoulade generously on both cut sides.
 SAND_044,6,Layer the shredded lettuce and tomato slices on the bottom half of the roll. Top with the fried shrimp and close the sandwich.
 SAND_045,1,"Make the remoulade: In a small bowl, whisk together the mayonnaise, yellow mustard, sweet pickle relish, lemon juice, hot sauce, paprika, and garlic powder. Cover and refrigerate until ready to serve."
 SAND_045,2,Set up the dredging station: Combine the flour and cornmeal in a shallow bowl. Beat the egg in a separate shallow bowl.
 SAND_045,3,"Season the oysters with salt, black pepper, and red pepper flakes. Dip each oyster in the beaten egg, then dredge in the flour-cornmeal mixture, pressing to coat."
-SAND_045,4,"Heat the olive oil in a skillet over medium-high heat until shimmering. Working in batches, cook the oysters 1–2 minutes per side until golden and cooked through. Transfer to a plate."
+SAND_045,4,"Heat the avocado oil in a skillet over medium-high heat until shimmering. Working in batches, cook the oysters 1–2 minutes per side until golden and cooked through. Transfer to a plate."
 SAND_045,5,Slice the French bread roll and lightly toast the cut sides if desired. Spread the remoulade generously on both cut sides.
 SAND_045,6,Layer the shredded lettuce and tomato slices on the bottom half of the roll. Top with the fried oysters and close the sandwich.
 SAND_046,1,"In a large bowl, combine the beef, pork, breadcrumbs, egg, grated onion, Parmesan, garlic powder, oregano, basil, salt, and pepper. Mix gently until just combined — do not overwork."
 SAND_046,2,Form into 5 meatballs (about 40g each). Wet your hands lightly to prevent sticking.
-SAND_046,3,"Heat olive oil in an oven-safe skillet over medium-high heat. Brown the meatballs on all sides, about 2–3 minutes per side. (They will finish cooking in the sauce.)"
+SAND_046,3,"Heat avocado oil in an oven-safe skillet over medium-high heat. Brown the meatballs on all sides, about 2–3 minutes per side. (They will finish cooking in the sauce.)"
 SAND_046,4,"Pour marinara sauce over the meatballs in the skillet. Reduce heat to medium-low, cover, and simmer 10–12 minutes until cooked through (internal temp 165°F)."
 SAND_046,5,"Split the hoagie roll lengthwise (do not cut all the way through). Lightly toast cut-side down in a dry skillet over medium heat, about 1 minute."
 SAND_046,6,Arrange the meatballs on the roll and spoon sauce generously over them. Top with shredded mozzarella.
@@ -823,11 +823,11 @@ SAND_047,5,"Season with oregano, salt, and black pepper. Close the sandwich and 
 SAND_048,1,"Pound the chicken breast to an even ½"" thickness. Pat dry with paper towels."
 SAND_048,2,"Set up a breading station: flour in one shallow dish, beaten egg in a second, and breadcrumbs mixed with Parmesan, garlic powder, oregano, basil, salt, and pepper in a third."
 SAND_048,3,"Dredge the chicken in flour (shake off excess), dip in egg, then press firmly into the breadcrumb mixture to coat both sides."
-SAND_048,4,Heat olive oil in a skillet over medium-high heat. Pan-fry the cutlet 3–4 minutes per side until golden brown and cooked through (internal temp 165°F). Transfer to a paper-towel-lined plate.
+SAND_048,4,Heat avocado oil in a skillet over medium-high heat. Pan-fry the cutlet 3–4 minutes per side until golden brown and cooked through (internal temp 165°F). Transfer to a paper-towel-lined plate.
 SAND_048,5,"Preheat broiler. Place the hoagie roll cut-side up on a baking sheet. Spoon marinara sauce over the bottom half. Set the chicken cutlet on top, then spoon more sauce over the chicken. Layer mozzarella and Parmesan over the top."
 SAND_048,6,Broil 2–3 minutes until the cheese is melted and bubbling. Close the sandwich and serve immediately.
 SAND_049,1,Slice the beef as thinly as possible (partially freezing it for 20–30 minutes makes this easier). Season with salt and pepper.
-SAND_049,2,"Heat olive oil in a large cast-iron skillet or flat-top griddle over high heat. Add the onion and bell pepper; cook 5–6 minutes, stirring, until softened and lightly charred. Push to one side of the pan."
+SAND_049,2,"Heat avocado oil in a large cast-iron skillet or flat-top griddle over high heat. Add the onion and bell pepper; cook 5–6 minutes, stirring, until softened and lightly charred. Push to one side of the pan."
 SAND_049,3,"Add the beef to the empty side of the pan. Cook 2–3 minutes, breaking apart with a spatula, until browned and just cooked through. Mix the beef together with the onions and peppers."
 SAND_049,4,Lay the provolone slices over the beef mixture. Cover loosely with a lid or foil for 30–60 seconds to melt the cheese.
 SAND_049,5,Split the hoagie roll and lightly toast the cut sides on the griddle for 1 minute. Scoop the cheesy beef filling into the roll cheese side down and serve immediately.
@@ -865,7 +865,7 @@ SAND_052,5,"In a small bowl, stir together 2 tablespoons of yogurt, 1 teaspoon e
 SAND_052,6,"Warm the pita briefly in the skillet or microwave. Slice off the top third to open a pocket, or split in half."
 SAND_052,7,"Spread the tahini inside the pita. Add the tomato slices, red onion, and falafel patties. Drizzle the yogurt sauce over the top. Serve immediately."
 SAND_053,1,"In a large bowl, combine the ground lamb with garlic powder, oregano, salt, and pepper. Mix well. Shape into 4 thin oval patties, about ¼ inch thick."
-SAND_053,2,Heat olive oil in a non-toxic nonstick skillet over medium-high heat. Cook patties 3 minutes per side until browned and cooked through. Transfer to a plate. (Oil reflects only the amount absorbed into the patties.)
+SAND_053,2,Heat avocado oil in a non-toxic nonstick skillet over medium-high heat. Cook patties 3 minutes per side until browned and cooked through. Transfer to a plate. (Oil reflects only the amount absorbed into the patties.)
 SAND_053,3,"Make the tzatziki: grate cucumber and squeeze out as much liquid as possible with a paper towel. In a small bowl, stir together yogurt, drained cucumber, dill, garlic powder, lemon juice, and salt until combined. Set aside."
 SAND_053,4,Warm pita briefly in skillet or microwave. Slice off the top third to open a pocket.
 SAND_053,5,Fill the pita with tomato slices and red onion. Add the lamb patties. Spoon tzatziki generously over the top. Serve immediately.
@@ -1333,7 +1333,7 @@ SALAD_013,2,Slice or cube the salami and provolone. Quarter the artichoke hearts
 SALAD_013,3,"Combine cooled gnocchi, salami, provolone, olives, artichoke hearts, tomato, bell pepper, and basil in a large bowl."
 SALAD_013,4,Make or portion the Italian Vinaigrette (see the Italian Vinaigrette recipe).
 SALAD_013,5,Drizzle the Italian Vinaigrette over the salad. Season with salt and pepper. Toss gently to coat. Serve at room temperature or refrigerate 30 minutes before serving.
-SALAD_014,1,"Season chicken breast with garlic powder, salt, and pepper. Brush with olive oil. Cook in a grill pan or skillet over medium-high heat, 6–7 minutes per side, until an instant-read thermometer reads 165°F (74°C). Let rest 5 minutes, then slice on the bias."
+SALAD_014,1,"Season chicken breast with garlic powder, salt, and pepper. Brush with avocado oil. Cook in a grill pan or skillet over medium-high heat, 6–7 minutes per side, until an instant-read thermometer reads 165°F (74°C). Let rest 5 minutes, then slice on the bias."
 SALAD_014,2,"While chicken rests, arrange romaine, tomato, cucumber, bell pepper, onion, carrot, and croutons in a large bowl or on a platter."
 SALAD_014,3,Make or portion the Basic Vinaigrette (see the Basic Vinaigrette recipe).
 SALAD_014,4,Top salad with sliced chicken. Drizzle with the Basic Vinaigrette and serve immediately.
@@ -1350,15 +1350,15 @@ SALAD_017,1,"Note: Rice vinegar is not in the USDA SR Legacy database. Distilled
 SALAD_017,2,"Crush the dry ramen noodles (discard the flavor packet) into small pieces. In a small bowl, whisk together sesame oil, olive oil, vinegar, tamari, sugar, ginger, salt, and pepper to make the dressing."
 SALAD_017,3,"Combine shredded cabbage, shredded carrot, and sliced scallions in a large bowl."
 SALAD_017,4,"Add the crushed ramen noodles, sliced almonds, and sunflower seeds. Drizzle dressing over the salad and toss to coat. Serve immediately so the noodles stay crunchy."
-SALAD_018,1,"Season shrimp with garlic powder, salt, and pepper. Heat olive oil in a skillet over medium-high heat. Cook shrimp 2–3 minutes per side until pink and opaque. USDA safe internal temperature: 145°F (63°C). Remove from heat and let cool slightly."
+SALAD_018,1,"Season shrimp with garlic powder, salt, and pepper. Heat avocado oil in a skillet over medium-high heat. Cook shrimp 2–3 minutes per side until pink and opaque. USDA safe internal temperature: 145°F (63°C). Remove from heat and let cool slightly."
 SALAD_018,2,Make or portion the Caesar dressing (see the Caesar Salad Dressing recipe).
 SALAD_018,3,"Toss romaine with croutons, Parmesan, and Caesar dressing."
 SALAD_018,4,Arrange shrimp over the salad. Serve immediately.
-SALAD_019,1,"Season chicken with cumin, garlic powder, salt, and pepper. Heat olive oil in a skillet over medium-high heat. Cook chicken 6–7 minutes per side until cooked through. USDA safe internal temperature: 165°F (74°C). Rest 5 minutes, then slice."
+SALAD_019,1,"Season chicken with cumin, garlic powder, salt, and pepper. Heat avocado oil in a skillet over medium-high heat. Cook chicken 6–7 minutes per side until cooked through. USDA safe internal temperature: 165°F (74°C). Rest 5 minutes, then slice."
 SALAD_019,2,"Whisk together olive oil, lime juice, honey, cumin, salt, and pepper to make the dressing."
 SALAD_019,3,"Combine romaine, black beans, corn, avocado, tomato, onion, cheese, and cilantro in a large bowl."
 SALAD_019,4,Top with sliced chicken and tortilla chips. Drizzle with dressing and serve.
-SALAD_020,1,"Toss shrimp with lime juice, garlic powder, paprika, salt, and pepper. Heat olive oil in a skillet over medium-high heat. Cook shrimp 2–3 minutes per side until pink and opaque. USDA safe internal temperature: 145°F (63°C). Remove from heat."
+SALAD_020,1,"Toss shrimp with lime juice, garlic powder, paprika, salt, and pepper. Heat avocado oil in a skillet over medium-high heat. Cook shrimp 2–3 minutes per side until pink and opaque. USDA safe internal temperature: 145°F (63°C). Remove from heat."
 SALAD_020,2,"Whisk together olive oil, lime juice, honey, salt, and pepper to make the dressing."
 SALAD_020,3,"Arrange romaine, avocado, tomato, cucumber, onion, and cilantro in a large bowl."
 SALAD_020,4,"Top with shrimp, drizzle with dressing, and serve immediately."
@@ -1905,7 +1905,7 @@ ENTR_072,6,"Suggestions (not included): Serve with warm pita, tzatziki sauce, sl
 ENTR_073,1,"Peel and cut the potatoes into 2-inch chunks. Place in a large pot of cold salted water, bring to a boil, and cook for 15 to 20 minutes until tender when pierced with a fork. Drain and return to the pot."
 ENTR_073,2,"Add butter, warm milk, egg yolk, salt, and pepper to the drained potatoes. Mash until smooth and creamy. Set aside."
 ENTR_073,3,Preheat the oven to 400°F.
-ENTR_073,4,"Heat olive oil in a large oven-safe skillet or sauté pan over medium-high heat. Add the ground lamb and cook, breaking it up with a spoon, for 6 to 8 minutes until browned. Drain excess fat if more than 2 tablespoons remain in the pan."
+ENTR_073,4,"Heat avocado oil in a large oven-safe skillet or sauté pan over medium-high heat. Add the ground lamb and cook, breaking it up with a spoon, for 6 to 8 minutes until browned. Drain excess fat if more than 2 tablespoons remain in the pan."
 ENTR_073,5,"Reduce heat to medium. Add the finely diced onion, carrot, and celery; cook for 5 to 6 minutes until softened."
 ENTR_073,6,Add the minced garlic and cook for 1 minute until fragrant. Stir in the tomato paste and Worcestershire sauce. Sprinkle the flour over the mixture and stir until no dry flour remains.
 ENTR_073,7,"Pour in the beef broth and add the stripped thyme leaves and finely chopped rosemary. Bring to a simmer and cook for 8 to 10 minutes, stirring occasionally, until the sauce thickens. Taste and adjust salt and pepper."
@@ -1921,7 +1921,7 @@ ENTR_074,6,"Bring to a boil, then reduce heat to low. Cover and simmer for 45 to
 ENTR_074,7,Remove from heat and let cool for 2 to 3 minutes. Stir in the room-temperature yogurt gradually to prevent curdling. Return to low heat and simmer uncovered for 5 minutes.
 ENTR_074,8,Remove and discard the bay leaves. Taste and adjust seasoning.
 ENTR_074,9,Suggestions (not included): Serve over basmati rice or with naan bread.
-ENTR_075,1,"Pat the lamb dry and season with salt and pepper. Heat the olive oil in a large heavy-bottomed pot or Dutch oven over high heat. Working in batches, brown the lamb on all sides, about 3 to 4 minutes per batch. Transfer to a plate and set aside."
+ENTR_075,1,"Pat the lamb dry and season with salt and pepper. Heat the avocado oil in a large heavy-bottomed pot or Dutch oven over high heat. Working in batches, brown the lamb on all sides, about 3 to 4 minutes per batch. Transfer to a plate and set aside."
 ENTR_075,2,"Reduce heat to medium. Add the finely diced onion and cook, stirring occasionally, for 8 to 10 minutes until softened and golden."
 ENTR_075,3,"Add the minced garlic, freshly grated ginger, paprika, ground cumin, ground coriander, ground cinnamon, ground turmeric, and cayenne. Stir for 1 to 2 minutes until fragrant."
 ENTR_075,4,"Add the crushed tomatoes and cook for 2 to 3 minutes, stirring to combine with the spice mixture."
@@ -1931,14 +1931,14 @@ ENTR_075,7,"Add the drained chickpeas, roughly chopped dried apricots, honey, an
 ENTR_075,8,"Remove and discard the bay leaves. Taste and adjust seasoning. Stir in the toasted sliced almonds, chopped cilantro, and chopped parsley."
 ENTR_075,9,Suggestions (not included): Serve over couscous or with warm flatbread.
 ENTR_076,1,"Preheat the oven to 400°F. Arrange the sliced eggplant in a single layer on two oiled baking sheets. Brush both sides with olive oil and season with salt. Roast for 20 to 25 minutes, flipping once halfway through, until golden and tender. Set aside. Reduce oven temperature to 375°F."
-ENTR_076,2,"Heat 1 tablespoon of olive oil in a large skillet over medium-high heat. Add the lamb and cook, breaking it up with a spoon, for 6 to 8 minutes until browned. Drain any excess fat and set the lamb aside."
+ENTR_076,2,"Heat 1 tablespoon of avocado oil in a large skillet over medium-high heat. Add the lamb and cook, breaking it up with a spoon, for 6 to 8 minutes until browned. Drain any excess fat and set the lamb aside."
 ENTR_076,3,"In the same skillet over medium heat, add the finely diced onion and cook for 5 minutes until softened. Add the minced garlic and cook for 1 minute."
 ENTR_076,4,"Return the lamb to the skillet. Add the crushed tomatoes, red wine, ground cinnamon, ground allspice, dried oregano, and bay leaves. Season with salt and pepper. Simmer over medium-low heat for 15 to 20 minutes until the sauce thickens. Remove and discard the bay leaves."
 ENTR_076,5,"Make the béchamel: melt the butter in a medium saucepan over medium heat. Whisk in the flour and cook for 1 to 2 minutes. Gradually whisk in the milk and cook, stirring constantly, for 6 to 8 minutes until thickened. Remove from heat. Whisk in the eggs one at a time, then stir in the freshly grated Parmesan, ground nutmeg, salt, and white pepper."
 ENTR_076,6,Lightly oil a 9×13-inch baking dish. Arrange half the roasted eggplant slices in an even layer. Spread all of the meat sauce over the eggplant. Top with the remaining eggplant slices. Pour the béchamel evenly over the top and smooth with a spatula.
 ENTR_076,7,Bake at 375°F for 40 to 45 minutes until the top is set and golden brown. Let rest for 15 to 20 minutes before cutting. Cut into 6 portions and serve.
 ENTR_077,1,Pat the lamb shanks dry with paper towels. Season generously on all sides with salt and black pepper.
-ENTR_077,2,"Heat the olive oil in a large Dutch oven or heavy-bottomed pot over medium-high heat. Sear the shanks in batches, 3–4 minutes per side, until deep brown on all sides. Transfer to a plate and set aside."
+ENTR_077,2,"Heat the avocado oil in a large Dutch oven or heavy-bottomed pot over medium-high heat. Sear the shanks in batches, 3–4 minutes per side, until deep brown on all sides. Transfer to a plate and set aside."
 ENTR_077,3,"Reduce heat to medium. Add the onion, carrot, and celery to the pot and cook, stirring occasionally, for 5–6 minutes until softened. Add the garlic and cook 1 minute more."
 ENTR_077,4,Add the tomato paste and stir to coat the vegetables. Cook for 2 minutes until the paste darkens slightly.
 ENTR_077,5,"Pour in the red wine, scraping up any browned bits from the bottom of the pot. Simmer for 3 minutes to reduce slightly."
@@ -1955,7 +1955,7 @@ ENTR_078,6,Suggestions (not included): Serve with roasted vegetables or a simple
 ENTR_079,1,Make or prepare the Dijon-Style Mustard (see the Dijon-Style Mustard recipe). You will need 2 tablespoons.
 ENTR_079,2,Remove the rack from the refrigerator 30 minutes before cooking. Preheat the oven to 450°F (230°C).
 ENTR_079,3,Pat the rack dry with paper towels. Season generously on all sides with salt and black pepper.
-ENTR_079,4,"Heat 2 tablespoons of olive oil in an oven-safe skillet over high heat. Sear the rack fat-side down for 3–4 minutes until deep golden brown, then sear the other sides briefly. Transfer to a plate."
+ENTR_079,4,"Heat 2 tablespoons of avocado oil in an oven-safe skillet over high heat. Sear the rack fat-side down for 3–4 minutes until deep golden brown, then sear the other sides briefly. Transfer to a plate."
 ENTR_079,5,"In a small bowl, combine the remaining olive oil, garlic, rosemary, thyme, and dry bread crumbs to form the herb crust."
 ENTR_079,6,"Brush the fat side of the rack with the Dijon-Style Mustard, then press the herb crust firmly onto the mustard-coated surface."
 ENTR_079,7,"Return the rack crust-side up to the skillet. Roast in the oven for 12–15 minutes for medium-rare (internal temperature 130°F / 54°C), or until cooked to your preferred doneness."
@@ -1988,7 +1988,7 @@ ENTR_083,5,Switch the oven to broil. Brush the pork again with the remaining res
 ENTR_083,6,"Rest for 5 minutes, then slice against the grain."
 ENTR_083,7,Suggestions (not included): Serve over steamed rice.
 ENTR_084,1,Remove the chops from the refrigerator 30 minutes before cooking. Pat dry with paper towels and season generously on both sides with salt and black pepper.
-ENTR_084,2,"Heat the olive oil in a large, heavy skillet (cast iron preferred) over medium-high heat until shimmering. Add the chops and sear without moving for 3–4 minutes until a deep golden crust forms."
+ENTR_084,2,"Heat the avocado oil in a large, heavy skillet (cast iron preferred) over medium-high heat until shimmering. Add the chops and sear without moving for 3–4 minutes until a deep golden crust forms."
 ENTR_084,3,"Flip the chops. Add the butter, garlic, thyme, and rosemary to the pan. As the butter melts and foams, tilt the pan slightly and use a spoon to continuously baste the chops with the herb butter for 2–3 minutes."
 ENTR_084,4,"Continue cooking, basting frequently, until the internal temperature reaches 145°F (63°C) at the thickest point away from the bone, about 2–3 minutes more."
 ENTR_084,5,Transfer to a cutting board and rest for 5 minutes before serving.
@@ -2015,7 +2015,7 @@ ENTR_087,8,Divide the rice among 4 bowls. Top with the pork filling and serve im
 ENTR_088,1,Place the pork tenderloin cutlets between two sheets of plastic wrap and pound to 1/4-inch thickness. Season both sides with salt and pepper.
 ENTR_088,2,"Set up a breading station: flour in one shallow dish, beaten egg in a second, and panko breadcrumbs in a third."
 ENTR_088,3,"Dredge each cutlet in flour and shake off the excess. Dip in the beaten egg, letting the excess drip off. Press firmly into the panko to coat both sides."
-ENTR_088,4,"Heat olive oil in a large skillet over medium-high heat until shimmering. Add the cutlets and cook until deep golden brown, 3–4 minutes per side. (The ingredient list reflects only the oil absorbed into the crust.)"
+ENTR_088,4,"Heat avocado oil in a large skillet over medium-high heat until shimmering. Add the cutlets and cook until deep golden brown, 3–4 minutes per side. (The ingredient list reflects only the oil absorbed into the crust.)"
 ENTR_088,5,Transfer to a wire rack for 1–2 minutes.
 ENTR_088,6,Suggestions (not included): Serve with lemon wedges and an arugula salad.
 ENTR_089,1,Make or prepare the BBQ Sauce (see the BBQ Sauce recipe). Set aside.
@@ -2045,12 +2045,12 @@ ENTR_091,8,Suggestions (not included): Serve 2 ribs per person with coleslaw or 
 ENTR_092,1,Place each pork cutlet between two sheets of plastic wrap and pound to about 1/4-inch thickness with a meat mallet or heavy skillet.
 ENTR_092,2,"Set up three shallow dishes: one with the flour, one with the beaten eggs, and one with the bread crumbs mixed with the rosemary, marjoram, oregano, paprika, salt, and pepper."
 ENTR_092,3,"Dredge each cutlet in flour, shaking off the excess, then dip in egg, letting the excess drip off, then press firmly into the herbed bread crumb mixture to coat both sides."
-ENTR_092,4,Heat the olive oil in a large skillet over medium-high heat. Cook the schnitzel in batches for 3 to 4 minutes per side until golden brown and cooked through. (The ingredient list reflects only the oil absorbed into the crust.)
+ENTR_092,4,Heat the avocado oil in a large skillet over medium-high heat. Cook the schnitzel in batches for 3 to 4 minutes per side until golden brown and cooked through. (The ingredient list reflects only the oil absorbed into the crust.)
 ENTR_092,5,Transfer to a wire rack and serve immediately.
 ENTR_092,6,Suggestions (not included): Serve with lemon wedges and a simple green salad or cucumber salad.
 ENTR_093,1,Make or prepare the Chicken Broth (see the Chicken Broth recipe). Set aside.
 ENTR_093,2,"Heat the oven to 375°F. Trim any silver skin from the tenderloins. Butterfly each one with a sharp knife — slice lengthwise down the center, cutting almost but not quite through, so the two halves open flat. Place between two sheets of plastic wrap and pound with the flat side of a meat mallet to an even 1/4-inch thickness. Season generously with salt and pepper."
-ENTR_093,3,"Heat 2 tablespoons of the olive oil in a large oven-safe skillet over medium-high heat. Add the shallots, half the capers, the rosemary, and the thyme. Cook, stirring frequently, until the shallots soften and begin to brown, about 5 minutes. Add the garlic and cook 1 minute more until fragrant. Season with salt and pepper, then transfer to a plate to cool. Wipe out the skillet and reserve."
+ENTR_093,3,"Heat 2 tablespoons of the avocado oil in a large oven-safe skillet over medium-high heat. Add the shallots, half the capers, the rosemary, and the thyme. Cook, stirring frequently, until the shallots soften and begin to brown, about 5 minutes. Add the garlic and cook 1 minute more until fragrant. Season with salt and pepper, then transfer to a plate to cool. Wipe out the skillet and reserve."
 ENTR_093,4,"Lay the prosciutto slices in an overlapping layer over the surface of each pounded tenderloin, leaving a 1/2-inch border on all sides. Spread the cooled shallot filling evenly over the prosciutto. Starting at the narrow end, roll each tenderloin up tightly jelly-roll style. Tie with kitchen twine at 1-inch intervals to hold the shape."
 ENTR_093,5,"Heat the remaining 1 tablespoon olive oil in the reserved skillet over medium heat. Place the rolls seam-side down and transfer the skillet to the oven. Roast until the center registers 140-145°F, 20 to 25 minutes total, turning once halfway through. Transfer to a cutting board to rest; reserve the skillet."
 ENTR_093,6,"Set the reserved skillet over medium-high heat. Add the white wine and the remaining capers, scraping up any browned bits from the pan bottom. Cook until the wine is nearly evaporated. Pour in the orange juice and chicken broth and simmer until the sauce reduces and turns slightly syrupy, 3 to 4 minutes. Remove from the heat and whisk in the butter until smooth. Taste and adjust salt and pepper; add a squeeze of lemon juice if the sauce tastes too sweet."
@@ -2126,14 +2126,14 @@ ENTR_102,2,"Combine rinsed quinoa and 2 1/3 cups water in a saucepan. Bring to a
 ENTR_102,3,"Remove from heat, let stand covered 5 minutes, then fluff with a fork and spread on a tray to cool slightly."
 ENTR_102,4,"In a medium bowl, whisk together tamari, sesame oil, lime juice, and salt."
 ENTR_102,5,Add salmon and toss gently to coat. Let marinate 10 minutes while you prep the bowl ingredients.
-ENTR_102,6,Heat 2 tbsp olive oil in a skillet over medium-high heat.
+ENTR_102,6,Heat 2 tbsp avocado oil in a skillet over medium-high heat.
 ENTR_102,7,"Add salmon in a single layer and pan-grill until lightly browned on the outside and just cooked through, about 2-3 minutes per side."
 ENTR_102,8,Divide cooked quinoa evenly among 4 bowls.
 ENTR_102,9,"Top each bowl with cooked salmon, edamame, sliced avocado, cucumber, and scallions."
 ENTR_102,10,Sprinkle sesame seeds and minced ginger over each bowl.
 ENTR_102,11,Serve immediately.
 ENTR_103,1,Pat the scallops completely dry with paper towels and season both sides with salt and black pepper.
-ENTR_103,2,Heat the olive oil in a large skillet over high heat until shimmering.
+ENTR_103,2,Heat the avocado oil in a large skillet over high heat until shimmering.
 ENTR_103,3,"Add the scallops in a single layer, leaving space between each. Sear without moving for 2 minutes until a golden-brown crust forms."
 ENTR_103,4,"Flip the scallops. Add the butter, garlic, and thyme sprigs to the pan."
 ENTR_103,5,Tilt the pan slightly and spoon the melted butter continuously over the scallops for 1–2 minutes until cooked through and opaque.
@@ -2196,14 +2196,14 @@ ENTR_110,6,"Arrange shrimp, mussels, and clams over the rice; press lightly into
 ENTR_110,7,Discard any mussels or clams that have not opened. Squeeze lemon juice over the top and scatter with parsley. Season to taste.
 ENTR_110,8,Remove from heat; rest 5 minutes before serving directly from the pan.
 ENTR_111,1,Pat shrimp dry with paper towels. Season with salt and pepper.
-ENTR_111,2,Heat olive oil in a large skillet over medium-high heat. Add shrimp in a single layer; cook 1-2 minutes per side until pink and just opaque. Transfer to a plate.
+ENTR_111,2,Heat avocado oil in a large skillet over medium-high heat. Add shrimp in a single layer; cook 1-2 minutes per side until pink and just opaque. Transfer to a plate.
 ENTR_111,3,"Reduce heat to medium. Add butter to the skillet. Once foamy, add garlic and red pepper flakes; cook 1 minute until fragrant."
 ENTR_111,4,Add white wine; simmer 2-3 minutes until reduced by half. Stir in lemon juice.
 ENTR_111,5,"Return shrimp to the pan; toss to coat and heat through, about 1 minute."
 ENTR_111,6,Remove from heat; scatter with parsley. Serve immediately.
 ENTR_111,7,Suggestions (not included): Serve over pasta or with crusty bread.
 ENTR_112,1,"Bring 1½ cups of water to a boil in a medium saucepan; if using rinsed rice, reduce the water by 2 tablespoons. Add the rice, reduce heat to low, cover and cook until water is absorbed and rice is tender, about 18 minutes. Remove from heat and let stand 5 minutes, then fluff with a fork."
-ENTR_112,2,"Heat olive oil in a large skillet over medium-high heat. Add onion and cook, stirring occasionally, until softened, 3 to 4 minutes."
+ENTR_112,2,"Heat avocado oil in a large skillet over medium-high heat. Add onion and cook, stirring occasionally, until softened, 3 to 4 minutes."
 ENTR_112,3,"Add garlic and red bell pepper. Cook, stirring, until the pepper is slightly tender, about 2 minutes."
 ENTR_112,4,"Add zucchini and mushrooms. Cook, stirring occasionally, until the vegetables are tender and any liquid has evaporated, 5 to 6 minutes."
 ENTR_112,5,"Add chickpeas, cumin, paprika, salt, and pepper. Stir to combine and cook until the chickpeas are heated through, about 2 minutes."
@@ -2389,7 +2389,7 @@ SOUP_002,2,"Soak the rice noodles in cold water for 20 minutes. Bring a separate
 SOUP_002,3,Arrange the raw beef slices over the noodles in each bowl.
 SOUP_002,4,Ladle the simmering hot broth over the beef and noodles. The heat of the broth will cook the beef to medium-rare. Serve immediately.
 SOUP_002,5,"Suggestions (not included): Serve with bean sprouts, fresh Thai basil, lime wedges, hoisin sauce, and sriracha."
-SOUP_003,1,"Season beef with salt and pepper. Heat olive oil in a Dutch oven or heavy pot over high heat. Working in batches, sear beef on all sides until browned, about 3 minutes per batch. Transfer to a plate."
+SOUP_003,1,"Season beef with salt and pepper. Heat avocado oil in a Dutch oven or heavy pot over high heat. Working in batches, sear beef on all sides until browned, about 3 minutes per batch. Transfer to a plate."
 SOUP_003,2,"Reduce heat to medium. Add onion and celery; cook 5 minutes until softened. Add garlic and tomato paste; cook 2 minutes, stirring."
 SOUP_003,3,"Sprinkle flour over the vegetables and stir to coat. Gradually pour in the beef stock, scraping up any browned bits from the bottom. Return beef and any accumulated juices to the pot. Stir in Worcestershire sauce, thyme sprigs, and bay leaves."
 SOUP_003,4,"Bring to a boil, then reduce heat to low. Cover and simmer 1 hour. Add potatoes and carrots; continue simmering covered 45 to 60 minutes until beef is fork-tender and vegetables are soft."
@@ -2413,7 +2413,7 @@ SOUP_006,4,"Stir in the tamari, vinegar, white pepper, and salt. Taste and adjus
 SOUP_006,5,Re-stir the cornstarch slurry and pour it into the soup while stirring; simmer 1 to 2 minutes until the soup thickens to a light gravy consistency.
 SOUP_006,6,Reduce heat to medium-low. Slowly drizzle the beaten eggs in a thin stream while stirring gently in one direction to create ribbons. Remove from heat and stir in the sesame oil.
 SOUP_006,7,"Suggestions (not included): Serve as a first course alongside stir-fry, fried rice, or dumplings. For more heat, add extra white pepper or a few drops of chili oil."
-SOUP_007,1,Heat the olive oil in a large pot over medium-high heat. Add the onion; cook 5 minutes until softened. Add the garlic and jalapeño; cook 1 minute until fragrant.
+SOUP_007,1,Heat the avocado oil in a large pot over medium-high heat. Add the onion; cook 5 minutes until softened. Add the garlic and jalapeño; cook 1 minute until fragrant.
 SOUP_007,2,"Stir in the chili powder, cumin, and oregano; cook 30 seconds. Add the crushed tomatoes and chicken broth; bring to a boil."
 SOUP_007,3,"Add the whole chicken breasts; reduce heat to medium and simmer 18 to 20 minutes until cooked through. Remove the chicken, shred with two forks, and return to the pot."
 SOUP_007,4,"Add the black beans, corn, salt, and pepper. Simmer 5 minutes to heat through. Stir in the lime juice and cilantro."
@@ -2435,7 +2435,7 @@ SOUP_010,6,"Add the egg noodles. Continue simmering for 8–10 minutes, stirring
 SOUP_010,7,Remove and discard the bay leaves. Stir in the parsley. Taste and adjust seasoning with additional salt if needed.
 SOUP_010,8,"Serve immediately in warmed bowls. If making ahead, store the cooked noodles separately to prevent them from absorbing all the broth."
 SOUP_011,1,Make or prepare the Beef Stock (see the Beef Stock recipe) if not already made.
-SOUP_011,2,"Heat olive oil in a large heavy-bottomed pot over medium-high heat. Add the ground beef and cook, breaking it up with a spoon, for 6–8 minutes until browned."
+SOUP_011,2,"Heat avocado oil in a large heavy-bottomed pot over medium-high heat. Add the ground beef and cook, breaking it up with a spoon, for 6–8 minutes until browned."
 SOUP_011,3,Add the onion and cook for 5 minutes until softened.
 SOUP_011,4,Add the garlic and cook for 1 minute until fragrant.
 SOUP_011,5,"Add the chili powder, cumin, paprika, oregano, cayenne, salt, and black pepper. Stir to coat the meat and cook for 1–2 minutes until the spices are fragrant."
@@ -2444,7 +2444,7 @@ SOUP_011,7,"Bring to a boil, then reduce heat to low. Simmer uncovered for 45 mi
 SOUP_011,8,"Taste and adjust seasoning with additional chili powder, cumin, or cayenne as desired."
 SOUP_011,9,"Suggestions (not included): Serve in bowls topped with shredded cheddar cheese, sour cream, diced onion, or sliced jalapeños. Good alongside cornbread or crackers."
 SOUP_012,1,Make or prepare the Beef Stock (see the Beef Stock recipe) if not already made.
-SOUP_012,2,"Heat olive oil in a large heavy-bottomed pot over medium-high heat. Add the ground beef and cook, breaking it up with a spoon, for 6–8 minutes until browned."
+SOUP_012,2,"Heat avocado oil in a large heavy-bottomed pot over medium-high heat. Add the ground beef and cook, breaking it up with a spoon, for 6–8 minutes until browned."
 SOUP_012,3,Add the onion and cook for 5 minutes until softened.
 SOUP_012,4,Add the garlic and cook for 1 minute until fragrant.
 SOUP_012,5,"Add the chili powder, cumin, paprika, oregano, cayenne, salt, and black pepper. Stir to coat the meat and cook for 1–2 minutes until the spices are fragrant."
@@ -2590,7 +2590,7 @@ BKFST_046,6,Preheat a Belgian waffle iron and lightly coat with non-toxic nonsti
 BKFST_046,7,"Pour about 3/4 cup of batter into the waffle iron and cook 4 to 5 minutes, until golden and crisp."
 BKFST_046,8,Serve immediately.
 BKFST_046,9,"Suggestions (not included): Serve with maple syrup, fresh berries, or whipped cream."
-BKFST_047,1,"Heat 1 tablespoon of olive oil in a non-toxic nonstick skillet over medium-high heat. Add the onion and jalapeños and cook, stirring, until softened, about 3 minutes."
+BKFST_047,1,"Heat 1 tablespoon of avocado oil in a non-toxic nonstick skillet over medium-high heat. Add the onion and jalapeños and cook, stirring, until softened, about 3 minutes."
 BKFST_047,2,"Add the garlic and cumin and cook, stirring, 30 seconds."
 BKFST_047,3,"Add the tomatoes and salt. Cook, stirring occasionally, until the salsa thickens, 8 to 10 minutes. Transfer to a bowl and keep warm."
 BKFST_047,4,"Wipe out the skillet and add the remaining tablespoon of olive oil over medium heat. Heat the corn tortillas two at a time, about 1 minute per side, until lightly crisped. Place 2 tortillas on each plate."
@@ -2694,7 +2694,7 @@ SAND_069,5,"Warm the flour tortillas in a dry skillet for 30 seconds per side, o
 SAND_069,6,"Layer each tortilla with romaine, celery, carrot, and blue cheese crumbles. Top with the buffalo chicken, fold in the sides, and roll tightly."
 SAND_069,7,Suggestions (not included): Serve with Ranch Dressing (see SAUCE_020) or Blue Cheese Dressing (see SAUCE_021).
 SAND_070,1,"Season the chicken breasts on both sides with garlic powder, salt, and black pepper."
-SAND_070,2,"Heat the olive oil in a skillet over medium-high heat. Cook the chicken for 6–7 minutes per side, or until cooked through (internal temperature 165°F). Let rest 5 minutes, then slice into strips."
+SAND_070,2,"Heat the avocado oil in a skillet over medium-high heat. Cook the chicken for 6–7 minutes per side, or until cooked through (internal temperature 165°F). Let rest 5 minutes, then slice into strips."
 SAND_070,3,Make or prepare the Caesar Salad Dressing (see the Caesar Salad Dressing recipe).
 SAND_070,4,"Warm the flour tortillas in a dry skillet for 30 seconds per side, or wrap in a damp paper towel and microwave for 20 seconds."
 SAND_070,5,"Lay a tortilla flat. Arrange half the romaine down the center, top with chicken strips, croutons, and Parmesan. Drizzle with half the Caesar dressing, fold in the sides, and roll tightly. Repeat with the second tortilla."
@@ -2704,12 +2704,12 @@ SAND_071,3,"In a small bowl, stir together the sour cream and lime juice to make
 SAND_071,4,Warm the flour tortillas in a dry skillet for 30 seconds per side.
 SAND_071,5,"Lay each tortilla flat. Layer on shredded cabbage, avocado, tomato, and snapper. Top with lime crema and cilantro, fold in the sides, and roll tightly."
 SAND_072,1,"In a small bowl, mix together the garlic powder, cumin, coriander, oregano, salt, and black pepper. Add the ground lamb and gently mix to combine. Form into 2 patties (about ½-inch thick) and press a small indentation in the center of each to prevent doming."
-SAND_072,2,"Heat the olive oil in a skillet over medium-high heat. Cook the patties for 4–5 minutes per side, until cooked through (internal temperature 160°F). Remove and rest 3 minutes."
+SAND_072,2,"Heat the avocado oil in a skillet over medium-high heat. Cook the patties for 4–5 minutes per side, until cooked through (internal temperature 160°F). Remove and rest 3 minutes."
 SAND_072,3,"Make the tzatziki: in a small bowl, stir together the Greek yogurt, cucumber, mint, lemon juice, and garlic. Season with a pinch of salt."
 SAND_072,4,Lightly toast the hamburger buns in the same skillet.
 SAND_072,5,"Place arugula on the bottom bun, top with the lamb patty, feta crumbles, tomato, and red onion. Spoon tzatziki over the top, close with the top bun, and serve immediately."
 SAND_073,1,"Combine the 2 tbsp lemon juice, garlic powder, oregano, salt, and black pepper in a shallow bowl. Add the chicken breasts and turn to coat. Marinate 15–30 minutes at room temperature (or up to 4 hours refrigerated)."
-SAND_073,2,"Heat the olive oil in a skillet over medium-high heat. Cook the chicken 5–7 minutes per side until golden and cooked through (internal temperature 165°F). Transfer to a cutting board and rest 5 minutes, then slice thin on the diagonal."
+SAND_073,2,"Heat the avocado oil in a skillet over medium-high heat. Cook the chicken 5–7 minutes per side until golden and cooked through (internal temperature 165°F). Transfer to a cutting board and rest 5 minutes, then slice thin on the diagonal."
 SAND_073,3,"Whisk together the 1 tbsp lemon juice, 1 tbsp olive oil, and pinch of oregano in a small bowl to make the dressing."
 SAND_073,4,Warm the tortillas in a dry skillet over medium heat for 30 seconds per side until pliable.
 SAND_073,5,"Spread 2 tbsp hummus over each warm tortilla. Layer romaine, sliced chicken, cucumber, tomato, red onion, feta, and olives. Drizzle with the lemon dressing."
@@ -2723,7 +2723,7 @@ SAND_075,2,"Lay a flour tortilla flat on a clean surface. Spread a quarter of th
 SAND_075,3,"Layer a quarter of the turkey, shredded cheddar, spinach leaves, red bell pepper slices, and scallions evenly over the cream cheese."
 SAND_075,4,"Starting from the filled edge, roll the tortilla tightly into a log. Repeat with the remaining 3 tortillas. Wrap each roll in plastic wrap and refrigerate for at least 1 hour (or overnight) to firm up."
 SAND_075,5,Unwrap and slice each roll into 8–10 rounds about 1 inch thick using a sharp serrated knife. Arrange on a platter and serve chilled.
-SAND_076,1,"Heat olive oil in a skillet over medium-high heat. Season shrimp with salt and pepper. Cook 1–2 minutes per side until pink and opaque. Transfer to a plate and let cool completely, then roughly chop."
+SAND_076,1,"Heat avocado oil in a skillet over medium-high heat. Season shrimp with salt and pepper. Cook 1–2 minutes per side until pink and opaque. Transfer to a plate and let cool completely, then roughly chop."
 SAND_076,2,"In a large bowl, whisk together mayonnaise, lemon juice, and dill. Fold in celery, scallions, and chopped shrimp. Season to taste with salt and pepper. Refrigerate 15 minutes."
 SAND_076,3,Melt butter in a clean skillet over medium heat. Toast the hot dog buns cut-side down for 1–2 minutes until golden.
 SAND_076,4,Fill each toasted bun with the shrimp salad and serve immediately.
@@ -2734,14 +2734,14 @@ SAND_077,3,Season the tomatoes generously with salt and a pinch of black pepper.
 SAND_077,4,Top with the second slice of bread and serve immediately.
 SAND_077,5,Suggestions (not included): Best made with peak-season summer tomatoes and soft bread. Serve with potato chips.
 SAND_078,1,Drain tofu and press between paper towels. Place a heavy skillet or another heavy weight on top for 15 minutes to remove moisture. Crumble into rough chunks.
-SAND_078,2,Heat olive oil in a large skillet over medium-high heat. Add onion and bell pepper; cook 3–4 minutes until softened.
+SAND_078,2,Heat avocado oil in a large skillet over medium-high heat. Add onion and bell pepper; cook 3–4 minutes until softened.
 SAND_078,3,"Add garlic, ground cumin, chili powder, and paprika; cook 1 minute until fragrant."
 SAND_078,4,"Add crumbled tofu and cook 5–6 minutes, stirring occasionally, until lightly golden."
 SAND_078,5,Stir in black beans and lime juice; cook 2 minutes until heated through. Season with salt and pepper. Remove from heat and fold in cilantro.
 SAND_078,6,Warm tortillas in a dry skillet over medium heat for 30 seconds per side.
 SAND_078,7,Divide the filling between the 2 tortillas. Fold in the sides and roll tightly into burritos. Serve immediately.
 SAND_078,8,"Suggestions (not included): Serve with salsa, guacamole, or hot sauce on the side."
-SAND_079,1,Heat olive oil in a large skillet over medium-high heat. Add onion and bell pepper; cook 3–4 minutes until softened.
+SAND_079,1,Heat avocado oil in a large skillet over medium-high heat. Add onion and bell pepper; cook 3–4 minutes until softened.
 SAND_079,2,"Add garlic, ground cumin, paprika, and dried oregano; cook 1 minute until fragrant."
 SAND_079,3,"Add ground beef; cook 5–7 minutes, breaking up the meat, until browned. Drain excess fat."
 SAND_079,4,Stir in the chopped hard-boiled egg and halved black olives. Season with salt and pepper. Remove from heat and let the filling cool to room temperature.
@@ -2800,7 +2800,7 @@ PASTA_004,9,"Let rest 2 minutes, then cut into 8 slices (2 per serving) and serv
 PASTA_004,10,Suggestions (not included): Top with fresh basil or a drizzle of olive oil just before serving.
 PASTA_005,1,"Bring a large pot of water to a boil. Add 1 tsp of table salt per quart of water after it boils, then add the dry pasta. Cook 8 minutes (al dente). Reserve ¼ cup pasta water, then drain and set aside."
 PASTA_005,2,Pat the shrimp dry. Season with the salt and black pepper.
-PASTA_005,3,"In a large skillet, heat the olive oil over medium-high heat. Add the shrimp in a single layer and cook 1–2 minutes per side until pink and just cooked through. Transfer to a plate."
+PASTA_005,3,"In a large skillet, heat the avocado oil over medium-high heat. Add the shrimp in a single layer and cook 1–2 minutes per side until pink and just cooked through. Transfer to a plate."
 PASTA_005,4,"Reduce heat to medium. Add the butter and garlic to the same skillet. Cook, stirring, 1–2 minutes until fragrant."
 PASTA_005,5,"Add the white wine and lemon juice. Simmer 2 minutes, scraping up any browned bits."
 PASTA_005,6,"Return the shrimp to the skillet along with the drained pasta. Toss to coat, adding a splash of reserved pasta water if needed to loosen the sauce."
@@ -2808,7 +2808,7 @@ PASTA_005,7,Remove from heat. Stir in the parsley and red pepper flakes. Taste a
 PASTA_005,8,Divide among 4 plates and serve immediately.
 PASTA_005,9,Suggestions (not included): Garnish with additional parsley and lemon wedges. Serve with crusty bread.
 PASTA_006,1,"Bring a large pot of water to a boil. Add 1 tsp of table salt per quart of water after it boils, then add the dry pasta. Cook 2 minutes (al dente). Drain and reserve ¼ cup pasta water."
-PASTA_006,2,"Season the chicken breast with garlic powder, salt, and pepper. Heat the olive oil in a large skillet over medium-high heat. Cook the chicken 5–6 minutes per side until golden and cooked through (165°F internal). Transfer to a cutting board, rest 5 minutes, then slice into bite-sized pieces."
+PASTA_006,2,"Season the chicken breast with garlic powder, salt, and pepper. Heat the avocado oil in a large skillet over medium-high heat. Cook the chicken 5–6 minutes per side until golden and cooked through (165°F internal). Transfer to a cutting board, rest 5 minutes, then slice into bite-sized pieces."
 PASTA_006,3,"In a food processor, combine the basil, Parmesan, pine nuts, and garlic. Pulse until finely chopped. With the motor running, drizzle in the olive oil until smooth. Add the lemon juice, salt, and pepper and pulse briefly to combine."
 PASTA_006,4,"In a large bowl, toss the hot drained pasta with the pesto, adding splashes of reserved pasta water to loosen as needed."
 PASTA_006,5,Divide among 4 plates and top each with sliced chicken. Serve immediately.
@@ -2821,7 +2821,7 @@ PASTA_007,5,Remove from heat. Toss in the parsley and red pepper flakes. Season 
 PASTA_007,6,Divide among 4 plates and serve immediately.
 PASTA_007,7,Suggestions (not included): Add lemon zest (1 tbsp) for extra brightness. Top with extra Parmesan.
 PASTA_008,1,"Bring a large pot of water to a boil. Add 1 tsp of table salt per quart of water after it boils, then add the dry pasta. Cook 8 minutes (al dente). Reserve ½ cup pasta water, then drain and set aside."
-PASTA_008,2,Heat the olive oil in a large skillet over medium-high heat. Add the garlic and cook 30 seconds until fragrant.
+PASTA_008,2,Heat the avocado oil in a large skillet over medium-high heat. Add the garlic and cook 30 seconds until fragrant.
 PASTA_008,3,"Add the broccoli, asparagus, and bell pepper. Sauté 3–4 minutes until beginning to soften."
 PASTA_008,4,Add the zucchini and cook 2 minutes more. Stir in the peas and cherry tomatoes. Cook 1 minute.
 PASTA_008,5,"Pour in the white wine and cook until mostly evaporated, about 2 minutes."
