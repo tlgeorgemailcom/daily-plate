@@ -1170,14 +1170,14 @@ ENTR_054,10,peas_green_frozen,1 cup,80.0,,,potatoes_peas_spices,,False,frozen pe
 ENTR_054,11,thyme_dried,1 tsp,1.4,,,potatoes_peas_spices,,False,,,,
 ENTR_054,12,salt_table,1 tsp,6.0,,,potatoes_peas_spices,,False,,,,
 ENTR_054,13,black_pepper_ground,1/2 tsp,1.15,,,potatoes_peas_spices,,False,,,,
-ENTR_055,1,olive_oil,3 tbsp,40.8,,,marinade,,False,,,,
-ENTR_055,2,lemon_juice_raw,2 tbsp,30.0,,,marinade,,False,,,,
-ENTR_055,3,garlic_raw,"3 cloves garlic, minced",9.0,,,marinade,,False,,,,
-ENTR_055,4,oregano_dried_ground,1 tsp,1.8,,,marinade,,False,,,,
-ENTR_055,5,paprika,1 tsp,2.3,,,marinade,,False,,,,
-ENTR_055,6,cumin_ground,1/2 tsp ground cumin,1.0,,,marinade,,False,,,,
-ENTR_055,7,salt_table,1/2 tsp,3.0,,,marinade,,False,,,,
-ENTR_055,8,black_pepper_ground,1/2 tsp,1.15,,,marinade,,False,,,,
+ENTR_055,1,olive_oil,3 tbsp,40.8,,,marinade,,False,,,true,100
+ENTR_055,2,lemon_juice_raw,2 tbsp,30.0,,,marinade,,False,,,true,100
+ENTR_055,3,garlic_raw,"3 cloves garlic, minced",9.0,,,marinade,,False,,,true,100
+ENTR_055,4,oregano_dried_ground,1 tsp,1.8,,,marinade,,False,,,true,100
+ENTR_055,5,paprika,1 tsp,2.3,,,marinade,,False,,,true,100
+ENTR_055,6,cumin_ground,1/2 tsp ground cumin,1.0,,,marinade,,False,,,true,100
+ENTR_055,7,salt_table,1/2 tsp,3.0,,,marinade,,False,,,true,100
+ENTR_055,8,black_pepper_ground,1/2 tsp,1.15,,,marinade,,False,,,true,100
 ENTR_055,9,chicken_breast_raw,1.5 lb,680.4,,,kabobs,,False,chicken breast (boneless/skinless),,,
 ENTR_055,10,zucchini_raw,"1 large zucchini, cut into 1-1/2-inch pieces",196.0,,,kabobs,,False,,,,
 ENTR_055,11,bell_pepper_red_raw,"1 medium red bell pepper, cut into 1-1/2-inch pieces",119.0,,,kabobs,,False,,,,
