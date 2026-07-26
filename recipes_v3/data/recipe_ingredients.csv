@@ -434,14 +434,14 @@ ENTR_003,3,sugar_granulated,1 tsp,4.2,,,sauce,,false,,,,
 ENTR_003,4,cornstarch,1 tbsp,8.0,,,sauce,,false,,,,
 ENTR_003,5,water,1 tbsp,14.8,,,sauce,,false,,,,
 ENTR_003,6,beef_flank_steak_raw,3/4 lb beef flank steak (sliced into bite-sized strips),340.2,,,beef,,false,,,,
-ENTR_003,7,olive_oil,3 tbsp,40.5,,,beef,,false,,,,
+ENTR_003,7,avocado_oil,3 tbsp,42.0,,,beef,,false,,,,
 ENTR_003,8,broccoli_raw,5 cups chopped,455.0,,,broccoli_garlic,,false,,,,
-ENTR_003,9,olive_oil,2 1/2 tbsp,33.75,,,broccoli_garlic,,false,,,,
+ENTR_003,9,avocado_oil,2 1/2 tbsp,35.0,,,broccoli_garlic,,false,,,,
 ENTR_003,10,garlic_raw,2 cloves garlic (minced),6.0,,,broccoli_garlic,,false,,,,
 ENTR_004,1,pasta_dry_unenriched,8 oz,226.8,,,pasta,,false,,,,
 ENTR_004,2,water,enough to boil,1800.0,,,pasta,,false,,,,
 ENTR_004,3,beef_ground_80lean_raw,1 lb,454.0,,,beef,,false,,,,
-ENTR_004,4,olive_oil,2 tbsp,27.0,,,beef,,false,,,,
+ENTR_004,4,avocado_oil,2 tbsp,28.0,,,beef,,false,,,,
 ENTR_004,5,onion_raw,1 medium onion (finely diced),110.0,,,vegetables,,false,,,,
 ENTR_004,6,carrot_raw,1 cup carrot (finely diced),128.0,,,vegetables,,false,,,,
 ENTR_004,7,celery_raw,1 cup celery (finely diced),101.0,,,vegetables,,false,celery,,,
@@ -464,7 +464,7 @@ ENTR_005,3,salt_table,1 tsp salt,6.0,,,beef,,false,,,,
 ENTR_005,4,black_pepper_ground,1/2 tsp,1.15,,,beef,,false,,,,
 ENTR_005,5,onion_raw,2 medium onions (diced),220.0,,,vegetables,,false,,,,
 ENTR_005,6,carrot_raw,2 medium carrots (sliced into 1-inch chunks),122.0,,,vegetables,,false,,,,
-ENTR_005,7,olive_oil,2 tbsp olive oil,27.0,,,vegetables,,false,,,,
+ENTR_005,7,avocado_oil,2 tbsp avocado oil,28.0,,,vegetables,,false,,,,
 ENTR_005,8,garlic_raw,4 cloves garlic (minced),12.0,,,garlic,,false,,,,
 ENTR_005,9,flour_ap_white_enriched_unbleached,3 tbsp,23.4,,,flour_tomato_paste,,false,,,,
 ENTR_005,10,tomato_paste,1 tbsp,16.0,,,flour_tomato_paste,,false,,,,
@@ -504,10 +504,10 @@ ENTR_007,12,thyme_dried,2 tsp,2.8,,,carbonnade,,false,,,,
 ENTR_007,13,bay_leaf_dried,2 whole bay leaves,1.2,,,carbonnade,,false,bay leaves,,,
 ENTR_007,14,beef_broth_canned,1 cup,245.0,,,carbonnade,,false,,,,
 ENTR_008,1,beef_flank_steak_raw,1 1/2 lbs beef flank steak,680.4,,,beef,,false,,,,
-ENTR_008,2,olive_oil,1 tsp olive oil (for skillet),4.5,,,beef,,false,,,,
+ENTR_008,2,avocado_oil,1 tsp avocado oil (for skillet),4.5,,,beef,,false,,,,
 ENTR_008,3,orange_juice_raw,1/4 cup orange juice,61.0,,,marinade,,false,,beef,true,97
 ENTR_008,4,lime_juice_raw,1/4 cup lime juice,61.6,,,marinade,,false,,beef,true,97
-ENTR_008,5,olive_oil,2 tbsp olive oil,27.0,,,marinade,,false,,beef,true,97
+ENTR_008,5,avocado_oil,2 tbsp avocado oil,28.0,,,marinade,,false,,beef,true,97
 ENTR_008,6,garlic_raw,4 cloves garlic (minced),12.0,,,marinade,,false,,beef,true,97
 ENTR_008,7,cumin_ground,2 tsp,4.2,,,marinade,,false,,beef,true,97
 ENTR_008,8,oregano_dried,2 tsp,2.0,,,marinade,,false,,beef,true,97
@@ -518,7 +518,7 @@ ENTR_008,12,black_pepper_ground,1/2 tsp,1.15,,,marinade,,false,,beef,true,97
 ENTR_009,1,beef_chuck_roast_raw,"1 1/2 lbs beef chuck roast, cut into 1 to 2-inch cubes",680.4,,,beef,,false,,,,
 ENTR_009,2,salt_table,1 tsp salt,6.0,,,beef,,false,,,,
 ENTR_009,3,black_pepper_ground,1/2 tsp,1.15,,,beef,,false,,,,
-ENTR_009,4,olive_oil,1 tbsp olive oil,13.6,,,beef,,false,,,,
+ENTR_009,4,avocado_oil,1 tbsp avocado oil,14.0,,,beef,,false,,,,
 ENTR_009,5,onion_raw,"1 1/2 medium onions, diced",220.0,,,vegetables,,false,,,,
 ENTR_009,6,bell_pepper_green_raw,"1 medium green bell pepper, diced",119.0,,,vegetables,,false,,,,
 ENTR_009,7,garlic_raw,4 cloves garlic (minced),12.0,,,garlic,,false,,,,
@@ -553,7 +553,7 @@ ENTR_010,21,cinnamon_ground,2 cinnamon sticks,5.2,,,brine,,false,cinnamon,briske
 ENTR_011,1,potato_white_raw,"2 lbs Yukon Gold potatoes, peeled and quartered",907.2,,,potatoes,,false,Yukon Gold potatoes,,,
 ENTR_011,2,salt_table,1 tsp salt,6.0,,,potatoes,,false,,,,
 ENTR_011,3,beef_ground_80lean_raw,1 lb ground beef (80% lean),453.6,,,brown_beef,,false,,,,
-ENTR_011,4,olive_oil,1 tbsp olive oil,13.6,,,brown_beef,,false,,,,
+ENTR_011,4,avocado_oil,1 tbsp avocado oil,14.0,,,brown_beef,,false,,,,
 ENTR_011,5,onion_raw,"1 medium onion, finely chopped",110.0,,,vegetables,,false,,,,
 ENTR_011,6,carrot_raw,"2 medium carrots, finely chopped",122.0,,,vegetables,,false,,,,
 ENTR_011,7,celery_raw,"2 stalks celery, finely chopped",80.0,,,vegetables,,false,celery,,,
@@ -568,7 +568,7 @@ ENTR_011,15,black_pepper_ground,1/2 tsp ground black pepper,1.15,,,add_spices,,f
 ENTR_012,1,beef_skirt_steak_raw,2 lbs beef skirt steak,907.2,,,beef,,false,,,,
 ENTR_012,2,salt_table,1/2 tsp salt,3.0,,,beef,,false,,,,
 ENTR_012,3,black_pepper_ground,1/4 tsp ground black pepper,0.575,,,beef,,false,,,,
-ENTR_012,4,olive_oil,1/4 cup olive oil,54.4,,,marinade,,false,,beef,true,97
+ENTR_012,4,avocado_oil,1/4 cup avocado oil,54.5,,,marinade,,false,,beef,true,97
 ENTR_012,5,lime_juice_raw,1/4 cup lime juice,61.0,,,marinade,,false,,beef,true,97
 ENTR_012,6,garlic_raw,"6 cloves garlic, minced",18.0,,,marinade,,false,,beef,true,97
 ENTR_012,7,cumin_ground,1 tsp ground cumin,2.1,,,marinade,,false,,beef,true,97
@@ -578,7 +578,7 @@ ENTR_012,10,black_pepper_ground,1/2 tsp ground black pepper,1.15,,,marinade,,fal
 ENTR_013,1,beef_chuck_roast_raw,"2 lbs beef chuck roast, cut into 1 1/2-inch cubes",907.2,,,beef,,false,,,,
 ENTR_013,2,salt_table,1/2 tsp salt,3.0,,,beef,,false,,,,
 ENTR_013,3,black_pepper_ground,1/4 tsp ground black pepper,0.575,,,beef,,false,,,,
-ENTR_013,4,olive_oil,2 tbsp olive oil,27.2,,,beef,,false,,,,
+ENTR_013,4,avocado_oil,2 tbsp avocado oil,28.0,,,beef,,false,,,,
 ENTR_013,5,onion_raw,"1 large onion, diced",150.0,,,onions,,false,,,,
 ENTR_013,6,garlic_raw,"4 cloves garlic, minced",12.0,,,garlic,,false,,,,
 ENTR_013,7,ginger_root_fresh,1 tbsp fresh ginger (grated),6.0,,,garlic,,false,ginger,,,
@@ -591,7 +591,7 @@ ENTR_013,13,cilantro_raw,"1/4 cup fresh cilantro, chopped",4.0,,,cilantro,,false
 ENTR_014,1,beef_flank_steak_raw,2 lbs beef flank steak,907.2,,,beef,,false,,,,
 ENTR_014,2,salt_table,1 tsp salt,6.0,,,beef,,false,,,,
 ENTR_014,3,black_pepper_ground,1/2 tsp ground black pepper,1.15,,,beef,,false,,,,
-ENTR_014,4,olive_oil,2 tbsp olive oil,27.2,,,beef,,false,,,,
+ENTR_014,4,avocado_oil,2 tbsp avocado oil,28.0,,,beef,,false,,,,
 ENTR_014,5,onion_raw,"1 large onion, thinly sliced",150.0,,,onions_peppers,,false,,,,
 ENTR_014,6,bell_pepper_green_raw,"1 medium green bell pepper, sliced lengthwise",119.0,,,onions_peppers,,false,,,,
 ENTR_014,7,bell_pepper_red_raw,"1 medium red bell pepper, sliced lengthwise",119.0,,,onions_peppers,,false,,,,
@@ -631,7 +631,7 @@ ENTR_016,8,@SAUCE_025,1 batch Red Enchilada Sauce (~3 cups) (recipe),706.7,,,ass
 ENTR_016,9,corn_tortilla,12 corn tortillas (6-inch),288.0,,,assembly,,False,,,,
 ENTR_016,10,cheese_mexican_blend,1 1/2 cups shredded Mexican blend cheese,169.5,,,assembly,,False,,,,
 ENTR_017,1,beef_chuck_roast_raw,"2 lbs beef chuck roast, cubed",907.2,,,brown_beef,,False,beef chuck roast,,,
-ENTR_017,2,olive_oil,2 tbsp olive oil,27.2,,,brown_beef,,False,,,,
+ENTR_017,2,avocado_oil,2 tbsp avocado oil,28.0,,,brown_beef,,False,,,,
 ENTR_017,3,salt_table,1 1/2 tsp salt,9.0,,,brown_beef,,False,,,,
 ENTR_017,4,black_pepper_ground,1/2 tsp ground black pepper,1.15,,,brown_beef,,False,,,,
 ENTR_017,5,onion_raw,"2 large onions, sliced",300.0,,,onions,,False,,,,
@@ -645,7 +645,7 @@ ENTR_017,12,beef_broth_canned,2 cups,490.0,,,stock_ref,,False,,,,
 ENTR_017,13,sour_cream,4 tbsp sour cream (for serving),48.0,,,finish,,False,,,,
 ENTR_018,1,beef_skirt_steak_raw,1 1/2 lbs beef skirt steak,680.4,,,sear_steak,,False,beef skirt steak,,,
 ENTR_018,2,onion_raw,"2 medium onions, sliced",200.0,,,onions,,False,,,,
-ENTR_018,3,olive_oil,2 tbsp olive oil,27.2,,,onions,,False,,,,
+ENTR_018,3,avocado_oil,2 tbsp avocado oil,28.0,,,onions,,False,,,,
 ENTR_018,4,bell_pepper_green_raw,"1 green bell pepper, sliced",119.0,,,bell_peppers_spices,,False,,,,
 ENTR_018,5,bell_pepper_red_raw,"2 red bell peppers, sliced",238.0,,,bell_peppers_spices,,False,,,,
 ENTR_018,6,cumin_ground,1 tsp ground cumin,2.0,,,bell_peppers_spices,,False,,,,
@@ -654,7 +654,7 @@ ENTR_018,8,black_pepper_ground,1/4 tsp ground black pepper,0.575,,,bell_peppers_
 ENTR_018,9,salt_table,3/4 tsp salt,4.5,,,bell_peppers_spices,,False,,,,
 ENTR_018,10,tortilla_flour_refrigerated,8 flour tortillas (6-inch),360.0,,,tortillas,,False,flour tortillas,,,
 ENTR_018,11,lime_juice_raw,1/4 cup lime juice,60.0,,,marinade,,False,,,true,100
-ENTR_018,12,olive_oil,2 tbsp olive oil,27.2,,,marinade,,False,,,true,100
+ENTR_018,12,avocado_oil,2 tbsp avocado oil,28.0,,,marinade,,False,,,true,100
 ENTR_018,13,garlic_raw,"3 cloves garlic, minced",9.0,,,marinade,,False,,,true,100
 ENTR_018,14,cumin_ground,1 tsp ground cumin,2.0,,,marinade,,False,,,true,100
 ENTR_018,15,chili_powder,1 tsp chili powder,2.7,,,marinade,,False,,,true,100
@@ -679,7 +679,7 @@ ENTR_019,17,black_pepper_ground,1/4 tsp ground black pepper,0.575,,,gravy,,False
 ENTR_020,1,beef_flank_steak_raw,2 lbs beef flank steak,907.2,,,steak,,false,beef flank steak,,,
 ENTR_020,2,salt_table,3/4 tsp salt,4.5,,,steak,,false,,,,
 ENTR_020,3,soy_sauce,1/4 cup soy sauce,64.0,,,marinade,,false,,,true,100
-ENTR_020,4,olive_oil,3 tbsp olive oil,40.8,,,marinade,,false,,,true,100
+ENTR_020,4,avocado_oil,3 tbsp avocado oil,42.0,,,marinade,,false,,,true,100
 ENTR_020,5,lime_juice_raw,3 tbsp lime juice,45.0,,,marinade,,false,,,true,100
 ENTR_020,6,garlic_raw,"4 cloves garlic, minced",12.0,,,marinade,,false,,,true,100
 ENTR_020,7,cumin_ground,2 tsp ground cumin,4.0,,,marinade,,false,,,true,100
@@ -698,8 +698,8 @@ ENTR_021,10,oregano_dried_ground,1 tsp dried oregano,1.8,,,meatballs,,False,,,,
 ENTR_021,11,basil_dried,1 tsp dried basil,0.7,,,meatballs,,False,,,,
 ENTR_021,12,salt_table,1 tsp salt,6.0,,,meatballs,,False,,,,
 ENTR_021,13,black_pepper_ground,1/2 tsp ground black pepper,1.15,,,meatballs,,False,,,,
-ENTR_021,14,olive_oil,1 tbsp olive oil (for browning),13.6,,,meatballs,,False,,,,
-ENTR_021,15,olive_oil,2 tbsp,27.2,,,onion,,False,,,,
+ENTR_021,14,avocado_oil,1 tbsp avocado oil (for browning),14.0,,,meatballs,,False,,,,
+ENTR_021,15,avocado_oil,2 tbsp,28.0,,,onion,,False,,,,
 ENTR_021,16,onion_raw,"1 small onion, finely diced",80.0,,,onion,,False,,,,
 ENTR_021,17,garlic_raw,"4 cloves garlic, minced",12.0,,,garlic_pepper_flakes,,False,,,,
 ENTR_021,18,red_pepper_flakes,¼ tsp,0.575,,,garlic_pepper_flakes,,False,,,,
@@ -711,7 +711,7 @@ ENTR_021,23,basil_fresh,"¼ cup fresh basil, torn",12.0,,,basil,,False,,,,
 ENTR_022,1,pasta_dry_unenriched,12 lasagna noodles (about 9.5 oz dry),270.0,,,pasta,,False,,,,
 ENTR_022,2,water,water for boiling,1500.0,,,pasta,,False,,,,
 ENTR_022,3,beef_ground_80lean_raw,1.5 lbs ground beef (80/20),680.4,,,brown_beef,,False,ground beef (80/20),,,
-ENTR_022,4,olive_oil,1 tbsp olive oil,13.6,,,brown_beef,,False,,,,
+ENTR_022,4,avocado_oil,1 tbsp avocado oil,14.0,,,brown_beef,,False,,,,
 ENTR_022,5,onion_raw,"1 cup onion, diced",160.0,,,onion_garlic,,False,,,,
 ENTR_022,6,garlic_raw,"4 cloves garlic, minced",12.0,,,onion_garlic,,False,,,,
 ENTR_022,7,tomatoes_canned_crushed,3 cups (28 oz can),720.0,,,tomatoes_spices,,False,,,,
@@ -731,7 +731,7 @@ ENTR_023,1,egg_noodles_dry,9.5 oz dry egg noodles,270.0,,,noodles,,False,,,,
 ENTR_023,2,water,water for boiling,1000.0,,,noodles,,False,,,,
 ENTR_023,3,beef_flank_steak_raw,"1 lb beef flank steak, thinly sliced",453.6,,,beef,,False,"beef flank steak, thinly sliced",,,
 ENTR_023,4,cornstarch,1 tbsp cornstarch,8.0,,,beef,,False,,,,
-ENTR_023,5,olive_oil,2 tbsp olive oil,27.2,,,beef,,False,,,,
+ENTR_023,5,avocado_oil,2 tbsp avocado oil,28.0,,,beef,,False,,,,
 ENTR_023,6,garlic_raw,"4 cloves garlic, minced",12.0,,,garlic_ginger,,False,,,,
 ENTR_023,7,ginger_root_fresh,"2 tbsp fresh ginger, grated",12.0,,,garlic_ginger,,False,,,,
 ENTR_023,8,mushroom_crimini_raw,"3 oz crimini mushrooms, sliced",85.0,,,mushrooms_carrots,,False,,,,
@@ -746,7 +746,7 @@ ENTR_023,16,sesame_oil,2 tsp sesame oil,9.0,,,scallions,,False,,,,
 ENTR_024,1,beef_top_round_raw,2 lbs beef top round,907.2,,,grill,,false,beef top round,,,
 ENTR_024,2,salt_table,1 tsp salt,6.0,,,grill,,false,,,,
 ENTR_024,3,soy_sauce,1/4 cup soy sauce,64.0,,,marinade,,false,,,true,100
-ENTR_024,4,olive_oil,3 tbsp olive oil,40.8,,,marinade,,false,,,true,100
+ENTR_024,4,avocado_oil,3 tbsp avocado oil,42.0,,,marinade,,false,,,true,100
 ENTR_024,5,vinegar_red_wine,2 tbsp red wine vinegar,30.0,,,marinade,,false,,,true,100
 ENTR_024,6,worcestershire_sauce,2 tbsp Worcestershire sauce,30.0,,,marinade,,false,,,true,100
 ENTR_024,7,garlic_raw,"4 cloves garlic, minced",12.0,,,marinade,,false,,,true,100
@@ -760,7 +760,7 @@ ENTR_025,4,bell_pepper_red_raw,"1 red bell pepper, cut in chunks",119.0,,,kabobs
 ENTR_025,5,onion_raw,"1 medium onion, cut in wedges",160.0,,,kabobs,,false,,,,
 ENTR_025,6,mushroom_crimini_raw,"8 oz crimini mushrooms, halved",227.0,,,kabobs,,false,,,,
 ENTR_025,7,salt_table,1/2 tsp salt,3.0,,,kabobs,,false,,,,
-ENTR_025,8,olive_oil,3 tbsp olive oil,40.8,,,marinade,,false,,,true,100
+ENTR_025,8,avocado_oil,3 tbsp avocado oil,42.0,,,marinade,,false,,,true,100
 ENTR_025,9,lemon_juice_raw,2 tbsp lemon juice,30.0,,,marinade,,false,,,true,100
 ENTR_025,10,garlic_raw,"3 cloves garlic, minced",9.0,,,marinade,,false,,,true,100
 ENTR_025,11,oregano_dried_ground,1 tsp dried oregano,1.8,,,marinade,,false,,,true,100
@@ -812,7 +812,7 @@ ENTR_029,1,beef_shank_raw,4 beef shank crosscuts,806.0,,,grill_shanks,,false,bee
 ENTR_029,2,salt_table,1-1/2 tsp salt,9.0,,,grill_shanks,,false,,,,
 ENTR_029,3,black_pepper_ground,1/4 tsp ground black pepper,0.575,,,grill_shanks,,false,,,,
 ENTR_029,4,flour_ap_white_enriched_unbleached,1/4 cup,31.25,,,grill_shanks,,false,,,,
-ENTR_029,5,olive_oil,3 tbsp,40.5,,,grill_shanks,,false,,,,
+ENTR_029,5,avocado_oil,3 tbsp,42.0,,,grill_shanks,,false,,,,
 ENTR_029,6,onion_raw,"1 large onion, finely diced",160.0,,,vegetables,,false,,,,
 ENTR_029,7,carrot_raw,"2 medium carrots, diced",122.0,,,vegetables,,false,,,,
 ENTR_029,8,celery_raw,"3 stalks celery, finely diced",120.0,,,vegetables,,false,celery,,,
@@ -829,9 +829,9 @@ ENTR_030,1,beef_flank_steak_raw,1-1/4 lb,567.0,,,brown_beef,,false,flank steak,,
 ENTR_030,2,soy_sauce,2 tbsp soy sauce,32.0,,,brown_beef,,false,,,,
 ENTR_030,3,cornstarch,2 tbsp cornstarch,16.0,,,brown_beef,,false,,,,
 ENTR_030,4,black_pepper_ground,1 tsp ground black pepper,2.3,,,brown_beef,,false,,,,
-ENTR_030,5,olive_oil,1 tbsp,13.6,,,brown_beef,,false,,,,
+ENTR_030,5,avocado_oil,1 tbsp,14.0,,,brown_beef,,false,,,,
 ENTR_030,6,onion_raw,"1 large onion, cut into 1-inch squares",160.0,,,onions,,false,,,,
-ENTR_030,7,olive_oil,1 tbsp,13.6,,,onions,,false,,,,
+ENTR_030,7,avocado_oil,1 tbsp,14.0,,,onions,,false,,,,
 ENTR_030,8,bell_pepper_green_raw,"1 large green bell pepper, cut into 1-inch squares",149.0,,,bell_peppers,,false,,,,
 ENTR_030,9,bell_pepper_red_raw,"1 medium red bell pepper, cut into 1-inch squares",119.0,,,bell_peppers,,false,,,,
 ENTR_030,10,garlic_raw,"3 cloves garlic, minced",9.0,,,garlic_ginger,,false,,,,
@@ -842,7 +842,7 @@ ENTR_030,14,cornstarch,1 tbsp cornstarch,8.0,,,sauce,,false,,,,
 ENTR_030,15,black_pepper_ground,1/2 tsp ground black pepper,1.15,,,sauce,,false,,,,
 ENTR_030,16,sesame_oil,1 tsp,4.5,,,sesame_oil,,false,,,,
 ENTR_031,1,beef_ground_80lean_raw,1-1/2 lb,680.4,,,brown_beef,,false,ground beef (80/20),,,
-ENTR_031,2,olive_oil,1 tbsp,13.6,,,brown_beef,,false,,,,
+ENTR_031,2,avocado_oil,1 tbsp,14.0,,,brown_beef,,false,,,,
 ENTR_031,3,onion_raw,"1 large onion, diced",160.0,,,onion_peppers,,false,,,,
 ENTR_031,4,bell_pepper_green_raw,"1 large green bell pepper, diced",149.0,,,onion_peppers,,false,,,,
 ENTR_031,5,garlic_raw,"4 cloves garlic, minced",12.0,,,garlic,,false,,,,
@@ -874,7 +874,7 @@ ENTR_032,15,black_pepper_ground,1/4 tsp ground black pepper,0.575,,,potatoes_pea
 ENTR_033,1,beef_chuck_roast_raw,"2 lb beef chuck roast, whole",907.2,,,brown_roast,,false,beef chuck roast,,,
 ENTR_033,2,salt_table,1-1/2 tsp,9.0,,,brown_roast,,false,,,,
 ENTR_033,3,black_pepper_ground,1 tsp,2.3,,,brown_roast,,false,,,,
-ENTR_033,4,olive_oil,2 tbsp,27.2,,,brown_roast,,false,,,,
+ENTR_033,4,avocado_oil,2 tbsp,28.0,,,brown_roast,,false,,,,
 ENTR_033,5,onion_raw,"1 large onion, quartered",160.0,,,onion,,false,,,,
 ENTR_033,6,garlic_raw,"4 cloves garlic, minced",12.0,,,garlic_tomato_paste,,false,,,,
 ENTR_033,7,tomato_paste,2 tbsp,32.0,,,garlic_tomato_paste,,false,,,,
@@ -889,7 +889,7 @@ ENTR_033,15,carrot_raw,"4 medium carrots, cut into 2-inch pieces",244.0,,,assemb
 ENTR_034,1,beef_chuck_roast_raw,"1-1/2 lb beef chuck roast, cut into 4 pieces",680.4,,,brown_beef,,false,beef chuck roast,,,
 ENTR_034,2,salt_table,1-1/2 tsp,9.0,,,brown_beef,,false,,,,
 ENTR_034,3,black_pepper_ground,1 tsp,2.3,,,brown_beef,,false,,,,
-ENTR_034,4,olive_oil,2 tbsp,27.2,,,brown_beef,,false,,,,
+ENTR_034,4,avocado_oil,2 tbsp,28.0,,,brown_beef,,false,,,,
 ENTR_034,5,onion_raw,"1 medium onion, diced",110.0,,,vegetables,,false,,,,
 ENTR_034,6,celery_raw,"2 stalks celery, diced",80.0,,,vegetables,,false,celery,,,
 ENTR_034,7,carrot_raw,"2 medium carrots, diced",122.0,,,vegetables,,false,,,,
@@ -931,7 +931,7 @@ ENTR_036,18,black_pepper_ground,1/4 tsp,0.575,,,gravy,,false,,,,
 ENTR_037,1,beef_short_ribs_boneless_raw,2 lb,907.2,,,brown_ribs,,false,,,,
 ENTR_037,2,salt_table,1-1/2 tsp,9.0,,,brown_ribs,,false,,,,
 ENTR_037,3,black_pepper_ground,1 tsp,2.3,,,brown_ribs,,false,,,,
-ENTR_037,4,olive_oil,2 tbsp,27.2,,,brown_ribs,,false,,,,
+ENTR_037,4,avocado_oil,2 tbsp,28.0,,,brown_ribs,,false,,,,
 ENTR_037,5,onion_raw,"1 large onion, diced",200.0,,,vegetables,,false,,,,
 ENTR_037,6,carrot_raw,"2 medium carrots, sliced",122.0,,,vegetables,,false,,,,
 ENTR_037,7,celery_raw,"2 stalks celery, sliced",80.0,,,vegetables,,false,celery,,,
@@ -943,7 +943,7 @@ ENTR_037,12,thyme_dried,1 tsp,1.4,,,assembly,,false,,,,
 ENTR_037,13,rosemary_fresh,"1 sprig fresh rosemary, whole",3.4,,,assembly,,false,,,,
 ENTR_037,14,bay_leaf_dried,2 bay leaves,1.2,,,assembly,,false,bay leaves,,,
 ENTR_038,1,beef_skirt_steak_raw,1-1/2 lb,680.4,,,grill_steak,,false,,,,
-ENTR_038,2,olive_oil,3 tbsp,40.8,,,marinade,,false,,,true,100
+ENTR_038,2,avocado_oil,3 tbsp,42.0,,,marinade,,false,,,true,100
 ENTR_038,3,lime_juice_raw,3 tbsp,45.0,,,marinade,,false,,,true,100
 ENTR_038,4,soy_sauce,2 tbsp,32.0,,,marinade,,false,,,true,100
 ENTR_038,5,garlic_raw,"4 cloves garlic, minced",12.0,,,marinade,,false,,,true,100
@@ -966,7 +966,7 @@ ENTR_039,12,sour_cream,1 cup,230.0,,,sour_cream,,false,,,,
 ENTR_039,13,salt_table,1/2 tsp,3.0,,,sour_cream,,false,,,,
 ENTR_039,14,black_pepper_ground,1/4 tsp,0.575,,,sour_cream,,false,,,,
 ENTR_040,1,beef_tenderloin_raw,2 lb,907.2,,,grill_roast,,false,,,,
-ENTR_040,2,olive_oil,2 tbsp,27.2,,,grill_roast,,false,,,,
+ENTR_040,2,avocado_oil,2 tbsp,28.0,,,grill_roast,,false,,,,
 ENTR_040,3,salt_table,1-1/2 tsp,9.0,,,grill_roast,,false,,,,
 ENTR_040,4,black_pepper_ground,1 tsp,2.3,,,grill_roast,,false,,,,
 ENTR_040,5,butter_unsalted,2 tbsp,28.4,,,butter_spices,,false,,,,
@@ -5395,11 +5395,11 @@ SOUP_005,8,white_pepper_ground,¼ tsp,0.575,,,stock,,,,,,
 SOUP_005,9,egg_whole_raw,3 large eggs,150.0,,,eggs,,,,,,
 ENTR_002,1,rice_noodles_dry,3 oz,85.05,,,noodles,,false,,,,
 ENTR_002,2,beef_top_sirloin_raw,3/4 lb,340.2,,,beef,,false,,,,
-ENTR_002,3,olive_oil,1 tbsp,13.6,,,beef,,false,,,,
+ENTR_002,3,avocado_oil,1 tbsp,14.0,,,beef,,false,,,,
 ENTR_002,4,salt_table,1/4 tsp,1.5,,,beef,,false,,,,
 ENTR_002,5,onion_raw,1 medium onion (sliced into strips),110.0,,,onion_carrots,,false,,,,
 ENTR_002,6,carrot_raw,1 cup carrot (cut into strips),128.0,,,onion_carrots,,false,,,,
-ENTR_002,7,olive_oil,1 tbsp,13.6,,,onion_carrots,,false,,,,
+ENTR_002,7,avocado_oil,1 tbsp,14.0,,,onion_carrots,,false,,,,
 ENTR_002,8,broccoli_raw,1 1/2 cups chopped,136.5,,,broccoli,,false,,,,
 ENTR_002,9,garlic_raw,6 cloves garlic (chopped),18.0,,,garlic_ginger,,false,,,,
 ENTR_002,10,ginger_root_fresh,2 tbsp fresh ginger (chopped),12.0,,,garlic_ginger,,false,,,,
