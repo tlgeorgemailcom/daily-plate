@@ -935,7 +935,24 @@ Examples to use as validation cases when designing this:
 - `ENTR_075` Lamb Tagine: covered braise 30 min, then add chickpeas and dried apricots and continue covered braise 20-30 min. Do not convert this recipe yet; it is a parked architecture case.
 - `ENTR_076` Lamb Moussaka: staged bake where an assembled covered phase and later uncovered/browning phase both belong to the primary cook timeline.
 - `ENTR_081` Lamb Biryani: staged covered rice/lamb cook where primary cook phases and section participation need explicit timeline support.
-- Beef Lasagna: bake covered, then bake uncovered. The covered/uncovered distinction changes evaporation and must be visible to community users.
+- Beef Lasagna: best concrete UI/spec test case. Bake covered, then bake uncovered. The covered/uncovered distinction changes evaporation and must be visible to community users.
+
+Expected authoring format for the Beef Lasagna validation case:
+
+```text
+Beef Lasagna
+
+Top bar 1: Bake (covered) | 375 | 30 min
+Top bar 2: Bake (uncovered) | 375 | 17 min
+
+Prep: Pasta | boiled | 8 min | ingredients: lasagna noodles, water
+Prep: Brown Beef | pan seared | 11 min | ingredients: ground beef, olive oil
+Prep: Onion & Garlic | pan seared | 3 min | ingredients: onion, garlic
+Prep: Tomatoes & Spices | simmer (lid off) | 17 min | ingredients: crushed tomatoes, tomato puree, oregano, basil, salt, black pepper
+Prep: Cheese Filling | unheated | ingredients: ricotta, mozzarella, Parmesan, egg, parsley, salt, black pepper
+```
+
+In the edit form this should render as a **Primary Cook Timeline** with `Assembled / Primary` and `Assembled / Primary 2`. Normal prep stages feed the initial assembly before Primary 1. A later primary stage may expose `Add prep before this stage` for rare ingredient additions between primary cook phases.
 
 Future model should be a **Primary Cook Timeline** rather than duplicate independent top bars. Each phase needs method, covered/uncovered state, time, optional temp, display label, and section/ingredient participation so both UI rendering and moisture physics can follow the same staged cook plan.
 
