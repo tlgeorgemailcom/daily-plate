@@ -954,6 +954,23 @@ Prep: Cheese Filling | unheated | ingredients: ricotta, mozzarella, Parmesan, eg
 
 In the edit form this should render as a **Primary Cook Timeline** with `Assembled / Primary` and `Assembled / Primary 2`. Normal prep stages feed the initial assembly before Primary 1. A later primary stage may expose `Add prep before this stage` for rare ingredient additions between primary cook phases.
 
+Expected authoring format for the Lamb Tagine validation case, where additional ingredients are added before the second primary cook:
+
+```text
+Lamb Tagine
+
+Top bar 1: Braise (covered) | 30 min
+Top bar 2: Braise (covered) | 25 min
+Prep before Top bar 2: Additional Ingredients | unheated | ingredients: chickpeas, apricots, honey, lemon juice
+
+Prep: Brown Lamb | pan seared | 4 min | ingredients: lamb, salt, cayenne pepper
+Prep: Onion | sauteed | 9 min | ingredients: onion
+Prep: Seasoning | sauteed | 1 min | ingredients: garlic, ginger, paprika, cumin, coriander, cinnamon, turmeric, cayenne
+Prep: Tomatoes | simmer (uncovered) | 2 min | ingredients: crushed tomatoes
+```
+
+In the edit form, the `Additional Ingredients` prep stage belongs inside the `Assembled / Primary 2` timeline card as `Add prep before this stage`. Those ingredients are excluded from Primary 1 and included in Primary 2.
+
 Future model should be a **Primary Cook Timeline** rather than duplicate independent top bars. Each phase needs method, covered/uncovered state, time, optional temp, display label, and section/ingredient participation so both UI rendering and moisture physics can follow the same staged cook plan.
 
 ---
