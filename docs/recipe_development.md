@@ -933,6 +933,8 @@ Current top-bar authoring supports one primary assembled cook. Some recipes need
 
 Examples to use as validation cases when designing this:
 - `ENTR_075` Lamb Tagine: covered braise 30 min, then add chickpeas and dried apricots and continue covered braise 20-30 min. Do not convert this recipe yet; it is a parked architecture case.
+- `ENTR_076` Lamb Moussaka: staged bake where an assembled covered phase and later uncovered/browning phase both belong to the primary cook timeline.
+- `ENTR_081` Lamb Biryani: staged covered rice/lamb cook where primary cook phases and section participation need explicit timeline support.
 - Beef Lasagna: bake covered, then bake uncovered. The covered/uncovered distinction changes evaporation and must be visible to community users.
 
 Future model should be a **Primary Cook Timeline** rather than duplicate independent top bars. Each phase needs method, covered/uncovered state, time, optional temp, display label, and section/ingredient participation so both UI rendering and moisture physics can follow the same staged cook plan.
