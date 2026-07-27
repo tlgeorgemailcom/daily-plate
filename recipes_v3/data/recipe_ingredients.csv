@@ -1430,13 +1430,13 @@ ENTR_071,9,allspice_ground,1/8 tsp,0.475,,,lamb_skewers,,False,,,,
 ENTR_071,10,cayenne_pepper,1/4 tsp,0.45,,,lamb_skewers,,False,,,,
 ENTR_071,11,salt_table,1 1/2 tsp,9.0,,,lamb_skewers,,False,,,,
 ENTR_071,12,black_pepper_ground,1/4 tsp,0.575,,,lamb_skewers,,False,,,,
-ENTR_072,1,lamb_cubed_kabob_raw,2 lb,907.2,,,souvlaki,,False,,,,
-ENTR_072,2,olive_oil,1/4 cup extra-virgin olive oil,54.0,,,souvlaki,,False,,,,
-ENTR_072,3,lemon_juice_raw,3 tbsp,45.0,,,souvlaki,,False,,,,
-ENTR_072,4,garlic_raw,"4 cloves garlic, minced",12.0,,,souvlaki,,False,,,,
-ENTR_072,5,oregano_dried,2 tsp,3.6,,,souvlaki,,False,,,,
-ENTR_072,6,salt_table,1 tsp,6.0,,,souvlaki,,False,,,,
-ENTR_072,7,black_pepper_ground,1/2 tsp,1.15,,,souvlaki,,False,,,,
+ENTR_072,1,olive_oil,1/4 cup extra-virgin olive oil,54.0,,,marinade,,False,,,true,100
+ENTR_072,2,lemon_juice_raw,3 tbsp,45.0,,,marinade,,False,,,true,100
+ENTR_072,3,garlic_raw,"4 cloves garlic, minced",12.0,,,marinade,,False,,,true,100
+ENTR_072,4,oregano_dried,2 tsp,3.6,,,marinade,,False,,,true,100
+ENTR_072,5,salt_table,1 tsp,6.0,,,marinade,,False,,,true,100
+ENTR_072,6,black_pepper_ground,1/2 tsp,1.15,,,marinade,,False,,,true,100
+ENTR_072,7,lamb_cubed_kabob_raw,2 lb,907.2,,,lamb_skewers,,False,,,,
 ENTR_073,1,avocado_oil,1 tbsp,14.0,,,filling,,False,,,,
 ENTR_073,2,lamb_ground_raw,1.5 lb,680.4,,,filling,,False,,,,
 ENTR_073,3,onion_raw,"1 medium onion, finely diced",150.0,,,filling,,False,,,,
