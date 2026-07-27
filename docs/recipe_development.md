@@ -927,6 +927,18 @@ Reclassifying to `sauteed` also changes evaporation temp (200°F vs 230°F), so 
 
 ---
 
+### Staged primary cook timeline
+
+Current top-bar authoring supports one primary assembled cook. Some recipes need an ordered visible cook timeline instead of a single top-bar method because the later phase is still part of the primary cook, not a finish or section-only prep.
+
+Examples to use as validation cases when designing this:
+- `ENTR_075` Lamb Tagine: covered braise 30 min, then add chickpeas and dried apricots and continue covered braise 20-30 min. Do not convert this recipe yet; it is a parked architecture case.
+- Beef Lasagna: bake covered, then bake uncovered. The covered/uncovered distinction changes evaporation and must be visible to community users.
+
+Future model should be a **Primary Cook Timeline** rather than duplicate independent top bars. Each phase needs method, covered/uncovered state, time, optional temp, display label, and section/ingredient participation so both UI rendering and moisture physics can follow the same staged cook plan.
+
+---
+
 ### `sauteed` reclassification candidates
 
 Sections currently stored as `pan seared` that should be reclassified to `sauteed` based on instruction analysis. Most involve aromatic softening (onion, garlic, peppers, mushrooms, carrots, celery) cooked at **medium heat** — not protein searing. Larger sautéed vegetable pieces need a separate calibrated fill class before being treated as water-loss equivalents.

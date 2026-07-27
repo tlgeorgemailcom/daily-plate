@@ -1406,18 +1406,18 @@ ENTR_069,12,oregano_dried,1/2 tsp,0.7,,,parmesan_spices,,False,,,,
 ENTR_069,13,thyme_dried,1/4 tsp,0.35,,,parmesan_spices,,False,,,,
 ENTR_069,14,red_pepper_flakes,1/4 tsp,0.575,,,parmesan_spices,,False,,,,
 ENTR_069,15,basil_fresh,"1/4 cup fresh basil, chopped",10.0,,,garnish,,False,,,,
-ENTR_070,1,lamb_cubed_kabob_raw,2 lb,907.2,,,kabob,,False,,,,
-ENTR_070,2,olive_oil,3 tbsp extra-virgin olive oil,40.5,,,kabob,,False,,,,
-ENTR_070,3,lemon_juice_raw,2 tbsp,30.0,,,kabob,,False,,,,
-ENTR_070,4,garlic_raw,"4 cloves garlic, minced",12.0,,,kabob,,False,,,,
-ENTR_070,5,cumin_ground,1 tsp ground cumin,2.0,,,kabob,,False,,,,
-ENTR_070,6,coriander_seed,1 tsp,1.8,,,kabob,,False,,,,
-ENTR_070,7,paprika,1 tsp,2.3,,,kabob,,False,,,,
-ENTR_070,8,turmeric_ground,1/2 tsp,1.5,,,kabob,,False,,,,
-ENTR_070,9,cinnamon_ground,1/4 tsp,0.65,,,kabob,,False,,,,
-ENTR_070,10,cayenne_pepper,1/4 tsp,0.45,,,kabob,,False,,,,
-ENTR_070,11,salt_table,1 tsp,6.0,,,kabob,,False,,,,
-ENTR_070,12,black_pepper_ground,1/4 tsp,0.575,,,kabob,,False,,,,
+ENTR_070,1,olive_oil,3 tbsp extra-virgin olive oil,40.5,,,marinade,,False,,,true,100
+ENTR_070,2,lemon_juice_raw,2 tbsp,30.0,,,marinade,,False,,,true,100
+ENTR_070,3,garlic_raw,"4 cloves garlic, minced",12.0,,,marinade,,False,,,true,100
+ENTR_070,4,cumin_ground,1 tsp ground cumin,2.0,,,marinade,,False,,,true,100
+ENTR_070,5,coriander_seed,1 tsp,1.8,,,marinade,,False,,,true,100
+ENTR_070,6,paprika,1 tsp,2.3,,,marinade,,False,,,true,100
+ENTR_070,7,turmeric_ground,1/2 tsp,1.5,,,marinade,,False,,,true,100
+ENTR_070,8,cinnamon_ground,1/4 tsp,0.65,,,marinade,,False,,,true,100
+ENTR_070,9,cayenne_pepper,1/4 tsp,0.45,,,marinade,,False,,,true,100
+ENTR_070,10,salt_table,1 tsp,6.0,,,marinade,,False,,,true,100
+ENTR_070,11,black_pepper_ground,1/4 tsp,0.575,,,marinade,,False,,,true,100
+ENTR_070,12,lamb_cubed_kabob_raw,2 lb,907.2,,,lamb_skewers,,False,,,,
 ENTR_071,1,lamb_ground_raw,2 lb,907.2,,,kofta,,False,,,,
 ENTR_071,2,onion_raw,"1 medium onion, grated",110.0,,,kofta,,False,,,,
 ENTR_071,3,garlic_raw,"3 cloves garlic, minced",9.0,,,kofta,,False,,,,
