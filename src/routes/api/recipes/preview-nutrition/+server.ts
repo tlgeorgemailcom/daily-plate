@@ -70,6 +70,7 @@ export const POST: RequestHandler = async ({ request }) => {
     dishCookMethod,
     dishCookTempF,
     dishCookMinutes,
+    fillClass,
   } = body as Record<string, unknown>;
 
   if (typeof linkType !== 'string' || !linkType) {
@@ -122,6 +123,9 @@ export const POST: RequestHandler = async ({ request }) => {
       servingsNum > 0 ? servingsNum : 1,
       gramsPerServing,
       typeof cookingMethod === 'string' ? cookingMethod : undefined,
+      undefined,
+      undefined,
+      typeof fillClass === 'string' ? fillClass : undefined,
     );
 
     // Map BuildResult → PreviewNutrition shape for the form
@@ -203,6 +207,7 @@ export const POST: RequestHandler = async ({ request }) => {
             : (typeof cookingMethod === 'string' ? cookingMethod : undefined),
           typeof dishCookTempF   === 'number' ? (dishCookTempF   as number) : undefined,
           typeof dishCookMinutes === 'number' ? (dishCookMinutes as number) : undefined,
+          typeof fillClass === 'string' ? fillClass : undefined,
         );
         const p100 = buildResult.per100g;
         // gramsPerServing was passed as a placeholder (100); compute from actual cooked weight.

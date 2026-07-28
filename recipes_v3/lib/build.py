@@ -448,6 +448,8 @@ def _build_recipe_multi(
         return []
 
     def _primary_fill_class(section: Section) -> str:
+        if recipe.fill_class:
+            return recipe.fill_class
         if section.filling_class:
             return section.filling_class
         if use_primary_cook_for_raw_sections and primary_method_norm == "baked":
@@ -996,6 +998,9 @@ def _build_recipe_multi(
         "cook3_method": recipe.cook3_method,
         "cook3_minutes": recipe.cook3_minutes,
         "cook3_temp_f": recipe.cook3_temp_f,
+        "fill_class": recipe.fill_class,
+        "cook2_fill_class": recipe.cook2_fill_class,
+        "cook3_fill_class": recipe.cook3_fill_class,
         "yield_factor_water": recipe.yield_factor_water,
         "yield_factor_fat": recipe.yield_factor_fat,
         "yield_factor_protein": recipe.yield_factor_protein,

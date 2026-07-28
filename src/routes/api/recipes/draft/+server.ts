@@ -11,6 +11,8 @@ async function calcCommunityNutrition(
   sectionsRaw: unknown[],
   servings: unknown,
   gramsPerServing: unknown,
+  dishCookMethod?: unknown,
+  fillClass?: unknown,
 ): Promise<{ nutritionJson: object | null; plausibilityFlags: string[]; blocked: boolean; missingIngredients: Array<{ ndbNo: string; displayName?: string }> }> {
   const sections = (sectionsRaw as unknown[]).filter(
     (s): s is CommunitySectionV3 =>
@@ -38,7 +40,17 @@ async function calcCommunityNutrition(
   const servingsNum        = Math.max(1, Number(servings ?? 1));
   const gramsPerServingNum = Math.max(1, Number(gramsPerServing ?? 100));
 
-  const result = buildRecipeCommunityV3(sections, ingredients, nutrientMap, servingsNum, gramsPerServingNum);
+  const result = buildRecipeCommunityV3(
+    sections,
+    ingredients,
+    nutrientMap,
+    servingsNum,
+    gramsPerServingNum,
+    typeof dishCookMethod === 'string' ? dishCookMethod : undefined,
+    undefined,
+    undefined,
+    typeof fillClass === 'string' ? fillClass : undefined,
+  );
 
   const p100  = result.per100g;
   const gps   = result.gramsPerServing;
@@ -169,7 +181,14 @@ export const POST: RequestHandler = async ({ request }) => {
           return typeof obj.ndbNo === 'string' && (obj.ndbNo as string).trim().length > 0;
         });
     if (hasCommunityBuild) {
-      const comm = await calcCommunityNutrition(rawIngs, draftSections, draftData?.servings, draftData?.gramsPerServing ?? 100);
+      const comm = await calcCommunityNutrition(
+        rawIngs,
+        draftSections,
+        draftData?.servings,
+        draftData?.gramsPerServing ?? 100,
+        draftData?.cookingMethod,
+        draftData?.fillClass,
+      );
       if (comm.blocked) {
         return json({ error: 'missing_ndb', missingIngredients: comm.missingIngredients }, { status: 422 });
       }

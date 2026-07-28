@@ -88,6 +88,7 @@ export const POST: RequestHandler = async ({ request }) => {
     servings,
     gramsPerServing,
     dishCookMethod,
+    fillClass,
   } = body as Record<string, unknown>;
 
   // ── Validate ingredients ────────────────────────────────────────────────────
@@ -146,6 +147,9 @@ export const POST: RequestHandler = async ({ request }) => {
     servingsNum,
     gramsPerServingNum,
     typeof dishCookMethod === 'string' ? dishCookMethod : undefined,
+    undefined,
+    undefined,
+    typeof fillClass === 'string' ? fillClass : undefined,
   );
 
   return json(result);

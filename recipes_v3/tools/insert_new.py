@@ -156,6 +156,7 @@ INSERT INTO dev_recipes (
   grams_per_serving, nutrition_json, nutrient_version,
   retention_model_version, source_match_version,
   source_ndb_no, locked
+    , fill_class, cook2_fill_class, cook3_fill_class
 ) VALUES (
   ?, ?, ?, ?, ?,
   ?, ?, ?, ?,
@@ -164,7 +165,8 @@ INSERT INTO dev_recipes (
   ?, ?, 'published', ?, ?,
   ?, ?, ?,
   ?, ?,
-  ?, ?
+    ?, ?,
+    ?, ?, ?
 )
 """
 
@@ -226,6 +228,9 @@ def _build_payload(rid, recipes, ings, ledger, instrs, extras):
         "source_match_version": "v3-greenfield",
         "source_ndb_no": rec.canonical_ndb_no or "",
         "locked": 2,
+        "fill_class": rec.fill_class or "",
+        "cook2_fill_class": rec.cook2_fill_class or "",
+        "cook3_fill_class": rec.cook3_fill_class or "",
     }
 
 
@@ -274,6 +279,7 @@ def main() -> int:
             p["grams_per_serving"], p["nutrition_json"],
             p["nutrient_version"], p["retention_model_version"], p["source_match_version"],
             p["source_ndb_no"], p["locked"],
+            p["fill_class"], p["cook2_fill_class"], p["cook3_fill_class"],
         )
 
         print(f"  {rid}  INSERT  gps={p['grams_per_serving']}g  "

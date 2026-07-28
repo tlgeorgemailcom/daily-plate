@@ -238,6 +238,7 @@ export function buildRecipeCommunityV3(
   dishCookMethod?: string,
   dishCookTempF?: number,
   dishCookMinutes?: number,
+  primaryFillClass?: string,
 ): BuildResult {
   // ── Recipe-level (top bar) primary cook parameters ──────────────────────────
   // The top bar represents the final assembled-bake or primary cook applied to
@@ -389,7 +390,9 @@ export function buildRecipeCommunityV3(
       };
       const rawCookMethod = (sec.cookingMethod ?? 'raw').trim().toLowerCase().replace(/_/g, ' ');
       let fillClass: string;
-      if (sec.fillClass && sec.fillClass !== '') {
+      if (primaryCookMethod && primaryFillClass && primaryFillClass !== '') {
+        fillClass = primaryFillClass;
+      } else if (sec.fillClass && sec.fillClass !== '') {
         fillClass = sec.fillClass;
       } else {
         // Check fill_class_hint from ingredients — use highest-protein ingredient's hint
@@ -630,7 +633,9 @@ export function buildRecipeCommunityV3(
     // Infer fillClass for the result record (for plausibility + display) —
     // same hint-first logic as above.
     let fillingClass: string;
-    if (sec.fillClass && sec.fillClass !== '') {
+    if (primaryCookMethod && primaryFillClass && primaryFillClass !== '') {
+      fillingClass = primaryFillClass;
+    } else if (sec.fillClass && sec.fillClass !== '') {
       fillingClass = sec.fillClass;
     } else {
       let hintClass = '';

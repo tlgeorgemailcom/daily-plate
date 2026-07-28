@@ -217,6 +217,9 @@
     linkMode?: 'ingredient' | 'dish' | 'mixed';
     dishLink?: { foodWord: string; ndbNo: string; portionDesc: string; portionGrams: number; servingCount: number };
     dishFamily?: string;
+    fillClass?: string;
+    cook2FillClass?: string;
+    cook3FillClass?: string;
     nutritionJson?: PersistedNutritionJson;
     yieldFactorWater?: number;
     yieldFactorFat?: number;
@@ -393,6 +396,7 @@
   let cookingMethod = $state<string>(_matchedCM ?? '');
   let cookMinutes = $state<number | undefined>(initialData.cookMinutes);
   let cookTempF = $state<number | undefined>(initialData.cookTempF);
+  let fillClass = $state<string>(initialData.fillClass ?? '');
   let cookHelpOpen = $state(false);
   let dishFamily = $state(initialData.dishFamily || '');
   let category = $state(toStoredRecipeCategory(initialData.category));
@@ -1050,6 +1054,7 @@
       servings: parseServingsCount(servings) ?? 1,
       cookingMethod,
       dishCookMethod: cookingMethod || undefined,
+      ...(fillClass ? { fillClass } : {}),
       // Include section metadata so preview-nutrition can run V3 with per-section
       // cook methods and yield factors instead of the flat SR28 fallback.
       ...(hasSections ? {
@@ -1280,6 +1285,7 @@
             if (data.cookMethod) {
               if (typeof data.cookMinutes === 'number') cookMinutes = data.cookMinutes;
               if (typeof data.cookTempF   === 'number') cookTempF   = data.cookTempF;
+              if (typeof data.fillClass   === 'string') fillClass   = data.fillClass;
             }
           }
         }
@@ -1592,6 +1598,7 @@
       cookingMethod,
       cookMinutes: cookMinutes ?? undefined,
       cookTempF: cookTempF ?? undefined,
+      fillClass: fillClass || undefined,
       dishFamily: dishFamily || undefined,
       category,
       dietaryCategory,
@@ -3102,6 +3109,20 @@
             class="form-input time-number-input"
           />
         </label>
+        {#if moderatorMode}
+          <label class="primary-cook-label" title="Filling class used by the top-bar cook when raw sections inherit the primary heat">
+            <span class="primary-cook-name">Fill class</span>
+            <select bind:value={fillClass} class="form-select primary-fill-select">
+              <option value="">— none —</option>
+              {#if fillClass && !(fillClass in BINDING)}
+                <option value={fillClass}>{fillClass} — unknown current value</option>
+              {/if}
+              {#each FILL_CLASS_OPTIONS as option}
+                <option value={option.key}>{option.label}</option>
+              {/each}
+            </select>
+          </label>
+        {/if}
         <button type="button" class="cook-help-btn" onclick={() => cookHelpOpen = true} title="How to fill in these fields">ⓘ</button>
       </div>
 

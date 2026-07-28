@@ -36,6 +36,9 @@ interface RecipeSubmission {
   linkType?: 'ingredient' | 'dish' | 'mixed';
   cookMinutes?: number;
   cookTempF?: number;
+  fillClass?: string;
+  cook2FillClass?: string;
+  cook3FillClass?: string;
   nutritionJson?: unknown | null;
   sections?: unknown[];
 }
@@ -75,6 +78,9 @@ function buildPlayerSubmission(row: Record<string, unknown>): RecipeSubmission {
     linkType: (row.linkType as 'ingredient' | 'dish' | 'mixed' | null) || undefined,
     cookMinutes: typeof row.cookMinutes === 'number' ? row.cookMinutes : undefined,
     cookTempF:   typeof row.cookTempF   === 'number' ? row.cookTempF   : undefined,
+    fillClass: (row.fillClass as string | null) || undefined,
+    cook2FillClass: (row.cook2FillClass as string | null) || undefined,
+    cook3FillClass: (row.cook3FillClass as string | null) || undefined,
     nutritionJson: row.nutritionJson ? parseJson(row.nutritionJson as string, null) : null,
     sections: row.sectionsJson ? parseJson(row.sectionsJson as string, undefined) : undefined
   };
@@ -127,7 +133,8 @@ export const GET: RequestHandler = async ({ url }) => {
              cooking_method AS cookingMethod, dish_family AS dishFamily,
              link_type AS linkType, nutrition_json AS nutritionJson,
              sections_json AS sectionsJson,
-             cook_minutes AS cookMinutes, cook_temp_f AS cookTempF
+                  cook_minutes AS cookMinutes, cook_temp_f AS cookTempF,
+                  fill_class AS fillClass, cook2_fill_class AS cook2FillClass, cook3_fill_class AS cook3FillClass
       FROM player_recipes
       WHERE status IN ('pending', 'needs_changes')
       ORDER BY created_at ASC
@@ -143,7 +150,8 @@ export const GET: RequestHandler = async ({ url }) => {
              cooking_method AS cookingMethod, dish_family AS dishFamily,
              link_type AS linkType, nutrition_json AS nutritionJson,
              sections_json AS sectionsJson,
-             cook_minutes AS cookMinutes, cook_temp_f AS cookTempF
+                  cook_minutes AS cookMinutes, cook_temp_f AS cookTempF,
+                  fill_class AS fillClass, cook2_fill_class AS cook2FillClass, cook3_fill_class AS cook3FillClass
       FROM dev_recipes
       WHERE status = 'published'
       ORDER BY created_at ASC
@@ -159,7 +167,8 @@ export const GET: RequestHandler = async ({ url }) => {
              cooking_method AS cookingMethod, dish_family AS dishFamily,
              link_type AS linkType, nutrition_json AS nutritionJson,
              sections_json AS sectionsJson,
-             cook_minutes AS cookMinutes, cook_temp_f AS cookTempF
+                  cook_minutes AS cookMinutes, cook_temp_f AS cookTempF,
+                  fill_class AS fillClass, cook2_fill_class AS cook2FillClass, cook3_fill_class AS cook3FillClass
       FROM player_recipes
       WHERE status = 'approved'
       ORDER BY created_at ASC
@@ -203,6 +212,9 @@ export const POST: RequestHandler = async ({ request }) => {
       category,
       dietaryCategory,
       cookingMethod,
+      fillClass,
+      cook2FillClass,
+      cook3FillClass,
       dishFamily,
       prepTime,
       servings,
@@ -228,12 +240,12 @@ export const POST: RequestHandler = async ({ request }) => {
       const now = new Date().toISOString();
       await execute(
         `INSERT INTO dev_recipes (
-          recipe_id, food_word, recipe_name, category, dietary_category, cooking_method, dish_family, prep_time, servings,
+          recipe_id, food_word, recipe_name, category, dietary_category, cooking_method, fill_class, cook2_fill_class, cook3_fill_class, dish_family, prep_time, servings,
           recipe, animal_spawns, recipe_ingredients_json, recipe_instructions_json,
           food_supply, image_url, submitted_by, status, created_at, updated_at,
           grams_per_serving, nutrition_json, nutrient_version, retention_model_version, source_match_version,
           sections_json
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'published', ?, ?, ?, ?, ?, ?, ?, ?)`,
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'published', ?, ?, ?, ?, ?, ?, ?, ?)`,
         [
           newId,
           newId,
@@ -241,6 +253,9 @@ export const POST: RequestHandler = async ({ request }) => {
           toStoredRecipeCategory(category),
           dietaryCategory || 'all',
           cookingMethod || null,
+          typeof fillClass === 'string' ? fillClass : null,
+          typeof cook2FillClass === 'string' ? cook2FillClass : null,
+          typeof cook3FillClass === 'string' ? cook3FillClass : null,
           dishFamily || null,
           prepTime || '',
           servings || '',
@@ -297,6 +312,9 @@ export const POST: RequestHandler = async ({ request }) => {
           category = COALESCE(?, category),
           dietary_category = COALESCE(?, dietary_category),
           cooking_method = COALESCE(?, cooking_method),
+          fill_class = ?,
+          cook2_fill_class = ?,
+          cook3_fill_class = ?,
           dish_family = COALESCE(?, dish_family),
           prep_time = COALESCE(?, prep_time),
           servings = COALESCE(?, servings),
@@ -314,6 +332,9 @@ export const POST: RequestHandler = async ({ request }) => {
           (category ? toStoredRecipeCategory(category) : null),
           dietaryCategory || null,
           cookingMethod || null,
+          typeof fillClass === 'string' ? fillClass : null,
+          typeof cook2FillClass === 'string' ? cook2FillClass : null,
+          typeof cook3FillClass === 'string' ? cook3FillClass : null,
           dishFamily || null,
           prepTime !== undefined ? prepTime : null,
           servings !== undefined ? servings : null,
@@ -397,6 +418,9 @@ export const PATCH: RequestHandler = async ({ request }) => {
           category = COALESCE(?, category),
           dietary_category = COALESCE(?, dietary_category),
           cooking_method = COALESCE(?, cooking_method),
+          fill_class = ?,
+          cook2_fill_class = ?,
+          cook3_fill_class = ?,
           dish_family = COALESCE(?, dish_family),
           prep_time = COALESCE(?, prep_time),
           servings = COALESCE(?, servings),
@@ -413,6 +437,9 @@ export const PATCH: RequestHandler = async ({ request }) => {
           (updates.category ? toStoredRecipeCategory(updates.category) : null),
           updates.dietaryCategory || null,
           updates.cookingMethod || null,
+          typeof updates.fillClass === 'string' ? updates.fillClass : null,
+          typeof updates.cook2FillClass === 'string' ? updates.cook2FillClass : null,
+          typeof updates.cook3FillClass === 'string' ? updates.cook3FillClass : null,
           updates.dishFamily || null,
           updates.prepTime || null,
           updates.servings || null,
@@ -456,6 +483,9 @@ export const PATCH: RequestHandler = async ({ request }) => {
         category = COALESCE(?, category),
         dietary_category = COALESCE(?, dietary_category),
         cooking_method = COALESCE(?, cooking_method),
+        fill_class = ?,
+        cook2_fill_class = ?,
+        cook3_fill_class = ?,
         dish_family = COALESCE(?, dish_family),
         prep_time = COALESCE(?, prep_time),
         servings = COALESCE(?, servings),
@@ -473,6 +503,9 @@ export const PATCH: RequestHandler = async ({ request }) => {
         (updates.category ? toStoredRecipeCategory(updates.category) : null),
         updates.dietaryCategory || null,
         updates.cookingMethod || null,
+        typeof updates.fillClass === 'string' ? updates.fillClass : null,
+        typeof updates.cook2FillClass === 'string' ? updates.cook2FillClass : null,
+        typeof updates.cook3FillClass === 'string' ? updates.cook3FillClass : null,
         updates.dishFamily || null,
         updates.prepTime || null,
         updates.servings || null,

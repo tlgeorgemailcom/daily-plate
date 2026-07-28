@@ -138,6 +138,9 @@ export interface Level {
   servings?: string;              // e.g., "Serves 2"
   prepTime?: string;              // e.g., "10 minutes"
   cookingMethod?: string;         // e.g., "Bake"
+  fillClass?: string;             // top-bar primary cook physics class
+  cook2FillClass?: string;        // second primary cook physics class
+  cook3FillClass?: string;        // third primary cook physics class
   dishFamily?: string;            // e.g., "Pasta", "Salad", "Soup"
   imageUrl?: string;              // Cloudinary URL for community recipe photos
   isCommunityRecipe?: boolean;    // True if this is a community-submitted recipe

@@ -13,6 +13,9 @@ interface BuiltinRecipeRow {
   cooking_method: string | null;
   cook_minutes: number | null;
   cook_temp_f: number | null;
+  fill_class: string | null;
+  cook2_fill_class: string | null;
+  cook3_fill_class: string | null;
   dish_family: string | null;
   prep_time: string | null;
   servings: string | null;
@@ -47,6 +50,9 @@ interface BuiltinOverride {
   category?: string;
   dietaryCategory?: string;
   cookingMethod?: string;
+  fillClass?: string;
+  cook2FillClass?: string;
+  cook3FillClass?: string;
   dishFamily?: string;
   prepTime?: string;
   servings?: string;
@@ -66,6 +72,9 @@ interface NewBuiltinRecipe {
   category: string;
   dietaryCategory: string;
   cookingMethod?: string;
+  fillClass?: string;
+  cook2FillClass?: string;
+  cook3FillClass?: string;
   dishFamily?: string;
   prepTime?: string;
   servings?: string;
@@ -285,7 +294,8 @@ export const GET: RequestHandler = async () => {
   try {
     // Get published dev recipes that override existing local LEVELS rows.
     const overrideRows = await queryAll<BuiltinRecipeRow>(
-      `SELECT recipe_id, recipe_name, category, dietary_category, cooking_method, cook_minutes, cook_temp_f,
+            `SELECT recipe_id, recipe_name, category, dietary_category, cooking_method, cook_minutes, cook_temp_f,
+              fill_class, cook2_fill_class, cook3_fill_class,
               dish_family, prep_time, servings,
               recipe, animal_spawns, recipe_instructions_json, recipe_ingredients_json,
               sections_json, nutrition_json, image_url, created_at, submitted_by
@@ -297,7 +307,8 @@ export const GET: RequestHandler = async () => {
 
     // Get admin-added new dev recipes.
     const newRows = await queryAll<BuiltinRecipeRow>(
-      `SELECT recipe_id, recipe_name, category, dietary_category, cooking_method, cook_minutes, cook_temp_f,
+            `SELECT recipe_id, recipe_name, category, dietary_category, cooking_method, cook_minutes, cook_temp_f,
+              fill_class, cook2_fill_class, cook3_fill_class,
               dish_family, prep_time, servings,
               recipe, animal_spawns, recipe_instructions_json, recipe_ingredients_json,
               sections_json, nutrition_json, image_url, created_at, submitted_by
@@ -319,6 +330,9 @@ export const GET: RequestHandler = async () => {
       if (row.category) override.category = toDisplayRecipeCategory(row.category);
       if (row.dietary_category) override.dietaryCategory = row.dietary_category;
       override.cookingMethod = row.cooking_method ?? '';
+      if (row.fill_class) override.fillClass = row.fill_class;
+      if (row.cook2_fill_class) override.cook2FillClass = row.cook2_fill_class;
+      if (row.cook3_fill_class) override.cook3FillClass = row.cook3_fill_class;
       if (row.dish_family) override.dishFamily = row.dish_family;
       if (row.prep_time) override.prepTime = row.prep_time;
       if (row.servings) override.servings = row.servings;
@@ -361,6 +375,9 @@ export const GET: RequestHandler = async () => {
       category: toDisplayRecipeCategory(row.category || 'Other'),
       dietaryCategory: row.dietary_category || 'all',
       cookingMethod: row.cooking_method ?? undefined,
+      fillClass: row.fill_class ?? undefined,
+      cook2FillClass: row.cook2_fill_class ?? undefined,
+      cook3FillClass: row.cook3_fill_class ?? undefined,
       dishFamily: row.dish_family ?? undefined,
       prepTime: row.prep_time ?? undefined,
       servings: row.servings ?? undefined,

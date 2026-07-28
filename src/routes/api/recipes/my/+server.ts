@@ -25,6 +25,9 @@ interface RecipeRow {
   nutrition_json: string | null;
   link_type: string | null;
   cooking_method: string | null;
+  fill_class: string | null;
+  cook2_fill_class: string | null;
+  cook3_fill_class: string | null;
   dish_family: string | null;
 }
 
@@ -34,7 +37,8 @@ function hasValidLink(row: unknown): boolean {
   if (!row || typeof row !== 'object') return false;
   const obj = row as Record<string, unknown>;
   const hasFood = (typeof obj.foodWord === 'string' && obj.foodWord.trim().length > 0)
-    || (typeof obj.ndbNo === 'string' && obj.ndbNo.trim().length > 0);
+    || (typeof obj.ndbNo === 'string' && obj.ndbNo.trim().length > 0)
+    || (typeof obj.componentRef === 'string' && obj.componentRef.trim().length > 0);
   const portion = Number(obj.portionGrams ?? 0);
   return hasFood && Number.isFinite(portion) && portion > 0;
 }
@@ -59,6 +63,8 @@ async function calcCommunityNutrition(
   sectionsRaw: unknown[],
   servings: unknown,
   gramsPerServing: unknown,
+  dishCookMethod?: unknown,
+  fillClass?: unknown,
 ): Promise<{ nutritionJson: object | null; plausibilityFlags: string[]; blocked: boolean; missingIngredients: Array<{ ndbNo: string; displayName?: string }> }> {
   const sections = (sectionsRaw as unknown[]).filter(
     (s): s is CommunitySectionV3 =>
@@ -75,8 +81,10 @@ async function calcCommunityNutrition(
       exempt:       obj.ingredientStatus === 'exempt',
       discarded:    obj.discarded === true,
       discardPercent: typeof obj.discardPercent === 'number' ? obj.discardPercent : undefined,
+      ...(obj.componentRef ? { componentRef: String(obj.componentRef) } : {}),
+      ...(obj.componentPer100g ? { componentPer100g: obj.componentPer100g as Record<string, number> } : {}),
     };
-  }).filter(i => i.ndbNo && i.portionGrams > 0);
+  }).filter(i => (i.ndbNo || i.componentPer100g) && i.portionGrams > 0);
 
   if (ingredients.length === 0) return { nutritionJson: null, plausibilityFlags: [], blocked: false, missingIngredients: [] };
 
@@ -88,7 +96,17 @@ async function calcCommunityNutrition(
   const servingsNum        = Math.max(1, Number(servings ?? 1));
   const gramsPerServingNum = Math.max(1, Number(gramsPerServing ?? 100));
 
-  const result = buildRecipeCommunityV3(sections, ingredients, nutrientMap, servingsNum, gramsPerServingNum);
+  const result = buildRecipeCommunityV3(
+    sections,
+    ingredients,
+    nutrientMap,
+    servingsNum,
+    gramsPerServingNum,
+    typeof dishCookMethod === 'string' ? dishCookMethod : undefined,
+    undefined,
+    undefined,
+    typeof fillClass === 'string' ? fillClass : undefined,
+  );
 
   const p100  = result.per100g;
   const gps   = result.gramsPerServing;
@@ -129,7 +147,7 @@ export const GET: RequestHandler = async ({ url }) => {
         `SELECT recipe_id, recipe_name, category, dietary_category, prep_time, servings,
           recipe_ingredients_json, recipe_instructions_json, sections_json, image_url, submitted_by, submitter_name, status, created_at,
                 moderator_note, nutrition_json, link_type, cooking_method, dish_family,
-                cook_minutes, cook_temp_f
+                cook_minutes, cook_temp_f, fill_class, cook2_fill_class, cook3_fill_class
          FROM player_recipes 
          WHERE submitted_by = ?
          ORDER BY created_at DESC`,
@@ -153,6 +171,9 @@ export const GET: RequestHandler = async ({ url }) => {
         submittedAt: row.created_at,
         linkType: row.link_type ?? null,
         cookingMethod: row.cooking_method || 'Bake',
+        fillClass: row.fill_class || undefined,
+        cook2FillClass: row.cook2_fill_class || undefined,
+        cook3FillClass: row.cook3_fill_class || undefined,
         dishFamily: row.dish_family || null,
         cookMinutes: row.cook_minutes ?? undefined,
         cookTempF: row.cook_temp_f ?? undefined,
@@ -183,7 +204,7 @@ export const GET: RequestHandler = async ({ url }) => {
       `SELECT recipe_id, recipe_name, category, dietary_category, prep_time, servings,
               recipe_ingredients_json, recipe_instructions_json, sections_json, image_url, submitted_by, submitter_name, status, created_at,
               moderator_note, nutrition_json, link_type, cooking_method, dish_family,
-              cook_minutes, cook_temp_f
+              cook_minutes, cook_temp_f, fill_class, cook2_fill_class, cook3_fill_class
        FROM player_recipes 
        WHERE recipe_id IN (${placeholders})
        ORDER BY created_at DESC`,
@@ -208,6 +229,9 @@ export const GET: RequestHandler = async ({ url }) => {
       submittedAt: row.created_at,
       linkType: row.link_type ?? null,
       cookingMethod: row.cooking_method || 'Bake',
+      fillClass: row.fill_class || undefined,
+      cook2FillClass: row.cook2_fill_class || undefined,
+      cook3FillClass: row.cook3_fill_class || undefined,
       dishFamily: row.dish_family || null,
       cookMinutes: row.cook_minutes ?? undefined,
       cookTempF: row.cook_temp_f ?? undefined,
@@ -291,14 +315,17 @@ export const PATCH: RequestHandler = async ({ request }) => {
         })
         .every((r: unknown) => {
           const obj = r as Record<string, unknown>;
-          return typeof obj.ndbNo === 'string' && (obj.ndbNo as string).trim().length > 0;
+          return (typeof obj.ndbNo === 'string' && (obj.ndbNo as string).trim().length > 0)
+            || !!obj.componentPer100g;
         });
     if (hasCommunityBuild) {
       const comm = await calcCommunityNutrition(
         rawIngs,
         updateSections,
         updates.servings,
-        (updates as { gramsPerServing?: unknown }).gramsPerServing ?? 100
+        (updates as { gramsPerServing?: unknown }).gramsPerServing ?? 100,
+        (updates as { cookingMethod?: unknown }).cookingMethod,
+        (updates as { fillClass?: unknown }).fillClass,
       );
       if (comm.blocked) {
         return json({ error: 'missing_ndb', missingIngredients: comm.missingIngredients }, { status: 422 });
@@ -321,6 +348,9 @@ export const PATCH: RequestHandler = async ({ request }) => {
           image_url = COALESCE(?, image_url),
           link_type = COALESCE(?, link_type),
           cooking_method = COALESCE(?, cooking_method),
+          fill_class = ?,
+          cook2_fill_class = ?,
+          cook3_fill_class = ?,
           dish_family = COALESCE(?, dish_family),
           nutrition_json = ?,
           plausibility_flags = ?,
@@ -340,6 +370,9 @@ export const PATCH: RequestHandler = async ({ request }) => {
           image_url = COALESCE(?, image_url),
           link_type = COALESCE(?, link_type),
           cooking_method = COALESCE(?, cooking_method),
+          fill_class = ?,
+          cook2_fill_class = ?,
+          cook3_fill_class = ?,
           dish_family = COALESCE(?, dish_family),
           nutrition_json = ?,
           plausibility_flags = ?,
@@ -361,6 +394,9 @@ export const PATCH: RequestHandler = async ({ request }) => {
         updates.imageUrl || null,
         linkType,
         updates.cookingMethod || null,
+        typeof (updates as { fillClass?: unknown }).fillClass === 'string' ? (updates as { fillClass: string }).fillClass : null,
+        typeof (updates as { cook2FillClass?: unknown }).cook2FillClass === 'string' ? (updates as { cook2FillClass: string }).cook2FillClass : null,
+        typeof (updates as { cook3FillClass?: unknown }).cook3FillClass === 'string' ? (updates as { cook3FillClass: string }).cook3FillClass : null,
         updates.dishFamily || null,
         nutritionJson || EMPTY_NUTRITION_JSON,
         plausibilityFlags.length > 0 ? JSON.stringify(plausibilityFlags) : null,

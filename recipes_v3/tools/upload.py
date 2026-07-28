@@ -302,6 +302,9 @@ def _build_payload(rid: str, recipes, ings, ledger, instrs, sections_map) -> dic
         "cook3_method": rec.cook3_method or "",
         "cook3_minutes": rec.cook3_minutes,
         "cook3_temp_f": rec.cook3_temp_f,
+        "fill_class": rec.fill_class or "",
+        "cook2_fill_class": rec.cook2_fill_class or "",
+        "cook3_fill_class": rec.cook3_fill_class or "",
     }
 
 
@@ -328,6 +331,9 @@ UPDATE dev_recipes SET
     cook3_method             = ?,
     cook3_minutes            = ?,
     cook3_temp_f             = ?,
+        fill_class               = ?,
+        cook2_fill_class         = ?,
+        cook3_fill_class         = ?,
   updated_at               = ?
 WHERE recipe_id = ?
 """
@@ -342,6 +348,7 @@ _UPDATE_COLS = (
     "source_ndb_no", "sections_json", "cook_minutes", "cook_temp_f", "cooking_method",
     "cook2_method", "cook2_minutes", "cook2_temp_f",
     "cook3_method", "cook3_minutes", "cook3_temp_f",
+    "fill_class", "cook2_fill_class", "cook3_fill_class",
 )
 
 
@@ -465,6 +472,9 @@ def main() -> int:
                 payload["cook3_method"],
                 payload["cook3_minutes"],
                 payload["cook3_temp_f"],
+                payload["fill_class"],
+                payload["cook2_fill_class"],
+                payload["cook3_fill_class"],
                 now_utc,
                 payload["recipe_id"],
             ))

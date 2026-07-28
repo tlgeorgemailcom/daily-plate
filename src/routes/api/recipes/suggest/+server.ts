@@ -16,6 +16,9 @@ interface SuggestionRow {
   dish_family: string | null;
   nutrition_json: string | null;
   sections_json: string | null;
+  fill_class: string | null;
+  cook2_fill_class: string | null;
+  cook3_fill_class: string | null;
 }
 
 interface StoredNutritionJson {
@@ -166,6 +169,9 @@ export const GET: RequestHandler = async ({ url }) => {
               cooking_method,
               cook_minutes,
               cook_temp_f,
+              fill_class,
+              cook2_fill_class,
+              cook3_fill_class,
               'dev' AS source_type
        FROM dev_recipes
         WHERE status = 'published'
@@ -180,6 +186,9 @@ export const GET: RequestHandler = async ({ url }) => {
               cooking_method,
               cook_minutes,
               cook_temp_f,
+              fill_class,
+              cook2_fill_class,
+              cook3_fill_class,
               'player' AS source_type
        FROM player_recipes
        WHERE status = 'approved'`,
@@ -223,6 +232,9 @@ export const GET: RequestHandler = async ({ url }) => {
         cookingMethod: (row.cooking_method as string | null) || undefined,
         cookMinutes: typeof row.cook_minutes === 'number' ? row.cook_minutes : undefined,
         cookTempF:   typeof row.cook_temp_f  === 'number' ? row.cook_temp_f  : undefined,
+        fillClass: row.fill_class || undefined,
+        cook2FillClass: row.cook2_fill_class || undefined,
+        cook3FillClass: row.cook3_fill_class || undefined,
         matchScore: s,
         nutritionJson: (() => { try { return row.nutrition_json ? (JSON.parse(row.nutrition_json) as StoredNutritionJson) : null; } catch { return null; } })(),
         // v3.md §18 — top-level section metadata (key/label/cookingMethod/yieldFactors).

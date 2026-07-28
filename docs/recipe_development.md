@@ -307,7 +307,8 @@ For **mixed or cooking-liquid sections** (an `@` recipe ref shares a section wit
 For baked dishes where the assembly steps involve no heat (press crust, mix filling) and the entire bake happens as a single final step:
 
 - **All assembly sections**: set `cm=raw`, clear section `fill_class`, and clear section `cook_stages`. The sections show "no heat" in the section headers.
-- **Recipe row**: set `cooking_method=baked`, `cook_temp_f=<oven temp>`, and `cook_minutes=<minutes>`. The primary cook bar shows "Bake | N min | T°F".
+- **Recipe row**: set `cooking_method=baked`, `cook_temp_f=<oven temp>`, `cook_minutes=<minutes>`, and the recipe-level primary `fill_class` (for example `pastry`). The primary cook bar shows "Bake | N min | T°F" and exposes the fill class separately from section metadata.
+- **Turso sync**: recipe-level primary cook fill classes live in `recipes.csv` as `fill_class`, `cook2_fill_class`, and `cook3_fill_class`, mirroring the three primary cook method slots in Turso. Do not move these values into `recipe_sections.csv` just to make the form show them.
 - **Build behavior**: the Python and TypeScript builders apply the recipe-level primary cook as the effective heat for all raw non-finish sections. Section metadata remains raw/none for the form; physics derives water yield from the effective primary cook.
 
 This pattern applies to any dish where: multiple ingredient groups exist, but only the combined bake/cook matters as the primary step. Examples: quiches, casseroles, stratas, gratins, lasagnas.

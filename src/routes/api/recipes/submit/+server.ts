@@ -40,6 +40,8 @@ async function calcCommunityNutrition(
   sectionsRaw: unknown[],
   servings: unknown,
   gramsPerServing: unknown,
+  dishCookMethod?: unknown,
+  fillClass?: unknown,
 ): Promise<{ nutritionJson: object | null; plausibilityFlags: string[]; blocked: boolean; missingIngredients: Array<{ ndbNo: string; displayName?: string }> }> {
   const sections = (sectionsRaw as unknown[]).filter(
     (s): s is CommunitySectionV3 =>
@@ -78,6 +80,10 @@ async function calcCommunityNutrition(
     nutrientMap,
     servingsNum,
     gramsPerServingNum,
+    typeof dishCookMethod === 'string' ? dishCookMethod : undefined,
+    undefined,
+    undefined,
+    typeof fillClass === 'string' ? fillClass : undefined,
   );
 
   const p100  = result.per100g;
@@ -161,7 +167,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
     const canonicalPreview = isNutritionPreview(fields.nutritionJsonPreview) ? fields.nutritionJsonPreview : null;
 
     // Community recipe path: when sections are present and all active ingredients
-    // have ndbNo, use buildRecipeCommunity for authoritative nutrition.
+    // have SR nutrition or component recipe nutrition, build authoritative nutrition.
     const patchSections = Array.isArray(fields.sections) ? fields.sections : [];
     const patchHasCommunityBuild =
       patchSections.length > 0 &&
@@ -173,7 +179,8 @@ export const PATCH: RequestHandler = async ({ request }) => {
         })
         .every((r: unknown) => {
           const obj = r as Record<string, unknown>;
-          return typeof obj.ndbNo === 'string' && (obj.ndbNo as string).trim().length > 0;
+          return (typeof obj.ndbNo === 'string' && (obj.ndbNo as string).trim().length > 0)
+            || !!obj.componentPer100g;
         });
 
     let patchNutritionJson: object | null = null;
@@ -181,7 +188,14 @@ export const PATCH: RequestHandler = async ({ request }) => {
     if (canonicalPreview) {
       patchNutritionJson = canonicalPreview;
     } else if (patchHasCommunityBuild) {
-      const comm = await calcCommunityNutrition(patchIngredients, patchSections, fields.servings, fields.gramsPerServing ?? 100);
+      const comm = await calcCommunityNutrition(
+        patchIngredients,
+        patchSections,
+        fields.servings,
+        fields.gramsPerServing ?? 100,
+        fields.cookingMethod,
+        fields.fillClass,
+      );
       if (comm.blocked) {
         return json({ error: 'missing_ndb', missingIngredients: comm.missingIngredients }, { status: 422 });
       }
@@ -200,6 +214,9 @@ export const PATCH: RequestHandler = async ({ request }) => {
           image_url = COALESCE(?, image_url),
           link_type = COALESCE(?, link_type),
           cooking_method = COALESCE(?, cooking_method),
+          fill_class = ?,
+          cook2_fill_class = ?,
+          cook3_fill_class = ?,
           dish_family = COALESCE(?, dish_family),
           nutrition_json = ?,
           plausibility_flags = ?,
@@ -222,6 +239,9 @@ export const PATCH: RequestHandler = async ({ request }) => {
           fields.imageUrl || null,
           fields.linkType || null,
           fields.cookingMethod || fields.cookMethod || null,
+          typeof fields.fillClass === 'string' ? fields.fillClass : null,
+          typeof fields.cook2FillClass === 'string' ? fields.cook2FillClass : null,
+          typeof fields.cook3FillClass === 'string' ? fields.cook3FillClass : null,
           fields.dishFamily || null,
           nutritionJson ? JSON.stringify(nutritionJson) : EMPTY_NUTRITION_JSON,
           patchPlausibilityFlags.length > 0 ? JSON.stringify(patchPlausibilityFlags) : null,
@@ -299,7 +319,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
     const canonicalPreview = isNutritionPreview(body.nutritionJsonPreview) ? body.nutritionJsonPreview : null;
 
-    // Community recipe path: sections present + all active ingredients have ndbNo.
+    // Community recipe path: sections present + all active ingredients have SR or component nutrition.
     const postSections = Array.isArray(body.sections) ? body.sections : [];
     const postHasCommunityBuild =
       postSections.length > 0 &&
@@ -311,7 +331,8 @@ export const POST: RequestHandler = async ({ request }) => {
         })
         .every((r: unknown) => {
           const obj = r as Record<string, unknown>;
-          return typeof obj.ndbNo === 'string' && (obj.ndbNo as string).trim().length > 0;
+          return (typeof obj.ndbNo === 'string' && (obj.ndbNo as string).trim().length > 0)
+            || !!obj.componentPer100g;
         });
 
     let computedNutrition: object | null = null;
@@ -319,7 +340,14 @@ export const POST: RequestHandler = async ({ request }) => {
     if (canonicalPreview) {
       computedNutrition = canonicalPreview;
     } else if (postHasCommunityBuild) {
-      const comm = await calcCommunityNutrition(postIngredients, postSections, body.servings, body.gramsPerServing ?? 100);
+      const comm = await calcCommunityNutrition(
+        postIngredients,
+        postSections,
+        body.servings,
+        body.gramsPerServing ?? 100,
+        body.cookingMethod,
+        body.fillClass,
+      );
       if (comm.blocked) {
         return json({ error: 'missing_ndb', missingIngredients: comm.missingIngredients }, { status: 422 });
       }
@@ -341,12 +369,12 @@ export const POST: RequestHandler = async ({ request }) => {
         prep_time, servings,
         recipe_ingredients_json, recipe_instructions_json,
         sections_json,
-        image_url, link_type, cooking_method, dish_family, nutrition_json,
+        image_url, link_type, cooking_method, fill_class, cook2_fill_class, cook3_fill_class, dish_family, nutrition_json,
         plausibility_flags,
         cook_minutes, cook_temp_f,
         submitter_name, status, created_at, updated_at,
         grams_per_serving, nutrient_version, retention_model_version, source_match_version
-      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'), datetime('now'), ?, ?, ?, ?)`,
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'), datetime('now'), ?, ?, ?, ?)`,
       [
         recipeId,
         submittedBy,
@@ -363,6 +391,9 @@ export const POST: RequestHandler = async ({ request }) => {
         body.imageUrl || null,
         body.linkType || null,
         body.cookingMethod || body.cookMethod || null,
+        typeof body.fillClass === 'string' ? body.fillClass : null,
+        typeof body.cook2FillClass === 'string' ? body.cook2FillClass : null,
+        typeof body.cook3FillClass === 'string' ? body.cook3FillClass : null,
         body.dishFamily || null,
         nutritionJson,
         postPlausibilityFlags.length > 0 ? JSON.stringify(postPlausibilityFlags) : null,

@@ -129,6 +129,9 @@ class Recipe:
     cook3_method: str = ""
     cook3_minutes: int | None = None
     cook3_temp_f: int | None = None
+    fill_class: str = ""
+    cook2_fill_class: str = ""
+    cook3_fill_class: str = ""
     yield_factor_fiber: float = 1.0
     status: str = ""
     audit_status: str = ""
@@ -268,6 +271,9 @@ def load_recipes() -> dict[str, Recipe]:
                 cook3_method=_parse_optional_cook_method(row.get("cook3_method")),
                 cook3_minutes=_parse_int(row.get("cook3_minutes", ""), None),
                 cook3_temp_f=_parse_int(row.get("cook3_temp_f", ""), None),
+                fill_class=(row.get("fill_class") or "").strip(),
+                cook2_fill_class=(row.get("cook2_fill_class") or "").strip(),
+                cook3_fill_class=(row.get("cook3_fill_class") or "").strip(),
                 yield_factor_water=_parse_float(row.get("yield_factor_water"), 1.0),
                 yield_factor_fat=_parse_float(row.get("yield_factor_fat"), 1.0),
                 yield_factor_protein=_parse_float(row.get("yield_factor_protein"), 1.0),
