@@ -4,6 +4,7 @@ import { queryAll, getGameDb } from '$lib/server/turso';
 import { toDisplayRecipeCategory, toStoredRecipeCategory } from '$lib/farmers-basket/recipe-categories';
 import { deleteRecipeImage, extractPublicId } from '$lib/server/cloudinary';
 import { calcNutritionSR28 } from '$lib/server/calcNutritionSR28';
+import type { Level } from '$lib/farmers-basket/types';
 
 interface BuiltinRecipeRow {
   recipe_id: string;
@@ -13,6 +14,12 @@ interface BuiltinRecipeRow {
   cooking_method: string | null;
   cook_minutes: number | null;
   cook_temp_f: number | null;
+  cook2_method: string | null;
+  cook2_minutes: number | null;
+  cook2_temp_f: number | null;
+  cook3_method: string | null;
+  cook3_minutes: number | null;
+  cook3_temp_f: number | null;
   fill_class: string | null;
   cook2_fill_class: string | null;
   cook3_fill_class: string | null;
@@ -50,6 +57,14 @@ interface BuiltinOverride {
   category?: string;
   dietaryCategory?: string;
   cookingMethod?: string;
+  cookMinutes?: number;
+  cookTempF?: number;
+  cook2Method?: string;
+  cook2Minutes?: number;
+  cook2TempF?: number;
+  cook3Method?: string;
+  cook3Minutes?: number;
+  cook3TempF?: number;
   fillClass?: string;
   cook2FillClass?: string;
   cook3FillClass?: string;
@@ -60,6 +75,7 @@ interface BuiltinOverride {
   animalSpawns?: { type: string; delay: number }[];
   recipeInstructions?: string[];
   recipeIngredients?: NutritionLinkIngredient[];
+  sections?: Level['sections'];
   nutritionJson?: NutritionJson | null;
   imageUrl?: string;
   editedAt: string;
@@ -72,6 +88,14 @@ interface NewBuiltinRecipe {
   category: string;
   dietaryCategory: string;
   cookingMethod?: string;
+  cookMinutes?: number;
+  cookTempF?: number;
+  cook2Method?: string;
+  cook2Minutes?: number;
+  cook2TempF?: number;
+  cook3Method?: string;
+  cook3Minutes?: number;
+  cook3TempF?: number;
   fillClass?: string;
   cook2FillClass?: string;
   cook3FillClass?: string;
@@ -295,6 +319,8 @@ export const GET: RequestHandler = async () => {
     // Get published dev recipes that override existing local LEVELS rows.
     const overrideRows = await queryAll<BuiltinRecipeRow>(
             `SELECT recipe_id, recipe_name, category, dietary_category, cooking_method, cook_minutes, cook_temp_f,
+              cook2_method, cook2_minutes, cook2_temp_f,
+              cook3_method, cook3_minutes, cook3_temp_f,
               fill_class, cook2_fill_class, cook3_fill_class,
               dish_family, prep_time, servings,
               recipe, animal_spawns, recipe_instructions_json, recipe_ingredients_json,
@@ -308,6 +334,8 @@ export const GET: RequestHandler = async () => {
     // Get admin-added new dev recipes.
     const newRows = await queryAll<BuiltinRecipeRow>(
             `SELECT recipe_id, recipe_name, category, dietary_category, cooking_method, cook_minutes, cook_temp_f,
+              cook2_method, cook2_minutes, cook2_temp_f,
+              cook3_method, cook3_minutes, cook3_temp_f,
               fill_class, cook2_fill_class, cook3_fill_class,
               dish_family, prep_time, servings,
               recipe, animal_spawns, recipe_instructions_json, recipe_ingredients_json,
@@ -330,6 +358,14 @@ export const GET: RequestHandler = async () => {
       if (row.category) override.category = toDisplayRecipeCategory(row.category);
       if (row.dietary_category) override.dietaryCategory = row.dietary_category;
       override.cookingMethod = row.cooking_method ?? '';
+      if (row.cook_minutes != null) override.cookMinutes = row.cook_minutes as number;
+      if (row.cook_temp_f  != null) override.cookTempF   = row.cook_temp_f  as number;
+      if (row.cook2_method) override.cook2Method = row.cook2_method;
+      if (row.cook2_minutes != null) override.cook2Minutes = row.cook2_minutes as number;
+      if (row.cook2_temp_f != null) override.cook2TempF = row.cook2_temp_f as number;
+      if (row.cook3_method) override.cook3Method = row.cook3_method;
+      if (row.cook3_minutes != null) override.cook3Minutes = row.cook3_minutes as number;
+      if (row.cook3_temp_f != null) override.cook3TempF = row.cook3_temp_f as number;
       if (row.fill_class) override.fillClass = row.fill_class;
       if (row.cook2_fill_class) override.cook2FillClass = row.cook2_fill_class;
       if (row.cook3_fill_class) override.cook3FillClass = row.cook3_fill_class;
@@ -340,8 +376,6 @@ export const GET: RequestHandler = async () => {
       if (row.animal_spawns) override.animalSpawns = JSON.parse(row.animal_spawns);
       if (row.recipe_instructions_json) override.recipeInstructions = normalizeRecipeInstructions(row.recipe_instructions_json);
       if (row.recipe_ingredients_json) override.recipeIngredients = normalizeRecipeIngredients(row.recipe_ingredients_json);
-      if (row.cook_minutes != null) override.cookMinutes = row.cook_minutes as number;
-      if (row.cook_temp_f  != null) override.cookTempF   = row.cook_temp_f  as number;
       if (row.sections_json) {
         // Normalize snake_case sections_json to Level['sections'] camelCase shape
         // so all downstream consumers use the typed fields without conditional lookups.
@@ -375,6 +409,14 @@ export const GET: RequestHandler = async () => {
       category: toDisplayRecipeCategory(row.category || 'Other'),
       dietaryCategory: row.dietary_category || 'all',
       cookingMethod: row.cooking_method ?? undefined,
+      cookMinutes: row.cook_minutes ?? undefined,
+      cookTempF: row.cook_temp_f ?? undefined,
+      cook2Method: row.cook2_method ?? undefined,
+      cook2Minutes: row.cook2_minutes ?? undefined,
+      cook2TempF: row.cook2_temp_f ?? undefined,
+      cook3Method: row.cook3_method ?? undefined,
+      cook3Minutes: row.cook3_minutes ?? undefined,
+      cook3TempF: row.cook3_temp_f ?? undefined,
       fillClass: row.fill_class ?? undefined,
       cook2FillClass: row.cook2_fill_class ?? undefined,
       cook3FillClass: row.cook3_fill_class ?? undefined,

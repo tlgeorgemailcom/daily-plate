@@ -25,6 +25,14 @@ interface RecipeRow {
   nutrition_json: string | null;
   link_type: string | null;
   cooking_method: string | null;
+  cook_minutes: number | null;
+  cook_temp_f: number | null;
+  cook2_method: string | null;
+  cook2_minutes: number | null;
+  cook2_temp_f: number | null;
+  cook3_method: string | null;
+  cook3_minutes: number | null;
+  cook3_temp_f: number | null;
   fill_class: string | null;
   cook2_fill_class: string | null;
   cook3_fill_class: string | null;
@@ -147,7 +155,10 @@ export const GET: RequestHandler = async ({ url }) => {
         `SELECT recipe_id, recipe_name, category, dietary_category, prep_time, servings,
           recipe_ingredients_json, recipe_instructions_json, sections_json, image_url, submitted_by, submitter_name, status, created_at,
                 moderator_note, nutrition_json, link_type, cooking_method, dish_family,
-                cook_minutes, cook_temp_f, fill_class, cook2_fill_class, cook3_fill_class
+                cook_minutes, cook_temp_f,
+                cook2_method, cook2_minutes, cook2_temp_f,
+                cook3_method, cook3_minutes, cook3_temp_f,
+                fill_class, cook2_fill_class, cook3_fill_class
          FROM player_recipes 
          WHERE submitted_by = ?
          ORDER BY created_at DESC`,
@@ -171,12 +182,18 @@ export const GET: RequestHandler = async ({ url }) => {
         submittedAt: row.created_at,
         linkType: row.link_type ?? null,
         cookingMethod: row.cooking_method || 'Bake',
+        cookMinutes: row.cook_minutes ?? undefined,
+        cookTempF: row.cook_temp_f ?? undefined,
+        cook2Method: row.cook2_method || undefined,
+        cook2Minutes: row.cook2_minutes ?? undefined,
+        cook2TempF: row.cook2_temp_f ?? undefined,
+        cook3Method: row.cook3_method || undefined,
+        cook3Minutes: row.cook3_minutes ?? undefined,
+        cook3TempF: row.cook3_temp_f ?? undefined,
         fillClass: row.fill_class || undefined,
         cook2FillClass: row.cook2_fill_class || undefined,
         cook3FillClass: row.cook3_fill_class || undefined,
         dishFamily: row.dish_family || null,
-        cookMinutes: row.cook_minutes ?? undefined,
-        cookTempF: row.cook_temp_f ?? undefined,
         nutritionJson: row.nutrition_json && row.nutrition_json !== EMPTY_NUTRITION_JSON
           ? JSON.parse(row.nutrition_json)
           : null
@@ -204,7 +221,10 @@ export const GET: RequestHandler = async ({ url }) => {
       `SELECT recipe_id, recipe_name, category, dietary_category, prep_time, servings,
               recipe_ingredients_json, recipe_instructions_json, sections_json, image_url, submitted_by, submitter_name, status, created_at,
               moderator_note, nutrition_json, link_type, cooking_method, dish_family,
-              cook_minutes, cook_temp_f, fill_class, cook2_fill_class, cook3_fill_class
+              cook_minutes, cook_temp_f,
+              cook2_method, cook2_minutes, cook2_temp_f,
+              cook3_method, cook3_minutes, cook3_temp_f,
+              fill_class, cook2_fill_class, cook3_fill_class
        FROM player_recipes 
        WHERE recipe_id IN (${placeholders})
        ORDER BY created_at DESC`,
@@ -229,12 +249,18 @@ export const GET: RequestHandler = async ({ url }) => {
       submittedAt: row.created_at,
       linkType: row.link_type ?? null,
       cookingMethod: row.cooking_method || 'Bake',
+      cookMinutes: row.cook_minutes ?? undefined,
+      cookTempF: row.cook_temp_f ?? undefined,
+      cook2Method: row.cook2_method || undefined,
+      cook2Minutes: row.cook2_minutes ?? undefined,
+      cook2TempF: row.cook2_temp_f ?? undefined,
+      cook3Method: row.cook3_method || undefined,
+      cook3Minutes: row.cook3_minutes ?? undefined,
+      cook3TempF: row.cook3_temp_f ?? undefined,
       fillClass: row.fill_class || undefined,
       cook2FillClass: row.cook2_fill_class || undefined,
       cook3FillClass: row.cook3_fill_class || undefined,
       dishFamily: row.dish_family || null,
-      cookMinutes: row.cook_minutes ?? undefined,
-      cookTempF: row.cook_temp_f ?? undefined,
     }));
     
     return json({ recipes });
@@ -348,6 +374,12 @@ export const PATCH: RequestHandler = async ({ request }) => {
           image_url = COALESCE(?, image_url),
           link_type = COALESCE(?, link_type),
           cooking_method = COALESCE(?, cooking_method),
+          cook2_method = ?,
+          cook2_minutes = ?,
+          cook2_temp_f = ?,
+          cook3_method = ?,
+          cook3_minutes = ?,
+          cook3_temp_f = ?,
           fill_class = ?,
           cook2_fill_class = ?,
           cook3_fill_class = ?,
@@ -370,6 +402,12 @@ export const PATCH: RequestHandler = async ({ request }) => {
           image_url = COALESCE(?, image_url),
           link_type = COALESCE(?, link_type),
           cooking_method = COALESCE(?, cooking_method),
+          cook2_method = ?,
+          cook2_minutes = ?,
+          cook2_temp_f = ?,
+          cook3_method = ?,
+          cook3_minutes = ?,
+          cook3_temp_f = ?,
           fill_class = ?,
           cook2_fill_class = ?,
           cook3_fill_class = ?,
@@ -394,6 +432,12 @@ export const PATCH: RequestHandler = async ({ request }) => {
         updates.imageUrl || null,
         linkType,
         updates.cookingMethod || null,
+        typeof (updates as { cook2Method?: unknown }).cook2Method === 'string' ? (updates as { cook2Method: string }).cook2Method : null,
+        typeof (updates as { cook2Minutes?: unknown }).cook2Minutes === 'number' ? (updates as { cook2Minutes: number }).cook2Minutes : null,
+        typeof (updates as { cook2TempF?: unknown }).cook2TempF === 'number' ? (updates as { cook2TempF: number }).cook2TempF : null,
+        typeof (updates as { cook3Method?: unknown }).cook3Method === 'string' ? (updates as { cook3Method: string }).cook3Method : null,
+        typeof (updates as { cook3Minutes?: unknown }).cook3Minutes === 'number' ? (updates as { cook3Minutes: number }).cook3Minutes : null,
+        typeof (updates as { cook3TempF?: unknown }).cook3TempF === 'number' ? (updates as { cook3TempF: number }).cook3TempF : null,
         typeof (updates as { fillClass?: unknown }).fillClass === 'string' ? (updates as { fillClass: string }).fillClass : null,
         typeof (updates as { cook2FillClass?: unknown }).cook2FillClass === 'string' ? (updates as { cook2FillClass: string }).cook2FillClass : null,
         typeof (updates as { cook3FillClass?: unknown }).cook3FillClass === 'string' ? (updates as { cook3FillClass: string }).cook3FillClass : null,

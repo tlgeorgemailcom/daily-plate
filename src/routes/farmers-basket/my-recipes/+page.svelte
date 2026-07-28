@@ -494,6 +494,14 @@
             // Read top-bar cook time directly from dedicated Turso columns.
             cookMinutes: typeof (editingRecipe as any).cookMinutes === 'number' ? (editingRecipe as any).cookMinutes : undefined,
             cookTempF:   typeof (editingRecipe as any).cookTempF   === 'number' ? (editingRecipe as any).cookTempF   : undefined,
+            cook2Method: typeof (editingRecipe as any).cook2Method === 'string' ? (editingRecipe as any).cook2Method : undefined,
+            cook2Minutes: typeof (editingRecipe as any).cook2Minutes === 'number' ? (editingRecipe as any).cook2Minutes : undefined,
+            cook2TempF: typeof (editingRecipe as any).cook2TempF === 'number' ? (editingRecipe as any).cook2TempF : undefined,
+            cook2FillClass: typeof (editingRecipe as any).cook2FillClass === 'string' ? (editingRecipe as any).cook2FillClass : undefined,
+            cook3Method: typeof (editingRecipe as any).cook3Method === 'string' ? (editingRecipe as any).cook3Method : undefined,
+            cook3Minutes: typeof (editingRecipe as any).cook3Minutes === 'number' ? (editingRecipe as any).cook3Minutes : undefined,
+            cook3TempF: typeof (editingRecipe as any).cook3TempF === 'number' ? (editingRecipe as any).cook3TempF : undefined,
+            cook3FillClass: typeof (editingRecipe as any).cook3FillClass === 'string' ? (editingRecipe as any).cook3FillClass : undefined,
           }}
           onsubmit={handleSaveEdit}
           oncancel={() => editingRecipe = null}

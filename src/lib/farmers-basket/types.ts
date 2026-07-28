@@ -139,7 +139,13 @@ export interface Level {
   prepTime?: string;              // e.g., "10 minutes"
   cookingMethod?: string;         // e.g., "Bake"
   fillClass?: string;             // top-bar primary cook physics class
+  cook2Method?: string;           // second primary cook method
+  cook2Minutes?: number;          // second primary cook time in minutes
+  cook2TempF?: number;            // second primary cook oven temperature °F
   cook2FillClass?: string;        // second primary cook physics class
+  cook3Method?: string;           // third primary cook method
+  cook3Minutes?: number;          // third primary cook time in minutes
+  cook3TempF?: number;            // third primary cook oven temperature °F
   cook3FillClass?: string;        // third primary cook physics class
   dishFamily?: string;            // e.g., "Pasta", "Salad", "Soup"
   imageUrl?: string;              // Cloudinary URL for community recipe photos

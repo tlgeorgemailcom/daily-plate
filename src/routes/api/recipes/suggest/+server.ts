@@ -16,6 +16,15 @@ interface SuggestionRow {
   dish_family: string | null;
   nutrition_json: string | null;
   sections_json: string | null;
+  cooking_method: string | null;
+  cook_minutes: number | null;
+  cook_temp_f: number | null;
+  cook2_method: string | null;
+  cook2_minutes: number | null;
+  cook2_temp_f: number | null;
+  cook3_method: string | null;
+  cook3_minutes: number | null;
+  cook3_temp_f: number | null;
   fill_class: string | null;
   cook2_fill_class: string | null;
   cook3_fill_class: string | null;
@@ -169,6 +178,12 @@ export const GET: RequestHandler = async ({ url }) => {
               cooking_method,
               cook_minutes,
               cook_temp_f,
+              cook2_method,
+              cook2_minutes,
+              cook2_temp_f,
+              cook3_method,
+              cook3_minutes,
+              cook3_temp_f,
               fill_class,
               cook2_fill_class,
               cook3_fill_class,
@@ -186,6 +201,12 @@ export const GET: RequestHandler = async ({ url }) => {
               cooking_method,
               cook_minutes,
               cook_temp_f,
+              cook2_method,
+              cook2_minutes,
+              cook2_temp_f,
+              cook3_method,
+              cook3_minutes,
+              cook3_temp_f,
               fill_class,
               cook2_fill_class,
               cook3_fill_class,
@@ -232,6 +253,12 @@ export const GET: RequestHandler = async ({ url }) => {
         cookingMethod: (row.cooking_method as string | null) || undefined,
         cookMinutes: typeof row.cook_minutes === 'number' ? row.cook_minutes : undefined,
         cookTempF:   typeof row.cook_temp_f  === 'number' ? row.cook_temp_f  : undefined,
+        cook2Method: row.cook2_method || undefined,
+        cook2Minutes: typeof row.cook2_minutes === 'number' ? row.cook2_minutes : undefined,
+        cook2TempF: typeof row.cook2_temp_f === 'number' ? row.cook2_temp_f : undefined,
+        cook3Method: row.cook3_method || undefined,
+        cook3Minutes: typeof row.cook3_minutes === 'number' ? row.cook3_minutes : undefined,
+        cook3TempF: typeof row.cook3_temp_f === 'number' ? row.cook3_temp_f : undefined,
         fillClass: row.fill_class || undefined,
         cook2FillClass: row.cook2_fill_class || undefined,
         cook3FillClass: row.cook3_fill_class || undefined,

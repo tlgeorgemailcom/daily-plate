@@ -57,6 +57,8 @@ export const GET: RequestHandler = async ({ params }) => {
   // Primary query — everything we need in one round trip
   const result = await db.execute({
     sql: `SELECT recipe_name, cooking_method, cook_minutes, cook_temp_f,
+           cook2_method, cook2_minutes, cook2_temp_f,
+           cook3_method, cook3_minutes, cook3_temp_f,
            fill_class, cook2_fill_class, cook3_fill_class,
                  grams_per_serving, servings_count, nutrition_json,
                  sections_json, recipe_ingredients_json
@@ -123,6 +125,12 @@ export const GET: RequestHandler = async ({ params }) => {
     cookMethodNormalized: normalizeCookMethod(cookingMethod),
     cookMinutes: row.cook_minutes as number | null,
     cookTempF: row.cook_temp_f as number | null,
+    cook2Method: (row.cook2_method as string | null) || '',
+    cook2Minutes: row.cook2_minutes as number | null,
+    cook2TempF: row.cook2_temp_f as number | null,
+    cook3Method: (row.cook3_method as string | null) || '',
+    cook3Minutes: row.cook3_minutes as number | null,
+    cook3TempF: row.cook3_temp_f as number | null,
     fillClass: (row.fill_class as string | null) || '',
     cook2FillClass: (row.cook2_fill_class as string | null) || '',
     cook3FillClass: (row.cook3_fill_class as string | null) || '',

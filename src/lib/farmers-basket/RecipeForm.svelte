@@ -28,6 +28,7 @@
     portionDesc?: string;    // e.g. "1 cup"
     portionGrams?: number;   // grams per one portion
     servingCount?: number;   // number of portions used in recipe
+    exempt?: boolean;        // legacy alias for ingredientStatus='exempt'
     ingredientStatus?: 'required' | 'optional' | 'exempt'; // Required (in math) | Optional (cook may omit, not in math) | Exempt (no NDB, not in math)
     isDish?: boolean;        // marks the synthesized dish-level row (Rule A/B/C)
     section?: string;        // v3 §18: section_key linking ingredient to a recipe section (cooking math FK)
@@ -205,6 +206,12 @@
     cookingMethod: string;  // Bake | Boil | Grill | Fry | No heat
     cookMinutes?: number;         // Primary cook time in minutes (recipe-level)
     cookTempF?: number;           // Oven temperature °F (recipe-level, Bake only)
+    cook2Method?: string;
+    cook2Minutes?: number;
+    cook2TempF?: number;
+    cook3Method?: string;
+    cook3Minutes?: number;
+    cook3TempF?: number;
     category: string;
     dietaryCategory: DietaryCategory;
     submitterName: string;
@@ -397,6 +404,22 @@
   let cookMinutes = $state<number | undefined>(initialData.cookMinutes);
   let cookTempF = $state<number | undefined>(initialData.cookTempF);
   let fillClass = $state<string>(initialData.fillClass ?? '');
+  const _initCook2 = initialData.cook2Method ?? '';
+  const _matchedCook2 = COOKING_METHODS.find(m => m.toLowerCase() === normalizeCookMethodLabel(_initCook2).toLowerCase());
+  let cook2Method = $state<string>(_matchedCook2 ?? '');
+  let cook2Minutes = $state<number | undefined>(initialData.cook2Minutes);
+  let cook2TempF = $state<number | undefined>(initialData.cook2TempF);
+  let cook2FillClass = $state<string>(initialData.cook2FillClass ?? '');
+  const _initCook3 = initialData.cook3Method ?? '';
+  const _matchedCook3 = COOKING_METHODS.find(m => m.toLowerCase() === normalizeCookMethodLabel(_initCook3).toLowerCase());
+  let cook3Method = $state<string>(_matchedCook3 ?? '');
+  let cook3Minutes = $state<number | undefined>(initialData.cook3Minutes);
+  let cook3TempF = $state<number | undefined>(initialData.cook3TempF);
+  let cook3FillClass = $state<string>(initialData.cook3FillClass ?? '');
+  const _hasInitialStage2 = initialData.sections?.some((section) => section.primaryEntryStage === '2') ?? false;
+  const _hasInitialStage3 = initialData.sections?.some((section) => section.primaryEntryStage === '3') ?? false;
+  let showCook2 = $state(Boolean(cook2Method || cook2Minutes != null || cook2TempF != null || cook2FillClass || _hasInitialStage2 || _hasInitialStage3));
+  let showCook3 = $state(Boolean(cook3Method || cook3Minutes != null || cook3TempF != null || cook3FillClass || _hasInitialStage3));
   let cookHelpOpen = $state(false);
   let dishFamily = $state(initialData.dishFamily || '');
   let category = $state(toStoredRecipeCategory(initialData.category));
@@ -998,6 +1021,8 @@
     return JSON.stringify({
       servings: servings.trim(),
       cookingMethod,
+        cook2Method,
+        cook3Method,
       linkMode,
       ingredients: ingredientSignature,
       dishLink: dishLink
@@ -1053,8 +1078,16 @@
       // all endpoints receive a number they can pass to buildRecipeCommunityV3.
       servings: parseServingsCount(servings) ?? 1,
       cookingMethod,
+      cook2Method: cook2Method || undefined,
+      cook2Minutes: cook2Minutes ?? undefined,
+      cook2TempF: cook2TempF ?? undefined,
+      cook3Method: cook3Method || undefined,
+      cook3Minutes: cook3Minutes ?? undefined,
+      cook3TempF: cook3TempF ?? undefined,
       dishCookMethod: cookingMethod || undefined,
       ...(fillClass ? { fillClass } : {}),
+      ...(cook2FillClass ? { cook2FillClass } : {}),
+      ...(cook3FillClass ? { cook3FillClass } : {}),
       // Include section metadata so preview-nutrition can run V3 with per-section
       // cook methods and yield factors instead of the flat SR28 fallback.
       ...(hasSections ? {
@@ -1183,6 +1216,8 @@
     portionDesc?: string;
     isDish?: boolean;
     componentRef?: string;
+    discarded?: boolean;
+    discardPercent?: number;
   };
   type V3Build = {
     recipe_id: string;
@@ -1194,6 +1229,17 @@
     yieldFactorFat?: number;
     srRule?: string;
     cookMethod?: string;
+    cookMinutes?: number | null;
+    cookTempF?: number | null;
+    fillClass?: string;
+    cook2Method?: string;
+    cook2Minutes?: number | null;
+    cook2TempF?: number | null;
+    cook3Method?: string;
+    cook3Minutes?: number | null;
+    cook3TempF?: number | null;
+    cook2FillClass?: string;
+    cook3FillClass?: string;
     auditStatus?: string;
     auditNotes?: string;
     ingredients?: V3Ingredient[];
@@ -1287,6 +1333,34 @@
               if (typeof data.cookTempF   === 'number') cookTempF   = data.cookTempF;
               if (typeof data.fillClass   === 'string') fillClass   = data.fillClass;
             }
+            if (data.cook2Method) {
+              const norm = normalizeCookMethodLabel(data.cook2Method);
+              const match = COOKING_METHODS.find(m => m.toLowerCase() === norm.toLowerCase());
+              if (match) cook2Method = match;
+              if (typeof data.cook2Minutes === 'number') cook2Minutes = data.cook2Minutes;
+              if (typeof data.cook2TempF   === 'number') cook2TempF   = data.cook2TempF;
+              showCook2 = true;
+            }
+            if (typeof data.cook2FillClass === 'string') {
+              cook2FillClass = data.cook2FillClass;
+              if (data.cook2FillClass) showCook2 = true;
+            }
+            if (data.cook3Method) {
+              const norm = normalizeCookMethodLabel(data.cook3Method);
+              const match = COOKING_METHODS.find(m => m.toLowerCase() === norm.toLowerCase());
+              if (match) cook3Method = match;
+              if (typeof data.cook3Minutes === 'number') cook3Minutes = data.cook3Minutes;
+              if (typeof data.cook3TempF   === 'number') cook3TempF   = data.cook3TempF;
+              showCook2 = true;
+              showCook3 = true;
+            }
+            if (typeof data.cook3FillClass === 'string') {
+              cook3FillClass = data.cook3FillClass;
+              if (data.cook3FillClass) {
+                showCook2 = true;
+                showCook3 = true;
+              }
+            }
           }
         }
         // Composite recipes (Rule D) reference child recipes via `component_ref`
@@ -1294,9 +1368,10 @@
         // pre-expanded children (from levelToFormData) to populate the editor.
         const v3LeafIngredients = (data.ingredients ?? []).filter((ing) => !ing.componentRef);
         if (v3LeafIngredients.length > 0) {
-          const ndbToFood = new Map(FOODS.map(f => [f.ndb, f]));
+          const ndbToFood = new Map(FOODS.map(f => [String(f.ndb), f]));
           ingredients = v3LeafIngredients.map((ing, i) => {
-            const food = ndbToFood.get(ing.ndbNo);
+            const ndbNo = String(ing.ndbNo);
+            const food = ndbToFood.get(ndbNo);
             return {
               id: i + 1,
               name: ing.name,
@@ -1304,7 +1379,7 @@
               gameFood: '' as FoodType | '',
               animal: '' as AnimalType | '',
               foodWord: food?.word ?? ing.foodWord,
-              ndbNo: ing.ndbNo,
+              ndbNo,
               portionDesc: ing.quantity || `${(ing.portionGrams ?? 0).toFixed(1)} g`,
               portionGrams: ing.portionGrams,
               servingCount: 1,
@@ -1490,6 +1565,33 @@
       section: sectionKey
     }];
   }
+
+  function additionalIngredientsSectionKey(stage: 2 | 3): string {
+    return `additional_ingredients_${stage}`;
+  }
+
+  function ensureAdditionalIngredientsSection(stage: 2 | 3): string {
+    const key = additionalIngredientsSectionKey(stage);
+    if (!sections.some((section) => section.key === key)) {
+      sections = [
+        ...sections,
+        {
+          key,
+          label: `Additional Ingredients ${stage}`,
+          prepMethod: 'none',
+          cookingMethod: 'raw',
+          yieldFactorWater: 1.0,
+          primaryEntryStage: String(stage),
+        },
+      ];
+    }
+    return key;
+  }
+
+  function addAdditionalIngredients(stage: 2 | 3) {
+    const key = ensureAdditionalIngredientsSection(stage);
+    addIngredientToSection(key);
+  }
   
   function removeIngredient(id: number) {
     if (ingredients.length > 1) {
@@ -1599,6 +1701,14 @@
       cookMinutes: cookMinutes ?? undefined,
       cookTempF: cookTempF ?? undefined,
       fillClass: fillClass || undefined,
+      cook2Method: cook2Method || undefined,
+      cook2Minutes: cook2Minutes ?? undefined,
+      cook2TempF: cook2TempF ?? undefined,
+      cook2FillClass: cook2FillClass || undefined,
+      cook3Method: cook3Method || undefined,
+      cook3Minutes: cook3Minutes ?? undefined,
+      cook3TempF: cook3TempF ?? undefined,
+      cook3FillClass: cook3FillClass || undefined,
       dishFamily: dishFamily || undefined,
       category,
       dietaryCategory,
@@ -1715,6 +1825,15 @@
     cookingMethod?: string | null;
     cookMinutes?: number;
     cookTempF?: number;
+    fillClass?: string;
+    cook2Method?: string | null;
+    cook2Minutes?: number;
+    cook2TempF?: number;
+    cook2FillClass?: string;
+    cook3Method?: string | null;
+    cook3Minutes?: number;
+    cook3TempF?: number;
+    cook3FillClass?: string;
     nutritionJson?: PersistedNutritionJson | null;
     sections?: unknown[] | null;
   }
@@ -1786,8 +1905,8 @@
         // v3-build direct ingredients carry qty_display (e.g. "4 large eggs")
         (ing as { qty_display?: string }).qty_display ??
         // component_ref children have no qty_display — fall back to gram weight
-        (typeof (ing as { grams?: unknown }).grams === 'number'
-          ? `${(ing as { grams: number }).grams}g`
+        (typeof (ing as Record<string, unknown>).grams === 'number'
+          ? `${(ing as Record<string, number>).grams}g`
           : undefined) ??
         '',
       gameFood: (ing as RecipeIngredient).gameFood,
@@ -2005,6 +2124,46 @@
       const match = COOKING_METHODS.find(m => m.toLowerCase() === norm.toLowerCase());
       if (match) cookingMethod = match;
     }
+    if (suggestion.cook2Method) {
+      const norm = normalizeCookMethodLabel(suggestion.cook2Method);
+      const match = COOKING_METHODS.find(m => m.toLowerCase() === norm.toLowerCase());
+      if (match) cook2Method = match;
+      showCook2 = true;
+    }
+    if (typeof suggestion.cook2Minutes === 'number') {
+      cook2Minutes = suggestion.cook2Minutes;
+      showCook2 = true;
+    }
+    if (typeof suggestion.cook2TempF === 'number') {
+      cook2TempF = suggestion.cook2TempF;
+      showCook2 = true;
+    }
+    if ((suggestion as any).cook2FillClass) {
+      cook2FillClass = (suggestion as any).cook2FillClass;
+      showCook2 = true;
+    }
+    if (suggestion.cook3Method) {
+      const norm = normalizeCookMethodLabel(suggestion.cook3Method);
+      const match = COOKING_METHODS.find(m => m.toLowerCase() === norm.toLowerCase());
+      if (match) cook3Method = match;
+      showCook2 = true;
+      showCook3 = true;
+    }
+    if (typeof suggestion.cook3Minutes === 'number') {
+      cook3Minutes = suggestion.cook3Minutes;
+      showCook2 = true;
+      showCook3 = true;
+    }
+    if (typeof suggestion.cook3TempF === 'number') {
+      cook3TempF = suggestion.cook3TempF;
+      showCook2 = true;
+      showCook3 = true;
+    }
+    if ((suggestion as any).cook3FillClass) {
+      cook3FillClass = (suggestion as any).cook3FillClass;
+      showCook2 = true;
+      showCook3 = true;
+    }
     suggestionsDismissed = true;
     // Load stored nutrition from the source recipe (comes from dev_recipes).
     persistedNutrition = suggestion.nutritionJson ?? null;
@@ -2020,6 +2179,14 @@
     cookingMethod,
     cookMinutes: cookMinutes ?? undefined,
     cookTempF: cookTempF ?? undefined,
+    cook2Method: cook2Method || undefined,
+    cook2Minutes: cook2Minutes ?? undefined,
+    cook2TempF: cook2TempF ?? undefined,
+    cook2FillClass: cook2FillClass || undefined,
+    cook3Method: cook3Method || undefined,
+    cook3Minutes: cook3Minutes ?? undefined,
+    cook3TempF: cook3TempF ?? undefined,
+    cook3FillClass: cook3FillClass || undefined,
     dishFamily: dishFamily || undefined,
     category,
     dietaryCategory,
@@ -3126,6 +3293,106 @@
         <button type="button" class="cook-help-btn" onclick={() => cookHelpOpen = true} title="How to fill in these fields">ⓘ</button>
       </div>
 
+      {#if !showCook2}
+        <button type="button" class="stage-cook-link" onclick={() => showCook2 = true}>Add second primary cook</button>
+      {:else}
+        <div class="primary-cook-bar primary-cook-bar-staged">
+          <button type="button" class="stage-additional-link" onclick={() => addAdditionalIngredients(2)}>Add additional ingredients2</button>
+          <label class="primary-cook-label">
+            <span class="primary-cook-name">Cook2 *</span>
+            <select bind:value={cook2Method} class="form-select primary-cook-select">
+              <option value="">— select —</option>
+              {#each COOKING_METHODS as m}
+                <option value={m}>{COOK_METHOD_DISPLAY[m] ?? m}</option>
+              {/each}
+            </select>
+          </label>
+          <label class="section-time-field" title="Second primary cook time in minutes">
+            <span class="section-time-label">{['Bake','Bake (covered)','Braise','Simmer','Sub-simmer'].includes(cook2Method) ? `${cook2Method} (min)` : 'Cook2 (min)'}</span>
+            <input
+              type="number" min="0" max="600" step="1" placeholder="–"
+              value={cook2Minutes ?? ''}
+              oninput={(e) => { const v = (e.currentTarget as HTMLInputElement).valueAsNumber; cook2Minutes = Number.isFinite(v) && v >= 0 ? v : undefined; }}
+              class="form-input time-number-input"
+            />
+          </label>
+          <label class="section-time-field" title="Second primary oven temperature °F">
+            <span class="section-time-label">Temp (°F)</span>
+            <input
+              type="number" min="200" max="600" step="25" placeholder="–"
+              value={cook2TempF ?? ''}
+              oninput={(e) => { const v = (e.currentTarget as HTMLInputElement).valueAsNumber; cook2TempF = Number.isFinite(v) && v > 0 ? v : undefined; }}
+              class="form-input time-number-input"
+            />
+          </label>
+          {#if moderatorMode}
+            <label class="primary-cook-label" title="Filling class used by the second primary cook">
+              <span class="primary-cook-name">Fill class</span>
+              <select bind:value={cook2FillClass} class="form-select primary-fill-select">
+                <option value="">— none —</option>
+                {#if cook2FillClass && !(cook2FillClass in BINDING)}
+                  <option value={cook2FillClass}>{cook2FillClass} — unknown current value</option>
+                {/if}
+                {#each FILL_CLASS_OPTIONS as option}
+                  <option value={option.key}>{option.label}</option>
+                {/each}
+              </select>
+            </label>
+          {/if}
+        </div>
+      {/if}
+
+      {#if showCook2}
+        {#if !showCook3}
+          <button type="button" class="stage-cook-link" onclick={() => showCook3 = true}>Add third primary cook</button>
+        {:else}
+          <div class="primary-cook-bar primary-cook-bar-staged">
+            <button type="button" class="stage-additional-link" onclick={() => addAdditionalIngredients(3)}>Add additional ingredients3</button>
+            <label class="primary-cook-label">
+              <span class="primary-cook-name">Cook3 *</span>
+              <select bind:value={cook3Method} class="form-select primary-cook-select">
+                <option value="">— select —</option>
+                {#each COOKING_METHODS as m}
+                  <option value={m}>{COOK_METHOD_DISPLAY[m] ?? m}</option>
+                {/each}
+              </select>
+            </label>
+            <label class="section-time-field" title="Third primary cook time in minutes">
+              <span class="section-time-label">{['Bake','Bake (covered)','Braise','Simmer','Sub-simmer'].includes(cook3Method) ? `${cook3Method} (min)` : 'Cook3 (min)'}</span>
+              <input
+                type="number" min="0" max="600" step="1" placeholder="–"
+                value={cook3Minutes ?? ''}
+                oninput={(e) => { const v = (e.currentTarget as HTMLInputElement).valueAsNumber; cook3Minutes = Number.isFinite(v) && v >= 0 ? v : undefined; }}
+                class="form-input time-number-input"
+              />
+            </label>
+            <label class="section-time-field" title="Third primary oven temperature °F">
+              <span class="section-time-label">Temp (°F)</span>
+              <input
+                type="number" min="200" max="600" step="25" placeholder="–"
+                value={cook3TempF ?? ''}
+                oninput={(e) => { const v = (e.currentTarget as HTMLInputElement).valueAsNumber; cook3TempF = Number.isFinite(v) && v > 0 ? v : undefined; }}
+                class="form-input time-number-input"
+              />
+            </label>
+            {#if moderatorMode}
+              <label class="primary-cook-label" title="Filling class used by the third primary cook">
+                <span class="primary-cook-name">Fill class</span>
+                <select bind:value={cook3FillClass} class="form-select primary-fill-select">
+                  <option value="">— none —</option>
+                  {#if cook3FillClass && !(cook3FillClass in BINDING)}
+                    <option value={cook3FillClass}>{cook3FillClass} — unknown current value</option>
+                  {/if}
+                  {#each FILL_CLASS_OPTIONS as option}
+                    <option value={option.key}>{option.label}</option>
+                  {/each}
+                </select>
+              </label>
+            {/if}
+          </div>
+        {/if}
+      {/if}
+
       {#if cookHelpOpen}
         <div class="cook-help-backdrop" onclick={() => cookHelpOpen = false} role="presentation">
           <div class="cook-help-dialog" onclick={(e) => e.stopPropagation()} role="dialog" aria-modal="true" aria-label="How to use the cook form fields">
@@ -3875,6 +4142,30 @@
   }
   .primary-cook-name {
     white-space: nowrap;
+  }
+  .primary-cook-bar-staged {
+    margin-left: 12px;
+    padding-left: 12px;
+    border-left: 2px solid #e2e8f0;
+  }
+  .stage-cook-link,
+  .stage-additional-link {
+    border: none;
+    background: none;
+    color: #2b6cb0;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 2px 0;
+  }
+  .stage-cook-link {
+    margin: 0 0 8px 2px;
+  }
+  .stage-additional-link {
+    white-space: nowrap;
+  }
+  .stage-cook-link:hover,
+  .stage-additional-link:hover {
+    text-decoration: underline;
   }
   .cook-help-btn {
     background: none;
