@@ -113,10 +113,10 @@ export interface Level {
   category: string;
   dietaryCategory: DietaryCategory; // Dietary restriction this recipe fits
   levelNum: number;
-  recipe: FoodType[];
+  recipe: string[];
   tools: Tool[];
   animalSpawns: { type: AnimalType; delay: number }[];
-  foodSupply: Record<FoodType, number>; // -1 for unlimited
+  foodSupply: Record<string, number>; // -1 for unlimited
   // Recipe details (revealed when level is completed)
   recipeInstructions?: string[];  // Step-by-step cooking instructions
   recipeIngredients?: {           // Full ingredient list with quantities and optional nutrition links
@@ -131,6 +131,7 @@ export interface Level {
     exempt?: boolean;       // true = no nutrition link needed (e.g. salt, water)
     isDish?: boolean;       // true = this row is the dish-level USDA entry
     componentRef?: string;  // child recipe id when this row is a composite component reference (e.g. 'BKFST_001')
+    cookSection?: string;   // optional math section override; display still uses section
     is_optional?: boolean;  // true = moderator-added optional ingredient (excluded from nutrition math)
     discarded?: boolean;    // true = ingredient is displayed but partly/fully discarded before eating
     discardPercent?: number; // 0-100 percentage discarded; defaults to 100 when discarded is true
@@ -152,12 +153,14 @@ export interface Level {
   isCommunityRecipe?: boolean;    // True if this is a community-submitted recipe
   submittedBy?: string;           // Submitter player ID for community recipes
   linkType?: 'ingredient' | 'dish' | 'mixed' | 'builtin' | 'cocktail' | 'component';  // How ingredients were USDA-linked
+  plausibilityFlags?: string[] | null; // community nutrition plausibility flags
   sr28Rule?: 'Rule A' | 'Rule B' | 'Rule C' | 'Rule D' | 'Rule F' | 'Rule G'; // Nutrient data confidence tier
   nutritionJson?: NutritionJson | null;         // Per-serving nutrients (null = unlinked)
   cookMinutes?: number;           // top-bar primary cook time (from dev_recipes.cook_minutes)
   cookTempF?: number;             // top-bar primary cook temp °F (from dev_recipes.cook_temp_f)
   sections?: {                    // Per-section cooking breakdown (v3 §18; multi-stage recipes only)
     key: string;                  // matches recipeIngredients[].section
+    section_key?: string;         // Turso/build.py snake_case equivalent of key
     label: string;                // human label, e.g. "Pie crust"
     cookingMethod: string;        // 'baked' | 'boiled' | 'raw' | 'steamed' | 'fried' | 'grilled' | 'microwave'
     yieldFactorWater?: number;

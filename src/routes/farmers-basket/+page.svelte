@@ -773,15 +773,16 @@
     <div class="recipe-display">
       <span class="recipe-label">Collect:</span>
       {#each game.currentLevel?.recipe ?? [] as food, i}
-        {@const isCollected = collectedFood.filter(f => f === food).length > collectedFood.slice(0, collectedFood.indexOf(food)).filter(f => f === food).length || collectedFood.includes(food)}
-        {@const isStolen = recentlyStolen.includes(food) && !collectedFood.includes(food)}
+        {@const playableFood = food as FoodType}
+        {@const isCollected = collectedFood.filter(f => f === playableFood).length > collectedFood.slice(0, collectedFood.indexOf(playableFood)).filter(f => f === playableFood).length || collectedFood.includes(playableFood)}
+        {@const isStolen = recentlyStolen.includes(playableFood) && !collectedFood.includes(playableFood)}
         <span 
           class="recipe-item" 
-          class:collected={collectedFood.includes(food)}
+          class:collected={collectedFood.includes(playableFood)}
           class:stolen={isStolen}
         >
           <FoodIcon {food} size={24} />
-          {#if collectedFood.includes(food)}
+          {#if collectedFood.includes(playableFood)}
             <span class="check">✓</span>
           {:else if isStolen}
             <span class="stolen-mark">!</span>

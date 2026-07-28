@@ -1127,7 +1127,7 @@ export function createGameState() {
     
     // Check each recipe item is in basket
     const allCollected = recipe.every(recipeItem => 
-      inBasket.includes(recipeItem)
+      inBasket.includes(recipeItem as FoodType)
     );
     
     if (allCollected && recipe.length > 0 && gameStatus === 'playing') {
@@ -1163,11 +1163,12 @@ export function createGameState() {
     
     // Check each recipe item - can we still get it?
     for (const recipeItem of recipe) {
-      if (inBasket.includes(recipeItem)) continue; // Already have it
+      const foodType = recipeItem as FoodType;
+      if (inBasket.includes(foodType)) continue; // Already have it
       if (carrying === recipeItem) continue; // Carrying it
       
       // Check if any source has this item remaining
-      const source = foodSources.find(s => s.type === recipeItem);
+      const source = foodSources.find(s => s.type === foodType);
       if (!source || source.remaining <= 0) {
         // Can't get this item anymore - lose!
         gameStatus = 'lost';

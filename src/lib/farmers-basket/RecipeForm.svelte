@@ -20,7 +20,7 @@
     id: number;
     name: string;
     quantity: string;
-    gameFood?: FoodType | '';
+    gameFood?: string;
     animal?: AnimalType | '';
     // Nutrition linking
     foodWord?: string;       // key into food-portions.ts e.g. "BEEFGROUND"
@@ -33,6 +33,7 @@
     isDish?: boolean;        // marks the synthesized dish-level row (Rule A/B/C)
     section?: string;        // v3 §18: section_key linking ingredient to a recipe section (cooking math FK)
     ingredient_group?: string; // v3 §19: display-only sub-label within a section (e.g. 'crust', 'filling')
+    is_optional?: boolean;
     /** Dev or community recipe used as a sub-recipe ingredient. Set instead of ndbNo. */
     componentRef?: string;
     /** Full 150-nutrient per-100g panel for the component_ref recipe. Stored alongside componentRef. */
@@ -1905,8 +1906,8 @@
         // v3-build direct ingredients carry qty_display (e.g. "4 large eggs")
         (ing as { qty_display?: string }).qty_display ??
         // component_ref children have no qty_display — fall back to gram weight
-        (typeof (ing as Record<string, unknown>).grams === 'number'
-          ? `${(ing as Record<string, number>).grams}g`
+        (typeof (ing as unknown as Record<string, unknown>).grams === 'number'
+          ? `${(ing as unknown as Record<string, number>).grams}g`
           : undefined) ??
         '',
       gameFood: (ing as RecipeIngredient).gameFood,

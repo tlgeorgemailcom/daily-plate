@@ -27,6 +27,7 @@ export interface Food {
   fib: number;      // Fiber (g)
   h2o: number;      // Water (g)
   sug: number;      // Total Sugar (g)
+  micros?: Record<string, number | null>; // Recipe results may carry Turso per-100g micronutrients
   portions: Portion[];  // [0] is always custom (100g base)
 }
 

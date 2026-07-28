@@ -455,7 +455,7 @@
         sr28Rule: r.sr28Rule ?? null,
         isCommunityRecipe: r.isCommunityRecipe ?? r.type === 'community',
         recipeOrigin: r.recipeOrigin ?? null,
-        micros: r.micros ?? null,
+        micros: r.micros ?? undefined,
       }));
     } catch {
       if (loadVersion === recipeLoadVersion) {

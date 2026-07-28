@@ -130,6 +130,7 @@ export const COOKING_RETENTION: Record<CookingMethod, Partial<Record<string, num
   // ── raw ─────────────────────────────────────────────────────────────────────
   // No heat. All factors 1.0 — represented as empty object.
   raw: {},
+  finish: {},
 
   // ── boiled ──────────────────────────────────────────────────────────────────
   // SR28 source: NDB 1123 (raw whole egg) → NDB 1129 (hard-boiled)

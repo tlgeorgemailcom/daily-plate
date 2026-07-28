@@ -6,10 +6,8 @@
    *   <FoodIcon food="chicken" size={32} />
    *   <FoodIcon food="lettuce" size={24} />
    */
-  import type { FoodType } from './types';
-
   interface Props {
-    food: FoodType;
+    food: string;
     size?: number;
     class?: string;
   }
@@ -17,10 +15,10 @@
   let { food, size = 32, class: className = '' }: Props = $props();
 
   // Foods that use custom SVG icons (no good emoji exists)
-  const SVG_FOODS: Set<FoodType> = new Set(['chicken', 'fish']);
+  const SVG_FOODS: Set<string> = new Set(['chicken', 'fish']);
 
   // Foods that use emoji (good emoji exists)
-  const EMOJI_MAP: Partial<Record<FoodType, string>> = {
+  const EMOJI_MAP: Record<string, string> = {
     lettuce: '🥬',
     tomato: '🍅',
     carrot: '🥕',
@@ -30,7 +28,9 @@
     apple: '🍎',
     grapes: '🍇',
     bacon: '🥓',
-    butter: '🧈'
+    butter: '🧈',
+    sausage: '🌭',
+    pork: '🥓'
   };
 
   // Future expansion - more SVG icons available:
