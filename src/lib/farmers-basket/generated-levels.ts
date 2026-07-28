@@ -23,7 +23,7 @@ export const LEVELS: Level[] = [
     prepTime: '45 min',
     linkType: 'dish',
     sr28Rule: 'Rule C',
-    nutritionJson: {"cal":416.9,"pro":3.8,"fat":18.9,"carb":58.6,"fib":3.8,"h2o":82.0,"sug":25.8,"perServing":{"cal":416.9,"pro":3.8,"fat":18.9,"carb":58.6,"fib":3.8,"h2o":82.0,"sug":25.8,"AddedSugars":16.6,"IntrinsicSugars":9.1},"micros":{"vitaminA":33.01,"vitaminC":0.14,"vitaminD":0.0,"vitaminE":0.6,"vitaminK":5.1,"vitaminB6":0.01,"vitaminB12":0.01,"thiamin":0.11,"riboflavin":0.1,"niacin":1.0,"folate":29.02,"calcium":10.45,"iron":1.01,"magnesium":7.37,"phosphorus":28.41,"potassium":80.75,"sodium":135.28,"zinc":0.17,"copper":0.05,"selenium":6.71,"cholesterol":11.61,"saturatedFat":4.47,"monoFat":4.1,"polyFat":1.62,"omega3":0.01,"omega6":0.1},"gramsPerServing":164.4,"servings":8,"per100g":{"Energy_KCal":253.63,"Water":49.89,"Protein":2.3,"TotalLipidFat":11.53,"Carbohydrate":35.64,"FiberTotalDietary":2.33,"SugarsTotal":15.68,"Cholesterol":11.61,"FattyAcids_totalSaturated":4.47,"FattyAcids_totalMonounsaturated":4.1,"FattyAcids_totalPolyunsaturated":1.62,"LinoleicAcid":0.1,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":33.01,"Retinol":30.18,"Carotene_beta":31.29,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.6,"VitaminK_phylloquinone":5.1,"VitaminC_totalAscorbicAcid":0.14,"Thiamin":0.11,"Riboflavin":0.1,"Niacin":1.0,"PantothenicAcid":0.09,"VitaminB6":0.01,"Folate_total":29.02,"Folate_food":5.6,"Folate_DFE":44.56,"FolicAcid":29.28,"VitaminB12":0.01,"Choline_total":2.5,"Betaine":0.01,"LuteinZeaxanthin":30.0,"Lycopene":0.02,"Calcium_Ca":10.45,"Iron_Fe":1.01,"Magnesium_Mg":7.37,"Phosphorus_P":28.41,"Potassium_K":80.75,"Sodium_Na":135.28,"Zinc_Zn":0.17,"Copper_Cu":0.05,"Manganese_Mn":0.28,"Selenium_Se":6.71,"Tryptophan":0.02,"Threonine":0.06,"Isoleucine":0.07,"Leucine":0.14,"Lysine":0.05,"Methionine":0.04,"Cystine":0.04,"Phenylalanine":0.1,"Tyrosine":0.06,"Valine":0.08,"Arginine":0.08,"Histidine":0.05,"Alanine":0.06,"AsparticAcid":0.09,"GlutamicAcid":0.67,"Glycine":0.07,"Proline":0.23,"Serine":0.1,"omega3":0.01,"omega6":0.1,"AddedSugars":10.12,"IntrinsicSugars":5.56},"addedSugars":16.6,"intrinsicSugars":9.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"18302","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":31.2},{"ndb":"2047","name":"Salt, table","grams":0.6},{"ndb":"1145","name":"Butter, without salt","grams":7.1},{"ndb":"4031","name":"Shortening, household, soybean (partially hydrogenated)-cottonseed (partially hydrogenated)","grams":11.2},{"ndb":"14411","name":"Water, tap, drinking","grams":9.3},{"ndb":"9502","name":"Apples, raw, granny smith, with skin","grams":93.8},{"ndb":"19335","name":"Sugars, granulated","grams":16.7},{"ndb":"9152","name":"Lemon juice, raw","grams":1.9},{"ndb":"1145","name":"Butter, without salt","grams":1.8},{"ndb":"20027","name":"Cornstarch","grams":5.0},{"ndb":"2010","name":"Spices, cinnamon, ground","grams":0.3},{"ndb":"2011","name":"Spices, cloves, ground","grams":0.3},{"ndb":"2001","name":"Spices, allspice, ground","grams":0.2},{"ndb":"14411","name":"Water, tap, drinking","grams":7.4}],"sections":[{"section_key":"crust","section_label":"Pie crust","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.708612701357834,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":474.96,"raw_water_grams":113.99,"raw_fat_grams":138.12,"raw_protein_grams":26.31,"raw_carb_grams":190.81,"raw_fiber_grams":6.75,"final_grams":441.75,"boil_minutes":0,"cook_stages":[{"tempF":425,"minutes":15},{"tempF":350,"minutes":37}],"fill_class":"pastry"},{"section_key":"filling","section_label":"Apple filling","prep_method":"simmer","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.798195285171013,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":1018.63,"raw_water_grams":720.76,"raw_fat_grams":13.47,"raw_protein_grams":3.92,"raw_carb_grams":277.79,"raw_fiber_grams":23.91,"final_grams":873.18,"boil_minutes":5.0,"cook_stages":[{"tempF":425,"minutes":15},{"tempF":350,"minutes":37}],"fill_class":"thickened_fruit"}],"cookingMethod":"baked","cookMinutes":52},
+    nutritionJson: {"cal":416.9,"pro":3.8,"fat":18.9,"carb":58.6,"fib":3.8,"h2o":82.8,"sug":25.8,"perServing":{"cal":416.9,"pro":3.8,"fat":18.9,"carb":58.6,"fib":3.8,"h2o":82.8,"sug":25.8,"AddedSugars":16.6,"IntrinsicSugars":9.1},"micros":{"vitaminA":32.85,"vitaminC":0.14,"vitaminD":0.0,"vitaminE":0.59,"vitaminK":5.08,"vitaminB6":0.01,"vitaminB12":0.01,"thiamin":0.11,"riboflavin":0.1,"niacin":0.99,"folate":28.88,"calcium":10.4,"iron":1.0,"magnesium":7.34,"phosphorus":28.28,"potassium":80.37,"sodium":134.64,"zinc":0.17,"copper":0.05,"selenium":6.68,"cholesterol":11.55,"saturatedFat":4.45,"monoFat":4.08,"polyFat":1.61,"omega3":0.01,"omega6":0.1},"gramsPerServing":165.1,"servings":8,"per100g":{"Energy_KCal":252.44,"Water":50.13,"Protein":2.29,"TotalLipidFat":11.47,"Carbohydrate":35.47,"FiberTotalDietary":2.32,"SugarsTotal":15.61,"Cholesterol":11.55,"FattyAcids_totalSaturated":4.45,"FattyAcids_totalMonounsaturated":4.08,"FattyAcids_totalPolyunsaturated":1.61,"LinoleicAcid":0.1,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":32.85,"Retinol":30.04,"Carotene_beta":31.14,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.59,"VitaminK_phylloquinone":5.08,"VitaminC_totalAscorbicAcid":0.14,"Thiamin":0.11,"Riboflavin":0.1,"Niacin":0.99,"PantothenicAcid":0.09,"VitaminB6":0.01,"Folate_total":28.88,"Folate_food":5.57,"Folate_DFE":44.35,"FolicAcid":29.14,"VitaminB12":0.01,"Choline_total":2.49,"Betaine":0.01,"LuteinZeaxanthin":29.86,"Lycopene":0.02,"Calcium_Ca":10.4,"Iron_Fe":1.0,"Magnesium_Mg":7.34,"Phosphorus_P":28.28,"Potassium_K":80.37,"Sodium_Na":134.64,"Zinc_Zn":0.17,"Copper_Cu":0.05,"Manganese_Mn":0.28,"Selenium_Se":6.68,"Tryptophan":0.02,"Threonine":0.06,"Isoleucine":0.07,"Leucine":0.14,"Lysine":0.05,"Methionine":0.04,"Cystine":0.04,"Phenylalanine":0.1,"Tyrosine":0.06,"Valine":0.08,"Arginine":0.08,"Histidine":0.05,"Alanine":0.06,"AsparticAcid":0.09,"GlutamicAcid":0.67,"Glycine":0.07,"Proline":0.23,"Serine":0.1,"omega3":0.01,"omega6":0.1,"AddedSugars":10.07,"IntrinsicSugars":5.54},"addedSugars":16.6,"intrinsicSugars":9.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"18302","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":31.2},{"ndb":"2047","name":"Salt, table","grams":0.6},{"ndb":"1145","name":"Butter, without salt","grams":7.1},{"ndb":"4031","name":"Shortening, household, soybean (partially hydrogenated)-cottonseed (partially hydrogenated)","grams":11.2},{"ndb":"14411","name":"Water, tap, drinking","grams":9.3},{"ndb":"9502","name":"Apples, raw, granny smith, with skin","grams":93.8},{"ndb":"19335","name":"Sugars, granulated","grams":16.7},{"ndb":"9152","name":"Lemon juice, raw","grams":1.9},{"ndb":"1145","name":"Butter, without salt","grams":1.8},{"ndb":"20027","name":"Cornstarch","grams":5.0},{"ndb":"2010","name":"Spices, cinnamon, ground","grams":0.3},{"ndb":"2011","name":"Spices, cloves, ground","grams":0.3},{"ndb":"2001","name":"Spices, allspice, ground","grams":0.2},{"ndb":"14411","name":"Water, tap, drinking","grams":7.4}],"sections":[{"section_key":"crust","section_label":"Pie crust","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.708612701357834,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":474.96,"raw_water_grams":113.99,"raw_fat_grams":138.12,"raw_protein_grams":26.31,"raw_carb_grams":190.81,"raw_fiber_grams":6.75,"final_grams":441.75,"boil_minutes":0,"cook_stages":[{"tempF":425,"minutes":15},{"tempF":350,"minutes":37}],"fill_class":"pastry"},{"section_key":"filling","section_label":"Apple filling","prep_method":"simmer","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.8068313949247137,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":1018.63,"raw_water_grams":720.76,"raw_fat_grams":13.47,"raw_protein_grams":3.92,"raw_carb_grams":277.79,"raw_fiber_grams":23.91,"final_grams":879.4,"boil_minutes":5.0,"cook_stages":[{"tempF":425,"minutes":15},{"tempF":350,"minutes":37}],"fill_class":"thickened_fruit"}],"cookingMethod":"baked","cookMinutes":52},
     recipeIngredients: [
       { name: 'Pie, apple, prepared from recipe', quantity: 'custom (g)', foodWord: 'APPLEPIE', ndbNo: '18302', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'all-purpose enriched unbleached white flour', quantity: '2 cups', section: 'crust', ndbNo: '20581', portionDesc: 'g', portionGrams: 250.0 },
@@ -51,8 +51,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'raw', stages: [{ tempF: 425, minutes: 15 }, { tempF: 350, minutes: 37 }] },
-      { key: 'filling', label: 'Apple filling', cookingMethod: 'baked', prepMethod: 'simmer', stages: [{ tempF: 425, minutes: 15 }, { tempF: 350, minutes: 37 }], boilMinutes: 5 }
+      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'raw', stages: [{ tempF: 425, minutes: 15 }, { tempF: 350, minutes: 37 }], fillClass: 'pastry' },
+      { key: 'filling', label: 'Apple filling', cookingMethod: 'baked', prepMethod: 'simmer', stages: [{ tempF: 425, minutes: 15 }, { tempF: 350, minutes: 37 }], boilMinutes: 5, fillClass: 'thickened_fruit' }
     ],
   },
   {
@@ -76,7 +76,7 @@ export const LEVELS: Level[] = [
     prepTime: '40 min',
     linkType: 'dish',
     sr28Rule: 'Rule A',
-    nutritionJson: {"cal":291.5,"pro":3.4,"fat":11.5,"carb":45.2,"fib":2.2,"h2o":31.6,"sug":27.9,"perServing":{"cal":291.5,"pro":3.4,"fat":11.5,"carb":45.2,"fib":2.2,"h2o":31.6,"sug":27.9,"AddedSugars":16.4,"IntrinsicSugars":11.4},"micros":{"vitaminA":28.07,"vitaminC":0.22,"vitaminD":3.51,"vitaminE":0.31,"vitaminK":5.76,"vitaminB6":0.03,"vitaminB12":0.05,"thiamin":0.09,"riboflavin":0.11,"niacin":1.03,"folate":16.74,"calcium":23.11,"iron":1.16,"magnesium":11.44,"phosphorus":46.6,"potassium":153.5,"sodium":140.01,"zinc":0.29,"copper":0.09,"selenium":8.68,"cholesterol":25.0,"saturatedFat":3.36,"monoFat":2.91,"polyFat":4.14,"omega3":0.01,"omega6":0.12},"gramsPerServing":92.5,"servings":12,"per100g":{"Energy_KCal":315.09,"Water":34.17,"Protein":3.62,"TotalLipidFat":12.46,"Carbohydrate":48.81,"FiberTotalDietary":2.41,"SugarsTotal":30.1,"Cholesterol":25.0,"FattyAcids_totalSaturated":3.36,"FattyAcids_totalMonounsaturated":2.91,"FattyAcids_totalPolyunsaturated":4.14,"LinoleicAcid":0.12,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":28.07,"Retinol":25.82,"Carotene_beta":25.12,"VitaminD":3.51,"VitaminE_alphaTocopherol":0.31,"VitaminK_phylloquinone":5.76,"VitaminC_totalAscorbicAcid":0.22,"Thiamin":0.09,"Riboflavin":0.11,"Niacin":1.03,"PantothenicAcid":0.11,"VitaminB6":0.03,"Folate_total":16.74,"Folate_food":5.42,"Folate_DFE":23.86,"FolicAcid":16.31,"VitaminB12":0.05,"Choline_total":16.64,"Betaine":0.05,"LuteinZeaxanthin":38.97,"Lycopene":0.0,"Calcium_Ca":23.11,"Iron_Fe":1.16,"Magnesium_Mg":11.44,"Phosphorus_P":46.6,"Potassium_K":153.5,"Sodium_Na":140.01,"Zinc_Zn":0.29,"Copper_Cu":0.09,"Manganese_Mn":0.21,"Selenium_Se":8.68,"Tryptophan":0.04,"Threonine":0.1,"Isoleucine":0.13,"Leucine":0.23,"Lysine":0.11,"Methionine":0.06,"Cystine":0.06,"Phenylalanine":0.16,"Tyrosine":0.09,"Valine":0.15,"Arginine":0.18,"Histidine":0.07,"Alanine":0.12,"AsparticAcid":0.18,"GlutamicAcid":0.92,"Glycine":0.11,"Proline":0.33,"Serine":0.17,"omega3":0.01,"omega6":0.12,"AddedSugars":17.75,"IntrinsicSugars":12.35},"addedSugars":16.4,"intrinsicSugars":11.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"18354","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"18211","name":"Puff pastry, frozen, ready-to-bake, baked","grams":20.4},{"ndb":"9502","name":"Apples, raw, granny smith, with skin","grams":45.2},{"ndb":"19335","name":"Sugars, granulated","grams":13.5},{"ndb":"19334","name":"Sugars, brown","grams":3.0},{"ndb":"9298","name":"Raisins, seedless","grams":11.2},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":1.3},{"ndb":"14411","name":"Water, tap, drinking","grams":4.9},{"ndb":"18079","name":"Bread crumbs, dry, grated, plain","grams":4.5},{"ndb":"1145","name":"Butter, without salt","grams":3.6},{"ndb":"9152","name":"Lemon juice, raw","grams":1.3},{"ndb":"2047","name":"Salt, table","grams":0.1},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":4.2}],"sections":[{"section_key":"pastry","section_label":"Puff pastry","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.787541109366465,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":245.0,"raw_water_grams":18.13,"raw_fat_grams":94.33,"raw_protein_grams":18.13,"raw_carb_grams":111.97,"raw_fiber_grams":3.68,"final_grams":241.15,"boil_minutes":0,"cook_stages":[{"tempF":375,"minutes":35}],"fill_class":"pastry"},{"section_key":"filling","section_label":"Apple-raisin filling","prep_method":"simmer","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.573087379177991,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":10,"raw_grams":1062.79,"raw_water_grams":570.69,"raw_fat_grams":39.25,"raw_protein_grams":15.78,"raw_carb_grams":429.57,"raw_fiber_grams":23.03,"final_grams":819.15,"boil_minutes":5.0,"cook_stages":[{"tempF":375,"minutes":35}],"fill_class":"strudel_fruit"},{"section_key":"finish","section_label":"Egg wash finish","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":50.0,"raw_water_grams":38.08,"raw_fat_grams":4.75,"raw_protein_grams":6.28,"raw_carb_grams":0.36,"raw_fiber_grams":0.0,"final_grams":50.0,"boil_minutes":0,"cook_stages":[],"fill_class":"none"}],"cookingMethod":"baked","cookMinutes":35},
+    nutritionJson: {"cal":291.5,"pro":3.4,"fat":11.5,"carb":45.2,"fib":2.2,"h2o":32.7,"sug":27.9,"perServing":{"cal":291.5,"pro":3.4,"fat":11.5,"carb":45.2,"fib":2.2,"h2o":32.7,"sug":27.9,"AddedSugars":16.4,"IntrinsicSugars":11.4},"micros":{"vitaminA":27.75,"vitaminC":0.22,"vitaminD":3.47,"vitaminE":0.3,"vitaminK":5.69,"vitaminB6":0.03,"vitaminB12":0.05,"thiamin":0.09,"riboflavin":0.11,"niacin":1.01,"folate":16.55,"calcium":22.85,"iron":1.15,"magnesium":11.31,"phosphorus":46.08,"potassium":151.78,"sodium":138.44,"zinc":0.29,"copper":0.09,"selenium":8.58,"cholesterol":24.72,"saturatedFat":3.32,"monoFat":2.88,"polyFat":4.1,"omega3":0.01,"omega6":0.12},"gramsPerServing":93.6,"servings":12,"per100g":{"Energy_KCal":311.56,"Water":34.91,"Protein":3.58,"TotalLipidFat":12.32,"Carbohydrate":48.26,"FiberTotalDietary":2.38,"SugarsTotal":29.77,"Cholesterol":24.72,"FattyAcids_totalSaturated":3.32,"FattyAcids_totalMonounsaturated":2.88,"FattyAcids_totalPolyunsaturated":4.1,"LinoleicAcid":0.12,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":27.75,"Retinol":25.53,"Carotene_beta":24.84,"VitaminD":3.47,"VitaminE_alphaTocopherol":0.3,"VitaminK_phylloquinone":5.69,"VitaminC_totalAscorbicAcid":0.22,"Thiamin":0.09,"Riboflavin":0.11,"Niacin":1.01,"PantothenicAcid":0.1,"VitaminB6":0.03,"Folate_total":16.55,"Folate_food":5.36,"Folate_DFE":23.59,"FolicAcid":16.12,"VitaminB12":0.05,"Choline_total":16.45,"Betaine":0.05,"LuteinZeaxanthin":38.54,"Lycopene":0.0,"Calcium_Ca":22.85,"Iron_Fe":1.15,"Magnesium_Mg":11.31,"Phosphorus_P":46.08,"Potassium_K":151.78,"Sodium_Na":138.44,"Zinc_Zn":0.29,"Copper_Cu":0.09,"Manganese_Mn":0.21,"Selenium_Se":8.58,"Tryptophan":0.04,"Threonine":0.1,"Isoleucine":0.13,"Leucine":0.23,"Lysine":0.11,"Methionine":0.06,"Cystine":0.06,"Phenylalanine":0.16,"Tyrosine":0.09,"Valine":0.15,"Arginine":0.17,"Histidine":0.07,"Alanine":0.12,"AsparticAcid":0.18,"GlutamicAcid":0.91,"Glycine":0.11,"Proline":0.33,"Serine":0.17,"omega3":0.01,"omega6":0.12,"AddedSugars":17.55,"IntrinsicSugars":12.21},"addedSugars":16.4,"intrinsicSugars":11.4,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"18354","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"18211","name":"Puff pastry, frozen, ready-to-bake, baked","grams":20.4},{"ndb":"9502","name":"Apples, raw, granny smith, with skin","grams":45.2},{"ndb":"19335","name":"Sugars, granulated","grams":13.5},{"ndb":"19334","name":"Sugars, brown","grams":3.0},{"ndb":"9298","name":"Raisins, seedless","grams":11.2},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":1.3},{"ndb":"14411","name":"Water, tap, drinking","grams":4.9},{"ndb":"18079","name":"Bread crumbs, dry, grated, plain","grams":4.5},{"ndb":"1145","name":"Butter, without salt","grams":3.6},{"ndb":"9152","name":"Lemon juice, raw","grams":1.3},{"ndb":"2047","name":"Salt, table","grams":0.1},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":4.2}],"sections":[{"section_key":"pastry","section_label":"Puff pastry","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.787541109366465,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":245.0,"raw_water_grams":18.13,"raw_fat_grams":94.33,"raw_protein_grams":18.13,"raw_carb_grams":111.97,"raw_fiber_grams":3.68,"final_grams":241.15,"boil_minutes":0,"cook_stages":[{"tempF":375,"minutes":35}],"fill_class":"pastry"},{"section_key":"filling","section_label":"Apple-raisin filling","prep_method":"simmer","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.5951433979795114,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":10,"raw_grams":1062.79,"raw_water_grams":570.69,"raw_fat_grams":39.25,"raw_protein_grams":15.78,"raw_carb_grams":429.57,"raw_fiber_grams":23.03,"final_grams":831.74,"boil_minutes":5.0,"cook_stages":[{"tempF":375,"minutes":35}],"fill_class":"strudel_fruit"},{"section_key":"finish","section_label":"Egg wash finish","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":50.0,"raw_water_grams":38.08,"raw_fat_grams":4.75,"raw_protein_grams":6.28,"raw_carb_grams":0.36,"raw_fiber_grams":0.0,"final_grams":50.0,"boil_minutes":0,"cook_stages":[],"fill_class":"none"}],"cookingMethod":"baked","cookMinutes":35},
     recipeIngredients: [
       { name: 'Strudel, apple', quantity: 'custom (g)', foodWord: 'APPLESTRUDEL', ndbNo: '18354', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'puff pastry sheet', quantity: '1 sheet', section: 'pastry', ndbNo: '18211', portionDesc: 'g', portionGrams: 245.0 },
@@ -105,9 +105,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'pastry', label: 'Puff pastry', cookingMethod: 'baked', prepMethod: 'raw', stages: [{ tempF: 375, minutes: 35 }] },
-      { key: 'filling', label: 'Apple-raisin filling', cookingMethod: 'baked', prepMethod: 'simmer', stages: [{ tempF: 375, minutes: 35 }], boilMinutes: 5 },
-      { key: 'finish', label: 'Egg wash finish', cookingMethod: 'baked', prepMethod: 'raw', yieldFactorWater: 1.0 }
+      { key: 'pastry', label: 'Puff pastry', cookingMethod: 'baked', prepMethod: 'raw', stages: [{ tempF: 375, minutes: 35 }], fillClass: 'pastry' },
+      { key: 'filling', label: 'Apple-raisin filling', cookingMethod: 'baked', prepMethod: 'simmer', stages: [{ tempF: 375, minutes: 35 }], boilMinutes: 5, fillClass: 'strudel_fruit' },
+      { key: 'finish', label: 'Egg wash finish', cookingMethod: 'baked', prepMethod: 'raw', yieldFactorWater: 1.0, fillClass: 'none' }
     ],
   },
   {
@@ -162,10 +162,10 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 425, minutes: 25 }] },
-      { key: 'filling', label: 'Vanilla custard filling', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 8 },
-      { key: 'assembly', label: 'Banana layer', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 },
-      { key: 'topping', label: 'Whipped cream topping', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
+      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 425, minutes: 25 }], fillClass: 'pastry' },
+      { key: 'filling', label: 'Vanilla custard filling', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 8, fillClass: 'dairy_custard' },
+      { key: 'assembly', label: 'Banana layer', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0, fillClass: 'none' },
+      { key: 'topping', label: 'Whipped cream topping', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0, fillClass: 'none' }
     ],
   },
   {
@@ -220,9 +220,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'raw', stages: [{ tempF: 425, minutes: 25 }, { tempF: 375, minutes: 55 }] },
-      { key: 'filling', label: 'Blueberry filling', cookingMethod: 'baked', prepMethod: 'raw', stages: [{ tempF: 425, minutes: 25 }, { tempF: 375, minutes: 55 }] },
-      { key: 'wash', label: 'Egg wash', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
+      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'raw', stages: [{ tempF: 425, minutes: 25 }, { tempF: 375, minutes: 55 }], fillClass: 'pastry' },
+      { key: 'filling', label: 'Blueberry filling', cookingMethod: 'baked', prepMethod: 'raw', stages: [{ tempF: 425, minutes: 25 }, { tempF: 375, minutes: 55 }], fillClass: 'thickened_fruit' },
+      { key: 'wash', label: 'Egg wash', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0, fillClass: 'none' }
     ],
   },
   {
@@ -277,9 +277,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'raw', stages: [{ tempF: 425, minutes: 25 }, { tempF: 375, minutes: 55 }] },
-      { key: 'filling', label: 'Cherry filling', cookingMethod: 'baked', prepMethod: 'simmer', stages: [{ tempF: 425, minutes: 25 }, { tempF: 375, minutes: 55 }], boilMinutes: 5 },
-      { key: 'wash', label: 'Egg wash', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
+      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'raw', stages: [{ tempF: 425, minutes: 25 }, { tempF: 375, minutes: 55 }], fillClass: 'pastry' },
+      { key: 'filling', label: 'Cherry filling', cookingMethod: 'baked', prepMethod: 'simmer', stages: [{ tempF: 425, minutes: 25 }, { tempF: 375, minutes: 55 }], boilMinutes: 5, fillClass: 'thickened_fruit' },
+      { key: 'wash', label: 'Egg wash', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0, fillClass: 'none' }
     ],
   },
   {
@@ -336,9 +336,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 425, minutes: 25 }] },
-      { key: 'filling', label: 'Lemon curd filling', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 9 },
-      { key: 'topping', label: 'Meringue topping', cookingMethod: 'baked', prepMethod: 'none', stages: [{ tempF: 350, minutes: 9 }] }
+      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 425, minutes: 25 }], fillClass: 'pastry' },
+      { key: 'filling', label: 'Lemon curd filling', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 9, fillClass: 'starch_custard' },
+      { key: 'topping', label: 'Meringue topping', cookingMethod: 'baked', prepMethod: 'none', stages: [{ tempF: 350, minutes: 9 }], fillClass: 'none' }
     ],
   },
   {
@@ -405,8 +405,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'raw', stages: [{ tempF: 425, minutes: 20 }, { tempF: 375, minutes: 33 }] },
-      { key: 'filling', label: 'Mincemeat filling', cookingMethod: 'baked', prepMethod: 'boiled', stages: [{ tempF: 425, minutes: 20 }, { tempF: 375, minutes: 33 }], boilMinutes: 30 },
+      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'raw', stages: [{ tempF: 425, minutes: 20 }, { tempF: 375, minutes: 33 }], fillClass: 'pastry' },
+      { key: 'filling', label: 'Mincemeat filling', cookingMethod: 'baked', prepMethod: 'boiled', stages: [{ tempF: 425, minutes: 20 }, { tempF: 375, minutes: 33 }], boilMinutes: 30, fillClass: 'mincemeat' },
       { key: 'wash', label: 'Egg wash', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
@@ -467,9 +467,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'raw', stages: [{ tempF: 425, minutes: 20 }, { tempF: 375, minutes: 27 }] },
-      { key: 'filling', label: 'Peach filling', cookingMethod: 'baked', prepMethod: 'simmer', stages: [{ tempF: 425, minutes: 20 }, { tempF: 375, minutes: 27 }], boilMinutes: 10 },
-      { key: 'wash', label: 'Egg wash', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
+      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'raw', stages: [{ tempF: 425, minutes: 20 }, { tempF: 375, minutes: 27 }], fillClass: 'pastry' },
+      { key: 'filling', label: 'Peach filling', cookingMethod: 'baked', prepMethod: 'simmer', stages: [{ tempF: 425, minutes: 20 }, { tempF: 375, minutes: 27 }], boilMinutes: 10, fillClass: 'moderate_fruit' },
+      { key: 'wash', label: 'Egg wash', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0, fillClass: 'none' }
     ],
   },
   {
@@ -523,8 +523,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'raw', stages: [{ tempF: 350, minutes: 55 }] },
-      { key: 'filling', label: 'Pecan custard filling', cookingMethod: 'baked', prepMethod: 'raw', stages: [{ tempF: 350, minutes: 55 }] }
+      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'raw', stages: [{ tempF: 350, minutes: 55 }], fillClass: 'pastry' },
+      { key: 'filling', label: 'Pecan custard filling', cookingMethod: 'baked', prepMethod: 'raw', stages: [{ tempF: 350, minutes: 55 }], fillClass: 'syrup_custard' }
     ],
   },
   {
@@ -578,8 +578,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'raw', stages: [{ tempF: 425, minutes: 15 }, { tempF: 350, minutes: 45 }] },
-      { key: 'filling', label: 'Pumpkin custard filling', cookingMethod: 'baked', prepMethod: 'raw', stages: [{ tempF: 425, minutes: 15 }, { tempF: 350, minutes: 45 }] }
+      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'raw', stages: [{ tempF: 425, minutes: 15 }, { tempF: 350, minutes: 45 }], fillClass: 'pastry' },
+      { key: 'filling', label: 'Pumpkin custard filling', cookingMethod: 'baked', prepMethod: 'raw', stages: [{ tempF: 425, minutes: 15 }, { tempF: 350, minutes: 45 }], fillClass: 'vegetable_custard' }
     ],
   },
   {
@@ -637,9 +637,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 375, minutes: 25 }] },
-      { key: 'filling', label: 'Vanilla pastry cream', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 3 },
-      { key: 'topping', label: 'Whipped cream topping', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
+      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 375, minutes: 25 }], fillClass: 'pastry' },
+      { key: 'filling', label: 'Vanilla pastry cream', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 3, fillClass: 'dairy_custard' },
+      { key: 'topping', label: 'Whipped cream topping', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0, fillClass: 'none' }
     ],
   },
   {
@@ -701,9 +701,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cake', label: 'Yellow butter cake', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 350, minutes: 24 }] },
-      { key: 'filling', label: 'Vanilla pastry cream', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 3 },
-      { key: 'glaze', label: 'Chocolate ganache glaze', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
+      { key: 'cake', label: 'Yellow butter cake', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 350, minutes: 24 }], fillClass: 'cake_batter' },
+      { key: 'filling', label: 'Vanilla pastry cream', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 3, fillClass: 'starch_custard' },
+      { key: 'glaze', label: 'Chocolate ganache glaze', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0, fillClass: 'none' }
     ],
   },
   {
@@ -759,9 +759,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Chocolate cookie crumb crust', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 350, minutes: 9 }] },
-      { key: 'filling', label: 'Chocolate pastry cream', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 3 },
-      { key: 'topping', label: 'Whipped cream topping', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
+      { key: 'crust', label: 'Chocolate cookie crumb crust', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 350, minutes: 9 }], fillClass: 'crumb_crust' },
+      { key: 'filling', label: 'Chocolate pastry cream', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 3, fillClass: 'dairy_custard' },
+      { key: 'topping', label: 'Whipped cream topping', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0, fillClass: 'none' }
     ],
   },
   {
@@ -821,9 +821,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 400, minutes: 24 }] },
-      { key: 'filling', label: 'Coconut pastry cream', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 3 },
-      { key: 'topping', label: 'Whipped cream topping', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
+      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 400, minutes: 24 }], fillClass: 'pastry' },
+      { key: 'filling', label: 'Coconut pastry cream', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 3, fillClass: 'dairy_custard' },
+      { key: 'topping', label: 'Whipped cream topping', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0, fillClass: 'none' }
     ],
   },
   {
@@ -874,8 +874,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 400, minutes: 18 }] },
-      { key: 'filling', label: 'Egg custard filling', cookingMethod: 'baked', prepMethod: 'raw', stages: [{ tempF: 325, minutes: 40 }] }
+      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 400, minutes: 18 }], fillClass: 'pastry' },
+      { key: 'filling', label: 'Egg custard filling', cookingMethod: 'baked', prepMethod: 'raw', stages: [{ tempF: 325, minutes: 40 }], fillClass: 'dairy_custard' }
     ],
   },
   {
@@ -925,7 +925,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cake', label: 'Cake', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 30 }] }
+      { key: 'cake', label: 'Cake', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 30 }], fillClass: 'cake_batter' }
     ],
   },
   {
@@ -991,7 +991,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cake', label: 'White butter cake (SWEET_016 base)', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 350, minutes: 30 }] },
+      { key: 'cake', label: 'White butter cake (SWEET_016 base)', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 350, minutes: 30 }], fillClass: 'cake_batter' },
       { key: 'frosting', label: '7-minute coconut frosting', cookingMethod: 'sub-simmer', prepMethod: '', boilMinutes: 7 }
     ],
   },
@@ -1044,7 +1044,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cake', label: 'Cake', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 30 }] }
+      { key: 'cake', label: 'Cake', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 30 }], fillClass: 'cake_batter' }
     ],
   },
   {
@@ -1149,8 +1149,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cake', label: 'Butter-buttermilk yellow cake', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 350, minutes: 30 }] },
-      { key: 'frosting', label: 'Bittersweet chocolate glaze', cookingMethod: 'raw', prepMethod: 'raw', boilMinutes: 3 }
+      { key: 'cake', label: 'Butter-buttermilk yellow cake', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 350, minutes: 30 }], fillClass: 'cake_batter' },
+      { key: 'frosting', label: 'Bittersweet chocolate glaze', cookingMethod: 'raw', prepMethod: 'raw', boilMinutes: 3, fillClass: 'none' }
     ],
   },
   {
@@ -1203,7 +1203,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cake', label: 'Cake', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 37 }] }
+      { key: 'cake', label: 'Cake', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 37 }], fillClass: 'cake_batter' }
     ],
   },
   {
@@ -1260,8 +1260,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cake', label: 'Cake', cookingMethod: 'baked', prepMethod: 'batter', stages: [{ tempF: 350, minutes: 35 }] },
-      { key: 'topping', label: 'Topping', cookingMethod: 'baked', prepMethod: 'combined', stages: [{ tempF: 350, minutes: 35 }] }
+      { key: 'cake', label: 'Cake', cookingMethod: 'baked', prepMethod: 'batter', stages: [{ tempF: 350, minutes: 35 }], fillClass: 'cake_batter' },
+      { key: 'topping', label: 'Topping', cookingMethod: 'baked', prepMethod: 'combined', stages: [{ tempF: 350, minutes: 35 }], fillClass: 'moderate_fruit' }
     ],
   },
   {
@@ -1308,7 +1308,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve warm, split horizontally with sweetened berries and whipped cream for classic strawberry shortcake.'
     ],
     sections: [
-      { key: 'biscuit', label: 'Biscuit', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 450, minutes: 15 }] }
+      { key: 'biscuit', label: 'Biscuit', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 450, minutes: 15 }], fillClass: 'cake_batter' }
     ],
   },
   {
@@ -1362,7 +1362,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cake', label: 'Cake', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 325, minutes: 45 }] }
+      { key: 'cake', label: 'Cake', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 325, minutes: 45 }], fillClass: 'cake_batter' }
     ],
   },
   {
@@ -1413,7 +1413,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve plain, with sweetened berries, or with a light glaze.'
     ],
     sections: [
-      { key: 'cake', label: 'Cake', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 40 }] }
+      { key: 'cake', label: 'Cake', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 40 }], fillClass: 'cake_batter' }
     ],
   },
   {
@@ -1472,8 +1472,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Crust', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 325, minutes: 65 }] },
-      { key: 'filling', label: 'Filling', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 325, minutes: 65 }] }
+      { key: 'crust', label: 'Crust', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 325, minutes: 65 }], fillClass: 'crumb_crust' },
+      { key: 'filling', label: 'Filling', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 325, minutes: 65 }], fillClass: 'dairy_custard' }
     ],
   },
   {
@@ -1529,8 +1529,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cake', label: 'Cake', cookingMethod: 'baked', prepMethod: 'batter', stages: [{ tempF: 350, minutes: 55 }] },
-      { key: 'topping', label: 'Topping', cookingMethod: 'baked', prepMethod: 'crumbled', stages: [{ tempF: 350, minutes: 55 }] }
+      { key: 'cake', label: 'Cake', cookingMethod: 'baked', prepMethod: 'batter', stages: [{ tempF: 350, minutes: 55 }], fillClass: 'cake_batter' },
+      { key: 'topping', label: 'Topping', cookingMethod: 'baked', prepMethod: 'crumbled', stages: [{ tempF: 350, minutes: 55 }], fillClass: 'crumb_crust' }
     ],
   },
   {
@@ -1581,7 +1581,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cake', label: 'Pound Cake', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 325, minutes: 70 }] }
+      { key: 'cake', label: 'Pound Cake', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 325, minutes: 70 }], fillClass: 'cake_batter' }
     ],
   },
   {
@@ -1632,7 +1632,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'batter', label: 'Batter', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 25 }] }
+      { key: 'batter', label: 'Batter', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 25 }], fillClass: 'cake_batter' }
     ],
   },
   {
@@ -1684,7 +1684,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'dough', label: 'Dough', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 15 }] }
+      { key: 'dough', label: 'Dough', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 15 }], fillClass: 'cake_batter' }
     ],
   },
   {
@@ -1733,7 +1733,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'rolling', label: 'Cookies', cookingMethod: 'baked', prepMethod: 'rolled', stages: [{ tempF: 375, minutes: 9 }] }
+      { key: 'rolling', label: 'Cookies', cookingMethod: 'baked', prepMethod: 'rolled', stages: [{ tempF: 375, minutes: 9 }], fillClass: 'cake_batter' }
     ],
   },
   {
@@ -1786,7 +1786,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'rolling', label: 'Cookies', cookingMethod: 'baked', prepMethod: 'rolled', stages: [{ tempF: 375, minutes: 11 }] }
+      { key: 'rolling', label: 'Cookies', cookingMethod: 'baked', prepMethod: 'rolled', stages: [{ tempF: 375, minutes: 11 }], fillClass: 'cake_batter' }
     ],
   },
   {
@@ -1832,7 +1832,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'dough', label: 'Dough', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 325, minutes: 13 }] }
+      { key: 'dough', label: 'Dough', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 325, minutes: 13 }], fillClass: 'cake_batter' }
     ],
   },
   {
@@ -1884,7 +1884,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'dough', label: 'Dough', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 12 }] }
+      { key: 'dough', label: 'Dough', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 12 }], fillClass: 'cake_batter' }
     ],
   },
   {
@@ -1934,8 +1934,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Crust', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 33 }] },
-      { key: 'filling', label: 'Filling', cookingMethod: 'baked', prepMethod: 'sub-simmer', stages: [{ tempF: 350, minutes: 33 }], boilMinutes: 15 }
+      { key: 'crust', label: 'Crust', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 33 }], fillClass: 'cake_batter' },
+      { key: 'filling', label: 'Filling', cookingMethod: 'baked', prepMethod: 'sub-simmer', stages: [{ tempF: 350, minutes: 33 }], boilMinutes: 15, fillClass: 'thickened_fruit' }
     ],
   },
   {
@@ -1980,7 +1980,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'macaroons', label: 'Macaroons', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 325, minutes: 22 }] }
+      { key: 'macaroons', label: 'Macaroons', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 325, minutes: 22 }], fillClass: 'cake_batter' }
     ],
   },
   {
@@ -2032,7 +2032,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cookies', label: 'Cookies', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 10 }] }
+      { key: 'cookies', label: 'Cookies', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 10 }], fillClass: 'cake_batter' }
     ],
   },
   {
@@ -2082,7 +2082,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'cookies', label: 'Cookies', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 10 }] }
+      { key: 'cookies', label: 'Cookies', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 10 }], fillClass: 'cake_batter' }
     ],
   },
   {
@@ -2128,7 +2128,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'shortbread', label: 'Shortbread', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 325, minutes: 21 }] }
+      { key: 'shortbread', label: 'Shortbread', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 325, minutes: 21 }], fillClass: 'cake_batter' }
     ],
   },
   {
@@ -2184,8 +2184,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'crust', label: 'Crust', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 400, minutes: 18 }] },
-      { key: 'filling', label: 'Filling', cookingMethod: 'baked', prepMethod: 'whisked', stages: [{ tempF: 325, minutes: 50 }] }
+      { key: 'crust', label: 'Crust', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 400, minutes: 18 }], fillClass: 'pastry' },
+      { key: 'filling', label: 'Filling', cookingMethod: 'baked', prepMethod: 'whisked', stages: [{ tempF: 325, minutes: 50 }], fillClass: 'dairy_custard' }
     ],
   },
   {
@@ -2400,7 +2400,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve warm with butter, gravy, or jam.'
     ],
     sections: [
-      { key: 'biscuit', label: 'Biscuit', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 450, minutes: 14 }] }
+      { key: 'biscuit', label: 'Biscuit', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 450, minutes: 14 }], fillClass: 'cake_batter' }
     ],
   },
   {
@@ -2447,7 +2447,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve hot alongside eggs, biscuits, or as the protein in biscuits & gravy.'
     ],
     sections: [
-      { key: 'sausage', label: 'Sausage', cookingMethod: 'fried', prepMethod: '', boilMinutes: 8, yieldFactorFat: 0.91 }
+      { key: 'sausage', label: 'Sausage', cookingMethod: 'fried', prepMethod: '', boilMinutes: 8, yieldFactorFat: 0.91, fillClass: 'fried_meat' }
     ],
   },
   {
@@ -2497,8 +2497,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve hot over split biscuits.'
     ],
     sections: [
-      { key: 'sausage', label: 'Browned pork sausage', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 7 },
-      { key: 'gravy', label: 'Milk gravy', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 5 }
+      { key: 'sausage', label: 'Browned pork sausage', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 7, fillClass: 'fried_meat' },
+      { key: 'gravy', label: 'Milk gravy', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 5, fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -2547,8 +2547,8 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'biscuit', label: 'Biscuit', cookingMethod: 'raw', prepMethod: 'baked', stages: [{ tempF: 450, minutes: 14 }] },
-      { key: 'sausage_crumbles', label: 'Browned pork sausage', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 7 },
-      { key: 'milk_gravy', label: 'Milk gravy', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 5 }
+      { key: 'sausage_crumbles', label: 'Browned pork sausage', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 7, fillClass: 'fried_meat' },
+      { key: 'milk_gravy', label: 'Milk gravy', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 5, fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -2593,7 +2593,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'main', label: 'English muffin dough', cookingMethod: 'pan seared', prepMethod: '', boilMinutes: 6 }
+      { key: 'main', label: 'English muffin dough', cookingMethod: 'pan seared', prepMethod: '', boilMinutes: 6, fillClass: 'pan_grilled_batter' }
     ],
   },
   {
@@ -2638,7 +2638,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'muffin', label: 'English muffin dough', cookingMethod: 'pan seared', prepMethod: '', boilMinutes: 6 }
+      { key: 'muffin', label: 'English muffin dough', cookingMethod: 'pan seared', prepMethod: '', boilMinutes: 6, fillClass: 'pan_grilled_batter' }
     ],
   },
   {
@@ -2678,7 +2678,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Classic for Eggs Benedict and poached eggs. Also excellent over steamed asparagus, broccoli, or other vegetables.'
     ],
     sections: [
-      { key: 'sauce', label: 'Hollandaise sauce', cookingMethod: 'sub-simmer', prepMethod: '', boilMinutes: 3 },
+      { key: 'sauce', label: 'Hollandaise sauce', cookingMethod: 'sub-simmer', prepMethod: '', boilMinutes: 3, fillClass: 'simmer_sauce' },
       { key: 'lemon', label: 'Lemon juice', cookingMethod: 'raw', prepMethod: 'finish', yieldFactorWater: 1.0 }
     ],
   },
@@ -2762,7 +2762,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with scrambled eggs, fresh fruit, bacon, or maple syrup.'
     ],
     sections: [
-      { key: 'main', label: 'French toast', cookingMethod: 'pan seared', prepMethod: '', boilMinutes: 4 }
+      { key: 'main', label: 'French toast', cookingMethod: 'pan seared', prepMethod: '', boilMinutes: 4, fillClass: 'pan_grilled_batter' }
     ],
   },
   {
@@ -2839,7 +2839,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with maple syrup, fresh berries, sliced bananas, or whipped cream.'
     ],
     sections: [
-      { key: 'batter', label: 'Pancake batter', cookingMethod: 'pan seared', prepMethod: '', boilMinutes: 3 }
+      { key: 'batter', label: 'Pancake batter', cookingMethod: 'pan seared', prepMethod: '', boilMinutes: 3, fillClass: 'pan_grilled_batter' }
     ],
   },
   {
@@ -2881,7 +2881,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with maple syrup, sliced bananas, whipped cream, or plain Greek yogurt.'
     ],
     sections: [
-      { key: 'batter', label: 'Pancake batter', cookingMethod: 'pan seared', prepMethod: '', boilMinutes: 3 }
+      { key: 'batter', label: 'Pancake batter', cookingMethod: 'pan seared', prepMethod: '', boilMinutes: 3, fillClass: 'pan_grilled_batter' }
     ],
   },
   {
@@ -2922,7 +2922,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'batter', label: 'Pancake batter', cookingMethod: 'pan seared', prepMethod: '', boilMinutes: 3 }
+      { key: 'batter', label: 'Pancake batter', cookingMethod: 'pan seared', prepMethod: '', boilMinutes: 3, fillClass: 'pan_grilled_batter' }
     ],
   },
   {
@@ -2963,7 +2963,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with maple syrup, whipped cream, or fresh berries.'
     ],
     sections: [
-      { key: 'batter', label: 'Waffle batter', cookingMethod: 'grilled', prepMethod: '', boilMinutes: 4 }
+      { key: 'batter', label: 'Waffle batter', cookingMethod: 'grilled', prepMethod: '', boilMinutes: 4, fillClass: 'grilled_batter' }
     ],
   },
   {
@@ -3001,7 +3001,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'hashbrown', label: 'Hash brown', cookingMethod: 'fried', prepMethod: '', boilMinutes: 10 }
+      { key: 'hashbrown', label: 'Hash brown', cookingMethod: 'fried', prepMethod: '', boilMinutes: 10, fillClass: 'fried_potato' }
     ],
   },
   {
@@ -3198,7 +3198,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Add cilantro, diced white onion, shredded lettuce or slaw, salsa, or sour cream.'
     ],
     sections: [
-      { key: 'beef', label: 'Ground beef', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 6, yieldFactorFat: 0.593 },
+      { key: 'beef', label: 'Ground beef', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 6, yieldFactorFat: 0.593, fillClass: 'fried_meat' },
       { key: 'tortilla', label: 'Flour tortilla', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 1 },
       { key: 'cheese', label: 'Cheese', cookingMethod: 'raw', prepMethod: '' }
     ],
@@ -3242,9 +3242,9 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'tortilla', label: 'Flour tortilla', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 1 },
-      { key: 'eggs', label: 'Scrambled eggs', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 2 },
+      { key: 'eggs', label: 'Scrambled eggs', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 2, fillClass: 'fried_meat' },
       { key: 'cheese', label: 'Cheese', cookingMethod: 'raw', prepMethod: '' },
-      { key: 'potatoes', label: 'Potatoes', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 9 }
+      { key: 'potatoes', label: 'Potatoes', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 9, fillClass: 'fried_potato' }
     ],
   },
   {
@@ -3283,7 +3283,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a lemon vinaigrette salad, hash browns, or sourdough toast.'
     ],
     sections: [
-      { key: 'omelette', label: 'Cheese omelette', cookingMethod: 'pan seared', prepMethod: '', boilMinutes: 4 }
+      { key: 'omelette', label: 'Cheese omelette', cookingMethod: 'pan seared', prepMethod: '', boilMinutes: 4, fillClass: 'fried_meat' }
     ],
   },
   {
@@ -3325,7 +3325,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with hash browns, salsa, toast, or sour cream.'
     ],
     sections: [
-      { key: 'omelette', label: 'Denver omelette', cookingMethod: 'pan seared', prepMethod: '', boilMinutes: 4 }
+      { key: 'omelette', label: 'Denver omelette', cookingMethod: 'pan seared', prepMethod: '', boilMinutes: 4, fillClass: 'fried_meat' }
     ],
   },
   {
@@ -3372,8 +3372,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a green salad, roasted root vegetables, or fresh fruit.'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 375, minutes: 37 }] },
-      { key: 'filling', label: 'Cheese filling', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 375, minutes: 37 }] }
+      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 375, minutes: 37 }], fillClass: 'pastry' },
+      { key: 'filling', label: 'Cheese filling', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 375, minutes: 37 }], fillClass: 'dairy_custard' }
     ],
   },
   {
@@ -3421,8 +3421,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with crispy roasted potatoes or fresh fruit.'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 375, minutes: 37 }] },
-      { key: 'filling', label: 'Spinach cheese filling', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 375, minutes: 37 }] }
+      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 375, minutes: 37 }], fillClass: 'pastry' },
+      { key: 'filling', label: 'Spinach cheese filling', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 375, minutes: 37 }], fillClass: 'dairy_custard' }
     ],
   },
   {
@@ -3470,8 +3470,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a fresh green salad, roasted potatoes, or fresh fruit.'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 375, minutes: 37 }] },
-      { key: 'filling', label: 'Ham and cheese filling', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 375, minutes: 37 }] }
+      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 375, minutes: 37 }], fillClass: 'pastry' },
+      { key: 'filling', label: 'Ham and cheese filling', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 375, minutes: 37 }], fillClass: 'dairy_custard' }
     ],
   },
   {
@@ -3519,8 +3519,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with an arugula salad, mixed green salad, or asparagus.'
     ],
     sections: [
-      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 375, minutes: 37 }] },
-      { key: 'filling', label: 'Bacon and cheese filling', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 375, minutes: 37 }] }
+      { key: 'crust', label: 'Pie crust', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 375, minutes: 37 }], fillClass: 'pastry' },
+      { key: 'filling', label: 'Bacon and cheese filling', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 375, minutes: 37 }], fillClass: 'dairy_custard' }
     ],
   },
   {
@@ -3562,7 +3562,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a green salad, roasted root vegetables, or fresh fruit.'
     ],
     sections: [
-      { key: 'filling', label: 'Cheese filling', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 375, minutes: 37 }] }
+      { key: 'filling', label: 'Cheese filling', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 375, minutes: 37 }], fillClass: 'dairy_custard' }
     ],
   },
   {
@@ -3605,7 +3605,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'filling', label: 'Spinach filling', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 375, minutes: 37 }] }
+      { key: 'filling', label: 'Spinach filling', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 375, minutes: 37 }], fillClass: 'dairy_custard' }
     ],
   },
   {
@@ -3648,7 +3648,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a fresh green salad, roasted potatoes, or fresh fruit.'
     ],
     sections: [
-      { key: 'filling', label: 'Ham and cheese filling', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 375, minutes: 37 }] }
+      { key: 'filling', label: 'Ham and cheese filling', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 375, minutes: 37 }], fillClass: 'dairy_custard' }
     ],
   },
   {
@@ -3691,7 +3691,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with an arugula salad, mixed green salad, or asparagus.'
     ],
     sections: [
-      { key: 'filling', label: 'Bacon filling', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 375, minutes: 37 }] }
+      { key: 'filling', label: 'Bacon filling', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 375, minutes: 37 }], fillClass: 'dairy_custard' }
     ],
   },
   {
@@ -3738,7 +3738,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with an arugula salad, crispy potatoes, or roasted tomatoes.'
     ],
     sections: [
-      { key: 'frittata', label: 'Frittata', cookingMethod: 'broiled', prepMethod: 'pan seared', boilMinutes: 6 }
+      { key: 'frittata', label: 'Frittata', cookingMethod: 'broiled', prepMethod: 'pan seared', boilMinutes: 6, fillClass: 'fried_meat' }
     ],
   },
   {
@@ -3865,7 +3865,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with tomato soup, a dill pickle, or a simple green salad.'
     ],
     sections: [
-      { key: 'bread_butter', label: 'White bread and butter', cookingMethod: 'pan seared', prepMethod: '', boilMinutes: 3 },
+      { key: 'bread_butter', label: 'White bread and butter', cookingMethod: 'pan seared', prepMethod: '', boilMinutes: 3, fillClass: 'fried_meat' },
       { key: 'cheese', label: 'Cheddar and Gruyère', cookingMethod: 'pan seared', prepMethod: '' }
     ],
   },
@@ -3905,7 +3905,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with tomato soup, a dill pickle, or a simple green salad.'
     ],
     sections: [
-      { key: 'bread_butter', label: 'White bread and butter', cookingMethod: 'pan seared', prepMethod: '', boilMinutes: 3 },
+      { key: 'bread_butter', label: 'White bread and butter', cookingMethod: 'pan seared', prepMethod: '', boilMinutes: 3, fillClass: 'fried_meat' },
       { key: 'cheese', label: 'American cheese', cookingMethod: 'pan seared', prepMethod: '' }
     ],
   },
@@ -3945,7 +3945,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with tomato soup, a dill pickle, or a simple green salad.'
     ],
     sections: [
-      { key: 'bread_butter', label: 'White bread and butter', cookingMethod: 'pan seared', prepMethod: '', boilMinutes: 3 },
+      { key: 'bread_butter', label: 'White bread and butter', cookingMethod: 'pan seared', prepMethod: '', boilMinutes: 3, fillClass: 'fried_meat' },
       { key: 'cheese', label: 'Cheddar cheese', cookingMethod: 'pan seared', prepMethod: '' }
     ],
   },
@@ -3987,8 +3987,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with potato chips, a dill pickle, or a bowl of tomato soup.'
     ],
     sections: [
-      { key: 'bacon', label: 'Bacon', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 8 },
-      { key: 'bread', label: 'White bread', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 3 },
+      { key: 'bacon', label: 'Bacon', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 8, fillClass: 'fried_meat' },
+      { key: 'bread', label: 'White bread', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 3, fillClass: 'fried_meat' },
       { key: 'assembly', label: 'Mayonnaise, lettuce and tomato', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 }
     ],
   },
@@ -4032,8 +4032,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with potato chips, a dill pickle spear, or a cup of soup.'
     ],
     sections: [
-      { key: 'bacon', label: 'Bacon', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 8 },
-      { key: 'bread', label: 'White bread', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 3 },
+      { key: 'bacon', label: 'Bacon', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 8, fillClass: 'fried_meat' },
+      { key: 'bread', label: 'White bread', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 3, fillClass: 'fried_meat' },
       { key: 'assembly', label: 'Mayonnaise, lettuce, tomato and turkey', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -4163,7 +4163,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with potato chips, a dill pickle, or a simple green salad.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 13 },
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 13, fillClass: 'pan_grilled_chicken' },
       { key: 'assembly', label: 'Chicken salad', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -4348,7 +4348,7 @@ export const LEVELS: Level[] = [
     prepTime: '15 min',
     linkType: 'dish',
     sr28Rule: 'Rule D',
-    nutritionJson: {"cal":797.3,"pro":36.6,"fat":52.5,"carb":44.5,"fib":2.9,"h2o":194.8,"sug":9.9,"perServing":{"cal":797.3,"pro":36.6,"fat":52.5,"carb":44.5,"fib":2.9,"h2o":194.8,"sug":9.9,"AddedSugars":0.0,"IntrinsicSugars":9.9},"micros":{"vitaminA":108.21,"vitaminC":0.34,"vitaminD":27.38,"vitaminE":0.31,"vitaminK":1.25,"vitaminB6":0.05,"vitaminB12":0.44,"thiamin":0.14,"riboflavin":0.16,"niacin":0.89,"folate":15.8,"calcium":208.18,"iron":0.8,"magnesium":15.31,"phosphorus":154.64,"potassium":111.81,"sodium":451.03,"zinc":1.01,"copper":0.04,"selenium":11.92,"cholesterol":49.82,"saturatedFat":8.84,"monoFat":4.63,"polyFat":0.84,"omega3":0.04,"omega6":0.17},"gramsPerServing":336.3,"servings":1,"per100g":{"Energy_KCal":237.08,"Water":57.94,"Protein":10.9,"TotalLipidFat":15.61,"Carbohydrate":13.25,"FiberTotalDietary":0.86,"SugarsTotal":2.93,"Cholesterol":49.82,"FattyAcids_totalSaturated":8.84,"FattyAcids_totalMonounsaturated":4.63,"FattyAcids_totalPolyunsaturated":0.84,"LinoleicAcid":0.17,"alphaLinolenicAcid":0.04,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":108.21,"Retinol":106.36,"Carotene_beta":20.19,"VitaminD":27.38,"VitaminE_alphaTocopherol":0.31,"VitaminK_phylloquinone":1.25,"VitaminC_totalAscorbicAcid":0.34,"Thiamin":0.14,"Riboflavin":0.16,"Niacin":0.89,"PantothenicAcid":0.28,"VitaminB6":0.05,"Folate_total":15.8,"Folate_food":5.94,"Folate_DFE":22.69,"FolicAcid":19.01,"VitaminB12":0.44,"Choline_total":21.85,"Betaine":19.33,"LuteinZeaxanthin":6.7,"Lycopene":0.01,"Calcium_Ca":208.18,"Iron_Fe":0.8,"Magnesium_Mg":15.31,"Phosphorus_P":154.64,"Potassium_K":111.81,"Sodium_Na":451.03,"Zinc_Zn":1.01,"Copper_Cu":0.04,"Manganese_Mn":0.21,"Selenium_Se":11.92,"Tryptophan":0.11,"Threonine":0.33,"Isoleucine":0.44,"Leucine":0.82,"Lysine":0.75,"Methionine":0.23,"Cystine":0.08,"Phenylalanine":0.45,"Tyrosine":0.44,"Valine":0.58,"Arginine":0.35,"Histidine":0.31,"Alanine":0.33,"AsparticAcid":0.59,"GlutamicAcid":1.69,"Glycine":0.24,"Proline":0.89,"Serine":0.46,"omega3":0.04,"omega6":0.17,"AddedSugars":0.0,"IntrinsicSugars":2.93},"addedSugars":0.0,"intrinsicSugars":9.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":122.0},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":8.0},{"ndb":"1001","name":"Butter, salted","grams":28.4},{"ndb":"2025","name":"Spices, nutmeg, ground","grams":0.3},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.2},{"ndb":"18069","name":"Bread, white, commercially prepared (includes soft bread crumbs)","grams":60.0},{"ndb":"7029","name":"Ham, sliced, regular (approximately 11% fat)","grams":56.0},{"ndb":"1023","name":"Cheese, gruyere","grams":56.7},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":5.0}],"sections":[{"section_key":"bechamel","section_label":"Béchamel sauce","prep_method":"simmer","cook_method":"braise","cooking_method":"braise","cooking_method_normalized":"boiled","yield_factor_water":0.9955927704230644,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":159.3,"raw_water_grams":113.02,"raw_fat_grams":27.19,"raw_protein_grams":4.95,"raw_carb_grams":12.25,"raw_fiber_grams":0.33,"final_grams":158.8,"boil_minutes":3.0,"cook_stages":[{"tempF":185,"minutes":3}],"fill_class":"simmer_sauce"},{"section_key":"bread","section_label":"Bread","prep_method":"pan seared","cook_method":"braise","cooking_method":"braise","cooking_method_normalized":"boiled","yield_factor_water":0.9905608941344369,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":60.0,"raw_water_grams":21.85,"raw_fat_grams":2.0,"raw_protein_grams":5.31,"raw_carb_grams":29.65,"raw_fiber_grams":1.62,"final_grams":59.79,"boil_minutes":3.0,"cook_stages":[{"tempF":185,"minutes":3}],"fill_class":"fried_meat"},{"section_key":"assembly","section_label":"Ham and cheese","prep_method":"raw","cook_method":"braise","cooking_method":"braise","cooking_method_normalized":"boiled","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":117.7,"raw_water_grams":60.68,"raw_fat_grams":23.32,"raw_protein_grams":26.39,"raw_carb_grams":2.64,"raw_fiber_grams":0.93,"final_grams":117.7,"boil_minutes":0,"cook_stages":[{"tempF":185,"minutes":3}],"fill_class":""}],"cookingMethod":"braise","cookMinutes":3},
+    nutritionJson: {"cal":797.3,"pro":36.6,"fat":52.5,"carb":44.5,"fib":2.9,"h2o":185.6,"sug":9.9,"perServing":{"cal":797.3,"pro":36.6,"fat":52.5,"carb":44.5,"fib":2.9,"h2o":185.6,"sug":9.9,"AddedSugars":0.0,"IntrinsicSugars":9.9},"micros":{"vitaminA":111.27,"vitaminC":0.35,"vitaminD":28.15,"vitaminE":0.32,"vitaminK":1.28,"vitaminB6":0.06,"vitaminB12":0.45,"thiamin":0.15,"riboflavin":0.16,"niacin":0.91,"folate":16.25,"calcium":214.06,"iron":0.82,"magnesium":15.74,"phosphorus":159.01,"potassium":114.97,"sodium":463.79,"zinc":1.04,"copper":0.04,"selenium":12.26,"cholesterol":51.23,"saturatedFat":9.09,"monoFat":4.76,"polyFat":0.86,"omega3":0.04,"omega6":0.17},"gramsPerServing":327.1,"servings":1,"per100g":{"Energy_KCal":243.79,"Water":56.75,"Protein":11.2,"TotalLipidFat":16.06,"Carbohydrate":13.62,"FiberTotalDietary":0.88,"SugarsTotal":3.02,"Cholesterol":51.23,"FattyAcids_totalSaturated":9.09,"FattyAcids_totalMonounsaturated":4.76,"FattyAcids_totalPolyunsaturated":0.86,"LinoleicAcid":0.17,"alphaLinolenicAcid":0.04,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":111.27,"Retinol":109.37,"Carotene_beta":20.76,"VitaminD":28.15,"VitaminE_alphaTocopherol":0.32,"VitaminK_phylloquinone":1.28,"VitaminC_totalAscorbicAcid":0.35,"Thiamin":0.15,"Riboflavin":0.16,"Niacin":0.91,"PantothenicAcid":0.29,"VitaminB6":0.06,"Folate_total":16.25,"Folate_food":6.11,"Folate_DFE":23.33,"FolicAcid":19.54,"VitaminB12":0.45,"Choline_total":22.46,"Betaine":19.88,"LuteinZeaxanthin":6.89,"Lycopene":0.01,"Calcium_Ca":214.06,"Iron_Fe":0.82,"Magnesium_Mg":15.74,"Phosphorus_P":159.01,"Potassium_K":114.97,"Sodium_Na":463.79,"Zinc_Zn":1.04,"Copper_Cu":0.04,"Manganese_Mn":0.22,"Selenium_Se":12.26,"Tryptophan":0.12,"Threonine":0.34,"Isoleucine":0.45,"Leucine":0.84,"Lysine":0.77,"Methionine":0.23,"Cystine":0.09,"Phenylalanine":0.46,"Tyrosine":0.45,"Valine":0.6,"Arginine":0.36,"Histidine":0.32,"Alanine":0.34,"AsparticAcid":0.6,"GlutamicAcid":1.74,"Glycine":0.24,"Proline":0.92,"Serine":0.47,"omega3":0.04,"omega6":0.17,"AddedSugars":0.0,"IntrinsicSugars":3.02},"addedSugars":0.0,"intrinsicSugars":9.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":122.0},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":8.0},{"ndb":"1001","name":"Butter, salted","grams":28.4},{"ndb":"2025","name":"Spices, nutmeg, ground","grams":0.3},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.2},{"ndb":"18069","name":"Bread, white, commercially prepared (includes soft bread crumbs)","grams":60.0},{"ndb":"7029","name":"Ham, sliced, regular (approximately 11% fat)","grams":56.0},{"ndb":"1023","name":"Cheese, gruyere","grams":56.7},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":5.0}],"sections":[{"section_key":"bechamel","section_label":"Béchamel sauce","prep_method":"simmer","cook_method":"braise","cooking_method":"braise","cooking_method_normalized":"boiled","yield_factor_water":0.9415433549310095,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":159.3,"raw_water_grams":113.02,"raw_fat_grams":27.19,"raw_protein_grams":4.95,"raw_carb_grams":12.25,"raw_fiber_grams":0.33,"final_grams":152.69,"boil_minutes":3.0,"cook_stages":[{"tempF":185,"minutes":3}],"fill_class":"simmer_sauce"},{"section_key":"bread","section_label":"Bread","prep_method":"pan seared","cook_method":"braise","cooking_method":"braise","cooking_method_normalized":"boiled","yield_factor_water":0.8469051948413147,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":60.0,"raw_water_grams":21.85,"raw_fat_grams":2.0,"raw_protein_grams":5.31,"raw_carb_grams":29.65,"raw_fiber_grams":1.62,"final_grams":56.65,"boil_minutes":3.0,"cook_stages":[{"tempF":185,"minutes":3}],"fill_class":"fried_meat"},{"section_key":"assembly","section_label":"Ham and cheese","prep_method":"raw","cook_method":"braise","cooking_method":"braise","cooking_method_normalized":"boiled","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":117.7,"raw_water_grams":60.68,"raw_fat_grams":23.32,"raw_protein_grams":26.39,"raw_carb_grams":2.64,"raw_fiber_grams":0.93,"final_grams":117.7,"boil_minutes":0,"cook_stages":[{"tempF":185,"minutes":3}],"fill_class":""}],"cookingMethod":"braise","cookMinutes":3},
     recipeIngredients: [
       { name: 'Croque Monsieur', quantity: 'custom (g)', foodWord: 'CROQUEMONSIEUR', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'whole milk', quantity: '½ cup', section: 'bechamel', ndbNo: '1077', portionDesc: 'g', portionGrams: 122.0 },
@@ -4370,8 +4370,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a simple green salad, cornichons, or a bowl of French onion soup.'
     ],
     sections: [
-      { key: 'bechamel', label: 'Béchamel sauce', cookingMethod: 'braise', prepMethod: 'simmer', stages: [{ tempF: 185, minutes: 3 }], boilMinutes: 3 },
-      { key: 'bread', label: 'Bread', cookingMethod: 'braise', prepMethod: 'pan seared', stages: [{ tempF: 185, minutes: 3 }], boilMinutes: 3 },
+      { key: 'bechamel', label: 'Béchamel sauce', cookingMethod: 'braise', prepMethod: 'simmer', stages: [{ tempF: 185, minutes: 3 }], boilMinutes: 3, fillClass: 'simmer_sauce' },
+      { key: 'bread', label: 'Bread', cookingMethod: 'braise', prepMethod: 'pan seared', stages: [{ tempF: 185, minutes: 3 }], boilMinutes: 3, fillClass: 'fried_meat' },
       { key: 'assembly', label: 'Ham and cheese', cookingMethod: 'braise', prepMethod: '', stages: [{ tempF: 185, minutes: 3 }], yieldFactorWater: 1.0 }
     ],
   },
@@ -4395,7 +4395,7 @@ export const LEVELS: Level[] = [
     prepTime: '15 min',
     linkType: 'dish',
     sr28Rule: 'Rule D',
-    nutritionJson: {"cal":887.5,"pro":42.9,"fat":59.3,"carb":44.9,"fib":2.9,"h2o":226.8,"sug":10.1,"perServing":{"cal":887.5,"pro":42.9,"fat":59.3,"carb":44.9,"fib":2.9,"h2o":226.8,"sug":10.1,"AddedSugars":0.0,"IntrinsicSugars":10.1},"micros":{"vitaminA":121.54,"vitaminC":0.3,"vitaminD":34.67,"vitaminE":0.43,"vitaminK":1.77,"vitaminB6":0.07,"vitaminB12":0.5,"thiamin":0.13,"riboflavin":0.2,"niacin":0.79,"folate":20.04,"calcium":190.59,"iron":0.93,"magnesium":15.03,"phosphorus":161.9,"potassium":116.64,"sodium":421.67,"zinc":1.05,"copper":0.05,"selenium":14.47,"cholesterol":92.08,"saturatedFat":8.3,"monoFat":4.82,"polyFat":1.13,"omega3":0.05,"omega6":0.15},"gramsPerServing":382.3,"servings":1,"per100g":{"Energy_KCal":232.14,"Water":59.33,"Protein":11.22,"TotalLipidFat":15.52,"Carbohydrate":11.75,"FiberTotalDietary":0.75,"SugarsTotal":2.63,"Cholesterol":92.08,"FattyAcids_totalSaturated":8.3,"FattyAcids_totalMonounsaturated":4.82,"FattyAcids_totalPolyunsaturated":1.13,"LinoleicAcid":0.15,"alphaLinolenicAcid":0.04,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.01,"VitaminA_RAE":121.54,"Retinol":119.55,"Carotene_beta":21.98,"VitaminD":34.67,"VitaminE_alphaTocopherol":0.43,"VitaminK_phylloquinone":1.77,"VitaminC_totalAscorbicAcid":0.3,"Thiamin":0.13,"Riboflavin":0.2,"Niacin":0.79,"PantothenicAcid":0.45,"VitaminB6":0.07,"Folate_total":20.04,"Folate_food":11.36,"Folate_DFE":26.09,"FolicAcid":16.72,"VitaminB12":0.5,"Choline_total":57.37,"Betaine":17.04,"LuteinZeaxanthin":71.23,"Lycopene":0.01,"Calcium_Ca":190.59,"Iron_Fe":0.93,"Magnesium_Mg":15.03,"Phosphorus_P":161.9,"Potassium_K":116.64,"Sodium_Na":421.67,"Zinc_Zn":1.05,"Copper_Cu":0.05,"Manganese_Mn":0.19,"Selenium_Se":14.47,"Tryptophan":0.12,"Threonine":0.36,"Isoleucine":0.47,"Leucine":0.86,"Lysine":0.78,"Methionine":0.25,"Cystine":0.11,"Phenylalanine":0.48,"Tyrosine":0.45,"Valine":0.62,"Arginine":0.41,"Histidine":0.31,"Alanine":0.39,"AsparticAcid":0.69,"GlutamicAcid":1.71,"Glycine":0.26,"Proline":0.85,"Serine":0.53,"omega3":0.05,"omega6":0.15,"AddedSugars":0.0,"IntrinsicSugars":2.63},"addedSugars":0.0,"intrinsicSugars":10.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":122.0},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":8.0},{"ndb":"1001","name":"Butter, salted","grams":28.4},{"ndb":"2025","name":"Spices, nutmeg, ground","grams":0.3},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.2},{"ndb":"18069","name":"Bread, white, commercially prepared (includes soft bread crumbs)","grams":60.0},{"ndb":"7029","name":"Ham, sliced, regular (approximately 11% fat)","grams":56.0},{"ndb":"1023","name":"Cheese, gruyere","grams":56.7},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":5.0},{"ndb":"1128","name":"Egg, whole, cooked, fried","grams":46.0}],"sections":[{"section_key":"bechamel","section_label":"Béchamel sauce","prep_method":"simmer","cook_method":"braise","cooking_method":"braise","cooking_method_normalized":"boiled","yield_factor_water":0.9955927704230644,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":159.3,"raw_water_grams":113.02,"raw_fat_grams":27.19,"raw_protein_grams":4.95,"raw_carb_grams":12.25,"raw_fiber_grams":0.33,"final_grams":158.8,"boil_minutes":3.0,"cook_stages":[{"tempF":185,"minutes":3}],"fill_class":"simmer_sauce"},{"section_key":"bread","section_label":"Bread","prep_method":"pan seared","cook_method":"braise","cooking_method":"braise","cooking_method_normalized":"boiled","yield_factor_water":0.9905608941344369,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":60.0,"raw_water_grams":21.85,"raw_fat_grams":2.0,"raw_protein_grams":5.31,"raw_carb_grams":29.65,"raw_fiber_grams":1.62,"final_grams":59.79,"boil_minutes":3.0,"cook_stages":[{"tempF":185,"minutes":3}],"fill_class":"fried_meat"},{"section_key":"assembly","section_label":"Ham and cheese","prep_method":"raw","cook_method":"braise","cooking_method":"braise","cooking_method_normalized":"boiled","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":117.7,"raw_water_grams":60.68,"raw_fat_grams":23.32,"raw_protein_grams":26.39,"raw_carb_grams":2.64,"raw_fiber_grams":0.93,"final_grams":117.7,"boil_minutes":0,"cook_stages":[{"tempF":185,"minutes":3}],"fill_class":""},{"section_key":"egg","section_label":"Fried egg","prep_method":"finish","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":46.0,"raw_water_grams":31.96,"raw_fat_grams":6.83,"raw_protein_grams":6.26,"raw_carb_grams":0.38,"raw_fiber_grams":0.0,"final_grams":46.0,"boil_minutes":0,"cook_stages":[],"fill_class":""}],"cookingMethod":"braise","cookMinutes":3},
+    nutritionJson: {"cal":887.5,"pro":42.9,"fat":59.3,"carb":44.9,"fib":2.9,"h2o":217.6,"sug":10.1,"perServing":{"cal":887.5,"pro":42.9,"fat":59.3,"carb":44.9,"fib":2.9,"h2o":217.6,"sug":10.1,"AddedSugars":0.0,"IntrinsicSugars":10.1},"micros":{"vitaminA":124.56,"vitaminC":0.3,"vitaminD":35.53,"vitaminE":0.44,"vitaminK":1.81,"vitaminB6":0.07,"vitaminB12":0.52,"thiamin":0.13,"riboflavin":0.2,"niacin":0.81,"folate":20.53,"calcium":195.31,"iron":0.95,"magnesium":15.4,"phosphorus":165.91,"potassium":119.53,"sodium":432.12,"zinc":1.08,"copper":0.05,"selenium":14.83,"cholesterol":94.36,"saturatedFat":8.5,"monoFat":4.93,"polyFat":1.15,"omega3":0.05,"omega6":0.15},"gramsPerServing":373.1,"servings":1,"per100g":{"Energy_KCal":237.89,"Water":58.32,"Protein":11.5,"TotalLipidFat":15.91,"Carbohydrate":12.04,"FiberTotalDietary":0.77,"SugarsTotal":2.69,"Cholesterol":94.36,"FattyAcids_totalSaturated":8.5,"FattyAcids_totalMonounsaturated":4.93,"FattyAcids_totalPolyunsaturated":1.15,"LinoleicAcid":0.15,"alphaLinolenicAcid":0.04,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.01,"VitaminA_RAE":124.56,"Retinol":122.51,"Carotene_beta":22.52,"VitaminD":35.53,"VitaminE_alphaTocopherol":0.44,"VitaminK_phylloquinone":1.81,"VitaminC_totalAscorbicAcid":0.3,"Thiamin":0.13,"Riboflavin":0.2,"Niacin":0.81,"PantothenicAcid":0.46,"VitaminB6":0.07,"Folate_total":20.53,"Folate_food":11.64,"Folate_DFE":26.74,"FolicAcid":17.13,"VitaminB12":0.52,"Choline_total":58.8,"Betaine":17.46,"LuteinZeaxanthin":73.0,"Lycopene":0.01,"Calcium_Ca":195.31,"Iron_Fe":0.95,"Magnesium_Mg":15.4,"Phosphorus_P":165.91,"Potassium_K":119.53,"Sodium_Na":432.12,"Zinc_Zn":1.08,"Copper_Cu":0.05,"Manganese_Mn":0.19,"Selenium_Se":14.83,"Tryptophan":0.13,"Threonine":0.37,"Isoleucine":0.48,"Leucine":0.88,"Lysine":0.8,"Methionine":0.25,"Cystine":0.11,"Phenylalanine":0.5,"Tyrosine":0.46,"Valine":0.64,"Arginine":0.42,"Histidine":0.32,"Alanine":0.4,"AsparticAcid":0.7,"GlutamicAcid":1.75,"Glycine":0.27,"Proline":0.87,"Serine":0.54,"omega3":0.05,"omega6":0.15,"AddedSugars":0.0,"IntrinsicSugars":2.69},"addedSugars":0.0,"intrinsicSugars":10.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":122.0},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":8.0},{"ndb":"1001","name":"Butter, salted","grams":28.4},{"ndb":"2025","name":"Spices, nutmeg, ground","grams":0.3},{"ndb":"2047","name":"Salt, table","grams":0.4},{"ndb":"2030","name":"Spices, pepper, black","grams":0.2},{"ndb":"18069","name":"Bread, white, commercially prepared (includes soft bread crumbs)","grams":60.0},{"ndb":"7029","name":"Ham, sliced, regular (approximately 11% fat)","grams":56.0},{"ndb":"1023","name":"Cheese, gruyere","grams":56.7},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":5.0},{"ndb":"1128","name":"Egg, whole, cooked, fried","grams":46.0}],"sections":[{"section_key":"bechamel","section_label":"Béchamel sauce","prep_method":"simmer","cook_method":"braise","cooking_method":"braise","cooking_method_normalized":"boiled","yield_factor_water":0.9415433549310095,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":159.3,"raw_water_grams":113.02,"raw_fat_grams":27.19,"raw_protein_grams":4.95,"raw_carb_grams":12.25,"raw_fiber_grams":0.33,"final_grams":152.69,"boil_minutes":3.0,"cook_stages":[{"tempF":185,"minutes":3}],"fill_class":"simmer_sauce"},{"section_key":"bread","section_label":"Bread","prep_method":"pan seared","cook_method":"braise","cooking_method":"braise","cooking_method_normalized":"boiled","yield_factor_water":0.8469051948413147,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":60.0,"raw_water_grams":21.85,"raw_fat_grams":2.0,"raw_protein_grams":5.31,"raw_carb_grams":29.65,"raw_fiber_grams":1.62,"final_grams":56.65,"boil_minutes":3.0,"cook_stages":[{"tempF":185,"minutes":3}],"fill_class":"fried_meat"},{"section_key":"assembly","section_label":"Ham and cheese","prep_method":"raw","cook_method":"braise","cooking_method":"braise","cooking_method_normalized":"boiled","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":117.7,"raw_water_grams":60.68,"raw_fat_grams":23.32,"raw_protein_grams":26.39,"raw_carb_grams":2.64,"raw_fiber_grams":0.93,"final_grams":117.7,"boil_minutes":0,"cook_stages":[{"tempF":185,"minutes":3}],"fill_class":""},{"section_key":"egg","section_label":"Fried egg","prep_method":"finish","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":46.0,"raw_water_grams":31.96,"raw_fat_grams":6.83,"raw_protein_grams":6.26,"raw_carb_grams":0.38,"raw_fiber_grams":0.0,"final_grams":46.0,"boil_minutes":0,"cook_stages":[],"fill_class":""}],"cookingMethod":"braise","cookMinutes":3},
     recipeIngredients: [
       { name: 'Croque Madame', quantity: 'custom (g)', foodWord: 'CROQUEMADAME', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'whole milk', quantity: '½ cup', section: 'bechamel', ndbNo: '1077', portionDesc: 'g', portionGrams: 122.0 },
@@ -4419,8 +4419,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a simple green salad, cornichons, or a bowl of French onion soup.'
     ],
     sections: [
-      { key: 'bechamel', label: 'Béchamel sauce', cookingMethod: 'braise', prepMethod: 'simmer', stages: [{ tempF: 185, minutes: 3 }], boilMinutes: 3 },
-      { key: 'bread', label: 'Bread', cookingMethod: 'braise', prepMethod: 'pan seared', stages: [{ tempF: 185, minutes: 3 }], boilMinutes: 3 },
+      { key: 'bechamel', label: 'Béchamel sauce', cookingMethod: 'braise', prepMethod: 'simmer', stages: [{ tempF: 185, minutes: 3 }], boilMinutes: 3, fillClass: 'simmer_sauce' },
+      { key: 'bread', label: 'Bread', cookingMethod: 'braise', prepMethod: 'pan seared', stages: [{ tempF: 185, minutes: 3 }], boilMinutes: 3, fillClass: 'fried_meat' },
       { key: 'assembly', label: 'Ham and cheese', cookingMethod: 'braise', prepMethod: '', stages: [{ tempF: 185, minutes: 3 }], yieldFactorWater: 1.0 },
       { key: 'egg', label: 'Fried egg', cookingMethod: 'raw', prepMethod: 'finish', yieldFactorWater: 1.0 }
     ],
@@ -4467,7 +4467,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with raspberry jam alongside for dipping (not included in nutrient calculation).'
     ],
     sections: [
-      { key: 'assembly', label: 'Assembly', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 5 }
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 5, fillClass: 'fried_meat' }
     ],
   },
   {
@@ -4490,7 +4490,7 @@ export const LEVELS: Level[] = [
     prepTime: '20 min',
     linkType: 'dish',
     sr28Rule: 'Rule D',
-    nutritionJson: {"cal":1052.7,"pro":45.5,"fat":76.8,"carb":45.5,"fib":2.7,"h2o":244.6,"sug":9.8,"perServing":{"cal":1052.7,"pro":45.5,"fat":76.8,"carb":45.5,"fib":2.7,"h2o":244.6,"sug":9.8,"AddedSugars":0.0,"IntrinsicSugars":9.8},"micros":{"vitaminA":117.44,"vitaminC":1.02,"vitaminD":20.62,"vitaminE":0.4,"vitaminK":2.23,"vitaminB6":0.13,"vitaminB12":0.24,"thiamin":0.1,"riboflavin":0.14,"niacin":2.8,"folate":16.82,"calcium":116.97,"iron":0.87,"magnesium":16.37,"phosphorus":165.13,"potassium":209.42,"sodium":537.34,"zinc":0.79,"copper":0.04,"selenium":12.37,"cholesterol":62.49,"saturatedFat":10.39,"monoFat":5.05,"polyFat":1.1,"omega3":0.06,"omega6":0.7},"gramsPerServing":422.1,"servings":1,"per100g":{"Energy_KCal":249.42,"Water":57.96,"Protein":10.79,"TotalLipidFat":18.19,"Carbohydrate":10.78,"FiberTotalDietary":0.64,"SugarsTotal":2.32,"Cholesterol":62.49,"FattyAcids_totalSaturated":10.39,"FattyAcids_totalMonounsaturated":5.05,"FattyAcids_totalPolyunsaturated":1.1,"LinoleicAcid":0.7,"alphaLinolenicAcid":0.06,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":117.44,"Retinol":109.55,"Carotene_beta":86.45,"VitaminD":20.62,"VitaminE_alphaTocopherol":0.4,"VitaminK_phylloquinone":2.23,"VitaminC_totalAscorbicAcid":1.02,"Thiamin":0.1,"Riboflavin":0.14,"Niacin":2.8,"PantothenicAcid":0.3,"VitaminB6":0.13,"Folate_total":16.82,"Folate_food":6.22,"Folate_DFE":24.21,"FolicAcid":15.14,"VitaminB12":0.24,"Choline_total":19.88,"Betaine":15.95,"LuteinZeaxanthin":22.83,"Lycopene":292.62,"Calcium_Ca":116.97,"Iron_Fe":0.87,"Magnesium_Mg":16.37,"Phosphorus_P":165.13,"Potassium_K":209.42,"Sodium_Na":537.34,"Zinc_Zn":0.79,"Copper_Cu":0.04,"Manganese_Mn":0.12,"Selenium_Se":12.37,"Tryptophan":0.12,"Threonine":0.42,"Isoleucine":0.47,"Leucine":0.84,"Lysine":0.84,"Methionine":0.27,"Cystine":0.08,"Phenylalanine":0.43,"Tyrosine":0.41,"Valine":0.53,"Arginine":0.56,"Histidine":0.33,"Alanine":0.49,"AsparticAcid":0.84,"GlutamicAcid":1.86,"Glycine":0.39,"Proline":0.68,"Serine":0.45,"omega3":0.06,"omega6":0.7,"AddedSugars":0.0,"IntrinsicSugars":2.32},"addedSugars":0.0,"intrinsicSugars":9.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"1001","name":"Butter, salted","grams":14.2},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":8.0},{"ndb":"1053","name":"Cream, fluid, heavy whipping","grams":119.0},{"ndb":"2047","name":"Salt, table","grams":0.3},{"ndb":"2030","name":"Spices, pepper, black","grams":0.2},{"ndb":"2028","name":"Spices, paprika","grams":0.3},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":25.0},{"ndb":"18069","name":"Bread, white, commercially prepared (includes soft bread crumbs)","grams":60.0},{"ndb":"7081","name":"Turkey breast, sliced, prepackaged","grams":113.4},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":60.0},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":5.0},{"ndb":"10862","name":"Pork, cured, bacon, pre-sliced, cooked, pan-fried","grams":23.0}],"sections":[{"section_key":"cheese_sauce","section_label":"Cheese sauce","prep_method":"simmer","cook_method":"broil","cooking_method":"broil","cooking_method_normalized":"grilled","yield_factor_water":0.9202087729865123,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":167.0,"raw_water_grams":79.35,"raw_fat_grams":61.03,"raw_protein_grams":13.33,"raw_carb_grams":10.47,"raw_fiber_grams":0.37,"final_grams":160.67,"boil_minutes":4.0,"cook_stages":[{"tempF":500,"minutes":3}],"fill_class":"simmer_sauce"},{"section_key":"assembly","section_label":"Assembly","prep_method":"raw","cook_method":"broil","cooking_method":"broil","cooking_method_normalized":"grilled","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":238.4,"raw_water_grams":166.18,"raw_fat_grams":7.68,"raw_protein_grams":24.42,"raw_carb_grams":34.64,"raw_fiber_grams":2.34,"final_grams":238.4,"boil_minutes":0,"cook_stages":[{"tempF":500,"minutes":3}],"fill_class":""},{"section_key":"bacon","section_label":"Cooked bacon","prep_method":"finish","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":23.0,"raw_water_grams":5.44,"raw_fat_grams":8.07,"raw_protein_grams":7.8,"raw_carb_grams":0.39,"raw_fiber_grams":0.0,"final_grams":23.0,"boil_minutes":0,"cook_stages":[],"fill_class":""}],"cookingMethod":"broil","cookMinutes":3},
+    nutritionJson: {"cal":1052.7,"pro":45.5,"fat":76.8,"carb":45.5,"fib":2.7,"h2o":245.2,"sug":9.8,"perServing":{"cal":1052.7,"pro":45.5,"fat":76.8,"carb":45.5,"fib":2.7,"h2o":245.2,"sug":9.8,"AddedSugars":0.0,"IntrinsicSugars":9.8},"micros":{"vitaminA":117.29,"vitaminC":1.01,"vitaminD":20.59,"vitaminE":0.4,"vitaminK":2.23,"vitaminB6":0.13,"vitaminB12":0.24,"thiamin":0.1,"riboflavin":0.14,"niacin":2.8,"folate":16.79,"calcium":116.82,"iron":0.87,"magnesium":16.35,"phosphorus":164.92,"potassium":209.16,"sodium":536.67,"zinc":0.79,"copper":0.04,"selenium":12.35,"cholesterol":62.41,"saturatedFat":10.37,"monoFat":5.04,"polyFat":1.1,"omega3":0.06,"omega6":0.7},"gramsPerServing":422.6,"servings":1,"per100g":{"Energy_KCal":249.11,"Water":58.02,"Protein":10.78,"TotalLipidFat":18.17,"Carbohydrate":10.77,"FiberTotalDietary":0.64,"SugarsTotal":2.32,"Cholesterol":62.41,"FattyAcids_totalSaturated":10.37,"FattyAcids_totalMonounsaturated":5.04,"FattyAcids_totalPolyunsaturated":1.1,"LinoleicAcid":0.7,"alphaLinolenicAcid":0.06,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":117.29,"Retinol":109.41,"Carotene_beta":86.35,"VitaminD":20.59,"VitaminE_alphaTocopherol":0.4,"VitaminK_phylloquinone":2.23,"VitaminC_totalAscorbicAcid":1.01,"Thiamin":0.1,"Riboflavin":0.14,"Niacin":2.8,"PantothenicAcid":0.3,"VitaminB6":0.13,"Folate_total":16.79,"Folate_food":6.22,"Folate_DFE":24.18,"FolicAcid":15.13,"VitaminB12":0.24,"Choline_total":19.86,"Betaine":15.93,"LuteinZeaxanthin":22.8,"Lycopene":292.26,"Calcium_Ca":116.82,"Iron_Fe":0.87,"Magnesium_Mg":16.35,"Phosphorus_P":164.92,"Potassium_K":209.16,"Sodium_Na":536.67,"Zinc_Zn":0.79,"Copper_Cu":0.04,"Manganese_Mn":0.12,"Selenium_Se":12.35,"Tryptophan":0.12,"Threonine":0.42,"Isoleucine":0.47,"Leucine":0.84,"Lysine":0.83,"Methionine":0.27,"Cystine":0.08,"Phenylalanine":0.43,"Tyrosine":0.41,"Valine":0.53,"Arginine":0.56,"Histidine":0.33,"Alanine":0.49,"AsparticAcid":0.84,"GlutamicAcid":1.86,"Glycine":0.39,"Proline":0.68,"Serine":0.45,"omega3":0.06,"omega6":0.7,"AddedSugars":0.0,"IntrinsicSugars":2.32},"addedSugars":0.0,"intrinsicSugars":9.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"1001","name":"Butter, salted","grams":14.2},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":8.0},{"ndb":"1053","name":"Cream, fluid, heavy whipping","grams":119.0},{"ndb":"2047","name":"Salt, table","grams":0.3},{"ndb":"2030","name":"Spices, pepper, black","grams":0.2},{"ndb":"2028","name":"Spices, paprika","grams":0.3},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":25.0},{"ndb":"18069","name":"Bread, white, commercially prepared (includes soft bread crumbs)","grams":60.0},{"ndb":"7081","name":"Turkey breast, sliced, prepackaged","grams":113.4},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":60.0},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":5.0},{"ndb":"10862","name":"Pork, cured, bacon, pre-sliced, cooked, pan-fried","grams":23.0}],"sections":[{"section_key":"cheese_sauce","section_label":"Cheese sauce","prep_method":"simmer","cook_method":"broil","cooking_method":"broil","cooking_method_normalized":"grilled","yield_factor_water":0.9268628987242161,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":167.0,"raw_water_grams":79.35,"raw_fat_grams":61.03,"raw_protein_grams":13.33,"raw_carb_grams":10.47,"raw_fiber_grams":0.37,"final_grams":161.2,"boil_minutes":4.0,"cook_stages":[{"tempF":500,"minutes":3}],"fill_class":"simmer_sauce"},{"section_key":"assembly","section_label":"Assembly","prep_method":"raw","cook_method":"broil","cooking_method":"broil","cooking_method_normalized":"grilled","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":238.4,"raw_water_grams":166.18,"raw_fat_grams":7.68,"raw_protein_grams":24.42,"raw_carb_grams":34.64,"raw_fiber_grams":2.34,"final_grams":238.4,"boil_minutes":0,"cook_stages":[{"tempF":500,"minutes":3}],"fill_class":""},{"section_key":"bacon","section_label":"Cooked bacon","prep_method":"finish","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":23.0,"raw_water_grams":5.44,"raw_fat_grams":8.07,"raw_protein_grams":7.8,"raw_carb_grams":0.39,"raw_fiber_grams":0.0,"final_grams":23.0,"boil_minutes":0,"cook_stages":[],"fill_class":""}],"cookingMethod":"broil","cookMinutes":3},
     recipeIngredients: [
       { name: 'Hot Brown', quantity: 'custom (g)', foodWord: 'HOTBROWN', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'salted butter', quantity: '1 tbsp', section: 'cheese_sauce', ndbNo: '1001', portionDesc: 'g', portionGrams: 14.2 },
@@ -4515,7 +4515,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a simple green salad or fresh fruit on the side.'
     ],
     sections: [
-      { key: 'cheese_sauce', label: 'Cheese sauce', cookingMethod: 'broil', prepMethod: 'simmer', stages: [{ tempF: 500, minutes: 3 }], boilMinutes: 4 },
+      { key: 'cheese_sauce', label: 'Cheese sauce', cookingMethod: 'broil', prepMethod: 'simmer', stages: [{ tempF: 500, minutes: 3 }], boilMinutes: 4, fillClass: 'simmer_sauce' },
       { key: 'assembly', label: 'Assembly', cookingMethod: 'broil', prepMethod: '', stages: [{ tempF: 500, minutes: 3 }], yieldFactorWater: 1.0 },
       { key: 'bacon', label: 'Cooked bacon', cookingMethod: 'raw', prepMethod: 'finish', yieldFactorWater: 1.0 }
     ],
@@ -4562,7 +4562,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with mashed potatoes, roasted vegetables, or steamed green beans.'
     ],
     sections: [
-      { key: 'gravy', label: 'Gravy', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 5 },
+      { key: 'gravy', label: 'Gravy', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 5, fillClass: 'simmer_sauce' },
       { key: 'beef', label: 'Roast beef', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 1 },
       { key: 'bread', label: 'Bread', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
@@ -4896,7 +4896,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with potato chips, a dill pickle spear, or a cup of coleslaw.'
     ],
     sections: [
-      { key: 'sandwich', label: 'Reuben Sandwich', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 7 }
+      { key: 'sandwich', label: 'Reuben Sandwich', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 7, fillClass: 'fried_meat' }
     ],
   },
   {
@@ -5076,7 +5076,7 @@ export const LEVELS: Level[] = [
     prepTime: '10 min',
     linkType: 'dish',
     sr28Rule: 'Rule D',
-    nutritionJson: {"cal":710.5,"pro":41.0,"fat":43.5,"carb":39.4,"fib":5.2,"h2o":153.8,"sug":5.9,"perServing":{"cal":710.5,"pro":41.0,"fat":43.5,"carb":39.4,"fib":5.2,"h2o":153.8,"sug":5.9,"AddedSugars":0.0,"IntrinsicSugars":5.9},"micros":{"vitaminA":73.65,"vitaminC":0.56,"vitaminD":1.13,"vitaminE":0.29,"vitaminK":1.69,"vitaminB6":0.13,"vitaminB12":1.24,"thiamin":0.09,"riboflavin":0.18,"niacin":2.04,"folate":24.75,"calcium":205.31,"iron":1.49,"magnesium":24.68,"phosphorus":211.27,"potassium":193.47,"sodium":637.77,"zinc":2.81,"copper":0.08,"selenium":18.92,"cholesterol":57.0,"saturatedFat":9.27,"monoFat":6.41,"polyFat":0.6,"omega3":0.04,"omega6":0.2},"gramsPerServing":285.7,"servings":1,"per100g":{"Energy_KCal":248.7,"Water":53.82,"Protein":14.34,"TotalLipidFat":15.24,"Carbohydrate":13.79,"FiberTotalDietary":1.8,"SugarsTotal":2.05,"Cholesterol":57.0,"FattyAcids_totalSaturated":9.27,"FattyAcids_totalMonounsaturated":6.41,"FattyAcids_totalPolyunsaturated":0.6,"LinoleicAcid":0.2,"alphaLinolenicAcid":0.04,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":73.65,"Retinol":72.33,"Carotene_beta":17.03,"VitaminD":1.13,"VitaminE_alphaTocopherol":0.29,"VitaminK_phylloquinone":1.69,"VitaminC_totalAscorbicAcid":0.56,"Thiamin":0.09,"Riboflavin":0.18,"Niacin":2.04,"PantothenicAcid":0.31,"VitaminB6":0.13,"Folate_total":24.75,"Folate_food":14.83,"Folate_DFE":31.64,"FolicAcid":13.22,"VitaminB12":1.24,"Choline_total":27.91,"Betaine":3.41,"LuteinZeaxanthin":9.74,"Lycopene":0.17,"Calcium_Ca":205.31,"Iron_Fe":1.49,"Magnesium_Mg":24.68,"Phosphorus_P":211.27,"Potassium_K":193.47,"Sodium_Na":637.77,"Zinc_Zn":2.81,"Copper_Cu":0.08,"Manganese_Mn":0.24,"Selenium_Se":18.92,"Tryptophan":0.13,"Threonine":0.53,"Isoleucine":0.67,"Leucine":1.24,"Lysine":1.13,"Methionine":0.36,"Cystine":0.14,"Phenylalanine":0.69,"Tyrosine":0.59,"Valine":0.84,"Arginine":0.72,"Histidine":0.47,"Alanine":0.67,"AsparticAcid":1.04,"GlutamicAcid":2.8,"Glycine":0.63,"Proline":1.28,"Serine":0.69,"omega3":0.04,"omega6":0.2,"AddedSugars":0.0,"IntrinsicSugars":2.05},"addedSugars":0.0,"intrinsicSugars":5.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"11282","name":"Onions, raw","grams":80.0},{"ndb":"23572","name":"Beef, ground, 80% lean meat / 20% fat, raw","grams":113.0},{"ndb":"2047","name":"Salt, table","grams":3.0},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"18060","name":"Bread, rye","grams":64.0},{"ndb":"1001","name":"Butter, salted","grams":14.2},{"ndb":"1040","name":"Cheese, swiss","grams":56.0}],"sections":[{"section_key":"onion","section_label":"Caramelized onion","prep_method":"simmer","cook_method":"pan seared","cooking_method":"pan seared","cooking_method_normalized":"fried","yield_factor_water":0.8751062212041422,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":80.0,"raw_water_grams":71.29,"raw_fat_grams":0.08,"raw_protein_grams":0.88,"raw_carb_grams":7.47,"raw_fiber_grams":1.36,"final_grams":71.1,"boil_minutes":15.0,"cook_stages":[],"fill_class":"simmer_sauce"},{"section_key":"patty","section_label":"Patty","prep_method":"fried","cook_method":"pan seared","cooking_method":"pan seared","cooking_method_normalized":"fried","yield_factor_water":0.7681571015225616,"yield_factor_fat":0.5521937851673037,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":116.3,"raw_water_grams":69.96,"raw_fat_grams":22.61,"raw_protein_grams":19.43,"raw_carb_grams":0.19,"raw_fiber_grams":0.08,"final_grams":89.96,"boil_minutes":7.0,"cook_stages":[],"fill_class":"fried_meat"},{"section_key":"bread","section_label":"Assembly","prep_method":"raw","cook_method":"pan seared","cooking_method":"pan seared","cooking_method_normalized":"fried","yield_factor_water":0.7973642440003609,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":134.2,"raw_water_grams":47.2,"raw_fat_grams":30.98,"raw_protein_grams":20.66,"raw_carb_grams":31.73,"raw_fiber_grams":3.71,"final_grams":124.64,"boil_minutes":5.0,"cook_stages":[],"fill_class":"fried_meat"}],"cookingMethod":"pan seared","cookMinutes":null},
+    nutritionJson: {"cal":710.5,"pro":41.0,"fat":43.5,"carb":39.4,"fib":5.2,"h2o":154.9,"sug":5.9,"perServing":{"cal":710.5,"pro":41.0,"fat":43.5,"carb":39.4,"fib":5.2,"h2o":154.9,"sug":5.9,"AddedSugars":0.0,"IntrinsicSugars":5.9},"micros":{"vitaminA":73.36,"vitaminC":0.56,"vitaminD":1.12,"vitaminE":0.28,"vitaminK":1.69,"vitaminB6":0.13,"vitaminB12":1.23,"thiamin":0.09,"riboflavin":0.18,"niacin":2.04,"folate":24.65,"calcium":204.51,"iron":1.48,"magnesium":24.59,"phosphorus":210.45,"potassium":192.72,"sodium":635.29,"zinc":2.8,"copper":0.08,"selenium":18.85,"cholesterol":56.78,"saturatedFat":9.24,"monoFat":6.39,"polyFat":0.6,"omega3":0.04,"omega6":0.2},"gramsPerServing":286.8,"servings":1,"per100g":{"Energy_KCal":247.73,"Water":54.0,"Protein":14.29,"TotalLipidFat":15.18,"Carbohydrate":13.73,"FiberTotalDietary":1.79,"SugarsTotal":2.05,"Cholesterol":56.78,"FattyAcids_totalSaturated":9.24,"FattyAcids_totalMonounsaturated":6.39,"FattyAcids_totalPolyunsaturated":0.6,"LinoleicAcid":0.2,"alphaLinolenicAcid":0.04,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":73.36,"Retinol":72.04,"Carotene_beta":16.96,"VitaminD":1.12,"VitaminE_alphaTocopherol":0.28,"VitaminK_phylloquinone":1.69,"VitaminC_totalAscorbicAcid":0.56,"Thiamin":0.09,"Riboflavin":0.18,"Niacin":2.04,"PantothenicAcid":0.31,"VitaminB6":0.13,"Folate_total":24.65,"Folate_food":14.78,"Folate_DFE":31.51,"FolicAcid":13.17,"VitaminB12":1.23,"Choline_total":27.81,"Betaine":3.4,"LuteinZeaxanthin":9.7,"Lycopene":0.17,"Calcium_Ca":204.51,"Iron_Fe":1.48,"Magnesium_Mg":24.59,"Phosphorus_P":210.45,"Potassium_K":192.72,"Sodium_Na":635.29,"Zinc_Zn":2.8,"Copper_Cu":0.08,"Manganese_Mn":0.24,"Selenium_Se":18.85,"Tryptophan":0.13,"Threonine":0.52,"Isoleucine":0.67,"Leucine":1.24,"Lysine":1.13,"Methionine":0.36,"Cystine":0.14,"Phenylalanine":0.69,"Tyrosine":0.59,"Valine":0.84,"Arginine":0.72,"Histidine":0.47,"Alanine":0.67,"AsparticAcid":1.04,"GlutamicAcid":2.79,"Glycine":0.63,"Proline":1.27,"Serine":0.69,"omega3":0.04,"omega6":0.2,"AddedSugars":0.0,"IntrinsicSugars":2.05},"addedSugars":0.0,"intrinsicSugars":5.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"11282","name":"Onions, raw","grams":80.0},{"ndb":"23572","name":"Beef, ground, 80% lean meat / 20% fat, raw","grams":113.0},{"ndb":"2047","name":"Salt, table","grams":3.0},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"18060","name":"Bread, rye","grams":64.0},{"ndb":"1001","name":"Butter, salted","grams":14.2},{"ndb":"1040","name":"Cheese, swiss","grams":56.0}],"sections":[{"section_key":"onion","section_label":"Caramelized onion","prep_method":"simmer","cook_method":"pan seared","cooking_method":"pan seared","cooking_method_normalized":"fried","yield_factor_water":0.8790416079503375,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":80.0,"raw_water_grams":71.29,"raw_fat_grams":0.08,"raw_protein_grams":0.88,"raw_carb_grams":7.47,"raw_fiber_grams":1.36,"final_grams":71.38,"boil_minutes":15.0,"cook_stages":[],"fill_class":"simmer_sauce"},{"section_key":"patty","section_label":"Patty","prep_method":"fried","cook_method":"pan seared","cooking_method":"pan seared","cooking_method_normalized":"fried","yield_factor_water":0.7801332044000904,"yield_factor_fat":0.5521937851673037,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":116.3,"raw_water_grams":69.96,"raw_fat_grams":22.61,"raw_protein_grams":19.43,"raw_carb_grams":0.19,"raw_fiber_grams":0.08,"final_grams":90.79,"boil_minutes":7.0,"cook_stages":[],"fill_class":"fried_meat"},{"section_key":"bread","section_label":"Assembly","prep_method":"raw","cook_method":"pan seared","cooking_method":"pan seared","cooking_method_normalized":"fried","yield_factor_water":0.7973642440003609,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":134.2,"raw_water_grams":47.2,"raw_fat_grams":30.98,"raw_protein_grams":20.66,"raw_carb_grams":31.73,"raw_fiber_grams":3.71,"final_grams":124.64,"boil_minutes":5.0,"cook_stages":[],"fill_class":"fried_meat"}],"cookingMethod":"pan seared","cookMinutes":null},
     recipeIngredients: [
       { name: 'Patty Melt', quantity: 'custom (g)', foodWord: 'PATTYMELT', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'onion', quantity: '1 medium (caramelized)', section: 'onion', ndbNo: '11282', portionDesc: 'g', portionGrams: 80.0 },
@@ -5096,9 +5096,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, onion rings, or a dill pickle spear.'
     ],
     sections: [
-      { key: 'onion', label: 'Caramelized onion', cookingMethod: 'pan seared', prepMethod: 'simmer', boilMinutes: 15 },
-      { key: 'patty', label: 'Patty', cookingMethod: 'pan seared', prepMethod: 'fried', boilMinutes: 7 },
-      { key: 'bread', label: 'Assembly', cookingMethod: 'pan seared', prepMethod: '', boilMinutes: 5 }
+      { key: 'onion', label: 'Caramelized onion', cookingMethod: 'pan seared', prepMethod: 'simmer', boilMinutes: 15, fillClass: 'simmer_sauce' },
+      { key: 'patty', label: 'Patty', cookingMethod: 'pan seared', prepMethod: 'fried', boilMinutes: 7, fillClass: 'fried_meat' },
+      { key: 'bread', label: 'Assembly', cookingMethod: 'pan seared', prepMethod: '', boilMinutes: 5, fillClass: 'fried_meat' }
     ],
   },
   {
@@ -5148,10 +5148,10 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with potato chips, coleslaw, or baked beans.'
     ],
     sections: [
-      { key: 'onion', label: 'Onion and pepper', cookingMethod: 'simmer', prepMethod: 'simmer', stages: [{ tempF: 195, minutes: 9 }], boilMinutes: 12 },
-      { key: 'beef', label: 'Ground beef', cookingMethod: 'simmer', prepMethod: 'simmer', stages: [{ tempF: 195, minutes: 9 }], boilMinutes: 7 },
-      { key: 'spices', label: 'Spices and tomato paste', cookingMethod: 'simmer', prepMethod: 'simmer', stages: [{ tempF: 195, minutes: 9 }], boilMinutes: 1 },
-      { key: 'sauce', label: 'Sloppy Joe sauce', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 9 },
+      { key: 'onion', label: 'Onion and pepper', cookingMethod: 'simmer', prepMethod: 'simmer', stages: [{ tempF: 195, minutes: 9 }], boilMinutes: 12, fillClass: 'simmer_sauce' },
+      { key: 'beef', label: 'Ground beef', cookingMethod: 'simmer', prepMethod: 'simmer', stages: [{ tempF: 195, minutes: 9 }], boilMinutes: 7, fillClass: 'fried_meat' },
+      { key: 'spices', label: 'Spices and tomato paste', cookingMethod: 'simmer', prepMethod: 'simmer', stages: [{ tempF: 195, minutes: 9 }], boilMinutes: 1, fillClass: 'simmer_sauce' },
+      { key: 'sauce', label: 'Sloppy Joe sauce', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 9, fillClass: 'simmer_sauce' },
       { key: 'bread', label: 'Hamburger bun', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -5200,7 +5200,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with baked beans, potato chips, or corn on the cob.'
     ],
     sections: [
-      { key: 'pork', label: 'Pulled pork', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 300, minutes: 100 }] },
+      { key: 'pork', label: 'Pulled pork', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 300, minutes: 100 }], fillClass: 'baked_pork' },
       { key: 'slaw', label: 'Coleslaw & bun', cookingMethod: 'raw', prepMethod: 'raw' }
     ],
   },
@@ -5247,7 +5247,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with baked beans, coleslaw, or corn on the cob.'
     ],
     sections: [
-      { key: 'brisket', label: 'Barbecue brisket', cookingMethod: 'braise', prepMethod: 'braise', stages: [{ tempF: 275, minutes: 100 }] },
+      { key: 'brisket', label: 'Barbecue brisket', cookingMethod: 'braise', prepMethod: 'braise', stages: [{ tempF: 275, minutes: 100 }], fillClass: 'braised_beef' },
       { key: 'assembly', label: 'Toppings & bun', cookingMethod: 'raw', prepMethod: 'raw' }
     ],
   },
@@ -5294,7 +5294,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, a side salad, or coleslaw.'
     ],
     sections: [
-      { key: 'chicken', label: 'Grilled chicken', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 11 },
+      { key: 'chicken', label: 'Grilled chicken', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 11, fillClass: 'pan_grilled_chicken' },
       { key: 'assembly', label: 'Toppings & bun', cookingMethod: 'raw', prepMethod: 'raw' }
     ],
   },
@@ -5346,7 +5346,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, coleslaw, or pickled jalapeños on the side.'
     ],
     sections: [
-      { key: 'chicken', label: 'Fried chicken', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 11 },
+      { key: 'chicken', label: 'Fried chicken', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 11, fillClass: 'fried_chicken' },
       { key: 'assembly', label: 'Toppings & bun', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
@@ -5399,7 +5399,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with celery sticks, carrot sticks, and extra ranch or blue cheese dressing on the side.'
     ],
     sections: [
-      { key: 'chicken', label: 'Fried chicken', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 11 },
+      { key: 'chicken', label: 'Fried chicken', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 11, fillClass: 'fried_chicken' },
       { key: 'assembly', label: 'Toppings & bun', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
@@ -5453,7 +5453,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with extra pickles, coleslaw, and a cold beverage to balance the heat.'
     ],
     sections: [
-      { key: 'chicken', label: 'Fried chicken', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 11 },
+      { key: 'chicken', label: 'Fried chicken', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 11, fillClass: 'fried_chicken' },
       { key: 'assembly', label: 'Toppings & bun', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
@@ -5502,7 +5502,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, coleslaw, or malt vinegar on the side.'
     ],
     sections: [
-      { key: 'fish', label: 'Fried cod', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 7 },
+      { key: 'fish', label: 'Fried cod', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 7, fillClass: 'fried_chicken' },
       { key: 'assembly', label: 'Toppings & bun', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
@@ -5556,7 +5556,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with coleslaw, a lemon wedge, or a simple green salad.'
     ],
     sections: [
-      { key: 'crab_cake', label: 'Crab cake', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 7 },
+      { key: 'crab_cake', label: 'Crab cake', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 7, fillClass: 'pan_grilled_chicken' },
       { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
@@ -5604,7 +5604,7 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'lobster_salad', label: 'Lobster salad', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 3 }
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 3, fillClass: 'pan_grilled_chicken' }
     ],
   },
   {
@@ -5649,7 +5649,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with tomato soup, kettle chips, or a dill pickle.'
     ],
     sections: [
-      { key: 'assembly', label: 'Tuna melt', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 7 }
+      { key: 'assembly', label: 'Tuna melt', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 7, fillClass: 'pan_grilled_chicken' }
     ],
   },
   {
@@ -5672,7 +5672,7 @@ export const LEVELS: Level[] = [
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
-    nutritionJson: {"cal":438.4,"pro":39.8,"fat":19.2,"carb":25.1,"fib":1.9,"h2o":248.2,"sug":2.1,"perServing":{"cal":438.4,"pro":39.8,"fat":19.2,"carb":25.1,"fib":1.9,"h2o":248.2,"sug":2.1,"AddedSugars":0.0,"IntrinsicSugars":2.1},"micros":{"vitaminA":16.62,"vitaminC":0.16,"vitaminD":1.97,"vitaminE":0.3,"vitaminK":1.61,"vitaminB6":0.15,"vitaminB12":0.84,"thiamin":0.06,"riboflavin":0.14,"niacin":2.45,"folate":13.13,"calcium":79.54,"iron":1.36,"magnesium":15.4,"phosphorus":161.63,"potassium":331.01,"sodium":784.8,"zinc":1.73,"copper":0.06,"selenium":10.78,"cholesterol":26.81,"saturatedFat":2.29,"monoFat":2.45,"polyFat":0.28,"omega3":0.0,"omega6":0.05},"gramsPerServing":342.6,"servings":1,"per100g":{"Energy_KCal":127.93,"Water":72.44,"Protein":11.61,"TotalLipidFat":5.61,"Carbohydrate":7.31,"FiberTotalDietary":0.55,"SugarsTotal":0.63,"Cholesterol":26.81,"FattyAcids_totalSaturated":2.29,"FattyAcids_totalMonounsaturated":2.45,"FattyAcids_totalPolyunsaturated":0.28,"LinoleicAcid":0.05,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":16.62,"Retinol":16.22,"Carotene_beta":4.64,"VitaminD":1.97,"VitaminE_alphaTocopherol":0.3,"VitaminK_phylloquinone":1.61,"VitaminC_totalAscorbicAcid":0.16,"Thiamin":0.06,"Riboflavin":0.14,"Niacin":2.45,"PantothenicAcid":0.27,"VitaminB6":0.15,"Folate_total":13.13,"Folate_food":6.48,"Folate_DFE":17.79,"FolicAcid":8.87,"VitaminB12":0.84,"Choline_total":21.17,"Betaine":0.04,"LuteinZeaxanthin":3.81,"Lycopene":0.0,"Calcium_Ca":79.54,"Iron_Fe":1.36,"Magnesium_Mg":15.4,"Phosphorus_P":161.63,"Potassium_K":331.01,"Sodium_Na":784.8,"Zinc_Zn":1.73,"Copper_Cu":0.06,"Manganese_Mn":0.1,"Selenium_Se":10.78,"Tryptophan":0.04,"Threonine":0.12,"Isoleucine":0.14,"Leucine":0.28,"Lysine":0.27,"Methionine":0.08,"Cystine":0.03,"Phenylalanine":0.17,"Tyrosine":0.16,"Valine":0.2,"Arginine":0.15,"Histidine":0.12,"Alanine":0.11,"AsparticAcid":0.23,"GlutamicAcid":0.92,"Glycine":0.08,"Proline":0.36,"Serine":0.18,"omega3":0.0,"omega6":0.05,"AddedSugars":0.0,"IntrinsicSugars":0.63},"addedSugars":0.0,"intrinsicSugars":2.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":4.5},{"ndb":"11282","name":"Onions, raw","grams":27.5},{"ndb":"2020","name":"Spices, garlic powder","grams":1.6},{"ndb":"2047","name":"Salt, table","grams":0.5},{"ndb":"6971","name":"Sauce, worcestershire","grams":1.1},{"ndb":"6008","name":"Soup, beef broth or bouillon canned, ready-to-serve","grams":120.0},{"ndb":"16124","name":"Soy sauce made from soy (tamari)","grams":9.0},{"ndb":"18349","name":"Rolls, french","grams":38.0},{"ndb":"7043","name":"Roast beef, deli style, prepackaged, sliced","grams":141.8},{"ndb":"1035","name":"Cheese, provolone","grams":28.4}],"sections":[{"section_key":"onion_saute","section_label":"Sautéed onion","prep_method":"sauteed","cook_method":"broil","cooking_method":"broil","cooking_method_normalized":"grilled","yield_factor_water":0.8034855090739684,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":35.15,"raw_water_grams":25.47,"raw_fat_grams":4.54,"raw_protein_grams":0.56,"raw_carb_grams":3.91,"raw_fiber_grams":0.61,"final_grams":30.14,"boil_minutes":10.0,"cook_stages":[{"tempF":500,"minutes":3}],"fill_class":"pan_grilled_chicken"},{"section_key":"au_jus","section_label":"Au jus","prep_method":"simmer","cook_method":"broil","cooking_method":"broil","cooking_method_normalized":"grilled","yield_factor_water":0.9202087729865123,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":129.0,"raw_water_grams":123.0,"raw_fat_grams":0.27,"raw_protein_grams":2.31,"raw_carb_grams":0.55,"raw_fiber_grams":0.07,"final_grams":119.19,"boil_minutes":4.0,"cook_stages":[{"tempF":500,"minutes":3}],"fill_class":"simmer_sauce"},{"section_key":"assembly","section_label":"Assembly","prep_method":"raw","cook_method":"broil","cooking_method":"broil","cooking_method_normalized":"grilled","yield_factor_water":0.8856637770324782,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":208.1,"raw_water_grams":129.33,"raw_fat_grams":14.41,"raw_protein_grams":36.91,"raw_carb_grams":20.59,"raw_fiber_grams":1.22,"final_grams":193.31,"boil_minutes":3.0,"cook_stages":[{"tempF":500,"minutes":3}],"fill_class":"pan_grilled_chicken"}],"cookingMethod":"broil","cookMinutes":null},
+    nutritionJson: {"cal":438.4,"pro":39.8,"fat":19.2,"carb":25.1,"fib":1.9,"h2o":249.1,"sug":2.1,"perServing":{"cal":438.4,"pro":39.8,"fat":19.2,"carb":25.1,"fib":1.9,"h2o":249.1,"sug":2.1,"AddedSugars":0.0,"IntrinsicSugars":2.1},"micros":{"vitaminA":16.58,"vitaminC":0.16,"vitaminD":1.96,"vitaminE":0.3,"vitaminK":1.61,"vitaminB6":0.15,"vitaminB12":0.84,"thiamin":0.06,"riboflavin":0.14,"niacin":2.44,"folate":13.1,"calcium":79.32,"iron":1.35,"magnesium":15.36,"phosphorus":161.19,"potassium":330.1,"sodium":782.63,"zinc":1.72,"copper":0.06,"selenium":10.75,"cholesterol":26.73,"saturatedFat":2.28,"monoFat":2.44,"polyFat":0.28,"omega3":0.0,"omega6":0.05},"gramsPerServing":343.6,"servings":1,"per100g":{"Energy_KCal":127.58,"Water":72.51,"Protein":11.58,"TotalLipidFat":5.59,"Carbohydrate":7.29,"FiberTotalDietary":0.55,"SugarsTotal":0.63,"Cholesterol":26.73,"FattyAcids_totalSaturated":2.28,"FattyAcids_totalMonounsaturated":2.44,"FattyAcids_totalPolyunsaturated":0.28,"LinoleicAcid":0.05,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":16.58,"Retinol":16.17,"Carotene_beta":4.63,"VitaminD":1.96,"VitaminE_alphaTocopherol":0.3,"VitaminK_phylloquinone":1.61,"VitaminC_totalAscorbicAcid":0.16,"Thiamin":0.06,"Riboflavin":0.14,"Niacin":2.44,"PantothenicAcid":0.27,"VitaminB6":0.15,"Folate_total":13.1,"Folate_food":6.46,"Folate_DFE":17.74,"FolicAcid":8.85,"VitaminB12":0.84,"Choline_total":21.11,"Betaine":0.04,"LuteinZeaxanthin":3.79,"Lycopene":0.0,"Calcium_Ca":79.32,"Iron_Fe":1.35,"Magnesium_Mg":15.36,"Phosphorus_P":161.19,"Potassium_K":330.1,"Sodium_Na":782.63,"Zinc_Zn":1.72,"Copper_Cu":0.06,"Manganese_Mn":0.1,"Selenium_Se":10.75,"Tryptophan":0.04,"Threonine":0.12,"Isoleucine":0.14,"Leucine":0.28,"Lysine":0.27,"Methionine":0.08,"Cystine":0.03,"Phenylalanine":0.17,"Tyrosine":0.16,"Valine":0.2,"Arginine":0.15,"Histidine":0.12,"Alanine":0.11,"AsparticAcid":0.23,"GlutamicAcid":0.92,"Glycine":0.08,"Proline":0.36,"Serine":0.18,"omega3":0.0,"omega6":0.05,"AddedSugars":0.0,"IntrinsicSugars":0.63},"addedSugars":0.0,"intrinsicSugars":2.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":4.5},{"ndb":"11282","name":"Onions, raw","grams":27.5},{"ndb":"2020","name":"Spices, garlic powder","grams":1.6},{"ndb":"2047","name":"Salt, table","grams":0.5},{"ndb":"6971","name":"Sauce, worcestershire","grams":1.1},{"ndb":"6008","name":"Soup, beef broth or bouillon canned, ready-to-serve","grams":120.0},{"ndb":"16124","name":"Soy sauce made from soy (tamari)","grams":9.0},{"ndb":"18349","name":"Rolls, french","grams":38.0},{"ndb":"7043","name":"Roast beef, deli style, prepackaged, sliced","grams":141.8},{"ndb":"1035","name":"Cheese, provolone","grams":28.4}],"sections":[{"section_key":"onion_saute","section_label":"Sautéed onion","prep_method":"sauteed","cook_method":"broil","cooking_method":"broil","cooking_method_normalized":"grilled","yield_factor_water":0.8086470884535476,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":35.15,"raw_water_grams":25.47,"raw_fat_grams":4.54,"raw_protein_grams":0.56,"raw_carb_grams":3.91,"raw_fiber_grams":0.61,"final_grams":30.28,"boil_minutes":10.0,"cook_stages":[{"tempF":500,"minutes":3}],"fill_class":"pan_grilled_chicken"},{"section_key":"au_jus","section_label":"Au jus","prep_method":"simmer","cook_method":"broil","cooking_method":"broil","cooking_method_normalized":"grilled","yield_factor_water":0.9268628987242161,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":129.0,"raw_water_grams":123.0,"raw_fat_grams":0.27,"raw_protein_grams":2.31,"raw_carb_grams":0.55,"raw_fiber_grams":0.07,"final_grams":120.0,"boil_minutes":4.0,"cook_stages":[{"tempF":500,"minutes":3}],"fill_class":"simmer_sauce"},{"section_key":"assembly","section_label":"Assembly","prep_method":"raw","cook_method":"broil","cooking_method":"broil","cooking_method_normalized":"grilled","yield_factor_water":0.8856637770324782,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":208.1,"raw_water_grams":129.33,"raw_fat_grams":14.41,"raw_protein_grams":36.91,"raw_carb_grams":20.59,"raw_fiber_grams":1.22,"final_grams":193.31,"boil_minutes":3.0,"cook_stages":[{"tempF":500,"minutes":3}],"fill_class":"pan_grilled_chicken"}],"cookingMethod":"broil","cookMinutes":null},
     recipeIngredients: [
       { name: 'French Dip', quantity: 'custom (g)', foodWord: 'FRENCHDIP', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'olive oil', quantity: '1 tsp', section: 'onion_saute', ndbNo: '4053', portionDesc: 'g', portionGrams: 4.5 },
@@ -5697,9 +5697,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, a simple green salad, or horseradish sauce on the side.'
     ],
     sections: [
-      { key: 'onion_saute', label: 'Sautéed onion', cookingMethod: 'broil', prepMethod: 'sauteed', stages: [{ tempF: 500, minutes: 3 }], boilMinutes: 10 },
-      { key: 'au_jus', label: 'Au jus', cookingMethod: 'broil', prepMethod: 'simmer', stages: [{ tempF: 500, minutes: 3 }], boilMinutes: 4 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: 'broil', prepMethod: '', stages: [{ tempF: 500, minutes: 3 }], boilMinutes: 3 }
+      { key: 'onion_saute', label: 'Sautéed onion', cookingMethod: 'broil', prepMethod: 'sauteed', stages: [{ tempF: 500, minutes: 3 }], boilMinutes: 10, fillClass: 'pan_grilled_chicken' },
+      { key: 'au_jus', label: 'Au jus', cookingMethod: 'broil', prepMethod: 'simmer', stages: [{ tempF: 500, minutes: 3 }], boilMinutes: 4, fillClass: 'simmer_sauce' },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'broil', prepMethod: '', stages: [{ tempF: 500, minutes: 3 }], boilMinutes: 3, fillClass: 'pan_grilled_chicken' }
     ],
   },
   {
@@ -5744,8 +5744,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries or kettle chips, and giardiniera on the side.'
     ],
     sections: [
-      { key: 'au_jus', label: 'Au jus', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 5 },
-      { key: 'sweet_peppers', label: 'Sweet peppers', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 4 },
+      { key: 'au_jus', label: 'Au jus', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 5, fillClass: 'simmer_sauce' },
+      { key: 'sweet_peppers', label: 'Sweet peppers', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 4, fillClass: 'pan_grilled_chicken' },
       { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
@@ -5802,7 +5802,7 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'remoulade', label: 'Remoulade sauce', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 },
-      { key: 'shrimp', label: 'Fried shrimp', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 3 },
+      { key: 'shrimp', label: 'Fried shrimp', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 3, fillClass: 'fried_breaded_shrimp' },
       { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 }
     ],
   },
@@ -5859,7 +5859,7 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'remoulade', label: 'Remoulade sauce', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 },
-      { key: 'oyster', label: 'Fried oysters', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 4 },
+      { key: 'oyster', label: 'Fried oysters', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 4, fillClass: 'fried_chicken' },
       { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 }
     ],
   },
@@ -5913,9 +5913,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a simple green salad, roasted vegetables, or kettle chips on the side.'
     ],
     sections: [
-      { key: 'meatballs', label: 'Meatballs', cookingMethod: 'broil', prepMethod: 'pan seared', stages: [{ tempF: 500, minutes: 3 }], boilMinutes: 5 },
-      { key: 'marinara', label: 'Marinara sauce', cookingMethod: 'broil', prepMethod: 'simmer', stages: [{ tempF: 500, minutes: 3 }], boilMinutes: 3 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: 'broil', prepMethod: '', stages: [{ tempF: 500, minutes: 3 }], boilMinutes: 3 }
+      { key: 'meatballs', label: 'Meatballs', cookingMethod: 'broil', prepMethod: 'pan seared', stages: [{ tempF: 500, minutes: 3 }], boilMinutes: 5, fillClass: 'fried_meat' },
+      { key: 'marinara', label: 'Marinara sauce', cookingMethod: 'broil', prepMethod: 'simmer', stages: [{ tempF: 500, minutes: 3 }], boilMinutes: 3, fillClass: 'simmer_sauce' },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'broil', prepMethod: '', stages: [{ tempF: 500, minutes: 3 }], boilMinutes: 3, fillClass: 'pan_grilled_chicken' }
     ],
   },
   {
@@ -6015,7 +6015,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a simple green salad or roasted vegetables on the side.'
     ],
     sections: [
-      { key: 'chicken', label: 'Breaded chicken', cookingMethod: 'broil', prepMethod: 'fried', stages: [{ tempF: 500, minutes: 3 }], boilMinutes: 8 },
+      { key: 'chicken', label: 'Breaded chicken', cookingMethod: 'broil', prepMethod: 'fried', stages: [{ tempF: 500, minutes: 3 }], boilMinutes: 8, fillClass: 'fried_chicken' },
       { key: 'assembly', label: 'Assembly', cookingMethod: 'broil', prepMethod: '', stages: [{ tempF: 500, minutes: 3 }] }
     ],
   },
@@ -6060,8 +6060,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, onion rings, or a dill pickle on the side.'
     ],
     sections: [
-      { key: 'vegetables', label: 'Onion and bell pepper', cookingMethod: 'braise', prepMethod: 'pan seared', stages: [{ tempF: 185, minutes: 2 }], boilMinutes: 8 },
-      { key: 'beef', label: 'Beef', cookingMethod: 'braise', prepMethod: 'pan seared', stages: [{ tempF: 185, minutes: 2 }], boilMinutes: 3 },
+      { key: 'vegetables', label: 'Onion and bell pepper', cookingMethod: 'braise', prepMethod: 'pan seared', stages: [{ tempF: 185, minutes: 2 }], boilMinutes: 8, fillClass: 'pan_grilled_chicken' },
+      { key: 'beef', label: 'Beef', cookingMethod: 'braise', prepMethod: 'pan seared', stages: [{ tempF: 185, minutes: 2 }], boilMinutes: 3, fillClass: 'pan_grilled_chicken' },
       { key: 'assembly', label: 'Provolone cheese', cookingMethod: 'braise', prepMethod: '', stages: [{ tempF: 185, minutes: 2 }] },
       { key: 'roll', label: 'Hoagie roll', cookingMethod: 'raw', prepMethod: 'finish', yieldFactorWater: 1.0 }
     ],
@@ -6115,7 +6115,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a light clear soup or Vietnamese iced coffee on the side.'
     ],
     sections: [
-      { key: 'pork', label: 'Pork', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 8 },
+      { key: 'pork', label: 'Pork', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 8, fillClass: 'pan_grilled_chicken' },
       { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -6201,7 +6201,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a green salad, fresh berries, or hash browns.'
     ],
     sections: [
-      { key: 'eggs', label: 'Eggs', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 2 },
+      { key: 'eggs', label: 'Eggs', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 2, fillClass: 'fried_meat' },
       { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -6242,7 +6242,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a green salad, fresh berries, or hash browns.'
     ],
     sections: [
-      { key: 'eggs', label: 'Eggs', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 2 },
+      { key: 'eggs', label: 'Eggs', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 2, fillClass: 'fried_meat' },
       { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -6284,7 +6284,7 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'sausage', label: 'Sausage', cookingMethod: 'raw', prepMethod: 'pan seared', boilMinutes: 3 },
-      { key: 'eggs', label: 'Eggs', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 3 },
+      { key: 'eggs', label: 'Eggs', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 3, fillClass: 'fried_meat' },
       { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -6325,8 +6325,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a green salad, fresh berries, or hash browns.'
     ],
     sections: [
-      { key: 'ham', label: 'Ham', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 2 },
-      { key: 'eggs', label: 'Eggs', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 2 },
+      { key: 'ham', label: 'Ham', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 2, fillClass: 'fried_meat' },
+      { key: 'eggs', label: 'Eggs', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 2, fillClass: 'fried_meat' },
       { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -6423,7 +6423,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with tabbouleh, a simple cucumber salad, or hummus on the side.'
     ],
     sections: [
-      { key: 'falafel', label: 'Falafel', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 7 },
+      { key: 'falafel', label: 'Falafel', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 7, fillClass: 'fried_chicken' },
       { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -6475,7 +6475,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with Greek salad, roasted potatoes, or extra tzatziki on the side.'
     ],
     sections: [
-      { key: 'lamb', label: 'Lamb', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 6 },
+      { key: 'lamb', label: 'Lamb', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 6, fillClass: 'fried_meat' },
       { key: 'tzatziki', label: 'Tzatziki', cookingMethod: 'raw', prepMethod: '' },
       { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', prepMethod: '' }
     ],
@@ -6520,7 +6520,7 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'coleslaw', label: 'Coleslaw', cookingMethod: 'pan seared', prepMethod: '', boilMinutes: 7 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: 'pan seared', prepMethod: '', boilMinutes: 7 }
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'pan seared', prepMethod: '', boilMinutes: 7, fillClass: 'fried_meat' }
     ],
   },
   {
@@ -6562,7 +6562,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, onion rings, or a dill pickle on the side.'
     ],
     sections: [
-      { key: 'patty', label: 'Patty', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 7 },
+      { key: 'patty', label: 'Patty', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 7, fillClass: 'fried_meat' },
       { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -6607,7 +6607,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, onion rings, or a dill pickle on the side.'
     ],
     sections: [
-      { key: 'patty', label: 'Patty', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 7 },
+      { key: 'patty', label: 'Patty', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 7, fillClass: 'fried_meat' },
       { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -6653,7 +6653,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, onion rings, or a dill pickle on the side.'
     ],
     sections: [
-      { key: 'patty', label: 'Patty', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 7 },
+      { key: 'patty', label: 'Patty', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 7, fillClass: 'fried_meat' },
       { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -6698,7 +6698,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, onion rings, or a dill pickle on the side.'
     ],
     sections: [
-      { key: 'patty', label: 'Patties', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 7 },
+      { key: 'patty', label: 'Patties', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 7, fillClass: 'fried_meat' },
       { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -6747,9 +6747,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, onion rings, or a dill pickle on the side.'
     ],
     sections: [
-      { key: 'onion', label: 'Caramelized onion', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 45 },
-      { key: 'patty', label: 'Patty', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 8 },
-      { key: 'mushrooms', label: 'Mushrooms', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 2 },
+      { key: 'onion', label: 'Caramelized onion', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 45, fillClass: 'sauteed_aromatic' },
+      { key: 'patty', label: 'Patty', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 8, fillClass: 'fried_meat' },
+      { key: 'mushrooms', label: 'Mushrooms', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 2, fillClass: 'sauteed_aromatic' },
       { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -6793,7 +6793,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, coleslaw, or extra BBQ sauce on the side.'
     ],
     sections: [
-      { key: 'patty', label: 'Patty', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 7 },
+      { key: 'patty', label: 'Patty', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 7, fillClass: 'fried_meat' },
       { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -6836,7 +6836,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with sweet potato fries, a dill pickle, or a light garden salad on the side.'
     ],
     sections: [
-      { key: 'patty', label: 'Patty', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 11 },
+      { key: 'patty', label: 'Patty', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 11, fillClass: 'pan_grilled_chicken' },
       { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -6883,7 +6883,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with sweet potato fries, a green salad, or sliced avocado on the side.'
     ],
     sections: [
-      { key: 'patty', label: 'Patty', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 9 },
+      { key: 'patty', label: 'Patty', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 9, fillClass: 'fried_meat' },
       { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -6922,7 +6922,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, potato chips, or baked beans on the side.'
     ],
     sections: [
-      { key: 'frank', label: 'Grilled frank', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 9 },
+      { key: 'frank', label: 'Grilled frank', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 9, fillClass: 'fried_meat' },
       { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -6965,7 +6965,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, potato chips, or baked beans on the side.'
     ],
     sections: [
-      { key: 'frank', label: 'Frank', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 9 },
+      { key: 'frank', label: 'Frank', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 9, fillClass: 'fried_meat' },
       { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -7005,7 +7005,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, potato chips, or baked beans on the side.'
     ],
     sections: [
-      { key: 'frank', label: 'Frank', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 9 },
+      { key: 'frank', label: 'Frank', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 9, fillClass: 'fried_meat' },
       { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -7051,7 +7051,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with mustard or ketchup for dipping.'
     ],
     sections: [
-      { key: 'corn_dog', label: 'Corn Dog', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 3 }
+      { key: 'corn_dog', label: 'Corn Dog', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 3, fillClass: 'fried_chicken' }
     ],
   },
   {
@@ -7092,7 +7092,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, potato chips, or baked beans on the side.'
     ],
     sections: [
-      { key: 'frank', label: 'Grilled frank', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 9 },
+      { key: 'frank', label: 'Grilled frank', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 9, fillClass: 'fried_meat' },
       { key: 'coleslaw', label: 'Coleslaw', cookingMethod: 'raw', prepMethod: '' },
       { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', prepMethod: '' }
     ],
@@ -7143,9 +7143,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): The French mother sauce. Use as the base for Mornay (add cheese), lasagna, moussaka, croque monsieur, mac and cheese, or any gratin.'
     ],
     sections: [
-      { key: 'onion', label: 'Onion and clove infusion', cookingMethod: 'simmer', prepMethod: 'sub-simmer', boilMinutes: 3 },
-      { key: 'roux', label: 'Roux', cookingMethod: 'simmer', prepMethod: 'sauteed', boilMinutes: 1 },
-      { key: 'sauce', label: 'Sauce', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 1 },
+      { key: 'onion', label: 'Onion and clove infusion', cookingMethod: 'simmer', prepMethod: 'sub-simmer', boilMinutes: 3, fillClass: 'simmer_sauce' },
+      { key: 'roux', label: 'Roux', cookingMethod: 'simmer', prepMethod: 'sauteed', boilMinutes: 1, fillClass: 'pan_grilled_batter' },
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 1, fillClass: 'simmer_sauce' },
       { key: 'finish', label: 'Finish', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -7230,7 +7230,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): A classic French onion sauce. Excellent with roast veal, lamb chops, chicken, or poached eggs.'
     ],
     sections: [
-      { key: 'onion', label: 'Sweated onion purée', cookingMethod: 'sub-simmer', prepMethod: 'braise', boilMinutes: 35 },
+      { key: 'onion', label: 'Sweated onion purée', cookingMethod: 'sub-simmer', prepMethod: 'braise', boilMinutes: 35, fillClass: 'simmer_sauce' },
       { key: 'bechamel', label: 'Béchamel sauce', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -7351,7 +7351,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): A French mother sauce. Use as the base for Sauce Suprême (add cream and butter) or Mushroom Velouté. Excellent spooned over poached chicken, veal, or white fish.'
     ],
     sections: [
-      { key: 'roux', label: 'Roux', cookingMethod: 'sub-simmer', prepMethod: 'sauteed', boilMinutes: 3 },
+      { key: 'roux', label: 'Roux', cookingMethod: 'sub-simmer', prepMethod: 'sauteed', boilMinutes: 3, fillClass: 'pan_grilled_batter' },
       { key: 'stock', label: 'White Chicken Stock', cookingMethod: 'raw', prepMethod: '' },
       { key: 'finish', label: 'Finish', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
@@ -7401,7 +7401,7 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'butter', label: 'Butter clarified', cookingMethod: 'sub-simmer', prepMethod: 'sub-simmer', boilMinutes: 8 },
-      { key: 'reduction', label: 'Tarragon reduction', cookingMethod: 'sub-simmer', prepMethod: 'boiled', boilMinutes: 6 },
+      { key: 'reduction', label: 'Tarragon reduction', cookingMethod: 'sub-simmer', prepMethod: 'boiled', boilMinutes: 6, fillClass: 'simmer_sauce' },
       { key: 'emulsion', label: 'Egg yolk emulsion', cookingMethod: 'sub-simmer', prepMethod: '' },
       { key: 'finish', label: 'Finish', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
@@ -7453,7 +7453,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): The foundation for soups, risotto, rice pilaf, and sauces. Freeze in quart containers for up to 3 months.'
     ],
     sections: [
-      { key: 'stock', label: 'Stock', cookingMethod: 'sub-simmer', prepMethod: '', boilMinutes: 240 }
+      { key: 'stock', label: 'Stock', cookingMethod: 'sub-simmer', prepMethod: '', boilMinutes: 240, fillClass: 'chicken_stock' }
     ],
   },
   {
@@ -7504,8 +7504,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): A richer, deeper-flavored stock for dark sauces, braises, and gravies. Freeze in quart containers for up to 3 months.'
     ],
     sections: [
-      { key: 'caramelized_onion', label: 'Caramelized onions', cookingMethod: 'sub-simmer', prepMethod: 'pan seared', boilMinutes: 20 },
-      { key: 'stock', label: 'Stock', cookingMethod: 'sub-simmer', prepMethod: '', boilMinutes: 240 }
+      { key: 'caramelized_onion', label: 'Caramelized onions', cookingMethod: 'sub-simmer', prepMethod: 'pan seared', boilMinutes: 20, fillClass: 'simmer_sauce' },
+      { key: 'stock', label: 'Stock', cookingMethod: 'sub-simmer', prepMethod: '', boilMinutes: 240, fillClass: 'chicken_stock' }
     ],
   },
   {
@@ -7555,7 +7555,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): A lighter, everyday chicken broth for soups, risotto, rice pilaf, and cooking. Freeze in quart containers for up to 3 months.'
     ],
     sections: [
-      { key: 'stock', label: 'Stock', cookingMethod: 'sub-simmer', prepMethod: '', boilMinutes: 160 }
+      { key: 'stock', label: 'Stock', cookingMethod: 'sub-simmer', prepMethod: '', boilMinutes: 160, fillClass: 'chicken_stock' }
     ],
   },
   {
@@ -7605,9 +7605,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): The base for French onion soup, pot roast, and dark sauces. Freeze in quart containers for up to 3 months.'
     ],
     sections: [
-      { key: 'shanks', label: 'Beef shanks', cookingMethod: 'sub-simmer', prepMethod: 'pan seared', boilMinutes: 8 },
-      { key: 'tomato_paste_section', label: 'Tomato paste', cookingMethod: 'sub-simmer', prepMethod: 'pan seared', boilMinutes: 2 },
-      { key: 'remaining', label: 'Remaining ingredients', cookingMethod: 'sub-simmer', prepMethod: '', boilMinutes: 420 }
+      { key: 'shanks', label: 'Beef shanks', cookingMethod: 'sub-simmer', prepMethod: 'pan seared', boilMinutes: 8, fillClass: 'chicken_stock' },
+      { key: 'tomato_paste_section', label: 'Tomato paste', cookingMethod: 'sub-simmer', prepMethod: 'pan seared', boilMinutes: 2, fillClass: 'chicken_stock' },
+      { key: 'remaining', label: 'Remaining ingredients', cookingMethod: 'sub-simmer', prepMethod: '', boilMinutes: 420, fillClass: 'chicken_stock' }
     ],
   },
   {
@@ -7658,8 +7658,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Drink warm as a sipping broth, or use as the base for soups, stews, and braises. Refrigerate up to 5 days or freeze up to 6 months.'
     ],
     sections: [
-      { key: 'beef', label: 'Beef', cookingMethod: 'sub-simmer', prepMethod: 'simmer', boilMinutes: 25 },
-      { key: 'remaining', label: 'Remaining ingredients', cookingMethod: 'sub-simmer', prepMethod: '', boilMinutes: 1080 }
+      { key: 'beef', label: 'Beef', cookingMethod: 'sub-simmer', prepMethod: 'simmer', boilMinutes: 25, fillClass: 'bone_broth' },
+      { key: 'remaining', label: 'Remaining ingredients', cookingMethod: 'sub-simmer', prepMethod: '', boilMinutes: 1080, fillClass: 'bone_broth' }
     ],
   },
   {
@@ -7711,9 +7711,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): The base for fish chowder, seafood bisque, seafood gumbo, and sauces for poached fish. Use within 3 days — fish stock does not keep as long as meat stocks.'
     ],
     sections: [
-      { key: 'onion', label: 'Onion and aromatics', cookingMethod: 'sub-simmer', prepMethod: 'sauteed', boilMinutes: 4 },
-      { key: 'cod', label: 'Cod and wine', cookingMethod: 'sub-simmer', prepMethod: 'simmer', boilMinutes: 2 },
-      { key: 'remaining', label: 'Remaining ingredients', cookingMethod: 'sub-simmer', prepMethod: '', boilMinutes: 25 }
+      { key: 'onion', label: 'Onion and aromatics', cookingMethod: 'sub-simmer', prepMethod: 'sauteed', boilMinutes: 4, fillClass: 'fish_stock' },
+      { key: 'cod', label: 'Cod and wine', cookingMethod: 'sub-simmer', prepMethod: 'simmer', boilMinutes: 2, fillClass: 'fish_stock' },
+      { key: 'remaining', label: 'Remaining ingredients', cookingMethod: 'sub-simmer', prepMethod: '', boilMinutes: 25, fillClass: 'fish_stock' }
     ],
   },
   {
@@ -7765,7 +7765,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): A clean-tasting all-purpose base for vegetable soups, risotto, and grain dishes. Also a substitute for chicken broth in vegetarian recipes.'
     ],
     sections: [
-      { key: 'stock', label: 'Stock', cookingMethod: 'sub-simmer', prepMethod: '', boilMinutes: 55 }
+      { key: 'stock', label: 'Stock', cookingMethod: 'sub-simmer', prepMethod: '', boilMinutes: 55, fillClass: 'vegetable_stock' }
     ],
   },
   {
@@ -7811,7 +7811,7 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'garlic', label: 'Garlic', cookingMethod: 'sub-simmer', prepMethod: 'pan seared', boilMinutes: 1 },
-      { key: 'cream', label: 'Cream', cookingMethod: 'sub-simmer', prepMethod: 'simmer', boilMinutes: 3 },
+      { key: 'cream', label: 'Cream', cookingMethod: 'sub-simmer', prepMethod: 'simmer', boilMinutes: 3, fillClass: 'simmer_sauce' },
       { key: 'cheese', label: 'Cheese', cookingMethod: 'sub-simmer', prepMethod: '' }
     ],
   },
@@ -7947,7 +7947,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): The definitive homemade ketchup. Use anywhere store-bought ketchup would go — burgers, fries, meatloaf, and as the base for barbecue sauce.'
     ],
     sections: [
-      { key: 'sauce', label: 'Ketchup', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 50 }
+      { key: 'sauce', label: 'Ketchup', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 50, fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -7996,7 +7996,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): The base for Russian Dressing (see the Russian Dressing recipe). Also excellent as a condiment for hot dogs and burgers, spooned over cream cheese with crackers, or stirred into cocktail sauce for shrimp.'
     ],
     sections: [
-      { key: 'sauce', label: 'Sauce', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 50 }
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 50, fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -8092,9 +8092,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with mashed potatoes, collard greens, or steamed green beans.'
     ],
     sections: [
-      { key: 'steak', label: 'Chicken Fried Steak', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 7 },
-      { key: 'roux', label: 'Roux', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 2 },
-      { key: 'gravy', label: 'Cream Gravy', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 5 }
+      { key: 'steak', label: 'Chicken Fried Steak', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 7, fillClass: 'fried_chicken' },
+      { key: 'roux', label: 'Roux', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 2, fillClass: 'pan_grilled_batter' },
+      { key: 'gravy', label: 'Cream Gravy', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 5, fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -8136,7 +8136,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside roast chicken, seared duck breast, or braised beef short ribs. Garnish with fresh chives.'
     ],
     sections: [
-      { key: 'potatoes', label: 'Gold potatoes', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 25 },
+      { key: 'potatoes', label: 'Gold potatoes', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 25, fillClass: 'simmer_sauce' },
       { key: 'finish', label: 'Milk & butter', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -8183,8 +8183,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside roast chicken, grilled steak, or braised lamb. Garnish with fresh chives.'
     ],
     sections: [
-      { key: 'garlic', label: 'Roasted garlic', cookingMethod: 'simmer', prepMethod: 'braise', boilMinutes: 40 },
-      { key: 'potatoes', label: 'Gold potatoes', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 25 },
+      { key: 'garlic', label: 'Roasted garlic', cookingMethod: 'simmer', prepMethod: 'braise', boilMinutes: 40, fillClass: 'simmer_sauce' },
+      { key: 'potatoes', label: 'Gold potatoes', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 25, fillClass: 'simmer_sauce' },
       { key: 'finish', label: 'Mash', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -8225,7 +8225,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside pan-seared steak, roast chicken, or braised short ribs. Finish with a grind of black pepper or a sprinkle of fresh chives.'
     ],
     sections: [
-      { key: 'potatoes', label: 'Gold potatoes', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 25 },
+      { key: 'potatoes', label: 'Gold potatoes', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 25, fillClass: 'simmer_sauce' },
       { key: 'finish', label: 'Mash', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -8267,7 +8267,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside prime rib, roast beef, or beef tenderloin. The horseradish heat pairs especially well with rich, fatty beef cuts.'
     ],
     sections: [
-      { key: 'potatoes', label: 'Gold potatoes', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 25 },
+      { key: 'potatoes', label: 'Gold potatoes', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 25, fillClass: 'simmer_sauce' },
       { key: 'finish', label: 'Mash', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -8316,7 +8316,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside grilled burgers, hot dogs, or fried chicken. A classic pairing for summer barbecues and picnics.'
     ],
     sections: [
-      { key: 'potatoes', label: 'Potatoes', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 25 },
+      { key: 'potatoes', label: 'Potatoes', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 25, fillClass: 'simmer_sauce' },
       { key: 'dressing', label: 'Dressing', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -8365,10 +8365,10 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve warm alongside bratwurst, pork schnitzel, or grilled sausages.'
     ],
     sections: [
-      { key: 'potatoes', label: 'Gold potatoes', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 20 },
+      { key: 'potatoes', label: 'Gold potatoes', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 20, fillClass: 'simmer_sauce' },
       { key: 'bacon', label: 'Bacon', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 8 },
-      { key: 'onion', label: 'Onion', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 5 },
-      { key: 'dressing', label: 'Dressing', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 3 }
+      { key: 'onion', label: 'Onion', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 5, fillClass: 'sauteed_aromatic' },
+      { key: 'dressing', label: 'Dressing', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 3, fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -8413,7 +8413,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside roast lamb, beef tenderloin, or pan-seared duck breast.'
     ],
     sections: [
-      { key: 'gratin', label: 'Gratin', cookingMethod: 'baked', prepMethod: 'sub-simmer', stages: [{ tempF: 325, minutes: 65 }], boilMinutes: 5 }
+      { key: 'gratin', label: 'Gratin', cookingMethod: 'baked', prepMethod: 'sub-simmer', stages: [{ tempF: 325, minutes: 65 }], boilMinutes: 5, fillClass: 'dairy_custard' }
     ],
   },
   {
@@ -8461,7 +8461,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside roast chicken, pork tenderloin, or a simple green salad for a lighter meal.'
     ],
     sections: [
-      { key: 'gratin', label: 'Gratin', cookingMethod: 'baked', prepMethod: 'braise', stages: [{ tempF: 350, minutes: 27 }], boilMinutes: 45 }
+      { key: 'gratin', label: 'Gratin', cookingMethod: 'baked', prepMethod: 'braise', stages: [{ tempF: 350, minutes: 27 }], boilMinutes: 45, fillClass: 'dairy_custard' }
     ],
   },
   {
@@ -8504,7 +8504,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside roast beef, pan-seared steak, or roasted lamb chops. Elegant enough for a dinner party.'
     ],
     sections: [
-      { key: 'gratin', label: 'Pommes Anna', cookingMethod: 'baked', prepMethod: 'simmer', stages: [{ tempF: 425, minutes: 42 }], boilMinutes: 5 }
+      { key: 'gratin', label: 'Pommes Anna', cookingMethod: 'baked', prepMethod: 'simmer', stages: [{ tempF: 425, minutes: 42 }], boilMinutes: 5, fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -8553,11 +8553,11 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with crusty bread and a simple green salad. Best enjoyed straight from the oven while the cheese is still bubbling.'
     ],
     sections: [
-      { key: 'potatoes', label: 'Gold potatoes', cookingMethod: 'baked', prepMethod: 'simmer', boilMinutes: 22 },
+      { key: 'potatoes', label: 'Gold potatoes', cookingMethod: 'baked', prepMethod: 'simmer', boilMinutes: 22, fillClass: 'simmer_sauce' },
       { key: 'bacon', label: 'Bacon', cookingMethod: 'baked', prepMethod: 'sauteed', boilMinutes: 5 },
-      { key: 'onion_garlic', label: 'Onion & garlic', cookingMethod: 'baked', prepMethod: 'sauteed', boilMinutes: 5 },
+      { key: 'onion_garlic', label: 'Onion & garlic', cookingMethod: 'baked', prepMethod: 'sauteed', boilMinutes: 5, fillClass: 'sauteed_aromatic' },
       { key: 'white_wine', label: 'White wine', cookingMethod: 'baked', prepMethod: 'simmer', boilMinutes: 2 },
-      { key: 'brie_cream', label: 'Brie & cream', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 375, minutes: 27 }] }
+      { key: 'brie_cream', label: 'Brie & cream', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 375, minutes: 27 }], fillClass: 'dairy_custard' }
     ],
   },
   {
@@ -8600,7 +8600,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve tossed with browned butter and sage, tomato sauce, or pesto.'
     ],
     sections: [
-      { key: 'potatoes', label: 'Potatoes', cookingMethod: 'boiled', prepMethod: 'simmer', boilMinutes: 22 },
+      { key: 'potatoes', label: 'Potatoes', cookingMethod: 'boiled', prepMethod: 'simmer', boilMinutes: 22, fillClass: 'simmer_sauce' },
       { key: 'dough', label: 'Dough', cookingMethod: 'boiled', prepMethod: '', boilMinutes: 3 }
     ],
   },
@@ -8646,7 +8646,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve warm alongside chili, soups, or BBQ. Pairs especially well with baked beans or collard greens.'
     ],
     sections: [
-      { key: 'batter', label: 'Batter', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 400, minutes: 22 }] }
+      { key: 'batter', label: 'Batter', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 400, minutes: 22 }], fillClass: 'cake_batter' }
     ],
   },
   {
@@ -8691,7 +8691,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve warm alongside chili, soups, or BBQ. The tang from the buttermilk makes it especially good with spicy dishes.'
     ],
     sections: [
-      { key: 'batter', label: 'Batter', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 400, minutes: 22 }] }
+      { key: 'batter', label: 'Batter', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 400, minutes: 22 }], fillClass: 'cake_batter' }
     ],
   },
   {
@@ -8783,7 +8783,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside roast beef, steak, or roast chicken. Finish with a sprinkle of fresh parsley or grated Parmesan.'
     ],
     sections: [
-      { key: 'potatoes', label: 'Potatoes', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 425, minutes: 55 }] }
+      { key: 'potatoes', label: 'Potatoes', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 425, minutes: 55 }], fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -8830,8 +8830,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Top with additional sour cream and serve as a hearty side or main. Great alongside grilled steak or BBQ chicken.'
     ],
     sections: [
-      { key: 'baked_potatoes', label: 'Russet potatoes', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 400, minutes: 55 }] },
-      { key: 'assembly', label: 'Assembly', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 400, minutes: 18 }] }
+      { key: 'baked_potatoes', label: 'Russet potatoes', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 400, minutes: 55 }], fillClass: 'simmer_sauce' },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 400, minutes: 18 }], fillClass: 'dairy_custard' }
     ],
   },
   {
@@ -8873,8 +8873,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Top with vegan sour cream or fresh herbs if desired.'
     ],
     sections: [
-      { key: 'potatoes', label: 'Potatoes', cookingMethod: 'baked', prepMethod: 'simmer', boilMinutes: 20 },
-      { key: 'smash', label: 'Smash', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 450, minutes: 22 }] }
+      { key: 'potatoes', label: 'Potatoes', cookingMethod: 'baked', prepMethod: 'simmer', boilMinutes: 20, fillClass: 'simmer_sauce' },
+      { key: 'smash', label: 'Smash', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 450, minutes: 22 }], fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -8921,9 +8921,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside cornbread, hot dogs, or BBQ. A classic side for summer cookouts and potlucks.'
     ],
     sections: [
-      { key: 'assembly', label: 'Assembly', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 300, minutes: 270 }] },
-      { key: 'beans', label: 'Beans', cookingMethod: 'baked', prepMethod: 'simmer', stages: [{ tempF: 300, minutes: 270 }], boilMinutes: 50 },
-      { key: 'salt_pork', label: 'Salt pork', cookingMethod: 'baked', prepMethod: 'pan seared', stages: [{ tempF: 300, minutes: 270 }], boilMinutes: 5 }
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 300, minutes: 270 }], fillClass: 'simmer_sauce' },
+      { key: 'beans', label: 'Beans', cookingMethod: 'baked', prepMethod: 'simmer', stages: [{ tempF: 300, minutes: 270 }], boilMinutes: 50, fillClass: 'simmer_sauce' },
+      { key: 'salt_pork', label: 'Salt pork', cookingMethod: 'baked', prepMethod: 'pan seared', stages: [{ tempF: 300, minutes: 270 }], boilMinutes: 5, fillClass: 'fried_meat' }
     ],
   },
   {
@@ -8968,8 +8968,8 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'cheese_sauce', label: 'Cheese sauce', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 20 }] },
       { key: 'pasta', label: 'Elbow macaroni', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 8 },
-      { key: 'milk_roux', label: 'Milk to roux', cookingMethod: 'baked', prepMethod: 'sub-simmer', stages: [{ tempF: 350, minutes: 20 }], boilMinutes: 6 },
-      { key: 'roux', label: 'Roux', cookingMethod: 'baked', prepMethod: 'sauteed', stages: [{ tempF: 350, minutes: 20 }], boilMinutes: 2 }
+      { key: 'milk_roux', label: 'Milk to roux', cookingMethod: 'baked', prepMethod: 'sub-simmer', stages: [{ tempF: 350, minutes: 20 }], boilMinutes: 6, fillClass: 'simmer_sauce' },
+      { key: 'roux', label: 'Roux', cookingMethod: 'baked', prepMethod: 'sauteed', stages: [{ tempF: 350, minutes: 20 }], boilMinutes: 2, fillClass: 'pan_grilled_batter' }
     ],
   },
   {
@@ -9008,7 +9008,7 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'pasta', label: 'Elbow macaroni', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 8 },
-      { key: 'tomato', label: 'Tomato', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 9 }
+      { key: 'tomato', label: 'Tomato', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 9, fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -9099,7 +9099,7 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'trinity', label: 'Trinity', cookingMethod: 'boiled', prepMethod: 'pan seared', boilMinutes: 6 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: 'boiled', prepMethod: '', boilMinutes: 22 },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'boiled', prepMethod: '', boilMinutes: 22, fillClass: 'simmer_sauce' },
       { key: 'seasoning', label: 'Creole Seasoning', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -9146,7 +9146,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside fried chicken, BBQ ribs, or pulled pork. Also pairs well with ranch dressing or hot sauce for dipping.'
     ],
     sections: [
-      { key: 'battered_okra', label: 'Battered okra', cookingMethod: 'fried', prepMethod: '', boilMinutes: 3 },
+      { key: 'battered_okra', label: 'Battered okra', cookingMethod: 'fried', prepMethod: '', boilMinutes: 3, fillClass: 'fried_battered_vegetable' },
       { key: 'seasoning', label: 'Creole Seasoning', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -9195,7 +9195,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve as a side with fried chicken, BBQ, or catfish. Also great as an appetizer with ranch dressing or remoulade sauce.'
     ],
     sections: [
-      { key: 'battered_squash', label: 'Battered squash', cookingMethod: 'fried', prepMethod: '', boilMinutes: 3 },
+      { key: 'battered_squash', label: 'Battered squash', cookingMethod: 'fried', prepMethod: '', boilMinutes: 3, fillClass: 'fried_battered_vegetable' },
       { key: 'seasoning', label: 'Creole Seasoning', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -9239,8 +9239,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over steamed broccoli, cauliflower, Brussels sprouts, or asparagus. Also excellent as a quick stovetop mac and cheese sauce, or as a warm dip with tortilla chips.'
     ],
     sections: [
-      { key: 'roux', label: 'Roux', cookingMethod: 'sub-simmer', prepMethod: 'sauteed', boilMinutes: 2 },
-      { key: 'sauce', label: 'Sauce', cookingMethod: 'sub-simmer', prepMethod: '', boilMinutes: 3 },
+      { key: 'roux', label: 'Roux', cookingMethod: 'sub-simmer', prepMethod: 'sauteed', boilMinutes: 2, fillClass: 'pan_grilled_batter' },
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'sub-simmer', prepMethod: '', boilMinutes: 3, fillClass: 'simmer_sauce' },
       { key: 'cheese', label: 'Cheese', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -9296,9 +9296,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): A classic Thanksgiving and holiday side. Pairs especially well with roasted turkey, glazed ham, or prime rib.'
     ],
     sections: [
-      { key: 'baked_potatoes', label: 'Sweet potatoes', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 375, minutes: 55 }, { tempF: 350, minutes: 27 }] },
-      { key: 'filling', label: 'Filling', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 27 }] },
-      { key: 'topping', label: 'Topping', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 27 }] }
+      { key: 'baked_potatoes', label: 'Sweet potatoes', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 375, minutes: 55 }, { tempF: 350, minutes: 27 }], fillClass: 'dairy_custard' },
+      { key: 'filling', label: 'Filling', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 27 }], fillClass: 'dairy_custard' },
+      { key: 'topping', label: 'Topping', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 27 }], fillClass: 'crumb_crust' }
     ],
   },
   {
@@ -9351,9 +9351,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): A classic vegan Thanksgiving side. Pairs especially well with roasted vegetables, lentil loaf, or stuffed mushrooms.'
     ],
     sections: [
-      { key: 'baked_potatoes', label: 'Sweet potatoes', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 375, minutes: 55 }, { tempF: 350, minutes: 27 }] },
-      { key: 'filling', label: 'Filling', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 27 }] },
-      { key: 'topping', label: 'Topping', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 27 }] }
+      { key: 'baked_potatoes', label: 'Sweet potatoes', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 375, minutes: 55 }, { tempF: 350, minutes: 27 }], fillClass: 'dairy_custard' },
+      { key: 'filling', label: 'Filling', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 27 }], fillClass: 'dairy_custard' },
+      { key: 'topping', label: 'Topping', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 27 }], fillClass: 'crumb_crust' }
     ],
   },
   {
@@ -9402,8 +9402,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): A classic holiday side. Pairs especially well with roasted turkey, glazed ham, or prime rib.'
     ],
     sections: [
-      { key: 'baked_potatoes', label: 'Sweet potatoes', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 375, minutes: 55 }, { tempF: 350, minutes: 22 }] },
-      { key: 'filling', label: 'Filling', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 22 }] },
+      { key: 'baked_potatoes', label: 'Sweet potatoes', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 375, minutes: 55 }, { tempF: 350, minutes: 22 }], fillClass: 'dairy_custard' },
+      { key: 'filling', label: 'Filling', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 22 }], fillClass: 'dairy_custard' },
       { key: 'topping', label: 'Topping', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 22 }] }
     ],
   },
@@ -9906,7 +9906,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a slice of garlic bread or crusty sourdough on the side.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 13 },
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 13, fillClass: 'pan_grilled_chicken' },
       { key: 'salad', label: 'Caesar Salad', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 },
       { key: 'dressing', label: 'Caesar Dressing', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 }
     ],
@@ -9956,8 +9956,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with blue cheese dressing or ranch dressing on the side (see SAUCE_021 or SAUCE_020).'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 13 },
-      { key: 'bacon', label: 'Bacon', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 8 },
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 13, fillClass: 'pan_grilled_chicken' },
+      { key: 'bacon', label: 'Bacon', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 8, fillClass: 'fried_meat' },
       { key: 'salad', label: 'Cobb Salad', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 }
     ],
   },
@@ -10091,7 +10091,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with salsa, guacamole, sour cream, or warm tortillas.'
     ],
     sections: [
-      { key: 'beef', label: 'Beef', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 7 },
+      { key: 'beef', label: 'Beef', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 7, fillClass: 'fried_ground_beef' },
       { key: 'salad', label: 'Taco Salad', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 }
     ],
   },
@@ -10318,7 +10318,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve chilled alongside grilled corn, garlic bread, or fresh fruit.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 13 },
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 13, fillClass: 'pan_grilled_chicken' },
       { key: 'pasta', label: 'Pasta', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 10 },
       { key: 'salad', label: 'Salad', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 }
     ],
@@ -10371,7 +10371,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve chilled with crusty bread or as a picnic main course.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 13 },
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 13, fillClass: 'pan_grilled_chicken' },
       { key: 'pasta', label: 'Pasta', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 10 },
       { key: 'salad', label: 'Salad', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 }
     ],
@@ -10470,7 +10470,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with crusty bread or garlic bread on the side.'
     ],
     sections: [
-      { key: 'chicken', label: 'Grilled chicken', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 13 },
+      { key: 'chicken', label: 'Grilled chicken', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 13, fillClass: 'pan_grilled_chicken' },
       { key: 'dressing', label: 'Basic Vinaigrette', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 },
       { key: 'salad', label: 'Garden salad', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 }
     ],
@@ -10667,7 +10667,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with crusty bread or garlic bread on the side.'
     ],
     sections: [
-      { key: 'shrimp', label: 'Shrimp', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 5 },
+      { key: 'shrimp', label: 'Shrimp', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 5, fillClass: 'pan_grilled_chicken' },
       { key: 'dressing', label: 'Caesar Dressing', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 },
       { key: 'salad', label: 'Salad', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 }
     ],
@@ -10725,7 +10725,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with warm tortillas or tortilla chips and extra salsa on the side.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 13 },
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 13, fillClass: 'pan_grilled_chicken' },
       { key: 'salad', label: 'Southwestern Salad', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 }
     ],
   },
@@ -10779,7 +10779,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with warm tortillas or crusty bread.'
     ],
     sections: [
-      { key: 'shrimp', label: 'Shrimp', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 5 },
+      { key: 'shrimp', label: 'Shrimp', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 5, fillClass: 'pan_grilled_chicken' },
       { key: 'salad', label: 'Shrimp and Avocado Salad', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 }
     ],
   },
@@ -11105,11 +11105,11 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'noodles', label: 'Noodles', cookingMethod: 'simmer', prepMethod: 'boiled', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 5 },
-      { key: 'beef', label: 'Beef', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 9 },
-      { key: 'onion_carrots', label: 'Onion & Carrots', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 5 },
-      { key: 'broccoli', label: 'Broccoli', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 3 },
-      { key: 'garlic_ginger', label: 'Garlic & Ginger', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 1 },
-      { key: 'sauce', label: 'Sauce', cookingMethod: 'simmer', prepMethod: '', stages: [{ tempF: 195, minutes: 2 }] },
+      { key: 'beef', label: 'Beef', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 9, fillClass: 'pan_grilled_steak' },
+      { key: 'onion_carrots', label: 'Onion & Carrots', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 5, fillClass: 'sauteed_aromatic' },
+      { key: 'broccoli', label: 'Broccoli', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 3, fillClass: 'simmered_vegetable' },
+      { key: 'garlic_ginger', label: 'Garlic & Ginger', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 1, fillClass: 'sauteed_aromatic' },
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'simmer', prepMethod: '', stages: [{ tempF: 195, minutes: 2 }], fillClass: 'simmer_sauce' },
       { key: 'garnish', label: 'Garnish', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -11157,9 +11157,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over steamed white rice.'
     ],
     sections: [
-      { key: 'sauce', label: 'Sauce', cookingMethod: 'simmer', prepMethod: '', stages: [{ tempF: 195, minutes: 2 }] },
-      { key: 'beef', label: 'Beef', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 3 },
-      { key: 'broccoli_garlic', label: 'Broccoli and Garlic', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 3 }
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'simmer', prepMethod: '', stages: [{ tempF: 195, minutes: 2 }], fillClass: 'simmer_sauce' },
+      { key: 'beef', label: 'Beef', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 3, fillClass: 'pan_grilled_steak' },
+      { key: 'broccoli_garlic', label: 'Broccoli and Garlic', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 3, fillClass: 'simmered_vegetable' }
     ],
   },
   {
@@ -11219,12 +11219,12 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'pasta', label: 'Pasta', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 8 },
-      { key: 'beef', label: 'Brown Beef', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 22 },
-      { key: 'vegetables', label: 'Vegetables', cookingMethod: 'sub-simmer', prepMethod: 'sauteed', stages: [{ tempF: 180, minutes: 50 }], boilMinutes: 14 },
-      { key: 'garlic', label: 'Garlic', cookingMethod: 'sub-simmer', prepMethod: 'sauteed', stages: [{ tempF: 180, minutes: 50 }], boilMinutes: 6 },
-      { key: 'tomato_paste', label: 'Tomato Paste', cookingMethod: 'sub-simmer', prepMethod: 'sauteed', stages: [{ tempF: 180, minutes: 50 }], boilMinutes: 5 },
-      { key: 'white_wine', label: 'White wine', cookingMethod: 'sub-simmer', prepMethod: 'simmer', stages: [{ tempF: 180, minutes: 50 }], boilMinutes: 3 },
-      { key: 'sauce', label: 'Sauce', cookingMethod: 'sub-simmer', prepMethod: '', stages: [{ tempF: 180, minutes: 50 }] }
+      { key: 'beef', label: 'Brown Beef', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 22, fillClass: 'fried_meat' },
+      { key: 'vegetables', label: 'Vegetables', cookingMethod: 'sub-simmer', prepMethod: 'sauteed', stages: [{ tempF: 180, minutes: 50 }], boilMinutes: 14, fillClass: 'sauteed_aromatic' },
+      { key: 'garlic', label: 'Garlic', cookingMethod: 'sub-simmer', prepMethod: 'sauteed', stages: [{ tempF: 180, minutes: 50 }], boilMinutes: 6, fillClass: 'sauteed_aromatic' },
+      { key: 'tomato_paste', label: 'Tomato Paste', cookingMethod: 'sub-simmer', prepMethod: 'sauteed', stages: [{ tempF: 180, minutes: 50 }], boilMinutes: 5, fillClass: 'pan_grilled_batter' },
+      { key: 'white_wine', label: 'White wine', cookingMethod: 'sub-simmer', prepMethod: 'simmer', stages: [{ tempF: 180, minutes: 50 }], boilMinutes: 3, fillClass: 'simmer_sauce' },
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'sub-simmer', prepMethod: '', stages: [{ tempF: 180, minutes: 50 }], fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -11280,12 +11280,12 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over buttered egg noodles, creamy mashed potatoes, or crusty French bread.'
     ],
     sections: [
-      { key: 'bacon', label: 'Bacon', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 8 },
-      { key: 'beef', label: 'Brown Beef', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 6 },
-      { key: 'vegetables', label: 'Vegetables', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 6 },
-      { key: 'garlic', label: 'Garlic', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 2 },
-      { key: 'flour_tomato_paste', label: 'Flour and Tomato Paste', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 1 },
-      { key: 'wine_broth', label: 'Wine and Broth', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 150 },
+      { key: 'bacon', label: 'Bacon', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 8, fillClass: 'fried_meat' },
+      { key: 'beef', label: 'Brown Beef', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 6, fillClass: 'fried_meat' },
+      { key: 'vegetables', label: 'Vegetables', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 6, fillClass: 'sauteed_aromatic' },
+      { key: 'garlic', label: 'Garlic', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 2, fillClass: 'sauteed_aromatic' },
+      { key: 'flour_tomato_paste', label: 'Flour and Tomato Paste', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 1, fillClass: 'pan_grilled_batter' },
+      { key: 'wine_broth', label: 'Wine and Broth', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 150, fillClass: 'simmer_sauce' },
       { key: 'mushrooms', label: 'Mushrooms', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -11343,8 +11343,8 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'chiles', label: 'Chiles', cookingMethod: 'sub-simmer', prepMethod: 'sub-simmer', boilMinutes: 20 },
-      { key: 'beef', label: 'Brown Beef', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 6 },
-      { key: 'birria', label: 'Birria', cookingMethod: 'braise', prepMethod: '', boilMinutes: 160 }
+      { key: 'beef', label: 'Brown Beef', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 6, fillClass: 'fried_meat' },
+      { key: 'birria', label: 'Birria', cookingMethod: 'braise', prepMethod: '', boilMinutes: 160, fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -11397,11 +11397,11 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve in bowls over egg noodles or with crusty bread.'
     ],
     sections: [
-      { key: 'beef', label: 'Brown Beef', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 6 },
-      { key: 'onions', label: 'Onions', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 26 },
-      { key: 'garlic', label: 'Garlic', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 1 },
-      { key: 'flour', label: 'Flour', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 1 },
-      { key: 'carbonnade', label: 'Carbonnade', cookingMethod: 'braise', prepMethod: '', boilMinutes: 135 }
+      { key: 'beef', label: 'Brown Beef', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 6, fillClass: 'fried_meat' },
+      { key: 'onions', label: 'Onions', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 26, fillClass: 'sauteed_aromatic' },
+      { key: 'garlic', label: 'Garlic', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 1, fillClass: 'sauteed_aromatic' },
+      { key: 'flour', label: 'Flour', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 1, fillClass: 'pan_grilled_batter' },
+      { key: 'carbonnade', label: 'Carbonnade', cookingMethod: 'braise', prepMethod: '', boilMinutes: 135, fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -11450,7 +11450,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with warm tortillas, fresh cilantro, diced onion, and lime wedges.'
     ],
     sections: [
-      { key: 'beef', label: 'Beef', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 9 },
+      { key: 'beef', label: 'Beef', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 9, fillClass: 'pan_grilled_chicken' },
       { key: 'marinade', label: 'Marinade', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -11504,11 +11504,11 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve on its own or over steamed rice or with warm flour tortillas.'
     ],
     sections: [
-      { key: 'beef', label: 'Brown Beef', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 6 },
+      { key: 'beef', label: 'Brown Beef', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 6, fillClass: 'fried_meat' },
       { key: 'vegetables', label: 'Vegetables', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 7 },
       { key: 'garlic', label: 'Garlic', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 3 },
-      { key: 'flour', label: 'Flour', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 2 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: 'braise', prepMethod: '', boilMinutes: 100 }
+      { key: 'flour', label: 'Flour', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 2, fillClass: 'pan_grilled_batter' },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'braise', prepMethod: '', boilMinutes: 100, fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -11566,9 +11566,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with Irish soda bread, whole grain mustard, and horseradish sauce on the side.'
     ],
     sections: [
-      { key: 'brisket', label: 'Brisket', cookingMethod: 'sub-simmer', prepMethod: 'sub-simmer', boilMinutes: 165 },
-      { key: 'potatoes_carrots', label: 'Potatoes and Carrots', cookingMethod: 'sub-simmer', prepMethod: 'sub-simmer', boilMinutes: 28 },
-      { key: 'vegetables', label: 'Vegetables', cookingMethod: 'sub-simmer', prepMethod: 'sub-simmer', boilMinutes: 18 },
+      { key: 'brisket', label: 'Brisket', cookingMethod: 'sub-simmer', prepMethod: 'sub-simmer', boilMinutes: 165, fillClass: 'sub_simmered_beef' },
+      { key: 'potatoes_carrots', label: 'Potatoes and Carrots', cookingMethod: 'sub-simmer', prepMethod: 'sub-simmer', boilMinutes: 28, fillClass: 'simmered_vegetable' },
+      { key: 'vegetables', label: 'Vegetables', cookingMethod: 'sub-simmer', prepMethod: 'sub-simmer', boilMinutes: 18, fillClass: 'simmered_vegetable' },
       { key: 'brine', label: 'Brine', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -11623,12 +11623,12 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with steamed green beans or a simple green salad.'
     ],
     sections: [
-      { key: 'potatoes', label: 'Potatoes', cookingMethod: 'baked', prepMethod: 'boiled', stages: [{ tempF: 400, minutes: 28 }], boilMinutes: 17 },
-      { key: 'brown_beef', label: 'Brown Beef', cookingMethod: 'baked', prepMethod: 'pan seared', stages: [{ tempF: 400, minutes: 28 }], boilMinutes: 14 },
-      { key: 'vegetables', label: 'Vegetables', cookingMethod: 'baked', prepMethod: 'sauteed', stages: [{ tempF: 400, minutes: 28 }], boilMinutes: 8 },
-      { key: 'garlic', label: 'Garlic', cookingMethod: 'baked', prepMethod: 'sauteed', stages: [{ tempF: 400, minutes: 28 }], boilMinutes: 2 },
-      { key: 'flour_tomato_paste', label: 'Flour and Tomato Paste', cookingMethod: 'baked', prepMethod: 'sauteed', stages: [{ tempF: 400, minutes: 28 }], boilMinutes: 1 },
-      { key: 'add_spices', label: 'Broth & Spices', cookingMethod: 'baked', prepMethod: 'simmer', stages: [{ tempF: 400, minutes: 28 }], boilMinutes: 9 }
+      { key: 'potatoes', label: 'Potatoes', cookingMethod: 'baked', prepMethod: 'boiled', stages: [{ tempF: 400, minutes: 28 }], boilMinutes: 17, fillClass: 'simmer_sauce' },
+      { key: 'brown_beef', label: 'Brown Beef', cookingMethod: 'baked', prepMethod: 'pan seared', stages: [{ tempF: 400, minutes: 28 }], boilMinutes: 14, fillClass: 'fried_meat' },
+      { key: 'vegetables', label: 'Vegetables', cookingMethod: 'baked', prepMethod: 'sauteed', stages: [{ tempF: 400, minutes: 28 }], boilMinutes: 8, fillClass: 'sauteed_aromatic' },
+      { key: 'garlic', label: 'Garlic', cookingMethod: 'baked', prepMethod: 'sauteed', stages: [{ tempF: 400, minutes: 28 }], boilMinutes: 2, fillClass: 'sauteed_aromatic' },
+      { key: 'flour_tomato_paste', label: 'Flour and Tomato Paste', cookingMethod: 'baked', prepMethod: 'sauteed', stages: [{ tempF: 400, minutes: 28 }], boilMinutes: 1, fillClass: 'pan_grilled_batter' },
+      { key: 'add_spices', label: 'Broth & Spices', cookingMethod: 'baked', prepMethod: 'simmer', stages: [{ tempF: 400, minutes: 28 }], boilMinutes: 9, fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -11675,7 +11675,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with white rice, black beans, and fried plantains.'
     ],
     sections: [
-      { key: 'beef', label: 'Brown Beef', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 7 },
+      { key: 'beef', label: 'Brown Beef', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 7, fillClass: 'pan_grilled_steak' },
       { key: 'marinade', label: 'Marinade', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -11727,11 +11727,11 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve on its own or over steamed rice.'
     ],
     sections: [
-      { key: 'beef', label: 'Brown Beef', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 4 },
-      { key: 'onions', label: 'Onions', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 7 },
-      { key: 'garlic', label: 'Garlic & Ginger', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 3 },
-      { key: 'curry_tomato_paste', label: 'Curry and Tomato Paste', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 2 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: 'braise', prepMethod: '', boilMinutes: 75 },
+      { key: 'beef', label: 'Brown Beef', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 4, fillClass: 'fried_meat' },
+      { key: 'onions', label: 'Onions', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 7, fillClass: 'sauteed_aromatic' },
+      { key: 'garlic', label: 'Garlic & Ginger', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 3, fillClass: 'sauteed_aromatic' },
+      { key: 'curry_tomato_paste', label: 'Curry and Tomato Paste', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 2, fillClass: 'pan_grilled_batter' },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'braise', prepMethod: '', boilMinutes: 75, fillClass: 'simmer_sauce' },
       { key: 'cilantro', label: 'Cilantro', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -11790,12 +11790,12 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over steamed white rice or with black beans.'
     ],
     sections: [
-      { key: 'beef', label: 'Brown Beef', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 7 },
-      { key: 'onions_peppers', label: 'Onions and Peppers', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 8 },
-      { key: 'garlic', label: 'Garlic', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 3 },
+      { key: 'beef', label: 'Brown Beef', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 7, fillClass: 'pan_grilled_steak' },
+      { key: 'onions_peppers', label: 'Onions and Peppers', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 8, fillClass: 'sauteed_aromatic' },
+      { key: 'garlic', label: 'Garlic', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 3, fillClass: 'sauteed_aromatic' },
       { key: 'cumin_oregano', label: 'Cumin and Oregano', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 2 },
-      { key: 'tomato_paste', label: 'Tomato Paste', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 1 },
-      { key: 'tomatoes_wine', label: 'Tomatoes, Broth, and Wine', cookingMethod: 'braise', prepMethod: '', boilMinutes: 100 },
+      { key: 'tomato_paste', label: 'Tomato Paste', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 1, fillClass: 'pan_grilled_batter' },
+      { key: 'tomatoes_wine', label: 'Tomatoes, Broth, and Wine', cookingMethod: 'braise', prepMethod: '', boilMinutes: 100, fillClass: 'simmer_sauce' },
       { key: 'finish', label: 'Cilantro, Olives, and Capers', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -11849,12 +11849,12 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with creamy mashed potatoes and roasted asparagus.'
     ],
     sections: [
-      { key: 'sear_steaks', label: 'Sear Steaks', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 6 },
-      { key: 'shallots_garlic', label: 'Shallots and Garlic', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 10 },
-      { key: 'mushrooms', label: 'Mushrooms', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 9 },
-      { key: 'brandy', label: 'Brandy', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 6 },
-      { key: 'broth_worcestershire', label: 'Broth and Worcestershire', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 5 },
-      { key: 'cream_mustard', label: 'Cream and Mustard', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 3 },
+      { key: 'sear_steaks', label: 'Sear Steaks', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 6, fillClass: 'pan_grilled_steak' },
+      { key: 'shallots_garlic', label: 'Shallots and Garlic', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 10, fillClass: 'sauteed_aromatic' },
+      { key: 'mushrooms', label: 'Mushrooms', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 9, fillClass: 'sauteed_aromatic' },
+      { key: 'brandy', label: 'Brandy', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 6, fillClass: 'simmer_sauce' },
+      { key: 'broth_worcestershire', label: 'Broth and Worcestershire', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 5, fillClass: 'simmer_sauce' },
+      { key: 'cream_mustard', label: 'Cream and Mustard', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 3, fillClass: 'simmer_sauce' },
       { key: 'parsley', label: 'Parsley', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -11904,10 +11904,10 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with Mexican rice, refried beans, sour cream, and fresh guacamole.'
     ],
     sections: [
-      { key: 'brown_beef', label: 'Brown Beef', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 12 },
-      { key: 'onion', label: 'Onion', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 5 },
-      { key: 'spices', label: 'Spices', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 1 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: 'baked covered', prepMethod: '', stages: [{ tempF: 375, minutes: 20 }] }
+      { key: 'brown_beef', label: 'Brown Beef', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 12, fillClass: 'fried_meat' },
+      { key: 'onion', label: 'Onion', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 5, fillClass: 'sauteed_aromatic' },
+      { key: 'spices', label: 'Spices', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 1, fillClass: 'sauteed_aromatic' },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'baked covered', prepMethod: '', stages: [{ tempF: 375, minutes: 20 }], fillClass: 'casserole_baked' }
     ],
   },
   {
@@ -11959,11 +11959,11 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with egg noodles, bread dumplings, or crusty bread.'
     ],
     sections: [
-      { key: 'brown_beef', label: 'Brown Beef', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 6 },
-      { key: 'onions', label: 'Onions', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 13 },
-      { key: 'garlic_bell_pepper', label: 'Garlic and Bell Peppers', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 4 },
+      { key: 'brown_beef', label: 'Brown Beef', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 6, fillClass: 'fried_meat' },
+      { key: 'onions', label: 'Onions', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 13, fillClass: 'sauteed_aromatic' },
+      { key: 'garlic_bell_pepper', label: 'Garlic and Bell Peppers', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 4, fillClass: 'sauteed_aromatic' },
       { key: 'spices', label: 'Spices', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 2 },
-      { key: 'tomato_paste_section', label: 'Tomato Paste', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 1 },
+      { key: 'tomato_paste_section', label: 'Tomato Paste', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 1, fillClass: 'pan_grilled_batter' },
       { key: 'stock_ref', label: 'Beef Broth', cookingMethod: 'raw', prepMethod: '' },
       { key: 'finish', label: 'Sour Cream', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
@@ -12018,7 +12018,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with sour cream, guacamole, salsa, shredded cheese, and lime wedges.'
     ],
     sections: [
-      { key: 'sear_steak', label: 'Sear Steak', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 7 },
+      { key: 'sear_steak', label: 'Sear Steak', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 7, fillClass: 'pan_grilled_steak' },
       { key: 'onions', label: 'Onions', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 8 },
       { key: 'bell_peppers_spices', label: 'Bell Peppers and Spices', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 4 },
       { key: 'tortillas', label: 'Tortillas', cookingMethod: 'raw', prepMethod: '' },
@@ -12076,11 +12076,11 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with egg noodles, mashed potatoes, or crusty bread.'
     ],
     sections: [
-      { key: 'grill_patties', label: 'Grill Patties', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 9 },
-      { key: 'onions', label: 'Onions', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 13 },
-      { key: 'mushrooms_garlic', label: 'Mushrooms and Garlic', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 5 },
-      { key: 'flour', label: 'Flour', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 1 },
-      { key: 'gravy', label: 'Gravy', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 4 }
+      { key: 'grill_patties', label: 'Grill Patties', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 9, fillClass: 'fried_meat' },
+      { key: 'onions', label: 'Onions', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 13, fillClass: 'sauteed_aromatic' },
+      { key: 'mushrooms_garlic', label: 'Mushrooms and Garlic', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 5, fillClass: 'sauteed_aromatic' },
+      { key: 'flour', label: 'Flour', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 1, fillClass: 'pan_grilled_batter' },
+      { key: 'gravy', label: 'Gravy', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 4, fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -12125,7 +12125,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with chimichurri sauce, roasted vegetables, or a simple green salad.'
     ],
     sections: [
-      { key: 'steak', label: 'Grill Steaks', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 9 },
+      { key: 'steak', label: 'Grill Steaks', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 9, fillClass: 'pan_grilled_steak' },
       { key: 'marinade', label: 'Marinade', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -12185,10 +12185,10 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over pasta or with crusty bread, garnished with fresh parsley and additional Parmesan.'
     ],
     sections: [
-      { key: 'meatballs', label: 'Meatballs', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 9 },
-      { key: 'onion', label: 'Onion', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 9 },
-      { key: 'garlic_pepper_flakes', label: 'Garlic & Pepper Flakes', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 1 },
-      { key: 'assembled_sauce', label: 'Assembled Sauce', cookingMethod: 'sub-simmer', prepMethod: '', boilMinutes: 22 },
+      { key: 'meatballs', label: 'Meatballs', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 9, fillClass: 'fried_meat' },
+      { key: 'onion', label: 'Onion', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 9, fillClass: 'sauteed_aromatic' },
+      { key: 'garlic_pepper_flakes', label: 'Garlic & Pepper Flakes', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 1, fillClass: 'sauteed_aromatic' },
+      { key: 'assembled_sauce', label: 'Assembled Sauce', cookingMethod: 'sub-simmer', prepMethod: '', boilMinutes: 22, fillClass: 'simmer_sauce' },
       { key: 'basil', label: 'Basil', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -12247,10 +12247,10 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'pasta', label: 'Pasta', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 8 },
-      { key: 'brown_beef', label: 'Brown Beef', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 11 },
-      { key: 'onion_garlic', label: 'Onion & Garlic', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 3 },
-      { key: 'tomatoes_spices', label: 'Tomatoes & Spices', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 17 },
-      { key: 'cheese_filling', label: 'Cheese Filling', cookingMethod: 'baked covered', prepMethod: '', stages: [{ tempF: 375, minutes: 45 }] }
+      { key: 'brown_beef', label: 'Brown Beef', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 11, fillClass: 'fried_meat' },
+      { key: 'onion_garlic', label: 'Onion & Garlic', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 3, fillClass: 'sauteed_aromatic' },
+      { key: 'tomatoes_spices', label: 'Tomatoes & Spices', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 17, fillClass: 'simmer_sauce' },
+      { key: 'cheese_filling', label: 'Cheese Filling', cookingMethod: 'baked covered', prepMethod: '', stages: [{ tempF: 375, minutes: 45 }], fillClass: 'dairy_custard' }
     ],
   },
   {
@@ -12305,11 +12305,11 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'noodles', label: 'Noodles', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 3 },
-      { key: 'beef', label: 'Beef', cookingMethod: 'stir-fried', prepMethod: 'stir-fried', boilMinutes: 2 },
-      { key: 'garlic_ginger', label: 'Garlic & Ginger', cookingMethod: 'stir-fried', prepMethod: 'stir-fried', boilMinutes: 4 },
-      { key: 'mushrooms_carrots', label: 'Mushrooms & Carrots', cookingMethod: 'stir-fried', prepMethod: 'stir-fried', boilMinutes: 3 },
-      { key: 'vegetables', label: 'Vegetables', cookingMethod: 'stir-fried', prepMethod: 'stir-fried', boilMinutes: 1 },
-      { key: 'sauce', label: 'Sauce', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 2 },
+      { key: 'beef', label: 'Beef', cookingMethod: 'stir-fried', prepMethod: 'stir-fried', boilMinutes: 2, fillClass: 'pan_grilled_steak' },
+      { key: 'garlic_ginger', label: 'Garlic & Ginger', cookingMethod: 'stir-fried', prepMethod: 'stir-fried', boilMinutes: 4, fillClass: 'sauteed_aromatic' },
+      { key: 'mushrooms_carrots', label: 'Mushrooms & Carrots', cookingMethod: 'stir-fried', prepMethod: 'stir-fried', boilMinutes: 3, fillClass: 'simmered_vegetable' },
+      { key: 'vegetables', label: 'Vegetables', cookingMethod: 'stir-fried', prepMethod: 'stir-fried', boilMinutes: 1, fillClass: 'simmered_vegetable' },
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 2, fillClass: 'simmer_sauce' },
       { key: 'scallions', label: 'Scallions', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -12356,7 +12356,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with creamy mashed potatoes and roasted asparagus or a simple green salad.'
     ],
     sections: [
-      { key: 'grill', label: 'Grill', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 12 },
+      { key: 'grill', label: 'Grill', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 12, fillClass: 'pan_grilled_steak' },
       { key: 'marinade', label: 'Marinade', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -12408,7 +12408,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with warm pita bread, tzatziki sauce, and a Greek salad or rice pilaf.'
     ],
     sections: [
-      { key: 'kabobs', label: 'Kabobs', cookingMethod: 'grilled', prepMethod: 'grilled', boilMinutes: 7 },
+      { key: 'kabobs', label: 'Kabobs', cookingMethod: 'grilled', prepMethod: 'grilled', boilMinutes: 7, fillClass: 'pan_grilled_steak' },
       { key: 'marinade', label: 'Marinade', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -12454,9 +12454,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over steamed jasmine rice with kimchi, steamed bok choy, or a cucumber salad on the side.'
     ],
     sections: [
-      { key: 'brown_beef', label: 'Brown Beef', cookingMethod: 'simmer', prepMethod: 'pan seared', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 8 },
+      { key: 'brown_beef', label: 'Brown Beef', cookingMethod: 'simmer', prepMethod: 'pan seared', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 8, fillClass: 'fried_meat' },
       { key: 'garlic_ginger', label: 'Garlic & Ginger', cookingMethod: 'simmer', prepMethod: 'pan seared', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 1 },
-      { key: 'sauce', label: 'Sauce', cookingMethod: 'simmer', prepMethod: '', stages: [{ tempF: 195, minutes: 2 }] },
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'simmer', prepMethod: '', stages: [{ tempF: 195, minutes: 2 }], fillClass: 'simmer_sauce' },
       { key: 'scallions', label: 'Scallions', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -12514,7 +12514,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with creamy mashed potatoes and green beans, with extra ketchup or brown gravy on the side.'
     ],
     sections: [
-      { key: 'meatloaf', label: 'Meatloaf', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 60 }] },
+      { key: 'meatloaf', label: 'Meatloaf', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 60 }], fillClass: 'casserole_baked' },
       { key: 'glaze', label: 'Glaze', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 60 }] }
     ],
   },
@@ -12562,8 +12562,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve on its own or over steamed white rice.'
     ],
     sections: [
-      { key: 'grill_beef', label: 'Grill Beef', cookingMethod: 'simmer', prepMethod: 'pan seared', stages: [{ tempF: 195, minutes: 1 }], boilMinutes: 3 },
-      { key: 'sauce', label: 'Sauce', cookingMethod: 'simmer', prepMethod: 'simmer', stages: [{ tempF: 195, minutes: 1 }], boilMinutes: 3 },
+      { key: 'grill_beef', label: 'Grill Beef', cookingMethod: 'simmer', prepMethod: 'pan seared', stages: [{ tempF: 195, minutes: 1 }], boilMinutes: 3, fillClass: 'pan_grilled_steak' },
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'simmer', prepMethod: 'simmer', stages: [{ tempF: 195, minutes: 1 }], boilMinutes: 3, fillClass: 'simmer_sauce' },
       { key: 'scallions_sesame', label: 'Scallions & Sesame Oil', cookingMethod: 'simmer', prepMethod: '', stages: [{ tempF: 195, minutes: 1 }] }
     ],
   },
@@ -12620,11 +12620,11 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Pairs well with risotto, polenta, or crusty bread.'
     ],
     sections: [
-      { key: 'grill_shanks', label: 'Grill Shanks', cookingMethod: 'braise', prepMethod: 'pan seared', stages: [{ tempF: 185, minutes: 100 }], boilMinutes: 7 },
-      { key: 'vegetables', label: 'Vegetables', cookingMethod: 'braise', prepMethod: 'sauteed', stages: [{ tempF: 185, minutes: 100 }], boilMinutes: 6 },
-      { key: 'garlic', label: 'Garlic', cookingMethod: 'braise', prepMethod: 'sauteed', stages: [{ tempF: 185, minutes: 100 }], boilMinutes: 1 },
-      { key: 'wine', label: 'Wine', cookingMethod: 'braise', prepMethod: 'simmer', stages: [{ tempF: 185, minutes: 100 }], boilMinutes: 2 },
-      { key: 'tomatoes_spices', label: 'Tomatoes & Spices', cookingMethod: 'braise', prepMethod: '', stages: [{ tempF: 185, minutes: 100 }] },
+      { key: 'grill_shanks', label: 'Grill Shanks', cookingMethod: 'braise', prepMethod: 'pan seared', stages: [{ tempF: 185, minutes: 100 }], boilMinutes: 7, fillClass: 'braised_beef' },
+      { key: 'vegetables', label: 'Vegetables', cookingMethod: 'braise', prepMethod: 'sauteed', stages: [{ tempF: 185, minutes: 100 }], boilMinutes: 6, fillClass: 'sauteed_aromatic' },
+      { key: 'garlic', label: 'Garlic', cookingMethod: 'braise', prepMethod: 'sauteed', stages: [{ tempF: 185, minutes: 100 }], boilMinutes: 1, fillClass: 'sauteed_aromatic' },
+      { key: 'wine', label: 'Wine', cookingMethod: 'braise', prepMethod: 'simmer', stages: [{ tempF: 185, minutes: 100 }], boilMinutes: 2, fillClass: 'simmer_sauce' },
+      { key: 'tomatoes_spices', label: 'Tomatoes & Spices', cookingMethod: 'braise', prepMethod: '', stages: [{ tempF: 185, minutes: 100 }], fillClass: 'simmer_sauce' },
       { key: 'gremolata', label: 'Gremolata', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -12678,11 +12678,11 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve on its own or over steamed white rice.'
     ],
     sections: [
-      { key: 'brown_beef', label: 'Brown Beef', cookingMethod: 'stir-fried', prepMethod: 'stir-fried', boilMinutes: 3 },
-      { key: 'onions', label: 'Onions', cookingMethod: 'stir-fried', prepMethod: 'stir-fried', boilMinutes: 5 },
-      { key: 'bell_peppers', label: 'Bell Peppers', cookingMethod: 'stir-fried', prepMethod: 'stir-fried', boilMinutes: 3 },
-      { key: 'garlic_ginger', label: 'Garlic & Ginger', cookingMethod: 'stir-fried', prepMethod: 'stir-fried', boilMinutes: 1 },
-      { key: 'sauce', label: 'Sauce', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 1 },
+      { key: 'brown_beef', label: 'Brown Beef', cookingMethod: 'stir-fried', prepMethod: 'stir-fried', boilMinutes: 3, fillClass: 'pan_grilled_steak' },
+      { key: 'onions', label: 'Onions', cookingMethod: 'stir-fried', prepMethod: 'stir-fried', boilMinutes: 5, fillClass: 'simmered_vegetable' },
+      { key: 'bell_peppers', label: 'Bell Peppers', cookingMethod: 'stir-fried', prepMethod: 'stir-fried', boilMinutes: 3, fillClass: 'simmered_vegetable' },
+      { key: 'garlic_ginger', label: 'Garlic & Ginger', cookingMethod: 'stir-fried', prepMethod: 'stir-fried', boilMinutes: 1, fillClass: 'sauteed_aromatic' },
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 1, fillClass: 'simmer_sauce' },
       { key: 'sesame_oil', label: 'Sesame Oil', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -12734,10 +12734,10 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve as a filling for tacos or empanadas, or on its own or over steamed rice.'
     ],
     sections: [
-      { key: 'brown_beef', label: 'Brown Beef', cookingMethod: 'braise', prepMethod: 'pan seared', stages: [{ tempF: 185, minutes: 18 }], boilMinutes: 8, yieldFactorFat: 0.593 },
-      { key: 'onion_peppers', label: 'Onions & Peppers', cookingMethod: 'braise', prepMethod: 'sauteed', stages: [{ tempF: 185, minutes: 18 }], boilMinutes: 5 },
-      { key: 'garlic', label: 'Garlic', cookingMethod: 'braise', prepMethod: 'sauteed', stages: [{ tempF: 185, minutes: 18 }], boilMinutes: 1 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: 'braise', prepMethod: '', stages: [{ tempF: 185, minutes: 18 }] }
+      { key: 'brown_beef', label: 'Brown Beef', cookingMethod: 'braise', prepMethod: 'pan seared', stages: [{ tempF: 185, minutes: 18 }], boilMinutes: 8, yieldFactorFat: 0.593, fillClass: 'fried_meat' },
+      { key: 'onion_peppers', label: 'Onions & Peppers', cookingMethod: 'braise', prepMethod: 'sauteed', stages: [{ tempF: 185, minutes: 18 }], boilMinutes: 5, fillClass: 'sauteed_aromatic' },
+      { key: 'garlic', label: 'Garlic', cookingMethod: 'braise', prepMethod: 'sauteed', stages: [{ tempF: 185, minutes: 18 }], boilMinutes: 1, fillClass: 'sauteed_aromatic' },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'braise', prepMethod: '', stages: [{ tempF: 185, minutes: 18 }], fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -12791,9 +12791,9 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'crust', label: 'Pie Crust', cookingMethod: 'raw', prepMethod: '' },
-      { key: 'brown_beef', label: 'Brown Beef', cookingMethod: 'baked', prepMethod: 'pan seared', stages: [{ tempF: 400, minutes: 32 }], boilMinutes: 4 },
-      { key: 'vegetables', label: 'Vegetables', cookingMethod: 'baked', prepMethod: 'sauteed', stages: [{ tempF: 400, minutes: 32 }], boilMinutes: 6 },
-      { key: 'potatoes_peas_spices', label: 'Potatoes, Peas, spices', cookingMethod: 'baked', prepMethod: 'simmer', stages: [{ tempF: 400, minutes: 32 }], boilMinutes: 15 }
+      { key: 'brown_beef', label: 'Brown Beef', cookingMethod: 'baked', prepMethod: 'pan seared', stages: [{ tempF: 400, minutes: 32 }], boilMinutes: 4, fillClass: 'casserole_baked' },
+      { key: 'vegetables', label: 'Vegetables', cookingMethod: 'baked', prepMethod: 'sauteed', stages: [{ tempF: 400, minutes: 32 }], boilMinutes: 6, fillClass: 'casserole_baked' },
+      { key: 'potatoes_peas_spices', label: 'Potatoes, Peas, spices', cookingMethod: 'baked', prepMethod: 'simmer', stages: [{ tempF: 400, minutes: 32 }], boilMinutes: 15, fillClass: 'casserole_baked' }
     ],
   },
   {
@@ -12846,11 +12846,11 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with crusty bread or dinner rolls to soak up the braising liquid.'
     ],
     sections: [
-      { key: 'brown_roast', label: 'Brown Roast', cookingMethod: 'braise', prepMethod: 'pan seared', stages: [{ tempF: 325, minutes: 165 }], boilMinutes: 12 },
-      { key: 'onion', label: 'Onion', cookingMethod: 'braise', prepMethod: 'sauteed', stages: [{ tempF: 325, minutes: 165 }], boilMinutes: 7 },
-      { key: 'garlic_tomato_paste', label: 'Garlic & Tomato Paste', cookingMethod: 'braise', prepMethod: 'sauteed', stages: [{ tempF: 325, minutes: 165 }], boilMinutes: 2 },
-      { key: 'flour', label: 'Flour', cookingMethod: 'braise', prepMethod: 'sauteed', stages: [{ tempF: 325, minutes: 165 }], boilMinutes: 1 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: 'braise', prepMethod: '', stages: [{ tempF: 325, minutes: 165 }] }
+      { key: 'brown_roast', label: 'Brown Roast', cookingMethod: 'braise', prepMethod: 'pan seared', stages: [{ tempF: 325, minutes: 165 }], boilMinutes: 12, fillClass: 'braised_beef' },
+      { key: 'onion', label: 'Onion', cookingMethod: 'braise', prepMethod: 'sauteed', stages: [{ tempF: 325, minutes: 165 }], boilMinutes: 7, fillClass: 'sauteed_aromatic' },
+      { key: 'garlic_tomato_paste', label: 'Garlic & Tomato Paste', cookingMethod: 'braise', prepMethod: 'sauteed', stages: [{ tempF: 325, minutes: 165 }], boilMinutes: 2, fillClass: 'sauteed_aromatic' },
+      { key: 'flour', label: 'Flour', cookingMethod: 'braise', prepMethod: 'sauteed', stages: [{ tempF: 325, minutes: 165 }], boilMinutes: 1, fillClass: 'pan_grilled_batter' },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'braise', prepMethod: '', stages: [{ tempF: 325, minutes: 165 }], fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -12903,11 +12903,11 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over pasta, polenta, or gnocchi.'
     ],
     sections: [
-      { key: 'brown_beef', label: 'Brown Beef', cookingMethod: 'braise', prepMethod: 'pan seared', stages: [{ tempF: 185, minutes: 165 }], boilMinutes: 12 },
-      { key: 'vegetables', label: 'Vegetables', cookingMethod: 'braise', prepMethod: 'sauteed', stages: [{ tempF: 185, minutes: 165 }], boilMinutes: 5 },
-      { key: 'garlic_tomato_paste', label: 'Garlic & Tomato Paste', cookingMethod: 'braise', prepMethod: 'sauteed', stages: [{ tempF: 185, minutes: 165 }], boilMinutes: 1 },
-      { key: 'red_wine', label: 'Red Wine', cookingMethod: 'braise', prepMethod: 'simmer', stages: [{ tempF: 185, minutes: 165 }], boilMinutes: 2 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: 'braise', prepMethod: '', stages: [{ tempF: 185, minutes: 165 }] }
+      { key: 'brown_beef', label: 'Brown Beef', cookingMethod: 'braise', prepMethod: 'pan seared', stages: [{ tempF: 185, minutes: 165 }], boilMinutes: 12, fillClass: 'braised_beef' },
+      { key: 'vegetables', label: 'Vegetables', cookingMethod: 'braise', prepMethod: 'sauteed', stages: [{ tempF: 185, minutes: 165 }], boilMinutes: 5, fillClass: 'sauteed_aromatic' },
+      { key: 'garlic_tomato_paste', label: 'Garlic & Tomato Paste', cookingMethod: 'braise', prepMethod: 'sauteed', stages: [{ tempF: 185, minutes: 165 }], boilMinutes: 1, fillClass: 'pan_grilled_batter' },
+      { key: 'red_wine', label: 'Red Wine', cookingMethod: 'braise', prepMethod: 'simmer', stages: [{ tempF: 185, minutes: 165 }], boilMinutes: 2, fillClass: 'simmer_sauce' },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'braise', prepMethod: '', stages: [{ tempF: 185, minutes: 165 }], fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -12956,7 +12956,7 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'rub', label: 'Dry Rub', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 275, minutes: 165 }] },
-      { key: 'ribs', label: 'Ribs', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 275, minutes: 165 }], yieldFactorFat: 0.85 }
+      { key: 'ribs', label: 'Ribs', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 275, minutes: 165 }], yieldFactorFat: 0.85, fillClass: 'braised_beef' }
     ],
   },
   {
@@ -12979,7 +12979,7 @@ export const LEVELS: Level[] = [
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
-    nutritionJson: {"cal":543.2,"pro":35.7,"fat":36.0,"carb":17.6,"fib":1.6,"h2o":244.9,"sug":3.5,"perServing":{"cal":543.2,"pro":35.7,"fat":36.0,"carb":17.6,"fib":1.6,"h2o":244.9,"sug":3.5,"AddedSugars":0.0,"IntrinsicSugars":3.5},"micros":{"vitaminA":5.89,"vitaminC":0.32,"vitaminD":4.75,"vitaminE":0.1,"vitaminK":1.98,"vitaminB6":0.09,"vitaminB12":0.83,"thiamin":0.04,"riboflavin":0.16,"niacin":1.75,"folate":8.63,"calcium":23.54,"iron":1.27,"magnesium":11.44,"phosphorus":103.5,"potassium":222.04,"sodium":399.27,"zinc":2.04,"copper":0.12,"selenium":13.83,"cholesterol":49.09,"saturatedFat":3.97,"monoFat":4.61,"polyFat":0.25,"omega3":0.01,"omega6":0.04},"gramsPerServing":340.7,"servings":4,"per100g":{"Energy_KCal":159.43,"Water":71.89,"Protein":10.47,"TotalLipidFat":10.58,"Carbohydrate":5.16,"FiberTotalDietary":0.47,"SugarsTotal":1.04,"Cholesterol":49.09,"FattyAcids_totalSaturated":3.97,"FattyAcids_totalMonounsaturated":4.61,"FattyAcids_totalPolyunsaturated":0.25,"LinoleicAcid":0.04,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":5.89,"Retinol":5.68,"Carotene_beta":2.44,"VitaminD":4.75,"VitaminE_alphaTocopherol":0.1,"VitaminK_phylloquinone":1.98,"VitaminC_totalAscorbicAcid":0.32,"Thiamin":0.04,"Riboflavin":0.16,"Niacin":1.75,"PantothenicAcid":0.33,"VitaminB6":0.09,"Folate_total":8.63,"Folate_food":6.55,"Folate_DFE":10.09,"FolicAcid":4.27,"VitaminB12":0.83,"Choline_total":34.37,"Betaine":5.98,"LuteinZeaxanthin":11.85,"Lycopene":0.02,"Calcium_Ca":23.54,"Iron_Fe":1.27,"Magnesium_Mg":11.44,"Phosphorus_P":103.5,"Potassium_K":222.04,"Sodium_Na":399.27,"Zinc_Zn":2.04,"Copper_Cu":0.12,"Manganese_Mn":0.1,"Selenium_Se":13.83,"Tryptophan":0.06,"Threonine":0.38,"Isoleucine":0.43,"Leucine":0.77,"Lysine":0.8,"Methionine":0.25,"Cystine":0.09,"Phenylalanine":0.4,"Tyrosine":0.3,"Valine":0.49,"Arginine":0.64,"Histidine":0.31,"Alanine":0.61,"AsparticAcid":0.89,"GlutamicAcid":1.59,"Glycine":0.63,"Proline":0.54,"Serine":0.42,"omega3":0.01,"omega6":0.04,"AddedSugars":0.0,"IntrinsicSugars":1.04},"addedSugars":0.0,"intrinsicSugars":3.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"23572","name":"Beef, ground, 80% lean meat / 20% fat, raw","grams":170.1},{"ndb":"18079","name":"Bread crumbs, dry, grated, plain","grams":6.8},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":12.5},{"ndb":"6971","name":"Sauce, worcestershire","grams":4.2},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":1.2},{"ndb":"2020","name":"Spices, garlic powder","grams":0.4},{"ndb":"2026","name":"Spices, onion powder","grams":0.3},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"11282","name":"Onions, raw","grams":27.5},{"ndb":"11266","name":"Mushrooms, brown, italian, or crimini, raw","grams":56.7},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":5.8},{"ndb":"6008","name":"Soup, beef broth or bouillon canned, ready-to-serve","grams":120.0},{"ndb":"6971","name":"Sauce, worcestershire","grams":4.2},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2042","name":"Spices, thyme, dried","grams":0.2},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"brown_patties","section_label":"Brown Patties","prep_method":"pan seared","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","yield_factor_water":0.5425284543813386,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":789.25,"raw_water_grams":478.65,"raw_fat_grams":142.49,"raw_protein_grams":127.39,"raw_carb_grams":26.17,"raw_fiber_grams":2.02,"final_grams":570.28,"boil_minutes":9.0,"cook_stages":[{"tempF":195,"minutes":4}],"fill_class":"fried_ground_beef"},{"section_key":"onions_mushrooms","section_label":"Onions & Mushrooms","prep_method":"sauteed","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","yield_factor_water":0.8977480231071537,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":336.8,"raw_water_grams":306.95,"raw_fat_grams":0.34,"raw_protein_grams":6.88,"raw_carb_grams":20.03,"raw_fiber_grams":3.23,"final_grams":305.41,"boil_minutes":8.0,"cook_stages":[{"tempF":195,"minutes":4}],"fill_class":"sauteed_aromatic"},{"section_key":"garlic","section_label":"Garlic","prep_method":"sauteed","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","yield_factor_water":0.9755127138142359,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":6.0,"raw_water_grams":3.51,"raw_fat_grams":0.03,"raw_protein_grams":0.38,"raw_carb_grams":1.98,"raw_fiber_grams":0.13,"final_grams":5.91,"boil_minutes":1.0,"cook_stages":[{"tempF":195,"minutes":4}],"fill_class":"sauteed_aromatic"},{"section_key":"flour","section_label":"Flour","prep_method":"sauteed","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","yield_factor_water":0.9602804649270282,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":23.4,"raw_water_grams":2.79,"raw_fat_grams":0.23,"raw_protein_grams":2.42,"raw_carb_grams":17.86,"raw_fiber_grams":0.63,"final_grams":23.29,"boil_minutes":1.0,"cook_stages":[{"tempF":195,"minutes":4}],"fill_class":"pan_grilled_batter"},{"section_key":"gravy","section_label":"Gravy","prep_method":"simmer","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","yield_factor_water":0.9101444561205312,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":501.27,"raw_water_grams":481.72,"raw_fat_grams":1.13,"raw_protein_grams":5.6,"raw_carb_grams":4.32,"raw_fiber_grams":0.4,"final_grams":457.99,"boil_minutes":6.0,"cook_stages":[{"tempF":195,"minutes":4}],"fill_class":"simmer_sauce"}],"cookingMethod":"simmer","cookMinutes":4},
+    nutritionJson: {"cal":543.2,"pro":35.7,"fat":36.0,"carb":17.6,"fib":1.6,"h2o":240.0,"sug":3.5,"perServing":{"cal":543.2,"pro":35.7,"fat":36.0,"carb":17.6,"fib":1.6,"h2o":240.0,"sug":3.5,"AddedSugars":0.0,"IntrinsicSugars":3.5},"micros":{"vitaminA":5.98,"vitaminC":0.33,"vitaminD":4.83,"vitaminE":0.1,"vitaminK":2.01,"vitaminB6":0.1,"vitaminB12":0.85,"thiamin":0.04,"riboflavin":0.16,"niacin":1.77,"folate":8.76,"calcium":23.89,"iron":1.29,"magnesium":11.61,"phosphorus":105.04,"potassium":225.34,"sodium":405.21,"zinc":2.07,"copper":0.12,"selenium":14.03,"cholesterol":49.82,"saturatedFat":4.03,"monoFat":4.68,"polyFat":0.26,"omega3":0.01,"omega6":0.04},"gramsPerServing":335.7,"servings":4,"per100g":{"Energy_KCal":161.8,"Water":71.47,"Protein":10.62,"TotalLipidFat":10.74,"Carbohydrate":5.24,"FiberTotalDietary":0.48,"SugarsTotal":1.05,"Cholesterol":49.82,"FattyAcids_totalSaturated":4.03,"FattyAcids_totalMonounsaturated":4.68,"FattyAcids_totalPolyunsaturated":0.26,"LinoleicAcid":0.04,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":5.98,"Retinol":5.77,"Carotene_beta":2.48,"VitaminD":4.83,"VitaminE_alphaTocopherol":0.1,"VitaminK_phylloquinone":2.01,"VitaminC_totalAscorbicAcid":0.33,"Thiamin":0.04,"Riboflavin":0.16,"Niacin":1.77,"PantothenicAcid":0.34,"VitaminB6":0.1,"Folate_total":8.76,"Folate_food":6.65,"Folate_DFE":10.24,"FolicAcid":4.33,"VitaminB12":0.85,"Choline_total":34.89,"Betaine":6.07,"LuteinZeaxanthin":12.03,"Lycopene":0.02,"Calcium_Ca":23.89,"Iron_Fe":1.29,"Magnesium_Mg":11.61,"Phosphorus_P":105.04,"Potassium_K":225.34,"Sodium_Na":405.21,"Zinc_Zn":2.07,"Copper_Cu":0.12,"Manganese_Mn":0.1,"Selenium_Se":14.03,"Tryptophan":0.06,"Threonine":0.39,"Isoleucine":0.44,"Leucine":0.78,"Lysine":0.81,"Methionine":0.25,"Cystine":0.09,"Phenylalanine":0.41,"Tyrosine":0.31,"Valine":0.5,"Arginine":0.65,"Histidine":0.31,"Alanine":0.62,"AsparticAcid":0.9,"GlutamicAcid":1.61,"Glycine":0.64,"Proline":0.54,"Serine":0.43,"omega3":0.01,"omega6":0.04,"AddedSugars":0.0,"IntrinsicSugars":1.05},"addedSugars":0.0,"intrinsicSugars":3.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"23572","name":"Beef, ground, 80% lean meat / 20% fat, raw","grams":170.1},{"ndb":"18079","name":"Bread crumbs, dry, grated, plain","grams":6.8},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":12.5},{"ndb":"6971","name":"Sauce, worcestershire","grams":4.2},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":1.2},{"ndb":"2020","name":"Spices, garlic powder","grams":0.4},{"ndb":"2026","name":"Spices, onion powder","grams":0.3},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"11282","name":"Onions, raw","grams":27.5},{"ndb":"11266","name":"Mushrooms, brown, italian, or crimini, raw","grams":56.7},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":5.8},{"ndb":"6008","name":"Soup, beef broth or bouillon canned, ready-to-serve","grams":120.0},{"ndb":"6971","name":"Sauce, worcestershire","grams":4.2},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2042","name":"Spices, thyme, dried","grams":0.2},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"brown_patties","section_label":"Brown Patties","prep_method":"pan seared","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","yield_factor_water":0.5019800893327715,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":789.25,"raw_water_grams":478.65,"raw_fat_grams":142.49,"raw_protein_grams":127.39,"raw_carb_grams":26.17,"raw_fiber_grams":2.02,"final_grams":550.87,"boil_minutes":9.0,"cook_stages":[{"tempF":195,"minutes":4}],"fill_class":"fried_ground_beef"},{"section_key":"onions_mushrooms","section_label":"Onions & Mushrooms","prep_method":"sauteed","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","yield_factor_water":0.895942967399184,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":336.8,"raw_water_grams":306.95,"raw_fat_grams":0.34,"raw_protein_grams":6.88,"raw_carb_grams":20.03,"raw_fiber_grams":3.23,"final_grams":304.86,"boil_minutes":8.0,"cook_stages":[{"tempF":195,"minutes":4}],"fill_class":"sauteed_aromatic"},{"section_key":"garlic","section_label":"Garlic","prep_method":"sauteed","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","yield_factor_water":0.9745468287363146,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":6.0,"raw_water_grams":3.51,"raw_fat_grams":0.03,"raw_protein_grams":0.38,"raw_carb_grams":1.98,"raw_fiber_grams":0.13,"final_grams":5.91,"boil_minutes":1.0,"cook_stages":[{"tempF":195,"minutes":4}],"fill_class":"sauteed_aromatic"},{"section_key":"flour","section_label":"Flour","prep_method":"sauteed","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","yield_factor_water":0.958713753698274,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":23.4,"raw_water_grams":2.79,"raw_fat_grams":0.23,"raw_protein_grams":2.42,"raw_carb_grams":17.86,"raw_fiber_grams":0.63,"final_grams":23.28,"boil_minutes":1.0,"cook_stages":[{"tempF":195,"minutes":4}],"fill_class":"pan_grilled_batter"},{"section_key":"gravy","section_label":"Gravy","prep_method":"simmer","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","yield_factor_water":0.9101444561205312,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":501.27,"raw_water_grams":481.72,"raw_fat_grams":1.13,"raw_protein_grams":5.6,"raw_carb_grams":4.32,"raw_fiber_grams":0.4,"final_grams":457.99,"boil_minutes":6.0,"cook_stages":[{"tempF":195,"minutes":4}],"fill_class":"simmer_sauce"}],"cookingMethod":"simmer","cookMinutes":4},
     recipeIngredients: [
       { name: 'Beef Salisbury Steak', quantity: 'custom (g)', foodWord: 'SALISBURYSTEAK', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'ground beef (80% lean)', quantity: '1-1/2 lb', section: 'brown_patties', ndbNo: '23572', portionDesc: 'g', portionGrams: 680.4 },
@@ -13013,11 +13013,11 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with creamy mashed potatoes or egg noodles, and steamed green beans or peas.'
     ],
     sections: [
-      { key: 'brown_patties', label: 'Brown Patties', cookingMethod: 'simmer', prepMethod: 'pan seared', stages: [{ tempF: 195, minutes: 4 }], boilMinutes: 9 },
-      { key: 'onions_mushrooms', label: 'Onions & Mushrooms', cookingMethod: 'simmer', prepMethod: 'sauteed', stages: [{ tempF: 195, minutes: 4 }], boilMinutes: 8 },
-      { key: 'garlic', label: 'Garlic', cookingMethod: 'simmer', prepMethod: 'sauteed', stages: [{ tempF: 195, minutes: 4 }], boilMinutes: 1 },
-      { key: 'flour', label: 'Flour', cookingMethod: 'simmer', prepMethod: 'sauteed', stages: [{ tempF: 195, minutes: 4 }], boilMinutes: 1 },
-      { key: 'gravy', label: 'Gravy', cookingMethod: 'simmer', prepMethod: 'simmer', stages: [{ tempF: 195, minutes: 4 }], boilMinutes: 6 }
+      { key: 'brown_patties', label: 'Brown Patties', cookingMethod: 'simmer', prepMethod: 'pan seared', stages: [{ tempF: 195, minutes: 4 }], boilMinutes: 9, fillClass: 'fried_ground_beef' },
+      { key: 'onions_mushrooms', label: 'Onions & Mushrooms', cookingMethod: 'simmer', prepMethod: 'sauteed', stages: [{ tempF: 195, minutes: 4 }], boilMinutes: 8, fillClass: 'sauteed_aromatic' },
+      { key: 'garlic', label: 'Garlic', cookingMethod: 'simmer', prepMethod: 'sauteed', stages: [{ tempF: 195, minutes: 4 }], boilMinutes: 1, fillClass: 'sauteed_aromatic' },
+      { key: 'flour', label: 'Flour', cookingMethod: 'simmer', prepMethod: 'sauteed', stages: [{ tempF: 195, minutes: 4 }], boilMinutes: 1, fillClass: 'pan_grilled_batter' },
+      { key: 'gravy', label: 'Gravy', cookingMethod: 'simmer', prepMethod: 'simmer', stages: [{ tempF: 195, minutes: 4 }], boilMinutes: 6, fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -13070,11 +13070,11 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with creamy mashed potatoes or soft polenta, and crusty bread to soak up the braising liquid.'
     ],
     sections: [
-      { key: 'brown_ribs', label: 'Brown Ribs', cookingMethod: 'baked covered', prepMethod: 'pan seared', stages: [{ tempF: 325, minutes: 165 }], boilMinutes: 7 },
-      { key: 'vegetables', label: 'Vegetables', cookingMethod: 'baked covered', prepMethod: 'sauteed', stages: [{ tempF: 325, minutes: 165 }], boilMinutes: 7 },
-      { key: 'garlic_tomato_paste', label: 'Garlic & Tomato Paste', cookingMethod: 'baked covered', prepMethod: 'sauteed', stages: [{ tempF: 325, minutes: 165 }], boilMinutes: 2 },
-      { key: 'red_wine', label: 'Red Wine', cookingMethod: 'baked covered', prepMethod: 'simmer', stages: [{ tempF: 325, minutes: 165 }], boilMinutes: 3 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: 'baked covered', prepMethod: '', stages: [{ tempF: 325, minutes: 165 }] }
+      { key: 'brown_ribs', label: 'Brown Ribs', cookingMethod: 'baked covered', prepMethod: 'pan seared', stages: [{ tempF: 325, minutes: 165 }], boilMinutes: 7, fillClass: 'braised_beef' },
+      { key: 'vegetables', label: 'Vegetables', cookingMethod: 'baked covered', prepMethod: 'sauteed', stages: [{ tempF: 325, minutes: 165 }], boilMinutes: 7, fillClass: 'sauteed_aromatic' },
+      { key: 'garlic_tomato_paste', label: 'Garlic & Tomato Paste', cookingMethod: 'baked covered', prepMethod: 'sauteed', stages: [{ tempF: 325, minutes: 165 }], boilMinutes: 2, fillClass: 'pan_grilled_batter' },
+      { key: 'red_wine', label: 'Red Wine', cookingMethod: 'baked covered', prepMethod: 'simmer', stages: [{ tempF: 325, minutes: 165 }], boilMinutes: 3, fillClass: 'simmer_sauce' },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'baked covered', prepMethod: '', stages: [{ tempF: 325, minutes: 165 }], fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -13120,7 +13120,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with warm flour tortillas and pico de gallo for fajitas, or over rice with grilled vegetables.'
     ],
     sections: [
-      { key: 'grill_steak', label: 'Grill Steak', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 7 },
+      { key: 'grill_steak', label: 'Grill Steak', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 7, fillClass: 'pan_grilled_steak' },
       { key: 'marinade', label: 'Marinade', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -13144,7 +13144,7 @@ export const LEVELS: Level[] = [
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
-    nutritionJson: {"cal":482.7,"pro":40.1,"fat":30.1,"carb":12.3,"fib":1.1,"h2o":275.9,"sug":4.6,"perServing":{"cal":482.7,"pro":40.1,"fat":30.1,"carb":12.3,"fib":1.1,"h2o":275.9,"sug":4.6,"AddedSugars":0.0,"IntrinsicSugars":4.6},"micros":{"vitaminA":32.16,"vitaminC":0.32,"vitaminD":0.44,"vitaminE":0.18,"vitaminK":0.62,"vitaminB6":0.13,"vitaminB12":1.57,"thiamin":0.03,"riboflavin":0.15,"niacin":1.67,"folate":7.03,"calcium":23.45,"iron":0.94,"magnesium":12.97,"phosphorus":118.46,"potassium":235.45,"sodium":295.98,"zinc":2.33,"copper":0.1,"selenium":18.43,"cholesterol":43.22,"saturatedFat":4.12,"monoFat":2.53,"polyFat":0.27,"omega3":0.02,"omega6":0.18},"gramsPerServing":363.7,"servings":4,"per100g":{"Energy_KCal":132.72,"Water":75.86,"Protein":11.02,"TotalLipidFat":8.28,"Carbohydrate":3.39,"FiberTotalDietary":0.3,"SugarsTotal":1.26,"Cholesterol":43.22,"FattyAcids_totalSaturated":4.12,"FattyAcids_totalMonounsaturated":2.53,"FattyAcids_totalPolyunsaturated":0.27,"LinoleicAcid":0.18,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":32.16,"Retinol":31.37,"Carotene_beta":7.86,"VitaminD":0.44,"VitaminE_alphaTocopherol":0.18,"VitaminK_phylloquinone":0.62,"VitaminC_totalAscorbicAcid":0.32,"Thiamin":0.03,"Riboflavin":0.15,"Niacin":1.67,"PantothenicAcid":0.39,"VitaminB6":0.13,"Folate_total":7.03,"Folate_food":6.23,"Folate_DFE":7.6,"FolicAcid":1.65,"VitaminB12":1.57,"Choline_total":36.48,"Betaine":8.77,"LuteinZeaxanthin":2.09,"Lycopene":0.02,"Calcium_Ca":23.45,"Iron_Fe":0.94,"Magnesium_Mg":12.97,"Phosphorus_P":118.46,"Potassium_K":235.45,"Sodium_Na":295.98,"Zinc_Zn":2.33,"Copper_Cu":0.1,"Manganese_Mn":0.07,"Selenium_Se":18.43,"Tryptophan":0.08,"Threonine":0.43,"Isoleucine":0.49,"Leucine":0.87,"Lysine":0.91,"Methionine":0.27,"Cystine":0.11,"Phenylalanine":0.43,"Tyrosine":0.35,"Valine":0.54,"Arginine":0.68,"Histidine":0.34,"Alanine":0.65,"AsparticAcid":0.98,"GlutamicAcid":1.71,"Glycine":0.63,"Proline":0.56,"Serine":0.44,"omega3":0.02,"omega6":0.18,"AddedSugars":0.0,"IntrinsicSugars":1.26},"addedSugars":0.0,"intrinsicSugars":4.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"23061","name":"Beef, round, knuckle, tip center, steak, separable lean and fat, trimmed to 0\" fat, all grades, raw","grams":170.1},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"1145","name":"Butter, without salt","grams":10.7},{"ndb":"11282","name":"Onions, raw","grams":27.5},{"ndb":"11266","name":"Mushrooms, brown, italian, or crimini, raw","grams":56.7},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":3.9},{"ndb":"6008","name":"Soup, beef broth or bouillon canned, ready-to-serve","grams":60.0},{"ndb":"6971","name":"Sauce, worcestershire","grams":4.2},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":1.2},{"ndb":"1056","name":"Cream, sour, cultured","grams":57.5},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"grill_steak","section_label":"Grill Steak","prep_method":"pan seared","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","yield_factor_water":0.8480707711769226,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":687.55,"raw_water_grams":493.11,"raw_fat_grams":40.11,"raw_protein_grams":142.53,"raw_carb_grams":0.74,"raw_fiber_grams":0.29,"final_grams":612.63,"boil_minutes":4.0,"cook_stages":[{"tempF":195,"minutes":2}],"fill_class":"pan_grilled_steak"},{"section_key":"onions_mushrooms","section_label":"Onions & Mushrooms","prep_method":"sauteed","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","yield_factor_water":0.8933136698540505,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":379.4,"raw_water_grams":314.59,"raw_fat_grams":34.89,"raw_protein_grams":7.24,"raw_carb_grams":20.05,"raw_fiber_grams":3.23,"final_grams":345.84,"boil_minutes":9.0,"cook_stages":[{"tempF":195,"minutes":2}],"fill_class":"sauteed_aromatic"},{"section_key":"garlic","section_label":"Garlic","prep_method":"sauteed","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","yield_factor_water":0.9571444755101757,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":6.0,"raw_water_grams":3.51,"raw_fat_grams":0.03,"raw_protein_grams":0.38,"raw_carb_grams":1.98,"raw_fiber_grams":0.13,"final_grams":5.85,"boil_minutes":2.0,"cook_stages":[{"tempF":195,"minutes":2}],"fill_class":"sauteed_aromatic"},{"section_key":"flour","section_label":"Flour","prep_method":"sauteed","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","yield_factor_water":0.9612113882447791,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":15.6,"raw_water_grams":1.86,"raw_fat_grams":0.15,"raw_protein_grams":1.61,"raw_carb_grams":11.9,"raw_fiber_grams":0.42,"final_grams":15.53,"boil_minutes":1.0,"cook_stages":[{"tempF":195,"minutes":2}],"fill_class":"pan_grilled_batter"},{"section_key":"sauce","section_label":"Sauce","prep_method":"simmer","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","yield_factor_water":0.9187609857866145,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":262.0,"raw_water_grams":251.66,"raw_fat_grams":0.7,"raw_protein_grams":2.92,"raw_carb_grams":3.7,"raw_fiber_grams":0.2,"final_grams":241.56,"boil_minutes":5.0,"cook_stages":[{"tempF":195,"minutes":2}],"fill_class":"simmer_sauce"},{"section_key":"sour_cream","section_label":"Sour Cream","prep_method":"raw","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","yield_factor_water":0.9992929473130064,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":233.57,"raw_water_grams":168.14,"raw_fat_grams":44.52,"raw_protein_grams":5.67,"raw_carb_grams":11.02,"raw_fiber_grams":0.15,"final_grams":233.46,"boil_minutes":0,"cook_stages":[{"tempF":195,"minutes":2}],"fill_class":"simmer_sauce"}],"cookingMethod":"simmer","cookMinutes":2},
+    nutritionJson: {"cal":482.7,"pro":40.1,"fat":30.1,"carb":12.3,"fib":1.1,"h2o":272.1,"sug":4.6,"perServing":{"cal":482.7,"pro":40.1,"fat":30.1,"carb":12.3,"fib":1.1,"h2o":272.1,"sug":4.6,"AddedSugars":0.0,"IntrinsicSugars":4.6},"micros":{"vitaminA":32.49,"vitaminC":0.32,"vitaminD":0.45,"vitaminE":0.18,"vitaminK":0.63,"vitaminB6":0.13,"vitaminB12":1.59,"thiamin":0.03,"riboflavin":0.16,"niacin":1.68,"folate":7.11,"calcium":23.7,"iron":0.95,"magnesium":13.11,"phosphorus":119.69,"potassium":237.91,"sodium":299.07,"zinc":2.36,"copper":0.1,"selenium":18.62,"cholesterol":43.67,"saturatedFat":4.16,"monoFat":2.55,"polyFat":0.27,"omega3":0.02,"omega6":0.18},"gramsPerServing":360.0,"servings":4,"per100g":{"Energy_KCal":134.1,"Water":75.6,"Protein":11.14,"TotalLipidFat":8.36,"Carbohydrate":3.43,"FiberTotalDietary":0.31,"SugarsTotal":1.27,"Cholesterol":43.67,"FattyAcids_totalSaturated":4.16,"FattyAcids_totalMonounsaturated":2.55,"FattyAcids_totalPolyunsaturated":0.27,"LinoleicAcid":0.18,"alphaLinolenicAcid":0.02,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":32.49,"Retinol":31.7,"Carotene_beta":7.94,"VitaminD":0.45,"VitaminE_alphaTocopherol":0.18,"VitaminK_phylloquinone":0.63,"VitaminC_totalAscorbicAcid":0.32,"Thiamin":0.03,"Riboflavin":0.16,"Niacin":1.68,"PantothenicAcid":0.39,"VitaminB6":0.13,"Folate_total":7.11,"Folate_food":6.29,"Folate_DFE":7.68,"FolicAcid":1.67,"VitaminB12":1.59,"Choline_total":36.86,"Betaine":8.86,"LuteinZeaxanthin":2.11,"Lycopene":0.02,"Calcium_Ca":23.7,"Iron_Fe":0.95,"Magnesium_Mg":13.11,"Phosphorus_P":119.69,"Potassium_K":237.91,"Sodium_Na":299.07,"Zinc_Zn":2.36,"Copper_Cu":0.1,"Manganese_Mn":0.07,"Selenium_Se":18.62,"Tryptophan":0.08,"Threonine":0.44,"Isoleucine":0.5,"Leucine":0.87,"Lysine":0.92,"Methionine":0.28,"Cystine":0.11,"Phenylalanine":0.44,"Tyrosine":0.35,"Valine":0.54,"Arginine":0.69,"Histidine":0.34,"Alanine":0.65,"AsparticAcid":0.99,"GlutamicAcid":1.73,"Glycine":0.64,"Proline":0.56,"Serine":0.45,"omega3":0.02,"omega6":0.18,"AddedSugars":0.0,"IntrinsicSugars":1.27},"addedSugars":0.0,"intrinsicSugars":4.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"23061","name":"Beef, round, knuckle, tip center, steak, separable lean and fat, trimmed to 0\" fat, all grades, raw","grams":170.1},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3},{"ndb":"1145","name":"Butter, without salt","grams":10.7},{"ndb":"11282","name":"Onions, raw","grams":27.5},{"ndb":"11266","name":"Mushrooms, brown, italian, or crimini, raw","grams":56.7},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":3.9},{"ndb":"6008","name":"Soup, beef broth or bouillon canned, ready-to-serve","grams":60.0},{"ndb":"6971","name":"Sauce, worcestershire","grams":4.2},{"ndb":"2046","name":"Mustard, prepared, yellow","grams":1.2},{"ndb":"1056","name":"Cream, sour, cultured","grams":57.5},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"grill_steak","section_label":"Grill Steak","prep_method":"pan seared","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","yield_factor_water":0.818656236166968,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":687.55,"raw_water_grams":493.11,"raw_fat_grams":40.11,"raw_protein_grams":142.53,"raw_carb_grams":0.74,"raw_fiber_grams":0.29,"final_grams":598.13,"boil_minutes":4.0,"cook_stages":[{"tempF":195,"minutes":2}],"fill_class":"pan_grilled_steak"},{"section_key":"onions_mushrooms","section_label":"Onions & Mushrooms","prep_method":"sauteed","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","yield_factor_water":0.8916546067976437,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":379.4,"raw_water_grams":314.59,"raw_fat_grams":34.89,"raw_protein_grams":7.24,"raw_carb_grams":20.05,"raw_fiber_grams":3.23,"final_grams":345.32,"boil_minutes":9.0,"cook_stages":[{"tempF":195,"minutes":2}],"fill_class":"sauteed_aromatic"},{"section_key":"garlic","section_label":"Garlic","prep_method":"sauteed","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","yield_factor_water":0.9555663101317485,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":6.0,"raw_water_grams":3.51,"raw_fat_grams":0.03,"raw_protein_grams":0.38,"raw_carb_grams":1.98,"raw_fiber_grams":0.13,"final_grams":5.84,"boil_minutes":2.0,"cook_stages":[{"tempF":195,"minutes":2}],"fill_class":"sauteed_aromatic"},{"section_key":"flour","section_label":"Flour","prep_method":"sauteed","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","yield_factor_water":0.9596359057630961,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":15.6,"raw_water_grams":1.86,"raw_fat_grams":0.15,"raw_protein_grams":1.61,"raw_carb_grams":11.9,"raw_fiber_grams":0.42,"final_grams":15.52,"boil_minutes":1.0,"cook_stages":[{"tempF":195,"minutes":2}],"fill_class":"pan_grilled_batter"},{"section_key":"sauce","section_label":"Sauce","prep_method":"simmer","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","yield_factor_water":0.9187609857866145,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":262.0,"raw_water_grams":251.66,"raw_fat_grams":0.7,"raw_protein_grams":2.92,"raw_carb_grams":3.7,"raw_fiber_grams":0.2,"final_grams":241.56,"boil_minutes":5.0,"cook_stages":[{"tempF":195,"minutes":2}],"fill_class":"simmer_sauce"},{"section_key":"sour_cream","section_label":"Sour Cream","prep_method":"raw","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","yield_factor_water":0.9992929473130064,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":233.57,"raw_water_grams":168.14,"raw_fat_grams":44.52,"raw_protein_grams":5.67,"raw_carb_grams":11.02,"raw_fiber_grams":0.15,"final_grams":233.46,"boil_minutes":0,"cook_stages":[{"tempF":195,"minutes":2}],"fill_class":"simmer_sauce"}],"cookingMethod":"simmer","cookMinutes":2},
     recipeIngredients: [
       { name: 'Beef Stroganoff', quantity: 'custom (g)', foodWord: 'STROGANOFF', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'sirloin tip steak', quantity: '1-1/2 lb', section: 'grill_steak', ndbNo: '23061', portionDesc: 'g', portionGrams: 680.4 },
@@ -13173,12 +13173,12 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over egg noodles or mashed potatoes.'
     ],
     sections: [
-      { key: 'grill_steak', label: 'Grill Steak', cookingMethod: 'simmer', prepMethod: 'pan seared', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 4 },
-      { key: 'onions_mushrooms', label: 'Onions & Mushrooms', cookingMethod: 'simmer', prepMethod: 'sauteed', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 9 },
-      { key: 'garlic', label: 'Garlic', cookingMethod: 'simmer', prepMethod: 'sauteed', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 2 },
-      { key: 'flour', label: 'Flour', cookingMethod: 'simmer', prepMethod: 'sauteed', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 1 },
-      { key: 'sauce', label: 'Sauce', cookingMethod: 'simmer', prepMethod: 'simmer', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 5 },
-      { key: 'sour_cream', label: 'Sour Cream', cookingMethod: 'simmer', prepMethod: '', stages: [{ tempF: 195, minutes: 2 }] }
+      { key: 'grill_steak', label: 'Grill Steak', cookingMethod: 'simmer', prepMethod: 'pan seared', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 4, fillClass: 'pan_grilled_steak' },
+      { key: 'onions_mushrooms', label: 'Onions & Mushrooms', cookingMethod: 'simmer', prepMethod: 'sauteed', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 9, fillClass: 'sauteed_aromatic' },
+      { key: 'garlic', label: 'Garlic', cookingMethod: 'simmer', prepMethod: 'sauteed', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 2, fillClass: 'sauteed_aromatic' },
+      { key: 'flour', label: 'Flour', cookingMethod: 'simmer', prepMethod: 'sauteed', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 1, fillClass: 'pan_grilled_batter' },
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'simmer', prepMethod: 'simmer', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 5, fillClass: 'simmer_sauce' },
+      { key: 'sour_cream', label: 'Sour Cream', cookingMethod: 'simmer', prepMethod: '', stages: [{ tempF: 195, minutes: 2 }], fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -13224,8 +13224,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with creamy mashed potatoes and roasted asparagus, with the pan drippings spooned over the top.'
     ],
     sections: [
-      { key: 'grill_roast', label: 'Grill Roast', cookingMethod: 'baked', prepMethod: 'pan seared', stages: [{ tempF: 425, minutes: 17 }], boilMinutes: 6 },
-      { key: 'butter_spices', label: 'Butter & Spices', cookingMethod: 'baked', prepMethod: 'sauteed', stages: [{ tempF: 425, minutes: 17 }], boilMinutes: 1 }
+      { key: 'grill_roast', label: 'Grill Roast', cookingMethod: 'baked', prepMethod: 'pan seared', stages: [{ tempF: 425, minutes: 17 }], boilMinutes: 6, fillClass: 'pan_grilled_steak' },
+      { key: 'butter_spices', label: 'Butter & Spices', cookingMethod: 'baked', prepMethod: 'sauteed', stages: [{ tempF: 425, minutes: 17 }], boilMinutes: 1, fillClass: 'sauteed_aromatic' }
     ],
   },
   {
@@ -13271,8 +13271,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve immediately on its own or over steamed rice.'
     ],
     sections: [
-      { key: 'grill_beef', label: 'Grill Beef', cookingMethod: 'boiled', prepMethod: 'pan seared', stages: [{ tempF: 212, minutes: 1 }], boilMinutes: 4 },
-      { key: 'marinade', label: 'Marinade', cookingMethod: 'boiled', prepMethod: '', stages: [{ tempF: 212, minutes: 1 }] }
+      { key: 'grill_beef', label: 'Grill Beef', cookingMethod: 'boiled', prepMethod: 'pan seared', stages: [{ tempF: 212, minutes: 1 }], boilMinutes: 4, fillClass: 'pan_grilled_steak' },
+      { key: 'marinade', label: 'Marinade', cookingMethod: 'boiled', prepMethod: '', stages: [{ tempF: 212, minutes: 1 }], fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -13324,9 +13324,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with roasted root vegetables, creamed spinach, or a simple green salad.'
     ],
     sections: [
-      { key: 'duxelles', label: 'Duxelles', cookingMethod: 'baked', prepMethod: 'pan seared', stages: [{ tempF: 425, minutes: 27 }], boilMinutes: 15 },
-      { key: 'grill_tenderloin', label: 'Grill Tenderloin', cookingMethod: 'baked', prepMethod: 'pan seared', stages: [{ tempF: 425, minutes: 27 }], boilMinutes: 4 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 425, minutes: 27 }] }
+      { key: 'duxelles', label: 'Duxelles', cookingMethod: 'baked', prepMethod: 'pan seared', stages: [{ tempF: 425, minutes: 27 }], boilMinutes: 15, fillClass: 'duxelles_mushroom' },
+      { key: 'grill_tenderloin', label: 'Grill Tenderloin', cookingMethod: 'baked', prepMethod: 'pan seared', stages: [{ tempF: 425, minutes: 27 }], boilMinutes: 4, fillClass: 'pan_grilled_steak' },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 425, minutes: 27 }], fillClass: 'wellington_pastry' }
     ],
   },
   {
@@ -13379,12 +13379,12 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve immediately on its own or over steamed rice.'
     ],
     sections: [
-      { key: 'grill_beef', label: 'Grill Beef', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 2 },
-      { key: 'onions', label: 'Onions', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 7 },
-      { key: 'mushrooms', label: 'Mushrooms', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 5 },
-      { key: 'broccoli_peppers', label: 'Broccoli & Peppers', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 3 },
-      { key: 'garlic_ginger', label: 'Garlic & Ginger', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 1 },
-      { key: 'sauce', label: 'Sauce', cookingMethod: 'simmer', prepMethod: '', stages: [{ tempF: 195, minutes: 2 }] }
+      { key: 'grill_beef', label: 'Grill Beef', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 2, fillClass: 'pan_grilled_steak' },
+      { key: 'onions', label: 'Onions', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 7, fillClass: 'simmered_vegetable' },
+      { key: 'mushrooms', label: 'Mushrooms', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 5, fillClass: 'simmered_vegetable' },
+      { key: 'broccoli_peppers', label: 'Broccoli & Peppers', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 3, fillClass: 'simmered_vegetable' },
+      { key: 'garlic_ginger', label: 'Garlic & Ginger', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 1, fillClass: 'sauteed_aromatic' },
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'simmer', prepMethod: '', stages: [{ tempF: 195, minutes: 2 }], fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -13434,8 +13434,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with Mexican rice, refried beans, and guacamole or pico de gallo on the side.'
     ],
     sections: [
-      { key: 'brown_beef', label: 'Brown Beef', cookingMethod: 'simmer', prepMethod: 'pan seared', stages: [{ tempF: 195, minutes: 4 }], boilMinutes: 8 },
-      { key: 'mixture', label: 'Mixture', cookingMethod: 'simmer', prepMethod: '', stages: [{ tempF: 195, minutes: 4 }] },
+      { key: 'brown_beef', label: 'Brown Beef', cookingMethod: 'simmer', prepMethod: 'pan seared', stages: [{ tempF: 195, minutes: 4 }], boilMinutes: 8, fillClass: 'fried_meat' },
+      { key: 'mixture', label: 'Mixture', cookingMethod: 'simmer', prepMethod: '', stages: [{ tempF: 195, minutes: 4 }], fillClass: 'simmer_sauce' },
       { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -13489,10 +13489,10 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve immediately on its own or over steamed rice.'
     ],
     sections: [
-      { key: 'grill_chicken', label: 'Stir-Fried Chicken', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 8 },
-      { key: 'broccoli', label: 'Broccoli', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 4 },
-      { key: 'garlic_ginger', label: 'Garlic & Ginger', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 1 },
-      { key: 'sauce', label: 'Sauce', cookingMethod: 'simmer', prepMethod: '', stages: [{ tempF: 195, minutes: 2 }] }
+      { key: 'grill_chicken', label: 'Stir-Fried Chicken', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 8, fillClass: 'pan_grilled_chicken' },
+      { key: 'broccoli', label: 'Broccoli', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 4, fillClass: 'simmered_vegetable' },
+      { key: 'garlic_ginger', label: 'Garlic & Ginger', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 1, fillClass: 'sauteed_aromatic' },
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'simmer', prepMethod: '', stages: [{ tempF: 195, minutes: 2 }], fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -13543,12 +13543,12 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over pasta, polenta, or rice.'
     ],
     sections: [
-      { key: 'grill_chicken', label: 'Chicken', cookingMethod: 'baked', prepMethod: 'pan seared', stages: [{ tempF: 350, minutes: 37 }], boilMinutes: 7 },
-      { key: 'onions_peppers', label: 'Onions & Peppers', cookingMethod: 'baked', prepMethod: 'sauteed', stages: [{ tempF: 350, minutes: 37 }], boilMinutes: 6 },
-      { key: 'mushrooms', label: 'Mushrooms', cookingMethod: 'baked', prepMethod: 'sauteed', stages: [{ tempF: 350, minutes: 37 }], boilMinutes: 3 },
-      { key: 'garlic', label: 'Garlic', cookingMethod: 'baked', prepMethod: 'sauteed', stages: [{ tempF: 350, minutes: 37 }], boilMinutes: 2 },
-      { key: 'wine', label: 'Wine', cookingMethod: 'baked', prepMethod: 'simmer', stages: [{ tempF: 350, minutes: 37 }], boilMinutes: 2 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 37 }] }
+      { key: 'grill_chicken', label: 'Chicken', cookingMethod: 'baked', prepMethod: 'pan seared', stages: [{ tempF: 350, minutes: 37 }], boilMinutes: 7, fillClass: 'pan_grilled_chicken' },
+      { key: 'onions_peppers', label: 'Onions & Peppers', cookingMethod: 'baked', prepMethod: 'sauteed', stages: [{ tempF: 350, minutes: 37 }], boilMinutes: 6, fillClass: 'sauteed_aromatic' },
+      { key: 'mushrooms', label: 'Mushrooms', cookingMethod: 'baked', prepMethod: 'sauteed', stages: [{ tempF: 350, minutes: 37 }], boilMinutes: 3, fillClass: 'sauteed_aromatic' },
+      { key: 'garlic', label: 'Garlic', cookingMethod: 'baked', prepMethod: 'sauteed', stages: [{ tempF: 350, minutes: 37 }], boilMinutes: 2, fillClass: 'sauteed_aromatic' },
+      { key: 'wine', label: 'Wine', cookingMethod: 'baked', prepMethod: 'simmer', stages: [{ tempF: 350, minutes: 37 }], boilMinutes: 2, fillClass: 'simmer_sauce' },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 37 }], fillClass: 'casserole_baked' }
     ],
   },
   {
@@ -13599,11 +13599,11 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve on its own or over steamed rice with naan bread.'
     ],
     sections: [
-      { key: 'grill_chicken', label: 'Chicken', cookingMethod: 'simmer', prepMethod: 'pan seared', stages: [{ tempF: 195, minutes: 17 }], boilMinutes: 7 },
-      { key: 'onion', label: 'Onion', cookingMethod: 'simmer', prepMethod: 'sauteed', stages: [{ tempF: 195, minutes: 17 }], boilMinutes: 5 },
-      { key: 'garlic_ginger', label: 'Garlic & Ginger', cookingMethod: 'simmer', prepMethod: 'sauteed', stages: [{ tempF: 195, minutes: 17 }], boilMinutes: 1 },
-      { key: 'spices', label: 'Spices', cookingMethod: 'simmer', prepMethod: 'sauteed', stages: [{ tempF: 195, minutes: 17 }], boilMinutes: 1 },
-      { key: 'sauce', label: 'Sauce', cookingMethod: 'simmer', prepMethod: '', stages: [{ tempF: 195, minutes: 17 }] }
+      { key: 'grill_chicken', label: 'Chicken', cookingMethod: 'simmer', prepMethod: 'pan seared', stages: [{ tempF: 195, minutes: 17 }], boilMinutes: 7, fillClass: 'pan_grilled_chicken' },
+      { key: 'onion', label: 'Onion', cookingMethod: 'simmer', prepMethod: 'sauteed', stages: [{ tempF: 195, minutes: 17 }], boilMinutes: 5, fillClass: 'sauteed_aromatic' },
+      { key: 'garlic_ginger', label: 'Garlic & Ginger', cookingMethod: 'simmer', prepMethod: 'sauteed', stages: [{ tempF: 195, minutes: 17 }], boilMinutes: 1, fillClass: 'sauteed_aromatic' },
+      { key: 'spices', label: 'Spices', cookingMethod: 'simmer', prepMethod: 'sauteed', stages: [{ tempF: 195, minutes: 17 }], boilMinutes: 1, fillClass: 'pan_grilled_batter' },
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'simmer', prepMethod: '', stages: [{ tempF: 195, minutes: 17 }], fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -13653,8 +13653,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with Mexican rice, refried beans, and sour cream or guacamole on the side.'
     ],
     sections: [
-      { key: 'grill_chicken', label: 'Chicken', cookingMethod: 'baked', prepMethod: 'pan seared', stages: [{ tempF: 375, minutes: 22 }], boilMinutes: 13 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 375, minutes: 22 }] }
+      { key: 'grill_chicken', label: 'Chicken', cookingMethod: 'baked', prepMethod: 'pan seared', stages: [{ tempF: 375, minutes: 22 }], boilMinutes: 13, fillClass: 'pan_grilled_chicken' },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 375, minutes: 22 }], fillClass: 'casserole_baked' }
     ],
   },
   {
@@ -13705,9 +13705,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with pasta, mashed potatoes, or crusty bread to soak up the creamy spinach sauce.'
     ],
     sections: [
-      { key: 'grill_chicken', label: 'Chicken', cookingMethod: 'simmer', prepMethod: 'pan seared', stages: [{ tempF: 195, minutes: 3 }], boilMinutes: 12 },
-      { key: 'garlic', label: 'Garlic', cookingMethod: 'simmer', prepMethod: 'sauteed', stages: [{ tempF: 195, minutes: 3 }], boilMinutes: 1 },
-      { key: 'cream', label: 'Broth & Cream', cookingMethod: 'simmer', prepMethod: 'simmer', stages: [{ tempF: 195, minutes: 3 }], boilMinutes: 4 },
+      { key: 'grill_chicken', label: 'Chicken', cookingMethod: 'simmer', prepMethod: 'pan seared', stages: [{ tempF: 195, minutes: 3 }], boilMinutes: 12, fillClass: 'pan_grilled_chicken' },
+      { key: 'garlic', label: 'Garlic', cookingMethod: 'simmer', prepMethod: 'sauteed', stages: [{ tempF: 195, minutes: 3 }], boilMinutes: 1, fillClass: 'sauteed_aromatic' },
+      { key: 'cream', label: 'Broth & Cream', cookingMethod: 'simmer', prepMethod: 'simmer', stages: [{ tempF: 195, minutes: 3 }], boilMinutes: 4, fillClass: 'simmer_sauce' },
       { key: 'spinach', label: 'Spinach', cookingMethod: 'simmer', prepMethod: '', stages: [{ tempF: 195, minutes: 3 }] }
     ],
   },
@@ -13763,11 +13763,11 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'rice', label: 'Rice', cookingMethod: 'boiled covered', prepMethod: 'boiled covered', boilMinutes: 18 },
-      { key: 'grill_chicken', label: 'Chicken', cookingMethod: 'stir-fried', prepMethod: 'stir-fried', boilMinutes: 6 },
-      { key: 'onion_carrots', label: 'Onions & Carrots', cookingMethod: 'stir-fried', prepMethod: 'stir-fried', boilMinutes: 4 },
-      { key: 'garlic', label: 'Garlic', cookingMethod: 'stir-fried', prepMethod: 'stir-fried', boilMinutes: 1 },
-      { key: 'eggs', label: 'Eggs', cookingMethod: 'stir-fried', prepMethod: 'stir-fried', boilMinutes: 1 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: 'stir-fried', prepMethod: '', boilMinutes: 3 },
+      { key: 'grill_chicken', label: 'Chicken', cookingMethod: 'stir-fried', prepMethod: 'stir-fried', boilMinutes: 6, fillClass: 'pan_grilled_chicken' },
+      { key: 'onion_carrots', label: 'Onions & Carrots', cookingMethod: 'stir-fried', prepMethod: 'stir-fried', boilMinutes: 4, fillClass: 'simmered_vegetable' },
+      { key: 'garlic', label: 'Garlic', cookingMethod: 'stir-fried', prepMethod: 'stir-fried', boilMinutes: 1, fillClass: 'sauteed_aromatic' },
+      { key: 'eggs', label: 'Eggs', cookingMethod: 'stir-fried', prepMethod: 'stir-fried', boilMinutes: 1, fillClass: 'fried_meat' },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'stir-fried', prepMethod: '', boilMinutes: 3, fillClass: 'simmered_vegetable' },
       { key: 'finish', label: 'Scallions & Sesame Oil', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -13825,9 +13825,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with steamed rice.'
     ],
     sections: [
-      { key: 'grill_chicken', label: 'Chicken', cookingMethod: 'simmer', prepMethod: 'pan seared', stages: [{ tempF: 195, minutes: 1 }], boilMinutes: 4 },
-      { key: 'garlic_ginger', label: 'Garlic & Ginger', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 1 }], boilMinutes: 1 },
-      { key: 'sauce', label: 'Sauce', cookingMethod: 'simmer', prepMethod: 'simmer', stages: [{ tempF: 195, minutes: 1 }], boilMinutes: 2 },
+      { key: 'grill_chicken', label: 'Chicken', cookingMethod: 'simmer', prepMethod: 'pan seared', stages: [{ tempF: 195, minutes: 1 }], boilMinutes: 4, fillClass: 'pan_grilled_chicken' },
+      { key: 'garlic_ginger', label: 'Garlic & Ginger', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 1 }], boilMinutes: 1, fillClass: 'sauteed_aromatic' },
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'simmer', prepMethod: 'simmer', stages: [{ tempF: 195, minutes: 1 }], boilMinutes: 2, fillClass: 'simmer_sauce' },
       { key: 'finish', label: 'Scallions & Sesame Seeds', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -13886,11 +13886,11 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over steamed rice or with steamed dumplings on the side.'
     ],
     sections: [
-      { key: 'grill_chicken', label: 'Chicken', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 4 },
-      { key: 'mushrooms', label: 'Mushrooms', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 3 },
-      { key: 'garlic_ginger', label: 'Garlic & Ginger', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 1 },
-      { key: 'snow_peas_chestnuts_shoots', label: 'Snow Peas, Chestnuts, Shoots', cookingMethod: 'simmer', prepMethod: 'pan seared', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 2 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: 'simmer', prepMethod: '', stages: [{ tempF: 195, minutes: 2 }] },
+      { key: 'grill_chicken', label: 'Chicken', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 4, fillClass: 'pan_grilled_chicken' },
+      { key: 'mushrooms', label: 'Mushrooms', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 3, fillClass: 'sauteed_aromatic' },
+      { key: 'garlic_ginger', label: 'Garlic & Ginger', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 1, fillClass: 'sauteed_aromatic' },
+      { key: 'snow_peas_chestnuts_shoots', label: 'Snow Peas, Chestnuts, Shoots', cookingMethod: 'simmer', prepMethod: 'pan seared', stages: [{ tempF: 195, minutes: 2 }], boilMinutes: 2, fillClass: 'simmered_vegetable' },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'simmer', prepMethod: '', stages: [{ tempF: 195, minutes: 2 }], fillClass: 'simmer_sauce' },
       { key: 'finish', label: 'Scallions', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -13943,9 +13943,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with pasta or rice.'
     ],
     sections: [
-      { key: 'grill_chicken', label: 'Chicken', cookingMethod: 'sub-simmer', prepMethod: 'pan seared', stages: [{ tempF: 180, minutes: 2 }], boilMinutes: 7 },
-      { key: 'wine_lemon_juice', label: 'Wine & Lemon Juice', cookingMethod: 'sub-simmer', prepMethod: 'boiled', stages: [{ tempF: 180, minutes: 2 }], boilMinutes: 2 },
-      { key: 'broth_capers', label: 'Broth & Capers', cookingMethod: 'sub-simmer', prepMethod: 'simmer', stages: [{ tempF: 180, minutes: 2 }], boilMinutes: 3 },
+      { key: 'grill_chicken', label: 'Chicken', cookingMethod: 'sub-simmer', prepMethod: 'pan seared', stages: [{ tempF: 180, minutes: 2 }], boilMinutes: 7, fillClass: 'pan_grilled_chicken' },
+      { key: 'wine_lemon_juice', label: 'Wine & Lemon Juice', cookingMethod: 'sub-simmer', prepMethod: 'boiled', stages: [{ tempF: 180, minutes: 2 }], boilMinutes: 2, fillClass: 'simmer_sauce' },
+      { key: 'broth_capers', label: 'Broth & Capers', cookingMethod: 'sub-simmer', prepMethod: 'simmer', stages: [{ tempF: 180, minutes: 2 }], boilMinutes: 3, fillClass: 'simmer_sauce' },
       { key: 'butter', label: 'Butter', cookingMethod: 'sub-simmer', prepMethod: '', stages: [{ tempF: 180, minutes: 2 }] },
       { key: 'finish', label: 'Parsley', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
@@ -13999,10 +13999,10 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'crust', label: 'Pie Crust Double', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 },
-      { key: 'chicken', label: 'Chicken', cookingMethod: 'baked', prepMethod: 'simmer', stages: [{ tempF: 425, minutes: 32 }], boilMinutes: 16 },
-      { key: 'vegetables', label: 'Vegetables', cookingMethod: 'baked', prepMethod: 'sauteed', stages: [{ tempF: 425, minutes: 32 }], boilMinutes: 5 },
-      { key: 'flour', label: 'Flour', cookingMethod: 'baked', prepMethod: 'sauteed', stages: [{ tempF: 425, minutes: 32 }], boilMinutes: 1 },
-      { key: 'potatoes_peas_spices', label: 'Potatoes, Peas & Spices', cookingMethod: 'baked', prepMethod: 'simmer', stages: [{ tempF: 425, minutes: 32 }], boilMinutes: 9 }
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'baked', prepMethod: 'simmer', stages: [{ tempF: 425, minutes: 32 }], boilMinutes: 16, fillClass: 'simmer_sauce' },
+      { key: 'vegetables', label: 'Vegetables', cookingMethod: 'baked', prepMethod: 'sauteed', stages: [{ tempF: 425, minutes: 32 }], boilMinutes: 5, fillClass: 'sauteed_aromatic' },
+      { key: 'flour', label: 'Flour', cookingMethod: 'baked', prepMethod: 'sauteed', stages: [{ tempF: 425, minutes: 32 }], boilMinutes: 1, fillClass: 'pan_grilled_batter' },
+      { key: 'potatoes_peas_spices', label: 'Potatoes, Peas & Spices', cookingMethod: 'baked', prepMethod: 'simmer', stages: [{ tempF: 425, minutes: 32 }], boilMinutes: 9, fillClass: 'simmered_vegetable' }
     ],
   },
   {
@@ -14054,7 +14054,7 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'marinade', label: 'Marinade', cookingMethod: 'raw', prepMethod: '' },
-      { key: 'kabobs', label: 'Kabobs', cookingMethod: 'grilled', prepMethod: 'grilled', boilMinutes: 9 }
+      { key: 'kabobs', label: 'Kabobs', cookingMethod: 'grilled', prepMethod: 'grilled', boilMinutes: 9, fillClass: 'pan_grilled_chicken' }
     ],
   },
   {
@@ -14105,8 +14105,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with sour cream, guacamole, or a simple green salad on the side.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: 'baked covered', prepMethod: 'pan seared', stages: [{ tempF: 350, minutes: 40 }], boilMinutes: 9 },
-      { key: 'filling', label: 'Filling', cookingMethod: 'baked covered', prepMethod: '', stages: [{ tempF: 350, minutes: 40 }] }
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'baked covered', prepMethod: 'pan seared', stages: [{ tempF: 350, minutes: 40 }], boilMinutes: 9, fillClass: 'pan_grilled_chicken' },
+      { key: 'filling', label: 'Filling', cookingMethod: 'baked covered', prepMethod: '', stages: [{ tempF: 350, minutes: 40 }], fillClass: 'casserole_baked' }
     ],
   },
   {
@@ -14158,10 +14158,10 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with pasta or rice.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: 'sub-simmer', prepMethod: 'pan seared', stages: [{ tempF: 180, minutes: 1 }], boilMinutes: 7 },
-      { key: 'mushrooms', label: 'Mushrooms', cookingMethod: 'sub-simmer', prepMethod: 'pan seared', stages: [{ tempF: 180, minutes: 1 }], boilMinutes: 4 },
-      { key: 'shallots', label: 'Shallots', cookingMethod: 'sub-simmer', prepMethod: 'sauteed', stages: [{ tempF: 180, minutes: 1 }], boilMinutes: 1 },
-      { key: 'marsala_broth', label: 'Marsala & Broth', cookingMethod: 'sub-simmer', prepMethod: 'simmer', stages: [{ tempF: 180, minutes: 1 }], boilMinutes: 4 },
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'sub-simmer', prepMethod: 'pan seared', stages: [{ tempF: 180, minutes: 1 }], boilMinutes: 7, fillClass: 'pan_grilled_chicken' },
+      { key: 'mushrooms', label: 'Mushrooms', cookingMethod: 'sub-simmer', prepMethod: 'pan seared', stages: [{ tempF: 180, minutes: 1 }], boilMinutes: 4, fillClass: 'sauteed_aromatic' },
+      { key: 'shallots', label: 'Shallots', cookingMethod: 'sub-simmer', prepMethod: 'sauteed', stages: [{ tempF: 180, minutes: 1 }], boilMinutes: 1, fillClass: 'sauteed_aromatic' },
+      { key: 'marsala_broth', label: 'Marsala & Broth', cookingMethod: 'sub-simmer', prepMethod: 'simmer', stages: [{ tempF: 180, minutes: 1 }], boilMinutes: 4, fillClass: 'simmer_sauce' },
       { key: 'butter', label: 'Butter', cookingMethod: 'sub-simmer', prepMethod: '', stages: [{ tempF: 180, minutes: 1 }] },
       { key: 'parsley', label: 'Parsley', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
@@ -14221,11 +14221,11 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'marinade', label: 'Marinade', cookingMethod: 'raw', prepMethod: '' },
-      { key: 'chicken', label: 'Chicken', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 5 }], boilMinutes: 7 },
-      { key: 'onions', label: 'Onions', cookingMethod: 'simmer', prepMethod: 'sauteed', stages: [{ tempF: 195, minutes: 5 }], boilMinutes: 10 },
-      { key: 'garlic', label: 'Garlic', cookingMethod: 'simmer', prepMethod: 'sauteed', stages: [{ tempF: 195, minutes: 5 }], boilMinutes: 1 },
-      { key: 'spices', label: 'Spices', cookingMethod: 'simmer', prepMethod: 'sauteed', stages: [{ tempF: 195, minutes: 5 }], boilMinutes: 1 },
-      { key: 'tomatoes', label: 'Tomatoes', cookingMethod: 'simmer', prepMethod: 'simmer', stages: [{ tempF: 195, minutes: 5 }], boilMinutes: 7 },
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 5 }], boilMinutes: 7, fillClass: 'pan_grilled_chicken' },
+      { key: 'onions', label: 'Onions', cookingMethod: 'simmer', prepMethod: 'sauteed', stages: [{ tempF: 195, minutes: 5 }], boilMinutes: 10, fillClass: 'sauteed_aromatic' },
+      { key: 'garlic', label: 'Garlic', cookingMethod: 'simmer', prepMethod: 'sauteed', stages: [{ tempF: 195, minutes: 5 }], boilMinutes: 1, fillClass: 'sauteed_aromatic' },
+      { key: 'spices', label: 'Spices', cookingMethod: 'simmer', prepMethod: 'sauteed', stages: [{ tempF: 195, minutes: 5 }], boilMinutes: 1, fillClass: 'sauteed_aromatic' },
+      { key: 'tomatoes', label: 'Tomatoes', cookingMethod: 'simmer', prepMethod: 'simmer', stages: [{ tempF: 195, minutes: 5 }], boilMinutes: 7, fillClass: 'simmer_sauce' },
       { key: 'cilantro', label: 'Cilantro', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -14288,10 +14288,10 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'rice', label: 'Rice', cookingMethod: 'boiled covered', prepMethod: 'boiled covered', boilMinutes: 40 },
-      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 7 },
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 7, fillClass: 'pan_grilled_chicken' },
       { key: 'peanut_sauce', label: 'Peanut Sauce', cookingMethod: 'raw', prepMethod: '' },
-      { key: 'edamame', label: 'Edamame', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 5 },
-      { key: 'broccoli', label: 'Broccoli', cookingMethod: 'steamed', prepMethod: 'steamed', boilMinutes: 3 },
+      { key: 'edamame', label: 'Edamame', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 5, fillClass: 'simmered_vegetable' },
+      { key: 'broccoli', label: 'Broccoli', cookingMethod: 'steamed', prepMethod: 'steamed', boilMinutes: 3, fillClass: 'simmered_vegetable' },
       { key: 'raw_vegetables', label: 'Raw Vegetables', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -14345,8 +14345,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over steamed white rice.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 1 }], boilMinutes: 7 },
-      { key: 'sauce', label: 'Sauce', cookingMethod: 'simmer', prepMethod: 'simmer', stages: [{ tempF: 195, minutes: 1 }], boilMinutes: 2 },
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'simmer', prepMethod: 'stir-fried', stages: [{ tempF: 195, minutes: 1 }], boilMinutes: 7, fillClass: 'pan_grilled_chicken' },
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'simmer', prepMethod: 'simmer', stages: [{ tempF: 195, minutes: 1 }], boilMinutes: 2, fillClass: 'simmer_sauce' },
       { key: 'garnish', label: 'Garnish', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -14393,7 +14393,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve hot with dipping sauce of your choice — honey mustard, ranch dressing, or BBQ sauce.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: 'fried', prepMethod: '', boilMinutes: 7 }
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'fried', prepMethod: '', boilMinutes: 7, fillClass: 'fried_breaded_chicken_tender' }
     ],
   },
   {
@@ -14444,7 +14444,7 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'waffles', label: 'Waffles', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 },
-      { key: 'chicken', label: 'Chicken', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 11 },
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 11, fillClass: 'fried_chicken' },
       { key: 'maple_syrup', label: 'Maple Syrup', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -14488,9 +14488,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over steamed white rice.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: 'braise', prepMethod: 'pan seared', stages: [{ tempF: 185, minutes: 30 }], boilMinutes: 7 },
-      { key: 'garlic', label: 'Garlic', cookingMethod: 'braise', prepMethod: 'pan seared', stages: [{ tempF: 185, minutes: 30 }], boilMinutes: 1 },
-      { key: 'flavors', label: 'Flavors', cookingMethod: 'braise', prepMethod: '', stages: [{ tempF: 185, minutes: 30 }] }
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'braise', prepMethod: 'pan seared', stages: [{ tempF: 185, minutes: 30 }], boilMinutes: 7, fillClass: 'pan_grilled_chicken' },
+      { key: 'garlic', label: 'Garlic', cookingMethod: 'braise', prepMethod: 'pan seared', stages: [{ tempF: 185, minutes: 30 }], boilMinutes: 1, fillClass: 'sauteed_aromatic' },
+      { key: 'flavors', label: 'Flavors', cookingMethod: 'braise', prepMethod: '', stages: [{ tempF: 185, minutes: 30 }], fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -14546,11 +14546,11 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over steamed basmati rice or with naan.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: 'braise', prepMethod: 'pan seared', stages: [{ tempF: 185, minutes: 22 }], boilMinutes: 7 },
-      { key: 'onion', label: 'Onion', cookingMethod: 'braise', prepMethod: 'sauteed', stages: [{ tempF: 185, minutes: 22 }], boilMinutes: 9 },
-      { key: 'garlic_ginger', label: 'Garlic & Ginger', cookingMethod: 'braise', prepMethod: 'sauteed', stages: [{ tempF: 185, minutes: 22 }], boilMinutes: 1 },
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'braise', prepMethod: 'pan seared', stages: [{ tempF: 185, minutes: 22 }], boilMinutes: 7, fillClass: 'pan_grilled_chicken' },
+      { key: 'onion', label: 'Onion', cookingMethod: 'braise', prepMethod: 'sauteed', stages: [{ tempF: 185, minutes: 22 }], boilMinutes: 9, fillClass: 'sauteed_aromatic' },
+      { key: 'garlic_ginger', label: 'Garlic & Ginger', cookingMethod: 'braise', prepMethod: 'sauteed', stages: [{ tempF: 185, minutes: 22 }], boilMinutes: 1, fillClass: 'sauteed_aromatic' },
       { key: 'spices', label: 'Spices', cookingMethod: 'braise', prepMethod: 'sauteed', stages: [{ tempF: 185, minutes: 22 }], boilMinutes: 1 },
-      { key: 'sauce', label: 'Sauce', cookingMethod: 'braise', prepMethod: '', stages: [{ tempF: 185, minutes: 22 }] }
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'braise', prepMethod: '', stages: [{ tempF: 185, minutes: 22 }], fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -14601,9 +14601,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with pasta, creamy polenta, or mashed potatoes to soak up the pan sauce.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 7 },
-      { key: 'wine', label: 'Wine', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 5 },
-      { key: 'broth', label: 'Broth', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 3 },
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 7, fillClass: 'pan_grilled_chicken' },
+      { key: 'wine', label: 'Wine', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 5, fillClass: 'simmer_sauce' },
+      { key: 'broth', label: 'Broth', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 3, fillClass: 'simmer_sauce' },
       { key: 'butter', label: 'Butter', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -14658,10 +14658,10 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'pasta', label: 'Pasta', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 8 },
-      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 9 },
-      { key: 'garlic_red_pepper', label: 'Garlic & Red Pepper', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 1 },
-      { key: 'wine', label: 'Wine', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 5 },
-      { key: 'broth', label: 'Broth', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 3 },
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 9, fillClass: 'pan_grilled_chicken' },
+      { key: 'garlic_red_pepper', label: 'Garlic & Red Pepper', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 1, fillClass: 'sauteed_aromatic' },
+      { key: 'wine', label: 'Wine', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 5, fillClass: 'simmer_sauce' },
+      { key: 'broth', label: 'Broth', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 3, fillClass: 'simmer_sauce' },
       { key: 'parsley', label: 'Parsley', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -14722,13 +14722,13 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a simple green salad and crusty bread.'
     ],
     sections: [
-      { key: 'pasta', label: 'Pasta', cookingMethod: 'baked', prepMethod: 'boiled', stages: [{ tempF: 375, minutes: 27 }], boilMinutes: 6 },
-      { key: 'chicken', label: 'Chicken', cookingMethod: 'baked', prepMethod: 'pan seared', stages: [{ tempF: 375, minutes: 27 }], boilMinutes: 9 },
-      { key: 'onion', label: 'Onion', cookingMethod: 'baked', prepMethod: 'sauteed', stages: [{ tempF: 375, minutes: 27 }], boilMinutes: 10 },
-      { key: 'garlic_mushrooms', label: 'Garlic & Mushrooms', cookingMethod: 'baked', prepMethod: 'sauteed', stages: [{ tempF: 375, minutes: 27 }], boilMinutes: 6 },
-      { key: 'flour', label: 'Flour', cookingMethod: 'baked', prepMethod: 'sauteed', stages: [{ tempF: 375, minutes: 27 }], boilMinutes: 1 },
-      { key: 'wine_broth', label: 'Wine & Broth', cookingMethod: 'baked', prepMethod: 'simmer', stages: [{ tempF: 375, minutes: 27 }], boilMinutes: 5 },
-      { key: 'topping', label: 'Topping', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 375, minutes: 27 }] }
+      { key: 'pasta', label: 'Pasta', cookingMethod: 'baked', prepMethod: 'boiled', stages: [{ tempF: 375, minutes: 27 }], boilMinutes: 6, fillClass: 'casserole_baked' },
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'baked', prepMethod: 'pan seared', stages: [{ tempF: 375, minutes: 27 }], boilMinutes: 9, fillClass: 'pan_grilled_chicken' },
+      { key: 'onion', label: 'Onion', cookingMethod: 'baked', prepMethod: 'sauteed', stages: [{ tempF: 375, minutes: 27 }], boilMinutes: 10, fillClass: 'sauteed_aromatic' },
+      { key: 'garlic_mushrooms', label: 'Garlic & Mushrooms', cookingMethod: 'baked', prepMethod: 'sauteed', stages: [{ tempF: 375, minutes: 27 }], boilMinutes: 6, fillClass: 'sauteed_aromatic' },
+      { key: 'flour', label: 'Flour', cookingMethod: 'baked', prepMethod: 'sauteed', stages: [{ tempF: 375, minutes: 27 }], boilMinutes: 1, fillClass: 'pan_grilled_batter' },
+      { key: 'wine_broth', label: 'Wine & Broth', cookingMethod: 'baked', prepMethod: 'simmer', stages: [{ tempF: 375, minutes: 27 }], boilMinutes: 5, fillClass: 'simmer_sauce' },
+      { key: 'topping', label: 'Topping', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 375, minutes: 27 }], fillClass: 'casserole_baked' }
     ],
   },
   {
@@ -14789,12 +14789,12 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over steamed basmati rice or with naan.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: 'simmer', prepMethod: 'pan seared', stages: [{ tempF: 195, minutes: 5 }], boilMinutes: 7 },
-      { key: 'onion', label: 'Onion', cookingMethod: 'simmer', prepMethod: 'sauteed', stages: [{ tempF: 195, minutes: 5 }], boilMinutes: 9 },
-      { key: 'garlic_ginger', label: 'Garlic & Ginger', cookingMethod: 'simmer', prepMethod: 'sauteed', stages: [{ tempF: 195, minutes: 5 }], boilMinutes: 1 },
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'simmer', prepMethod: 'pan seared', stages: [{ tempF: 195, minutes: 5 }], boilMinutes: 7, fillClass: 'pan_grilled_chicken' },
+      { key: 'onion', label: 'Onion', cookingMethod: 'simmer', prepMethod: 'sauteed', stages: [{ tempF: 195, minutes: 5 }], boilMinutes: 9, fillClass: 'sauteed_aromatic' },
+      { key: 'garlic_ginger', label: 'Garlic & Ginger', cookingMethod: 'simmer', prepMethod: 'sauteed', stages: [{ tempF: 195, minutes: 5 }], boilMinutes: 1, fillClass: 'sauteed_aromatic' },
       { key: 'spices', label: 'Spices', cookingMethod: 'simmer', prepMethod: 'sauteed', stages: [{ tempF: 195, minutes: 5 }], boilMinutes: 1 },
-      { key: 'tomatoes', label: 'Tomatoes', cookingMethod: 'simmer', prepMethod: 'simmer', stages: [{ tempF: 195, minutes: 5 }], boilMinutes: 10 },
-      { key: 'cream', label: 'Cream', cookingMethod: 'simmer', prepMethod: 'simmer', stages: [{ tempF: 195, minutes: 5 }], boilMinutes: 5 }
+      { key: 'tomatoes', label: 'Tomatoes', cookingMethod: 'simmer', prepMethod: 'simmer', stages: [{ tempF: 195, minutes: 5 }], boilMinutes: 10, fillClass: 'simmer_sauce' },
+      { key: 'cream', label: 'Cream', cookingMethod: 'simmer', prepMethod: 'simmer', stages: [{ tempF: 195, minutes: 5 }], boilMinutes: 5, fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -14848,12 +14848,12 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with pasta, rice, or crusty bread.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: 'sub-simmer', prepMethod: 'pan seared', stages: [{ tempF: 180, minutes: 1 }], boilMinutes: 9 },
-      { key: 'garlic', label: 'Garlic', cookingMethod: 'sub-simmer', prepMethod: 'sauteed', stages: [{ tempF: 180, minutes: 1 }], boilMinutes: 1 },
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'sub-simmer', prepMethod: 'pan seared', stages: [{ tempF: 180, minutes: 1 }], boilMinutes: 9, fillClass: 'pan_grilled_chicken' },
+      { key: 'garlic', label: 'Garlic', cookingMethod: 'sub-simmer', prepMethod: 'sauteed', stages: [{ tempF: 180, minutes: 1 }], boilMinutes: 1, fillClass: 'sauteed_aromatic' },
       { key: 'sun_dried_tomatoes', label: 'Sun-dried Tomatoes', cookingMethod: 'sub-simmer', prepMethod: 'sauteed', stages: [{ tempF: 180, minutes: 1 }], boilMinutes: 1 },
       { key: 'broth', label: 'Broth', cookingMethod: 'raw', prepMethod: 'simmer', boilMinutes: 6 },
-      { key: 'cream', label: 'Cream', cookingMethod: 'sub-simmer', prepMethod: 'simmer', stages: [{ tempF: 180, minutes: 1 }], boilMinutes: 4 },
-      { key: 'parmesan_spices', label: 'Parmesan & Spices', cookingMethod: 'sub-simmer', prepMethod: 'simmer', stages: [{ tempF: 180, minutes: 1 }], boilMinutes: 2 },
+      { key: 'cream', label: 'Cream', cookingMethod: 'sub-simmer', prepMethod: 'simmer', stages: [{ tempF: 180, minutes: 1 }], boilMinutes: 4, fillClass: 'simmer_sauce' },
+      { key: 'parmesan_spices', label: 'Parmesan & Spices', cookingMethod: 'sub-simmer', prepMethod: 'simmer', stages: [{ tempF: 180, minutes: 1 }], boilMinutes: 2, fillClass: 'simmer_sauce' },
       { key: 'garnish', label: 'Garnish', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -14903,7 +14903,7 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'marinade', label: 'Marinade', cookingMethod: 'raw', prepMethod: '' },
-      { key: 'lamb_skewers', label: 'Lamb Skewers', cookingMethod: 'grilled', prepMethod: '', boilMinutes: 7 }
+      { key: 'lamb_skewers', label: 'Lamb Skewers', cookingMethod: 'grilled', prepMethod: '', boilMinutes: 7, fillClass: 'pan_grilled_steak' }
     ],
   },
   {
@@ -14951,7 +14951,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with flatbread, tzatziki, or a fresh herb salad.'
     ],
     sections: [
-      { key: 'lamb_skewers', label: 'Lamb Skewers', cookingMethod: 'grilled', prepMethod: '', boilMinutes: 7 }
+      { key: 'lamb_skewers', label: 'Lamb Skewers', cookingMethod: 'grilled', prepMethod: '', boilMinutes: 7, fillClass: 'fried_meat' }
     ],
   },
   {
@@ -14995,7 +14995,7 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'marinade', label: 'Marinade', cookingMethod: 'raw', prepMethod: '' },
-      { key: 'lamb_skewers', label: 'Lamb Skewers', cookingMethod: 'grilled', prepMethod: 'grilled', boilMinutes: 7 }
+      { key: 'lamb_skewers', label: 'Lamb Skewers', cookingMethod: 'grilled', prepMethod: 'grilled', boilMinutes: 7, fillClass: 'pan_grilled_steak' }
     ],
   },
   {
@@ -15059,10 +15059,10 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'potatoes', label: 'Potatoes', cookingMethod: 'baked', prepMethod: 'boiled', stages: [{ tempF: 400, minutes: 22 }], boilMinutes: 17 },
       { key: 'topping', label: 'Topping', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 400, minutes: 22 }] },
-      { key: 'brown_lamb', label: 'Brown Lamb', cookingMethod: 'baked', prepMethod: 'pan seared', stages: [{ tempF: 400, minutes: 22 }], boilMinutes: 7 },
-      { key: 'onion_carrot_celery', label: 'Onion, Carrot, Celery', cookingMethod: 'baked', prepMethod: 'sauteed', stages: [{ tempF: 400, minutes: 22 }], boilMinutes: 6 },
-      { key: 'garlic', label: 'Garlic', cookingMethod: 'baked', prepMethod: 'sauteed', stages: [{ tempF: 400, minutes: 22 }], boilMinutes: 1 },
-      { key: 'broth_seasoning', label: 'Broth & Seasoning', cookingMethod: 'baked', prepMethod: 'simmer', stages: [{ tempF: 400, minutes: 22 }], boilMinutes: 9 },
+      { key: 'brown_lamb', label: 'Brown Lamb', cookingMethod: 'baked', prepMethod: 'pan seared', stages: [{ tempF: 400, minutes: 22 }], boilMinutes: 7, fillClass: 'fried_meat' },
+      { key: 'onion_carrot_celery', label: 'Onion, Carrot, Celery', cookingMethod: 'baked', prepMethod: 'sauteed', stages: [{ tempF: 400, minutes: 22 }], boilMinutes: 6, fillClass: 'sauteed_aromatic' },
+      { key: 'garlic', label: 'Garlic', cookingMethod: 'baked', prepMethod: 'sauteed', stages: [{ tempF: 400, minutes: 22 }], boilMinutes: 1, fillClass: 'sauteed_aromatic' },
+      { key: 'broth_seasoning', label: 'Broth & Seasoning', cookingMethod: 'baked', prepMethod: 'simmer', stages: [{ tempF: 400, minutes: 22 }], boilMinutes: 9, fillClass: 'simmer_sauce' },
       { key: 'peas', label: 'Peas', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 400, minutes: 22 }] }
     ],
   },
@@ -15120,11 +15120,11 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over basmati rice or with naan bread.'
     ],
     sections: [
-      { key: 'lamb', label: 'Lamb', cookingMethod: 'braise', prepMethod: 'pan seared', stages: [{ tempF: 185, minutes: 55 }], boilMinutes: 4 },
-      { key: 'onion', label: 'Onion', cookingMethod: 'braise', prepMethod: 'sauteed', stages: [{ tempF: 185, minutes: 55 }], boilMinutes: 13 },
-      { key: 'seasoning', label: 'Seasoning', cookingMethod: 'braise', prepMethod: 'sauteed', stages: [{ tempF: 185, minutes: 55 }], boilMinutes: 1 },
-      { key: 'tomatoes', label: 'Tomatoes', cookingMethod: 'braise', prepMethod: 'simmer', stages: [{ tempF: 185, minutes: 55 }], boilMinutes: 3 },
-      { key: 'water_bay_leaves', label: 'Water & Bay Leaves', cookingMethod: 'braise', prepMethod: '', stages: [{ tempF: 185, minutes: 55 }] },
+      { key: 'lamb', label: 'Lamb', cookingMethod: 'braise', prepMethod: 'pan seared', stages: [{ tempF: 185, minutes: 55 }], boilMinutes: 4, fillClass: 'braised_beef' },
+      { key: 'onion', label: 'Onion', cookingMethod: 'braise', prepMethod: 'sauteed', stages: [{ tempF: 185, minutes: 55 }], boilMinutes: 13, fillClass: 'sauteed_aromatic' },
+      { key: 'seasoning', label: 'Seasoning', cookingMethod: 'braise', prepMethod: 'sauteed', stages: [{ tempF: 185, minutes: 55 }], boilMinutes: 1, fillClass: 'sauteed_aromatic' },
+      { key: 'tomatoes', label: 'Tomatoes', cookingMethod: 'braise', prepMethod: 'simmer', stages: [{ tempF: 185, minutes: 55 }], boilMinutes: 3, fillClass: 'simmer_sauce' },
+      { key: 'water_bay_leaves', label: 'Water & Bay Leaves', cookingMethod: 'braise', prepMethod: '', stages: [{ tempF: 185, minutes: 55 }], fillClass: 'simmer_sauce' },
       { key: 'yogurt', label: 'Yogurt', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -15303,12 +15303,12 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with mashed potatoes, polenta, or crusty bread.'
     ],
     sections: [
-      { key: 'brown_shanks', label: 'Brown shanks', cookingMethod: 'braise', prepMethod: 'pan seared', stages: [{ tempF: 185, minutes: 165 }], boilMinutes: 7 },
-      { key: 'vegetables', label: 'Onion, Carrot, Celery', cookingMethod: 'braise', prepMethod: 'sauteed', stages: [{ tempF: 185, minutes: 165 }], boilMinutes: 6 },
-      { key: 'garlic', label: 'Garlic', cookingMethod: 'braise', prepMethod: 'sauteed', stages: [{ tempF: 185, minutes: 165 }], boilMinutes: 2 },
-      { key: 'tomato_paste', label: 'Tomato Paste', cookingMethod: 'braise', prepMethod: 'sauteed', stages: [{ tempF: 185, minutes: 165 }], boilMinutes: 2 },
-      { key: 'red_wine', label: 'Red Wine', cookingMethod: 'braise', prepMethod: 'simmer', stages: [{ tempF: 185, minutes: 165 }], boilMinutes: 3 },
-      { key: 'broth_spices', label: 'Broth & Spices', cookingMethod: 'braise', prepMethod: '', stages: [{ tempF: 185, minutes: 165 }] }
+      { key: 'brown_shanks', label: 'Brown shanks', cookingMethod: 'braise', prepMethod: 'pan seared', stages: [{ tempF: 185, minutes: 165 }], boilMinutes: 7, fillClass: 'braised_beef' },
+      { key: 'vegetables', label: 'Onion, Carrot, Celery', cookingMethod: 'braise', prepMethod: 'sauteed', stages: [{ tempF: 185, minutes: 165 }], boilMinutes: 6, fillClass: 'sauteed_aromatic' },
+      { key: 'garlic', label: 'Garlic', cookingMethod: 'braise', prepMethod: 'sauteed', stages: [{ tempF: 185, minutes: 165 }], boilMinutes: 2, fillClass: 'sauteed_aromatic' },
+      { key: 'tomato_paste', label: 'Tomato Paste', cookingMethod: 'braise', prepMethod: 'sauteed', stages: [{ tempF: 185, minutes: 165 }], boilMinutes: 2, fillClass: 'pan_grilled_batter' },
+      { key: 'red_wine', label: 'Red Wine', cookingMethod: 'braise', prepMethod: 'simmer', stages: [{ tempF: 185, minutes: 165 }], boilMinutes: 3, fillClass: 'simmer_sauce' },
+      { key: 'broth_spices', label: 'Broth & Spices', cookingMethod: 'braise', prepMethod: '', stages: [{ tempF: 185, minutes: 165 }], fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -15354,7 +15354,7 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'marinade', label: 'Marinade', cookingMethod: 'raw', prepMethod: '' },
-      { key: 'lamb_chops', label: 'Lamb Chops', cookingMethod: 'pan seared', prepMethod: '', boilMinutes: 7 }
+      { key: 'lamb_chops', label: 'Lamb Chops', cookingMethod: 'pan seared', prepMethod: '', boilMinutes: 7, fillClass: 'pan_grilled_steak' }
     ],
   },
   {
@@ -15403,8 +15403,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'brown_lamb', label: 'Brown Lamb', cookingMethod: 'baked', prepMethod: 'pan seared', stages: [{ tempF: 450, minutes: 14 }], boilMinutes: 5 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 450, minutes: 14 }] }
+      { key: 'brown_lamb', label: 'Brown Lamb', cookingMethod: 'baked', prepMethod: 'pan seared', stages: [{ tempF: 450, minutes: 14 }], boilMinutes: 5, fillClass: 'pan_grilled_steak' },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 450, minutes: 14 }], fillClass: 'casserole_baked' }
     ],
   },
   {
@@ -15450,7 +15450,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with roasted potatoes, a Greek salad, or warm pita bread.'
     ],
     sections: [
-      { key: 'lamb', label: 'Leg of Lamb', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 450, minutes: 15 }, { tempF: 325, minutes: 100 }], yieldFactorFat: 0.705 }
+      { key: 'lamb', label: 'Leg of Lamb', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 450, minutes: 15 }, { tempF: 325, minutes: 100 }], yieldFactorFat: 0.705, fillClass: 'baked_pork' }
     ],
   },
   {
@@ -17868,7 +17868,7 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'onions', label: 'Onions', cookingMethod: 'simmer', prepMethod: 'sauteed', boilMinutes: 5 },
       { key: 'garlic', label: 'Garlic', cookingMethod: 'simmer', prepMethod: 'sauteed', boilMinutes: 1 },
-      { key: 'collards', label: 'Collard greens', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 55 }
+      { key: 'collards', label: 'Collard greens', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 55, fillClass: 'braised_leafy_vegetable' }
     ],
   },
   {
@@ -17910,9 +17910,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside fried chicken, BBQ ribs, meatloaf, or roast turkey. Also makes a great filling for cornbread.'
     ],
     sections: [
-      { key: 'roux', label: 'Roux', cookingMethod: 'simmer', prepMethod: 'sauteed', boilMinutes: 2 },
-      { key: 'cream', label: 'Heavy cream', cookingMethod: 'simmer', prepMethod: 'sub-simmer', boilMinutes: 2 },
-      { key: 'creamed_corn', label: 'Creamed corn', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 7 }
+      { key: 'roux', label: 'Roux', cookingMethod: 'simmer', prepMethod: 'sauteed', boilMinutes: 2, fillClass: 'pan_grilled_batter' },
+      { key: 'cream', label: 'Heavy cream', cookingMethod: 'simmer', prepMethod: 'sub-simmer', boilMinutes: 2, fillClass: 'simmer_sauce' },
+      { key: 'creamed_corn', label: 'Creamed corn', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 7, fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -17956,11 +17956,11 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): A steakhouse classic. Pairs especially well with grilled steak, roasted chicken, or prime rib.'
     ],
     sections: [
-      { key: 'spinach', label: 'Wilt spinach', cookingMethod: 'sub-simmer', prepMethod: 'pan seared', boilMinutes: 3 },
+      { key: 'spinach', label: 'Wilt spinach', cookingMethod: 'sub-simmer', prepMethod: 'pan seared', boilMinutes: 3, fillClass: 'wilt_squeezed_spinach' },
       { key: 'onion', label: 'Onion', cookingMethod: 'sub-simmer', prepMethod: 'sauteed', boilMinutes: 6 },
       { key: 'garlic', label: 'Garlic', cookingMethod: 'sub-simmer', prepMethod: 'sauteed', boilMinutes: 1 },
-      { key: 'cream', label: 'Heavy cream', cookingMethod: 'sub-simmer', prepMethod: 'sub-simmer', boilMinutes: 2 },
-      { key: 'assembly', label: 'Assembly', cookingMethod: 'sub-simmer', prepMethod: '', boilMinutes: 2 }
+      { key: 'cream', label: 'Heavy cream', cookingMethod: 'sub-simmer', prepMethod: 'sub-simmer', boilMinutes: 2, fillClass: 'simmer_sauce' },
+      { key: 'assembly', label: 'Assembly', cookingMethod: 'sub-simmer', prepMethod: '', boilMinutes: 2, fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -18001,7 +18001,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside burgers, sandwiches, or grilled meats. Season with garlic salt, Cajun spice, or Parmesan cheese for variations.'
     ],
     sections: [
-      { key: 'fries', label: 'French fries', cookingMethod: 'fried', prepMethod: '', boilMinutes: 4 },
+      { key: 'fries', label: 'French fries', cookingMethod: 'fried', prepMethod: '', boilMinutes: 4, fillClass: 'deep_fried_potato' },
       { key: 'salting', label: 'Salting', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -18043,7 +18043,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside roast chicken, pork tenderloin, or holiday ham. A simple vegetable side that also works well for Thanksgiving or Easter.'
     ],
     sections: [
-      { key: 'carrots', label: 'Glazed carrots', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 6 }
+      { key: 'carrots', label: 'Glazed carrots', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 6, fillClass: 'glazed_vegetable' }
     ],
   },
   {
@@ -18087,7 +18087,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve alongside burgers, hot dogs, or fried chicken. Also good as an appetizer with ranch dressing or dipping sauce.'
     ],
     sections: [
-      { key: 'rings', label: 'Onion rings', cookingMethod: 'fried', prepMethod: '', boilMinutes: 5 }
+      { key: 'rings', label: 'Onion rings', cookingMethod: 'fried', prepMethod: '', boilMinutes: 5, fillClass: 'deep_fried_battered_ring' }
     ],
   },
   {
@@ -18130,7 +18130,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): A Thanksgiving classic. Pairs perfectly with roast turkey, mashed potatoes, and cranberry sauce.'
     ],
     sections: [
-      { key: 'mixture', label: 'Green bean mixture', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 350, minutes: 25 }, { tempF: 350, minutes: 5 }] },
+      { key: 'mixture', label: 'Green bean mixture', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 350, minutes: 25 }, { tempF: 350, minutes: 5 }], fillClass: 'casserole_baked' },
       { key: 'topping', label: 'Onion Ring topping', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -18275,7 +18275,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Pairs well with roast chicken, grilled salmon, or steak. Finish with grated Parmesan or wrap spears in prosciutto before roasting.'
     ],
     sections: [
-      { key: 'asparagus', label: 'Asparagus', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 425, minutes: 12 }] },
+      { key: 'asparagus', label: 'Asparagus', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 425, minutes: 12 }], fillClass: 'roasted_vegetable' },
       { key: 'finish', label: 'Finish', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -18318,7 +18318,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): A great holiday side. Pairs well with roast chicken, pork tenderloin, or turkey. Try tossing with crumbled bacon or pancetta before roasting.'
     ],
     sections: [
-      { key: 'sprouts', label: 'Brussels sprouts', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 425, minutes: 20 }] },
+      { key: 'sprouts', label: 'Brussels sprouts', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 425, minutes: 20 }], fillClass: 'roasted_vegetable' },
       { key: 'finish', label: 'Balsamic finish', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -18364,7 +18364,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): A classic party appetizer. Serve warm before an Italian dinner, steak, or holiday gathering. Add cooked crumbled sausage to the filling for a heartier version.'
     ],
     sections: [
-      { key: 'stuffing', label: 'Stuffing', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 400, minutes: 20 }] }
+      { key: 'stuffing', label: 'Stuffing', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 400, minutes: 20 }], fillClass: 'stuffed_mushroom' }
     ],
   },
   {
@@ -18405,7 +18405,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): A Southern classic. Serve alongside fried chicken, pork chops, or BBQ. Add diced bacon or okra for a more traditional variation.'
     ],
     sections: [
-      { key: 'succotash', label: 'Succotash', cookingMethod: 'sub-simmer', prepMethod: '', boilMinutes: 6 }
+      { key: 'succotash', label: 'Succotash', cookingMethod: 'sub-simmer', prepMethod: '', boilMinutes: 6, fillClass: 'simmered_vegetable' }
     ],
   },
   {
@@ -18451,10 +18451,10 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with crusty bread or croutons. Top with a swirl of cream and fresh chives for garnish.'
     ],
     sections: [
-      { key: 'onion', label: 'Onion', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 7 },
+      { key: 'onion', label: 'Onion', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 7, fillClass: 'simmer_sauce' },
       { key: 'garlic', label: 'Garlic', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 2 },
       { key: 'soup_ref', label: 'Chicken Broth', cookingMethod: 'raw', prepMethod: '' },
-      { key: 'soup', label: 'Asparagus soup', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 17 }
+      { key: 'soup', label: 'Asparagus soup', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 17, fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -18555,11 +18555,11 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with crusty bread or over buttered egg noodles.'
     ],
     sections: [
-      { key: 'beef', label: 'Beef', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 10 },
-      { key: 'onion_celery', label: 'Onion and celery', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 7 },
+      { key: 'beef', label: 'Beef', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 10, fillClass: 'fried_meat' },
+      { key: 'onion_celery', label: 'Onion and celery', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 7, fillClass: 'fried_meat' },
       { key: 'garlic_tomato', label: 'Garlic and tomato paste', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 2 },
       { key: 'stew_ref', label: 'Beef Stock', cookingMethod: 'raw', prepMethod: '' },
-      { key: 'stew', label: 'Beef stew', cookingMethod: 'braise', prepMethod: '', boilMinutes: 50 }
+      { key: 'stew', label: 'Beef stew', cookingMethod: 'braise', prepMethod: '', boilMinutes: 50, fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -18607,10 +18607,10 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with crusty bread or a soft pretzel. A bread bowl makes a classic presentation.'
     ],
     sections: [
-      { key: 'onion_carrot', label: 'Onion and carrot', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 6 },
+      { key: 'onion_carrot', label: 'Onion and carrot', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 6, fillClass: 'fried_meat' },
       { key: 'garlic', label: 'Garlic', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 1 },
       { key: 'soup_ref', label: 'Chicken Broth', cookingMethod: 'raw', prepMethod: '' },
-      { key: 'soup', label: 'Chicken stock and half-and-half', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 20 },
+      { key: 'soup', label: 'Chicken stock and half-and-half', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 20, fillClass: 'simmer_sauce' },
       { key: 'cheese', label: 'Cheddar cheese', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -18657,7 +18657,7 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'stock_ref', label: 'Chicken Broth', cookingMethod: 'raw', prepMethod: '' },
-      { key: 'stock', label: 'Chicken stock', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 3 },
+      { key: 'stock', label: 'Chicken stock', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 3, fillClass: 'simmer_sauce' },
       { key: 'eggs', label: 'Egg drop', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -18710,7 +18710,7 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'stock', label: 'Chicken stock', cookingMethod: 'raw', prepMethod: '' },
-      { key: 'hot_sour', label: 'Hot and sour', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 12 },
+      { key: 'hot_sour', label: 'Hot and sour', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 12, fillClass: 'simmer_sauce' },
       { key: 'finish', label: 'Eggs and sesame oil', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -18765,8 +18765,8 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'stock', label: 'Chicken stock', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 },
-      { key: 'soup', label: 'Tortilla soup', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 19 },
-      { key: 'onion', label: 'Onion', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 7 },
+      { key: 'soup', label: 'Tortilla soup', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 19, fillClass: 'simmer_sauce' },
+      { key: 'onion', label: 'Onion', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 7, fillClass: 'fried_meat' },
       { key: 'garlic_jalapeno', label: 'Garlic and jalapeño', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 1 },
       { key: 'finish', label: 'Beans and garnish', cookingMethod: 'raw', prepMethod: 'finish', yieldFactorWater: 1.0 }
     ],
@@ -18823,8 +18823,8 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'stock', label: 'Vegetable stock', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 },
-      { key: 'chili', label: 'Chili', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 25 },
-      { key: 'onion_peppers', label: 'Onions and bell peppers', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 6 },
+      { key: 'chili', label: 'Chili', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 25, fillClass: 'simmer_sauce' },
+      { key: 'onion_peppers', label: 'Onions and bell peppers', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 6, fillClass: 'fried_meat' },
       { key: 'garlic_jalapeno', label: 'Garlic and jalapeño', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 2 },
       { key: 'spices', label: 'Spices', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 1 }
     ],
@@ -18881,10 +18881,10 @@ export const LEVELS: Level[] = [
       { key: 'stock_ref', label: 'Chicken Broth', cookingMethod: 'raw', prepMethod: '' },
       { key: 'stock', label: 'Chicken stock', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 },
       { key: 'cajun_spice', label: 'Creole seasoning', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 },
-      { key: 'roux', label: 'Flour and oil', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 15 },
-      { key: 'onion_celery_pepper', label: 'Onion, celery and bell pepper', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 5 },
+      { key: 'roux', label: 'Flour and oil', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 15, fillClass: 'fried_meat' },
+      { key: 'onion_celery_pepper', label: 'Onion, celery and bell pepper', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 5, fillClass: 'simmer_sauce' },
       { key: 'garlic', label: 'Garlic', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 5 },
-      { key: 'chicken_sausage', label: 'Chicken and sausage', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 19 },
+      { key: 'chicken_sausage', label: 'Chicken and sausage', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 19, fillClass: 'simmer_sauce' },
       { key: 'okra', label: 'Okra', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 }
     ],
   },
@@ -18937,7 +18937,7 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'stock', label: 'White Chicken Stock', cookingMethod: 'raw', prepMethod: '' },
-      { key: 'base', label: 'Soup base', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 20 },
+      { key: 'base', label: 'Soup base', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 20, fillClass: 'simmer_sauce' },
       { key: 'noodles', label: 'Egg noodles', cookingMethod: 'boiled', prepMethod: '' },
       { key: 'finish', label: 'Parsley', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
@@ -18993,7 +18993,7 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'stock_ref', label: 'Beef Stock', cookingMethod: 'raw', prepMethod: '' },
       { key: 'stock', label: 'Beef stock', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 },
-      { key: 'beef', label: 'Beef', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 15 },
+      { key: 'beef', label: 'Beef', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 15, fillClass: 'fried_meat' },
       { key: 'onion', label: 'Onion', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 7 },
       { key: 'garlic', label: 'Garlic', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 3 },
       { key: 'spices', label: 'Spices', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 2 }
@@ -19051,8 +19051,8 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'stock_ref', label: 'Beef Stock', cookingMethod: 'raw', prepMethod: '' },
-      { key: 'stock', label: 'Beef stock', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 15 },
-      { key: 'beef', label: 'Beef', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 15 },
+      { key: 'stock', label: 'Beef stock', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 15, fillClass: 'simmer_sauce' },
+      { key: 'beef', label: 'Beef', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 15, fillClass: 'fried_meat' },
       { key: 'onion', label: 'Onion', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 7 },
       { key: 'garlic', label: 'Garlic', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 3 },
       { key: 'spices', label: 'Spices', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 2 }
@@ -19115,10 +19115,10 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'fish_stock_ref', label: 'Fish Stock', cookingMethod: 'raw', prepMethod: '' },
-      { key: 'fish_stock', label: 'Fish stock', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 20 },
+      { key: 'fish_stock', label: 'Fish stock', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 20, fillClass: 'simmer_sauce' },
       { key: 'cajun_spice', label: 'Creole seasoning', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 },
-      { key: 'roux', label: 'Flour and oil', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 15 },
-      { key: 'onion_celery_pepper', label: 'Onion, celery and bell pepper', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 5 },
+      { key: 'roux', label: 'Flour and oil', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 15, fillClass: 'fried_meat' },
+      { key: 'onion_celery_pepper', label: 'Onion, celery and bell pepper', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 5, fillClass: 'simmer_sauce' },
       { key: 'garlic', label: 'Garlic', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 5 },
       { key: 'okra', label: 'Okra', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 15 },
       { key: 'seafood', label: 'Shrimp and seafood', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 7 },
@@ -19180,7 +19180,7 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'vegetable_stock_ref', label: 'Vegetable Stock', cookingMethod: 'raw', prepMethod: '' },
       { key: 'vegetable_stock', label: 'Vegetable stock', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 },
-      { key: 'onion_celery', label: 'Onion and celery', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 10 },
+      { key: 'onion_celery', label: 'Onion and celery', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 10, fillClass: 'fried_meat' },
       { key: 'bell_pepper', label: 'Bell pepper', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 3 },
       { key: 'garlic_spices', label: 'Garlic and spices', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 2 },
       { key: 'finish', label: 'Lime juice and cilantro', cookingMethod: 'raw', prepMethod: 'finish', yieldFactorWater: 1.0 }
@@ -19237,11 +19237,11 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): serve with oyster crackers or sourdough bread. Garnish with a pat of butter, fresh chives, or a pinch of smoked paprika.'
     ],
     sections: [
-      { key: 'bacon', label: 'Bacon', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 11 },
-      { key: 'onion_celery', label: 'Onion, celery and butter', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 9 },
+      { key: 'bacon', label: 'Bacon', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 11, fillClass: 'fried_meat' },
+      { key: 'onion_celery', label: 'Onion, celery and butter', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 9, fillClass: 'simmer_sauce' },
       { key: 'garlic_flour', label: 'Garlic and flour', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 2 },
       { key: 'stock_potatoes_ref', label: 'Fish Stock', cookingMethod: 'raw', prepMethod: '' },
-      { key: 'stock_potatoes', label: 'Fish stock and potatoes', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 16 },
+      { key: 'stock_potatoes', label: 'Fish stock and potatoes', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 16, fillClass: 'simmer_sauce' },
       { key: 'clam_cream', label: 'Clam and cream', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 4 }
     ],
   },
@@ -19297,11 +19297,11 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): serve with crusty bread or oyster crackers. Garnish with additional chopped parsley.'
     ],
     sections: [
-      { key: 'bacon', label: 'Bacon', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 11 },
-      { key: 'onion_celery_pepper', label: 'Onion, celery and bell pepper', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 7 },
+      { key: 'bacon', label: 'Bacon', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 11, fillClass: 'fried_meat' },
+      { key: 'onion_celery_pepper', label: 'Onion, celery and bell pepper', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 7, fillClass: 'simmer_sauce' },
       { key: 'garlic_pepper', label: 'Garlic and red pepper flakes', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 1 },
       { key: 'stock_potatoes_ref', label: 'Fish Stock', cookingMethod: 'raw', prepMethod: '' },
-      { key: 'stock_potatoes', label: 'Fish stock and potatoes', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 16 },
+      { key: 'stock_potatoes', label: 'Fish stock and potatoes', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 16, fillClass: 'simmer_sauce' },
       { key: 'clam', label: 'Chopped clam', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 4 }
     ],
   },
@@ -19353,10 +19353,10 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): serve immediately while the cheese is still bubbly. Pairs well with a simple green salad.'
     ],
     sections: [
-      { key: 'onions', label: 'Onions', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 45 },
+      { key: 'onions', label: 'Onions', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 45, fillClass: 'simmer_sauce' },
       { key: 'wine', label: 'White wine', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 2 },
       { key: 'stock_ref', label: 'Beef Stock', cookingMethod: 'raw', prepMethod: '' },
-      { key: 'stock', label: 'Beef stock', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 18 },
+      { key: 'stock', label: 'Beef stock', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 18, fillClass: 'simmer_sauce' },
       { key: 'topping', label: 'Toasted baguette and Gruyère', cookingMethod: 'raw', prepMethod: 'finish', yieldFactorWater: 1.0 }
     ],
   },
@@ -19413,7 +19413,7 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'vegetable_stock_ref', label: 'Vegetable Stock', cookingMethod: 'raw', prepMethod: '' },
       { key: 'vegetable_stock', label: 'Vegetable stock', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 22, yieldFactorWater: 1.0 },
-      { key: 'onion_carrot_celery', label: 'Onion, carrots and celery', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 10 },
+      { key: 'onion_carrot_celery', label: 'Onion, carrots and celery', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 10, fillClass: 'simmer_sauce' },
       { key: 'garlic_spices', label: 'Garlic and spices', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 4 },
       { key: 'tomatoes', label: 'Crushed tomatoes', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 2 },
       { key: 'finish', label: 'Lemon juice and seasoning', cookingMethod: 'raw', prepMethod: 'finish', yieldFactorWater: 1.0 }
@@ -19474,12 +19474,12 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a drizzle of cream, a pinch of paprika, fresh chives or chopped tarragon.'
     ],
     sections: [
-      { key: 'mirepoix', label: 'Onion and vegetables', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 8 },
+      { key: 'mirepoix', label: 'Onion and vegetables', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 8, fillClass: 'simmer_sauce' },
       { key: 'garlic_tomato', label: 'Garlic and tomato paste', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 2 },
       { key: 'flour', label: 'Flour', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 4 },
       { key: 'wine', label: 'Sherry or white wine', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 1 },
       { key: 'fish_stock_spices_ref', label: 'Fish Stock', cookingMethod: 'raw', prepMethod: '' },
-      { key: 'fish_stock_spices', label: 'Fish stock and spices', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 17 },
+      { key: 'fish_stock_spices', label: 'Fish stock and spices', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 17, fillClass: 'simmer_sauce' },
       { key: 'finish', label: 'Cream and lobster', cookingMethod: 'raw', prepMethod: 'finish', yieldFactorWater: 1.0 }
     ],
   },
@@ -19540,10 +19540,10 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Top with freshly grated Parmesan cheese and a drizzle of olive oil; serve with crusty bread on the side.'
     ],
     sections: [
-      { key: 'onion_celery_carrot', label: 'Onion, celery and carrots', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 23 },
+      { key: 'onion_celery_carrot', label: 'Onion, celery and carrots', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 23, fillClass: 'simmer_sauce' },
       { key: 'garlic_tomato', label: 'Garlic and tomato paste', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 17 },
       { key: 'stock_vegetables_ref', label: 'Vegetable Stock', cookingMethod: 'raw', prepMethod: '' },
-      { key: 'stock_vegetables', label: 'Vegetable stock and vegetables', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 15 },
+      { key: 'stock_vegetables', label: 'Vegetable stock and vegetables', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 15, fillClass: 'simmer_sauce' },
       { key: 'pasta_beans', label: 'Pasta and beans', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 9 },
       { key: 'finish', label: 'Spinach', cookingMethod: 'raw', prepMethod: 'finish', yieldFactorWater: 1.0 }
     ],
@@ -19597,7 +19597,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with shredded cabbage, sliced radishes, diced white onion, fresh cilantro, lime wedges, and tostadas on the side.'
     ],
     sections: [
-      { key: 'pork', label: 'Pork, water and aromatics', cookingMethod: 'braise', prepMethod: 'braise', boilMinutes: 60 },
+      { key: 'pork', label: 'Pork, water and aromatics', cookingMethod: 'braise', prepMethod: 'braise', boilMinutes: 60, fillClass: 'simmer_sauce' },
       { key: 'chili_hominy', label: 'Chili and hominy', cookingMethod: 'braise', prepMethod: '', boilMinutes: 30 }
     ],
   },
@@ -19647,7 +19647,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with crusty bread or a grilled cheese sandwich on the side.'
     ],
     sections: [
-      { key: 'onion', label: 'Onion and butter', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 7 },
+      { key: 'onion', label: 'Onion and butter', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 7, fillClass: 'simmer_sauce' },
       { key: 'garlic', label: 'Garlic', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 1 },
       { key: 'tomatoes', label: 'Crushed tomatoes', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 20 },
       { key: 'finish', label: 'Cream and seasoning', cookingMethod: 'raw', prepMethod: 'finish', yieldFactorWater: 1.0 }
@@ -19769,7 +19769,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with hash browns, salsa, toast, or sour cream.'
     ],
     sections: [
-      { key: 'scramble', label: 'Scramble', cookingMethod: 'pan seared', prepMethod: '', boilMinutes: 7 }
+      { key: 'scramble', label: 'Scramble', cookingMethod: 'pan seared', prepMethod: '', boilMinutes: 7, fillClass: 'fried_meat' }
     ],
   },
   {
@@ -19813,9 +19813,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with refried beans, avocado, salsa, or warm tortillas.'
     ],
     sections: [
-      { key: 'onion_jalapeno', label: 'Onion and jalapeño', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 3 },
+      { key: 'onion_jalapeno', label: 'Onion and jalapeño', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 3, fillClass: 'fried_meat' },
       { key: 'tomato', label: 'Tomato', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 1 },
-      { key: 'eggs', label: 'Eggs', cookingMethod: 'pan seared', prepMethod: '' },
+      { key: 'eggs', label: 'Eggs', cookingMethod: 'pan seared', prepMethod: '', fillClass: 'fried_meat' },
       { key: 'finish', label: 'Cheese and cilantro', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -19862,9 +19862,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with refried beans, avocado, or salsa.'
     ],
     sections: [
-      { key: 'onion_jalapeno', label: 'Onion and jalapeño', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 3 },
+      { key: 'onion_jalapeno', label: 'Onion and jalapeño', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 3, fillClass: 'fried_meat' },
       { key: 'tomato_tortilla', label: 'Tomato and tortilla chips', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 2 },
-      { key: 'eggs', label: 'Eggs', cookingMethod: 'pan seared', prepMethod: '' },
+      { key: 'eggs', label: 'Eggs', cookingMethod: 'pan seared', prepMethod: '', fillClass: 'fried_meat' },
       { key: 'finish', label: 'Cheese and cilantro', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -19950,7 +19950,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with maple syrup, fresh berries, or whipped cream.'
     ],
     sections: [
-      { key: 'waffle', label: 'Waffle', cookingMethod: 'grilled', prepMethod: '', boilMinutes: 5 }
+      { key: 'waffle', label: 'Waffle', cookingMethod: 'grilled', prepMethod: '', boilMinutes: 5, fillClass: 'grilled_batter' }
     ],
   },
   {
@@ -19998,9 +19998,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with sliced avocado, crumbled queso fresco, or warm refried beans alongside.'
     ],
     sections: [
-      { key: 'salsa', label: 'Salsa Ranchera', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 13 },
+      { key: 'salsa', label: 'Salsa Ranchera', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 13, fillClass: 'simmer_sauce' },
       { key: 'tortillas', label: 'Corn tortillas', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 2 },
-      { key: 'eggs', label: 'Eggs', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 2 },
+      { key: 'eggs', label: 'Eggs', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 2, fillClass: 'fried_meat' },
       { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -20051,7 +20051,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with fresh fruit, hot sauce, or a simple green salad.'
     ],
     sections: [
-      { key: 'strata', label: 'Strata', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 50 }] }
+      { key: 'strata', label: 'Strata', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 350, minutes: 50 }], fillClass: 'dairy_custard' }
     ],
   },
   {
@@ -20095,7 +20095,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Fill with Nutella and sliced banana, fresh berries and whipped cream, or lemon juice and powdered sugar.'
     ],
     sections: [
-      { key: 'crepes', label: 'Crepes', cookingMethod: 'pan seared', prepMethod: '', boilMinutes: 2 }
+      { key: 'crepes', label: 'Crepes', cookingMethod: 'pan seared', prepMethod: '', boilMinutes: 2, fillClass: 'pan_grilled_batter' }
     ],
   },
   {
@@ -20138,7 +20138,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Dust with powdered sugar and squeeze fresh lemon juice over the top, or serve with maple syrup and fresh berries.'
     ],
     sections: [
-      { key: 'dutch_baby', label: 'Dutch Baby', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 425, minutes: 20 }] }
+      { key: 'dutch_baby', label: 'Dutch Baby', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 425, minutes: 20 }], fillClass: 'cake_batter' }
     ],
   },
   {
@@ -20223,7 +20223,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with milk, over Greek yogurt, or with fresh fruit. Stir in 1 cup dried cranberries or raisins after cooling for a fruity variation.'
     ],
     sections: [
-      { key: 'granola', label: 'Granola', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 325, minutes: 30 }] }
+      { key: 'granola', label: 'Granola', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 325, minutes: 30 }], fillClass: 'cake_batter' }
     ],
   },
   {
@@ -20271,7 +20271,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with plant-based milk or coconut yogurt, or enjoy dry as a trail mix.'
     ],
     sections: [
-      { key: 'granola', label: 'Granola', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 325, minutes: 30 }] }
+      { key: 'granola', label: 'Granola', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 325, minutes: 30 }], fillClass: 'cake_batter' }
     ],
   },
   {
@@ -20318,7 +20318,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with cocktail sauce, tartar sauce, or lemon wedges. Pairs well with coleslaw or french fries.'
     ],
     sections: [
-      { key: 'main', label: 'Fried Shrimp', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 3 }
+      { key: 'main', label: 'Fried Shrimp', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 3, fillClass: 'fried_breaded_shrimp' }
     ],
   },
   {
@@ -20368,7 +20368,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with cocktail sauce, remoulade, or lemon wedges. Pairs well with coleslaw or french fries.'
     ],
     sections: [
-      { key: 'main', label: 'Cornmeal Fried Shrimp', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 3 }
+      { key: 'main', label: 'Cornmeal Fried Shrimp', cookingMethod: 'fried', prepMethod: 'fried', boilMinutes: 3, fillClass: 'fried_breaded_shrimp' }
     ],
   },
   {
@@ -20391,7 +20391,7 @@ export const LEVELS: Level[] = [
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
-    nutritionJson: {"cal":857.8,"pro":42.0,"fat":45.0,"carb":72.2,"fib":7.2,"h2o":357.0,"sug":12.6,"perServing":{"cal":857.8,"pro":42.0,"fat":45.0,"carb":72.2,"fib":7.2,"h2o":357.0,"sug":12.6,"AddedSugars":0.0,"IntrinsicSugars":12.6},"micros":{"vitaminA":14.87,"vitaminC":2.52,"vitaminD":3.97,"vitaminE":0.76,"vitaminK":17.76,"vitaminB6":0.14,"vitaminB12":0.41,"thiamin":0.11,"riboflavin":0.09,"niacin":1.48,"folate":10.72,"calcium":51.22,"iron":1.25,"magnesium":19.71,"phosphorus":96.08,"potassium":208.3,"sodium":297.44,"zinc":1.28,"copper":0.12,"selenium":13.75,"cholesterol":29.36,"saturatedFat":2.78,"monoFat":4.15,"polyFat":0.56,"omega3":0.01,"omega6":0.03},"gramsPerServing":524.7,"servings":4,"per100g":{"Energy_KCal":163.47,"Water":68.04,"Protein":8.0,"TotalLipidFat":8.57,"Carbohydrate":13.75,"FiberTotalDietary":1.38,"SugarsTotal":2.4,"Cholesterol":29.36,"FattyAcids_totalSaturated":2.78,"FattyAcids_totalMonounsaturated":4.15,"FattyAcids_totalPolyunsaturated":0.56,"LinoleicAcid":0.03,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":14.87,"Retinol":6.96,"Carotene_beta":93.02,"VitaminD":3.97,"VitaminE_alphaTocopherol":0.76,"VitaminK_phylloquinone":17.76,"VitaminC_totalAscorbicAcid":2.52,"Thiamin":0.11,"Riboflavin":0.09,"Niacin":1.48,"PantothenicAcid":0.28,"VitaminB6":0.14,"Folate_total":10.72,"Folate_food":9.14,"Folate_DFE":11.83,"FolicAcid":2.11,"VitaminB12":0.41,"Choline_total":19.92,"Betaine":1.39,"LuteinZeaxanthin":104.26,"Lycopene":1576.49,"Calcium_Ca":51.22,"Iron_Fe":1.25,"Magnesium_Mg":19.71,"Phosphorus_P":96.08,"Potassium_K":208.3,"Sodium_Na":297.44,"Zinc_Zn":1.28,"Copper_Cu":0.12,"Manganese_Mn":0.23,"Selenium_Se":13.75,"Tryptophan":0.08,"Threonine":0.3,"Isoleucine":0.34,"Leucine":0.6,"Lysine":0.54,"Methionine":0.17,"Cystine":0.09,"Phenylalanine":0.34,"Tyrosine":0.23,"Valine":0.4,"Arginine":0.42,"Histidine":0.24,"Alanine":0.4,"AsparticAcid":0.66,"GlutamicAcid":1.7,"Glycine":0.37,"Proline":0.52,"Serine":0.34,"omega3":0.01,"omega6":0.03,"AddedSugars":0.0,"IntrinsicSugars":2.4},"addedSugars":0.0,"intrinsicSugars":12.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20420","name":"Pasta, dry, unenriched","grams":56.7},{"ndb":"14411","name":"Water, tap, drinking","grams":236.5},{"ndb":"","name":"Beef Italian Meatballs","grams":389.2}],"sections":[{"section_key":"pasta","section_label":"Spaghetti","prep_method":"boiled","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.34811726353257855,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":1172.8,"raw_water_grams":967.51,"raw_fat_grams":3.42,"raw_protein_grams":29.57,"raw_carb_grams":169.35,"raw_fiber_grams":7.26,"final_grams":542.1,"boil_minutes":9.0,"cook_stages":[],"fill_class":""},{"section_key":"meatballs","section_label":"Beef Italian Meatballs","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":1556.8,"raw_water_grams":1091.32,"raw_fat_grams":176.54,"raw_protein_grams":138.24,"raw_carb_grams":119.25,"raw_fiber_grams":21.64,"final_grams":1556.8,"boil_minutes":0,"cook_stages":[],"fill_class":""}],"cookingMethod":"multi","cookMinutes":null},
+    nutritionJson: {"cal":822.1,"pro":44.2,"fat":40.0,"carb":74.1,"fib":7.6,"h2o":357.3,"sug":13.3,"perServing":{"cal":822.1,"pro":44.2,"fat":40.0,"carb":74.1,"fib":7.6,"h2o":357.3,"sug":13.3,"AddedSugars":0.0,"IntrinsicSugars":13.3},"micros":{"vitaminA":15.93,"vitaminC":2.74,"vitaminD":4.23,"vitaminE":0.54,"vitaminK":17.86,"vitaminB6":0.14,"vitaminB12":0.44,"thiamin":0.12,"riboflavin":0.1,"niacin":1.57,"folate":11.56,"calcium":54.76,"iron":1.32,"magnesium":20.85,"phosphorus":101.52,"potassium":222.58,"sodium":316.43,"zinc":1.36,"copper":0.12,"selenium":14.22,"cholesterol":31.24,"saturatedFat":2.91,"monoFat":4.41,"polyFat":0.63,"omega3":0.01,"omega6":0.03},"gramsPerServing":524.7,"servings":4,"per100g":{"Energy_KCal":156.67,"Water":68.1,"Protein":8.42,"TotalLipidFat":7.63,"Carbohydrate":14.11,"FiberTotalDietary":1.44,"SugarsTotal":2.53,"Cholesterol":31.24,"FattyAcids_totalSaturated":2.91,"FattyAcids_totalMonounsaturated":4.41,"FattyAcids_totalPolyunsaturated":0.63,"LinoleicAcid":0.03,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":15.93,"Retinol":7.4,"Carotene_beta":100.27,"VitaminD":4.23,"VitaminE_alphaTocopherol":0.54,"VitaminK_phylloquinone":17.86,"VitaminC_totalAscorbicAcid":2.74,"Thiamin":0.12,"Riboflavin":0.1,"Niacin":1.57,"PantothenicAcid":0.31,"VitaminB6":0.14,"Folate_total":11.56,"Folate_food":9.88,"Folate_DFE":12.73,"FolicAcid":2.25,"VitaminB12":0.44,"Choline_total":21.22,"Betaine":1.48,"LuteinZeaxanthin":119.14,"Lycopene":1677.77,"Calcium_Ca":54.76,"Iron_Fe":1.32,"Magnesium_Mg":20.85,"Phosphorus_P":101.52,"Potassium_K":222.58,"Sodium_Na":316.43,"Zinc_Zn":1.36,"Copper_Cu":0.12,"Manganese_Mn":0.24,"Selenium_Se":14.22,"Tryptophan":0.08,"Threonine":0.32,"Isoleucine":0.36,"Leucine":0.63,"Lysine":0.57,"Methionine":0.18,"Cystine":0.09,"Phenylalanine":0.35,"Tyrosine":0.25,"Valine":0.41,"Arginine":0.44,"Histidine":0.25,"Alanine":0.42,"AsparticAcid":0.7,"GlutamicAcid":1.78,"Glycine":0.39,"Proline":0.53,"Serine":0.36,"omega3":0.01,"omega6":0.03,"AddedSugars":0.0,"IntrinsicSugars":2.53},"addedSugars":0.0,"intrinsicSugars":13.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20420","name":"Pasta, dry, unenriched","grams":56.7},{"ndb":"14411","name":"Water, tap, drinking","grams":236.5},{"ndb":"","name":"Beef Italian Meatballs","grams":389.2}],"sections":[{"section_key":"pasta","section_label":"Spaghetti","prep_method":"boiled","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.34811726353257855,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":1172.8,"raw_water_grams":967.51,"raw_fat_grams":3.42,"raw_protein_grams":29.57,"raw_carb_grams":169.35,"raw_fiber_grams":7.26,"final_grams":542.1,"boil_minutes":9.0,"cook_stages":[],"fill_class":""},{"section_key":"meatballs","section_label":"Beef Italian Meatballs","prep_method":"raw","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":1556.8,"raw_water_grams":1092.56,"raw_fat_grams":156.77,"raw_protein_grams":147.12,"raw_carb_grams":126.88,"raw_fiber_grams":23.04,"final_grams":1556.8,"boil_minutes":0,"cook_stages":[],"fill_class":""}],"cookingMethod":"multi","cookMinutes":null},
     recipeIngredients: [
       { name: 'Spaghetti and Meatballs', quantity: 'custom (g)', foodWord: 'SPAGHETTIANDMEATBALLS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'wide pasta, dry', quantity: '½ lb dry spaghetti', section: 'pasta', ndbNo: '20420', portionDesc: 'g', portionGrams: 226.8 },
@@ -20457,7 +20457,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Use as the sauce for red enchiladas, chicken enchiladas, and enchilada casserole. Also excellent as a braising liquid for chicken or pork, or as a base for enchilada soup.'
     ],
     sections: [
-      { key: 'chiles', label: 'Dried chiles', cookingMethod: 'simmer', prepMethod: 'sub-simmer', boilMinutes: 25 },
+      { key: 'chiles', label: 'Dried chiles', cookingMethod: 'simmer', prepMethod: 'sub-simmer', boilMinutes: 25, fillClass: 'simmer_sauce' },
       { key: 'onion_mixture', label: 'Onion and garlic', cookingMethod: 'simmer', prepMethod: 'sauteed' },
       { key: 'tomatoes', label: 'Tomatoes and spices', cookingMethod: 'simmer', prepMethod: 'simmer' }
     ],
@@ -20507,7 +20507,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Use as a glaze, dipping sauce, or basting sauce for ribs, chicken, or burgers.'
     ],
     sections: [
-      { key: 'sauce', label: 'Sauce', cookingMethod: 'sub-simmer', prepMethod: '', boilMinutes: 22 }
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'sub-simmer', prepMethod: '', boilMinutes: 22, fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -20554,7 +20554,7 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'onion', label: 'Onion', cookingMethod: 'simmer', prepMethod: 'sauteed' },
       { key: 'garlic', label: 'Garlic', cookingMethod: 'simmer', prepMethod: 'sauteed' },
-      { key: 'sauce', label: 'Sauce', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 22 },
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 22, fillClass: 'simmer_sauce' },
       { key: 'basil', label: 'Basil', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -20610,7 +20610,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with pickled turnips, cucumber slices, or a yogurt-garlic sauce alongside.'
     ],
     sections: [
-      { key: 'beef', label: 'Beef', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 5 },
+      { key: 'beef', label: 'Beef', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 5, fillClass: 'pan_grilled_chicken' },
       { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -20660,8 +20660,8 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with Ranch Dressing (see SAUCE_020) or Blue Cheese Dressing (see SAUCE_021).'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 8 },
-      { key: 'hot_sauce', label: 'Hot sauce', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 9 },
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 8, fillClass: 'pan_grilled_chicken' },
+      { key: 'hot_sauce', label: 'Hot sauce', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 9, fillClass: 'simmer_sauce' },
       { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -20709,7 +20709,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a cup of tomato soup or a side of seasoned potato wedges.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 13 },
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 13, fillClass: 'pan_grilled_chicken' },
       { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', prepMethod: '' },
       { key: 'dressing', label: 'Caesar Dressing', cookingMethod: 'raw', prepMethod: '' }
     ],
@@ -20762,7 +20762,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included):'
     ],
     sections: [
-      { key: 'fish', label: 'Fish', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 8 },
+      { key: 'fish', label: 'Fish', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 8, fillClass: 'pan_grilled_chicken' },
       { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -20817,7 +20817,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a greek salad or seasoned fries on the side.'
     ],
     sections: [
-      { key: 'patty', label: 'Patty', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 9 },
+      { key: 'patty', label: 'Patty', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 9, fillClass: 'fried_meat' },
       { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -20873,7 +20873,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a cup of lemon rice soup or a side of tabbouleh.'
     ],
     sections: [
-      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 13 },
+      { key: 'chicken', label: 'Chicken', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 13, fillClass: 'pan_grilled_chicken' },
       { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -20918,7 +20918,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with french fries, onion rings, or a simple green salad on the side.'
     ],
     sections: [
-      { key: 'patties', label: 'Patties', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 5 },
+      { key: 'patties', label: 'Patties', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 5, fillClass: 'fried_meat' },
       { key: 'toppings', label: 'Toppings', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -21012,7 +21012,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with potato chips or a simple green salad.'
     ],
     sections: [
-      { key: 'shrimp', label: 'Shrimp', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 4 },
+      { key: 'shrimp', label: 'Shrimp', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 4, fillClass: 'pan_grilled_chicken' },
       { key: 'salad', label: 'Salad', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -21105,9 +21105,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with salsa, guacamole, or hot sauce on the side.'
     ],
     sections: [
-      { key: 'onion_pepper', label: 'Onion and bell pepper', cookingMethod: 'simmer', prepMethod: 'pan seared', stages: [{ tempF: 195, minutes: 32 }], boilMinutes: 10 },
-      { key: 'tofu', label: 'Tofu', cookingMethod: 'simmer', prepMethod: 'pan seared', stages: [{ tempF: 195, minutes: 32 }], boilMinutes: 6 },
-      { key: 'black_beans', label: 'Black beans', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 32 },
+      { key: 'onion_pepper', label: 'Onion and bell pepper', cookingMethod: 'simmer', prepMethod: 'pan seared', stages: [{ tempF: 195, minutes: 32 }], boilMinutes: 10, fillClass: 'simmer_sauce' },
+      { key: 'tofu', label: 'Tofu', cookingMethod: 'simmer', prepMethod: 'pan seared', stages: [{ tempF: 195, minutes: 32 }], boilMinutes: 6, fillClass: 'pan_grilled_chicken' },
+      { key: 'black_beans', label: 'Black beans', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 32, fillClass: 'simmer_sauce' },
       { key: 'assembly', label: 'Assembly', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -21161,10 +21161,10 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Brush tops with beaten egg before baking for a golden finish. Serve with chimichurri sauce, salsa verde, or sour cream.'
     ],
     sections: [
-      { key: 'onion_pepper', label: 'Onion and bell pepper', cookingMethod: 'baked', prepMethod: 'pan seared', stages: [{ tempF: 375, minutes: 27 }], boilMinutes: 8 },
-      { key: 'beef', label: 'Beef and filling', cookingMethod: 'baked', prepMethod: 'pan seared', stages: [{ tempF: 375, minutes: 27 }], boilMinutes: 6 },
+      { key: 'onion_pepper', label: 'Onion and bell pepper', cookingMethod: 'baked', prepMethod: 'pan seared', stages: [{ tempF: 375, minutes: 27 }], boilMinutes: 8, fillClass: 'simmer_sauce' },
+      { key: 'beef', label: 'Beef and filling', cookingMethod: 'baked', prepMethod: 'pan seared', stages: [{ tempF: 375, minutes: 27 }], boilMinutes: 6, fillClass: 'fried_meat' },
       { key: 'crust_ref', label: 'Pie Crust Double (Unbaked)', cookingMethod: 'raw', prepMethod: '' },
-      { key: 'crust', label: 'Crust', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 375, minutes: 27 }] }
+      { key: 'crust', label: 'Crust', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 375, minutes: 27 }], fillClass: 'pastry' }
     ],
   },
   {
@@ -21211,7 +21211,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Top with sour cream, salsa verde, pickled jalapeños, hot sauce, or shredded lettuce.'
     ],
     sections: [
-      { key: 'dough', label: 'Dough', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 11 },
+      { key: 'dough', label: 'Dough', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 11, fillClass: 'pan_grilled_masa' },
       { key: 'filling', label: 'Filling', cookingMethod: 'raw', prepMethod: '', yieldFactorWater: 1.0 }
     ],
   },
@@ -21235,7 +21235,7 @@ export const LEVELS: Level[] = [
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
-    nutritionJson: {"cal":611.7,"pro":32.4,"fat":28.4,"carb":58.0,"fib":4.9,"h2o":219.2,"sug":8.7,"perServing":{"cal":611.7,"pro":32.4,"fat":28.4,"carb":58.0,"fib":4.9,"h2o":219.2,"sug":8.7,"AddedSugars":0.0,"IntrinsicSugars":8.7},"micros":{"vitaminA":54.13,"vitaminC":1.07,"vitaminD":6.35,"vitaminE":0.6,"vitaminK":6.58,"vitaminB6":0.06,"vitaminB12":0.39,"thiamin":0.03,"riboflavin":0.12,"niacin":0.48,"folate":9.18,"calcium":162.93,"iron":0.87,"magnesium":21.34,"phosphorus":141.61,"potassium":166.04,"sodium":349.57,"zinc":1.05,"copper":0.12,"selenium":16.78,"cholesterol":31.92,"saturatedFat":4.22,"monoFat":2.74,"polyFat":0.37,"omega3":0.0,"omega6":0.03},"gramsPerServing":345.0,"servings":6,"per100g":{"Energy_KCal":177.32,"Water":63.54,"Protein":9.4,"TotalLipidFat":8.22,"Carbohydrate":16.81,"FiberTotalDietary":1.42,"SugarsTotal":2.52,"Cholesterol":31.92,"FattyAcids_totalSaturated":4.22,"FattyAcids_totalMonounsaturated":2.74,"FattyAcids_totalPolyunsaturated":0.37,"LinoleicAcid":0.03,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":54.13,"Retinol":48.1,"Carotene_beta":65.77,"VitaminD":6.35,"VitaminE_alphaTocopherol":0.6,"VitaminK_phylloquinone":6.58,"VitaminC_totalAscorbicAcid":1.07,"Thiamin":0.03,"Riboflavin":0.12,"Niacin":0.48,"PantothenicAcid":0.21,"VitaminB6":0.06,"Folate_total":9.18,"Folate_food":9.18,"Folate_DFE":9.18,"FolicAcid":0.0,"VitaminB12":0.39,"Choline_total":15.92,"Betaine":0.04,"LuteinZeaxanthin":64.27,"Lycopene":1438.9,"Calcium_Ca":162.93,"Iron_Fe":0.87,"Magnesium_Mg":21.34,"Phosphorus_P":141.61,"Potassium_K":166.04,"Sodium_Na":349.57,"Zinc_Zn":1.05,"Copper_Cu":0.12,"Manganese_Mn":0.25,"Selenium_Se":16.78,"Tryptophan":0.14,"Threonine":0.38,"Isoleucine":0.43,"Leucine":0.8,"Lysine":0.58,"Methionine":0.19,"Cystine":0.09,"Phenylalanine":0.44,"Tyrosine":0.37,"Valine":0.52,"Arginine":0.35,"Histidine":0.26,"Alanine":0.33,"AsparticAcid":0.71,"GlutamicAcid":2.34,"Glycine":0.24,"Proline":0.93,"Serine":0.41,"omega3":0.0,"omega6":0.03,"AddedSugars":0.0,"IntrinsicSugars":2.52},"addedSugars":0.0,"intrinsicSugars":8.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20420","name":"Pasta, dry, unenriched","grams":56.7},{"ndb":"14411","name":"Water, tap, drinking","grams":250.0},{"ndb":"1036","name":"Cheese, ricotta, whole milk","grams":70.9},{"ndb":"","name":"Italian Marinara Sauce","grams":140.0},{"ndb":"1026","name":"Cheese, mozzarella, whole milk","grams":47.2},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":8.3},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":8.3},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.2},{"ndb":"2003","name":"Spices, basil, dried","grams":0.1},{"ndb":"2047","name":"Salt, table","grams":0.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"pasta","section_label":"Pasta","prep_method":"boiled","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.3298188815637003,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":1840.2,"raw_water_grams":1532.18,"raw_fat_grams":5.14,"raw_protein_grams":44.36,"raw_carb_grams":254.03,"raw_fiber_grams":10.89,"final_grams":813.36,"boil_minutes":2.0,"cook_stages":[],"fill_class":""},{"section_key":"marinara","section_label":"Italian Marinara Sauce","prep_method":"raw","cook_method":"raw","cooking_method":"raw","ingredient_count":0,"raw_grams":0.0,"final_grams":0.0},{"section_key":"cheese","section_label":"Cheese Layer","prep_method":"baked covered","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.6707680133645422,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":1654.18,"raw_water_grams":1207.59,"raw_fat_grams":164.96,"raw_protein_grams":150.23,"raw_carb_grams":93.91,"raw_fiber_grams":18.56,"final_grams":1256.6,"boil_minutes":25.0,"cook_stages":[{"tempF":375,"minutes":18}],"fill_class":"dairy_custard"}],"cookingMethod":"baked","cookMinutes":18},
+    nutritionJson: {"cal":611.7,"pro":32.4,"fat":28.4,"carb":58.0,"fib":4.9,"h2o":243.8,"sug":8.7,"perServing":{"cal":611.7,"pro":32.4,"fat":28.4,"carb":58.0,"fib":4.9,"h2o":243.8,"sug":8.7,"AddedSugars":0.0,"IntrinsicSugars":8.7},"micros":{"vitaminA":50.52,"vitaminC":1.0,"vitaminD":5.93,"vitaminE":0.56,"vitaminK":6.14,"vitaminB6":0.06,"vitaminB12":0.36,"thiamin":0.03,"riboflavin":0.11,"niacin":0.45,"folate":8.57,"calcium":152.08,"iron":0.82,"magnesium":19.92,"phosphorus":132.19,"potassium":154.99,"sodium":326.3,"zinc":0.98,"copper":0.11,"selenium":15.66,"cholesterol":29.8,"saturatedFat":3.94,"monoFat":2.55,"polyFat":0.35,"omega3":0.0,"omega6":0.03},"gramsPerServing":369.6,"servings":6,"per100g":{"Energy_KCal":165.51,"Water":65.97,"Protein":8.78,"TotalLipidFat":7.67,"Carbohydrate":15.69,"FiberTotalDietary":1.33,"SugarsTotal":2.35,"Cholesterol":29.8,"FattyAcids_totalSaturated":3.94,"FattyAcids_totalMonounsaturated":2.55,"FattyAcids_totalPolyunsaturated":0.35,"LinoleicAcid":0.03,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":50.52,"Retinol":44.89,"Carotene_beta":61.39,"VitaminD":5.93,"VitaminE_alphaTocopherol":0.56,"VitaminK_phylloquinone":6.14,"VitaminC_totalAscorbicAcid":1.0,"Thiamin":0.03,"Riboflavin":0.11,"Niacin":0.45,"PantothenicAcid":0.2,"VitaminB6":0.06,"Folate_total":8.57,"Folate_food":8.57,"Folate_DFE":8.57,"FolicAcid":0.0,"VitaminB12":0.36,"Choline_total":14.86,"Betaine":0.04,"LuteinZeaxanthin":59.99,"Lycopene":1343.09,"Calcium_Ca":152.08,"Iron_Fe":0.82,"Magnesium_Mg":19.92,"Phosphorus_P":132.19,"Potassium_K":154.99,"Sodium_Na":326.3,"Zinc_Zn":0.98,"Copper_Cu":0.11,"Manganese_Mn":0.23,"Selenium_Se":15.66,"Tryptophan":0.13,"Threonine":0.35,"Isoleucine":0.4,"Leucine":0.74,"Lysine":0.54,"Methionine":0.17,"Cystine":0.08,"Phenylalanine":0.41,"Tyrosine":0.34,"Valine":0.48,"Arginine":0.33,"Histidine":0.24,"Alanine":0.31,"AsparticAcid":0.66,"GlutamicAcid":2.18,"Glycine":0.23,"Proline":0.87,"Serine":0.38,"omega3":0.0,"omega6":0.03,"AddedSugars":0.0,"IntrinsicSugars":2.35},"addedSugars":0.0,"intrinsicSugars":8.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20420","name":"Pasta, dry, unenriched","grams":56.7},{"ndb":"14411","name":"Water, tap, drinking","grams":250.0},{"ndb":"1036","name":"Cheese, ricotta, whole milk","grams":70.9},{"ndb":"","name":"Italian Marinara Sauce","grams":140.0},{"ndb":"1026","name":"Cheese, mozzarella, whole milk","grams":47.2},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":8.3},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":8.3},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.2},{"ndb":"2003","name":"Spices, basil, dried","grams":0.1},{"ndb":"2047","name":"Salt, table","grams":0.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"pasta","section_label":"Pasta","prep_method":"boiled","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.3298188815637003,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":1840.2,"raw_water_grams":1532.18,"raw_fat_grams":5.14,"raw_protein_grams":44.36,"raw_carb_grams":254.03,"raw_fiber_grams":10.89,"final_grams":813.36,"boil_minutes":2.0,"cook_stages":[],"fill_class":""},{"section_key":"marinara","section_label":"Italian Marinara Sauce","prep_method":"raw","cook_method":"raw","cooking_method":"raw","ingredient_count":0,"raw_grams":0.0,"final_grams":0.0},{"section_key":"cheese","section_label":"Cheese Layer","prep_method":"baked covered","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.7930428439295335,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":1654.18,"raw_water_grams":1207.59,"raw_fat_grams":164.96,"raw_protein_grams":150.23,"raw_carb_grams":93.91,"raw_fiber_grams":18.56,"final_grams":1404.26,"boil_minutes":25.0,"cook_stages":[{"tempF":375,"minutes":18}],"fill_class":"dairy_custard"}],"cookingMethod":"baked","cookMinutes":18},
     recipeIngredients: [
       { name: 'Baked Ziti', quantity: 'custom (g)', foodWord: 'BAKEDZITI', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'ziti pasta', quantity: '12 oz ziti pasta', section: 'pasta', ndbNo: '20420', portionDesc: 'g', portionGrams: 340.2 },
@@ -21265,7 +21265,7 @@ export const LEVELS: Level[] = [
     sections: [
       { key: 'pasta', label: 'Pasta', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 2 },
       { key: 'marinara', label: 'Italian Marinara Sauce', cookingMethod: 'raw', prepMethod: '' },
-      { key: 'cheese', label: 'Cheese Layer', cookingMethod: 'baked', prepMethod: 'baked covered', stages: [{ tempF: 375, minutes: 18 }], boilMinutes: 25 }
+      { key: 'cheese', label: 'Cheese Layer', cookingMethod: 'baked', prepMethod: 'baked covered', stages: [{ tempF: 375, minutes: 18 }], boilMinutes: 25, fillClass: 'dairy_custard' }
     ],
   },
   {
@@ -21317,7 +21317,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve with a green salad or alongside pasta.'
     ],
     sections: [
-      { key: 'bread_base', label: 'Garlic Bread Base', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 400, minutes: 6 }, { tempF: 400, minutes: 9 }] },
+      { key: 'bread_base', label: 'Garlic Bread Base', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 400, minutes: 6 }, { tempF: 400, minutes: 9 }], fillClass: 'pastry' },
       { key: 'sauce', label: 'Marinara Sauce', cookingMethod: 'raw', prepMethod: '' },
       { key: 'toppings', label: 'Cheese Topping', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 400, minutes: 9 }] }
     ],
@@ -21371,9 +21371,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Top with fresh basil or a drizzle of olive oil just before serving.'
     ],
     sections: [
-      { key: 'crust', label: 'Pizza Crust', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 450, minutes: 20 }] },
+      { key: 'crust', label: 'Pizza Crust', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 450, minutes: 20 }], fillClass: 'pastry' },
       { key: 'sauce', label: 'Marinara Sauce', cookingMethod: 'raw', prepMethod: '' },
-      { key: 'toppings', label: 'Cheese Topping', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 450, minutes: 20 }] }
+      { key: 'toppings', label: 'Cheese Topping', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 450, minutes: 20 }], fillClass: 'pizza_cheese_topping' }
     ],
   },
   {
@@ -21425,9 +21425,9 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Top with fresh basil or a drizzle of olive oil just before serving.'
     ],
     sections: [
-      { key: 'crust', label: 'Pizza Crust', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 450, minutes: 20 }] },
+      { key: 'crust', label: 'Pizza Crust', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 450, minutes: 20 }], fillClass: 'thin_pizza_crust' },
       { key: 'sauce', label: 'Marinara Sauce', cookingMethod: 'raw', prepMethod: '' },
-      { key: 'toppings', label: 'Cheese Topping', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 450, minutes: 20 }] }
+      { key: 'toppings', label: 'Cheese Topping', cookingMethod: 'baked', prepMethod: '', stages: [{ tempF: 450, minutes: 20 }], fillClass: 'pizza_cheese_topping' }
     ],
   },
   {
@@ -21479,9 +21479,9 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'pasta', label: 'Pasta', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 8 },
-      { key: 'shrimp', label: 'Shrimp', cookingMethod: 'simmer', prepMethod: 'pan seared', boilMinutes: 4 },
+      { key: 'shrimp', label: 'Shrimp', cookingMethod: 'simmer', prepMethod: 'pan seared', boilMinutes: 4, fillClass: 'pan_grilled_chicken' },
       { key: 'garlic', label: 'Garlic', cookingMethod: 'simmer', prepMethod: 'sauteed', boilMinutes: 1 },
-      { key: 'sauce', label: 'Sauce', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 2 },
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 2, fillClass: 'simmer_sauce' },
       { key: 'garnish', label: 'Garnish', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
@@ -21534,7 +21534,7 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'pasta', label: 'Pasta', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 2 },
-      { key: 'chicken', label: 'Grilled Chicken', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 11 },
+      { key: 'chicken', label: 'Grilled Chicken', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 11, fillClass: 'pan_grilled_chicken' },
       { key: 'pesto', label: 'Basil Pesto', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -21584,7 +21584,7 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'pasta', label: 'Pasta', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 8 },
-      { key: 'garlic', label: 'Garlic', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 2 },
+      { key: 'garlic', label: 'Garlic', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 2, fillClass: 'sauteed_aromatic' },
       { key: 'sauce', label: 'Lemon butter sauce', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -21743,7 +21743,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Substitute fresh sage (8–10 leaves, fried briefly in the butter) if available.'
     ],
     sections: [
-      { key: 'wilted_spinach', label: 'Wilt spinach', cookingMethod: 'scalded', prepMethod: 'scalded', boilMinutes: 1 },
+      { key: 'wilted_spinach', label: 'Wilt spinach', cookingMethod: 'scalded', prepMethod: 'scalded', boilMinutes: 1, fillClass: 'scalded_squeezed_spinach' },
       { key: 'dough_filling', label: 'Dough & filling', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 3 },
       { key: 'brown_butter', label: 'Brown butter', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 4 },
       { key: 'garlic_sage', label: 'Garlic sage', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 1 },
@@ -21770,7 +21770,7 @@ export const LEVELS: Level[] = [
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
-    nutritionJson: {"cal":524.1,"pro":24.8,"fat":20.3,"carb":56.5,"fib":4.9,"h2o":288.7,"sug":9.1,"perServing":{"cal":524.1,"pro":24.8,"fat":20.3,"carb":56.5,"fib":4.9,"h2o":288.7,"sug":9.1,"AddedSugars":0.0,"IntrinsicSugars":9.1},"micros":{"vitaminA":32.49,"vitaminC":1.45,"vitaminD":2.36,"vitaminE":0.47,"vitaminK":3.21,"vitaminB6":0.08,"vitaminB12":0.27,"thiamin":0.05,"riboflavin":0.06,"niacin":0.87,"folate":6.14,"calcium":23.37,"iron":0.75,"magnesium":15.92,"phosphorus":67.88,"potassium":166.95,"sodium":154.18,"zinc":0.92,"copper":0.09,"selenium":12.67,"cholesterol":17.55,"saturatedFat":2.34,"monoFat":2.83,"polyFat":0.31,"omega3":0.01,"omega6":0.01},"gramsPerServing":398.0,"servings":4,"per100g":{"Energy_KCal":131.69,"Water":72.54,"Protein":6.23,"TotalLipidFat":5.1,"Carbohydrate":14.21,"FiberTotalDietary":1.24,"SugarsTotal":2.3,"Cholesterol":17.55,"FattyAcids_totalSaturated":2.34,"FattyAcids_totalMonounsaturated":2.83,"FattyAcids_totalPolyunsaturated":0.31,"LinoleicAcid":0.01,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":32.49,"Retinol":6.37,"Carotene_beta":264.88,"VitaminD":2.36,"VitaminE_alphaTocopherol":0.47,"VitaminK_phylloquinone":3.21,"VitaminC_totalAscorbicAcid":1.45,"Thiamin":0.05,"Riboflavin":0.06,"Niacin":0.87,"PantothenicAcid":0.19,"VitaminB6":0.08,"Folate_total":6.14,"Folate_food":6.14,"Folate_DFE":6.14,"FolicAcid":0.0,"VitaminB12":0.27,"Choline_total":10.63,"Betaine":1.22,"LuteinZeaxanthin":39.15,"Lycopene":1186.52,"Calcium_Ca":23.37,"Iron_Fe":0.75,"Magnesium_Mg":15.92,"Phosphorus_P":67.88,"Potassium_K":166.95,"Sodium_Na":154.18,"Zinc_Zn":0.92,"Copper_Cu":0.09,"Manganese_Mn":0.21,"Selenium_Se":12.67,"Tryptophan":0.06,"Threonine":0.24,"Isoleucine":0.26,"Leucine":0.46,"Lysine":0.38,"Methionine":0.12,"Cystine":0.07,"Phenylalanine":0.26,"Tyrosine":0.16,"Valine":0.29,"Arginine":0.33,"Histidine":0.18,"Alanine":0.3,"AsparticAcid":0.5,"GlutamicAcid":1.42,"Glycine":0.3,"Proline":0.42,"Serine":0.26,"omega3":0.01,"omega6":0.01,"AddedSugars":0.0,"IntrinsicSugars":2.3},"addedSugars":0.0,"intrinsicSugars":9.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20420","name":"Pasta, dry, unenriched","grams":56.7},{"ndb":"14411","name":"Water, tap, drinking","grams":236.5},{"ndb":"11282","name":"Onions, raw","grams":27.5},{"ndb":"11124","name":"Carrots, raw","grams":15.2},{"ndb":"11143","name":"Celery, raw","grams":10.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4},{"ndb":"1145","name":"Butter, without salt","grams":3.5},{"ndb":"11215","name":"Garlic, raw","grams":2.2},{"ndb":"23572","name":"Beef, ground, 80% lean meat / 20% fat, raw","grams":56.7},{"ndb":"10219","name":"Pork, fresh, ground, raw","grams":28.4},{"ndb":"14106","name":"Alcoholic beverage, wine, table, white","grams":30.0},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":15.2},{"ndb":"11693","name":"Tomatoes, crushed, canned","grams":102.8},{"ndb":"2025","name":"Spices, nutmeg, ground","grams":0.1},{"ndb":"2047","name":"Salt, table","grams":1.1},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"pasta","section_label":"Pasta","prep_method":"boiled","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.34811726353257855,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":1172.8,"raw_water_grams":967.51,"raw_fat_grams":3.42,"raw_protein_grams":29.57,"raw_carb_grams":169.35,"raw_fiber_grams":7.26,"final_grams":542.1,"boil_minutes":8.0,"cook_stages":[],"fill_class":""},{"section_key":"vegetables","section_label":"Vegetables","prep_method":"pan seared","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","yield_factor_water":0.8934273961955335,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":238.8,"raw_water_grams":192.6,"raw_fat_grams":25.44,"raw_protein_grams":2.17,"raw_carb_grams":17.31,"raw_fiber_grams":4.22,"final_grams":218.27,"boil_minutes":9.0,"cook_stages":[],"fill_class":"simmer_sauce"},{"section_key":"garlic","section_label":"Garlic","prep_method":"pan seared","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":9.0,"raw_water_grams":5.27,"raw_fat_grams":0.04,"raw_protein_grams":0.57,"raw_carb_grams":2.98,"raw_fiber_grams":0.19,"final_grams":9.0,"boil_minutes":1.0,"cook_stages":[],"fill_class":""},{"section_key":"beef_pork","section_label":"Beef & pork","prep_method":"pan seared","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","yield_factor_water":0.7815987844704974,"yield_factor_fat":0.7071416898185978,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":340.2,"raw_water_grams":209.56,"raw_fat_grams":69.39,"raw_protein_grams":58.08,"raw_carb_grams":0.0,"raw_fiber_grams":0.0,"final_grams":274.11,"boil_minutes":8.0,"cook_stages":[],"fill_class":"fried_meat"},{"section_key":"wine","section_label":"Wine","prep_method":"pan seared","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":120.0,"raw_water_grams":104.23,"raw_fat_grams":0.0,"raw_protein_grams":0.08,"raw_carb_grams":3.12,"raw_fiber_grams":0.0,"final_grams":120.0,"boil_minutes":3.0,"cook_stages":[],"fill_class":""},{"section_key":"milk","section_label":"Milk","prep_method":"sub-simmer","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","yield_factor_water":0.9576155594366413,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":61.0,"raw_water_grams":53.76,"raw_fat_grams":1.98,"raw_protein_grams":1.92,"raw_carb_grams":2.93,"raw_fiber_grams":0.0,"final_grams":58.72,"boil_minutes":2.0,"cook_stages":[],"fill_class":"simmer_sauce"},{"section_key":"tomatoes","section_label":"Tomatoes","prep_method":"raw","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","yield_factor_water":0.8730000014719621,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":416.35,"raw_water_grams":367.7,"raw_fat_grams":1.27,"raw_protein_grams":6.82,"raw_carb_grams":30.47,"raw_fiber_grams":8.01,"final_grams":369.65,"boil_minutes":90.0,"cook_stages":[],"fill_class":"simmer_sauce"}],"cookingMethod":"simmer","cookMinutes":90},
+    nutritionJson: {"cal":524.1,"pro":24.8,"fat":20.3,"carb":56.5,"fib":4.9,"h2o":287.1,"sug":9.1,"perServing":{"cal":524.1,"pro":24.8,"fat":20.3,"carb":56.5,"fib":4.9,"h2o":287.1,"sug":9.1,"AddedSugars":0.0,"IntrinsicSugars":9.1},"micros":{"vitaminA":32.63,"vitaminC":1.45,"vitaminD":2.37,"vitaminE":0.47,"vitaminK":3.23,"vitaminB6":0.08,"vitaminB12":0.27,"thiamin":0.05,"riboflavin":0.06,"niacin":0.87,"folate":6.16,"calcium":23.46,"iron":0.75,"magnesium":15.99,"phosphorus":68.16,"potassium":167.62,"sodium":154.8,"zinc":0.93,"copper":0.1,"selenium":12.72,"cholesterol":17.62,"saturatedFat":2.35,"monoFat":2.84,"polyFat":0.31,"omega3":0.01,"omega6":0.01},"gramsPerServing":396.4,"servings":4,"per100g":{"Energy_KCal":132.22,"Water":72.42,"Protein":6.26,"TotalLipidFat":5.12,"Carbohydrate":14.26,"FiberTotalDietary":1.24,"SugarsTotal":2.31,"Cholesterol":17.62,"FattyAcids_totalSaturated":2.35,"FattyAcids_totalMonounsaturated":2.84,"FattyAcids_totalPolyunsaturated":0.31,"LinoleicAcid":0.01,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":32.63,"Retinol":6.4,"Carotene_beta":265.95,"VitaminD":2.37,"VitaminE_alphaTocopherol":0.47,"VitaminK_phylloquinone":3.23,"VitaminC_totalAscorbicAcid":1.45,"Thiamin":0.05,"Riboflavin":0.06,"Niacin":0.87,"PantothenicAcid":0.19,"VitaminB6":0.08,"Folate_total":6.16,"Folate_food":6.16,"Folate_DFE":6.16,"FolicAcid":0.0,"VitaminB12":0.27,"Choline_total":10.67,"Betaine":1.23,"LuteinZeaxanthin":39.3,"Lycopene":1191.32,"Calcium_Ca":23.46,"Iron_Fe":0.75,"Magnesium_Mg":15.99,"Phosphorus_P":68.16,"Potassium_K":167.62,"Sodium_Na":154.8,"Zinc_Zn":0.93,"Copper_Cu":0.1,"Manganese_Mn":0.21,"Selenium_Se":12.72,"Tryptophan":0.06,"Threonine":0.24,"Isoleucine":0.26,"Leucine":0.46,"Lysine":0.38,"Methionine":0.12,"Cystine":0.07,"Phenylalanine":0.26,"Tyrosine":0.16,"Valine":0.29,"Arginine":0.33,"Histidine":0.18,"Alanine":0.31,"AsparticAcid":0.51,"GlutamicAcid":1.43,"Glycine":0.3,"Proline":0.42,"Serine":0.26,"omega3":0.01,"omega6":0.01,"AddedSugars":0.0,"IntrinsicSugars":2.31},"addedSugars":0.0,"intrinsicSugars":9.1,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20420","name":"Pasta, dry, unenriched","grams":56.7},{"ndb":"14411","name":"Water, tap, drinking","grams":236.5},{"ndb":"11282","name":"Onions, raw","grams":27.5},{"ndb":"11124","name":"Carrots, raw","grams":15.2},{"ndb":"11143","name":"Celery, raw","grams":10.0},{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":3.4},{"ndb":"1145","name":"Butter, without salt","grams":3.5},{"ndb":"11215","name":"Garlic, raw","grams":2.2},{"ndb":"23572","name":"Beef, ground, 80% lean meat / 20% fat, raw","grams":56.7},{"ndb":"10219","name":"Pork, fresh, ground, raw","grams":28.4},{"ndb":"14106","name":"Alcoholic beverage, wine, table, white","grams":30.0},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":15.2},{"ndb":"11693","name":"Tomatoes, crushed, canned","grams":102.8},{"ndb":"2025","name":"Spices, nutmeg, ground","grams":0.1},{"ndb":"2047","name":"Salt, table","grams":1.1},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"pasta","section_label":"Pasta","prep_method":"boiled","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.34811726353257855,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":1172.8,"raw_water_grams":967.51,"raw_fat_grams":3.42,"raw_protein_grams":29.57,"raw_carb_grams":169.35,"raw_fiber_grams":7.26,"final_grams":542.1,"boil_minutes":8.0,"cook_stages":[],"fill_class":""},{"section_key":"vegetables","section_label":"Vegetables","prep_method":"pan seared","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","yield_factor_water":0.8838548512581442,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":5,"raw_grams":238.8,"raw_water_grams":192.6,"raw_fat_grams":25.44,"raw_protein_grams":2.17,"raw_carb_grams":17.31,"raw_fiber_grams":4.22,"final_grams":216.43,"boil_minutes":9.0,"cook_stages":[],"fill_class":"simmer_sauce"},{"section_key":"garlic","section_label":"Garlic","prep_method":"pan seared","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":9.0,"raw_water_grams":5.27,"raw_fat_grams":0.04,"raw_protein_grams":0.57,"raw_carb_grams":2.98,"raw_fiber_grams":0.19,"final_grams":9.0,"boil_minutes":1.0,"cook_stages":[],"fill_class":""},{"section_key":"beef_pork","section_label":"Beef & pork","prep_method":"pan seared","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","yield_factor_water":0.7585545371457274,"yield_factor_fat":0.7071416898185978,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":340.2,"raw_water_grams":209.56,"raw_fat_grams":69.39,"raw_protein_grams":58.08,"raw_carb_grams":0.0,"raw_fiber_grams":0.0,"final_grams":269.28,"boil_minutes":8.0,"cook_stages":[],"fill_class":"fried_meat"},{"section_key":"wine","section_label":"Wine","prep_method":"pan seared","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":120.0,"raw_water_grams":104.23,"raw_fat_grams":0.0,"raw_protein_grams":0.08,"raw_carb_grams":3.12,"raw_fiber_grams":0.0,"final_grams":120.0,"boil_minutes":3.0,"cook_stages":[],"fill_class":""},{"section_key":"milk","section_label":"Milk","prep_method":"sub-simmer","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","yield_factor_water":0.9623538217184715,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":61.0,"raw_water_grams":53.76,"raw_fat_grams":1.98,"raw_protein_grams":1.92,"raw_carb_grams":2.93,"raw_fiber_grams":0.0,"final_grams":58.98,"boil_minutes":2.0,"cook_stages":[],"fill_class":"simmer_sauce"},{"section_key":"tomatoes","section_label":"Tomatoes","prep_method":"raw","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","yield_factor_water":0.8730000014719621,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":416.35,"raw_water_grams":367.7,"raw_fat_grams":1.27,"raw_protein_grams":6.82,"raw_carb_grams":30.47,"raw_fiber_grams":8.01,"final_grams":369.65,"boil_minutes":90.0,"cook_stages":[],"fill_class":"simmer_sauce"}],"cookingMethod":"simmer","cookMinutes":90},
     recipeIngredients: [
       { name: 'Spaghetti Bolognese', quantity: 'custom (g)', foodWord: 'SPAGHETTIBOLOGNESE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'spaghetti', quantity: '½ lb dry spaghetti', section: 'pasta', ndbNo: '20420', portionDesc: 'g', portionGrams: 226.8 },
@@ -21803,12 +21803,12 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'pasta', label: 'Pasta', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 8 },
-      { key: 'vegetables', label: 'Vegetables', cookingMethod: 'simmer', prepMethod: 'pan seared', boilMinutes: 9 },
+      { key: 'vegetables', label: 'Vegetables', cookingMethod: 'simmer', prepMethod: 'pan seared', boilMinutes: 9, fillClass: 'simmer_sauce' },
       { key: 'garlic', label: 'Garlic', cookingMethod: 'simmer', prepMethod: 'pan seared', boilMinutes: 1 },
-      { key: 'beef_pork', label: 'Beef & pork', cookingMethod: 'simmer', prepMethod: 'pan seared', boilMinutes: 8 },
+      { key: 'beef_pork', label: 'Beef & pork', cookingMethod: 'simmer', prepMethod: 'pan seared', boilMinutes: 8, fillClass: 'fried_meat' },
       { key: 'wine', label: 'Wine', cookingMethod: 'simmer', prepMethod: 'pan seared', boilMinutes: 3 },
-      { key: 'milk', label: 'Milk', cookingMethod: 'simmer', prepMethod: 'sub-simmer', boilMinutes: 2 },
-      { key: 'tomatoes', label: 'Tomatoes', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 90 }
+      { key: 'milk', label: 'Milk', cookingMethod: 'simmer', prepMethod: 'sub-simmer', boilMinutes: 2, fillClass: 'simmer_sauce' },
+      { key: 'tomatoes', label: 'Tomatoes', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 90, fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -21898,7 +21898,7 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'pasta', label: 'Pasta', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 8 },
-      { key: 'bacon', label: 'Bacon', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 8 },
+      { key: 'bacon', label: 'Bacon', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 8, fillClass: 'fried_meat' },
       { key: 'sauce', label: 'Sauce', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -21945,7 +21945,7 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'pasta', label: 'Pasta', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 8 },
-      { key: 'sauce', label: 'Sauce', cookingMethod: 'sub-simmer', prepMethod: 'sub-simmer', boilMinutes: 4 },
+      { key: 'sauce', label: 'Sauce', cookingMethod: 'sub-simmer', prepMethod: 'sub-simmer', boilMinutes: 4, fillClass: 'simmer_sauce' },
       { key: 'parmesan', label: 'Parmesan', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -21998,9 +21998,9 @@ export const LEVELS: Level[] = [
     ],
     sections: [
       { key: 'pasta', label: 'Pasta', cookingMethod: 'boiled', prepMethod: 'boiled', boilMinutes: 8 },
-      { key: 'vodka', label: 'Vodka', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 15 },
-      { key: 'tomatoes', label: 'Tomatoes', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 13 },
-      { key: 'cream', label: 'Cream', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 3 },
+      { key: 'vodka', label: 'Vodka', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 15, fillClass: 'simmer_sauce' },
+      { key: 'tomatoes', label: 'Tomatoes', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 13, fillClass: 'simmer_sauce' },
+      { key: 'cream', label: 'Cream', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 3, fillClass: 'simmer_sauce' },
       { key: 'parmesan', label: 'Parmesan', cookingMethod: 'raw', prepMethod: '' }
     ],
   },
@@ -22761,7 +22761,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Serve over ice. For a creamier version, replace half the water with whole milk.'
     ],
     sections: [
-      { key: 'blend_strain', label: 'Blend and Strain', cookingMethod: 'raw', prepMethod: 'raw' },
+      { key: 'blend_strain', label: 'Blend and Strain', cookingMethod: 'raw', prepMethod: 'raw', fillClass: 'strained' },
       { key: 'sweeten', label: 'To Sweeten', cookingMethod: 'raw', prepMethod: 'raw', yieldFactorWater: 1.0 }
     ],
   },
@@ -22808,7 +22808,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Sprinkle a pinch of cinnamon on top. For a stronger tea flavor, steep 2 black tea bags in the milk during simmering.'
     ],
     sections: [
-      { key: 'chai', label: 'Chai Tea', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 5 }
+      { key: 'chai', label: 'Chai Tea', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 5, fillClass: 'simmer_sauce' }
     ],
   },
   {
@@ -22889,7 +22889,7 @@ export const LEVELS: Level[] = [
       'Suggestions (not included): Garnish with a cinnamon stick or orange slice. For a spiked version, stir in 2 oz of bourbon or apple brandy per serving.'
     ],
     sections: [
-      { key: 'cider', label: 'Spiced Apple Cider', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 15 }
+      { key: 'cider', label: 'Spiced Apple Cider', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 15, fillClass: 'simmer_sauce' }
     ],
   },
   {
