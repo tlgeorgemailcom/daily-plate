@@ -130,6 +130,11 @@
                     : [];
     const stages = (rawStages as Array<{ tempF: number; minutes: number }>);
     const firstStage = stages[0] as { tempF: number; minutes: number } | undefined;
+    const hasSectionOwnedOvenStages = stages.length > 0 && (
+      prepV === 'baked'
+      || prepV === 'par-baked'
+      || !topCookMethod
+    );
 
     // ── boilMinutes: stovetop pre-step time; falls back to oven stage time ─────
     // bm || firstStage.minutes covers every case uniformly:
@@ -146,9 +151,9 @@
       : undefined;
 
     // ── yield factors ─────────────────────────────────────────────────────────
-    const yfw = s.yield_factor_water  ?? s.yieldFactorWater;
-    const yff = s.yield_factor_fat    ?? s.yieldFactorFat;
-    const yfo = s.yield_factor_other  ?? s.yieldFactorOther;
+    const yfw = s.yieldFactorWater;
+    const yff = s.yieldFactorFat;
+    const yfo = s.yieldFactorOther;
 
     // ── top-bar cook time / temp (single-section or top-bar-driven recipes) ───
     const cookMinutes = (s.cook_minutes  ?? s.cookMinutes)  as number | undefined;
@@ -172,7 +177,7 @@
       prepTempF,
       cookMinutes,
       cookTempF,
-      stages: stages.length > 0 ? stages : undefined,
+      stages: hasSectionOwnedOvenStages ? stages : undefined,
       fillClass,
       primaryEntryStage,
     };
