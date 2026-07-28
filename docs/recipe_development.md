@@ -62,7 +62,7 @@ There is no "final cook" phase in the pipeline. If a recipe has a final assembly
 
 6. **Primary cook bar shows wrong method for many non-BKFST multi-section recipes.** The fix in `a105df1e` clears the primary cook field for any recipe where the v3-build API returns 2+ sections with non-raw prep methods. However, ENTR, SIDE, SAND, SAUCE, SALAD, STOCK, and SWEET multi-section recipes were built before the `cook_stages` / `cook_method` infrastructure was fully in place — many will open the edit form with incorrect (stale) primary cook values until their build JSONs are rebuilt from current CSV state. Once cook_stages annotations are complete for each category, rebuild and regenerate the bundle to propagate corrections.
 
-3. **cook_stages annotations for non-BKFST recipes** — **COMPLETED (July 2026): SAUCE_001–027, STOCK_001–007, SIDE_001–040, BKFST, SAND, SOUP, SWEET, SALAD** all converted to physics with no locked yfw values. Remaining: **ENTR** (locks on ~50 sections pending unlock sessions) and **CRUST** (2 locked sections). All converted categories use `pm/cm/boil_stages/cook_stages/fill_class` pattern; top bar `cook_minutes`/`cook_temp_f` set directly in `recipes.csv`.
+3. **cook_stages annotations for non-BKFST recipes** — **COMPLETED (July 2026): SAUCE_001–027 (except SAUCE_003 onion section — see below), STOCK_001–007, SIDE_001–040, BKFST, SAND, SOUP, SWEET, SALAD** all converted to physics with no locked yfw values. Remaining: **ENTR** (locks on ~50 sections pending unlock sessions), **CRUST** (2 locked sections), and **SAUCE_003 onion section** (deferred — requires `covered_sweat_aromatic` fill class calibration before physics model can correctly compute yfw; covered slow-sweat of onions has no existing fill class; `braise` model produces yfw=0.965 which is wrong, `sauteed_aromatic` model is open-pot and also wrong). All converted categories use `pm/cm/boil_stages/cook_stages/fill_class` pattern; top bar `cook_minutes`/`cook_temp_f` set directly in `recipes.csv`.
 
 4. **`simmer` vs `boiled` display**: For any section still showing the wrong cook method label in the form dropdown, verify `recipe_sections.csv::cook_method` is set correctly. The form now reads `cook_method` correctly (fixed in this session), so what's in the CSV is what shows.
 
@@ -283,7 +283,7 @@ Replace `PREFIX_` with the category prefix (e.g. `BKFST_`, `ENTR_`, `SIDE_`).
 | `grilled` | `pan seared` or `sauteed` | Skillet/griddle cooking is not BBQ grill; choose `sauteed` for moderate moving ingredients, `pan seared` for high direct pan contact |
 | `fried` | `pan seared` or `sauteed` | Skillet cooking is not deep fry; choose by heat/intensity |
 | `steamed` | `simmer` | Hollandaise Sauce |
-| `raw` on component-ref section | actual cook method of that section | Eggs Benedict muffin + hollandaise sections |
+| component-ref section displays `raw` in Turso/form | keep source section `raw`; fix uploader/display metadata from child recipe | Eggs Benedict muffin + hollandaise sections |
 | `fried` | `pan seared` | Eggs Benedict Canadian bacon section |
 | `baked` on filling section | `raw` | Quiche filling sections (see quiche pattern below) |
 | `raw` on sausage component-ref | `pan seared` | BKFST_037 Croissant Sausage |
@@ -292,13 +292,15 @@ Replace `PREFIX_` with the category prefix (e.g. `BKFST_`, `ENTR_`, `SIDE_`).
 
 ### Composite recipe (component-ref) section fixes
 
-When a section uses `source_recipe=CHILD_ID`, its `cook_method` defaults to `raw` because the parent doesn't "know" how the child was cooked. Two fix strategies:
+Component recipes are consumed as finished recipe ingredients. Do not inline or expose the child recipe's leaf ingredients in the parent just to make display or physics work. The parent ingredient row stays as `@CHILD_ID`, and parent nutrition uses the child's built per-100g panel.
 
-1. **Just change `cook_method` on the parent section** — works when the parent section merely needs to display the correct prep label and the child ingredients are correctly expanded. The `source_recipe` link stays intact and ingredients still render from the child recipe. (Used for BKFST_003 muffin, hollandaise; BKFST_037 sausage.)
+For **pure component sections** (every ingredient row in the section is an `@` recipe ref):
 
-2. **Break the composite entirely** — remove `source_recipe`, delete the component-ref row from `recipe_ingredients.csv`, and inline all child leaf ingredients with correct section assignments and scaled grams. Required when the child has multiple internal sections that need to appear as separate parent sections. (Used for BKFST_002 `@BKFST_012` → two sections: `sausage_crumbles` + `milk_gravy`.)
+- Keep `recipe_sections.csv::cook_method='raw'` and yield factors at 1.0. This is the source/math convention: the parent is not re-cooking the child.
+- Keep `source_recipe=CHILD_ID` and the `@CHILD_ID` ingredient row intact.
+- Display/editor JSON may show the child recipe's actual cook method (for example `BKFST_002` biscuit displays `baked` from `BKFST_001`). `upload.py` resolves this when writing `sections_json`; do not change the CSV section to force the display label.
 
-Scale factor for inlining: `target_grams (from parent) / child_raw_total_grams`.
+For **mixed or cooking-liquid sections** (an `@` recipe ref shares a section with regular ingredients), the section's own method and physics apply. Example: stock used as the cooking liquid for rice belongs in the same heated rice section, not in a separate pure raw component section.
 
 ### Quiche pattern (primary cook with assembly-only sections)
 
@@ -961,7 +963,7 @@ Lamb Tagine
 
 Top bar 1: Braise (covered) | 30 min
 Top bar 2: Braise (covered) | 25 min
-Prep before Top bar 2: Additional Ingredients | unheated | ingredients: chickpeas, apricots, honey, lemon juice
+Prep before Top bar 2: Additional Ingredients 2 | unheated | ingredients: chickpeas, apricots, honey, lemon juice
 
 Prep: Brown Lamb | pan seared | 4 min | ingredients: lamb, salt, cayenne pepper
 Prep: Onion | sauteed | 9 min | ingredients: onion
@@ -969,9 +971,27 @@ Prep: Seasoning | sauteed | 1 min | ingredients: garlic, ginger, paprika, cumin,
 Prep: Tomatoes | simmer (uncovered) | 2 min | ingredients: crushed tomatoes
 ```
 
-In the edit form, the `Additional Ingredients` prep stage belongs inside the `Assembled / Primary 2` timeline card as `Add prep before this stage`. Those ingredients are excluded from Primary 1 and included in Primary 2.
+In the edit form, the `Additional Ingredients 2` prep stage belongs inside the `Assembled / Primary 2` timeline card as `Add prep before this stage`. Those ingredients are excluded from Primary 1 and included in Primary 2.
+
+Permanent naming rule for stage-entry additions: use numbered section labels tied to the primary cook stage they feed. Ingredients present before Primary 1 use `Prep: Additional Ingredients 1`; ingredients added after Primary 1 and before Primary 2 use `Prep: Additional Ingredients 2`; ingredients added after Primary 2 and before Primary 3 use `Prep: Additional Ingredients 3`. These ingredients still live in the same ingredient list as all other prep ingredients; the stable numbered section name plus the section's primary-entry metadata removes ambiguity in generated JSON and Turso section data.
+
+`Additional Ingredients N` sections are normal recipe sections and must support the same section-level physics fields as any other section, including `fill_class`. The moderator edit form already allows setting a fill class per section; the staged primary model must preserve that capability for these numbered sections, and the later community recipe path should expose the same control. `primary_entry_stage` answers *when this section joins the primary timeline*; `fill_class` answers *how this section's ingredients behave under the cook stages they participate in*.
 
 Future model should be a **Primary Cook Timeline** rather than duplicate independent top bars. Each phase needs method, covered/uncovered state, time, optional temp, display label, and section/ingredient participation so both UI rendering and moisture physics can follow the same staged cook plan.
+
+---
+
+### Deferred: `covered_sweat_aromatic` fill class (SAUCE_003 onion section)
+
+The Soubise Sauce (SAUCE_003) onion section uses a covered slow-sweat technique — 907g onions cooked in butter over very low heat with the lid on for 30–40 min until completely melted and translucent (no browning, no added liquid). This produces ~517g cooked (yfw≈0.45 from original calibration).
+
+No existing fill class models this correctly:
+- `sauteed_aromatic` (200°F, open-pot) — wrong: it's covered
+- `braise` (185°F, covered, 5% of open-pot evaporation) — computes yfw=0.965 (near-zero water loss), which is physically wrong for 35 min of onion sweating
+
+**What is needed:** A new `covered_sweat_aromatic` fill class calibrated against a USDA raw/cooked onion NDB pair for covered stovetop cooking. Calibration approach: find or measure onion water content after 35 min covered low-heat sweat; derive `binding_coeff` from that reference.
+
+**Until calibrated:** SAUCE_003's onion section retains its current `pm='braise'`, `cm='sub-simmer'` state and is excluded from the physics-complete claim. Do not clear the section's locked `yfw` until this fill class exists.
 
 ---
 

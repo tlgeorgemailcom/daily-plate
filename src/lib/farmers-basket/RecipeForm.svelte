@@ -69,6 +69,8 @@
     stages?: Array<{ tempF: number; minutes: number }>;
     /** Explicit filling class from recipe_sections.csv (e.g. 'dense_fruit'). */
     fillClass?: string;
+    /** Primary cook stage this section enters before: blank/1, 2, 3, or finish. */
+    primaryEntryStage?: string;
   }
   
   export interface RecipeInstruction {
@@ -153,6 +155,8 @@
     // ── fill class ────────────────────────────────────────────────────────────
     const fcRaw = String(s.fill_class ?? s.fillClass ?? '');
     const fillClass = fcRaw || undefined;
+    const primaryEntryStageRaw = String(s.primary_entry_stage ?? s.primaryEntryStage ?? '');
+    const primaryEntryStage = primaryEntryStageRaw || undefined;
 
     return {
       key,
@@ -168,6 +172,7 @@
       cookTempF,
       stages: stages.length > 0 ? stages : undefined,
       fillClass,
+      primaryEntryStage,
     };
   }
 
@@ -1064,6 +1069,7 @@
           ...(typeof sec.boilMinutes === 'number' && sec.boilMinutes > 0 && sec.cookingMethod !== 'baked' && sec.cookingMethod !== 'par-baked' ? { boilMinutes: sec.boilMinutes } : {}),
           ...(Array.isArray(sec.stages) && sec.stages.length > 0 ? { stages: sec.stages } : {}),
           ...(sec.fillClass ? { fillClass: sec.fillClass } : {}),
+          ...(sec.primaryEntryStage ? { primaryEntryStage: sec.primaryEntryStage } : {}),
           // Inject top-bar oven params as fallback for sections with no explicit stages.
           ...(!(Array.isArray(sec.stages) && sec.stages.length > 0) ? {
             cookTempF:   typeof sec.cookTempF   === 'number' ? sec.cookTempF   : (cookTempF   ?? undefined),

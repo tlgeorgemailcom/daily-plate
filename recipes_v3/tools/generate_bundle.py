@@ -192,6 +192,10 @@ def ts_sections(sections):
             parts.append(f"yieldFactorFat: {s['yieldFactorFat']}")
         if s.get('yieldFactorOther') is not None and s['yieldFactorOther'] != 1.0:
             parts.append(f"yieldFactorOther: {s['yieldFactorOther']}")
+        if s.get('fillClass'):
+            parts.append(f"fillClass: '{esc(s['fillClass'])}'")
+        if s.get('primaryEntryStage'):
+            parts.append(f"primaryEntryStage: '{esc(s['primaryEntryStage'])}'")
         lines.append('      { ' + ', '.join(parts) + ' }')
     return '[\n' + ',\n'.join(lines) + '\n    ]'
 
@@ -626,6 +630,8 @@ for recipe in recipes:
             'yieldFactorWater': (lambda v: float(v) if v not in (None, '') else None)(s.get('yield_factor_water')),
             'yieldFactorFat':   (lambda v: float(v) if v not in (None, '') else None)(s.get('yield_factor_fat')),
             'yieldFactorOther': (lambda v: float(v) if v not in (None, '') else None)(s.get('yield_factor_other')),
+            'fillClass':        (s.get('filling_class') or '').strip(),
+            'primaryEntryStage': (s.get('primary_entry_stage') or '').strip(),
         }
         for s in section_rows
     ]

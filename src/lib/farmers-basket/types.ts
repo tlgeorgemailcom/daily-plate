@@ -157,6 +157,8 @@ export interface Level {
     prepMethod?: string;          // 'mixed' | 'rolled' | 'scooped' | 'formed' | 'whisked' | 'baked' | 'par-baked' | 'none'
     stages?: Array<{ tempF: number; minutes: number }>;  // oven bake profile
     boilMinutes?: number;         // stovetop prep time in minutes
+    fillClass?: string;           // section physics class from recipe_sections.csv
+    primaryEntryStage?: string;   // blank/1, 2, 3, or finish
   }[];
 }
 

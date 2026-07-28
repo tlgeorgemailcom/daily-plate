@@ -93,6 +93,8 @@ export interface CommunitySection {
    *  'pastry'). When present, used by buildRecipeCommunity before falling
    *  back to inferFillingClass(). */
   fillClass?: string;
+  /** Primary cook stage this section enters before: blank/1, 2, 3, or finish. */
+  primaryEntryStage?: string;
   /** Optional pre-step fired before the primary (recipe-level) cook.
    *  When set and not 'none', buildRecipeCommunity applies this method first
    *  (using section boilMinutes for yield), then applies the recipe-level

@@ -12,6 +12,7 @@ from pathlib import Path
 from typing import Iterable
 
 from config import COMBOO_DB, DATA_DIR, RECIPES_V3_ROOT
+from .retention import COOK_METHOD_ALIASES, normalize_cooking_method
 
 ROOT = RECIPES_V3_ROOT
 DATA = DATA_DIR
@@ -122,6 +123,12 @@ class Recipe:
     yield_factor_other: float
     cook_minutes: int | None = None
     cook_temp_f: int | None = None
+    cook2_method: str = ""
+    cook2_minutes: int | None = None
+    cook2_temp_f: int | None = None
+    cook3_method: str = ""
+    cook3_minutes: int | None = None
+    cook3_temp_f: int | None = None
     yield_factor_fiber: float = 1.0
     status: str = ""
     audit_status: str = ""
@@ -180,6 +187,7 @@ class Section:
     cook_stages: str = ""     # e.g. '425:15,350:37' — temp_f:minutes pairs, comma-sep
     boil_stages: str = ""     # e.g. '8' — stovetop boil minutes (temp fixed at 212°F)
     source_recipe: str = ""   # Phase 8c: when non-empty, this section's nutrition is sourced
+    primary_entry_stage: str = ""  # blank/1 before primary 1; 2/3 enter before later primary stages
                               # from the named child recipe's already-built per100g panel.
                               # Validator requires matching @<child_id> ingredient row(s) and
                               # yfw=yff=1.0 (no double-applied retention/yield).
@@ -222,7 +230,17 @@ def _parse_int(s: str, default: int | None = 0) -> int | None:
     s = (s or "").strip()
     if not s:
         return default
-    return int(float(s))
+    try:
+        return int(float(s))
+    except ValueError:
+        return default
+
+
+def _parse_optional_cook_method(s: str | None) -> str:
+    value = (s or "").strip().lower()
+    if not value or value not in COOK_METHOD_ALIASES:
+        return ""
+    return normalize_cooking_method(value)
 
 
 def _parse_bool(s: str | None) -> bool:
@@ -244,6 +262,12 @@ def load_recipes() -> dict[str, Recipe]:
                 servings_count=_parse_int(row.get("servings_count", "1"), 1),
                 sr_rule=row.get("sr_rule", "").strip(),
                 cooking_method=(row.get("cooking_method") or row.get("cook_method") or "").strip().lower(),
+                cook2_method=_parse_optional_cook_method(row.get("cook2_method")),
+                cook2_minutes=_parse_int(row.get("cook2_minutes", ""), None),
+                cook2_temp_f=_parse_int(row.get("cook2_temp_f", ""), None),
+                cook3_method=_parse_optional_cook_method(row.get("cook3_method")),
+                cook3_minutes=_parse_int(row.get("cook3_minutes", ""), None),
+                cook3_temp_f=_parse_int(row.get("cook3_temp_f", ""), None),
                 yield_factor_water=_parse_float(row.get("yield_factor_water"), 1.0),
                 yield_factor_fat=_parse_float(row.get("yield_factor_fat"), 1.0),
                 yield_factor_protein=_parse_float(row.get("yield_factor_protein"), 1.0),
@@ -348,6 +372,7 @@ def load_sections() -> dict[str, list[Section]]:
                 cook_stages=(row.get("cook_stages") or "").strip(),
                 boil_stages=(row.get("boil_stages") or "").strip(),
                 source_recipe=(row.get("source_recipe") or "").strip(),
+                primary_entry_stage=(row.get("primary_entry_stage") or "").strip().lower(),
             )
             out.setdefault(rid, []).append(sec)
     return out

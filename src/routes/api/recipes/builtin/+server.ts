@@ -344,6 +344,7 @@ export const GET: RequestHandler = async () => {
             boilMinutes:   isUnheated ? 0 : (typeof s['boil_minutes'] === 'number' ? s['boil_minutes'] as number : 0),
             stages:        Array.isArray(s['cook_stages']) ? s['cook_stages'] : (Array.isArray(s['stages']) ? s['stages'] : []),
             fillClass:     String(s['fill_class'] ?? s['fillClass'] ?? ''),
+            primaryEntryStage: String(s['primary_entry_stage'] ?? s['primaryEntryStage'] ?? ''),
           };
         }) as Level['sections'];
       }

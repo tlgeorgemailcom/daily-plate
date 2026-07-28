@@ -211,19 +211,17 @@ def _build_payload(rid: str, recipes, ings, ledger, instrs, sections_map) -> dic
         except ValueError:
             return 0
 
-    sections_json = json.dumps(
-        [
-            {
+    def _section_payload(s) -> dict:
+        cook_method = (
+            (_component_cook_method(s.source_recipe) or s.cook_method)
+            if s.source_recipe
+            else s.cook_method
+        )
+        payload = {
                 "section_key": s.section_key,
                 "section_label": s.section_label,
                 "prep_method": s.prep_method,
-                # cook_method: if the parent section uses the component raw/unheated (cm='raw'),
-                # keep 'raw' — do NOT inherit the child's cooking method. The child's method
-                # changes as child recipes are converted and would destabilize the parent display.
-                # Only substitute the child's method when the parent section itself performs
-                # additional cooking (cm != 'raw').
-                "cook_method": (s.cook_method if s.cook_method == 'raw'
-                                else (_component_cook_method(s.source_recipe) if s.source_recipe else s.cook_method)),
+            "cook_method": cook_method,
                 "yield_factor_water": (
                     s.yield_factor_water
                     if s.yield_factor_water is not None
@@ -242,8 +240,12 @@ def _build_payload(rid: str, recipes, ings, ledger, instrs, sections_map) -> dic
                 "cook_stages": _parse_cook_stages(s.cook_stages),
                 "fill_class": s.filling_class or "",
             }
-            for s in sections_list
-        ],
+        if s.primary_entry_stage:
+            payload["primary_entry_stage"] = s.primary_entry_stage
+        return payload
+
+    sections_json = json.dumps(
+        [_section_payload(s) for s in sections_list],
         separators=(",", ":"),
     ) if sections_list else None
 
@@ -253,7 +255,7 @@ def _build_payload(rid: str, recipes, ings, ledger, instrs, sections_map) -> dic
     # in sync automatically — authoring only needs to set boil_stages on the primary section.
     cook_minutes_val: int | None = rec.cook_minutes
     cook_temp_f_val:  int | None = rec.cook_temp_f
-    if sections_list and rec.cooking_method:
+    if sections_list and rec.cooking_method and (cook_minutes_val is None or cook_temp_f_val is None):
         for s in sections_list:
             if (s.prep_method or '').strip() in ('', 'raw') and s.cook_method == rec.cooking_method:
                 # Primary section found — derive cook_minutes.
@@ -263,8 +265,8 @@ def _build_payload(rid: str, recipes, ings, ledger, instrs, sections_map) -> dic
                 if derived_min is None and s.cook_stages:
                     parsed_for_min = _parse_cook_stages(s.cook_stages)
                     if parsed_for_min:
-                        derived_min = parsed_for_min[0].get("minutes")
-                if derived_min:
+                        derived_min = sum(stage.get("minutes", 0) for stage in parsed_for_min)
+                if derived_min and cook_minutes_val is None:
                     cook_minutes_val = derived_min
                 # Derive cook_temp_f from first cook_stage if present
                 if s.cook_stages and not cook_temp_f_val:
@@ -294,6 +296,12 @@ def _build_payload(rid: str, recipes, ings, ledger, instrs, sections_map) -> dic
         "cook_minutes": cook_minutes_val,
         "cook_temp_f":  cook_temp_f_val,
         "cooking_method": rec.cooking_method or "",
+        "cook2_method": rec.cook2_method or "",
+        "cook2_minutes": rec.cook2_minutes,
+        "cook2_temp_f": rec.cook2_temp_f,
+        "cook3_method": rec.cook3_method or "",
+        "cook3_minutes": rec.cook3_minutes,
+        "cook3_temp_f": rec.cook3_temp_f,
     }
 
 
@@ -314,6 +322,12 @@ UPDATE dev_recipes SET
   cook_minutes             = ?,
   cook_temp_f              = ?,
   cooking_method           = ?,
+    cook2_method             = ?,
+    cook2_minutes            = ?,
+    cook2_temp_f             = ?,
+    cook3_method             = ?,
+    cook3_minutes            = ?,
+    cook3_temp_f             = ?,
   updated_at               = ?
 WHERE recipe_id = ?
 """
@@ -326,6 +340,8 @@ _UPDATE_COLS = (
     "recipe_ingredients_json", "recipe_instructions_json", "nutrition_json",
     "nutrient_version", "retention_model_version", "source_match_version",
     "source_ndb_no", "sections_json", "cook_minutes", "cook_temp_f", "cooking_method",
+    "cook2_method", "cook2_minutes", "cook2_temp_f",
+    "cook3_method", "cook3_minutes", "cook3_temp_f",
 )
 
 
@@ -443,6 +459,12 @@ def main() -> int:
                 payload["cook_minutes"],
                 payload["cook_temp_f"],
                 payload["cooking_method"],
+                payload["cook2_method"],
+                payload["cook2_minutes"],
+                payload["cook2_temp_f"],
+                payload["cook3_method"],
+                payload["cook3_minutes"],
+                payload["cook3_temp_f"],
                 now_utc,
                 payload["recipe_id"],
             ))

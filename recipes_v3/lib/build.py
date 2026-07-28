@@ -823,7 +823,7 @@ def _build_recipe_multi(
         raw_fat += st["raw_fat"]
 
         _parsed_stages = _parse_stages(s.cook_stages) if s.cook_stages else []
-        sections_out.append({
+        section_out = {
             "section_key": sec_key,
             "section_label": s.section_label,
             "prep_method": s.prep_method,
@@ -848,7 +848,10 @@ def _build_recipe_multi(
             "boil_minutes": float(s.boil_stages) if s.boil_stages else 0,
             "cook_stages": [{"tempF": t, "minutes": m} for t, m in _parsed_stages],
             "fill_class": s.filling_class or "",
-        })
+        }
+        if s.primary_entry_stage:
+            section_out["primary_entry_stage"] = s.primary_entry_stage
+        sections_out.append(section_out)
 
     if raw_total_grams <= 0:
         raise RuntimeError(f"Recipe {recipe.recipe_id} has no usable ingredients")
@@ -962,6 +965,12 @@ def _build_recipe_multi(
         "cooking_method_normalized": dish_method_normalized,
         "cook_minutes": recipe.cook_minutes,
         "cook_temp_f": recipe.cook_temp_f,
+        "cook2_method": recipe.cook2_method,
+        "cook2_minutes": recipe.cook2_minutes,
+        "cook2_temp_f": recipe.cook2_temp_f,
+        "cook3_method": recipe.cook3_method,
+        "cook3_minutes": recipe.cook3_minutes,
+        "cook3_temp_f": recipe.cook3_temp_f,
         "yield_factor_water": recipe.yield_factor_water,
         "yield_factor_fat": recipe.yield_factor_fat,
         "yield_factor_protein": recipe.yield_factor_protein,
