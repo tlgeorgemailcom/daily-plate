@@ -683,7 +683,9 @@ export function buildRecipeCommunityV3(
     if (sec.fillClass && sec.fillClass !== '') {
       fillingClass = sec.fillClass;
     } else if (firstPrimary?.fillClass && firstPrimary.fillClass !== '') {
-      fillingClass = firstPrimary.fillClass;
+      // The primary cook fill class is used for physics, but it is not section
+      // metadata. Keep raw prep sections from rehydrating with Cook1's fill class.
+      fillingClass = 'none';
     } else {
       let hintClass = '';
       let hintProtein = 0;
