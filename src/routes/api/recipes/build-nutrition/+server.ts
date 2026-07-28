@@ -41,7 +41,7 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 
 import type { CommunityIngredient } from '$lib/nutrition/types.js';
-import { buildRecipeCommunityV3, type CommunitySectionV3 } from '$lib/nutrition/buildRecipeCommunityV3.js';
+import { buildRecipeCommunityV3, type CommunitySectionV3, type PrimaryCookStage } from '$lib/nutrition/buildRecipeCommunityV3.js';
 import { fetchNutrientsByNdb }    from '$lib/server/nutrition/fetchNutrients.js';
 
 // ── Input validation helpers ──────────────────────────────────────────────────
@@ -88,7 +88,17 @@ export const POST: RequestHandler = async ({ request }) => {
     servings,
     gramsPerServing,
     dishCookMethod,
+    dishCookTempF,
+    dishCookMinutes,
     fillClass,
+    cook2Method,
+    cook2Minutes,
+    cook2TempF,
+    cook2FillClass,
+    cook3Method,
+    cook3Minutes,
+    cook3TempF,
+    cook3FillClass,
   } = body as Record<string, unknown>;
 
   // ── Validate ingredients ────────────────────────────────────────────────────
@@ -118,6 +128,22 @@ export const POST: RequestHandler = async ({ request }) => {
   // ── Validate numeric params ──────────────────────────────────────────────────
   const servingsNum        = Number(servings        ?? 1);
   const gramsPerServingNum = Number(gramsPerServing ?? 100);
+  const primaryCookStages: PrimaryCookStage[] = [
+    {
+      stage: 2,
+      method: typeof cook2Method === 'string' ? cook2Method : undefined,
+      minutes: typeof cook2Minutes === 'number' ? cook2Minutes : undefined,
+      tempF: typeof cook2TempF === 'number' ? cook2TempF : undefined,
+      fillClass: typeof cook2FillClass === 'string' ? cook2FillClass : undefined,
+    },
+    {
+      stage: 3,
+      method: typeof cook3Method === 'string' ? cook3Method : undefined,
+      minutes: typeof cook3Minutes === 'number' ? cook3Minutes : undefined,
+      tempF: typeof cook3TempF === 'number' ? cook3TempF : undefined,
+      fillClass: typeof cook3FillClass === 'string' ? cook3FillClass : undefined,
+    },
+  ];
 
   if (!Number.isFinite(servingsNum) || servingsNum < 1) {
     return json({ error: 'servings must be a positive number' }, { status: 400 });
@@ -147,9 +173,10 @@ export const POST: RequestHandler = async ({ request }) => {
     servingsNum,
     gramsPerServingNum,
     typeof dishCookMethod === 'string' ? dishCookMethod : undefined,
-    undefined,
-    undefined,
+    typeof dishCookTempF === 'number' ? dishCookTempF : undefined,
+    typeof dishCookMinutes === 'number' ? dishCookMinutes : undefined,
     typeof fillClass === 'string' ? fillClass : undefined,
+    primaryCookStages,
   );
 
   return json(result);

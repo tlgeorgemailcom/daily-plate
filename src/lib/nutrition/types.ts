@@ -138,7 +138,7 @@ export type MacroMap = Partial<Record<keyof Omit<NutrientRow, 'ndbNo' | 'longDes
 export interface SkippedIngredient {
   ndbNo: string;
   displayName?: string;   // ingredient name for user-facing error messages
-  reason: 'optional' | 'exempt' | 'missing_ndb';
+  reason: 'optional' | 'exempt' | 'missing_ndb' | 'discarded';
 }
 
 /** Build result for one section */

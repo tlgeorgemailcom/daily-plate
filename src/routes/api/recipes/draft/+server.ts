@@ -1,7 +1,7 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { execute, queryAll, queryOne } from '$lib/server/turso';
-import { buildRecipeCommunityV3, type CommunitySectionV3 } from '$lib/nutrition/buildRecipeCommunityV3';
+import { buildRecipeCommunityV3, type CommunitySectionV3, type PrimaryCookStage } from '$lib/nutrition/buildRecipeCommunityV3';
 import type { CommunityIngredient } from '$lib/nutrition/types';
 import { fetchNutrientsByNdb } from '$lib/server/nutrition/fetchNutrients';
 
@@ -12,7 +12,17 @@ async function calcCommunityNutrition(
   servings: unknown,
   gramsPerServing: unknown,
   dishCookMethod?: unknown,
+  dishCookTempF?: unknown,
+  dishCookMinutes?: unknown,
   fillClass?: unknown,
+  cook2Method?: unknown,
+  cook2Minutes?: unknown,
+  cook2TempF?: unknown,
+  cook2FillClass?: unknown,
+  cook3Method?: unknown,
+  cook3Minutes?: unknown,
+  cook3TempF?: unknown,
+  cook3FillClass?: unknown,
 ): Promise<{ nutritionJson: object | null; plausibilityFlags: string[]; blocked: boolean; missingIngredients: Array<{ ndbNo: string; displayName?: string }> }> {
   const sections = (sectionsRaw as unknown[]).filter(
     (s): s is CommunitySectionV3 =>
@@ -39,6 +49,22 @@ async function calcCommunityNutrition(
   const nutrientMap = await fetchNutrientsByNdb(ndbNos);
   const servingsNum        = Math.max(1, Number(servings ?? 1));
   const gramsPerServingNum = Math.max(1, Number(gramsPerServing ?? 100));
+  const primaryCookStages: PrimaryCookStage[] = [
+    {
+      stage: 2,
+      method: typeof cook2Method === 'string' ? cook2Method : undefined,
+      minutes: typeof cook2Minutes === 'number' ? cook2Minutes : undefined,
+      tempF: typeof cook2TempF === 'number' ? cook2TempF : undefined,
+      fillClass: typeof cook2FillClass === 'string' ? cook2FillClass : undefined,
+    },
+    {
+      stage: 3,
+      method: typeof cook3Method === 'string' ? cook3Method : undefined,
+      minutes: typeof cook3Minutes === 'number' ? cook3Minutes : undefined,
+      tempF: typeof cook3TempF === 'number' ? cook3TempF : undefined,
+      fillClass: typeof cook3FillClass === 'string' ? cook3FillClass : undefined,
+    },
+  ];
 
   const result = buildRecipeCommunityV3(
     sections,
@@ -47,9 +73,10 @@ async function calcCommunityNutrition(
     servingsNum,
     gramsPerServingNum,
     typeof dishCookMethod === 'string' ? dishCookMethod : undefined,
-    undefined,
-    undefined,
+    typeof dishCookTempF === 'number' ? dishCookTempF : undefined,
+    typeof dishCookMinutes === 'number' ? dishCookMinutes : undefined,
     typeof fillClass === 'string' ? fillClass : undefined,
+    primaryCookStages,
   );
 
   const p100  = result.per100g;
@@ -187,7 +214,17 @@ export const POST: RequestHandler = async ({ request }) => {
         draftData?.servings,
         draftData?.gramsPerServing ?? 100,
         draftData?.cookingMethod,
+        draftData?.cookTempF,
+        draftData?.cookMinutes,
         draftData?.fillClass,
+        draftData?.cook2Method,
+        draftData?.cook2Minutes,
+        draftData?.cook2TempF,
+        draftData?.cook2FillClass,
+        draftData?.cook3Method,
+        draftData?.cook3Minutes,
+        draftData?.cook3TempF,
+        draftData?.cook3FillClass,
       );
       if (comm.blocked) {
         return json({ error: 'missing_ndb', missingIngredients: comm.missingIngredients }, { status: 422 });

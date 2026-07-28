@@ -435,12 +435,63 @@ def _build_recipe_multi(
     sections_by_key = {s.section_key: s for s in sections}
     primary_method_raw = recipe.cooking_method
     primary_method_norm = normalize_cooking_method(primary_method_raw) if primary_method_raw not in ("", "raw", "multi") else "raw"
+    primary_stage_rows = [
+        {
+            "stage": 1,
+            "method_raw": recipe.cooking_method,
+            "method_norm": primary_method_norm,
+            "minutes": recipe.cook_minutes,
+            "temp_f": recipe.cook_temp_f,
+            "fill_class": recipe.fill_class,
+        },
+        {
+            "stage": 2,
+            "method_raw": recipe.cook2_method,
+            "method_norm": normalize_cooking_method(recipe.cook2_method) if recipe.cook2_method else "raw",
+            "minutes": recipe.cook2_minutes,
+            "temp_f": recipe.cook2_temp_f,
+            "fill_class": recipe.cook2_fill_class,
+        },
+        {
+            "stage": 3,
+            "method_raw": recipe.cook3_method,
+            "method_norm": normalize_cooking_method(recipe.cook3_method) if recipe.cook3_method else "raw",
+            "minutes": recipe.cook3_minutes,
+            "temp_f": recipe.cook3_temp_f,
+            "fill_class": recipe.cook3_fill_class,
+        },
+    ]
+    primary_stages = [s for s in primary_stage_rows if s["method_norm"] != "raw"]
     use_primary_cook_for_raw_sections = (
         primary_method_norm != "raw"
         and all(normalize_cooking_method(s.cook_method) == "raw" for s in sections if s.prep_method != "finish")
     )
 
+    def _primary_entry_stage(section: Section) -> int:
+        try:
+            value = int(float(section.primary_entry_stage or "1"))
+        except ValueError:
+            return 1
+        return 1 if value < 2 else min(value, 3)
+
+    def _active_primary_stages(section: Section) -> list[dict[str, Any]]:
+        entry_stage = _primary_entry_stage(section)
+        return [s for s in primary_stages if s["stage"] >= entry_stage]
+
+    def _uses_primary_timeline(section: Section) -> bool:
+        if section.prep_method == "finish" or not primary_stages:
+            return False
+        method_norm = normalize_cooking_method(section.cook_method)
+        return _primary_entry_stage(section) > 1 or use_primary_cook_for_raw_sections or method_norm in {s["method_norm"] for s in primary_stages}
+
     def _primary_stages(section: Section) -> list[tuple[int, int]]:
+        if _uses_primary_timeline(section):
+            stages = []
+            for stage in _active_primary_stages(section):
+                if stage["temp_f"] and stage["minutes"]:
+                    stages.append((stage["temp_f"], stage["minutes"]))
+            if stages:
+                return stages
         if section.cook_stages:
             return _parse_stages(section.cook_stages)
         if use_primary_cook_for_raw_sections and recipe.cook_temp_f and recipe.cook_minutes:
@@ -448,10 +499,14 @@ def _build_recipe_multi(
         return []
 
     def _primary_fill_class(section: Section) -> str:
-        if recipe.fill_class:
-            return recipe.fill_class
         if section.filling_class:
             return section.filling_class
+        if _uses_primary_timeline(section):
+            for stage in _active_primary_stages(section):
+                if stage["fill_class"]:
+                    return stage["fill_class"]
+        if recipe.fill_class and _primary_entry_stage(section) == 1:
+            return recipe.fill_class
         if use_primary_cook_for_raw_sections and primary_method_norm == "baked":
             text = f"{section.section_key} {section.section_label}".lower()
             if any(token in text for token in ("crust", "pastry", "shell", "wrapper")):

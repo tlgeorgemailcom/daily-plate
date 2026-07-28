@@ -204,6 +204,14 @@ export interface CommunitySectionV3 extends CommunitySection {
   fillClass?: string;
 }
 
+export interface PrimaryCookStage {
+  stage: 2 | 3;
+  method?: string;
+  tempF?: number;
+  minutes?: number;
+  fillClass?: string;
+}
+
 // ── Main function ─────────────────────────────────────────────────────────────
 
 /**
@@ -239,6 +247,7 @@ export function buildRecipeCommunityV3(
   dishCookTempF?: number,
   dishCookMinutes?: number,
   primaryFillClass?: string,
+  primaryCookStages: PrimaryCookStage[] = [],
 ): BuildResult {
   // ── Recipe-level (top bar) primary cook parameters ──────────────────────────
   // The top bar represents the final assembled-bake or primary cook applied to
@@ -252,6 +261,39 @@ export function buildRecipeCommunityV3(
   const primaryIsBoilCovered = rawDish === 'boil covered' || rawDish === 'boil_covered' || rawDish === 'boiled covered' || rawDish === 'boiled_covered' || rawDish === 'boil (covered)' || rawDish === 'boiled (covered)';
   const primaryCookTempF = methodStovetopTempF(rawDish);
   const primaryCookLidOn = rawDish === 'braise' || primaryIsBoilCovered;
+  const primaryTimeline = [
+    {
+      stage: 1,
+      methodRaw: dishCookMethod,
+      cookMethod: primaryCookMethod,
+      tempF: dishCookTempF,
+      minutes: dishCookMinutes,
+      fillClass: primaryFillClass,
+    },
+    ...primaryCookStages.map(stage => {
+      const methodRaw = stage.method;
+      return {
+        stage: stage.stage,
+        methodRaw,
+        cookMethod: methodRaw ? mapDishMethodToCookingMethod(methodRaw) : undefined,
+        tempF: stage.tempF,
+        minutes: stage.minutes,
+        fillClass: stage.fillClass,
+      };
+    }),
+  ].filter(stage => stage.cookMethod && stage.cookMethod !== 'raw');
+
+  function primaryEntryStage(section: CommunitySectionV3): number {
+    const raw = section.primaryEntryStage ?? '1';
+    const parsed = Number.parseInt(String(raw), 10);
+    if (!Number.isFinite(parsed)) return 1;
+    return Math.max(1, Math.min(3, parsed));
+  }
+
+  function activePrimaryTimeline(section: CommunitySectionV3) {
+    const entryStage = primaryEntryStage(section);
+    return primaryTimeline.filter(stage => stage.stage >= entryStage);
+  }
 
   const sectionResults: SectionBuildResult[] = [];
   const globalSkipped: SkippedIngredient[]   = [];
@@ -298,16 +340,23 @@ export function buildRecipeCommunityV3(
   // ── Section loop ─────────────────────────────────────────────────────────────
   for (const sec of allSections) {
     const bucket = buckets.get(sec.sectionKey) ?? [];
+    const activePrimary = activePrimaryTimeline(sec);
+    const firstPrimary = activePrimary[0];
 
-    // effectiveCookMethod = top bar’s method (if set) OR section’s own cook_method.
-    // This represents the final/assembled cook applied to the whole dish.
-    const effectiveCookMethod: CookingMethod = primaryCookMethod ?? mapDishMethodToCookingMethod(sec.cookMethod);
+    // effectiveCookMethod = this section's first active primary stage OR its own cook_method.
+    // Sections entering at Cook2/Cook3 are not back-applied to earlier primary stages.
+    const effectiveCookMethod: CookingMethod = firstPrimary?.cookMethod ?? mapDishMethodToCookingMethod(sec.cookMethod);
     // Stovetop temperature for evaporation model when effectiveCookMethod=‘boiled’.
     const secCookStr = sec.cookMethod.toLowerCase();
     const isBakeCovered = secCookStr === 'bake covered' || secCookStr === 'bake_covered' || secCookStr === 'baked covered';
     const isBoilCovered = secCookStr === 'boil covered' || secCookStr === 'boil_covered' || secCookStr === 'boiled covered' || secCookStr === 'boiled_covered' || secCookStr === 'boil (covered)' || secCookStr === 'boiled (covered)';
-    const effectiveTempF = primaryCookMethod ? primaryCookTempF : methodStovetopTempF(secCookStr);
-    const effectiveLidOn = primaryCookMethod ? primaryCookLidOn : (secCookStr === 'braise' || isBakeCovered || isBoilCovered);
+    const firstPrimaryRaw = firstPrimary?.methodRaw?.trim().toLowerCase().replace(/_/g, ' ') ?? '';
+    const firstPrimaryIsBoilCovered = firstPrimaryRaw === 'boil covered' || firstPrimaryRaw === 'boiled covered' || firstPrimaryRaw === 'boil (covered)' || firstPrimaryRaw === 'boiled (covered)';
+    const firstPrimaryIsBakeCovered = firstPrimaryRaw === 'bake covered' || firstPrimaryRaw === 'baked covered';
+    const effectiveTempF = firstPrimary ? methodStovetopTempF(firstPrimaryRaw) : methodStovetopTempF(secCookStr);
+    const effectiveLidOn = firstPrimary
+      ? (firstPrimaryRaw === 'braise' || firstPrimaryIsBoilCovered || firstPrimaryIsBakeCovered)
+      : (secCookStr === 'braise' || isBakeCovered || isBoilCovered);
 
     // Pre-step: section’s own prepMethod fires BEFORE the primary cook.
     // e.g. simmer the apple filling 5 min, then bake the assembled pie 52 min.
@@ -343,7 +392,7 @@ export function buildRecipeCommunityV3(
         const syntheticNr = { ndbNo: ing.ndbNo, longDesc: ing.displayName ?? '', fdGrpCd: '' } as NutrientRow;
         for (const [colName, v] of Object.entries(ing.componentPer100g)) {
           const nrKey = colToKey[colName] ?? colName;
-          (syntheticNr as Record<string, unknown>)[nrKey] = v;
+          (syntheticNr as unknown as Record<string, unknown>)[nrKey] = v;
         }
         active.push({ grams: effectiveGrams, nutrients: syntheticNr });
         continue;
@@ -356,6 +405,39 @@ export function buildRecipeCommunityV3(
     if (active.length === 0) continue;
 
     const isWrapped = wrappedKeys.has(sec.sectionKey);
+    const HINT_COOK_MAP: Record<string, string[]> = {
+      'pan_grilled_chicken': ['sauteed', 'sautéed', 'stir-fried', 'pan sear', 'pan seared', 'fried', 'grilled', 'broil', 'broiled'],
+      'fried_chicken':       ['fried', 'deep-fried'],
+      'fried_breaded_shrimp': ['fried', 'deep-fried'],
+      'fried_breaded_chicken_tender': ['fried', 'deep-fried'],
+      'fried_breaded_fish_fillet': ['fried', 'deep-fried'],
+      'baked_pork':          ['baked', 'par-baked'],
+      'braised_beef':        ['braise', 'braised', 'boiled', 'simmer', 'sub-simmer'],
+      'fried_meat':          ['fried', 'deep-fried', 'sauteed', 'sautéed', 'stir-fried', 'pan sear', 'pan seared'],
+    };
+    const rawCookMethod = (firstPrimary?.methodRaw ?? sec.cookMethod ?? 'raw').trim().toLowerCase().replace(/_/g, ' ');
+    let fillClass: string;
+    if (sec.fillClass && sec.fillClass !== '') {
+      fillClass = sec.fillClass;
+    } else if (firstPrimary?.fillClass && firstPrimary.fillClass !== '') {
+      fillClass = firstPrimary.fillClass;
+    } else {
+      let hintClass = '';
+      let hintProtein = 0;
+      for (const ing of active) {
+        const hint = ing.nutrients.fillClassHint;
+        if (!hint) continue;
+        const validMethods = HINT_COOK_MAP[hint] ?? [];
+        if (validMethods.includes(rawCookMethod)) {
+          const protein = (ing.nutrients.protein ?? 0) * (ing.grams / 100);
+          if (protein > hintProtein) {
+            hintProtein = protein;
+            hintClass = hint;
+          }
+        }
+      }
+      fillClass = hintClass || inferFillingClass(active, isWrapped);
+    }
 
     // ── Water yield ────────────────────────────────────────────────────────────
     // Priority 1: locked value from Python pipeline (sections_json).
@@ -375,48 +457,13 @@ export function buildRecipeCommunityV3(
       // fillClass: prefer explicit metadata; fall back to fill_class_hint from
       // dominant protein ingredient; then inferFillingClass() for pastry detection.
       //
-      // HINT_COOK_MAP: which cook methods make a fill_class_hint valid.
-      // A pan_grilled_chicken hint only applies when the section is actually pan-seared
-      // or fried — not when it is baked or braised.
-      const HINT_COOK_MAP: Record<string, string[]> = {
-        'pan_grilled_chicken': ['sauteed', 'sautéed', 'stir-fried', 'pan sear', 'pan seared', 'fried', 'grilled', 'broil', 'broiled'],
-        'fried_chicken':       ['fried', 'deep-fried'],
-        'fried_breaded_shrimp': ['fried', 'deep-fried'],
-        'fried_breaded_chicken_tender': ['fried', 'deep-fried'],
-        'fried_breaded_fish_fillet': ['fried', 'deep-fried'],
-        'baked_pork':          ['baked', 'par-baked'],
-        'braised_beef':        ['braise', 'braised', 'boiled', 'simmer', 'sub-simmer'],
-        'fried_meat':          ['fried', 'deep-fried', 'sauteed', 'sautéed', 'stir-fried', 'pan sear', 'pan seared'],
-      };
-      const rawCookMethod = (sec.cookingMethod ?? 'raw').trim().toLowerCase().replace(/_/g, ' ');
-      let fillClass: string;
-      if (primaryCookMethod && primaryFillClass && primaryFillClass !== '') {
-        fillClass = primaryFillClass;
-      } else if (sec.fillClass && sec.fillClass !== '') {
-        fillClass = sec.fillClass;
-      } else {
-        // Check fill_class_hint from ingredients — use highest-protein ingredient's hint
-        // when the section cook method matches the hint's intended context.
-        let hintClass = '';
-        let hintProtein = 0;
-        for (const ing of active) {
-          const hint = ing.nutrients.fillClassHint;
-          if (!hint) continue;
-          const validMethods = HINT_COOK_MAP[hint] ?? [];
-          if (validMethods.includes(rawCookMethod)) {
-            const protein = (ing.nutrients.protein ?? 0) * (ing.grams / 100);
-            if (protein > hintProtein) {
-              hintProtein = protein;
-              hintClass = hint;
-            }
-          }
-        }
-        fillClass = hintClass || inferFillingClass(active, isWrapped);
-      }
-
       // Build oven stages from section metadata (same logic as V1).
       const stages: Array<[number, number]> =
-        sec.stages && sec.stages.length > 0
+        activePrimary.length > 0
+          ? activePrimary
+              .filter(stage => typeof stage.tempF === 'number' && typeof stage.minutes === 'number' && stage.tempF > 0 && stage.minutes > 0)
+              .map(stage => [stage.tempF!, stage.minutes!] as [number, number])
+        : sec.stages && sec.stages.length > 0
           ? sec.stages
               .filter(st => st.tempF > 0 && st.minutes > 0)
               .map(st => [st.tempF, st.minutes] as [number, number])
@@ -633,10 +680,10 @@ export function buildRecipeCommunityV3(
     // Infer fillClass for the result record (for plausibility + display) —
     // same hint-first logic as above.
     let fillingClass: string;
-    if (primaryCookMethod && primaryFillClass && primaryFillClass !== '') {
-      fillingClass = primaryFillClass;
-    } else if (sec.fillClass && sec.fillClass !== '') {
+    if (sec.fillClass && sec.fillClass !== '') {
       fillingClass = sec.fillClass;
+    } else if (firstPrimary?.fillClass && firstPrimary.fillClass !== '') {
+      fillingClass = firstPrimary.fillClass;
     } else {
       let hintClass = '';
       let hintProtein = 0;
