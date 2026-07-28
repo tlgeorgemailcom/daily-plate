@@ -37,7 +37,7 @@ There is no "final cook" phase in the pipeline. If a recipe has a final assembly
 |---|---|
 | Sausage browned then combined into gravy | Two sections: `sausage` (fried) + `gravy` (simmer). Each section gets its own retention. |
 | Eggs poached, muffin grilled, sauce simmered, assembled cold | Four sections, each with their own cook method. No "assembly cook". |
-| Quiche: crust pressed + filling mixed + whole thing baked | Two sections: `crust` (baked, with temp:time) + `filling` (raw). The bake applies to the crust section. Filling's assembly involves no heat. |
+| Quiche: crust pressed + filling mixed + whole thing baked | Two sections authored as assembly-only (`cook_method=raw`, no section fill class) plus recipe-level `cooking_method=baked`, `cook_temp_f`, and `cook_minutes`. The top-bar primary cook supplies the bake heat; sections remain unheated in the form. |
 | Burrito: tortilla pan-seared + beans heated + cheese cold | Three sections: `tortilla` (pan seared) + `beans` (pan seared) + `cheese` (raw). |
 | Stew: all ingredients cooked together | One section, cook_method=simmer or braise, with the stew's total time. |
 
@@ -306,9 +306,9 @@ For **mixed or cooking-liquid sections** (an `@` recipe ref shares a section wit
 
 For baked dishes where the assembly steps involve no heat (press crust, mix filling) and the entire bake happens as a single final step:
 
-- **Crust section**: keep `cm=baked`, `stages=375:37` (or whatever temp:time). This single non-raw section drives the primary cook bar → shows "Bake | 37 min | 375°F".
-- **Filling section**: set `cm=raw`, clear `cook_stages`. This shows "no heat" in the section header.
-- Result: 1 non-raw section → multi-section blank logic does NOT fire → primary cook bar is populated from the crust section. ✅
+- **All assembly sections**: set `cm=raw`, clear section `fill_class`, and clear section `cook_stages`. The sections show "no heat" in the section headers.
+- **Recipe row**: set `cooking_method=baked`, `cook_temp_f=<oven temp>`, and `cook_minutes=<minutes>`. The primary cook bar shows "Bake | N min | T°F".
+- **Build behavior**: the Python and TypeScript builders apply the recipe-level primary cook as the effective heat for all raw non-finish sections. Section metadata remains raw/none for the form; physics derives water yield from the effective primary cook.
 
 This pattern applies to any dish where: multiple ingredient groups exist, but only the combined bake/cook matters as the primary step. Examples: quiches, casseroles, stratas, gratins, lasagnas.
 
@@ -885,12 +885,12 @@ The primary cook bar (`cookingMethod`, `cookMinutes`, `cookTempF`) is blanked au
 For recipes where all sections are assembled raw but the whole dish applies a single primary heat:
 
 1. Set every section's `cook_method` to `'raw'` in `recipe_sections.csv`. The sections will display as "no heat" in the prep headers — this is correct. The sections are pre-assembled before the oven; no individual section is cooked separately.
-2. Set the recipe's `cooking_method` to the actual method (e.g. `baked`) in `recipes.csv`.
-3. Add `cook_stages` (e.g. `375:37`) to whichever section carries the oven time/temp — typically the crust or the first section listed. The pipeline stores these stages in the section JSON so the form can read them back.
-4. In `build.py` `_build_recipe_multi()`: the `elif` branch fires when all sections are raw AND `recipe.cooking_method` is a non-raw, non-empty, non-multi value — it sets `dish_method_label = recipe.cooking_method`, which the API returns as `data.cookMethod`.
-5. The form's quiche branch picks up `cookingMethod='Bake'` (not raw/empty), finds `eligibleSecs2` with stages, and populates `cookMinutes` and `cookTempF`.
+2. Clear every assembly section's `fill_class`. A raw section should not show a pastry/custard/etc. fill class in the form.
+3. Set the recipe's `cooking_method` to the actual method (e.g. `baked`) in `recipes.csv`.
+4. Set `cook_temp_f` and `cook_minutes` directly in `recipes.csv`; these drive the primary cook bar and provide the effective stages for Python physics when all non-finish sections are raw.
+5. In `build.py` `_build_recipe_multi()`: when all non-finish sections are raw and `recipe.cooking_method` is a non-raw primary method, the builder uses that primary method as the effective cook for retention and yield while preserving raw section metadata in `sections_json`.
 
-**Key invariant:** a quiche-pattern recipe must have exactly ONE section with non-empty `cook_stages` (so `eligibleSecs2.length === 1`). If two sections both carry stages the branch does not fire and time/temp will not be derived.
+**Key invariant:** quiche-pattern section metadata remains raw/no fill class for display. The top bar stores the primary cook method, time, and temperature.
 
 ---
 

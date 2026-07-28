@@ -433,6 +433,28 @@ def _build_recipe_multi(
     matches one of the section_keys before this function is called.
     """
     sections_by_key = {s.section_key: s for s in sections}
+    primary_method_raw = recipe.cooking_method
+    primary_method_norm = normalize_cooking_method(primary_method_raw) if primary_method_raw not in ("", "raw", "multi") else "raw"
+    use_primary_cook_for_raw_sections = (
+        primary_method_norm != "raw"
+        and all(normalize_cooking_method(s.cook_method) == "raw" for s in sections if s.prep_method != "finish")
+    )
+
+    def _primary_stages(section: Section) -> list[tuple[int, int]]:
+        if section.cook_stages:
+            return _parse_stages(section.cook_stages)
+        if use_primary_cook_for_raw_sections and recipe.cook_temp_f and recipe.cook_minutes:
+            return [(recipe.cook_temp_f, recipe.cook_minutes)]
+        return []
+
+    def _primary_fill_class(section: Section) -> str:
+        if section.filling_class:
+            return section.filling_class
+        if use_primary_cook_for_raw_sections and primary_method_norm == "baked":
+            text = f"{section.section_key} {section.section_label}".lower()
+            if any(token in text for token in ("crust", "pastry", "shell", "wrapper")):
+                return "pastry"
+        return "none"
 
     # Per-section accumulators
     sec_state: dict[str, dict[str, Any]] = {
@@ -645,12 +667,16 @@ def _build_recipe_multi(
 
         s = st["section"]
         method = normalize_cooking_method(s.cook_method)
+        uses_primary_cook = use_primary_cook_for_raw_sections and method == "raw" and s.prep_method != "finish"
+        effective_method = primary_method_norm if uses_primary_cook else method
         # Two-pass retention: if prep_method is a real cook step (not raw/empty)
         # AND different from cook_method, apply prep retention first, then
         # cook_method retention. Macros (in _MACRO_SET) are handled via yield
         # factors — unaffected. Only micronutrients receive the chained factors.
         _prep_norm = normalize_cooking_method(s.prep_method) if s.prep_method else 'raw'
-        _has_prep = _prep_norm not in ('raw',) and _prep_norm != method
+        _has_prep = _prep_norm not in ('raw',) and _prep_norm != effective_method
+        _stages_for_yield = _primary_stages(s)
+        _filling_class_for_yield = _primary_fill_class(s)
         # ── Yield factor for water ─────────────────────────────────────────
         # Priority order:
         #   1. Submersion-boil absorption model — fires when cook_method=boiled
@@ -670,15 +696,14 @@ def _build_recipe_multi(
         # boil_yfw model and yield yfw≈1.0, ignoring the long-simmer evaporation).
         # The binding coefficient captures the net 4–24h reduction; individual
         # vegetable water retention is irrelevant at the stock scale.
-        if s.filling_class in STOCK_EXTRACTION and (s.cook_stages or s.boil_stages):
+        if _filling_class_for_yield in STOCK_EXTRACTION and (_stages_for_yield or s.boil_stages):
             boil_min = float(s.boil_stages) if s.boil_stages else 0.0
-            stages   = _parse_stages(s.cook_stages) if s.cook_stages else []
-            _is_boil_covered = s.cook_method in ('boil covered', 'boil_covered', 'boil (covered)', 'boiled covered', 'boiled_covered', 'boiled (covered)')
-            _boil_temp = _method_stovetop_temp(s.cook_method)
-            yfw = calc_yield_water(stages, st["raw_water"], s.filling_class,
+            _is_boil_covered = (primary_method_raw if uses_primary_cook else s.cook_method) in ('boil covered', 'boil_covered', 'boil (covered)', 'boiled covered', 'boiled_covered', 'boiled (covered)')
+            _boil_temp = _method_stovetop_temp(primary_method_raw if uses_primary_cook else s.cook_method)
+            yfw = calc_yield_water(_stages_for_yield, st["raw_water"], _filling_class_for_yield,
                                    boil_minutes=boil_min, boil_temp_f=_boil_temp,
                                    boil_covered=_is_boil_covered)
-        elif method == 'boiled' and st["absorbers"]:
+        elif effective_method == 'boiled' and st["absorbers"]:
             total_absorber_g = sum(g for g, _ in st["absorbers"])
             weighted_factor  = sum(g * f for g, f in st["absorbers"]) / total_absorber_g
             dry_non_water_g  = st["raw_total"] - st["raw_water"]
@@ -687,30 +712,29 @@ def _build_recipe_multi(
                 yfw = retained_water_g / st["raw_water"]
             else:
                 yfw = 1.0
-        elif s.filling_class and (s.cook_stages or s.boil_stages):
+        elif _filling_class_for_yield and (_stages_for_yield or s.boil_stages):
             # Explicit fill_class takes priority over the per-vegetable boil_yfw model.
             # If the recipe author set a fill_class (e.g. simmer_sauce), use the physics
             # evaporation model rather than the ingredient-level vegetable retention
             # fallback. This ensures stewed dishes with okra/other absorbing veg still
             # correctly reduce under a simmer_sauce binding. (July 2026)
             boil_min = float(s.boil_stages) if s.boil_stages else 0.0
-            stages   = _parse_stages(s.cook_stages) if s.cook_stages else []
-            _boil_method = s.prep_method if s.prep_method and _prep_norm not in ('raw',) else s.cook_method
+            _boil_method = s.prep_method if s.prep_method and _prep_norm not in ('raw',) else (primary_method_raw if uses_primary_cook else s.cook_method)
             _is_bake_covered = _boil_method in ('bake covered', 'bake_covered', 'baked covered')
             _is_boil_covered = _boil_method in ('boil covered', 'boil_covered', 'boil (covered)', 'boiled covered', 'boiled_covered', 'boiled (covered)')
             _boil_temp = _method_stovetop_temp(
                 _boil_method,
-                bake_covered_temp=(stages[0][0] if stages else 350.0) if _is_bake_covered else None,
+                bake_covered_temp=(_stages_for_yield[0][0] if _stages_for_yield else 350.0) if _is_bake_covered else None,
             )
             _boil_covered = _boil_method in ('braise', 'braised') or _is_bake_covered or _is_boil_covered
-            yfw = calc_yield_water(stages, st["raw_water"], s.filling_class,
+            yfw = calc_yield_water(_stages_for_yield, st["raw_water"], _filling_class_for_yield,
                                    boil_minutes=boil_min, boil_temp_f=_boil_temp,
                                    boil_covered=_boil_covered)
         elif s.yield_factor_water is not None:
             # Explicit lock takes priority over the ingredient-level boil_yfw fallback.
             # Locks are set on unconverted sections pending fill_class + stages authoring.
             yfw = s.yield_factor_water
-        elif method == 'boiled' and st["boil_yfw_ingredients"]:
+        elif effective_method == 'boiled' and st["boil_yfw_ingredients"]:
             # Fallback per-vegetable water-retention model — fires only when no
             # explicit fill_class is set. (Moved below fill_class check July 2026.)
             total_water = st["raw_water"]
@@ -773,7 +797,7 @@ def _build_recipe_multi(
         # Stock extraction model: when fill_class is a stock class, override
         # yfp/yff/yfc/yfo with calibrated extraction constants. This replaces
         # the load.py default of 1.0 for cleared CSV lock columns.
-        _stock_ex = STOCK_EXTRACTION.get(s.filling_class or "") if not _strained else None
+        _stock_ex = STOCK_EXTRACTION.get(_filling_class_for_yield or "") if not _strained else None
         if _stock_ex:
             yff   = _stock_ex["yff"]
             yfp   = _stock_ex["yfp"]
@@ -795,9 +819,9 @@ def _build_recipe_multi(
             elif n in _MACRO_SET:
                 retained_S[n] = sums_S[n]
             elif n in _FAT_SOLUBLE_NUTRIENTS:
-                retained_S[n] = sums_S[n] * (get_retention(_prep_norm, n) if _has_prep else 1.0) * get_retention(method, n) * yfo_S
+                retained_S[n] = sums_S[n] * (get_retention(_prep_norm, n) if _has_prep else 1.0) * get_retention(effective_method, n) * yfo_S
             else:
-                retained_S[n] = sums_S[n] * (get_retention(_prep_norm, n) if _has_prep else 1.0) * get_retention(method, n)
+                retained_S[n] = sums_S[n] * (get_retention(_prep_norm, n) if _has_prep else 1.0) * get_retention(effective_method, n)
             retained_dish[n] += retained_S[n]
 
         # When fat, protein, or carbs drain out (yff/yfp/yfc < 1), patch
@@ -812,7 +836,7 @@ def _build_recipe_multi(
             retained_dish["Energy_KCal"] += atwater_S - retained_S["Energy_KCal"]
             retained_S["Energy_KCal"] = atwater_S
 
-        sugar_retention_S = get_retention(method, "SugarsTotal")
+        sugar_retention_S = get_retention(effective_method, "SugarsTotal")
         retained_added_dish += st["added_sugar"] * sugar_retention_S
         retained_intrinsic_dish += st["intrinsic_sugar"] * sugar_retention_S
 
@@ -830,6 +854,7 @@ def _build_recipe_multi(
             "cook_method": s.cook_method,
             "cooking_method": s.cook_method,  # backward-compat
             "cooking_method_normalized": method,
+            "effective_cooking_method_normalized": effective_method,
             "yield_factor_water": yfw,
             "yield_factor_fat": yff,
             "yield_factor_protein": yfp,
