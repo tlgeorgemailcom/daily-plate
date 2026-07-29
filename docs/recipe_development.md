@@ -240,6 +240,7 @@ Without a `fill_class`, `calc_yield_water` returns `yfw=1.0` for all stovetop se
 | Garlic, onion, shallot, sofrito, or sliced mushroom aromatic sauté | `sauteed_aromatic` |
 | Larger sautéed vegetable pieces (broccoli florets, green beans, zucchini chunks, etc.) | Calibrate a distinct vegetable-specific fill class before use |
 | Ground beef, sausage (fat stays or drains) | `fried_meat` |
+| Pre-cooked sliced ham browned briefly | `fill_class=none` — already-cooked cured ham used for quick browning should not use `fried_meat`; set explicitly to `none` unless a ham-specific moisture-loss class is calibrated |
 | Chicken breast, fish fillet (pan seared) | `pan_grilled_chicken` |
 | Thin steak (pan seared, skirt/flank-style) | `pan_grilled_steak` |
 | Thick steak (pan seared) | Calibrate a distinct steak-specific fill class before use |
