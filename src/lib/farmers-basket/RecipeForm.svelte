@@ -5,7 +5,7 @@
   import FoodIcon from '$lib/farmers-basket/FoodIcon.svelte';
   import { FOODS } from '$lib/data/food-portions';
   import type { Food as FoodData } from '$lib/data/food-portions';
-  import { BINDING } from '$lib/nutrition/yieldCalc';
+  import { BINDING, FIXED_YIELD_WATER } from '$lib/nutrition/yieldCalc';
 
   /** Extends FoodData with optional recipe-result fields returned by /api/recipes/food-search */
   type RecipeSearchItem = FoodData & {
@@ -341,8 +341,28 @@
   // Fill class keys are persisted pipeline identifiers. Keep them stable, but
   // show human labels because this control may eventually be exposed to users.
   const FILL_CLASS_LABELS: Record<string, string> = {
+    dense_fruit: 'dense baked fruit filling',
+    strudel_fruit: 'wrapped strudel fruit filling',
+    thickened_fruit: 'thickened fruit filling',
+    mincemeat: 'mincemeat fruit filling',
+    moderate_fruit: 'moderate-moisture fruit filling',
+    syrup_custard: 'syrup custard filling',
+    vegetable_custard: 'vegetable custard filling',
+    dairy_custard: 'dairy custard filling',
+    starch_custard: 'starch-thickened custard',
+    cake_batter: 'cake batter',
+    pastry: 'pastry or pie crust',
+    crumb_crust: 'crumb crust',
+    none: 'none / no evaporation',
+    simmer_sauce: 'simmered sauce or gravy',
+    sauteed_aromatic: 'sautéed aromatics',
     pan_grilled_batter: 'pan-seared batter or bread',
     pan_grilled_masa: 'pan-seared masa cake',
+    fried_meat: 'fried or seared ground meat',
+    fried_ground_beef: 'pan-browned ground beef crumbles',
+    fried_potato: 'fried shredded potato',
+    deep_fried_potato: 'deep-fried potato strips',
+    deep_fried_battered_ring: 'deep-fried battered rings',
     grilled_batter: 'waffle-iron batter',
     pan_grilled_chicken: 'pan-seared chicken or fish fillet',
     pan_grilled_steak: 'pan-seared thin steak',
@@ -350,6 +370,27 @@
     fried_breaded_shrimp: 'breaded fried shrimp',
     fried_breaded_chicken_tender: 'breaded fried chicken tender',
     fried_breaded_fish_fillet: 'breaded fried fish fillet',
+    fried_battered_vegetable: 'battered fried vegetable pieces',
+    braised_leafy_vegetable: 'braised leafy greens',
+    glazed_vegetable: 'glazed vegetables',
+    casserole_baked: 'baked casserole',
+    roasted_vegetable: 'roasted vegetables',
+    stuffed_mushroom: 'stuffed mushrooms',
+    duxelles_mushroom: 'mushroom duxelles',
+    wellington_pastry: 'pastry-wrapped Wellington',
+    thin_pizza_crust: 'thin pizza crust',
+    pizza_cheese_topping: 'pizza cheese topping',
+    simmered_vegetable: 'gently simmered vegetables',
+    wilt_squeezed_spinach: 'wilted and squeezed spinach',
+    scalded_squeezed_spinach: 'scalded and squeezed spinach',
+    baked_pork: 'slow-roasted pork shoulder',
+    braised_beef: 'braised beef brisket',
+    sub_simmered_beef: 'sub-simmered beef in liquid',
+    chicken_stock: 'chicken or beef stock extraction',
+    bone_broth: 'bone broth extraction',
+    fish_stock: 'fish stock extraction',
+    vegetable_stock: 'vegetable stock extraction',
+    poached_egg: 'poached egg from raw whole egg',
   };
 
   function formatFillClassLabel(key: string): string {
@@ -357,10 +398,20 @@
       ?? key.replace(/^pan_grilled_/, 'pan_seared_').replace(/^grilled_batter$/, 'waffle_iron_batter').replace(/_/g, ' ');
   }
 
-  const FILL_CLASS_OPTIONS = Object.entries(BINDING).map(([key, coefficient]) => ({
-    key,
-    label: `${formatFillClassLabel(key)} (${coefficient.toFixed(3)})`,
-  }));
+  const FILL_CLASS_OPTIONS = [
+    ...Object.entries(BINDING).map(([key, coefficient]) => ({
+      key,
+      label: `${formatFillClassLabel(key)} (binding ${coefficient.toFixed(3)})`,
+    })),
+    ...Object.entries(FIXED_YIELD_WATER).map(([key, yieldWater]) => ({
+      key,
+      label: `${formatFillClassLabel(key)} (fixed yfw ${yieldWater.toFixed(3)})`,
+    })),
+  ];
+
+  function hasKnownFillClass(key: string): boolean {
+    return key in BINDING || key in FIXED_YIELD_WATER;
+  }
   // Display labels for prep methods — stored values are clean identifiers;
   // UI annotations clarify open-pot vs covered assumption for the water model.
   const PREP_METHOD_DISPLAY: Record<string, string> = {
@@ -3022,7 +3073,7 @@
                   class="form-input"
                 >
                   <option value="">— none —</option>
-                  {#if sec.fillClass && !(sec.fillClass in BINDING)}
+                  {#if sec.fillClass && !hasKnownFillClass(sec.fillClass)}
                     <option value={sec.fillClass}>{sec.fillClass} — unknown current value</option>
                   {/if}
                   {#each FILL_CLASS_OPTIONS as option}
@@ -3319,7 +3370,7 @@
             <span class="primary-cook-name">Fill class</span>
             <select bind:value={fillClass} class="form-select primary-fill-select">
               <option value="">— none —</option>
-              {#if fillClass && !(fillClass in BINDING)}
+              {#if fillClass && !hasKnownFillClass(fillClass)}
                 <option value={fillClass}>{fillClass} — unknown current value</option>
               {/if}
               {#each FILL_CLASS_OPTIONS as option}
@@ -3368,7 +3419,7 @@
               <span class="primary-cook-name">Fill class</span>
               <select bind:value={cook2FillClass} class="form-select primary-fill-select">
                 <option value="">— none —</option>
-                {#if cook2FillClass && !(cook2FillClass in BINDING)}
+                {#if cook2FillClass && !hasKnownFillClass(cook2FillClass)}
                   <option value={cook2FillClass}>{cook2FillClass} — unknown current value</option>
                 {/if}
                 {#each FILL_CLASS_OPTIONS as option}
@@ -3418,7 +3469,7 @@
                 <span class="primary-cook-name">Fill class</span>
                 <select bind:value={cook3FillClass} class="form-select primary-fill-select">
                   <option value="">— none —</option>
-                  {#if cook3FillClass && !(cook3FillClass in BINDING)}
+                  {#if cook3FillClass && !hasKnownFillClass(cook3FillClass)}
                     <option value={cook3FillClass}>{cook3FillClass} — unknown current value</option>
                   {/if}
                   {#each FILL_CLASS_OPTIONS as option}

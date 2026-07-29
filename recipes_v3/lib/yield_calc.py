@@ -206,6 +206,12 @@ BINDING: dict[str, float] = {
     # meringue: DO NOT USE — model invalid for surface-browning sections
 }
 
+# Fixed cooked-state water yields. These classes are calibrated from USDA
+# raw/cooked pairs where doneness, not elapsed time, defines the endpoint.
+FIXED_YIELD_WATER: dict[str, float] = {
+    "poached_egg": 0.983687,  # NDB 1123 raw whole egg → NDB 1131 poached egg; time-independent endpoint
+}
+
 # ── Straining hydration constant ─────────────────────────────────────────────
 # STRAIN_WATER_K: grams of water absorbed per gram of DISCARDED dry solids when
 # a blended slurry is strained and pressed through cheesecloth.
@@ -270,6 +276,9 @@ def calc_yield_water(
     """
     if initial_water_g <= 0.0:
         return 1.0
+
+    if filling_class in FIXED_YIELD_WATER:
+        return FIXED_YIELD_WATER[filling_class]
 
     binding     = BINDING.get(filling_class, BINDING["syrup_custard"])
     free_water  = initial_water_g * binding

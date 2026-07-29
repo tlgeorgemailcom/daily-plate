@@ -231,6 +231,10 @@ Without a `fill_class`, `calc_yield_water` returns `yfw=1.0` for all stovetop se
 
 | Section contents | `fill_class` |
 |---|---|
+| Absorber-driven oatmeal / cooked oats | Recipe-level primary `fill_class=none`; keep section `fill_class` blank — absorption model computes `yfw` |
+| Cheese omelette / Denver omelette / Frittata Herbs and Cheese | Recipe-level primary `fill_class=none`; keep section `fill_class` blank — calibrated `yfw=1.00`, not `fried_meat` |
+| Poached egg from raw whole egg | `poached_egg` — fixed `yfw=0.983687` from NDB 1123 raw whole egg → NDB 1131 poached egg; simmer time is display/doneness guidance only |
+| Crusted quiches (`BKFST_025`–`BKFST_028`) | Recipe-level primary `fill_class=none` and filling section `fill_class=none` pending better calibration data — do not use top-bar `pastry` or section `dairy_custard` for these until the assembled pastry/custard bake is calibrated |
 | Butter + cream sauce, simmering | `simmer_sauce` |
 | Garlic, onion, shallot, sofrito, or sliced mushroom aromatic sauté | `sauteed_aromatic` |
 | Larger sautéed vegetable pieces (broccoli florets, green beans, zucchini chunks, etc.) | Calibrate a distinct vegetable-specific fill class before use |
@@ -254,6 +258,10 @@ Without a `fill_class`, `calc_yield_water` returns `yfw=1.0` for all stovetop se
 | Vegetables roasted | `roasted_vegetable` |
 
 Use `breaded` for dry-coated fried foods (flour dredge, cornmeal, cracker crumb, panko). Reserve `battered` for wet batter (beer batter, tempura-style, thick batter). The breaded shrimp class is protein-specific: TodayPage testing showed shrimp uniquely continued dripping moisture while resting over the oil, so do not reuse it for fish or chicken. `fried_chicken` is a legacy class name, not a poultry-only rule. It remains only as a proxy for older battered/breaded cutlets that have not received a food-specific class yet. Do not use fried protein classes for ground meat patties, loose sausage, or bacon; those remain `fried_meat`.
+
+#### Multiple Primary Cook Recipes
+
+- Frittata Herbs and Cheese
 
 ### Audit command
 

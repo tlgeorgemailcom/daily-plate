@@ -137,6 +137,12 @@ export const BINDING: Record<string, number> = {
   // Never pass 'meringue' to this function. inferFillingClass() never emits it.
 };
 
+// Fixed cooked-state water yields. These classes are calibrated from USDA
+// raw/cooked pairs where doneness, not elapsed time, defines the endpoint.
+export const FIXED_YIELD_WATER: Record<string, number> = {
+  poached_egg: 0.983687, // NDB 1123 raw whole egg -> NDB 1131 poached egg; time-independent endpoint
+};
+
 // ── Core functions ────────────────────────────────────────────────────────────
 
 /**
@@ -183,6 +189,8 @@ export function calcYieldWater(
   lidOn: boolean = false,
 ): number {
   if (initialWaterG <= 0) return 1.0;
+
+  if (fillingClass in FIXED_YIELD_WATER) return FIXED_YIELD_WATER[fillingClass];
 
   const binding    = BINDING[fillingClass] ?? BINDING['none'];
   let freeWater    = initialWaterG * binding;
