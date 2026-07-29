@@ -391,6 +391,7 @@
     fish_stock: 'fish stock extraction',
     vegetable_stock: 'vegetable stock extraction',
     poached_egg: 'poached egg from raw whole egg',
+    fried_egg: 'fried egg from raw whole egg',
   };
 
   function formatFillClassLabel(key: string): string {

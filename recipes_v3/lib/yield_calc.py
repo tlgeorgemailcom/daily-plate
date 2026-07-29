@@ -210,6 +210,7 @@ BINDING: dict[str, float] = {
 # raw/cooked pairs where doneness, not elapsed time, defines the endpoint.
 FIXED_YIELD_WATER: dict[str, float] = {
     "poached_egg": 0.983687,  # NDB 1123 raw whole egg → NDB 1131 poached egg; time-independent endpoint
+    "fried_egg": 0.8418968903460676,  # NDB 1123 raw whole egg → NDB 1128 fried egg; protein-conserved endpoint
 }
 
 # ── Straining hydration constant ─────────────────────────────────────────────

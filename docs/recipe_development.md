@@ -234,6 +234,7 @@ Without a `fill_class`, `calc_yield_water` returns `yfw=1.0` for all stovetop se
 | Absorber-driven oatmeal / cooked oats | Recipe-level primary `fill_class=none`; keep section `fill_class` blank — absorption model computes `yfw` |
 | Cheese omelette / Denver omelette / Frittata Herbs and Cheese | Recipe-level primary `fill_class=none`; keep section `fill_class` blank — calibrated `yfw=1.00`, not `fried_meat` |
 | Poached egg from raw whole egg | `poached_egg` — fixed `yfw=0.983687` from NDB 1123 raw whole egg → NDB 1131 poached egg; simmer time is display/doneness guidance only |
+| Fried egg from raw whole egg | `fried_egg` — fixed `yfw=0.841897` from NDB 1123 raw whole egg → NDB 1128 fried egg by protein conservation; fry time is display/doneness guidance only |
 | Scrambled egg from raw whole egg | `fill_class=none` — NDB 1132 is an outlier, not a clean moisture-calibration pair, because it carries added-ingredient/sample effects; set the section fill class explicitly to `none` so neutral `yfw=1.0` applies |
 | Crusted quiches (`BKFST_025`–`BKFST_028`) | Recipe-level primary `fill_class=none` and filling section `fill_class=none` pending better calibration data — do not use top-bar `pastry` or section `dairy_custard` for these until the assembled pastry/custard bake is calibrated |
 | Butter + cream sauce, simmering | `simmer_sauce` |

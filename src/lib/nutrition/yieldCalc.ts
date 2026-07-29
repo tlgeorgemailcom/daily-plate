@@ -141,6 +141,7 @@ export const BINDING: Record<string, number> = {
 // raw/cooked pairs where doneness, not elapsed time, defines the endpoint.
 export const FIXED_YIELD_WATER: Record<string, number> = {
   poached_egg: 0.983687, // NDB 1123 raw whole egg -> NDB 1131 poached egg; time-independent endpoint
+  fried_egg: 0.8418968903460676, // NDB 1123 raw whole egg -> NDB 1128 fried egg; protein-conserved endpoint
 };
 
 // ── Core functions ────────────────────────────────────────────────────────────
