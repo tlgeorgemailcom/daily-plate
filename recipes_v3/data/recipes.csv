@@ -399,7 +399,7 @@ BKFST_042,DENVERSCRAMBLER,Denver Scrambler,Breakfast,all,builtin,,,1 serving (ma
 BKFST_043,MIGAS,Migas without Tortillas,Breakfast,veggie,builtin,,,1 serving (makes 1),1,Rule D,pan seared,7,,,,,,,,approved,,,,PASS,,
 BKFST_044,MIGASTORTILLAS,Migas with Tortillas,Breakfast,veggie,builtin,,,1 serving (makes 1),1,Rule D,pan seared,7,,,,,,,,approved,,,,PASS,,
 BKFST_045,YOGURTPARFAIT,Yogurt Parfait,Breakfast,veggie,builtin,,,1 serving (makes 1),1,Rule D,,,,,,,,,,approved,,,,PASS,,
-BKFST_046,BELGIANWAFFLE,Belgian Waffle,Breakfast,veggie,builtin,,,1 waffle (makes 4),4,Rule D,grilled,5,,,,,,,,approved,,,,PASS,,
+BKFST_046,BELGIANWAFFLE,Belgian Waffle,Breakfast,veggie,builtin,,,1 waffle (makes 4),4,Rule D,grilled,5,,,,,,,,approved,,,,PASS,,,,,,,,,grilled_batter,,
 BKFST_047,HUEVOSRANCHEROS,Huevos Rancheros,Breakfast,veggie,builtin,,,1 serving (makes 2),2,Rule D,,,,,,,,,,approved,,,,PASS,,
 BKFST_048,BREAKFASTSTRATA,Breakfast Strata,Breakfast,all,builtin,,,1 piece (makes 6),6,Rule D,baked,50,350,,,,,,,approved,,,,PASS,,
 BKFST_049,CREPES,Crepes,Breakfast,veggie,builtin,,,2 crepes (makes 4 servings),4,Rule D,pan seared,2,,,,,,,,approved,,,,PASS,,
