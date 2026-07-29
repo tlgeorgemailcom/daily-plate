@@ -210,6 +210,7 @@ BINDING: dict[str, float] = {
 # raw/cooked pairs where doneness, not elapsed time, defines the endpoint.
 FIXED_YIELD_WATER: dict[str, float] = {
     "poached_egg": 0.983687,  # NDB 1123 raw whole egg → NDB 1131 poached egg; time-independent endpoint
+    "scrambled_egg": 1.013911,  # NDB 1123 raw whole egg → NDB 1132 scrambled egg; time-independent endpoint
 }
 
 # ── Straining hydration constant ─────────────────────────────────────────────
@@ -266,7 +267,7 @@ def calc_yield_water(
         Water from step 1 feeds directly into step 2.
 
     Returns:
-        yield_water (float, 0 < value ≤ 1.0).
+        yield_water (positive yield factor; fixed endpoint classes may be > 1.0).
 
     Examples:
         >>> calc_yield_water([(425, 15), (350, 45)], 756.0, "vegetable_custard")

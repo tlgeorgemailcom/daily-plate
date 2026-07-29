@@ -234,6 +234,7 @@ Without a `fill_class`, `calc_yield_water` returns `yfw=1.0` for all stovetop se
 | Absorber-driven oatmeal / cooked oats | Recipe-level primary `fill_class=none`; keep section `fill_class` blank — absorption model computes `yfw` |
 | Cheese omelette / Denver omelette / Frittata Herbs and Cheese | Recipe-level primary `fill_class=none`; keep section `fill_class` blank — calibrated `yfw=1.00`, not `fried_meat` |
 | Poached egg from raw whole egg | `poached_egg` — fixed `yfw=0.983687` from NDB 1123 raw whole egg → NDB 1131 poached egg; simmer time is display/doneness guidance only |
+| Scrambled egg from raw whole egg | `scrambled_egg` — fixed `yfw=1.013911` from NDB 1123 raw whole egg → NDB 1132 scrambled egg; pan-sear time is display/doneness guidance only |
 | Crusted quiches (`BKFST_025`–`BKFST_028`) | Recipe-level primary `fill_class=none` and filling section `fill_class=none` pending better calibration data — do not use top-bar `pastry` or section `dairy_custard` for these until the assembled pastry/custard bake is calibrated |
 | Butter + cream sauce, simmering | `simmer_sauce` |
 | Garlic, onion, shallot, sofrito, or sliced mushroom aromatic sauté | `sauteed_aromatic` |
@@ -258,6 +259,44 @@ Without a `fill_class`, `calc_yield_water` returns `yfw=1.0` for all stovetop se
 | Vegetables roasted | `roasted_vegetable` |
 
 Use `breaded` for dry-coated fried foods (flour dredge, cornmeal, cracker crumb, panko). Reserve `battered` for wet batter (beer batter, tempura-style, thick batter). The breaded shrimp class is protein-specific: TodayPage testing showed shrimp uniquely continued dripping moisture while resting over the oil, so do not reuse it for fish or chicken. `fried_chicken` is a legacy class name, not a poultry-only rule. It remains only as a proxy for older battered/breaded cutlets that have not received a food-specific class yet. Do not use fried protein classes for ground meat patties, loose sausage, or bacon; those remain `fried_meat`.
+
+#### Procedure when adding a new fill class
+
+Every new fill class must be added to all computation and UI surfaces in the same change. A fill class stored in Turso is just data; the frontend bundle must also know the key so the editor can display it as a valid human-friendly option.
+
+1. **Classify the model type first.**
+   - Use a binding coefficient when water loss depends on cook method, temperature, time, and ingredient free-water behavior.
+   - Use a fixed `yfw` only when a USDA raw/cooked pair defines a cooked endpoint and elapsed time should not change the result, such as `poached_egg`.
+
+2. **Update the Python dev pipeline.**
+   - Binding class: add the key and calibrated coefficient to `recipes_v3/lib/yield_calc.py::BINDING` with the calibration note.
+   - Fixed-yield class: add the key and value to `recipes_v3/lib/yield_calc.py::FIXED_YIELD_WATER` with the raw/cooked NDB pair note.
+
+3. **Update the TypeScript community pipeline in the same commit.**
+   - Binding class: add the same key and coefficient to `src/lib/nutrition/yieldCalc.ts::BINDING`.
+   - Fixed-yield class: add the same key and value to `src/lib/nutrition/yieldCalc.ts::FIXED_YIELD_WATER`.
+   - Do not add a class to only one side. Dev recipes and community recipes must compute the same nutrition.
+
+4. **Update editor UI labels.**
+   - Add a human-friendly label in `src/lib/farmers-basket/RecipeForm.svelte::FILL_CLASS_LABELS`.
+   - Confirm `FILL_CLASS_OPTIONS` includes the new class source (`BINDING` or `FIXED_YIELD_WATER`).
+   - Confirm the unknown-value fallback checks the combined known set, not only `BINDING`; otherwise Turso can send a valid class and the UI will still show `unknown current value`.
+
+5. **Document the class in this fill-class guide.**
+   - Add one row in the table above with when to use the class, what ingredient/technique it represents, and whether it is binding-based or fixed-yield.
+   - If the class should not be reused for adjacent foods, say so explicitly.
+
+6. **Apply it to recipe data only after the model and UI know the key.**
+   - Update `recipe_sections.csv` for section-owned classes or `recipes.csv` for primary/top-bar-owned classes.
+   - Rebuild the affected recipe: `python recipes_v3/tools/build_all.py --recipe RECIPE_ID`.
+   - Upload to Turso: `python recipes_v3/tools/upload.py --recipe RECIPE_ID --commit`.
+   - Regenerate the bundle when recipe-visible data changed: `python recipes_v3/tools/generate_bundle.py`.
+
+7. **Validate both data and code before shipping.**
+   - Run the narrow recipe build/upload checks for the affected recipe.
+   - Run `npm run check -- --threshold error` after TypeScript/Svelte changes.
+   - For fixed-yield classes, add or run a small parity check proving time changes do not alter `yfw`.
+   - Commit and push so Vercel deploys the updated frontend bundle; Turso alone cannot teach an old deployed UI a new fill-class key.
 
 #### Multiple Primary Cook Recipes
 

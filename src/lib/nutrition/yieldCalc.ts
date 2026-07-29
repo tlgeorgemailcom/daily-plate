@@ -141,6 +141,7 @@ export const BINDING: Record<string, number> = {
 // raw/cooked pairs where doneness, not elapsed time, defines the endpoint.
 export const FIXED_YIELD_WATER: Record<string, number> = {
   poached_egg: 0.983687, // NDB 1123 raw whole egg -> NDB 1131 poached egg; time-independent endpoint
+  scrambled_egg: 1.013911, // NDB 1123 raw whole egg -> NDB 1132 scrambled egg; time-independent endpoint
 };
 
 // ── Core functions ────────────────────────────────────────────────────────────
@@ -168,7 +169,7 @@ export function rateConstant(tempF: number): number {
  * @param lidOn         True for covered cooking (braise). Multiplies stovetop k
  *                      by BRAISE_LID_FACTOR (0.05) — lid recycles ~95 % of steam.
  *
- * @returns yield_water (0 < value ≤ 1.0)
+ * @returns yield_water (positive yield factor; fixed endpoint classes may be > 1.0)
  *
  * @example
  * // Pumpkin pie: two-stage bake, vegetable custard

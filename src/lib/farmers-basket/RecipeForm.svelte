@@ -366,6 +366,7 @@
     grilled_batter: 'waffle-iron batter',
     pan_grilled_chicken: 'pan-seared chicken or fish fillet',
     pan_grilled_steak: 'pan-seared thin steak',
+    scrambled_egg: 'scrambled egg from raw whole egg',
     fried_chicken: 'battered fried protein (chicken proxy)',
     fried_breaded_shrimp: 'breaded fried shrimp',
     fried_breaded_chicken_tender: 'breaded fried chicken tender',
