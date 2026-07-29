@@ -159,6 +159,25 @@ def _parse_boil_stages(raw):
         return None
 
 
+def _section_fill_class_for_bundle(section, recipe):
+    fill_class = (section.get('filling_class') or '').strip()
+    if not fill_class:
+        return ''
+    recipe_fill_class = (recipe.get('fill_class') or '').strip()
+    recipe_cooking_method = (recipe.get('cooking_method') or '').strip().lower()
+    section_cooking_method = (section.get('cook_method') or '').strip().lower()
+    primary_entry_stage = (section.get('primary_entry_stage') or '').strip()
+    if (
+        recipe_fill_class
+        and fill_class == recipe_fill_class
+        and recipe_cooking_method
+        and section_cooking_method == recipe_cooking_method
+        and primary_entry_stage in ('', '1')
+    ):
+        return ''
+    return fill_class
+
+
 def ts_sections(sections):
     """Format per-section cooking-method/yield rows for the bundle.
 
@@ -630,7 +649,7 @@ for recipe in recipes:
             'yieldFactorWater': (lambda v: float(v) if v not in (None, '') else None)(s.get('yield_factor_water')),
             'yieldFactorFat':   (lambda v: float(v) if v not in (None, '') else None)(s.get('yield_factor_fat')),
             'yieldFactorOther': (lambda v: float(v) if v not in (None, '') else None)(s.get('yield_factor_other')),
-            'fillClass':        (s.get('filling_class') or '').strip(),
+            'fillClass':        _section_fill_class_for_bundle(s, recipe),
             'primaryEntryStage': (s.get('primary_entry_stage') or '').strip(),
         }
         for s in section_rows

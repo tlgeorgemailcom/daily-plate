@@ -313,6 +313,14 @@ For baked dishes where the assembly steps involve no heat (press crust, mix fill
 
 This pattern applies to any dish where: multiple ingredient groups exist, but only the combined bake/cook matters as the primary step. Examples: quiches, casseroles, stratas, gratins, lasagnas.
 
+### Primary-owned `fill_class` in section JSON
+
+Some legacy/physics rows still keep a section-level `filling_class` in `recipe_sections.csv` even after the matching primary top-bar `fill_class` has been added to `recipes.csv`. This is allowed for Python build continuity, but the serialized UI data must not duplicate ownership.
+
+When a section's `filling_class` equals the recipe-level primary `fill_class`, the section `cook_method` equals the recipe `cooking_method`, and `primary_entry_stage` is blank or `1`, `upload.py` and `generate_bundle.py` must write the section JSON/bundle `fill_class` as blank/omitted. The top bar owns that fill class. This rule applies even if the section has prep heat; prep/no-prep is not the ownership test.
+
+Do keep a section `fill_class` in JSON when it is genuinely prep-owned or stage-owned: the value differs from the top-bar fill class, the section uses a different method, or `primary_entry_stage` is `2` or `3`. The TypeScript V3 builder falls back to the active primary fill class when the section value is absent, so physics still receives the top-bar value without duplicating it in section metadata.
+
 ### Fix script pattern
 
 ```python

@@ -211,6 +211,22 @@ def _build_payload(rid: str, recipes, ings, ledger, instrs, sections_map) -> dic
         except ValueError:
             return 0
 
+    def _section_fill_class_for_json(s, cook_method: str) -> str:
+        """Keep prep-owned fill classes in sections_json; hide primary-owned duplicates."""
+        fill_class = s.filling_class or ""
+        if not fill_class:
+            return ""
+        primary_entry_stage = (s.primary_entry_stage or "").strip()
+        if (
+            rec.fill_class
+            and fill_class == rec.fill_class
+            and rec.cooking_method
+            and cook_method == rec.cooking_method
+            and primary_entry_stage in ("", "1")
+        ):
+            return ""
+        return fill_class
+
     def _section_payload(s) -> dict:
         cook_method = (
             (_component_cook_method(s.source_recipe) or s.cook_method)
@@ -238,7 +254,7 @@ def _build_payload(rid: str, recipes, ings, ledger, instrs, sections_map) -> dic
                     ((_parse_cook_stages(s.cook_stages) or [{}])[0].get("minutes", 0)
                      if s.prep_method and s.prep_method not in ("", "raw", "none", "finish") else 0),
                 "cook_stages": _parse_cook_stages(s.cook_stages),
-                "fill_class": s.filling_class or "",
+                "fill_class": _section_fill_class_for_json(s, cook_method),
             }
         if s.primary_entry_stage:
             payload["primary_entry_stage"] = s.primary_entry_stage

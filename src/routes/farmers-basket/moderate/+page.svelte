@@ -273,6 +273,7 @@
       // These are set by upload.py for dev recipes and by the submit route for player recipes.
       cookMinutes: typeof (recipe as any).cookMinutes === 'number' ? (recipe as any).cookMinutes : undefined,
       cookTempF:   typeof (recipe as any).cookTempF   === 'number' ? (recipe as any).cookTempF   : undefined,
+      fillClass: typeof (recipe as any).fillClass === 'string' ? (recipe as any).fillClass : undefined,
       cook2Method: typeof (recipe as any).cook2Method === 'string' ? (recipe as any).cook2Method : undefined,
       cook2Minutes: typeof (recipe as any).cook2Minutes === 'number' ? (recipe as any).cook2Minutes : undefined,
       cook2TempF: typeof (recipe as any).cook2TempF === 'number' ? (recipe as any).cook2TempF : undefined,

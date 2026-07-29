@@ -98,6 +98,7 @@
   function normalizeSection(
     s: Record<string, unknown>,
     topCookMethod: string,
+    topFillClass?: string | null,
     autoLabel?: string | null,
   ): RecipeSection | null {
     // ── key / label ────────────────────────────────────────────────────────────
@@ -161,9 +162,17 @@
 
     // ── fill class ────────────────────────────────────────────────────────────
     const fcRaw = String(s.fill_class ?? s.fillClass ?? '');
-    const fillClass = fcRaw || undefined;
     const primaryEntryStageRaw = String(s.primary_entry_stage ?? s.primaryEntryStage ?? '');
     const primaryEntryStage = primaryEntryStageRaw || undefined;
+    const isPrimaryOwnedFillClass = Boolean(
+      fcRaw
+      && topFillClass
+      && fcRaw === topFillClass
+      && topCookMethod
+      && normalizeCookMethodLabel(cookM).toLowerCase() === normalizeCookMethodLabel(topCookMethod).toLowerCase()
+      && (!primaryEntryStage || primaryEntryStage === '1')
+    );
+    const fillClass = fcRaw && !isPrimaryOwnedFillClass ? fcRaw : undefined;
 
     return {
       key,
@@ -181,6 +190,24 @@
       fillClass,
       primaryEntryStage,
     };
+  }
+
+  function sectionTopFillClass(...values: unknown[]): string | null {
+    for (const value of values) {
+      if (typeof value === 'string' && value) return value;
+    }
+    return null;
+  }
+
+  function sectionFillClassOwnedByPrimary(sec: RecipeSection): boolean {
+    return Boolean(
+      sec.fillClass
+      && fillClass
+      && sec.fillClass === fillClass
+      && cookingMethod
+      && normalizeCookMethodLabel(sec.cookingMethod).toLowerCase() === normalizeCookMethodLabel(cookingMethod).toLowerCase()
+      && (!sec.primaryEntryStage || sec.primaryEntryStage === '1')
+    );
   }
 
   interface PersistedNutritionJson {
@@ -454,7 +481,10 @@
         }))
       : [{ id: 1, name: '', quantity: '', gameFood: '', animal: '' }]
   );
-  let sections = $state<RecipeSection[]>(initialData.sections ?? []);
+  const _initialSections = initialData.sections
+    ?.map((section) => normalizeSection(section as unknown as Record<string, unknown>, _matchedCM ?? '', sectionTopFillClass(initialData.fillClass)))
+    .filter((section): section is RecipeSection => section !== null) ?? [];
+  let sections = $state<RecipeSection[]>(_initialSections);
   let sectionAdvancedOpen = $state<Record<number, boolean>>({});
 
   // Backfill missing/unknown ingredient.section assignments by carrying forward
@@ -1112,7 +1142,7 @@
           // NOT a stovetop pre-boil — never send it to V3 as boilMinutes.
           ...(typeof sec.boilMinutes === 'number' && sec.boilMinutes > 0 && sec.cookingMethod !== 'baked' && sec.cookingMethod !== 'par-baked' ? { boilMinutes: sec.boilMinutes } : {}),
           ...(Array.isArray(sec.stages) && sec.stages.length > 0 ? { stages: sec.stages } : {}),
-          ...(sec.fillClass ? { fillClass: sec.fillClass } : {}),
+          ...(sec.fillClass && !sectionFillClassOwnedByPrimary(sec) ? { fillClass: sec.fillClass } : {}),
           ...(sec.primaryEntryStage ? { primaryEntryStage: sec.primaryEntryStage } : {}),
           // Inject top-bar oven params as fallback for sections with no explicit stages.
           ...(!(Array.isArray(sec.stages) && sec.stages.length > 0) ? {
@@ -1297,7 +1327,7 @@
             ? (recipeName || data.recipeName || data.sections[0].section_label)
             : null;
           sections = data.sections
-            .map(s => normalizeSection(s as Record<string, unknown>, (data.cookMethod ?? '') as string, autoLabel))
+            .map(s => normalizeSection(s as Record<string, unknown>, (data.cookMethod ?? '') as string, data.fillClass ?? null, autoLabel))
             .filter((s): s is RecipeSection => s !== null);
           // If 2+ sections each have their own cook method, blank the recipe-level
           // primary cook — there's no single primary heat that applies to the whole dish.
@@ -2032,11 +2062,11 @@
       // Turso sections_json: normalize snake_case (dev recipes) or camelCase
       // (player recipes) to the RecipeSection interface used by the form.
       nextSections = (suggestion.sections as any[])
-        .map(s => normalizeSection(s as Record<string, unknown>, explicitCookMethod ?? ''))
+        .map(s => normalizeSection(s as Record<string, unknown>, explicitCookMethod ?? '', suggestion.fillClass ?? null))
         .filter((s): s is RecipeSection => s !== null);
     } else if (v3Data && Array.isArray(v3Data.sections) && (v3Data.sections as unknown[]).length > 0) {
       nextSections = (v3Data.sections as Record<string, unknown>[])
-        .map(s => normalizeSection(s, explicitCookMethod ?? ''))
+        .map(s => normalizeSection(s, explicitCookMethod ?? '', sectionTopFillClass(v3Data.fillClass, suggestion.fillClass)))
         .filter((s): s is RecipeSection => s !== null);
     }
     if ((!nextSections || nextSections.length === 0) && ingredients.some((i) => i.section)) {
@@ -2983,22 +3013,24 @@
               <input type="number" step="0.01" min="0" max="2"
                 bind:value={sec.yieldFactorOther} placeholder="1.00" class="form-input" />
             </label>
-            <label class="advanced-field" title="Filling class controls how much water is free to evaporate (binding coefficient). Leave blank for non-filling sections.">
-              <span>Fill class</span>
-              <select
-                value={sec.fillClass ?? ''}
-                onchange={(e) => { const v = (e.currentTarget as HTMLSelectElement).value; sections = sections.map((s, i) => i === sIdx ? { ...s, fillClass: v || undefined } : s); }}
-                class="form-input"
-              >
-                <option value="">— none —</option>
-                {#if sec.fillClass && !(sec.fillClass in BINDING)}
-                  <option value={sec.fillClass}>{sec.fillClass} — unknown current value</option>
-                {/if}
-                {#each FILL_CLASS_OPTIONS as option}
-                  <option value={option.key}>{option.label}</option>
-                {/each}
-              </select>
-            </label>
+            {#if !sectionFillClassOwnedByPrimary(sec)}
+              <label class="advanced-field" title="Filling class controls how much water is free to evaporate (binding coefficient). Leave blank for non-filling sections.">
+                <span>Fill class</span>
+                <select
+                  value={sec.fillClass ?? ''}
+                  onchange={(e) => { const v = (e.currentTarget as HTMLSelectElement).value; sections = sections.map((s, i) => i === sIdx ? { ...s, fillClass: v || undefined } : s); }}
+                  class="form-input"
+                >
+                  <option value="">— none —</option>
+                  {#if sec.fillClass && !(sec.fillClass in BINDING)}
+                    <option value={sec.fillClass}>{sec.fillClass} — unknown current value</option>
+                  {/if}
+                  {#each FILL_CLASS_OPTIONS as option}
+                    <option value={option.key}>{option.label}</option>
+                  {/each}
+                </select>
+              </label>
+            {/if}
             <div class="advanced-field advanced-stages" style="grid-column: 1 / -1"
               title="Multi-stage oven bake: each entry fires in order. calcYieldWater() uses these for evaporation modelling.">
               <span>Cook stages (°F → min)</span>
