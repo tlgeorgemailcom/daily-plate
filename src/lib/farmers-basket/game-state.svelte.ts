@@ -165,7 +165,8 @@ export function createGameState() {
   // Current level (restored from localStorage)
   const initialLevel = loadCurrentLevel();
   let currentLevel = $state<Level | null>(initialLevel);
-  let levelIndex = $state(LEVELS.findIndex(l => l.id === initialLevel.id));
+  const initialLevelIndex = LEVELS.findIndex(l => l.id === initialLevel.id);
+  let levelIndex = $state(initialLevelIndex);
   
   // Game entities
   let animals = $state<Animal[]>([]);
@@ -1246,7 +1247,7 @@ export function createGameState() {
   }
   
   // Initialize to saved level (or first level)
-  initLevel(levelIndex);
+  initLevel(initialLevelIndex);
   
   return {
     // State (readable)

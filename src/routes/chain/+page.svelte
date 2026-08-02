@@ -384,11 +384,27 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
       showMessage('Copied to clipboard!', 'success');
     }
   }
+
+  function handleModalKeydown(event: KeyboardEvent) {
+    if (event.key !== 'Escape') return;
+    if (showGroupPicker) {
+      showGroupPicker = false;
+      pendingWord = null;
+      return;
+    }
+    if (changingGroupIndex !== null) {
+      changingGroupIndex = null;
+      return;
+    }
+    if (showRules) showRules = false;
+  }
 </script>
 
 <svelte:head>
   <title>Food Chain | TodayPage</title>
 </svelte:head>
+
+<svelte:window onkeydown={handleModalKeydown} />
 
 <div class="game-container">
   <!-- Difficulty Selector Modal -->
@@ -633,8 +649,14 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
 
   <!-- Group Picker Modal -->
   {#if showGroupPicker && pendingWord}
-    <div class="modal-overlay" in:fade onclick={() => { showGroupPicker = false; pendingWord = null; }}>
-      <div class="modal group-picker" in:scale onclick={(e) => e.stopPropagation()}>
+    <div
+      class="modal-overlay"
+      in:fade
+      role="presentation"
+      onclick={(e) => { if (e.target === e.currentTarget) { showGroupPicker = false; pendingWord = null; } }}
+      onkeydown={(e) => { if (e.key === 'Escape') { showGroupPicker = false; pendingWord = null; } }}
+    >
+      <div class="modal group-picker" in:scale>
         <h3>{pendingWord.word}</h3>
         <p class="dual-info">This food belongs to multiple groups. Pick one:</p>
         <div class="group-options">
@@ -655,8 +677,14 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
   <!-- Group Changer Modal (for changing existing word's group) -->
   {#if changingGroupIndex !== null}
     {@const item = chain[changingGroupIndex]}
-    <div class="modal-overlay" in:fade onclick={() => changingGroupIndex = null}>
-      <div class="modal group-picker" in:scale onclick={(e) => e.stopPropagation()}>
+    <div
+      class="modal-overlay"
+      in:fade
+      role="presentation"
+      onclick={(e) => { if (e.target === e.currentTarget) changingGroupIndex = null; }}
+      onkeydown={(e) => { if (e.key === 'Escape') changingGroupIndex = null; }}
+    >
+      <div class="modal group-picker" in:scale>
         <h3>{item.word}</h3>
         <p class="dual-info">Change food group:</p>
         <div class="group-options">
@@ -730,8 +758,14 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
 
   <!-- Rules Modal -->
   {#if showRules}
-    <div class="modal-overlay" in:fade onclick={() => showRules = false}>
-      <div class="modal rules-modal" in:scale onclick={(e) => e.stopPropagation()}>
+    <div
+      class="modal-overlay"
+      in:fade
+      role="presentation"
+      onclick={(e) => { if (e.target === e.currentTarget) showRules = false; }}
+      onkeydown={(e) => { if (e.key === 'Escape') showRules = false; }}
+    >
+      <div class="modal rules-modal" in:scale>
         <h3>🔗 How to Play</h3>
         <div class="rules-content">
           <h4>🎯 Goal</h4>

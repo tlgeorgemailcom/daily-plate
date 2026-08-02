@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap');
+
 :root {
   /* Playful food-themed color palette */
   --color-primary: #4CAF50;      /* Fresh green */
@@ -33,9 +35,6 @@
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
   --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
-
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap');
 
 * {
   margin: 0;

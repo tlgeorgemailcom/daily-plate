@@ -1073,6 +1073,29 @@
       history.back();
     });
   });
+
+  function handleModalKeydown(event: KeyboardEvent) {
+    if (event.key !== 'Escape') return;
+    if (saveConfirmPending) {
+      saveConfirmPending.onSkip();
+    } else if (showNewGameConfirm) {
+      showNewGameConfirm = false;
+    } else if (showLoginModal) {
+      showLoginModal = false;
+    } else if (showReports) {
+      showReports = false;
+    } else if (showNotes) {
+      showNotes = false;
+    } else if (showRules) {
+      showRules = false;
+    } else if (showAddCustomFood) {
+      showAddCustomFood = false;
+    } else if (showHistoryInfo) {
+      showHistoryInfo = false;
+    } else if (showMenu) {
+      showMenu = false;
+    }
+  }
 </script>
 
 <svelte:head>
@@ -1096,6 +1119,8 @@
     }
   </style>
 </svelte:head>
+
+<svelte:window onkeydown={handleModalKeydown} />
 
 <div class="game-wrapper" class:scroll-locked={showNotes}>
 
@@ -1137,8 +1162,7 @@
           aria-expanded={showMenu}
         >☰</button>
         {#if showMenu}
-          <!-- svelte-ignore a11y_click_events_have_key_events a11y_no_static_element_interactions -->
-          <div class="menu-backdrop" onclick={closeMenu}></div>
+          <button class="menu-backdrop" type="button" onclick={closeMenu} aria-label="Close menu"></button>
           <div class="menu-dropdown">
             {#if $playerStore.status === 'logged-in'}
               <button class="menu-item" onclick={() => { openNotes(); closeMenu(); }}>
@@ -1193,8 +1217,13 @@
 
   <!-- History Info Modal -->
   {#if showHistoryInfo}
-    <div class="modal-backdrop" onclick={() => showHistoryInfo = false}>
-      <div class="history-modal" onclick={(e) => e.stopPropagation()}>
+    <div
+      class="modal-backdrop"
+      role="presentation"
+      onclick={(e) => { if (e.target === e.currentTarget) showHistoryInfo = false; }}
+      onkeydown={(e) => { if (e.key === 'Escape') showHistoryInfo = false; }}
+    >
+      <div class="history-modal">
         <h3>📜 Game History</h3>
         <div class="history-content">
           {#if lastSavedTime}
@@ -1243,8 +1272,13 @@
 
   <!-- Rules Modal -->
   {#if showRules}
-    <div class="modal-backdrop" onclick={() => showRules = false}>
-      <div class="rules-modal" onclick={(e) => e.stopPropagation()}>
+    <div
+      class="modal-backdrop"
+      role="presentation"
+      onclick={(e) => { if (e.target === e.currentTarget) showRules = false; }}
+      onkeydown={(e) => { if (e.key === 'Escape') showRules = false; }}
+    >
+      <div class="rules-modal">
         <h3>🥗 How to Play Balanced Diet</h3>
         <div class="rules-content">
           <p><strong>Build a balanced day of meals!</strong></p>
@@ -1296,8 +1330,13 @@
 
   <!-- Notes Modal -->
   {#if showNotes}
-    <div class="modal-backdrop" onclick={() => showNotes = false}>
-      <div class="notes-modal" onclick={(e) => e.stopPropagation()}>
+    <div
+      class="modal-backdrop"
+      role="presentation"
+      onclick={(e) => { if (e.target === e.currentTarget) showNotes = false; }}
+      onkeydown={(e) => { if (e.key === 'Escape') showNotes = false; }}
+    >
+      <div class="notes-modal">
       {#if !isPlus}
         <div class="notes-upgrade">
           <div class="upgrade-icon">📓</div>
@@ -1633,8 +1672,13 @@
 
   <!-- New Game Confirmation Modal -->
   {#if showNewGameConfirm}
-    <div class="modal-backdrop" onclick={() => showNewGameConfirm = false}>
-      <div class="confirm-modal" onclick={(e) => e.stopPropagation()}>
+    <div
+      class="modal-backdrop"
+      role="presentation"
+      onclick={(e) => { if (e.target === e.currentTarget) showNewGameConfirm = false; }}
+      onkeydown={(e) => { if (e.key === 'Escape') showNewGameConfirm = false; }}
+    >
+      <div class="confirm-modal">
         <h3>🆕 Start New Game?</h3>
         <p>This will clear all foods you've added and reset the game.</p>
         <p class="confirm-note">Your settings (calorie targets, ratios) will be kept.</p>
@@ -2377,25 +2421,6 @@
     color: white;
   }
 
-  .dri-readonly-value {
-    font-size: 1.1rem;
-    padding: 0.4rem 0;
-    color: #1e3a5f;
-  }
-
-  .dri-badge {
-    display: inline-block;
-    background: #166534;
-    color: white;
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    padding: 0.1rem 0.4rem;
-    border-radius: 0.3rem;
-    vertical-align: middle;
-    margin-left: 0.3rem;
-  }
-
   .dri-targets-preview {
     margin-top: 0.75rem;
     background: #f0fdf4;
@@ -2409,12 +2434,6 @@
     align-items: center;
     gap: 0.5rem;
     margin-bottom: 0.5rem;
-  }
-
-  .dri-kcal-big {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #166534;
   }
 
   .dri-two-col {
@@ -2462,21 +2481,6 @@
 
   .save-dri-btn:hover {
     background: #14532d;
-  }
-
-  .nutrient-input.dri-readonly {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.35rem 0.5rem;
-    background: #f0fdf4;
-    border: 1px solid #bbf7d0;
-    border-radius: 0.4rem;
-  }
-
-  .nutrient-input.dri-readonly strong {
-    margin-left: auto;
-    font-size: 1rem;
   }
 
   .header-actions {
@@ -2562,15 +2566,6 @@
 
   .menu-item:hover {
     background: #f0fdf4;
-  }
-
-  .menu-item--locked {
-    opacity: 0.65;
-    cursor: default;
-  }
-
-  .menu-item--locked:hover {
-    background: none;
   }
 
   .menu-tier-badge {
@@ -2994,12 +2989,6 @@
     border-color: #6366f1;
     color: #fff;
     color-scheme: dark;
-  }
-
-  .notes-date-label {
-    margin: 0;
-    font-size: 0.85rem;
-    color: #6b7280;
   }
 
   .sentiment-row {
@@ -3548,29 +3537,6 @@
     color: #6b7280;
   }
 
-  .hint-btn {
-    background: none;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    font-size: 1rem;
-    cursor: pointer;
-    padding: 0.15rem 0.35rem;
-    opacity: 0.9;
-    transition: opacity 0.2s, transform 0.2s;
-    -webkit-appearance: none;
-    appearance: none;
-  }
-
-  .hint-btn:hover,
-  .hint-btn:focus {
-    opacity: 1;
-    transform: scale(1.2);
-    background: none;
-    background-color: transparent;
-    outline: none;
-  }
-
   .show-presets-link {
     background: none;
     border: none;
@@ -3730,76 +3696,12 @@
     font-size: 0.9rem;
   }
 
-  .custom-input-small {
-    width: 80px;
-    padding: 0.4rem;
-    border: 2px solid #3b82f6;
-    border-radius: 0.25rem;
-    font-size: 0.9rem;
-    text-align: center;
-  }
-
-  .nutrient-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.5rem;
-  }
-
-  .nutrient-input {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    font-size: 0.8rem;
-  }
-
-  .nutrient-input span:first-child {
-    width: 70px;
-  }
-
-  .nutrient-input input {
-    width: 60px;
-    padding: 0.3rem;
-    border: 1px solid #d1d5db;
-    border-radius: 0.25rem;
-    font-size: 0.85rem;
-    text-align: center;
-  }
-
-  .nutrient-input input::placeholder {
-    color: #9ca3af;
-  }
-
-  .nutrient-input input:focus {
-    outline: none;
-    border-color: #3b82f6;
-  }
-
-  .nutrient-input .unit {
-    font-size: 0.75rem;
-    color: #6b7280;
-    width: 35px;
-  }
-
   .settings-actions {
     display: flex;
     gap: 0.5rem;
     justify-content: flex-end;
     padding-top: 0.5rem;
     border-top: 1px solid #e5e7eb;
-  }
-
-  .reset-defaults-btn {
-    padding: 0.4rem 0.75rem;
-    background: #f3f4f6;
-    color: #374151;
-    border: 1px solid #d1d5db;
-    border-radius: 0.25rem;
-    font-size: 0.8rem;
-    cursor: pointer;
-  }
-
-  .reset-defaults-btn:hover {
-    background: #e5e7eb;
   }
 
   .autosave-notice {
@@ -4403,35 +4305,6 @@
     cursor: not-allowed;
   }
 
-  .confirm-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-  }
-
-  .confirm-popup {
-    background: white;
-    padding: 1.25rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    max-width: 320px;
-    width: 90%;
-  }
-
-  .confirm-message {
-    margin: 0 0 1rem;
-    font-size: 0.9rem;
-    color: #374151;
-    text-align: center;
-  }
-
   .confirm-actions {
     display: flex;
     gap: 0.5rem;
@@ -4445,34 +4318,6 @@
     border: none;
     border-radius: 0.25rem;
     cursor: pointer;
-  }
-
-  .settings-panel button.hint-btn {
-    background: none;
-    padding: 0.15rem 0.35rem;
-    color: inherit;
-    filter: brightness(0.7);
-  }
-
-  .custom-calories {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .custom-calories input {
-    width: 100px;
-    padding: 0.5rem;
-    border: 2px solid #3b82f6;
-    border-radius: 0.25rem;
-    font-size: 1rem;
-    text-align: center;
-  }
-
-  .custom-calories input:focus {
-    outline: none;
-    border-color: #2563eb;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
   }
 
   .game-grid {
@@ -4608,25 +4453,6 @@
   
   .foods-list-view {
     display: none;
-  }
-
-  .progress-message {
-    padding: 0.75rem 1.5rem;
-    background: #f3f4f6;
-    border-radius: 2rem;
-    text-align: center;
-  }
-
-  .message {
-    font-weight: 500;
-  }
-
-  .message.success {
-    color: #16a34a;
-  }
-
-  .message.warning {
-    color: #dc2626;
   }
 
   /* Responsive layouts */

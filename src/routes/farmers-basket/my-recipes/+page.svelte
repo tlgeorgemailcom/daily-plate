@@ -455,8 +455,9 @@
           {/if}
         </div>
         
-        <RecipeForm
-          initialData={{
+        {#key editingRecipe.id}
+          <RecipeForm
+            initialData={{
             recipeName: editingRecipe.recipeName,
             category: editingRecipe.category,
             dietaryCategory: editingRecipe.dietaryCategory as any,
@@ -503,13 +504,14 @@
             cook3TempF: typeof (editingRecipe as any).cook3TempF === 'number' ? (editingRecipe as any).cook3TempF : undefined,
             cook3FillClass: typeof (editingRecipe as any).cook3FillClass === 'string' ? (editingRecipe as any).cook3FillClass : undefined,
           }}
-          onsubmit={handleSaveEdit}
-          oncancel={() => editingRecipe = null}
-          submitLabel={isUploadingImage ? '⏳ Uploading...' : editingRecipe?.status === 'approved' ? 'Submit for Re-approval' : 'Save Changes'}
-          submitting={saving || isUploadingImage}
-          errorMessage={saveError}
-          disableSuggestions={true}
-        />
+            onsubmit={handleSaveEdit}
+            oncancel={() => editingRecipe = null}
+            submitLabel={isUploadingImage ? '⏳ Uploading...' : editingRecipe?.status === 'approved' ? 'Submit for Re-approval' : 'Save Changes'}
+            submitting={saving || isUploadingImage}
+            errorMessage={saveError}
+            disableSuggestions={true}
+          />
+        {/key}
       </div>
     </div>
   {/if}

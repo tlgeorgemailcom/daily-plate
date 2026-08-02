@@ -53,7 +53,10 @@
   
   // View states: 'dietary-select' | 'recipe-of-day' | 'index' | 'detail'
   let showDietarySelect = $state(false);
-  let showRecipeOfDay = $state(startWithRecipeOfDay);
+  function getInitialRecipeOfDay() {
+    return startWithRecipeOfDay;
+  }
+  let showRecipeOfDay = $state(getInitialRecipeOfDay());
   
   // Moderator mode - allows editing the currently selected recipe
   let isModeratorMode = $state(false);
@@ -87,6 +90,8 @@
   let collabEditSuccess = $state(false);
   let collabDraftChangedWhileEditing = $state(false);
   let collabKnownDraftTimestamp = $state<string | null>(null);
+  let collabFormRevision = $state(0);
+  let creatorFormRevision = $state(0);
   let collabPollInterval: ReturnType<typeof setInterval> | null = null;
 
   // Creator draft state (draft left by collaborators or creator's own saved draft)
@@ -108,6 +113,11 @@
   let editCodeRevoking = $state(false);
   let editCodeCopied = $state(false);
   const MODERATOR_PASSWORD = '4444';
+  type PasswordPromptAction = 'add-builtin' | 'edit-recipe' | 'secret-admin';
+  let passwordPromptAction = $state<PasswordPromptAction | null>(null);
+  let passwordInput = $state('');
+  let passwordPromptError = $state('');
+  let passwordInputElement = $state<HTMLInputElement | null>(null);
   
   // Image upload state for moderator mode
   let selectedImageFile = $state<File | null>(null);
@@ -258,7 +268,7 @@
   );
   
   // Reference to scroll container
-  let scrollContainer: HTMLDivElement;
+  let scrollContainer = $state<HTMLDivElement | undefined>(undefined);
   let savedScrollTop = 0;
   
   function toggleCategory(category: string) {
@@ -559,6 +569,13 @@
   }
   
   function handleKeydown(e: KeyboardEvent) {
+    if (passwordPromptAction) {
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        closePasswordModal();
+      }
+      return;
+    }
     if (e.key === 'Escape') {
       if (isAddingNewBuiltin) {
         isAddingNewBuiltin = false;
@@ -618,6 +635,75 @@
     }
   }
   
+
+  function handleBackdropKeydown(e: KeyboardEvent) {
+    if (e.target === e.currentTarget && e.key === 'Escape') {
+      e.stopPropagation();
+      handleKeydown(e);
+    }
+  }
+
+  function openPasswordModal(action: PasswordPromptAction) {
+    passwordPromptAction = action;
+    passwordInput = '';
+    passwordPromptError = '';
+    tick().then(() => passwordInputElement?.focus());
+  }
+
+  function closePasswordModal() {
+    passwordPromptAction = null;
+    passwordInput = '';
+    passwordPromptError = '';
+  }
+
+  function enterModeratorMode() {
+    if (!selectedLevel) return;
+    isModeratorMode = true;
+    saveError = null;
+    saveSuccess = false;
+
+    // Initialize image state - show existing image if any
+    selectedImageFile = null;
+    isUploadingImage = false;
+    imageUploadError = null;
+    imagePreviewUrl = selectedLevel.imageUrl || null;
+  }
+
+  function openAddNewBuiltinForm() {
+    // Force add-new mode to render even when opening from Recipe of the Day.
+    showRecipeOfDay = false;
+    showDietarySelect = false;
+    isAddingNewBuiltin = true;
+    saveError = null;
+    saveSuccess = false;
+    selectedImageFile = null;
+    imagePreviewUrl = null;
+    isUploadingImage = false;
+    imageUploadError = null;
+  }
+
+  function handlePasswordSubmit(event: SubmitEvent) {
+    event.preventDefault();
+    const action = passwordPromptAction;
+    if (!action) return;
+
+    if (passwordInput !== MODERATOR_PASSWORD) {
+      passwordPromptError = 'Incorrect password';
+      passwordInput = '';
+      tick().then(() => passwordInputElement?.focus());
+      return;
+    }
+
+    closePasswordModal();
+    if (action === 'add-builtin') {
+      openAddNewBuiltinForm();
+    } else if (action === 'edit-recipe') {
+      enterModeratorMode();
+    } else {
+      window.open('/farmers-basket/moderate', '_blank');
+    }
+  }
+
   function handleSettingsClick() {
     // If already in moderator mode, toggle off
     if (isModeratorMode && selectedLevel) {
@@ -625,30 +711,16 @@
       return;
     }
     
-    // Prompt for password and enter edit mode
+    // Require the moderator password before entering edit mode.
     if (selectedLevel) {
-      const password = prompt('Enter moderator password:');
-      if (password === MODERATOR_PASSWORD) {
-        isModeratorMode = true;
-        saveError = null;
-        saveSuccess = false;
-        
-        // Initialize image state - show existing image if any
-        selectedImageFile = null;
-        isUploadingImage = false;
-        imageUploadError = null;
-        imagePreviewUrl = selectedLevel.imageUrl || null;
-      }
+      openPasswordModal('edit-recipe');
     }
   }
   
   // Secret admin access via book icon
   function handleSecretAdmin(e: MouseEvent) {
     e.stopPropagation();
-    const code = prompt('');
-    if (code === '4444') {
-      window.open('/farmers-basket/moderate', '_blank');
-    }
+    openPasswordModal('secret-admin');
   }
   
   // Image handling functions for moderator mode
@@ -1034,21 +1106,9 @@
     saveSuccess = false;
   }
 
-  // Open the "Add New Built-In Recipe" form (prompts for moderator password)
+  // Open the "Add New Built-In Recipe" form after moderator authentication.
   function handleAddNewBuiltinClick() {
-    const password = prompt('Enter moderator password:');
-    if (password === MODERATOR_PASSWORD) {
-      // Force add-new mode to render even when opening from Recipe of the Day.
-      showRecipeOfDay = false;
-      showDietarySelect = false;
-      isAddingNewBuiltin = true;
-      saveError = null;
-      saveSuccess = false;
-      selectedImageFile = null;
-      imagePreviewUrl = null;
-      isUploadingImage = false;
-      imageUploadError = null;
-    }
+    openPasswordModal('add-builtin');
   }
 
   // Handle save of a brand-new built-in recipe
@@ -1432,7 +1492,7 @@
   }
 
   // Load any existing draft so collaborator sees latest state
-  async function handleLoadCollabDraft() {
+  async function handleLoadCollabDraft(resetForm = true) {
     if (!collabRecipeId || !collabValidatedCode) return;
     try {
       const res = await fetch(
@@ -1443,6 +1503,7 @@
         collabDraft = data.draft ?? null;
         collabKnownDraftTimestamp = data.draftUpdatedAt ?? null;
         collabDraftChangedWhileEditing = false;
+        if (resetForm && data.draft) collabFormRevision += 1;
         startCollabPoll();
       }
     } catch { /* non-critical */ }
@@ -1531,7 +1592,7 @@
       collabEditSuccess = true;
       setTimeout(() => { collabEditSuccess = false; }, 3000);
       // Refresh timestamp baseline so poller knows what we just saved
-      handleLoadCollabDraft();
+      handleLoadCollabDraft(false);
     } catch (err) {
       collabEditError = err instanceof Error ? err.message : 'Failed to save draft';
     } finally {
@@ -1555,6 +1616,7 @@
         const data = await res.json();
         creatorDraft = data.draft ?? null;
         creatorDraftUpdatedAt = data.draftUpdatedAt ?? null;
+        if (data.draft) creatorFormRevision += 1;
       }
     } catch { /* non-critical */ }
     creatorDraftLoadingIntoForm = false;
@@ -1819,7 +1881,7 @@
 
 <svelte:window onkeydown={handleKeydown} />
 
-<div class="modal-backdrop" onclick={handleBackdropClick} role="dialog" aria-modal="true" aria-label="Recipe Book">
+<div class="modal-backdrop" onclick={handleBackdropClick} onkeydown={handleBackdropKeydown} role="dialog" tabindex="-1" aria-modal="true" aria-label="Recipe Book">
   <div class="recipe-book" class:detail-view={selectedLevel}>
     <header class="book-header">
       {#if selectedLevel || isAddingNewBuiltin}
@@ -1949,7 +2011,7 @@
           <div class="mod-form-container">
             <!-- Image Upload Section -->
             <div class="mod-image-section">
-              <label class="mod-section-label">📷 Recipe Photo</label>
+              <div class="mod-section-label">📷 Recipe Photo</div>
               
               {#if imagePreviewUrl}
                 <div class="mod-image-preview-container">
@@ -1988,17 +2050,19 @@
               {/if}
             </div>
             
-            <RecipeForm
-              moderatorMode={true}
-              initialData={levelToFormData(selectedLevel)}
-              onsubmit={handleModeratorSave}
-              oncancel={handleModeratorCancel}
-              submitLabel="💾 Save Changes"
-              submitting={isSaving}
-              errorMessage={saveError || ''}
-              disableSuggestions={true}
-              recipeId={selectedLevel.id}
-            />
+            {#key `${selectedLevel.id}:${creatorFormRevision}`}
+              <RecipeForm
+                moderatorMode={true}
+                initialData={levelToFormData(selectedLevel)}
+                onsubmit={handleModeratorSave}
+                oncancel={handleModeratorCancel}
+                submitLabel="💾 Save Changes"
+                submitting={isSaving}
+                errorMessage={saveError || ''}
+                disableSuggestions={true}
+                recipeId={selectedLevel.id}
+              />
+            {/key}
           </div>
         </div>
       {:else if isPlayerEditing}
@@ -2018,7 +2082,7 @@
           <div class="mod-form-container">
             <!-- Image Upload Section -->
             <div class="mod-image-section">
-              <label class="mod-section-label">📷 Recipe Photo</label>
+              <div class="mod-section-label">📷 Recipe Photo</div>
 
               {#if imagePreviewUrl}
                 <div class="mod-image-preview-container">
@@ -2057,35 +2121,37 @@
               {/if}
             </div>
 
-            <RecipeForm
-              initialData={creatorInitialData()}
-              onsubmit={handlePlayerSave}
-              oncancel={handlePlayerEditCancel}
-              submitting={playerEditSaving || playerDraftSaving}
-              errorMessage={playerEditError || playerDraftError || ''}
-              disableSuggestions={true}
-            >
-              {#snippet customActions({ formData, isValid })}
-                <div class="creator-form-actions">
-                  <button type="button" class="cancel-btn" onclick={handlePlayerEditCancel}>Cancel</button>
-                  <button
-                    type="button"
-                    class="creator-save-draft-btn"
-                    disabled={playerDraftSaving || playerEditSaving}
-                    onclick={() => handlePlayerSaveDraft(formData)}
-                  >
-                    {playerDraftSaving ? '⏳ Saving...' : playerDraftSuccess ? '✓ Draft saved!' : '💾 Save Draft'}
-                  </button>
-                  <button
-                    type="submit"
-                    class="creator-submit-btn"
-                    disabled={playerEditSaving || playerDraftSaving || !isValid}
-                  >
-                    {playerEditSaving ? '⏳ Submitting...' : '📤 Submit for Re-approval'}
-                  </button>
-                </div>
-              {/snippet}
-            </RecipeForm>
+            {#key selectedLevel.id}
+              <RecipeForm
+                initialData={creatorInitialData()}
+                onsubmit={handlePlayerSave}
+                oncancel={handlePlayerEditCancel}
+                submitting={playerEditSaving || playerDraftSaving}
+                errorMessage={playerEditError || playerDraftError || ''}
+                disableSuggestions={true}
+              >
+                {#snippet customActions({ formData, isValid })}
+                  <div class="creator-form-actions">
+                    <button type="button" class="cancel-btn" onclick={handlePlayerEditCancel}>Cancel</button>
+                    <button
+                      type="button"
+                      class="creator-save-draft-btn"
+                      disabled={playerDraftSaving || playerEditSaving}
+                      onclick={() => handlePlayerSaveDraft(formData)}
+                    >
+                      {playerDraftSaving ? '⏳ Saving...' : playerDraftSuccess ? '✓ Draft saved!' : '💾 Save Draft'}
+                    </button>
+                    <button
+                      type="submit"
+                      class="creator-submit-btn"
+                      disabled={playerEditSaving || playerDraftSaving || !isValid}
+                    >
+                      {playerEditSaving ? '⏳ Submitting...' : '📤 Submit for Re-approval'}
+                    </button>
+                  </div>
+                {/snippet}
+              </RecipeForm>
+            {/key}
 
             <!-- Collaborator Edit Code -->
             <div class="creator-edit-code-section">
@@ -2163,15 +2229,17 @@
           <p class="collab-edit-note">Your changes will be saved as a draft. The recipe creator reviews and submits for approval.</p>
 
           <div class="mod-form-container">
-            <RecipeForm
-              initialData={collabInitialData()}
-              onsubmit={handleCollabSave}
-              oncancel={handleCollabCancel}
-              submitLabel={collabEditSaving ? '⏳ Saving...' : '💾 Save Draft'}
-              submitting={collabEditSaving}
-              errorMessage={collabEditError || ''}
-              disableSuggestions={true}
-            />
+            {#key `${collabRecipeId ?? ''}:${collabFormRevision}`}
+              <RecipeForm
+                initialData={collabInitialData()}
+                onsubmit={handleCollabSave}
+                oncancel={handleCollabCancel}
+                submitLabel={collabEditSaving ? '⏳ Saving...' : '💾 Save Draft'}
+                submitting={collabEditSaving}
+                errorMessage={collabEditError || ''}
+                disableSuggestions={true}
+              />
+            {/key}
           </div>
         </div>
       {:else}
@@ -2306,7 +2374,7 @@
         <div class="mod-form-container">
           <!-- Image Upload Section -->
           <div class="mod-image-section">
-            <label class="mod-section-label">📷 Recipe Photo</label>
+            <div class="mod-section-label">📷 Recipe Photo</div>
 
             {#if imagePreviewUrl}
               <div class="mod-image-preview-container">
@@ -2527,6 +2595,34 @@
   </div>
 </div>
 
+{#if passwordPromptAction}
+  <div class="edit-code-overlay" role="dialog" aria-modal="true" aria-labelledby="password-prompt-title">
+    <div class="edit-code-modal">
+      <h3 id="password-prompt-title">
+        {passwordPromptAction === 'secret-admin' ? 'Moderator Access' : 'Enter Moderator Password'}
+      </h3>
+      <p>Enter the moderator password to continue.</p>
+      <form onsubmit={handlePasswordSubmit}>
+        <input
+          bind:this={passwordInputElement}
+          class="edit-code-input"
+          type="password"
+          aria-label="Moderator password"
+          autocomplete="off"
+          bind:value={passwordInput}
+        />
+        {#if passwordPromptError}
+          <p class="edit-code-error" role="alert">{passwordPromptError}</p>
+        {/if}
+        <div class="edit-code-actions">
+          <button type="button" class="edit-code-cancel" onclick={closePasswordModal}>Cancel</button>
+          <button type="submit" class="edit-code-submit">Continue</button>
+        </div>
+      </form>
+    </div>
+  </div>
+{/if}
+
 {#if showEditCodeModal && selectedLevel}
   <div class="edit-code-overlay" role="dialog" aria-modal="true" aria-label="Edit code required">
     <div class="edit-code-modal">
@@ -2663,21 +2759,6 @@
   
   .share-btn:hover {
     background: rgba(255,255,255,0.35);
-  }
-  
-  .header-diet-btn {
-    background: rgba(255,255,255,0.25);
-    border: 1px solid rgba(255,255,255,0.3);
-    padding: 4px 8px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1.1rem;
-    transition: all 0.2s;
-  }
-  
-  .header-diet-btn:hover {
-    background: rgba(255,255,255,0.4);
-    transform: scale(1.1);
   }
   
   .settings-btn {
@@ -3131,21 +3212,6 @@
     font-weight: bold;
   }
   
-  .tab-ingredients {
-    display: flex;
-    gap: 1px;
-  }
-  
-  .mini-emoji {
-    font-size: 0.8rem;
-  }
-  
-  .more {
-    font-size: 0.65rem;
-    color: #999;
-    margin-left: 2px;
-  }
-  
   .no-results {
     text-align: center;
     padding: 30px;
@@ -3563,20 +3629,6 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   }
 
-  .play-inline-link {
-    margin-top: 8px;
-    align-self: flex-start;
-    padding: 0;
-    font-size: 0.9rem;
-    font-weight: 400;
-    color: #6b7280;
-    background: none;
-    border: none;
-    cursor: pointer;
-    text-decoration: underline;
-    text-underline-offset: 2px;
-  }
-  
   .play-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0,0,0,0.25);
@@ -3921,10 +3973,6 @@
     
     .tab-name {
       font-size: 0.8rem;
-    }
-    
-    .mini-emoji {
-      font-size: 0.7rem;
     }
     
     .recipe-name {

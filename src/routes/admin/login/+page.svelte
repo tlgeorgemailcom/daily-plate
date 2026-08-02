@@ -1,6 +1,12 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
   import { enhance } from '$app/forms';
   let { form } = $props();
+  let passwordInput: HTMLInputElement;
+
+  onMount(() => {
+    passwordInput?.focus();
+  });
 
   $effect(() => {
     if (form?.success) {
@@ -21,7 +27,7 @@
       name="password"
       placeholder="Password"
       autocomplete="current-password"
-      autofocus
+      bind:this={passwordInput}
     />
     <button type="submit">Enter</button>
   </form>

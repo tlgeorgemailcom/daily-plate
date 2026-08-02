@@ -444,10 +444,6 @@
     transition: all 0.3s ease-out;
   }
 
-  .slice {
-    transition: opacity 0.3s;
-  }
-
   .arc-label {
     font-weight: 600;
     letter-spacing: 0.05em;

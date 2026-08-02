@@ -2,8 +2,9 @@
   import { invalidateAll } from '$app/navigation';
 
   let { data } = $props();
+  const captureInitial = <T>(read: () => T): T => read();
 
-  let publishDate = $state(defaultDate(data.strips));
+  let publishDate = $state(captureInitial(() => defaultDate(data.strips)));
   let altText     = $state('');
   let stripType   = $state('weekday');
   let fileInput: HTMLInputElement;

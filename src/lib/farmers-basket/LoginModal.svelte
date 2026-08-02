@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
   import { playerStore } from '$lib/stores/playerStore';
   
   interface Props {
@@ -17,6 +18,11 @@
   let error = $state<string | null>(null);
   let success = $state<string | null>(null);
   let loading = $state(false);
+  let modalOverlay: HTMLDivElement | undefined;
+
+  onMount(() => {
+    modalOverlay?.focus();
+  });
   
   async function handleSubmit(e: Event) {
     e.preventDefault();
@@ -81,10 +87,32 @@
     error = null;
     success = null;
   }
+
+  function handleBackdropClick(event: MouseEvent) {
+    if (event.target === event.currentTarget) onClose();
+  }
+
+  function handleKeydown(event: KeyboardEvent) {
+    if (event.key === 'Escape') {
+      event.stopPropagation();
+      onClose();
+    }
+  }
 </script>
 
-<div class="modal-overlay" onclick={onClose}>
-  <div class="modal" onclick={(e) => e.stopPropagation()}>
+<svelte:window onkeydown={handleKeydown} />
+
+<div
+  class="modal-overlay"
+  role="dialog"
+  tabindex="-1"
+  aria-modal="true"
+  aria-label="Account login"
+  bind:this={modalOverlay}
+  onclick={handleBackdropClick}
+  onkeydown={handleKeydown}
+>
+  <div class="modal">
     <button class="close-btn" onclick={onClose}>✕</button>
     
     <div class="modal-header">

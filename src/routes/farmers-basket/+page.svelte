@@ -208,6 +208,12 @@
   });
   
   function handleKeyDown(e: KeyboardEvent) {
+    if (e.key === 'Escape' && showRules) {
+      showRules = false;
+      e.preventDefault();
+      return;
+    }
+
     // Skip game controls when a modal is open
     if (showRecipeBook || showShareRecipe || get(nutritionLegendModal).open) {
       return;
@@ -816,12 +822,15 @@
   
   <!-- Scaled game wrapper - takes up scaled dimensions -->
   <div class="game-scale-wrapper" style="width: {scaledWidth}px; height: {scaledHeight}px;">
-    <div 
+    <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
+    <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+    <div
       class="game-area"
       class:placing-mode={game.selectedTool !== null}
       class:dragging-farmer={isDraggingFarmerMouse}
       style="width: {GRID_WIDTH}px; height: {TOTAL_HEIGHT}px; transform: scale({gameScale}); transform-origin: top left;"
     onclick={handleGameClick}
+      onkeydown={(e) => { e.stopPropagation(); handleKeyDown(e); }}
     onmousedown={handleMouseDown}
     onmousemove={handleMouseMove}
     onmouseup={handleMouseUp}
@@ -833,6 +842,7 @@
     ontouchend={handleTouchEnd}
     bind:this={gameAreaElement}
     role="application"
+    tabindex="0"
     aria-label="Game area"
   >
     <!-- Mouse/Touch target indicator (for farmer movement) -->
@@ -1107,8 +1117,13 @@
 
 <!-- Rules Modal -->
 {#if showRules}
-  <div class="modal-backdrop" onclick={() => showRules = false}>
-    <div class="rules-modal" onclick={(e) => e.stopPropagation()}>
+  <div
+    class="modal-backdrop"
+    role="presentation"
+    onclick={(e) => { if (e.target === e.currentTarget) showRules = false; }}
+    onkeydown={(e) => { if (e.key === 'Escape') showRules = false; }}
+  >
+    <div class="rules-modal">
       <header class="rules-header">
         <h3>📖 How to Play</h3>
         <button class="modal-close-x" onclick={() => showRules = false} aria-label="Close">×</button>
@@ -1252,11 +1267,6 @@
     box-sizing: border-box;
   }
   
-  /* Scroll indicator - no longer needed since we use scaling */
-  .scroll-indicator-edge {
-    display: none;
-  }
-
   .game-scale-wrapper {
     position: relative;
     overflow: hidden;
@@ -1570,11 +1580,6 @@
   .overlay-content p {
     margin: 10px 0;
     color: #795548;
-  }
-  
-  .overlay-content .hint {
-    font-size: 0.9rem;
-    color: #9E9E9E;
   }
   
   .overlay-content button {
@@ -1914,10 +1919,6 @@
     50% { opacity: 1; }
   }
   
-  .mobile-hint {
-    display: none;
-  }
-  
   /* Tablet sizing - now handled by JS scaling */
   /* Removed transform overrides that conflict with JS scaling */
   
@@ -1931,12 +1932,8 @@
       display: flex;
     }
     
-    .desktop-only, .desktop-hint {
+    .desktop-only {
       display: none;
-    }
-    
-    .mobile-hint {
-      display: block;
     }
     
     .game-container {
@@ -2032,12 +2029,6 @@
     }
   }
   
-  @media (pointer: fine) and (min-width: 769px) {
-    .mobile-hint {
-      display: none;
-    }
-  }
-
   /* Rules Modal */
   .modal-backdrop {
     position: fixed;

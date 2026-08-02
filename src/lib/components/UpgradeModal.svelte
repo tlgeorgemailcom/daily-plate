@@ -85,8 +85,20 @@
   const isPlus = $derived(currentTier === 'plus');
 </script>
 
-<div class="modal-overlay" onclick={onClose}>
-  <div class="modal" onclick={(e) => e.stopPropagation()}>
+<div
+  class="modal-overlay"
+  role="presentation"
+  onclick={onClose}
+  onkeydown={(e) => e.key === 'Escape' && onClose()}
+>
+  <div
+    class="modal"
+    role="dialog"
+    aria-modal="true"
+    tabindex="-1"
+    onclick={(e) => e.stopPropagation()}
+    onkeydown={(e) => e.key !== 'Escape' && e.stopPropagation()}
+  >
     <button class="close-btn" onclick={onClose}>✕</button>
     
     {#if isAllin}

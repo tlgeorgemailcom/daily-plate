@@ -889,8 +889,9 @@
                     {#snippet customActions({ formData, isValid })}
                       {#if showRequestChangesPanel}
                         <div class="request-changes-panel">
-                          <label class="mod-note-label">💬 What needs to change?</label>
+                          <label class="mod-note-label" for="request-changes-note">💬 What needs to change?</label>
                           <textarea
+                            id="request-changes-note"
                             class="mod-note-textarea"
                             bind:value={requestChangesNote}
                             placeholder="Describe what the player should fix before resubmitting..."
@@ -975,7 +976,7 @@
               <div class="form-container">
                 <!-- Image Upload Section -->
                 <div class="image-upload-section">
-                  <label class="section-label">Recipe Photo</label>
+                  <div class="section-label">Recipe Photo</div>
                   
                   {#if imagePreviewUrl}
                     <div class="image-preview-container">
@@ -1198,12 +1199,6 @@
   .header-actions .back-link {
     color: white;
     margin: 0;
-  }
-  
-  .header-actions .hint {
-    margin: 0;
-    font-size: 0.8rem;
-    opacity: 0.9;
   }
   
   .success-banner {
@@ -1664,10 +1659,6 @@
       border-bottom: 2px solid #E0E0E0;
     }
     
-    .header-actions .hint {
-      display: none;
-    }
-
     .request-changes-btn,
     .reject-btn,
     .approve-btn {

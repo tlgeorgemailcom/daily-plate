@@ -42,10 +42,14 @@
       onSelectGame(gameId);
     }
   }
+
+  function handleOverlayKeydown(event: KeyboardEvent) {
+    if (event.key === 'Escape') onClose();
+  }
 </script>
 
-<div class="modal-overlay" onclick={onClose}>
-  <div class="modal" onclick={(e) => e.stopPropagation()}>
+<div class="modal-overlay" onclick={onClose} onkeydown={handleOverlayKeydown} role="button" tabindex="0">
+  <div class="modal" onclick={(e) => e.stopPropagation()} onkeydown={(e) => e.key !== 'Escape' && e.stopPropagation()} role="dialog" aria-modal="true" aria-label="Daily Food Games" tabindex="-1">
     <button class="close-btn" onclick={onClose}>×</button>
     
     <h2 class="title">🎮 Daily Food Games</h2>

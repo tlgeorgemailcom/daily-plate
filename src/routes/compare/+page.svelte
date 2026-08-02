@@ -40,6 +40,9 @@
   // Image refs for coordinate calculation
   let imageARef = $state<HTMLImageElement | undefined>(undefined);
   let imageBRef = $state<HTMLImageElement | undefined>(undefined);
+  let keyboardImage = $state<'a' | 'b' | null>(null);
+  let keyboardX = $state(50);
+  let keyboardY = $state(50);
 
   function initGame() {
     // Check for archive date in URL
@@ -69,15 +72,7 @@
     }
   }
 
-  function handleImageClick(e: MouseEvent) {
-    // Prevent double-firing from touch + click
-    e.preventDefault();
-    
-    const img = e.currentTarget as HTMLImageElement;
-    const rect = img.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width) * 100;
-    const y = ((e.clientY - rect.top) / rect.height) * 100;
-
+  function checkImageAt(x: number, y: number) {
     if (devMode) {
       // In dev mode, log coordinates instead of playing
       const coord = `{ x: ${Math.round(x)}, y: ${Math.round(y)}, radius: 8 }`;
@@ -111,10 +106,42 @@
     // Silent on wrong click (per spec)
   }
 
+  function handleImageClick(e: MouseEvent) {
+    // Prevent double-firing from touch + click
+    e.preventDefault();
+
+    const target = e.currentTarget as HTMLElement;
+    const rect = target.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    checkImageAt(x, y);
+  }
+
+  function handleImageKeydown(e: KeyboardEvent) {
+    const target = e.currentTarget as HTMLElement;
+    const imageSide = target.dataset.imageSide === 'b' ? 'b' : 'a';
+    keyboardImage = imageSide;
+
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      checkImageAt(keyboardX, keyboardY);
+      return;
+    }
+
+    const step = e.shiftKey ? 1 : 5;
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+      e.preventDefault();
+      keyboardX = Math.max(0, Math.min(100, keyboardX + (e.key === 'ArrowRight' ? step : -step)));
+    } else if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+      e.preventDefault();
+      keyboardY = Math.max(0, Math.min(100, keyboardY + (e.key === 'ArrowDown' ? step : -step)));
+    }
+  }
+
   function handleImageHover(e: MouseEvent) {
     if (!devMode) return;
-    const img = e.currentTarget as HTMLImageElement;
-    const rect = img.getBoundingClientRect();
+    const target = e.currentTarget as HTMLElement;
+    const rect = target.getBoundingClientRect();
     hoverX = Math.round(((e.clientX - rect.left) / rect.width) * 100);
     hoverY = Math.round(((e.clientY - rect.top) / rect.height) * 100);
   }
@@ -172,15 +199,27 @@
   {#if puzzle}
     <div class="images-container">
       <!-- Image A -->
-      <div class="image-wrapper">
-        <img 
-          src={puzzle.imageA} 
-          alt="Image A" 
+      <div
+        class="image-wrapper"
+        role="button"
+        tabindex="0"
+        data-image-side="a"
+        aria-label="Original puzzle. Use arrow keys to move the search cursor, then press Enter to check."
+        onclick={handleImageClick}
+        onkeydown={handleImageKeydown}
+        onfocus={() => keyboardImage = 'a'}
+        onblur={() => keyboardImage = null}
+        onmousemove={handleImageHover}
+      >
+        <img
+          src={puzzle.imageA}
+          alt="Original puzzle"
           class="puzzle-image"
           bind:this={imageARef}
-          onclick={handleImageClick}
-          onmousemove={handleImageHover}
         />
+        {#if keyboardImage === 'a'}
+          <div class="keyboard-cursor" style="left: {keyboardX}%; top: {keyboardY}%;" aria-hidden="true"></div>
+        {/if}
         
         <!-- Found circles -->
         {#each differences as diff}
@@ -212,15 +251,27 @@
       </div>
 
       <!-- Image B -->
-      <div class="image-wrapper">
-        <img 
-          src={puzzle.imageB} 
-          alt="Image B" 
+      <div
+        class="image-wrapper"
+        role="button"
+        tabindex="0"
+        data-image-side="b"
+        aria-label="Modified puzzle. Use arrow keys to move the search cursor, then press Enter to check."
+        onclick={handleImageClick}
+        onkeydown={handleImageKeydown}
+        onfocus={() => keyboardImage = 'b'}
+        onblur={() => keyboardImage = null}
+        onmousemove={handleImageHover}
+      >
+        <img
+          src={puzzle.imageB}
+          alt="Modified puzzle"
           class="puzzle-image"
           bind:this={imageBRef}
-          onclick={handleImageClick}
-          onmousemove={handleImageHover}
         />
+        {#if keyboardImage === 'b'}
+          <div class="keyboard-cursor" style="left: {keyboardX}%; top: {keyboardY}%;" aria-hidden="true"></div>
+        {/if}
         
         <!-- Found circles -->
         {#each differences as diff}
@@ -434,6 +485,23 @@
     user-select: none;
     -webkit-touch-callout: none;
     touch-action: manipulation;
+  }
+
+  .image-wrapper:focus-visible {
+    outline: 3px solid #2563eb;
+    outline-offset: -3px;
+  }
+
+  .keyboard-cursor {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    transform: translate(-50%, -50%);
+    border: 3px solid #2563eb;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #fff, 0 0 10px rgba(37, 99, 235, 0.8);
+    pointer-events: none;
+    z-index: 2;
   }
 
   .found-circle {

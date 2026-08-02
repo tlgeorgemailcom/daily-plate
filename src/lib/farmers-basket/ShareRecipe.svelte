@@ -29,7 +29,8 @@
   // 'confirmed' is shown immediately when opening via a share link, with the
   // Continue button disabled until the API call completes
   type EntryView = 'choose' | 'new' | 'join' | 'confirmed';
-  let entryView = $state<EntryView>(joinCode ? 'confirmed' : 'choose');
+  const captureInitial = <T>(read: () => T): T => read();
+  let entryView = $state<EntryView>(captureInitial(() => joinCode ? 'confirmed' : 'choose'));
 
   // Collaborator state — set when joining via edit code
   let isCollaborator = $state(false);
@@ -317,7 +318,7 @@
       } catch { return null; }
     })() : null
   );
-  let isLoggedIn = $state(playerId !== null);
+  let isLoggedIn = $state(captureInitial(() => playerId !== null));
   let isSubscriber = $state(
     typeof window !== 'undefined' ? (() => {
       try {
@@ -633,7 +634,7 @@
 
 <svelte:window onkeydown={handleKeydown} />
 
-<div class="modal-backdrop" onclick={handleBackdropClick} role="dialog" aria-modal="true" aria-label="Share Recipe">
+<div class="modal-backdrop" onclick={handleBackdropClick} onkeydown={handleKeydown} role="dialog" tabindex="-1" aria-modal="true" aria-label="Share Recipe">
   <div class="share-modal">
     <header class="modal-header">
       <h2>📝 Share Your Recipe</h2>
@@ -1193,36 +1194,6 @@
     background: #1B5E20;
   }
 
-  .join-loading-view {
-    padding: 40px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-  }
-
-  .join-loading-spinner {
-    font-size: 3rem;
-    animation: spin 1.2s linear infinite;
-  }
-
-  @keyframes spin {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(360deg); }
-  }
-
-  .join-loading-view h3 {
-    margin: 0;
-    font-size: 1.4rem;
-    color: #2E7D32;
-  }
-
-  .join-loading-view p {
-    margin: 0;
-    color: #666;
-  }
-
   .success-view {
     padding: 40px;
     text-align: center;
@@ -1656,13 +1627,6 @@
 
   .info-panel-body p:last-child {
     margin-bottom: 0;
-  }
-
-  .coming-soon {
-    text-align: center;
-    color: #888;
-    font-style: italic;
-    padding: 16px 0;
   }
 
   /* Image Upload Styles */

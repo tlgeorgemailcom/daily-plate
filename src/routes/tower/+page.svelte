@@ -437,11 +437,17 @@
     showResults = false;
     showAnswers = false;
   }
+
+  function handleModalKeydown(event: KeyboardEvent) {
+    if (event.key === 'Escape' && showRules) showRules = false;
+  }
 </script>
 
 <svelte:head>
   <title>Tower of Food | TodayPage</title>
 </svelte:head>
+
+<svelte:window onkeydown={handleModalKeydown} />
 
 <main class="tower-game">
   <header>
@@ -623,8 +629,13 @@
 
   <!-- Rules Modal -->
   {#if showRules}
-    <div class="modal-backdrop" onclick={() => showRules = false}>
-      <div class="rules-modal" onclick={(e) => e.stopPropagation()}>
+    <div
+      class="modal-backdrop"
+      role="presentation"
+      onclick={(e) => { if (e.target === e.currentTarget) showRules = false; }}
+      onkeydown={(e) => { if (e.key === 'Escape') showRules = false; }}
+    >
+      <div class="rules-modal">
         <h3>📖 {currentLevel === 'usda' ? 'USDA' : currentLevel === 'foodie' ? 'FOODIE' : 'FOODIE 21+'} Rules</h3>
         
         <div class="rules-content">

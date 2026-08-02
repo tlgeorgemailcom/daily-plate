@@ -61,6 +61,18 @@
     expandedFood = expandedFood === key ? null : key;
   }
 
+  function handleBackdropClick(event: MouseEvent) {
+    if (event.target === event.currentTarget) {
+      onClose();
+    }
+  }
+
+  function handleKeydown(event: KeyboardEvent) {
+    if (event.key === 'Escape') {
+      onClose();
+    }
+  }
+
   // ── Tier gate ────────────────────────────────────────────────────────────────
   // TODO: remove DEV_BYPASS before release
   const DEV_BYPASS = false;
@@ -820,9 +832,16 @@
   ] satisfies NutrientRow[]);
 </script>
 
-<!-- svelte-ignore a11y_click_events_have_key_events a11y_no_static_element_interactions -->
-<div class="modal-backdrop" onclick={onClose}>
-  <div class="reports-modal" onclick={(e) => e.stopPropagation()}>
+<div
+  class="modal-backdrop"
+  role="dialog"
+  tabindex="-1"
+  aria-modal="true"
+  aria-label="Reports"
+  onclick={handleBackdropClick}
+  onkeydown={handleKeydown}
+>
+  <div class="reports-modal">
 
     <!-- ── Header ─────────────────────────────────────────────────────────── -->
     <div class="reports-header">
@@ -1451,48 +1470,6 @@
     color: #111827;
   }
 
-  .symp-view-link {
-    background: none;
-    border: none;
-    padding: 0;
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: #7c3aed;
-    cursor: pointer;
-    text-decoration: underline;
-    text-underline-offset: 2px;
-    flex-shrink: 0;
-  }
-  .symp-view-link:hover { color: #5b21b6; }
-
-  .symp-notes-list {
-    margin: 0 0 0.6rem;
-    border-left: 2px solid #e9d5ff;
-    padding-left: 0.6rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-  }
-
-  .symp-note-item {
-    display: flex;
-    gap: 0.5rem;
-    align-items: flex-start;
-    font-size: 0.78rem;
-  }
-
-  .symp-note-date {
-    flex-shrink: 0;
-    font-weight: 600;
-    color: #374151;
-    min-width: 3.8rem;
-  }
-
-  .symp-note-text {
-    color: #4b5563;
-    line-height: 1.4;
-  }
-
   .symp-note-empty {
     color: #9ca3af;
     font-style: italic;
@@ -1502,13 +1479,6 @@
     margin: 0 0 0.55rem;
     font-size: 0.75rem;
     color: #9ca3af;
-  }
-
-  .symp-single-note {
-    margin: 0;
-    font-size: 0.8rem;
-    color: #9ca3af;
-    font-style: italic;
   }
 
   .no-symptoms-yet {
@@ -1548,24 +1518,6 @@
     gap: 0.4rem;
     font-size: 0.75rem;
     padding: 0.07rem 0;
-  }
-
-  .nutr-wl-row {
-    background: #fefce8;
-    border-left: 2px solid #f59e0b;
-    padding-left: 0.35rem;
-    border-radius: 0 0.2rem 0.2rem 0;
-    margin-bottom: 0.05rem;
-  }
-
-  .nutr-wl-row .symp-day-food-name {
-    color: #92400e;
-    font-weight: 600;
-  }
-
-  .nutr-wl-row .symp-day-food-qty {
-    color: #b45309;
-    font-weight: 600;
   }
 
   .symp-day-food-cat {
@@ -1656,12 +1608,6 @@
     font-style: italic;
   }
 
-  .symp-foods {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-  }
-
   .symp-food-item {
     display: flex;
     flex-direction: column;
@@ -1735,29 +1681,6 @@
     color: #9ca3af;
   }
 
-  .occ-more-link {
-    background: none;
-    border: none;
-    padding: 0;
-    font-size: inherit;
-    color: #6b7280;
-    text-decoration: underline;
-    cursor: pointer;
-  }
-
-  .occ-more-link:hover {
-    color: #374151;
-  }
-
-  /* ── "More" trigger panel ────────────────────────────────────────────────── */
-  .occ-more-panel {
-    background: white;
-    border: 1px solid #e5e7eb;
-    border-radius: 0.375rem;
-    margin: 0.15rem 0 0.3rem;
-    overflow: hidden;
-  }
-
   .occ-watch-section {
     padding: 0.45rem 0.65rem;
     background: #fffbeb;
@@ -1788,72 +1711,10 @@
     font-weight: 600;
   }
 
-  .trigger-val {
-    min-width: 4rem;
-    flex-shrink: 0;
-    color: #374151;
-    font-weight: 500;
-    text-align: right;
-  }
-
-  .trigger-val.inferred {
-    min-width: unset;
-    color: #6b7280;
-    font-style: italic;
-    font-weight: 400;
-    text-align: left;
-  }
-
-  .trigger-val.present {
-    color: #ef4444;
-    font-weight: 600;
-  }
-
   .trigger-note {
     color: #9ca3af;
     font-size: 0.67rem;
     flex: 1;
-  }
-
-  .occ-full-section {
-    padding: 0.4rem 0.65rem 0.45rem;
-  }
-
-  .occ-full-title {
-    display: block;
-    font-size: 0.68rem;
-    font-weight: 700;
-    color: #9ca3af;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 0.25rem;
-  }
-
-  .occ-full-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 0.75rem;
-  }
-
-  .occ-full-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    font-size: 0.7rem;
-    padding: 0.05rem 0;
-    gap: 0.2rem;
-  }
-
-  .nutri-name {
-    color: #9ca3af;
-    flex: 1;
-  }
-
-  .nutri-val {
-    color: #374151;
-    font-weight: 500;
-    text-align: right;
-    white-space: nowrap;
   }
 
   .symp-food-name {
@@ -2014,148 +1875,6 @@
   }
 
 
-
-  /* ── Nutrient deviation rows ────────────────────────────────────────────── */
-  .nutr-signal-row {
-    display: grid;
-    grid-template-columns: 5rem 1fr 3rem 5.5rem 1.25rem;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.82rem;
-    background: none;
-    border: none;
-    padding: 0.1rem 0;
-    cursor: pointer;
-    width: 100%;
-    text-align: left;
-    border-radius: 0.25rem;
-  }
-
-  .nutr-signal-row:hover {
-    background: #f9fafb;
-  }
-
-  .nutr-signal-name {
-    color: #374151;
-    font-weight: 600;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  .nutr-signal-pct {
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-align: right;
-    white-space: nowrap;
-  }
-
-  .nutr-signal-sig {
-    font-size: 0.73rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .nutr-sig-meta {
-    font-size: 0.73rem;
-    color: #6b7280;
-    margin-bottom: 0.2rem;
-    line-height: 1.4;
-  }
-
-  .nutr-sig-note {
-    color: #92400e;
-    font-weight: 500;
-  }
-
-  .nutr-sig-avg {
-    color: #9ca3af;
-  }
-
-  .other-signals-toggle {
-    background: none;
-    border: none;
-    font-size: 0.78rem;
-    color: #9ca3af;
-    cursor: pointer;
-    padding: 0.2rem 0;
-    text-align: left;
-    margin-top: 0.1rem;
-  }
-
-  .other-signals-toggle:hover {
-    color: #6b7280;
-  }
-
-  .other-signals-section {
-    padding-left: 0.6rem;
-    border-left: 2px dashed #e5e7eb;
-    margin-top: 0.15rem;
-  }
-
-  /* ── "Normal" info popup ─────────────────────────────────────────────────── */
-  .normal-link {
-    background: none;
-    border: none;
-    padding: 0;
-    font: inherit;
-    font-size: inherit;
-    color: #7c3aed;
-    text-decoration: underline;
-    text-underline-offset: 2px;
-    cursor: pointer;
-  }
-
-  .normal-link:hover {
-    color: #6d28d9;
-  }
-
-  .normal-info-popup {
-    position: relative;
-    background: #f5f3ff;
-    border: 1px solid #ddd6fe;
-    border-radius: 0.625rem;
-    padding: 0.75rem 2rem 0.75rem 0.85rem;
-    margin: 0 0 0.75rem;
-    font-size: 0.82rem;
-    color: #374151;
-    line-height: 1.55;
-  }
-
-  .normal-info-close {
-    position: absolute;
-    top: 0.5rem;
-    right: 0.6rem;
-    background: none;
-    border: none;
-    font-size: 0.75rem;
-    color: #9ca3af;
-    cursor: pointer;
-    padding: 0.1rem 0.25rem;
-    line-height: 1;
-  }
-
-  .normal-info-close:hover {
-    color: #374151;
-  }
-
-  .normal-info-title {
-    margin: 0 0 0.4rem;
-    font-weight: 700;
-    color: #7c3aed;
-    font-size: 0.83rem;
-  }
-
-  .normal-info-body {
-    margin: 0 0 0.4rem;
-  }
-
-  .normal-info-tip {
-    margin: 0;
-    color: #6b7280;
-    font-size: 0.78rem;
-  }
 
   /* ── Mobile ─────────────────────────────────────────────────────────────── */
   @media (max-width: 480px) {

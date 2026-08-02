@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { tick } from 'svelte';
   import { addedFoods, removeFood, moveFoodToMeal, updateFoodQuantity, meals, addFood, type AddedFood } from '$lib/stores/gameStore';
   import { playerStore } from '$lib/stores/playerStore';
   import { FOODS } from '$lib/data/food-portions';
@@ -21,6 +22,7 @@
   // Track which food is being quantity-edited
   let editingFoodId = $state<string | null>(null);
   let editingGrams = $state<number>(100);
+  let quantityInput = $state<HTMLInputElement | null>(null);
   
   // For dnd - we need mutable local copies per meal
   let mealFoodsMap = $state<Record<string, AddedFood[]>>({});
@@ -84,6 +86,14 @@
 
   function closeHistory() { historyMealId = null; historyConfirm = null; }
 
+  function handleHistoryBackdropClick(event: MouseEvent) {
+    if (event.target === event.currentTarget) closeHistory();
+  }
+
+  function handleHistoryKeydown(event: KeyboardEvent) {
+    if (event.key === 'Escape') closeHistory();
+  }
+
   function requestLoad(day: HistoryDay) {
     const currentFoods = getFoodsForMeal(historyMealId!);
     if (currentFoods.length > 0) {
@@ -123,6 +133,7 @@
   }
 
   let showSaveModal       = $state(false);
+  let saveNameInput       = $state<HTMLInputElement | null>(null);
   let saveName            = $state('');
   let saveScheduledDate   = $state('');   // optional future date to schedule this plan
   let saveError           = $state('');
@@ -139,6 +150,18 @@
   // Scheduled plan for today — shown as a banner when found on login
   let scheduledPlan       = $state<MealTemplate | null>(null);
   let scheduledDismissed  = $state(false);
+
+  $effect(() => {
+    if (editingFoodId) void tick().then(() => quantityInput?.focus());
+  });
+
+  $effect(() => {
+    if (showAddCategoryModal) void tick().then(() => addCategoryInput?.focus());
+  });
+
+  $effect(() => {
+    if (showSaveModal) void tick().then(() => saveNameInput?.focus());
+  });
 
   const SLOT_ORDER = ['breakfast','beverage','lunch','dinner','snack'] as const;
   const SLOT_LABELS: Record<string, string> = {
@@ -185,6 +208,14 @@
     saveScheduledDate = '';
     saveError = '';
     showSaveModal = true;
+  }
+
+  function handleSaveBackdropClick(event: MouseEvent) {
+    if (event.target === event.currentTarget) showSaveModal = false;
+  }
+
+  function handleSaveKeydown(event: KeyboardEvent) {
+    if (event.key === 'Escape') showSaveModal = false;
   }
 
   async function saveDay() {
@@ -254,6 +285,24 @@
       }
     } finally {
       templatesLoading = false;
+    }
+  }
+
+  function handleLoadBackdropClick(event: MouseEvent) {
+    if (event.target === event.currentTarget) {
+      showLoadModal = false;
+      loadConfirm = null;
+      deleteConfirm = null;
+      previewTemplate = null;
+    }
+  }
+
+  function handleLoadKeydown(event: KeyboardEvent) {
+    if (event.key === 'Escape') {
+      showLoadModal = false;
+      loadConfirm = null;
+      deleteConfirm = null;
+      previewTemplate = null;
     }
   }
 
@@ -443,6 +492,7 @@
 
   // ── Custom Meal Categories (ALL·IN) ───────────────────────────────────────
   let showAddCategoryModal = $state(false);
+  let addCategoryInput = $state<HTMLInputElement | null>(null);
   let newCatEmoji  = $state('🍽️');
   let newCatLabel  = $state('');
   let addCatPending = $state(false);
@@ -453,6 +503,14 @@
     newCatLabel  = '';
     addCatError  = '';
     showAddCategoryModal = true;
+  }
+
+  function handleAddCategoryBackdropClick(event: MouseEvent) {
+    if (event.target === event.currentTarget) showAddCategoryModal = false;
+  }
+
+  function handleAddCategoryKeydown(event: KeyboardEvent) {
+    if (event.key === 'Escape') showAddCategoryModal = false;
   }
 
   // Derive a URL-safe slug from the user-typed label
@@ -514,8 +572,10 @@
   }
 </script>
 
+<svelte:window onclick={handleDocClick} />
+
 <!-- ═══════════════════ MAIN LAYOUT ═══════════════════ -->
-<div class="meal-columns-container" onclick={handleDocClick}>
+<div class="meal-columns-container">
   <div class="meal-columns-header">
     <h3>Today's Foods</h3>
     <div class="header-actions">
@@ -631,16 +691,16 @@
                       max="2000"
                       step="1"
                       bind:value={editingGrams}
+                      bind:this={quantityInput}
                       onblur={saveQuantityEdit}
                       onkeydown={handleQuantityKeydown}
                       onclick={(e) => e.stopPropagation()}
-                      autofocus
                     />g
                   </span>
                 {:else}
-                  <span class="food-qty" onclick={() => startQuantityEdit(item.id, getGramsForFood(item))} title="Click to edit">
+                  <button class="food-qty" type="button" onclick={() => startQuantityEdit(item.id, getGramsForFood(item))} title="Click to edit">
                     {getGramsForFood(item)}g
-                  </span>
+                  </button>
                 {/if}
               </div>
               <span class="food-cal">{Math.round(item.calories)}</span>
@@ -667,8 +727,8 @@
 
 <!-- ═══════════════════ ADD CUSTOM CATEGORY MODAL ═══════════════════ -->
 {#if showAddCategoryModal}
-  <div class="mc-backdrop" onclick={() => showAddCategoryModal = false} role="dialog" aria-modal="true" aria-label="Add custom meal slot">
-    <div class="mc-modal mc-modal--narrow" onclick={(e) => e.stopPropagation()}>
+  <div class="mc-backdrop" onclick={handleAddCategoryBackdropClick} onkeydown={handleAddCategoryKeydown} role="dialog" aria-modal="true" aria-label="Add custom meal slot" tabindex="-1">
+    <div class="mc-modal mc-modal--narrow" role="document" tabindex="-1">
       <div class="mc-modal-header">
         <span class="mc-modal-title">＋ Add Custom Meal Slot</span>
         <button class="mc-close" onclick={() => showAddCategoryModal = false}>×</button>
@@ -691,8 +751,8 @@
             placeholder="e.g. Late Night"
             maxlength="30"
             bind:value={newCatLabel}
+            bind:this={addCategoryInput}
             onkeydown={(e) => { if (e.key === 'Enter') addCategory(); if (e.key === 'Escape') showAddCategoryModal = false; }}
-            autofocus
           />
         </div>
         {#if addCatError}
@@ -709,8 +769,8 @@
   </div>
 {/if}
 {#if historyMealId}
-  <div class="mc-backdrop" onclick={closeHistory} role="dialog" aria-modal="true" aria-label="Meal history">
-    <div class="mc-modal" onclick={(e) => e.stopPropagation()}>
+  <div class="mc-backdrop" onclick={handleHistoryBackdropClick} onkeydown={handleHistoryKeydown} role="dialog" aria-modal="true" aria-label="Meal history" tabindex="-1">
+    <div class="mc-modal" role="document" tabindex="-1">
       <div class="mc-modal-header">
         <span class="mc-modal-title">
           🕐 {mealSlots.find(m => m.id === historyMealId)?.name ?? historyMealId} History
@@ -749,8 +809,8 @@
 
 <!-- ═══════════════════ SAVE DAY MODAL ═══════════════════ -->
 {#if showSaveModal}
-  <div class="mc-backdrop" onclick={() => showSaveModal = false} role="dialog" aria-modal="true" aria-label="Save day plan">
-    <div class="mc-modal mc-modal--narrow" onclick={(e) => e.stopPropagation()}>
+  <div class="mc-backdrop" onclick={handleSaveBackdropClick} onkeydown={handleSaveKeydown} role="dialog" tabindex="-1" aria-modal="true" aria-label="Save day plan">
+    <div class="mc-modal mc-modal--narrow">
       <div class="mc-modal-header">
         <span class="mc-modal-title">💾 Save Day As…</span>
         <button class="mc-close" onclick={() => showSaveModal = false}>×</button>
@@ -777,8 +837,8 @@
           placeholder="e.g. High Protein Saturday"
           maxlength="60"
           bind:value={saveName}
+          bind:this={saveNameInput}
           onkeydown={(e) => { if (e.key === 'Enter') saveDay(); if (e.key === 'Escape') showSaveModal = false; }}
-          autofocus
         />
         <label class="mc-date-label">
           📅 Plan this meal for a specific date <span class="mc-date-hint">(optional)</span>
@@ -806,8 +866,8 @@
 
 <!-- ═══════════════════ LOAD DAY MODAL ═══════════════════ -->
 {#if showLoadModal}
-  <div class="mc-backdrop" onclick={() => { showLoadModal = false; loadConfirm = null; deleteConfirm = null; previewTemplate = null; }} role="dialog" aria-modal="true" aria-label="Load saved day">
-    <div class="mc-modal" onclick={(e) => e.stopPropagation()}>
+  <div class="mc-backdrop" onclick={handleLoadBackdropClick} onkeydown={handleLoadKeydown} role="dialog" tabindex="-1" aria-modal="true" aria-label="Load saved day">
+    <div class="mc-modal">
       <div class="mc-modal-header">
         <span class="mc-modal-title">📂 Saved Day Plans</span>
         <button class="mc-close" onclick={() => showLoadModal = false}>×</button>
@@ -1168,15 +1228,6 @@
     overflow-y: auto;
   }
 
-  .empty-meal {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #d1d5db;
-    font-size: 0.875rem;
-  }
-
   .food-row {
     display: flex;
     align-items: center;
@@ -1204,6 +1255,12 @@
   }
 
   .food-qty {
+    display: block;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    text-align: left;
+    font: inherit;
     font-size: 0.6rem;
     color: #6b7280;
     cursor: pointer;

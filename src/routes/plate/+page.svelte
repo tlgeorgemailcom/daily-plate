@@ -1077,6 +1077,12 @@
     }
   }
 
+  function handleCellKeydown(row: number, col: number, event: KeyboardEvent) {
+    if (event.key !== 'Enter' && event.key !== ' ') return;
+    event.preventDefault();
+    handleCellClick(row, col);
+  }
+
   // Toggle direction
   function toggleDirection() {
     if (!selectedCell) return;
@@ -1116,6 +1122,21 @@
 
   // Handle typing (called from window keydown)
   function handleKeydown(e: KeyboardEvent) {
+    if (e.key === 'Escape') {
+      if (showRules) {
+        showRules = false;
+        e.preventDefault();
+        return;
+      }
+      if (showGroupPicker) {
+        showGroupPicker = false;
+        pendingWord = null;
+        editingWordIndex = null;
+        e.preventDefault();
+        return;
+      }
+    }
+
     // Handle escape to cancel drag mode
     if (e.key === 'Escape' && draggingWordIndex !== null) {
       resetDragState();
@@ -2042,8 +2063,11 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
           {@const dragPreview = isCellDragPreview(r, c)}
           {@const movableWordIdx = getMovableWordAtCell(r, c)}
           {@const isSelectedForMove = isCellSelectedForMove(r, c)}
-          <div 
-            class="cell" 
+          <div
+            class="cell"
+            role="button"
+            tabindex={cell.letter ? 0 : -1}
+            aria-label={cell.letter ? `Cell ${cell.letter}` : 'Empty cell'}
             class:filled={cell.letter !== ''}
             class:crossing={cell.wordIndices.length > 1}
             class:clickable={cell.letter !== '' && !gameComplete && draggingWordIndex === null && selectedForMove === null}
@@ -2055,6 +2079,7 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
             class:being-dragged={beingDragged}
             class:drag-preview={dragPreview.inPreview && !beingDragged}
             onclick={() => handleCellClick(r, c)}
+            onkeydown={(e) => handleCellKeydown(r, c, e)}
             onmousedown={(e) => movableWordIdx !== null && startDragFromGrid(movableWordIdx, e)}
             ontouchstart={(e) => movableWordIdx !== null && startDragFromGrid(movableWordIdx, e)}
           >
@@ -2134,8 +2159,14 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
 
   <!-- Rules Modal -->
   {#if showRules}
-    <div class="modal-overlay" in:fade onclick={() => showRules = false}>
-      <div class="modal rules-modal" in:scale onclick={(e) => e.stopPropagation()}>
+    <div
+      class="modal-overlay"
+      in:fade
+      role="presentation"
+      onclick={(e) => { if (e.target === e.currentTarget) showRules = false; }}
+      onkeydown={(e) => { if (e.key === 'Escape') showRules = false; }}
+    >
+      <div class="modal rules-modal" in:scale>
         <h3>🍽️ How to Play</h3>
         <div class="rules-content">
           <p><strong>Build a crossword of food words!</strong></p>
@@ -2198,8 +2229,26 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
     {@const word = pendingWord?.word ?? placedWords[editingWordIndex!]?.word}
     {@const entry = pendingWord?.entry ?? placedWords[editingWordIndex!]?.entry}
     {@const currentGroup = editingWordIndex !== null ? placedWords[editingWordIndex]?.group : null}
-    <div class="modal-overlay" in:fade onclick={() => { showGroupPicker = false; pendingWord = null; editingWordIndex = null; }}>
-      <div class="modal" in:scale onclick={(e) => e.stopPropagation()}>
+    <div
+      class="modal-overlay"
+      in:fade
+      role="presentation"
+      onclick={(e) => {
+        if (e.target === e.currentTarget) {
+          showGroupPicker = false;
+          pendingWord = null;
+          editingWordIndex = null;
+        }
+      }}
+      onkeydown={(e) => {
+        if (e.key === 'Escape') {
+          showGroupPicker = false;
+          pendingWord = null;
+          editingWordIndex = null;
+        }
+      }}
+    >
+      <div class="modal" in:scale>
         <h3>{word}</h3>
         {#if editingWordIndex !== null}
           <p class="dual-info">🔄 Change food group</p>
@@ -2579,17 +2628,6 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
     background: #2563eb;
   }
   
-  .direction-btn.secondary {
-    background: #64748b;
-    width: 24px;
-    height: 24px;
-    font-size: 14px;
-  }
-  
-  .direction-btn.secondary:hover {
-    background: #475569;
-  }
-  
   .reverse-hint {
     color: #f59e0b;
     font-size: 0.85rem;
@@ -2882,11 +2920,6 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
     transform: scale(1.1);
   }
 
-  .dual-indicator {
-    color: #6366f1;
-    cursor: help;
-  }
-
   .group-name {
     font-size: 0.75rem;
     font-weight: 600;
@@ -3169,11 +3202,6 @@ ${streak > 1 ? `🔥 ${streak} day streak` : ''}`;
   .cancel-link:hover {
     color: #374151;
     background: #f3f4f6;
-  }
-  
-  .mode-badge {
-    font-weight: 600;
-    color: #374151;
   }
   
   .mode-badge-btn {

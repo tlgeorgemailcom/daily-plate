@@ -214,10 +214,6 @@
     background: transparent;
   }
   
-  .count.infinite {
-    color: #4CAF50;
-  }
-  
   .lock {
     position: absolute;
     top: 2px;

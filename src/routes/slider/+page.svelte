@@ -261,6 +261,12 @@
     }
   }
 
+  function handleTileKeydown(event: KeyboardEvent, position: number) {
+    if (event.key !== 'Enter' && event.key !== ' ') return;
+    event.preventDefault();
+    moveTile(position);
+  }
+
   // Demonstrate optimal solution using IDA*
   async function demonstrateSolution() {
     if (isSolving || isSolved) return;
@@ -492,6 +498,9 @@
           {@const showTileImage = tileId !== EMPTY_TILE || isSolved}
           <div
             class="tile"
+            role="button"
+            tabindex={tileId === EMPTY_TILE ? -1 : 0}
+            aria-label={tileId === EMPTY_TILE ? 'Empty space' : `Puzzle tile ${tileId + 1}`}
             class:empty={tileId === EMPTY_TILE && !isSolved}
             class:dragging={isBeingDragged}
             class:solved={isSolved}
@@ -508,6 +517,7 @@
             onpointermove={handlePointerMove}
             onpointerup={handlePointerUp}
             onpointercancel={handlePointerUp}
+            onkeydown={(e) => handleTileKeydown(e, position)}
           >
           </div>
         {/each}
@@ -735,17 +745,6 @@
     cursor: not-allowed;
   }
 
-  .btn.primary {
-    background: #3b82f6;
-    border-color: #3b82f6;
-    color: white;
-  }
-
-  .btn.primary:hover {
-    background: #2563eb;
-    border-color: #2563eb;
-  }
-
   .btn-step {
     background: #10b981;
     border-color: #10b981;
@@ -755,37 +754,6 @@
   .btn-step:hover:not(:disabled) {
     background: #059669;
     border-color: #059669;
-  }
-
-  .speed-control {
-    text-align: center;
-  }
-
-  .speed-control.hidden {
-    display: none;
-  }
-
-  .speed-control label {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.25rem;
-  }
-
-  .speed-label {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: #374151;
-  }
-
-  .speed-control input[type="range"] {
-    width: 180px;
-    cursor: pointer;
-  }
-
-  .speed-range {
-    font-size: 0.75rem;
-    color: #9ca3af;
   }
 
   .instructions {

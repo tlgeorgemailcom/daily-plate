@@ -17,9 +17,16 @@ import { createClient } from '@libsql/client';
 import { readFileSync, writeFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import { loadEnvFile } from 'node:process';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const GAME_STATE_PATH = join(__dirname, '../src/lib/farmers-basket/game-state.svelte.ts');
+
+try {
+  loadEnvFile(join(__dirname, '../.env.local'));
+} catch {
+  // Deployment builds provide Turso credentials through the environment.
+}
 
 const ALL_FOODS = ['lettuce', 'tomato', 'carrot', 'cheese', 'egg', 'bread', 'apple', 'grapes', 'bacon', 'butter', 'chicken', 'fish'];
 

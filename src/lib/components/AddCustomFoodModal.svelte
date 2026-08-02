@@ -12,7 +12,8 @@
   const dispatch = createEventDispatcher<{ close: void; saved: void }>();
 
   // Form state
-  let name = $state(prefillName);
+  const captureInitial = <T>(read: () => T): T => read();
+  let name = $state(captureInitial(() => prefillName));
   let calories = $state<number | null>(null);
   let protein = $state<number | null>(null);
   let carbs = $state<number | null>(null);
@@ -101,8 +102,8 @@
 
 <svelte:window onkeydown={handleKeydown} />
 
-<div class="modal-overlay" onclick={handleClose} role="button" tabindex="-1">
-  <div class="modal" onclick={(e) => e.stopPropagation()} role="dialog" aria-labelledby="modal-title">
+<div class="modal-overlay" onclick={handleClose} onkeydown={handleKeydown} role="button" tabindex="0">
+  <div class="modal" onclick={(e) => e.stopPropagation()} onkeydown={(e) => e.key !== 'Escape' && e.stopPropagation()} role="dialog" aria-labelledby="modal-title" tabindex="-1">
     <div class="modal-header">
       <h2 id="modal-title">➕ Add Custom Food</h2>
       <button class="close-btn" onclick={handleClose}>✕</button>
@@ -151,10 +152,11 @@
       </div>
 
       <div class="form-group">
-        <label>Default Portion *</label>
+        <label for="portion-name">Default Portion *</label>
         <div class="portion-row">
           <span class="portion-prefix">1</span>
           <input 
+            id="portion-name"
             type="text" 
             bind:value={portionName} 
             placeholder="serving"

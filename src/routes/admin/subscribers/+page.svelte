@@ -2,6 +2,7 @@
   import { goto } from '$app/navigation';
 
   let { data } = $props();
+  const captureInitial = <T>(read: () => T): T => read();
 
   type Player = (typeof data.players)[number];
   type Status = 'idle' | 'saving' | 'saved' | 'error';
@@ -15,7 +16,7 @@
   };
 
   // Local reactive copy so tier counts update immediately on change
-  let players = $state<Player[]>(data.players.map((p: Player) => ({ ...p })));
+  let players = $state<Player[]>(captureInitial(() => data.players.map((p: Player) => ({ ...p }))));
   let statuses = $state<Record<string, Status>>({});
   let confirmDelete = $state<string | null>(null); // player id awaiting confirmation
   let resetStatuses = $state<Record<string, 'idle' | 'sending' | 'sent' | 'error'>>({});

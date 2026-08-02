@@ -394,6 +394,19 @@
   function handleDragEnd() {
     draggedWord = null;
   }
+
+  function handleDragWordKeydown(word: string, event: KeyboardEvent) {
+    if (event.key !== 'Enter' && event.key !== ' ') return;
+    event.preventDefault();
+    handleDragStart(word);
+  }
+
+  function handleGroupKeydown(group: FoodGroup, event: KeyboardEvent) {
+    if (event.key !== 'Enter' && event.key !== ' ') return;
+    if (!draggedWord) return;
+    event.preventDefault();
+    handleDrop(group);
+  }
   
   function handleDrop(group: FoodGroup) {
     if (!draggedWord) return;
@@ -578,11 +591,24 @@ dailyfoodchain.com/scrambled`;
       alert('Copied to clipboard!');
     }
   }
+
+  function handleModalKeydown(event: KeyboardEvent) {
+    if (event.key !== 'Escape') return;
+    if (showGiveUpConfirm) {
+      showGiveUpConfirm = false;
+    } else if (selectedPrefix) {
+      selectedPrefix = null;
+    } else if (showRules) {
+      showRules = false;
+    }
+  }
 </script>
 
 <svelte:head>
   <title>Scramble Bees | TodayPage</title>
 </svelte:head>
+
+<svelte:window onkeydown={handleModalKeydown} />
 
 <main class="scrambled-game" class:wide-mode={gamePhase === 'phase2' || showResults}>
   <header>
@@ -731,16 +757,19 @@ dailyfoodchain.com/scrambled`;
       
       <div class="unclassified">
         {#each unclassifiedWords() as word}
-          <span 
+          <button
+            type="button"
             class="drag-word"
             class:dragging={draggedWord === word}
             draggable="true"
             ondragstart={() => handleDragStart(word)}
             ondragend={handleDragEnd}
+            onclick={() => handleDragStart(word)}
+            onkeydown={(e) => handleDragWordKeydown(word, e)}
             ontouchstart={(e) => handleTouchStart(e, word)}
             ontouchmove={handleTouchMove}
             ontouchend={handleTouchEnd}
-          >{word}</span>
+          >{word}</button>
         {/each}
       </div>
       
@@ -756,11 +785,15 @@ dailyfoodchain.com/scrambled`;
       
       <div class="groups-grid">
         {#each Object.entries(FOOD_GROUP_INFO).filter(([g]) => g !== 'condiment') as [group, info]}
-          <div 
+          <div
             class="group-drop"
+            role="button"
+            tabindex="0"
+            aria-label={`Drop word in ${info.label}`}
             use:registerGroupElement={group}
             ondragover={handleDragOver}
             ondrop={() => handleDrop(group as FoodGroup)}
+            onkeydown={(e) => handleGroupKeydown(group as FoodGroup, e)}
           >
             <div class="group-header">
               <span class="emoji">{info.emoji}</span>
@@ -835,8 +868,13 @@ dailyfoodchain.com/scrambled`;
   
   <!-- Rules Modal -->
   {#if showRules}
-    <div class="modal-backdrop" onclick={() => showRules = false}>
-      <div class="rules-modal" onclick={(e) => e.stopPropagation()}>
+    <div
+      class="modal-backdrop"
+      role="presentation"
+      onclick={(e) => { if (e.target === e.currentTarget) showRules = false; }}
+      onkeydown={(e) => { if (e.key === 'Escape') showRules = false; }}
+    >
+      <div class="rules-modal">
         <h3>📖 {currentLevel === 'usda' ? 'USDA' : currentLevel === 'foodie' ? 'FOODIE' : 'FOODIE 21+'} Rules</h3>
         
         {#if currentLevel === 'usda'}
@@ -918,8 +956,13 @@ dailyfoodchain.com/scrambled`;
   
   {#if selectedPrefix}
     {@const details = getPrefixWordDetails(selectedPrefix)}
-    <div class="modal-backdrop" onclick={() => selectedPrefix = null}>
-      <div class="hint-popup" onclick={(e) => e.stopPropagation()}>
+    <div
+      class="modal-backdrop"
+      role="presentation"
+      onclick={(e) => { if (e.target === e.currentTarget) selectedPrefix = null; }}
+      onkeydown={(e) => { if (e.key === 'Escape') selectedPrefix = null; }}
+    >
+      <div class="hint-popup">
         <h3>Words starting with {selectedPrefix.toUpperCase()}</h3>
         {#if details.length === 0}
           <p class="no-words">All words found! 🎉</p>
@@ -944,8 +987,13 @@ dailyfoodchain.com/scrambled`;
   {/if}
 
   {#if showGiveUpConfirm}
-    <div class="modal-backdrop" onclick={() => showGiveUpConfirm = false}>
-      <div class="confirm-popup" onclick={(e) => e.stopPropagation()}>
+    <div
+      class="modal-backdrop"
+      role="presentation"
+      onclick={(e) => { if (e.target === e.currentTarget) showGiveUpConfirm = false; }}
+      onkeydown={(e) => { if (e.key === 'Escape') showGiveUpConfirm = false; }}
+    >
+      <div class="confirm-popup">
         <h3>🏳️ Give Up?</h3>
         <p>Are you sure you want to reveal all remaining words?</p>
         <p class="warning-text">You will not receive points for the remaining words.</p>
@@ -1549,6 +1597,9 @@ dailyfoodchain.com/scrambled`;
   }
   
   .drag-word {
+    appearance: none;
+    font: inherit;
+    color: inherit;
     padding: 0.5rem 1rem;
     background: #fff;
     border: 2px solid #4a9eff;
@@ -1556,6 +1607,7 @@ dailyfoodchain.com/scrambled`;
     cursor: grab;
     user-select: none;
     touch-action: none;
+    text-align: center;
   }
   
   .drag-word:active {

@@ -663,48 +663,6 @@
     font-size: 0.875rem;
   }
   
-  @media (min-width: 768px) {
-    header h1 {
-      font-size: 2.5rem;
-    }
-  }
-  
-  /* Login styles */
-  .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 1rem;
-    background: linear-gradient(135deg, #f0fdf4, #dcfce7);
-  }
-  
-  .login-box {
-    background: white;
-    padding: 2.5rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 400px;
-    width: 100%;
-  }
-  
-  .login-box h1 {
-    margin: 0 0 0.5rem 0;
-    font-size: 2rem;
-  }
-  
-  .login-box p {
-    color: #6b7280;
-    margin-bottom: 1.5rem;
-  }
-  
-  .login-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
   .password-input {
     padding: 0.875rem 1rem;
     border: 2px solid #e5e7eb;
@@ -716,27 +674,6 @@
   .password-input:focus {
     outline: none;
     border-color: #22c55e;
-  }
-  
-  .login-button {
-    padding: 0.875rem 1rem;
-    background: linear-gradient(135deg, #22c55e, #16a34a);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 0.1s, box-shadow 0.2s;
-  }
-  
-  .login-button:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
-  }
-  
-  .login-button:active {
-    transform: translateY(0);
   }
   
   .error {

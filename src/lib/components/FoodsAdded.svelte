@@ -201,7 +201,8 @@
                     <span class="food-name">{formatName(item.food.word)}</span>
                     <span class="food-portion">
                       {#if editingFoodId === item.id}
-                        <input 
+                        <!-- svelte-ignore a11y_autofocus -->
+                        <input
                           type="number"
                           class="quantity-input"
                           min="1"
@@ -439,17 +440,6 @@
 
   .remove-btn:hover {
     background: #fecaca;
-  }
-
-  /* Drag & drop styles */
-  .meal-group.drop-target {
-    border-color: #f59e0b;
-    box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.3);
-  }
-
-  .food-item.dragging {
-    opacity: 0.5;
-    background: #fef3c7;
   }
 
   .drag-handle {

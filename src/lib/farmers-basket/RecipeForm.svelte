@@ -477,45 +477,56 @@
   }
 
   // Form state
-  let recipeName = $state(initialData.recipeName || '');
+  const captureInitial = <T>(read: () => T): T => read();
+
+  let recipeName = $state(captureInitial(() => initialData.recipeName || ''));
   // Split existing recipeName into parts if present (format: "Dish Name — Suffix")
-  let dishName = $state(initialData.dishName || (initialData.recipeName?.includes(' — ') ? initialData.recipeName.split(' — ')[0] : initialData.recipeName || ''));
-  let recipeSuffix = $state(initialData.recipeSuffix || (initialData.recipeName?.includes(' — ') ? initialData.recipeName.split(' — ')[1] : ''));
+  let dishName = $state(captureInitial(() => initialData.dishName || (initialData.recipeName?.includes(' — ') ? initialData.recipeName.split(' — ')[0] : initialData.recipeName || '')));
+  let recipeSuffix = $state(captureInitial(() => initialData.recipeSuffix || (initialData.recipeName?.includes(' — ') ? initialData.recipeName.split(' — ')[1] : '')));
   // Normalize the initial cook method: map pipeline values ('baked','boiled','raw','multi', etc.)
   // to UI labels ('Bake','Boil','No heat', …). Unknown/multi → 'No heat'; missing → 'Bake'.
-  const _initCM = initialData.cookingMethod ?? '';
+  const _initCM = captureInitial(() => initialData.cookingMethod ?? '');
   const _matchedCM = COOKING_METHODS.find(m => m.toLowerCase() === normalizeCookMethodLabel(_initCM).toLowerCase());
   let cookingMethod = $state<string>(_matchedCM ?? '');
-  let cookMinutes = $state<number | undefined>(initialData.cookMinutes);
-  let cookTempF = $state<number | undefined>(initialData.cookTempF);
-  let fillClass = $state<string>(initialData.fillClass ?? '');
-  const _initCook2 = initialData.cook2Method ?? '';
+  let cookMinutes = $state<number | undefined>(captureInitial(() => initialData.cookMinutes));
+  let cookTempF = $state<number | undefined>(captureInitial(() => initialData.cookTempF));
+  let fillClass = $state<string>(captureInitial(() => initialData.fillClass ?? ''));
+  const _initCook2 = captureInitial(() => initialData.cook2Method ?? '');
   const _matchedCook2 = COOKING_METHODS.find(m => m.toLowerCase() === normalizeCookMethodLabel(_initCook2).toLowerCase());
   let cook2Method = $state<string>(_matchedCook2 ?? '');
-  let cook2Minutes = $state<number | undefined>(initialData.cook2Minutes);
-  let cook2TempF = $state<number | undefined>(initialData.cook2TempF);
-  let cook2FillClass = $state<string>(initialData.cook2FillClass ?? '');
-  const _initCook3 = initialData.cook3Method ?? '';
+  let cook2Minutes = $state<number | undefined>(captureInitial(() => initialData.cook2Minutes));
+  let cook2TempF = $state<number | undefined>(captureInitial(() => initialData.cook2TempF));
+  let cook2FillClass = $state<string>(captureInitial(() => initialData.cook2FillClass ?? ''));
+  const _initCook3 = captureInitial(() => initialData.cook3Method ?? '');
   const _matchedCook3 = COOKING_METHODS.find(m => m.toLowerCase() === normalizeCookMethodLabel(_initCook3).toLowerCase());
   let cook3Method = $state<string>(_matchedCook3 ?? '');
-  let cook3Minutes = $state<number | undefined>(initialData.cook3Minutes);
-  let cook3TempF = $state<number | undefined>(initialData.cook3TempF);
-  let cook3FillClass = $state<string>(initialData.cook3FillClass ?? '');
-  const _hasInitialStage2 = initialData.sections?.some((section) => section.primaryEntryStage === '2') ?? false;
-  const _hasInitialStage3 = initialData.sections?.some((section) => section.primaryEntryStage === '3') ?? false;
-  let showCook2 = $state(Boolean(cook2Method || cook2Minutes != null || cook2TempF != null || cook2FillClass || _hasInitialStage2 || _hasInitialStage3));
-  let showCook3 = $state(Boolean(cook3Method || cook3Minutes != null || cook3TempF != null || cook3FillClass || _hasInitialStage3));
+  let cook3Minutes = $state<number | undefined>(captureInitial(() => initialData.cook3Minutes));
+  let cook3TempF = $state<number | undefined>(captureInitial(() => initialData.cook3TempF));
+  let cook3FillClass = $state<string>(captureInitial(() => initialData.cook3FillClass ?? ''));
+  const _hasInitialStage2 = captureInitial(() => initialData.sections?.some((section) => section.primaryEntryStage === '2') ?? false);
+  const _hasInitialStage3 = captureInitial(() => initialData.sections?.some((section) => section.primaryEntryStage === '3') ?? false);
+  let showCook2 = $state(captureInitial(() => Boolean(cook2Method || cook2Minutes != null || cook2TempF != null || cook2FillClass || _hasInitialStage2 || _hasInitialStage3)));
+  let showCook3 = $state(captureInitial(() => Boolean(cook3Method || cook3Minutes != null || cook3TempF != null || cook3FillClass || _hasInitialStage3)));
   let cookHelpOpen = $state(false);
-  let dishFamily = $state(initialData.dishFamily || '');
-  let category = $state(toStoredRecipeCategory(initialData.category));
-  let dietaryCategory = $state<DietaryCategory>(initialData.dietaryCategory || 'all');
-  let submitterName = $state(initialData.submitterName || '');
-  let prepTime = $state(initialData.prepTime || '');
-  let servings = $state(initialData.servings || '');
+
+  function handleCookHelpBackdropClick(event: MouseEvent) {
+    if (event.target === event.currentTarget) cookHelpOpen = false;
+  }
+
+  function handleCookHelpKeydown(event: KeyboardEvent) {
+    if (event.key === 'Escape') cookHelpOpen = false;
+  }
+
+  let dishFamily = $state(captureInitial(() => initialData.dishFamily || ''));
+  let category = $state(captureInitial(() => toStoredRecipeCategory(initialData.category)));
+  let dietaryCategory = $state<DietaryCategory>(captureInitial(() => initialData.dietaryCategory || 'all'));
+  let submitterName = $state(captureInitial(() => initialData.submitterName || ''));
+  let prepTime = $state(captureInitial(() => initialData.prepTime || ''));
+  let servings = $state(captureInitial(() => initialData.servings || ''));
   
   // Initialize ingredients from initialData or create empty one
   let nextIngredientId = $state(1);
-  let ingredients = $state<RecipeIngredient[]>(
+  let ingredients = $state<RecipeIngredient[]>(captureInitial(() =>
     initialData.ingredients?.length 
       ? initialData.ingredients.map((ing, i) => ({
           id: i + 1,
@@ -532,10 +543,10 @@
           section: ing.section
         }))
       : [{ id: 1, name: '', quantity: '', gameFood: '', animal: '' }]
-  );
-  const _initialSections = initialData.sections
+  ));
+  const _initialSections = captureInitial(() => initialData.sections
     ?.map((section) => normalizeSection(section as unknown as Record<string, unknown>, _matchedCM ?? '', sectionTopFillClass(initialData.fillClass)))
-    .filter((section): section is RecipeSection => section !== null) ?? [];
+    .filter((section): section is RecipeSection => section !== null) ?? []);
   let sections = $state<RecipeSection[]>(_initialSections);
   let sectionAdvancedOpen = $state<Record<number, boolean>>({});
 
@@ -567,23 +578,23 @@
   
   // Initialize instructions
   let nextInstructionId = $state(1);
-  let instructions = $state<RecipeInstruction[]>(
+  let instructions = $state<RecipeInstruction[]>(captureInitial(() =>
     initialData.instructions?.length
       ? initialData.instructions.map((inst, i) => ({
           id: i + 1,
           text: inst.text || ''
         }))
-      : [{ id: 1, text: '' }]
-  );
+        : [{ id: 1, text: '' }]
+      ));
   
   // Initialize food supply (default 3 of each selected food)
-  const sr28Rule = initialData.sr28Rule ?? undefined;
+  const sr28Rule = captureInitial(() => initialData.sr28Rule ?? undefined);
   const isCanonicalRule = sr28Rule === 'Rule A' || sr28Rule === 'Rule B';
 
-  let foodSupply = $state<Record<FoodType, number>>(initialData.foodSupply || {} as Record<FoodType, number>);
-  let linkMode = $state(
+  let foodSupply = $state<Record<FoodType, number>>(captureInitial(() => initialData.foodSupply || {} as Record<FoodType, number>));
+  let linkMode = $state(captureInitial(() =>
     (initialData as RecipeFormData).linkMode ?? 'ingredient'
-  );
+  ));
   // ─── Dish-level link state (for 'dish' and 'mixed' modes) ───────────────────
   let dishSearchOpen = $state(false);
   let dishSearchQ = $state('');
@@ -592,7 +603,7 @@
   let dishPendingCount = $state(1);
   let dishCustomGrams = $state<number | null>(null);
   let dishLink = $state<{ foodWord: string; ndbNo: string; portionDesc: string; portionGrams: number; servingCount: number } | null>(
-    (initialData as RecipeFormData).dishLink ?? null
+    captureInitial(() => (initialData as RecipeFormData).dishLink ?? null)
   );
   // ─── Nutrition linking state (keyed by ingredient id) ───────────────────────
   let nutritionOpen = $state<Record<number, boolean>>({});
@@ -1125,18 +1136,18 @@
     });
   }
 
-  const yieldFactorWater = $state<number | undefined>(
+  const yieldFactorWater = $state<number | undefined>(captureInitial(() =>
     typeof initialData.yieldFactorWater === 'number' ? initialData.yieldFactorWater
     : typeof (initialData.nutritionJson as Record<string, unknown> | undefined)?.yieldFactorWater === 'number'
       ? (initialData.nutritionJson as Record<string, unknown>).yieldFactorWater as number
       : undefined
-  );
-  const yieldFactorFat = $state<number | undefined>(
+  ));
+  const yieldFactorFat = $state<number | undefined>(captureInitial(() =>
     typeof initialData.yieldFactorFat === 'number' ? initialData.yieldFactorFat
     : typeof (initialData.nutritionJson as Record<string, unknown> | undefined)?.yieldFactorFat === 'number'
       ? (initialData.nutritionJson as Record<string, unknown>).yieldFactorFat as number
       : undefined
-  );
+  ));
 
   function buildNutritionPayload() {
     const hasSections = sections.length > 0;
@@ -1238,7 +1249,7 @@
   let previewTimer: ReturnType<typeof setTimeout> | null = null;
   let previewRequestId = 0;
 
-  let persistedNutrition = $state<PersistedNutritionJson | null | undefined>(initialData.nutritionJson);
+  let persistedNutrition = $state<PersistedNutritionJson | null | undefined>(captureInitial(() => initialData.nutritionJson));
 
   let showStoredNutrition = $derived(
     !!persistedNutrition?.perServing &&
@@ -1723,6 +1734,14 @@
     // Keep current ingredients/instructions order; user still has to hit
     // the form's main Save/Submit to persist to the server
     showEditPreviewDialog = false;
+  }
+
+  function handleEditPreviewBackdropClick(event: MouseEvent) {
+    if (event.target === event.currentTarget) closeEditPreviewDiscard();
+  }
+
+  function handleEditPreviewKeydown(event: KeyboardEvent) {
+    if (event.key === 'Escape') closeEditPreviewDiscard();
   }
 
   function moveIngredient(id: number, dir: -1 | 1) {
@@ -3484,8 +3503,16 @@
       {/if}
 
       {#if cookHelpOpen}
-        <div class="cook-help-backdrop" onclick={() => cookHelpOpen = false} role="presentation">
-          <div class="cook-help-dialog" onclick={(e) => e.stopPropagation()} role="dialog" aria-modal="true" aria-label="How to use the cook form fields">
+        <div
+          class="cook-help-backdrop"
+          onclick={handleCookHelpBackdropClick}
+          onkeydown={handleCookHelpKeydown}
+          role="dialog"
+          tabindex="-1"
+          aria-modal="true"
+          aria-label="How to use the cook form fields"
+        >
+          <div class="cook-help-dialog">
             <button type="button" class="cook-help-close" onclick={() => cookHelpOpen = false} aria-label="Close">✕</button>
             <h3 class="cook-help-title">How the cook fields work</h3>
 
@@ -3737,13 +3764,17 @@
 </form>
 
 {#if showEditPreviewDialog}
-  <div class="ep-dialog-backdrop" role="presentation" onclick={closeEditPreviewDiscard}>
+  <div
+    class="ep-dialog-backdrop"
+    role="dialog"
+    tabindex="-1"
+    aria-modal="true"
+    aria-label="Edit and preview recipe"
+    onclick={handleEditPreviewBackdropClick}
+    onkeydown={handleEditPreviewKeydown}
+  >
     <div
       class="ep-dialog"
-      role="dialog"
-      aria-modal="true"
-      aria-label="Edit and preview recipe"
-      onclick={(e) => e.stopPropagation()}
     >
       <div class="ep-dialog-header">
         <div class="ep-toggle" role="tablist" aria-label="View mode">
@@ -4185,18 +4216,6 @@
     padding: 5px 6px;
     font-size: 0.85rem;
     background: white;
-  }
-  .section-header-bar .section-type-select {
-    flex: 0 0 68px;
-    padding: 5px 6px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    background: #edf2f7;
-    color: #4a5568;
-    border-color: #cbd5e0;
-  }
-  .section-header-bar .section-prep-select {
-    background: #fefcbf;
   }
   .section-card-dash {
     color: #a0aec0;

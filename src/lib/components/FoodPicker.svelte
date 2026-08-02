@@ -344,6 +344,12 @@
     handlePointerUp();
   }
 
+  function handleTooltipOverlayClick(event: MouseEvent) {
+    if (event.target === event.currentTarget) {
+      closeTooltip();
+    }
+  }
+
   function closeTooltip() {
     tooltipFood = null;
     nutrientDisplayMode = 'serving';
@@ -454,7 +460,7 @@
                 title={recipeOriginTitle(food as RecipeFood)}
                 aria-label={recipeOriginTitle(food as RecipeFood)}
                 onclick={openFallbackPopup}
-              />
+              ></button>
             {/if}
             {#each recipeSourceBadges(food as RecipeFood) as badge (badge.key)}
               <a
@@ -491,10 +497,9 @@
 
 <!-- USDA Description Tooltip -->
 {#if tooltipFood}
-  <div class="tooltip-overlay" onclick={closeTooltip} onkeydown={(e) => e.key === 'Escape' && closeTooltip()} role="button" tabindex="0">
+  <div class="tooltip-overlay" onclick={handleTooltipOverlayClick} onkeydown={(e) => e.key === 'Escape' && closeTooltip()} role="button" tabindex="0">
     <div 
       class="tooltip"
-      onclick={(e) => e.stopPropagation()}
       style="left: {tooltipPosition.x}px; top: {tooltipPosition.y}px;"
     >
       <div class="tooltip-header">

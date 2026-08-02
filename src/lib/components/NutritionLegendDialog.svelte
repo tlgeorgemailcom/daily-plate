@@ -22,11 +22,13 @@
     class="legend-overlay"
     id="recipe-badge-guide"
     role="dialog"
+    tabindex="-1"
     aria-modal="true"
     aria-labelledby="recipe-badge-guide-title"
     onclick={handleBackdropClick}
+    onkeydown={handleKeydown}
   >
-    <div class="legend-dialog" onclick={(event) => event.stopPropagation()}>
+    <div class="legend-dialog">
       <header class="legend-header">
         <div>
           <p class="legend-kicker">Recipe badges</p>

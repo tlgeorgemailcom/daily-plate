@@ -280,6 +280,38 @@
     caughtByContainer = null;
     wordCaught = false;
   }
+
+  function handleKeyboardContainer(container: Container, event: KeyboardEvent) {
+    if (event.key !== 'Enter' && event.key !== ' ') return;
+    event.preventDefault();
+    event.stopPropagation();
+    if (gameState !== 'playing' || !currentFood || wordCaught || !canCatch(currentFood, container)) return;
+
+    const mealIndex = meals.findIndex((meal) => isValidMeal(currentFood!, meal));
+    if (mealIndex < 0) return;
+
+    if (gameMode === 'training') {
+      trainingCorrect += 1;
+    } else {
+      score += 1;
+      wordsMatched += 1;
+      if (wordsMatched % 5 === 0 && level < levelSpeeds.length) level += 1;
+      saveHighScore();
+    }
+    spawnWord();
+  }
+
+  function handleGameAreaKeydown(event: KeyboardEvent) {
+    if (event.key === 'Escape') {
+      draggingContainer = null;
+      wordCaught = false;
+      caughtByContainer = null;
+    }
+  }
+
+  function handleModalKeydown(event: KeyboardEvent) {
+    if (event.key === 'Escape' && showRules) showRules = false;
+  }
   
   function endGame() {
     gameState = 'gameover';
@@ -326,6 +358,8 @@
 <svelte:head>
   <title>Matching Containers | TodayPage</title>
 </svelte:head>
+
+<svelte:window onkeydown={handleModalKeydown} />
 
 <div class="matching-game">
   <header class="game-header">
@@ -386,10 +420,16 @@
       {/if}
     </div>
   {:else}
-    <div 
-      class="game-area" 
+    <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
+    <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+    <div
+      class="game-area"
       bind:this={gameAreaEl}
       onpointermove={handleContainerDrag}
+      onkeydown={handleGameAreaKeydown}
+      role="application"
+      tabindex="0"
+      aria-label="Food matching game area"
     >
       <!-- Meal zones (left side) -->
       <div class="meal-zones">
@@ -448,6 +488,7 @@
             onpointerdown={(e) => handleContainerDragStart(container, e)}
             onpointerup={handleContainerDragEnd}
             onpointercancel={handleContainerDragEnd}
+            onkeydown={(e) => handleKeyboardContainer(container, e)}
           >
             <span class="container-emoji" class:saucer-emoji={container === 'saucer'}>{getContainerEmoji(container)}</span>
             <span class="container-name">{container}</span>
@@ -465,8 +506,13 @@
 
 <!-- Rules Modal -->
 {#if showRules}
-  <div class="modal-overlay" onclick={() => showRules = false}>
-    <div class="rules-modal" onclick={(e) => e.stopPropagation()}>
+  <div
+    class="modal-overlay"
+    role="presentation"
+    onclick={(e) => { if (e.target === e.currentTarget) showRules = false; }}
+    onkeydown={(e) => { if (e.key === 'Escape') showRules = false; }}
+  >
+    <div class="rules-modal">
       <h3>🎯 How to Play</h3>
       <div class="rules-content">
         <p><strong>Catch falling foods in the right container!</strong></p>
@@ -672,103 +718,6 @@
   
   .high {
     color: #f59e0b;
-    font-weight: 600;
-  }
-  
-  .start-screen, .gameover-screen {
-    text-align: center;
-    padding: 2rem;
-    background: #f8fafc;
-    border-radius: 16px;
-    border: 2px solid #e2e8f0;
-  }
-  
-  .start-screen h2, .gameover-screen h2 {
-    margin: 0 0 1rem 0;
-  }
-  
-  .start-screen ol {
-    text-align: left;
-    max-width: 300px;
-    margin: 0 auto 1.5rem;
-    line-height: 1.8;
-  }
-  
-  .final-score {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #22c55e;
-  }
-  
-  .new-high {
-    font-size: 1.25rem;
-    color: #f59e0b;
-    animation: bounce 0.5s ease infinite alternate;
-  }
-  
-  @keyframes bounce {
-    from { transform: scale(1); }
-    to { transform: scale(1.1); }
-  }
-  
-  .start-btn {
-    padding: 1rem 2rem;
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: white;
-    background: linear-gradient(135deg, #22c55e, #16a34a);
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: transform 0.1s, box-shadow 0.2s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.25rem;
-  }
-  
-  .start-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.4);
-  }
-  
-  .start-buttons, .gameover-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-  }
-  
-  .training-btn {
-    background: linear-gradient(135deg, #3b82f6, #2563eb);
-  }
-  
-  .training-btn:hover {
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
-  }
-  
-  .play-btn {
-    background: linear-gradient(135deg, #22c55e, #16a34a);
-  }
-  
-  .secondary-btn {
-    background: linear-gradient(135deg, #6b7280, #4b5563);
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-  }
-  
-  .secondary-btn:hover {
-    box-shadow: 0 4px 12px rgba(107, 114, 128, 0.4);
-  }
-  
-  .btn-desc {
-    font-size: 0.75rem;
-    font-weight: 400;
-    opacity: 0.9;
-  }
-  
-  .mode {
-    color: #3b82f6;
     font-weight: 600;
   }
   
