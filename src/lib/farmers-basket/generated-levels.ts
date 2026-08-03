@@ -8,6 +8,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 1,
+
     recipe: ['apple', 'bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -61,6 +62,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 2,
+
     recipe: ['apple', 'butter'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -116,6 +118,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 3,
+
     recipe: ['egg', 'bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -174,6 +177,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 4,
+
     recipe: ['egg', 'butter', 'cheese'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -231,6 +235,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 5,
+
     recipe: ['egg', 'butter', 'bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -288,6 +293,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 6,
+
     recipe: ['egg', 'butter', 'bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -347,6 +353,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 7,
+
     recipe: ['egg', 'butter', 'bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -416,6 +423,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 8,
+
     recipe: ['egg', 'butter', 'bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -478,6 +486,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 9,
+
     recipe: ['egg', 'grapes', 'butter'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -533,6 +542,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 10,
+
     recipe: ['egg', 'butter', 'bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -588,6 +598,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 11,
+
     recipe: ['egg', 'butter', 'bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -648,6 +659,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 12,
+
     recipe: ['egg', 'butter', 'bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -712,6 +724,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 13,
+
     recipe: ['egg', 'butter', 'bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -770,6 +783,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 14,
+
     recipe: ['egg', 'butter', 'bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -832,6 +846,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 15,
+
     recipe: ['egg', 'butter', 'bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -884,6 +899,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 16,
+
     recipe: ['egg', 'butter', 'bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -934,6 +950,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 17,
+
     recipe: ['egg', 'butter', 'bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -1001,6 +1018,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 18,
+
     recipe: ['butter', 'bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -1053,6 +1071,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 19,
+
     recipe: ['egg', 'butter', 'bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -1095,6 +1114,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 20,
+
     recipe: ['grapes', 'butter'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -1159,6 +1179,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 21,
+
     recipe: ['butter', 'bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -1212,6 +1233,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 22,
+
     recipe: ['egg', 'grapes'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -1270,6 +1292,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 23,
+
     recipe: ['butter', 'bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -1317,6 +1340,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 24,
+
     recipe: ['egg', 'butter', 'bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -1371,6 +1395,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 25,
+
     recipe: ['egg', 'grapes', 'butter'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -1422,6 +1447,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 26,
+
     recipe: ['butter', 'bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -1482,6 +1508,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 27,
+
     recipe: ['butter', 'bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -1539,6 +1566,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 28,
+
     recipe: ['egg', 'butter', 'bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -1590,6 +1618,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 29,
+
     recipe: ['egg', 'butter', 'bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -1641,6 +1670,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 30,
+
     recipe: ['grapes', 'butter'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -1693,6 +1723,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 31,
+
     recipe: ['grapes', 'butter'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -1742,6 +1773,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 32,
+
     recipe: ['egg', 'butter', 'bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -1795,6 +1827,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 33,
+
     recipe: ['grapes', 'butter'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -1841,6 +1874,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 34,
+
     recipe: ['egg', 'butter', 'bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -1893,6 +1927,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 35,
+
     recipe: ['grapes', 'butter'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -1944,6 +1979,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 36,
+
     recipe: ['apple', 'butter'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -1989,6 +2025,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 37,
+
     recipe: ['egg', 'butter'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -2041,6 +2078,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 38,
+
     recipe: ['grapes', 'butter'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -2091,6 +2129,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 39,
+
     recipe: ['grapes', 'butter'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -2137,6 +2176,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 40,
+
     recipe: ['grapes', 'butter'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -2194,6 +2234,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 41,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -2236,6 +2277,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 42,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -2279,6 +2321,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 43,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -2321,6 +2364,7 @@ export const LEVELS: Level[] = [
     category: 'Sweets & Desserts',
     dietaryCategory: 'veggie',
     levelNum: 44,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -2363,6 +2407,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'veggie',
     levelNum: 45,
+
     recipe: ['butter', 'bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -2409,6 +2454,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'all',
     levelNum: 46,
+
     recipe: ['sausage', 'pork'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -2456,6 +2502,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'all',
     levelNum: 47,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -2507,6 +2554,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'all',
     levelNum: 48,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -2557,6 +2605,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'veggie',
     levelNum: 49,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -2602,6 +2651,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'veggie',
     levelNum: 50,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -2647,6 +2697,7 @@ export const LEVELS: Level[] = [
     category: 'sauces & condiments',
     dietaryCategory: 'veggie',
     levelNum: 51,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -2688,6 +2739,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'all',
     levelNum: 52,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -2731,6 +2783,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'veggie',
     levelNum: 53,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -2771,6 +2824,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'veggie',
     levelNum: 54,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -2807,6 +2861,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'veggie',
     levelNum: 55,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -2848,6 +2903,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'veggie',
     levelNum: 56,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -2890,6 +2946,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'veggie',
     levelNum: 57,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -2931,6 +2988,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'veggie',
     levelNum: 58,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -2972,6 +3030,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'veggie',
     levelNum: 59,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -3010,6 +3069,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'veggie',
     levelNum: 60,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -3049,6 +3109,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'veggie',
     levelNum: 61,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -3090,6 +3151,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'veggie',
     levelNum: 62,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -3126,6 +3188,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'veggie',
     levelNum: 63,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -3168,6 +3231,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'all',
     levelNum: 64,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -3209,6 +3273,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'veggie',
     levelNum: 65,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -3253,6 +3318,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'veggie',
     levelNum: 66,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -3292,6 +3358,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'all',
     levelNum: 67,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -3334,6 +3401,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'veggie',
     levelNum: 68,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -3382,6 +3450,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'veggie',
     levelNum: 69,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -3431,6 +3500,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'all',
     levelNum: 70,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -3480,6 +3550,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'all',
     levelNum: 71,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -3529,6 +3600,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'veggie',
     levelNum: 72,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -3571,6 +3643,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'veggie',
     levelNum: 73,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -3614,6 +3687,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'all',
     levelNum: 74,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -3657,6 +3731,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'all',
     levelNum: 75,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -3700,6 +3775,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'veggie',
     levelNum: 76,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -3747,6 +3823,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'vegan',
     levelNum: 77,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -3788,6 +3865,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'veggie',
     levelNum: 78,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -3833,6 +3911,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'veggie',
     levelNum: 79,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -3875,6 +3954,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'veggie',
     levelNum: 80,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -3915,6 +3995,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'veggie',
     levelNum: 81,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -3955,6 +4036,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 82,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -3998,6 +4080,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 83,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -4043,6 +4126,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'veggie',
     levelNum: 84,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -4084,6 +4168,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'pesca',
     levelNum: 85,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -4126,6 +4211,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'pollo',
     levelNum: 86,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -4173,6 +4259,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 87,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -4212,6 +4299,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'vegan',
     levelNum: 88,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -4248,6 +4336,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'veggie',
     levelNum: 89,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -4289,6 +4378,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'veggie',
     levelNum: 90,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -4334,6 +4424,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 91,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -4381,6 +4472,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 92,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -4431,6 +4523,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 93,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -4476,6 +4569,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 94,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -4526,6 +4620,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 95,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -4573,6 +4668,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'pollo',
     levelNum: 96,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -4613,6 +4709,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'pollo',
     levelNum: 97,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -4654,6 +4751,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'pollo',
     levelNum: 98,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -4696,6 +4794,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'pollo',
     levelNum: 99,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -4739,6 +4838,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 100,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -4782,6 +4882,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 101,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -4823,6 +4924,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'vegan',
     levelNum: 102,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -4864,6 +4966,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 103,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -4905,6 +5008,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 104,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -4944,6 +5048,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 105,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -4983,6 +5088,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 106,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -5023,6 +5129,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 107,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -5062,6 +5169,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 108,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -5107,6 +5215,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 109,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -5161,6 +5270,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 110,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -5210,6 +5320,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 111,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -5257,6 +5368,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'pollo',
     levelNum: 112,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -5304,6 +5416,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'pollo',
     levelNum: 113,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -5356,6 +5469,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'pollo',
     levelNum: 114,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -5409,6 +5523,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'pollo',
     levelNum: 115,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -5463,6 +5578,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'pesca',
     levelNum: 116,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -5512,6 +5628,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'pesca',
     levelNum: 117,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -5566,6 +5683,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'pesca',
     levelNum: 118,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -5613,6 +5731,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'pesca',
     levelNum: 119,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -5658,6 +5777,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 120,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -5708,6 +5828,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 121,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -5755,6 +5876,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'pesca',
     levelNum: 122,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -5812,6 +5934,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'pesca',
     levelNum: 123,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -5869,6 +5992,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 124,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -5924,6 +6048,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 125,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -5972,6 +6097,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'pollo',
     levelNum: 126,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -6025,6 +6151,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 127,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -6072,6 +6199,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 128,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -6125,6 +6253,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'veggie',
     levelNum: 129,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -6169,6 +6298,7 @@ export const LEVELS: Level[] = [
     category: 'breakfast & brunch',
     dietaryCategory: 'veggie',
     levelNum: 130,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -6211,6 +6341,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'all',
     levelNum: 131,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -6252,6 +6383,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'all',
     levelNum: 132,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -6294,6 +6426,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'all',
     levelNum: 133,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -6336,6 +6469,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'pesca',
     levelNum: 134,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -6375,6 +6509,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'veggie',
     levelNum: 135,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -6433,6 +6568,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 136,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -6486,6 +6622,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'pollo',
     levelNum: 137,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -6529,6 +6666,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 138,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -6572,6 +6710,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 139,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -6617,6 +6756,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 140,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -6663,6 +6803,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 141,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -6708,6 +6849,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 142,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -6759,6 +6901,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 143,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -6803,6 +6946,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'pollo',
     levelNum: 144,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -6846,6 +6990,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'veggie',
     levelNum: 145,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -6893,6 +7038,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 146,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -6932,6 +7078,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 147,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -6975,6 +7122,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 148,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -7015,6 +7163,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 149,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -7060,6 +7209,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 150,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -7103,6 +7253,7 @@ export const LEVELS: Level[] = [
     category: 'sauces & condiments',
     dietaryCategory: 'veggie',
     levelNum: 151,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -7155,6 +7306,7 @@ export const LEVELS: Level[] = [
     category: 'sauces & condiments',
     dietaryCategory: 'veggie',
     levelNum: 152,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -7196,6 +7348,7 @@ export const LEVELS: Level[] = [
     category: 'sauces & condiments',
     dietaryCategory: 'veggie',
     levelNum: 153,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -7240,6 +7393,7 @@ export const LEVELS: Level[] = [
     category: 'sauces & condiments',
     dietaryCategory: 'veggie',
     levelNum: 154,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -7282,6 +7436,7 @@ export const LEVELS: Level[] = [
     category: 'sauces & condiments',
     dietaryCategory: 'veggie',
     levelNum: 155,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -7320,6 +7475,7 @@ export const LEVELS: Level[] = [
     category: 'sauces & condiments',
     dietaryCategory: 'pollo',
     levelNum: 156,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -7362,6 +7518,7 @@ export const LEVELS: Level[] = [
     category: 'sauces & condiments',
     dietaryCategory: 'all',
     levelNum: 157,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -7412,6 +7569,7 @@ export const LEVELS: Level[] = [
     category: 'sauces & condiments',
     dietaryCategory: 'pollo',
     levelNum: 158,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -7462,6 +7620,7 @@ export const LEVELS: Level[] = [
     category: 'sauces & condiments',
     dietaryCategory: 'pollo',
     levelNum: 159,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -7514,6 +7673,7 @@ export const LEVELS: Level[] = [
     category: 'sauces & condiments',
     dietaryCategory: 'pollo',
     levelNum: 160,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -7564,6 +7724,7 @@ export const LEVELS: Level[] = [
     category: 'sauces & condiments',
     dietaryCategory: 'all',
     levelNum: 161,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -7616,6 +7777,7 @@ export const LEVELS: Level[] = [
     category: 'sauces & condiments',
     dietaryCategory: 'all',
     levelNum: 162,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -7668,6 +7830,7 @@ export const LEVELS: Level[] = [
     category: 'sauces & condiments',
     dietaryCategory: 'pesca',
     levelNum: 163,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -7722,6 +7885,7 @@ export const LEVELS: Level[] = [
     category: 'sauces & condiments',
     dietaryCategory: 'vegan',
     levelNum: 164,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -7774,6 +7938,7 @@ export const LEVELS: Level[] = [
     category: 'sauces & condiments',
     dietaryCategory: 'veggie',
     levelNum: 165,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -7821,6 +7986,7 @@ export const LEVELS: Level[] = [
     category: 'sauces & condiments',
     dietaryCategory: 'veggie',
     levelNum: 166,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -7866,6 +8032,7 @@ export const LEVELS: Level[] = [
     category: 'sauces & condiments',
     dietaryCategory: 'vegan',
     levelNum: 167,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -7909,6 +8076,7 @@ export const LEVELS: Level[] = [
     category: 'sauces & condiments',
     dietaryCategory: 'vegan',
     levelNum: 168,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -7956,6 +8124,7 @@ export const LEVELS: Level[] = [
     category: 'sauces & condiments',
     dietaryCategory: 'vegan',
     levelNum: 169,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -8005,6 +8174,7 @@ export const LEVELS: Level[] = [
     category: 'sauces & condiments',
     dietaryCategory: 'veggie',
     levelNum: 170,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -8050,6 +8220,7 @@ export const LEVELS: Level[] = [
     category: 'Entrees & Main Courses',
     dietaryCategory: 'all',
     levelNum: 171,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -8103,6 +8274,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'veggie',
     levelNum: 172,
+
     recipe: ['butter', 'bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -8146,6 +8318,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'veggie',
     levelNum: 173,
+
     recipe: ['egg', 'bread', 'butter'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -8194,6 +8367,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'veggie',
     levelNum: 174,
+
     recipe: ['egg', 'bread', 'butter'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -8235,6 +8409,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'veggie',
     levelNum: 175,
+
     recipe: ['cheese', 'butter', 'bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -8277,6 +8452,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'veggie',
     levelNum: 176,
+
     recipe: ['tomato', 'carrot'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -8326,6 +8502,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'all',
     levelNum: 177,
+
     recipe: ['butter', 'carrot'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -8377,6 +8554,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'veggie',
     levelNum: 178,
+
     recipe: ['carrot', 'butter'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -8422,6 +8600,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'veggie',
     levelNum: 179,
+
     recipe: ['egg', 'carrot', 'butter'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -8470,6 +8649,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'veggie',
     levelNum: 180,
+
     recipe: ['egg', 'butter', 'bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -8513,6 +8693,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'all',
     levelNum: 181,
+
     recipe: ['egg', 'butter', 'bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -8566,6 +8747,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'veggie',
     levelNum: 182,
+
     recipe: ['egg', 'butter', 'bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -8610,6 +8792,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'veggie',
     levelNum: 183,
+
     recipe: ['cheese', 'butter', 'bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -8655,6 +8838,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'veggie',
     levelNum: 184,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -8700,6 +8884,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'veggie',
     levelNum: 185,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -8748,6 +8933,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'veggie',
     levelNum: 186,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -8792,6 +8978,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'all',
     levelNum: 187,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -8840,6 +9027,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'vegan',
     levelNum: 188,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -8883,6 +9071,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'all',
     levelNum: 189,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -8932,6 +9121,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'veggie',
     levelNum: 190,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -8978,6 +9168,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'veggie',
     levelNum: 191,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -9017,6 +9208,7 @@ export const LEVELS: Level[] = [
     category: 'sauces & condiments',
     dietaryCategory: 'vegan',
     levelNum: 192,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -9061,6 +9253,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'vegan',
     levelNum: 193,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -9109,6 +9302,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'veggie',
     levelNum: 194,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -9156,6 +9350,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'veggie',
     levelNum: 195,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -9205,6 +9400,7 @@ export const LEVELS: Level[] = [
     category: 'sauces & condiments',
     dietaryCategory: 'veggie',
     levelNum: 196,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -9250,6 +9446,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'veggie',
     levelNum: 197,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -9307,6 +9504,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'vegan',
     levelNum: 198,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -9362,6 +9560,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'veggie',
     levelNum: 199,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -9413,6 +9612,7 @@ export const LEVELS: Level[] = [
     category: 'sauces & condiments',
     dietaryCategory: 'vegan',
     levelNum: 200,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -9456,6 +9656,7 @@ export const LEVELS: Level[] = [
     category: 'sauces & condiments',
     dietaryCategory: 'vegan',
     levelNum: 201,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -9504,6 +9705,7 @@ export const LEVELS: Level[] = [
     category: 'sauces & condiments',
     dietaryCategory: 'vegan',
     levelNum: 202,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -9548,6 +9750,7 @@ export const LEVELS: Level[] = [
     category: 'sauces & condiments',
     dietaryCategory: 'vegan',
     levelNum: 203,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -9595,6 +9798,7 @@ export const LEVELS: Level[] = [
     category: 'sauces & condiments',
     dietaryCategory: 'veggie',
     levelNum: 204,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -9641,6 +9845,7 @@ export const LEVELS: Level[] = [
     category: 'sauces & condiments',
     dietaryCategory: 'veggie',
     levelNum: 205,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -9687,6 +9892,7 @@ export const LEVELS: Level[] = [
     category: 'sauces & condiments',
     dietaryCategory: 'veggie',
     levelNum: 206,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -9729,6 +9935,7 @@ export const LEVELS: Level[] = [
     category: 'sauces & condiments',
     dietaryCategory: 'pesca',
     levelNum: 207,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -9777,6 +9984,7 @@ export const LEVELS: Level[] = [
     category: 'sauces & condiments',
     dietaryCategory: 'pesca',
     levelNum: 208,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -9826,6 +10034,7 @@ export const LEVELS: Level[] = [
     category: 'salads',
     dietaryCategory: 'pesca',
     levelNum: 209,
+
     recipe: ['carrot', 'egg', 'tomato'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -9870,6 +10079,7 @@ export const LEVELS: Level[] = [
     category: 'salads',
     dietaryCategory: 'pollo-pesca',
     levelNum: 210,
+
     recipe: ['lettuce', 'bacon', 'tomato'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -9917,6 +10127,7 @@ export const LEVELS: Level[] = [
     category: 'salads',
     dietaryCategory: 'all',
     levelNum: 211,
+
     recipe: ['fish', 'carrot', 'tomato'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -9967,6 +10178,7 @@ export const LEVELS: Level[] = [
     category: 'salads',
     dietaryCategory: 'all',
     levelNum: 212,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -10009,6 +10221,7 @@ export const LEVELS: Level[] = [
     category: 'salads',
     dietaryCategory: 'veggie',
     levelNum: 213,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -10052,6 +10265,7 @@ export const LEVELS: Level[] = [
     category: 'salads',
     dietaryCategory: 'all',
     levelNum: 214,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -10101,6 +10315,7 @@ export const LEVELS: Level[] = [
     category: 'salads',
     dietaryCategory: 'vegan',
     levelNum: 215,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -10147,6 +10362,7 @@ export const LEVELS: Level[] = [
     category: 'salads',
     dietaryCategory: 'veggie',
     levelNum: 216,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -10190,6 +10406,7 @@ export const LEVELS: Level[] = [
     category: 'salads',
     dietaryCategory: 'veggie',
     levelNum: 217,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -10231,6 +10448,7 @@ export const LEVELS: Level[] = [
     category: 'salads',
     dietaryCategory: 'veggie',
     levelNum: 218,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -10278,6 +10496,7 @@ export const LEVELS: Level[] = [
     category: 'salads',
     dietaryCategory: 'pollo',
     levelNum: 219,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -10329,6 +10548,7 @@ export const LEVELS: Level[] = [
     category: 'salads',
     dietaryCategory: 'pollo',
     levelNum: 220,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -10382,6 +10602,7 @@ export const LEVELS: Level[] = [
     category: 'salads',
     dietaryCategory: 'all',
     levelNum: 221,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -10431,6 +10652,7 @@ export const LEVELS: Level[] = [
     category: 'salads',
     dietaryCategory: 'pollo',
     levelNum: 222,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -10481,6 +10703,7 @@ export const LEVELS: Level[] = [
     category: 'salads',
     dietaryCategory: 'veggie',
     levelNum: 223,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -10531,6 +10754,7 @@ export const LEVELS: Level[] = [
     category: 'salads',
     dietaryCategory: 'all',
     levelNum: 224,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -10583,6 +10807,7 @@ export const LEVELS: Level[] = [
     category: 'salads',
     dietaryCategory: 'vegan',
     levelNum: 225,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -10632,6 +10857,7 @@ export const LEVELS: Level[] = [
     category: 'salads',
     dietaryCategory: 'pesca',
     levelNum: 226,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -10678,6 +10904,7 @@ export const LEVELS: Level[] = [
     category: 'salads',
     dietaryCategory: 'pollo',
     levelNum: 227,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -10735,6 +10962,7 @@ export const LEVELS: Level[] = [
     category: 'salads',
     dietaryCategory: 'pesca',
     levelNum: 228,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -10789,6 +11017,7 @@ export const LEVELS: Level[] = [
     category: 'salads',
     dietaryCategory: 'pesca',
     levelNum: 229,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -10836,6 +11065,7 @@ export const LEVELS: Level[] = [
     category: 'salads',
     dietaryCategory: 'all',
     levelNum: 230,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -10879,6 +11109,7 @@ export const LEVELS: Level[] = [
     category: 'salads',
     dietaryCategory: 'pesca',
     levelNum: 231,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -10927,6 +11158,7 @@ export const LEVELS: Level[] = [
     category: 'salads',
     dietaryCategory: 'all',
     levelNum: 232,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -10969,6 +11201,7 @@ export const LEVELS: Level[] = [
     category: 'salads',
     dietaryCategory: 'vegan',
     levelNum: 233,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -11015,6 +11248,7 @@ export const LEVELS: Level[] = [
     category: 'salads',
     dietaryCategory: 'veggie',
     levelNum: 234,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -11059,6 +11293,7 @@ export const LEVELS: Level[] = [
     category: 'Entrees & Main Courses',
     dietaryCategory: 'all',
     levelNum: 235,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -11119,6 +11354,7 @@ export const LEVELS: Level[] = [
     category: 'Entrees & Main Courses',
     dietaryCategory: 'all',
     levelNum: 236,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -11168,6 +11404,7 @@ export const LEVELS: Level[] = [
     category: 'Entrees & Main Courses',
     dietaryCategory: 'all',
     levelNum: 237,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -11233,6 +11470,7 @@ export const LEVELS: Level[] = [
     category: 'Entrees & Main Courses',
     dietaryCategory: 'all',
     levelNum: 238,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -11295,6 +11533,7 @@ export const LEVELS: Level[] = [
     category: 'Entrees & Main Courses',
     dietaryCategory: 'all',
     levelNum: 239,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -11353,6 +11592,7 @@ export const LEVELS: Level[] = [
     category: 'Entrees & Main Courses',
     dietaryCategory: 'all',
     levelNum: 240,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -11410,6 +11650,7 @@ export const LEVELS: Level[] = [
     category: 'Entrees & Main Courses',
     dietaryCategory: 'all',
     levelNum: 241,
+    cook2Method: 'Rule D — no canonical match. Converted to section-first physics July 2026; no locked yield factors.',
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -11460,6 +11701,7 @@ export const LEVELS: Level[] = [
     category: 'Entrees & Main Courses',
     dietaryCategory: 'all',
     levelNum: 242,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -11517,6 +11759,7 @@ export const LEVELS: Level[] = [
     category: 'Entrees & Main Courses',
     dietaryCategory: 'all',
     levelNum: 243,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -11578,6 +11821,7 @@ export const LEVELS: Level[] = [
     category: 'Entrees & Main Courses',
     dietaryCategory: 'all',
     levelNum: 244,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -11637,6 +11881,7 @@ export const LEVELS: Level[] = [
     category: 'Entrees & Main Courses',
     dietaryCategory: 'all',
     levelNum: 245,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -11685,6 +11930,7 @@ export const LEVELS: Level[] = [
     category: 'Entrees & Main Courses',
     dietaryCategory: 'all',
     levelNum: 246,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -11741,6 +11987,7 @@ export const LEVELS: Level[] = [
     category: 'Entrees & Main Courses',
     dietaryCategory: 'all',
     levelNum: 247,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -11805,6 +12052,7 @@ export const LEVELS: Level[] = [
     category: 'Entrees & Main Courses',
     dietaryCategory: 'all',
     levelNum: 248,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -11864,6 +12112,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 249,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -11916,6 +12165,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 250,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -11974,6 +12224,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 251,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12031,6 +12282,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 252,
+    cook2Method: 'PASS',
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12089,6 +12341,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 253,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12135,6 +12388,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 254,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12198,6 +12452,10 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 255,
+    cook2Method: 'baked',
+    cook2Minutes: 17.0,
+    cook2TempF: 375.0,
+    cook2FillClass: 'casserole_baked',
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12212,7 +12470,7 @@ export const LEVELS: Level[] = [
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
-    nutritionJson: {"cal":594.0,"pro":40.2,"fat":30.9,"carb":40.3,"fib":4.1,"h2o":261.3,"sug":7.9,"perServing":{"cal":594.0,"pro":40.2,"fat":30.9,"carb":40.3,"fib":4.1,"h2o":261.3,"sug":7.9,"AddedSugars":0.0,"IntrinsicSugars":7.9},"micros":{"vitaminA":43.72,"vitaminC":2.14,"vitaminD":5.3,"vitaminE":0.55,"vitaminK":11.52,"vitaminB6":0.11,"vitaminB12":0.71,"thiamin":0.03,"riboflavin":0.12,"niacin":1.16,"folate":9.14,"calcium":129.02,"iron":1.16,"magnesium":19.54,"phosphorus":139.74,"potassium":202.42,"sodium":251.44,"zinc":1.72,"copper":0.11,"selenium":13.85,"cholesterol":39.33,"saturatedFat":4.79,"monoFat":3.71,"polyFat":0.35,"omega3":0.01,"omega6":0.02},"gramsPerServing":379.2,"servings":8,"per100g":{"Energy_KCal":156.65,"Water":68.91,"Protein":10.6,"TotalLipidFat":8.14,"Carbohydrate":10.64,"FiberTotalDietary":1.09,"SugarsTotal":2.08,"Cholesterol":39.33,"FattyAcids_totalSaturated":4.79,"FattyAcids_totalMonounsaturated":3.71,"FattyAcids_totalPolyunsaturated":0.35,"LinoleicAcid":0.02,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":43.72,"Retinol":36.66,"Carotene_beta":80.95,"VitaminD":5.3,"VitaminE_alphaTocopherol":0.55,"VitaminK_phylloquinone":11.52,"VitaminC_totalAscorbicAcid":2.14,"Thiamin":0.03,"Riboflavin":0.12,"Niacin":1.16,"PantothenicAcid":0.26,"VitaminB6":0.11,"Folate_total":9.14,"Folate_food":9.14,"Folate_DFE":9.14,"FolicAcid":0.0,"VitaminB12":0.71,"Choline_total":24.06,"Betaine":1.89,"LuteinZeaxanthin":55.63,"Lycopene":2665.85,"Calcium_Ca":129.02,"Iron_Fe":1.16,"Magnesium_Mg":19.54,"Phosphorus_P":139.74,"Potassium_K":202.42,"Sodium_Na":251.44,"Zinc_Zn":1.72,"Copper_Cu":0.11,"Manganese_Mn":0.17,"Selenium_Se":13.85,"Tryptophan":0.12,"Threonine":0.42,"Isoleucine":0.48,"Leucine":0.86,"Lysine":0.73,"Methionine":0.24,"Cystine":0.09,"Phenylalanine":0.46,"Tyrosine":0.39,"Valine":0.56,"Arginine":0.49,"Histidine":0.31,"Alanine":0.47,"AsparticAcid":0.86,"GlutamicAcid":2.21,"Glycine":0.43,"Proline":0.85,"Serine":0.44,"omega3":0.01,"omega6":0.02,"AddedSugars":0.0,"IntrinsicSugars":2.08},"addedSugars":0.0,"intrinsicSugars":7.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20420","name":"Pasta, dry, unenriched","grams":33.8},{"ndb":"14411","name":"Water, tap, drinking","grams":187.5},{"ndb":"23572","name":"Beef, ground, 80% lean meat / 20% fat, raw","grams":85.0},{"ndb":"4581","name":"Oil, avocado","grams":1.8},{"ndb":"11282","name":"Onions, raw","grams":20.0},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"11693","name":"Tomatoes, crushed, canned","grams":90.0},{"ndb":"11547","name":"Tomato products, canned, puree, without salt added","grams":30.5},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.5},{"ndb":"2003","name":"Spices, basil, dried","grams":0.2},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"1036","name":"Cheese, ricotta, whole milk","grams":53.1},{"ndb":"1026","name":"Cheese, mozzarella, whole milk","grams":42.5},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":7.1},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":6.2},{"ndb":"11297","name":"Parsley, fresh","grams":1.9},{"ndb":"2047","name":"Salt, table","grams":0.2},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"pasta","section_label":"Pasta","prep_method":"boiled","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.263286685626661,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":1770.0,"raw_water_grams":1525.23,"raw_fat_grams":4.08,"raw_protein_grams":35.21,"raw_carb_grams":201.61,"raw_fiber_grams":8.64,"final_grams":646.34,"boil_minutes":8.0,"cook_stages":[],"fill_class":""},{"section_key":"brown_beef","section_label":"Brown Beef","prep_method":"pan seared","cook_method":"pan seared","cooking_method":"pan seared","cooking_method_normalized":"fried","yield_factor_water":0.741459091980946,"yield_factor_fat":0.5937910447761194,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":694.4,"raw_water_grams":420.96,"raw_fat_grams":150.08,"raw_protein_grams":116.82,"raw_carb_grams":0.0,"raw_fiber_grams":0.0,"final_grams":524.6,"boil_minutes":11.0,"cook_stages":[],"fill_class":"fried_meat"},{"section_key":"onion_garlic","section_label":"Onion & Garlic","prep_method":"sauteed","cook_method":"sauteed","cooking_method":"sauteed","cooking_method_normalized":"fried","yield_factor_water":0.9401335151831695,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":172.0,"raw_water_grams":149.61,"raw_fat_grams":0.22,"raw_protein_grams":2.52,"raw_carb_grams":18.91,"raw_fiber_grams":2.97,"final_grams":163.04,"boil_minutes":3.0,"cook_stages":[],"fill_class":"sauteed_aromatic"},{"section_key":"tomatoes_spices","section_label":"Tomatoes & Spices","prep_method":"simmer","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","yield_factor_water":0.8770253073749186,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":976.15,"raw_water_grams":859.05,"raw_fat_grams":2.78,"raw_protein_grams":16.6,"raw_carb_grams":78.28,"raw_fiber_grams":20.66,"final_grams":870.51,"boil_minutes":17.0,"cook_stages":[],"fill_class":"simmer_sauce"},{"section_key":"cheese_filling","section_label":"Cheese Filling","prep_method":"raw","cook_method":"baked covered","cooking_method":"baked covered","cooking_method_normalized":"baked","yield_factor_water":0.8895303864341367,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":888.78,"raw_water_grams":542.6,"raw_fat_grams":150.69,"raw_protein_grams":150.29,"raw_carb_grams":23.87,"raw_fiber_grams":0.64,"final_grams":828.83,"boil_minutes":0,"cook_stages":[{"tempF":375,"minutes":45}],"fill_class":"dairy_custard"}],"cookingMethod":"baked covered","cookMinutes":45},
+    nutritionJson: {"cal":666.8,"pro":40.2,"fat":38.5,"carb":40.3,"fib":4.1,"h2o":401.5,"sug":7.9,"perServing":{"cal":666.8,"pro":40.2,"fat":38.5,"carb":40.3,"fib":4.1,"h2o":401.5,"sug":7.9,"AddedSugars":0.0,"IntrinsicSugars":7.9},"micros":{"vitaminA":31.45,"vitaminC":1.54,"vitaminD":3.81,"vitaminE":0.4,"vitaminK":8.29,"vitaminB6":0.08,"vitaminB12":0.51,"thiamin":0.02,"riboflavin":0.09,"niacin":0.84,"folate":6.58,"calcium":92.83,"iron":0.83,"magnesium":14.06,"phosphorus":100.55,"potassium":145.64,"sodium":180.92,"zinc":1.23,"copper":0.08,"selenium":9.97,"cholesterol":28.3,"saturatedFat":3.45,"monoFat":2.67,"polyFat":0.25,"omega3":0.01,"omega6":0.02},"gramsPerServing":527.0,"servings":8,"per100g":{"Energy_KCal":126.53,"Water":76.19,"Protein":7.62,"TotalLipidFat":7.3,"Carbohydrate":7.65,"FiberTotalDietary":0.78,"SugarsTotal":1.5,"Cholesterol":28.3,"FattyAcids_totalSaturated":3.45,"FattyAcids_totalMonounsaturated":2.67,"FattyAcids_totalPolyunsaturated":0.25,"LinoleicAcid":0.02,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":31.45,"Retinol":26.38,"Carotene_beta":58.24,"VitaminD":3.81,"VitaminE_alphaTocopherol":0.4,"VitaminK_phylloquinone":8.29,"VitaminC_totalAscorbicAcid":1.54,"Thiamin":0.02,"Riboflavin":0.09,"Niacin":0.84,"PantothenicAcid":0.19,"VitaminB6":0.08,"Folate_total":6.58,"Folate_food":6.58,"Folate_DFE":6.58,"FolicAcid":0.0,"VitaminB12":0.51,"Choline_total":17.31,"Betaine":1.36,"LuteinZeaxanthin":40.03,"Lycopene":1918.11,"Calcium_Ca":92.83,"Iron_Fe":0.83,"Magnesium_Mg":14.06,"Phosphorus_P":100.55,"Potassium_K":145.64,"Sodium_Na":180.92,"Zinc_Zn":1.23,"Copper_Cu":0.08,"Manganese_Mn":0.12,"Selenium_Se":9.97,"Tryptophan":0.09,"Threonine":0.3,"Isoleucine":0.35,"Leucine":0.62,"Lysine":0.53,"Methionine":0.17,"Cystine":0.06,"Phenylalanine":0.33,"Tyrosine":0.28,"Valine":0.4,"Arginine":0.36,"Histidine":0.22,"Alanine":0.34,"AsparticAcid":0.62,"GlutamicAcid":1.59,"Glycine":0.31,"Proline":0.61,"Serine":0.32,"omega3":0.01,"omega6":0.02,"AddedSugars":0.0,"IntrinsicSugars":1.5},"addedSugars":0.0,"intrinsicSugars":7.9,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"20420","name":"Pasta, dry, unenriched","grams":33.8},{"ndb":"14411","name":"Water, tap, drinking","grams":187.5},{"ndb":"23572","name":"Beef, ground, 80% lean meat / 20% fat, raw","grams":85.0},{"ndb":"4581","name":"Oil, avocado","grams":1.8},{"ndb":"11282","name":"Onions, raw","grams":20.0},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"11693","name":"Tomatoes, crushed, canned","grams":90.0},{"ndb":"11547","name":"Tomato products, canned, puree, without salt added","grams":30.5},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.5},{"ndb":"2003","name":"Spices, basil, dried","grams":0.2},{"ndb":"2047","name":"Salt, table","grams":0.8},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"1036","name":"Cheese, ricotta, whole milk","grams":53.1},{"ndb":"1026","name":"Cheese, mozzarella, whole milk","grams":42.5},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":7.1},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":6.2},{"ndb":"11297","name":"Parsley, fresh","grams":1.9},{"ndb":"2047","name":"Salt, table","grams":0.2},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1}],"sections":[{"section_key":"pasta","section_label":"Pasta","prep_method":"boiled","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","effective_cooking_method_normalized":"boiled","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":1770.0,"raw_water_grams":1525.23,"raw_fat_grams":4.08,"raw_protein_grams":35.21,"raw_carb_grams":201.61,"raw_fiber_grams":8.64,"final_grams":1770.0,"boil_minutes":8.0,"cook_stages":[],"fill_class":""},{"section_key":"brown_beef","section_label":"Brown Beef","prep_method":"pan seared","cook_method":"pan seared","cooking_method":"pan seared","cooking_method_normalized":"fried","effective_cooking_method_normalized":"fried","yield_factor_water":0.741459091980946,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":694.4,"raw_water_grams":420.96,"raw_fat_grams":150.08,"raw_protein_grams":116.82,"raw_carb_grams":0.0,"raw_fiber_grams":0.0,"final_grams":585.56,"boil_minutes":11.0,"cook_stages":[],"fill_class":"fried_meat"},{"section_key":"onion_garlic","section_label":"Onion & Garlic","prep_method":"sauteed","cook_method":"sauteed","cooking_method":"sauteed","cooking_method_normalized":"fried","effective_cooking_method_normalized":"fried","yield_factor_water":0.9401335151831695,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":172.0,"raw_water_grams":149.61,"raw_fat_grams":0.22,"raw_protein_grams":2.52,"raw_carb_grams":18.91,"raw_fiber_grams":2.97,"final_grams":163.04,"boil_minutes":3.0,"cook_stages":[],"fill_class":"sauteed_aromatic"},{"section_key":"tomatoes_spices","section_label":"Tomatoes & Spices","prep_method":"simmer","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","effective_cooking_method_normalized":"boiled","yield_factor_water":0.8770253073749186,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":6,"raw_grams":976.15,"raw_water_grams":859.05,"raw_fat_grams":2.78,"raw_protein_grams":16.6,"raw_carb_grams":78.28,"raw_fiber_grams":20.66,"final_grams":870.51,"boil_minutes":17.0,"cook_stages":[],"fill_class":"simmer_sauce"},{"section_key":"cheese_filling","section_label":"Cheese Filling","prep_method":"raw","cook_method":"baked covered","cooking_method":"baked covered","cooking_method_normalized":"baked","effective_cooking_method_normalized":"baked","yield_factor_water":0.8855892578637271,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":7,"raw_grams":888.78,"raw_water_grams":542.6,"raw_fat_grams":150.69,"raw_protein_grams":150.29,"raw_carb_grams":23.87,"raw_fiber_grams":0.64,"final_grams":826.7,"boil_minutes":0,"cook_stages":[],"fill_class":"dairy_custard"}],"cookingMethod":"baked covered","cookMinutes":30},
     recipeIngredients: [
       { name: 'Beef Lasagna', quantity: 'custom (g)', foodWord: 'LASAGNAMEAT', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'wide pasta, dry', quantity: '12 lasagna noodles (about 9.5 oz dry)', section: 'pasta', ndbNo: '20420', portionDesc: 'g', portionGrams: 270.0 },
@@ -12241,7 +12499,7 @@ export const LEVELS: Level[] = [
       'Stir in the crushed tomatoes, tomato purée, oregano, basil, salt, and black pepper. Simmer over low heat for 15 to 20 minutes, stirring occasionally, until the sauce thickens slightly.',
       'Make the cheese filling: in a large bowl, combine the ricotta, two-thirds of the mozzarella, the Parmesan, egg, parsley, salt, and black pepper. Stir until smooth.',
       'Assemble the lasagna: spread a thin layer of meat sauce on the bottom of a 9×13-inch baking dish. Layer 3 to 4 noodles over the sauce. Spread one-third of the cheese filling, then one-third of the remaining meat sauce. Repeat the layers twice more, ending with meat sauce on top. Scatter the remaining mozzarella over the top.',
-      'Cover tightly with foil and bake for 30 minutes. Uncover and bake for an additional 15 to 20 minutes until the cheese is bubbly and golden.',
+      'Cover tightly with foil and bake at 375°F for 30 minutes. Uncover and bake at 375°F for an additional 17 minutes until the cheese is bubbly and golden.',
       'Let rest for 15 minutes before slicing. Cut into 8 pieces and serve.',
       'Suggestions (not included): Serve with garlic bread and a simple green salad or Caesar salad.'
     ],
@@ -12250,7 +12508,7 @@ export const LEVELS: Level[] = [
       { key: 'brown_beef', label: 'Brown Beef', cookingMethod: 'pan seared', prepMethod: 'pan seared', boilMinutes: 11, fillClass: 'fried_meat' },
       { key: 'onion_garlic', label: 'Onion & Garlic', cookingMethod: 'sauteed', prepMethod: 'sauteed', boilMinutes: 3, fillClass: 'sauteed_aromatic' },
       { key: 'tomatoes_spices', label: 'Tomatoes & Spices', cookingMethod: 'simmer', prepMethod: 'simmer', boilMinutes: 17, fillClass: 'simmer_sauce' },
-      { key: 'cheese_filling', label: 'Cheese Filling', cookingMethod: 'baked covered', prepMethod: '', stages: [{ tempF: 375, minutes: 45 }], fillClass: 'dairy_custard' }
+      { key: 'cheese_filling', label: 'Cheese Filling', cookingMethod: 'baked covered', prepMethod: '', fillClass: 'dairy_custard' }
     ],
   },
   {
@@ -12259,6 +12517,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 256,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12319,6 +12578,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 257,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12366,6 +12626,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 258,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12418,6 +12679,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 259,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12466,6 +12728,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 260,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12524,6 +12787,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 261,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12573,6 +12837,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 262,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12634,6 +12899,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 263,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12692,6 +12958,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 264,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12746,6 +13013,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 265,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12802,6 +13070,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 266,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12859,6 +13128,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 267,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12916,6 +13186,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 268,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -12965,6 +13236,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 269,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13026,6 +13298,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 270,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13083,6 +13356,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 271,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13130,6 +13404,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 272,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13187,6 +13462,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 273,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13234,6 +13510,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 274,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13281,6 +13558,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 275,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13335,6 +13613,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 276,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13393,6 +13672,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 277,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13445,6 +13725,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 278,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13501,6 +13782,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
     levelNum: 279,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13557,6 +13839,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
     levelNum: 280,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13612,6 +13895,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
     levelNum: 281,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13663,6 +13947,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
     levelNum: 282,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13717,6 +14002,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
     levelNum: 283,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13777,6 +14063,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
     levelNum: 284,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13837,6 +14124,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pollo-pesca',
     levelNum: 285,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13900,6 +14188,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
     levelNum: 286,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -13956,6 +14245,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
     levelNum: 287,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14011,6 +14301,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
     levelNum: 288,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14063,6 +14354,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
     levelNum: 289,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14115,6 +14407,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
     levelNum: 290,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14172,6 +14465,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
     levelNum: 291,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14235,6 +14529,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
     levelNum: 292,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14301,6 +14596,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
     levelNum: 293,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14356,6 +14652,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
     levelNum: 294,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14402,6 +14699,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
     levelNum: 295,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14454,6 +14752,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
     levelNum: 296,
+    cook2Method: 'PASS',
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14499,6 +14798,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
     levelNum: 297,
+    cook2Method: 'and covered braise 22 min',
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14559,6 +14859,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 298,
+    cook2Method: 'PASS',
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14613,6 +14914,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
     levelNum: 299,
+    cook2Method: 'and parsley added after cooking',
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14671,6 +14973,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
     levelNum: 300,
+    cook2Method: 'flour sauteed 1 min',
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14737,6 +15040,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
     levelNum: 301,
+    cook2Method: 'tomatoes simmered 10 min',
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14803,6 +15107,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pollo',
     levelNum: 302,
+    cook2Method: 'cream simmered 4 min',
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14863,6 +15168,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 303,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14912,6 +15218,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 304,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -14960,6 +15267,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 305,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15004,6 +15312,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 306,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15072,6 +15381,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 307,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15111,7 +15421,7 @@ export const LEVELS: Level[] = [
     recipeInstructions: [
       'Pat the lamb dry and season with salt and cayenne. In a large heavy-bottomed pot or Dutch oven, heat the ghee over medium-high heat. Working in batches, brown the lamb on all sides for about 4 minutes total. Transfer to a plate and set aside.',
       'Reduce heat to medium. Add the finely diced onion and cook, stirring occasionally, for 13 minutes until deep golden brown.',
-      'Add the minced garlic, freshly grated ginger, paprika, ground coriander, ground cumin, ground cardamom, ground cloves, ground turmeric, and cayenne. Stir constantly for 1 minute until fragrant.',
+      'Add the minced garlic, freshly grated ginger, paprika, coriander seed, ground cumin, ground cardamom, ground cloves, ground turmeric, and cayenne. Stir constantly for 1 minute until fragrant.',
       'Add the crushed tomatoes and stir to combine with the spice mixture. Simmer uncovered for 3 minutes until the oil begins to separate from the spice mixture.',
       'Return the browned lamb to the pot along with any accumulated juices. Add the water and the bay leaves. Stir to coat the lamb with the sauce.',
       'Bring to a simmer, then reduce heat to low. Cover and braise for 55 minutes, stirring occasionally, until the lamb is tender.',
@@ -15134,6 +15444,9 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 308,
+    cook2Method: 'braise',
+    cook2Minutes: 25.0,
+    cook2FillClass: 'braised_beef',
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15148,32 +15461,32 @@ export const LEVELS: Level[] = [
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
-    nutritionJson: {"cal":587.4,"pro":53.6,"fat":23.8,"carb":42.1,"fib":9.1,"h2o":283.6,"sug":20.8,"perServing":{"cal":587.4,"pro":53.6,"fat":23.8,"carb":42.1,"fib":9.1,"h2o":283.6,"sug":20.8,"AddedSugars":4.3,"IntrinsicSugars":16.5},"micros":{"vitaminA":21.5,"vitaminC":2.43,"vitaminD":0.0,"vitaminE":0.97,"vitaminK":18.76,"vitaminB6":0.1,"vitaminB12":1.27,"thiamin":0.07,"riboflavin":0.15,"niacin":2.44,"folate":24.86,"calcium":29.97,"iron":1.72,"magnesium":26.21,"phosphorus":123.66,"potassium":274.34,"sodium":238.11,"zinc":2.24,"copper":0.15,"selenium":12.77,"cholesterol":35.7,"saturatedFat":1.35,"monoFat":2.96,"polyFat":0.72,"omega3":0.0,"omega6":0.16},"gramsPerServing":409.7,"servings":4,"per100g":{"Energy_KCal":143.38,"Water":69.23,"Protein":13.08,"TotalLipidFat":5.82,"Carbohydrate":10.27,"FiberTotalDietary":2.21,"SugarsTotal":5.08,"Cholesterol":35.7,"FattyAcids_totalSaturated":1.35,"FattyAcids_totalMonounsaturated":2.96,"FattyAcids_totalPolyunsaturated":0.72,"LinoleicAcid":0.16,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":21.5,"Retinol":0.0,"Carotene_beta":245.35,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.97,"VitaminK_phylloquinone":18.76,"VitaminC_totalAscorbicAcid":2.43,"Thiamin":0.07,"Riboflavin":0.15,"Niacin":2.44,"PantothenicAcid":0.37,"VitaminB6":0.1,"Folate_total":24.86,"Folate_food":24.86,"Folate_DFE":24.86,"FolicAcid":0.0,"VitaminB12":1.27,"Choline_total":7.97,"Betaine":0.1,"LuteinZeaxanthin":106.19,"Lycopene":673.07,"Calcium_Ca":29.97,"Iron_Fe":1.72,"Magnesium_Mg":26.21,"Phosphorus_P":123.66,"Potassium_K":274.34,"Sodium_Na":238.11,"Zinc_Zn":2.24,"Copper_Cu":0.15,"Manganese_Mn":0.3,"Selenium_Se":12.77,"Tryptophan":0.14,"Threonine":0.53,"Isoleucine":0.6,"Leucine":0.97,"Lysine":1.07,"Methionine":0.3,"Cystine":0.14,"Phenylalanine":0.53,"Tyrosine":0.41,"Valine":0.67,"Arginine":0.81,"Histidine":0.39,"Alanine":0.74,"AsparticAcid":1.21,"GlutamicAcid":2.0,"Glycine":0.61,"Proline":0.56,"Serine":0.49,"omega3":0.0,"omega6":0.16,"AddedSugars":1.05,"IntrinsicSugars":4.03},"addedSugars":4.3,"intrinsicSugars":16.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"17059","name":"Lamb, domestic, cubed for stew or kabob (leg and shoulder), separable lean only, trimmed to 1/4\" fat, raw","grams":225.0},{"ndb":"11282","name":"Onions, raw","grams":60.0},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"11216","name":"Ginger root, raw","grams":3.0},{"ndb":"4581","name":"Oil, avocado","grams":7.0},{"ndb":"11693","name":"Tomatoes, crushed, canned","grams":60.0},{"ndb":"16057","name":"Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt","grams":41.0},{"ndb":"9032","name":"Apricots, dried, sulfured, uncooked","grams":16.2},{"ndb":"19296","name":"Honey","grams":5.2},{"ndb":"9152","name":"Lemon juice, raw","grams":3.8},{"ndb":"2028","name":"Spices, paprika","grams":1.1},{"ndb":"2014","name":"Spices, cumin seed","grams":1.0},{"ndb":"2013","name":"Spices, coriander seed","grams":0.9},{"ndb":"2010","name":"Spices, cinnamon, ground","grams":0.7},{"ndb":"2043","name":"\"Spices, turmeric, ground\"","grams":0.8},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.1},{"ndb":"2037","name":"Spices, saffron","grams":0.1},{"ndb":"2004","name":"Spices, bay leaf","grams":0.3},{"ndb":"2047","name":"Salt, table","grams":2.2},{"ndb":"14411","name":"Water, tap, drinking","grams":59.2},{"ndb":"12061","name":"Nuts, almonds","grams":5.8},{"ndb":"11165","name":"Coriander (cilantro) leaves, raw","grams":4.0},{"ndb":"11297","name":"Parsley, fresh","grams":3.8}],"sections":[{"section_key":"tagine","section_label":"Tagine","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":23,"raw_grams":2016.8,"raw_water_grams":1512.6,"raw_fat_grams":95.33,"raw_protein_grams":214.34,"raw_carb_grams":168.25,"raw_fiber_grams":36.29,"final_grams":1638.65,"boil_minutes":0,"cook_stages":[],"fill_class":""}],"cookingMethod":"boiled","cookMinutes":null},
+    nutritionJson: {"cal":587.4,"pro":53.6,"fat":23.8,"carb":42.1,"fib":9.1,"h2o":266.3,"sug":20.8,"perServing":{"cal":587.4,"pro":53.6,"fat":23.8,"carb":42.1,"fib":9.1,"h2o":266.3,"sug":20.8,"AddedSugars":4.3,"IntrinsicSugars":16.5},"micros":{"vitaminA":21.76,"vitaminC":2.93,"vitaminD":0.0,"vitaminE":0.97,"vitaminK":20.49,"vitaminB6":0.09,"vitaminB12":1.13,"thiamin":0.06,"riboflavin":0.15,"niacin":2.12,"folate":24.24,"calcium":32.18,"iron":1.82,"magnesium":28.3,"phosphorus":130.33,"potassium":290.72,"sodium":248.78,"zinc":2.35,"copper":0.16,"selenium":13.33,"cholesterol":37.28,"saturatedFat":1.41,"monoFat":3.1,"polyFat":0.66,"omega3":0.0,"omega6":0.18},"gramsPerServing":392.3,"servings":4,"per100g":{"Energy_KCal":149.72,"Water":67.87,"Protein":13.66,"TotalLipidFat":6.07,"Carbohydrate":10.72,"FiberTotalDietary":2.31,"SugarsTotal":5.31,"Cholesterol":37.28,"FattyAcids_totalSaturated":1.41,"FattyAcids_totalMonounsaturated":3.1,"FattyAcids_totalPolyunsaturated":0.66,"LinoleicAcid":0.18,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":21.76,"Retinol":0.0,"Carotene_beta":249.68,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.97,"VitaminK_phylloquinone":20.49,"VitaminC_totalAscorbicAcid":2.93,"Thiamin":0.06,"Riboflavin":0.15,"Niacin":2.12,"PantothenicAcid":0.33,"VitaminB6":0.09,"Folate_total":24.24,"Folate_food":24.24,"Folate_DFE":24.24,"FolicAcid":0.0,"VitaminB12":1.13,"Choline_total":8.33,"Betaine":0.1,"LuteinZeaxanthin":110.22,"Lycopene":702.79,"Calcium_Ca":32.18,"Iron_Fe":1.82,"Magnesium_Mg":28.3,"Phosphorus_P":130.33,"Potassium_K":290.72,"Sodium_Na":248.78,"Zinc_Zn":2.35,"Copper_Cu":0.16,"Manganese_Mn":0.31,"Selenium_Se":13.33,"Tryptophan":0.15,"Threonine":0.55,"Isoleucine":0.62,"Leucine":1.01,"Lysine":1.11,"Methionine":0.31,"Cystine":0.13,"Phenylalanine":0.55,"Tyrosine":0.42,"Valine":0.7,"Arginine":0.84,"Histidine":0.41,"Alanine":0.77,"AsparticAcid":1.27,"GlutamicAcid":2.09,"Glycine":0.64,"Proline":0.59,"Serine":0.51,"omega3":0.0,"omega6":0.18,"AddedSugars":1.1,"IntrinsicSugars":4.21},"addedSugars":4.3,"intrinsicSugars":16.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"17059","name":"Lamb, domestic, cubed for stew or kabob (leg and shoulder), separable lean only, trimmed to 1/4\" fat, raw","grams":225.0},{"ndb":"4581","name":"Oil, avocado","grams":7.0},{"ndb":"2047","name":"Salt, table","grams":2.2},{"ndb":"11282","name":"Onions, raw","grams":60.0},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"11216","name":"Ginger root, raw","grams":3.0},{"ndb":"2028","name":"Spices, paprika","grams":1.1},{"ndb":"2014","name":"Spices, cumin seed","grams":1.0},{"ndb":"2013","name":"Spices, coriander seed","grams":0.9},{"ndb":"2010","name":"Spices, cinnamon, ground","grams":0.7},{"ndb":"2043","name":"\"Spices, turmeric, ground\"","grams":0.8},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.1},{"ndb":"11693","name":"Tomatoes, crushed, canned","grams":60.0},{"ndb":"14411","name":"Water, tap, drinking","grams":59.2},{"ndb":"2037","name":"Spices, saffron","grams":0.1},{"ndb":"2004","name":"Spices, bay leaf","grams":0.3},{"ndb":"16057","name":"Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt","grams":41.0},{"ndb":"9032","name":"Apricots, dried, sulfured, uncooked","grams":16.2},{"ndb":"19296","name":"Honey","grams":5.2},{"ndb":"9152","name":"Lemon juice, raw","grams":3.8},{"ndb":"12061","name":"Nuts, almonds","grams":5.8},{"ndb":"11165","name":"Coriander (cilantro) leaves, raw","grams":4.0},{"ndb":"11297","name":"Parsley, fresh","grams":3.8}],"sections":[{"section_key":"brown_lamb","section_label":"Brown Lamb","prep_method":"pan seared","cook_method":"braise","cooking_method":"braise","cooking_method_normalized":"boiled","effective_cooking_method_normalized":"boiled","yield_factor_water":0.37505128563577206,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":937.0,"raw_water_grams":663.68,"raw_fat_grams":75.52,"raw_protein_grams":181.89,"raw_carb_grams":0.0,"raw_fiber_grams":0.0,"final_grams":522.24,"boil_minutes":4.0,"cook_stages":[],"fill_class":"braised_beef"},{"section_key":"onion","section_label":"Onion","prep_method":"sauteed","cook_method":"braise","cooking_method":"braise","cooking_method_normalized":"boiled","effective_cooking_method_normalized":"boiled","yield_factor_water":0.8917590448533048,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":240.0,"raw_water_grams":213.86,"raw_fat_grams":0.24,"raw_protein_grams":2.64,"raw_carb_grams":22.42,"raw_fiber_grams":4.08,"final_grams":216.85,"boil_minutes":9.0,"cook_stages":[],"fill_class":"sauteed_aromatic"},{"section_key":"seasoning","section_label":"Seasoning","prep_method":"sauteed","cook_method":"braise","cooking_method":"braise","cooking_method_normalized":"boiled","effective_cooking_method_normalized":"boiled","yield_factor_water":0.975687034002562,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":42.25,"raw_water_grams":18.35,"raw_fat_grams":2.48,"raw_protein_grams":3.24,"raw_carb_grams":16.7,"raw_fiber_grams":6.21,"final_grams":41.8,"boil_minutes":1.0,"cook_stages":[],"fill_class":"sauteed_aromatic"},{"section_key":"tomatoes","section_label":"Tomatoes","prep_method":"simmer","cook_method":"braise","cooking_method":"braise","cooking_method_normalized":"boiled","effective_cooking_method_normalized":"boiled","yield_factor_water":0.9576155594366412,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":240.0,"raw_water_grams":214.66,"raw_fat_grams":0.67,"raw_protein_grams":3.94,"raw_carb_grams":17.5,"raw_fiber_grams":4.56,"final_grams":230.9,"boil_minutes":2.0,"cook_stages":[],"fill_class":"simmer_sauce"},{"section_key":"braise_liquid","section_label":"Braising Liquid","prep_method":"raw","cook_method":"braise","cooking_method":"braise","cooking_method_normalized":"boiled","effective_cooking_method_normalized":"boiled","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":238.55,"raw_water_grams":236.87,"raw_fat_grams":0.12,"raw_protein_grams":0.13,"raw_carb_grams":1.13,"raw_fiber_grams":0.33,"final_grams":238.55,"boil_minutes":0,"cook_stages":[],"fill_class":"simmer_sauce"},{"section_key":"additional_ingredients_2","section_label":"Additional Ingredients 2","prep_method":"raw","cook_method":"braise","cooking_method":"braise","cooking_method_normalized":"boiled","effective_cooking_method_normalized":"boiled","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":265.0,"raw_water_grams":136.26,"raw_fat_grams":4.62,"raw_protein_grams":16.85,"raw_carb_grams":104.02,"raw_fiber_grams":17.3,"final_grams":265.0,"boil_minutes":0,"cook_stages":[],"fill_class":"braised_beef","primary_entry_stage":"2"},{"section_key":"finish","section_label":"To finish","prep_method":"finish","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","effective_cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":54.0,"raw_water_grams":28.92,"raw_fat_grams":11.69,"raw_protein_grams":5.65,"raw_carb_grams":6.49,"raw_fiber_grams":3.82,"final_grams":54.0,"boil_minutes":0,"cook_stages":[],"fill_class":""}],"cookingMethod":"braise","cookMinutes":30},
     recipeIngredients: [
       { name: 'Lamb Tagine', quantity: 'custom (g)', foodWord: 'LAMBTAGINE', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
-      { name: 'lamb shoulder', quantity: '2 lb lamb shoulder, cut into 1½-inch pieces', section: 'tagine', ndbNo: '17059', portionDesc: 'g', portionGrams: 900.0 },
-      { name: 'onion', quantity: '1½ large onions, finely diced', section: 'tagine', ndbNo: '11282', portionDesc: 'g', portionGrams: 240.0 },
-      { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'tagine', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
-      { name: 'fresh ginger', quantity: '2 tbsp fresh ginger, grated', section: 'tagine', ndbNo: '11216', portionDesc: 'g', portionGrams: 12.0 },
-      { name: 'avocado oil', quantity: '2 tbsp', section: 'tagine', ndbNo: '4581', portionDesc: 'g', portionGrams: 28.0 },
-      { name: 'crushed tomatoes', quantity: '1 cup', section: 'tagine', ndbNo: '11693', portionDesc: 'g', portionGrams: 240.0 },
-      { name: 'chickpeas, cooked', quantity: '1 cup chickpeas, cooked and drained', section: 'tagine', ndbNo: '16057', portionDesc: 'g', portionGrams: 164.0 },
-      { name: 'dried apricots', quantity: '½ cup dried apricots, roughly chopped', section: 'tagine', ndbNo: '9032', portionDesc: 'g', portionGrams: 65.0 },
-      { name: 'honey', quantity: '1 tbsp', section: 'tagine', ndbNo: '19296', portionDesc: 'g', portionGrams: 21.0 },
-      { name: 'lemon juice', quantity: '1 tbsp', section: 'tagine', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.0 },
-      { name: 'paprika', quantity: '2 tsp', section: 'tagine', ndbNo: '2028', portionDesc: 'g', portionGrams: 4.6 },
-      { name: 'ground cumin', quantity: '2 tsp ground cumin', section: 'tagine', ndbNo: '2014', portionDesc: 'g', portionGrams: 4.0 },
-      { name: 'coriander seed', quantity: '2 tsp', section: 'tagine', ndbNo: '2013', portionDesc: 'g', portionGrams: 3.6 },
-      { name: 'ground cinnamon', quantity: '1 tsp', section: 'tagine', ndbNo: '2010', portionDesc: 'g', portionGrams: 2.6 },
-      { name: 'ground turmeric', quantity: '1 tsp', section: 'tagine', ndbNo: '2043', portionDesc: 'g', portionGrams: 3.0 },
-      { name: 'cayenne pepper', quantity: '¼ tsp', section: 'tagine', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.45 },
-      { name: 'saffron', quantity: '½ tsp', section: 'tagine', ndbNo: '2037', portionDesc: 'g', portionGrams: 0.35 },
-      { name: 'bay leaves', quantity: '2 bay leaves', section: 'tagine', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
-      { name: 'salt', quantity: '1½ tsp', section: 'tagine', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
-      { name: 'water', quantity: '1 cup', section: 'tagine', ndbNo: '14411', portionDesc: 'g', portionGrams: 237.0 },
-      { name: 'almonds', quantity: '¼ cup sliced almonds, toasted', section: 'tagine', ndbNo: '12061', portionDesc: 'g', portionGrams: 23.0 },
-      { name: 'fresh cilantro', quantity: '1 cup fresh cilantro, chopped', section: 'tagine', ndbNo: '11165', portionDesc: 'g', portionGrams: 16.0 },
-      { name: 'fresh parsley', quantity: '¼ cup fresh parsley, chopped', section: 'tagine', ndbNo: '11297', portionDesc: 'g', portionGrams: 15.0 }
+      { name: 'lamb shoulder', quantity: '2 lb lamb shoulder, cut into 1½-inch pieces', section: 'brown_lamb', ndbNo: '17059', portionDesc: 'g', portionGrams: 900.0 },
+      { name: 'avocado oil', quantity: '2 tbsp', section: 'brown_lamb', ndbNo: '4581', portionDesc: 'g', portionGrams: 28.0 },
+      { name: 'salt', quantity: '1½ tsp', section: 'brown_lamb', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
+      { name: 'onion', quantity: '1½ large onions, finely diced', section: 'onion', ndbNo: '11282', portionDesc: 'g', portionGrams: 240.0 },
+      { name: 'garlic', quantity: '4 cloves garlic, minced', section: 'seasoning', ndbNo: '11215', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'fresh ginger', quantity: '2 tbsp fresh ginger, grated', section: 'seasoning', ndbNo: '11216', portionDesc: 'g', portionGrams: 12.0 },
+      { name: 'paprika', quantity: '2 tsp', section: 'seasoning', ndbNo: '2028', portionDesc: 'g', portionGrams: 4.6 },
+      { name: 'ground cumin', quantity: '2 tsp ground cumin', section: 'seasoning', ndbNo: '2014', portionDesc: 'g', portionGrams: 4.0 },
+      { name: 'coriander seed', quantity: '2 tsp', section: 'seasoning', ndbNo: '2013', portionDesc: 'g', portionGrams: 3.6 },
+      { name: 'ground cinnamon', quantity: '1 tsp', section: 'seasoning', ndbNo: '2010', portionDesc: 'g', portionGrams: 2.6 },
+      { name: 'ground turmeric', quantity: '1 tsp', section: 'seasoning', ndbNo: '2043', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'cayenne pepper', quantity: '¼ tsp', section: 'seasoning', ndbNo: '2031', portionDesc: 'g', portionGrams: 0.45 },
+      { name: 'crushed tomatoes', quantity: '1 cup', section: 'tomatoes', ndbNo: '11693', portionDesc: 'g', portionGrams: 240.0 },
+      { name: 'water', quantity: '1 cup', section: 'braise_liquid', ndbNo: '14411', portionDesc: 'g', portionGrams: 237.0 },
+      { name: 'saffron', quantity: '½ tsp', section: 'braise_liquid', ndbNo: '2037', portionDesc: 'g', portionGrams: 0.35 },
+      { name: 'bay leaves', quantity: '2 bay leaves', section: 'braise_liquid', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
+      { name: 'chickpeas, cooked', quantity: '1 cup chickpeas, cooked and drained', section: 'additional_ingredients_2', ndbNo: '16057', portionDesc: 'g', portionGrams: 164.0 },
+      { name: 'dried apricots', quantity: '½ cup dried apricots, roughly chopped', section: 'additional_ingredients_2', ndbNo: '9032', portionDesc: 'g', portionGrams: 65.0 },
+      { name: 'honey', quantity: '1 tbsp', section: 'additional_ingredients_2', ndbNo: '19296', portionDesc: 'g', portionGrams: 21.0 },
+      { name: 'lemon juice', quantity: '1 tbsp', section: 'additional_ingredients_2', ndbNo: '9152', portionDesc: 'g', portionGrams: 15.0 },
+      { name: 'almonds', quantity: '¼ cup sliced almonds, toasted', section: 'finish', ndbNo: '12061', portionDesc: 'g', portionGrams: 23.0 },
+      { name: 'fresh cilantro', quantity: '1 cup fresh cilantro, chopped', section: 'finish', ndbNo: '11165', portionDesc: 'g', portionGrams: 16.0 },
+      { name: 'fresh parsley', quantity: '¼ cup fresh parsley, chopped', section: 'finish', ndbNo: '11297', portionDesc: 'g', portionGrams: 15.0 }
     ],
     recipeInstructions: [
       'Pat the lamb dry and season with salt and pepper. Heat the avocado oil in a large heavy-bottomed pot or Dutch oven over high heat. Working in batches, brown the lamb on all sides, about 3 to 4 minutes per batch. Transfer to a plate and set aside.',
@@ -15181,13 +15494,19 @@ export const LEVELS: Level[] = [
       'Add the minced garlic, freshly grated ginger, paprika, ground cumin, ground coriander, ground cinnamon, ground turmeric, and cayenne. Stir for 1 to 2 minutes until fragrant.',
       'Add the crushed tomatoes and cook for 2 to 3 minutes, stirring to combine with the spice mixture.',
       'Return the browned lamb to the pot along with any accumulated juices. Add the water, bay leaves, and saffron. Stir to combine.',
-      'Bring to a boil, then reduce heat to low. Cover and simmer for 30 minutes.',
-      'Add the drained chickpeas, roughly chopped dried apricots, honey, and lemon juice. Stir to combine. Cover and continue to simmer for 20 to 30 minutes until the lamb is tender and the sauce has thickened.',
+      'Bring to a boil, then reduce heat to low. Cover and braise for 30 minutes.',
+      'Add the drained chickpeas, roughly chopped dried apricots, honey, and lemon juice. Stir to combine. Cover and continue to braise for 25 minutes until the lamb is tender and the sauce has thickened.',
       'Remove and discard the bay leaves. Taste and adjust seasoning. Stir in the toasted sliced almonds, chopped cilantro, and chopped parsley.',
       'Suggestions (not included): Serve over couscous or with warm flatbread.'
     ],
     sections: [
-      { key: 'tagine', label: 'Tagine', cookingMethod: 'boiled', prepMethod: '', yieldFactorWater: 0.75 }
+      { key: 'brown_lamb', label: 'Brown Lamb', cookingMethod: 'braise', prepMethod: 'pan seared', boilMinutes: 4 },
+      { key: 'onion', label: 'Onion', cookingMethod: 'braise', prepMethod: 'sauteed', boilMinutes: 9, fillClass: 'sauteed_aromatic' },
+      { key: 'seasoning', label: 'Seasoning', cookingMethod: 'braise', prepMethod: 'sauteed', boilMinutes: 1, fillClass: 'sauteed_aromatic' },
+      { key: 'tomatoes', label: 'Tomatoes', cookingMethod: 'braise', prepMethod: 'simmer', boilMinutes: 2, fillClass: 'simmer_sauce' },
+      { key: 'braise_liquid', label: 'Braising Liquid', cookingMethod: 'braise', prepMethod: '', fillClass: 'simmer_sauce' },
+      { key: 'additional_ingredients_2', label: 'Additional Ingredients 2', cookingMethod: 'braise', prepMethod: '', fillClass: 'braised_beef', primaryEntryStage: '2' },
+      { key: 'finish', label: 'To finish', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
   {
@@ -15196,6 +15515,10 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 309,
+    cook2Method: 'baked',
+    cook2Minutes: 42.0,
+    cook2TempF: 375.0,
+    cook2FillClass: 'casserole_baked',
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15210,15 +15533,16 @@ export const LEVELS: Level[] = [
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
-    nutritionJson: {"cal":659.9,"pro":28.2,"fat":49.5,"carb":24.5,"fib":6.5,"h2o":297.4,"sug":12.6,"perServing":{"cal":659.9,"pro":28.2,"fat":49.5,"carb":24.5,"fib":6.5,"h2o":297.4,"sug":12.6,"AddedSugars":0.0,"IntrinsicSugars":12.6},"micros":{"vitaminA":31.79,"vitaminC":1.24,"vitaminD":14.27,"vitaminE":0.35,"vitaminK":3.41,"vitaminB6":0.08,"vitaminB12":0.67,"thiamin":0.05,"riboflavin":0.12,"niacin":1.71,"folate":16.01,"calcium":49.38,"iron":0.87,"magnesium":17.4,"phosphorus":88.43,"potassium":222.35,"sodium":291.4,"zinc":1.21,"copper":0.09,"selenium":8.06,"cholesterol":43.26,"saturatedFat":4.98,"monoFat":5.18,"polyFat":0.83,"omega3":0.01,"omega6":0.1},"gramsPerServing":407.1,"servings":6,"per100g":{"Energy_KCal":162.11,"Water":73.07,"Protein":6.93,"TotalLipidFat":12.15,"Carbohydrate":6.02,"FiberTotalDietary":1.6,"SugarsTotal":3.09,"Cholesterol":43.26,"FattyAcids_totalSaturated":4.98,"FattyAcids_totalMonounsaturated":5.18,"FattyAcids_totalPolyunsaturated":0.83,"LinoleicAcid":0.1,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":31.79,"Retinol":29.88,"Carotene_beta":20.41,"VitaminD":14.27,"VitaminE_alphaTocopherol":0.35,"VitaminK_phylloquinone":3.41,"VitaminC_totalAscorbicAcid":1.24,"Thiamin":0.05,"Riboflavin":0.12,"Niacin":1.71,"PantothenicAcid":0.37,"VitaminB6":0.08,"Folate_total":16.01,"Folate_food":14.72,"Folate_DFE":16.9,"FolicAcid":1.97,"VitaminB12":0.67,"Choline_total":34.64,"Betaine":3.01,"LuteinZeaxanthin":37.24,"Lycopene":401.42,"Calcium_Ca":49.38,"Iron_Fe":0.87,"Magnesium_Mg":17.4,"Phosphorus_P":88.43,"Potassium_K":222.35,"Sodium_Na":291.4,"Zinc_Zn":1.21,"Copper_Cu":0.09,"Manganese_Mn":0.17,"Selenium_Se":8.06,"Tryptophan":0.08,"Threonine":0.28,"Isoleucine":0.32,"Leucine":0.54,"Lysine":0.56,"Methionine":0.17,"Cystine":0.07,"Phenylalanine":0.3,"Tyrosine":0.24,"Valine":0.38,"Arginine":0.37,"Histidine":0.2,"Alanine":0.37,"AsparticAcid":0.63,"GlutamicAcid":1.15,"Glycine":0.28,"Proline":0.36,"Serine":0.3,"omega3":0.01,"omega6":0.1,"AddedSugars":0.0,"IntrinsicSugars":3.09},"addedSugars":0.0,"intrinsicSugars":12.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"11209","name":"Eggplant, raw","grams":151.2},{"ndb":"4581","name":"Oil, avocado","grams":7.0},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"17224","name":"Lamb, ground, raw","grams":113.4},{"ndb":"11282","name":"Onions, raw","grams":26.7},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"4581","name":"Oil, avocado","grams":2.3},{"ndb":"11693","name":"Tomatoes, crushed, canned","grams":40.0},{"ndb":"14096","name":"Alcoholic beverage, wine, table, red","grams":14.7},{"ndb":"2010","name":"Spices, cinnamon, ground","grams":0.4},{"ndb":"2001","name":"Spices, allspice, ground","grams":0.3},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.3},{"ndb":"2004","name":"Spices, bay leaf","grams":0.2},{"ndb":"2047","name":"Salt, table","grams":0.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"1145","name":"Butter, without salt","grams":9.5},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":5.2},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":81.3},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":16.7},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":4.2},{"ndb":"2025","name":"Spices, nutmeg, ground","grams":0.2},{"ndb":"2047","name":"Salt, table","grams":0.5},{"ndb":"2032","name":"Spices, pepper, white","grams":0.1}],"sections":[{"section_key":"eggplant","section_label":"Eggplant","prep_method":"raw","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.75,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":958.2,"raw_water_grams":837.36,"raw_fat_grams":43.63,"raw_protein_grams":8.89,"raw_carb_grams":53.34,"raw_fiber_grams":27.22,"final_grams":748.86,"boil_minutes":0,"cook_stages":[],"fill_class":""},{"section_key":"meat_sauce","section_label":"Meat Sauce","prep_method":"raw","cook_method":"pan seared","cooking_method":"pan seared","cooking_method_normalized":"fried","yield_factor_water":0.82,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":12,"raw_grams":1202.98,"raw_water_grams":844.21,"raw_fat_grams":174.57,"raw_protein_grams":119.56,"raw_carb_grams":43.9,"raw_fiber_grams":10.59,"final_grams":1051.02,"boil_minutes":0,"cook_stages":[],"fill_class":""},{"section_key":"bechamel","section_label":"Béchamel","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.88,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":705.75,"raw_water_grams":527.57,"raw_fat_grams":78.62,"raw_protein_grams":40.71,"raw_carb_grams":49.78,"raw_fiber_grams":1.23,"final_grams":642.44,"boil_minutes":0,"cook_stages":[],"fill_class":""}],"cookingMethod":"baked","cookMinutes":null},
+    nutritionJson: {"cal":680.5,"pro":28.2,"fat":51.8,"carb":24.5,"fib":6.5,"h2o":278.2,"sug":12.6,"perServing":{"cal":680.5,"pro":28.2,"fat":51.8,"carb":24.5,"fib":6.5,"h2o":278.2,"sug":12.6,"AddedSugars":0.0,"IntrinsicSugars":12.6},"micros":{"vitaminA":28.55,"vitaminC":1.13,"vitaminD":14.17,"vitaminE":0.38,"vitaminK":3.56,"vitaminB6":0.06,"vitaminB12":0.6,"thiamin":0.04,"riboflavin":0.12,"niacin":1.27,"folate":14.07,"calcium":49.38,"iron":0.77,"magnesium":16.17,"phosphorus":84.36,"potassium":209.21,"sodium":291.07,"zinc":1.1,"copper":0.08,"selenium":8.13,"cholesterol":45.14,"saturatedFat":5.27,"monoFat":5.78,"polyFat":0.83,"omega3":0.01,"omega6":0.09},"gramsPerServing":390.1,"servings":6,"per100g":{"Energy_KCal":174.43,"Water":71.3,"Protein":7.23,"TotalLipidFat":13.28,"Carbohydrate":6.28,"FiberTotalDietary":1.67,"SugarsTotal":3.23,"Cholesterol":45.14,"FattyAcids_totalSaturated":5.27,"FattyAcids_totalMonounsaturated":5.78,"FattyAcids_totalPolyunsaturated":0.83,"LinoleicAcid":0.09,"alphaLinolenicAcid":0.01,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":28.55,"Retinol":26.5,"Carotene_beta":21.63,"VitaminD":14.17,"VitaminE_alphaTocopherol":0.38,"VitaminK_phylloquinone":3.56,"VitaminC_totalAscorbicAcid":1.13,"Thiamin":0.04,"Riboflavin":0.12,"Niacin":1.27,"PantothenicAcid":0.32,"VitaminB6":0.06,"Folate_total":14.07,"Folate_food":13.0,"Folate_DFE":14.82,"FolicAcid":2.06,"VitaminB12":0.6,"Choline_total":31.91,"Betaine":3.14,"LuteinZeaxanthin":35.57,"Lycopene":471.2,"Calcium_Ca":49.38,"Iron_Fe":0.77,"Magnesium_Mg":16.17,"Phosphorus_P":84.36,"Potassium_K":209.21,"Sodium_Na":291.07,"Zinc_Zn":1.1,"Copper_Cu":0.08,"Manganese_Mn":0.17,"Selenium_Se":8.13,"Tryptophan":0.08,"Threonine":0.29,"Isoleucine":0.34,"Leucine":0.56,"Lysine":0.58,"Methionine":0.17,"Cystine":0.07,"Phenylalanine":0.31,"Tyrosine":0.25,"Valine":0.4,"Arginine":0.39,"Histidine":0.21,"Alanine":0.38,"AsparticAcid":0.66,"GlutamicAcid":1.2,"Glycine":0.3,"Proline":0.37,"Serine":0.31,"omega3":0.01,"omega6":0.09,"AddedSugars":0.0,"IntrinsicSugars":3.23},"addedSugars":0.0,"intrinsicSugars":12.6,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"17224","name":"Lamb, ground, raw","grams":113.4},{"ndb":"4581","name":"Oil, avocado","grams":2.3},{"ndb":"11282","name":"Onions, raw","grams":26.7},{"ndb":"11215","name":"Garlic, raw","grams":1.5},{"ndb":"11209","name":"Eggplant, raw","grams":151.2},{"ndb":"4581","name":"Oil, avocado","grams":7.0},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"4581","name":"Oil, avocado","grams":2.3},{"ndb":"11693","name":"Tomatoes, crushed, canned","grams":40.0},{"ndb":"14096","name":"Alcoholic beverage, wine, table, red","grams":14.7},{"ndb":"2010","name":"Spices, cinnamon, ground","grams":0.4},{"ndb":"2001","name":"Spices, allspice, ground","grams":0.3},{"ndb":"2027","name":"Spices, oregano, dried","grams":0.3},{"ndb":"2004","name":"Spices, bay leaf","grams":0.2},{"ndb":"2047","name":"Salt, table","grams":0.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.1},{"ndb":"1145","name":"Butter, without salt","grams":9.5},{"ndb":"20581","name":"Wheat flour, white, all-purpose, enriched, unbleached","grams":5.2},{"ndb":"1077","name":"Milk, whole, 3.25% milkfat, with added vitamin D","grams":81.3},{"ndb":"1123","name":"Egg, whole, raw, fresh","grams":16.7},{"ndb":"1033","name":"Cheese, parmesan, hard","grams":4.2},{"ndb":"2025","name":"Spices, nutmeg, ground","grams":0.2},{"ndb":"2047","name":"Salt, table","grams":0.5},{"ndb":"2032","name":"Spices, pepper, white","grams":0.1}],"sections":[{"section_key":"brown_lamb","section_label":"Brown Lamb","prep_method":"pan seared","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","effective_cooking_method_normalized":"boiled","yield_factor_water":0.510900252611033,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":694.4,"raw_water_grams":404.63,"raw_fat_grams":173.28,"raw_protein_grams":112.67,"raw_carb_grams":0.0,"raw_fiber_grams":0.0,"final_grams":496.49,"boil_minutes":7.0,"cook_stages":[],"fill_class":"fried_ground_beef"},{"section_key":"onion","section_label":"Onion","prep_method":"sauteed","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","effective_cooking_method_normalized":"boiled","yield_factor_water":0.8972581145988253,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":160.0,"raw_water_grams":142.58,"raw_fat_grams":0.16,"raw_protein_grams":1.76,"raw_carb_grams":14.94,"raw_fiber_grams":2.72,"final_grams":145.35,"boil_minutes":6.0,"cook_stages":[],"fill_class":"sauteed_aromatic"},{"section_key":"garlic","section_label":"Garlic","prep_method":"sauteed","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","effective_cooking_method_normalized":"boiled","yield_factor_water":0.9431936132448583,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":9.0,"raw_water_grams":5.27,"raw_fat_grams":0.04,"raw_protein_grams":0.57,"raw_carb_grams":2.98,"raw_fiber_grams":0.19,"final_grams":8.7,"boil_minutes":1.0,"cook_stages":[],"fill_class":"sauteed_aromatic"},{"section_key":"meat_sauce","section_label":"Meat Sauce","prep_method":"raw","cook_method":"simmer","cooking_method":"simmer","cooking_method_normalized":"boiled","effective_cooking_method_normalized":"boiled","yield_factor_water":0.8757515729888514,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":9,"raw_grams":353.57,"raw_water_grams":291.73,"raw_fat_grams":15.08,"raw_protein_grams":4.55,"raw_carb_grams":25.98,"raw_fiber_grams":7.68,"final_grams":317.33,"boil_minutes":17.0,"cook_stages":[],"fill_class":"simmer_sauce"},{"section_key":"eggplant","section_label":"Eggplant","prep_method":"baked","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","effective_cooking_method_normalized":"baked","yield_factor_water":0.825962629164154,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":958.2,"raw_water_grams":837.36,"raw_fat_grams":43.63,"raw_protein_grams":8.89,"raw_carb_grams":53.34,"raw_fiber_grams":27.22,"final_grams":812.47,"boil_minutes":0,"cook_stages":[{"tempF":400,"minutes":22}],"fill_class":"casserole_baked"},{"section_key":"bechamel","section_label":"Béchamel","prep_method":"simmer","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","effective_cooking_method_normalized":"baked","yield_factor_water":0.7244576266950139,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":705.75,"raw_water_grams":527.57,"raw_fat_grams":78.62,"raw_protein_grams":40.71,"raw_carb_grams":49.78,"raw_fiber_grams":1.23,"final_grams":560.38,"boil_minutes":7.0,"cook_stages":[],"fill_class":"dairy_custard","primary_entry_stage":"2"}],"cookingMethod":"simmer","cookMinutes":17},
     recipeIngredients: [
       { name: 'Lamb Moussaka', quantity: 'custom (g)', foodWord: 'MOUSSAKA', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'ground lamb', quantity: '1½ lb', section: 'brown_lamb', ndbNo: '17224', portionDesc: 'g', portionGrams: 680.4 },
+      { name: 'avocado oil', quantity: '1 tbsp', section: 'brown_lamb', ndbNo: '4581', portionDesc: 'g', portionGrams: 14.0 },
+      { name: 'onion', quantity: '1 large onion, finely diced', section: 'onion', ndbNo: '11282', portionDesc: 'g', portionGrams: 160.0 },
+      { name: 'garlic', quantity: '3 cloves garlic, minced', section: 'garlic', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'eggplant', quantity: '2 lb eggplant, sliced ¼-inch thick', section: 'eggplant', ndbNo: '11209', portionDesc: 'g', portionGrams: 907.2 },
       { name: 'avocado oil', quantity: '3 tbsp', section: 'eggplant', ndbNo: '4581', portionDesc: 'g', portionGrams: 42.0 },
       { name: 'salt', quantity: '1½ tsp', section: 'eggplant', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
-      { name: 'ground lamb', quantity: '1½ lb', section: 'meat_sauce', ndbNo: '17224', portionDesc: 'g', portionGrams: 680.4 },
-      { name: 'onion', quantity: '1 large onion, finely diced', section: 'meat_sauce', ndbNo: '11282', portionDesc: 'g', portionGrams: 160.0 },
-      { name: 'garlic', quantity: '3 cloves garlic, minced', section: 'meat_sauce', ndbNo: '11215', portionDesc: 'g', portionGrams: 9.0 },
       { name: 'avocado oil', quantity: '1 tbsp', section: 'meat_sauce', ndbNo: '4581', portionDesc: 'g', portionGrams: 14.0 },
       { name: 'crushed tomatoes', quantity: '1 cup', section: 'meat_sauce', ndbNo: '11693', portionDesc: 'g', portionGrams: 240.0 },
       { name: 'red wine', quantity: '3 fl oz', section: 'meat_sauce', ndbNo: '14096', portionDesc: 'g', portionGrams: 88.2 },
@@ -15238,19 +15562,22 @@ export const LEVELS: Level[] = [
       { name: 'white pepper', quantity: '¼ tsp', section: 'bechamel', ndbNo: '2032', portionDesc: 'g', portionGrams: 0.6 }
     ],
     recipeInstructions: [
-      'Preheat the oven to 400°F. Arrange the sliced eggplant in a single layer on two oiled baking sheets. Brush both sides with olive oil and season with salt. Roast for 20 to 25 minutes, flipping once halfway through, until golden and tender. Set aside. Reduce oven temperature to 375°F.',
+      'Preheat the oven to 400°F. Arrange the sliced eggplant in a single layer on two oiled baking sheets. Brush both sides with avocado oil and season with salt. Bake uncovered for 22 minutes, flipping once halfway through, until golden and tender. Set aside. Reduce oven temperature to 375°F.',
       'Heat 1 tablespoon of avocado oil in a large skillet over medium-high heat. Add the lamb and cook, breaking it up with a spoon, for 6 to 8 minutes until browned. Drain any excess fat and set the lamb aside.',
       'In the same skillet over medium heat, add the finely diced onion and cook for 5 minutes until softened. Add the minced garlic and cook for 1 minute.',
       'Return the lamb to the skillet. Add the crushed tomatoes, red wine, ground cinnamon, ground allspice, dried oregano, and bay leaves. Season with salt and pepper. Simmer over medium-low heat for 15 to 20 minutes until the sauce thickens. Remove and discard the bay leaves.',
       'Make the béchamel: melt the butter in a medium saucepan over medium heat. Whisk in the flour and cook for 1 to 2 minutes. Gradually whisk in the milk and cook, stirring constantly, for 6 to 8 minutes until thickened. Remove from heat. Whisk in the eggs one at a time, then stir in the freshly grated Parmesan, ground nutmeg, salt, and white pepper.',
       'Lightly oil a 9×13-inch baking dish. Arrange half the roasted eggplant slices in an even layer. Spread all of the meat sauce over the eggplant. Top with the remaining eggplant slices. Pour the béchamel evenly over the top and smooth with a spatula.',
-      'Bake at 375°F for 40 to 45 minutes until the top is set and golden brown. Let rest for 15 to 20 minutes before cutting. Cut into 6 portions and serve.',
+      'Bake uncovered at 375°F for 42 minutes until the top is set and golden brown. Let rest for 15 to 20 minutes before cutting. Cut into 6 portions and serve.',
       'Suggestions (not included): Serve with a simple green salad and crusty bread.'
     ],
     sections: [
-      { key: 'eggplant', label: 'Eggplant', cookingMethod: 'baked', prepMethod: '', yieldFactorWater: 0.75 },
-      { key: 'meat_sauce', label: 'Meat Sauce', cookingMethod: 'pan seared', prepMethod: '', yieldFactorWater: 0.82 },
-      { key: 'bechamel', label: 'Béchamel', cookingMethod: 'boiled', prepMethod: '', yieldFactorWater: 0.88 }
+      { key: 'brown_lamb', label: 'Brown Lamb', cookingMethod: 'simmer', prepMethod: 'pan seared', boilMinutes: 7, fillClass: 'fried_ground_beef' },
+      { key: 'onion', label: 'Onion', cookingMethod: 'simmer', prepMethod: 'sauteed', boilMinutes: 6, fillClass: 'sauteed_aromatic' },
+      { key: 'garlic', label: 'Garlic', cookingMethod: 'simmer', prepMethod: 'sauteed', boilMinutes: 1, fillClass: 'sauteed_aromatic' },
+      { key: 'meat_sauce', label: 'Meat Sauce', cookingMethod: 'simmer', prepMethod: '', boilMinutes: 17, fillClass: 'simmer_sauce' },
+      { key: 'eggplant', label: 'Eggplant', cookingMethod: 'baked', prepMethod: 'baked', stages: [{ tempF: 400, minutes: 22 }], fillClass: 'casserole_baked' },
+      { key: 'bechamel', label: 'Béchamel', cookingMethod: 'baked', prepMethod: 'simmer', boilMinutes: 7, fillClass: 'dairy_custard', primaryEntryStage: '2' }
     ],
   },
   {
@@ -15259,6 +15586,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 310,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15273,7 +15601,7 @@ export const LEVELS: Level[] = [
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
-    nutritionJson: {"cal":619.7,"pro":45.1,"fat":37.3,"carb":13.7,"fib":2.9,"h2o":276.6,"sug":5.5,"perServing":{"cal":619.7,"pro":45.1,"fat":37.3,"carb":13.7,"fib":2.9,"h2o":276.6,"sug":5.5,"AddedSugars":0.0,"IntrinsicSugars":5.5},"micros":{"vitaminA":50.46,"vitaminC":0.77,"vitaminD":0.0,"vitaminE":0.22,"vitaminK":2.73,"vitaminB6":0.07,"vitaminB12":0.99,"thiamin":0.04,"riboflavin":0.1,"niacin":1.92,"folate":9.26,"calcium":19.04,"iron":1.06,"magnesium":15.99,"phosphorus":99.77,"potassium":199.41,"sodium":338.7,"zinc":2.65,"copper":0.07,"selenium":11.45,"cholesterol":41.49,"saturatedFat":3.63,"monoFat":4.48,"polyFat":0.57,"omega3":0.0,"omega6":0.0},"gramsPerServing":385.2,"servings":4,"per100g":{"Energy_KCal":160.86,"Water":71.81,"Protein":11.72,"TotalLipidFat":9.68,"Carbohydrate":3.56,"FiberTotalDietary":0.76,"SugarsTotal":1.41,"Cholesterol":41.49,"FattyAcids_totalSaturated":3.63,"FattyAcids_totalMonounsaturated":4.48,"FattyAcids_totalPolyunsaturated":0.57,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":50.46,"Retinol":0.0,"Carotene_beta":500.87,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.22,"VitaminK_phylloquinone":2.73,"VitaminC_totalAscorbicAcid":0.77,"Thiamin":0.04,"Riboflavin":0.1,"Niacin":1.92,"PantothenicAcid":0.27,"VitaminB6":0.07,"Folate_total":9.26,"Folate_food":9.26,"Folate_DFE":9.26,"FolicAcid":0.0,"VitaminB12":0.99,"Choline_total":3.75,"Betaine":0.12,"LuteinZeaxanthin":18.4,"Lycopene":443.6,"Calcium_Ca":19.04,"Iron_Fe":1.06,"Magnesium_Mg":15.99,"Phosphorus_P":99.77,"Potassium_K":199.41,"Sodium_Na":338.7,"Zinc_Zn":2.65,"Copper_Cu":0.07,"Manganese_Mn":0.11,"Selenium_Se":11.45,"Tryptophan":0.13,"Threonine":0.49,"Isoleucine":0.54,"Leucine":0.87,"Lysine":0.98,"Methionine":0.28,"Cystine":0.11,"Phenylalanine":0.46,"Tyrosine":0.37,"Valine":0.6,"Arginine":0.68,"Histidine":0.35,"Alanine":0.67,"AsparticAcid":1.01,"GlutamicAcid":1.7,"Glycine":0.54,"Proline":0.47,"Serine":0.42,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":1.41},"addedSugars":0.0,"intrinsicSugars":5.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"17007","name":"Lamb Shanks (braised lamb foreshank)","grams":222.0},{"ndb":"2047","name":"Salt, table","grams":2.2},{"ndb":"2030","name":"Spices, pepper, black","grams":0.6},{"ndb":"4581","name":"Oil, avocado","grams":7.0},{"ndb":"11282","name":"Onions, raw","grams":55.0},{"ndb":"11124","name":"Carrots, raw","grams":30.5},{"ndb":"11143","name":"Celery, raw","grams":20.0},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"11546","name":"Tomato products, canned, paste, without salt added","grams":8.2},{"ndb":"14096","name":"Alcoholic beverage, wine, table, red","grams":58.8},{"ndb":"6008","name":"Soup, beef broth or bouillon canned, ready-to-serve","grams":122.5},{"ndb":"2063","name":"Rosemary, fresh","grams":0.8},{"ndb":"2049","name":"Thyme, fresh","grams":0.6},{"ndb":"2004","name":"Spices, bay leaf","grams":0.3}],"sections":[{"section_key":"brown_shanks","section_label":"Brown shanks","prep_method":"pan seared","cook_method":"braise","cooking_method":"braise","cooking_method_normalized":"boiled","yield_factor_water":0.1512797241095586,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":927.3,"raw_water_grams":595.35,"raw_fat_grams":146.89,"raw_protein_grams":168.16,"raw_carb_grams":1.47,"raw_fiber_grams":0.58,"final_grams":422.01,"boil_minutes":7.0,"cook_stages":[{"tempF":185,"minutes":165}],"fill_class":"braised_beef"},{"section_key":"vegetables","section_label":"Onion, Carrot, Celery","prep_method":"sauteed","cook_method":"braise","cooking_method":"braise","cooking_method_normalized":"boiled","yield_factor_water":0.8963414625783639,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":422.0,"raw_water_grams":380.1,"raw_fat_grams":0.65,"raw_protein_grams":4.11,"raw_carb_grams":34.61,"raw_fiber_grams":8.44,"final_grams":382.6,"boil_minutes":6.0,"cook_stages":[{"tempF":185,"minutes":165}],"fill_class":"sauteed_aromatic"},{"section_key":"garlic","section_label":"Garlic","prep_method":"sauteed","cook_method":"braise","cooking_method":"braise","cooking_method_normalized":"boiled","yield_factor_water":0.9276110478396138,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":12.0,"raw_water_grams":7.03,"raw_fat_grams":0.06,"raw_protein_grams":0.76,"raw_carb_grams":3.97,"raw_fiber_grams":0.25,"final_grams":11.49,"boil_minutes":2.0,"cook_stages":[{"tempF":185,"minutes":165}],"fill_class":"sauteed_aromatic"},{"section_key":"tomato_paste","section_label":"Tomato Paste","prep_method":"sauteed","cook_method":"braise","cooking_method":"braise","cooking_method_normalized":"boiled","yield_factor_water":0.8825816996453577,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":33.0,"raw_water_grams":24.26,"raw_fat_grams":0.16,"raw_protein_grams":1.43,"raw_carb_grams":6.24,"raw_fiber_grams":1.35,"final_grams":30.15,"boil_minutes":2.0,"cook_stages":[{"tempF":185,"minutes":165}],"fill_class":"pan_grilled_batter"},{"section_key":"red_wine","section_label":"Red Wine","prep_method":"simmer","cook_method":"braise","cooking_method":"braise","cooking_method_normalized":"boiled","yield_factor_water":0.9184283010710567,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":235.2,"raw_water_grams":203.42,"raw_fat_grams":0.0,"raw_protein_grams":0.16,"raw_carb_grams":6.14,"raw_fiber_grams":0.0,"final_grams":218.61,"boil_minutes":3.0,"cook_stages":[{"tempF":185,"minutes":165}],"fill_class":"simmer_sauce"},{"section_key":"broth_spices","section_label":"Broth & Spices","prep_method":"raw","cook_method":"braise","cooking_method":"braise","cooking_method_normalized":"boiled","yield_factor_water":0.9565327408541219,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":497.0,"raw_water_grams":481.93,"raw_fat_grams":1.42,"raw_protein_grams":5.92,"raw_carb_grams":2.39,"raw_fiber_grams":1.13,"final_grams":476.05,"boil_minutes":0,"cook_stages":[{"tempF":185,"minutes":165}],"fill_class":"simmer_sauce"}],"cookingMethod":"braise","cookMinutes":165},
+    nutritionJson: {"cal":619.7,"pro":45.1,"fat":37.3,"carb":13.7,"fib":2.9,"h2o":276.6,"sug":5.5,"perServing":{"cal":619.7,"pro":45.1,"fat":37.3,"carb":13.7,"fib":2.9,"h2o":276.6,"sug":5.5,"AddedSugars":0.0,"IntrinsicSugars":5.5},"micros":{"vitaminA":50.46,"vitaminC":0.77,"vitaminD":0.0,"vitaminE":0.22,"vitaminK":2.73,"vitaminB6":0.07,"vitaminB12":0.99,"thiamin":0.04,"riboflavin":0.1,"niacin":1.92,"folate":9.26,"calcium":19.04,"iron":1.06,"magnesium":15.99,"phosphorus":99.77,"potassium":199.41,"sodium":338.7,"zinc":2.65,"copper":0.07,"selenium":11.45,"cholesterol":41.49,"saturatedFat":3.63,"monoFat":4.48,"polyFat":0.57,"omega3":0.0,"omega6":0.0},"gramsPerServing":385.2,"servings":4,"per100g":{"Energy_KCal":160.86,"Water":71.81,"Protein":11.72,"TotalLipidFat":9.68,"Carbohydrate":3.56,"FiberTotalDietary":0.76,"SugarsTotal":1.41,"Cholesterol":41.49,"FattyAcids_totalSaturated":3.63,"FattyAcids_totalMonounsaturated":4.48,"FattyAcids_totalPolyunsaturated":0.57,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":50.46,"Retinol":0.0,"Carotene_beta":500.87,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.22,"VitaminK_phylloquinone":2.73,"VitaminC_totalAscorbicAcid":0.77,"Thiamin":0.04,"Riboflavin":0.1,"Niacin":1.92,"PantothenicAcid":0.27,"VitaminB6":0.07,"Folate_total":9.26,"Folate_food":9.26,"Folate_DFE":9.26,"FolicAcid":0.0,"VitaminB12":0.99,"Choline_total":3.75,"Betaine":0.12,"LuteinZeaxanthin":18.4,"Lycopene":443.6,"Calcium_Ca":19.04,"Iron_Fe":1.06,"Magnesium_Mg":15.99,"Phosphorus_P":99.77,"Potassium_K":199.41,"Sodium_Na":338.7,"Zinc_Zn":2.65,"Copper_Cu":0.07,"Manganese_Mn":0.11,"Selenium_Se":11.45,"Tryptophan":0.13,"Threonine":0.49,"Isoleucine":0.54,"Leucine":0.87,"Lysine":0.98,"Methionine":0.28,"Cystine":0.11,"Phenylalanine":0.46,"Tyrosine":0.37,"Valine":0.6,"Arginine":0.68,"Histidine":0.35,"Alanine":0.67,"AsparticAcid":1.01,"GlutamicAcid":1.7,"Glycine":0.54,"Proline":0.47,"Serine":0.42,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":1.41},"addedSugars":0.0,"intrinsicSugars":5.5,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"17007","name":"Lamb Shanks (braised lamb foreshank)","grams":222.0},{"ndb":"2047","name":"Salt, table","grams":2.2},{"ndb":"2030","name":"Spices, pepper, black","grams":0.6},{"ndb":"4581","name":"Oil, avocado","grams":7.0},{"ndb":"11282","name":"Onions, raw","grams":55.0},{"ndb":"11124","name":"Carrots, raw","grams":30.5},{"ndb":"11143","name":"Celery, raw","grams":20.0},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"11546","name":"Tomato products, canned, paste, without salt added","grams":8.2},{"ndb":"14096","name":"Alcoholic beverage, wine, table, red","grams":58.8},{"ndb":"6008","name":"Soup, beef broth or bouillon canned, ready-to-serve","grams":122.5},{"ndb":"2063","name":"Rosemary, fresh","grams":0.8},{"ndb":"2049","name":"Thyme, fresh","grams":0.6},{"ndb":"2004","name":"Spices, bay leaf","grams":0.3}],"sections":[{"section_key":"brown_shanks","section_label":"Brown shanks","prep_method":"pan seared","cook_method":"braise","cooking_method":"braise","cooking_method_normalized":"boiled","effective_cooking_method_normalized":"boiled","yield_factor_water":0.1512797241095586,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":927.3,"raw_water_grams":595.35,"raw_fat_grams":146.89,"raw_protein_grams":168.16,"raw_carb_grams":1.47,"raw_fiber_grams":0.58,"final_grams":422.01,"boil_minutes":7.0,"cook_stages":[{"tempF":185,"minutes":165}],"fill_class":"braised_beef"},{"section_key":"vegetables","section_label":"Onion, Carrot, Celery","prep_method":"sauteed","cook_method":"braise","cooking_method":"braise","cooking_method_normalized":"boiled","effective_cooking_method_normalized":"boiled","yield_factor_water":0.8963414625783639,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":422.0,"raw_water_grams":380.1,"raw_fat_grams":0.65,"raw_protein_grams":4.11,"raw_carb_grams":34.61,"raw_fiber_grams":8.44,"final_grams":382.6,"boil_minutes":6.0,"cook_stages":[{"tempF":185,"minutes":165}],"fill_class":"sauteed_aromatic"},{"section_key":"garlic","section_label":"Garlic","prep_method":"sauteed","cook_method":"braise","cooking_method":"braise","cooking_method_normalized":"boiled","effective_cooking_method_normalized":"boiled","yield_factor_water":0.9276110478396138,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":12.0,"raw_water_grams":7.03,"raw_fat_grams":0.06,"raw_protein_grams":0.76,"raw_carb_grams":3.97,"raw_fiber_grams":0.25,"final_grams":11.49,"boil_minutes":2.0,"cook_stages":[{"tempF":185,"minutes":165}],"fill_class":"sauteed_aromatic"},{"section_key":"tomato_paste","section_label":"Tomato Paste","prep_method":"sauteed","cook_method":"braise","cooking_method":"braise","cooking_method_normalized":"boiled","effective_cooking_method_normalized":"boiled","yield_factor_water":0.8825816996453577,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":33.0,"raw_water_grams":24.26,"raw_fat_grams":0.16,"raw_protein_grams":1.43,"raw_carb_grams":6.24,"raw_fiber_grams":1.35,"final_grams":30.15,"boil_minutes":2.0,"cook_stages":[{"tempF":185,"minutes":165}],"fill_class":"pan_grilled_batter"},{"section_key":"red_wine","section_label":"Red Wine","prep_method":"simmer","cook_method":"braise","cooking_method":"braise","cooking_method_normalized":"boiled","effective_cooking_method_normalized":"boiled","yield_factor_water":0.9184283010710567,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":235.2,"raw_water_grams":203.42,"raw_fat_grams":0.0,"raw_protein_grams":0.16,"raw_carb_grams":6.14,"raw_fiber_grams":0.0,"final_grams":218.61,"boil_minutes":3.0,"cook_stages":[{"tempF":185,"minutes":165}],"fill_class":"simmer_sauce"},{"section_key":"broth_spices","section_label":"Broth & Spices","prep_method":"raw","cook_method":"braise","cooking_method":"braise","cooking_method_normalized":"boiled","effective_cooking_method_normalized":"boiled","yield_factor_water":0.9565327408541219,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":497.0,"raw_water_grams":481.93,"raw_fat_grams":1.42,"raw_protein_grams":5.92,"raw_carb_grams":2.39,"raw_fiber_grams":1.13,"final_grams":476.05,"boil_minutes":0,"cook_stages":[{"tempF":185,"minutes":165}],"fill_class":"simmer_sauce"}],"cookingMethod":"braise","cookMinutes":165},
     recipeIngredients: [
       { name: 'Lamb Shanks', quantity: 'custom (g)', foodWord: 'LAMBSHANKS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'lamb shanks', quantity: '4', section: 'brown_shanks', ndbNo: '17007', portionDesc: 'g', portionGrams: 888.0 },
@@ -15317,6 +15645,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 311,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15331,7 +15660,7 @@ export const LEVELS: Level[] = [
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
-    nutritionJson: {"cal":245.0,"pro":34.4,"fat":11.8,"carb":0.2,"fib":0.1,"h2o":94.4,"sug":0.0,"perServing":{"cal":245.0,"pro":34.4,"fat":11.8,"carb":0.2,"fib":0.1,"h2o":94.4,"sug":0.0,"AddedSugars":0.0,"IntrinsicSugars":0.0},"micros":{"vitaminA":4.78,"vitaminC":0.0,"vitaminD":2.25,"vitaminE":0.2,"vitaminK":0.29,"vitaminB6":0.14,"vitaminB12":1.91,"thiamin":0.1,"riboflavin":0.16,"niacin":5.11,"folate":0.03,"calcium":22.43,"iron":1.82,"magnesium":27.57,"phosphorus":224.03,"potassium":389.78,"sodium":491.28,"zinc":3.19,"copper":0.13,"selenium":6.52,"cholesterol":78.12,"saturatedFat":3.27,"monoFat":2.37,"polyFat":0.37,"omega3":0.1,"omega6":0.11},"gramsPerServing":145.3,"servings":4,"per100g":{"Energy_KCal":168.58,"Water":64.94,"Protein":23.67,"TotalLipidFat":8.15,"Carbohydrate":0.13,"FiberTotalDietary":0.05,"SugarsTotal":0.0,"Cholesterol":78.12,"FattyAcids_totalSaturated":3.27,"FattyAcids_totalMonounsaturated":2.37,"FattyAcids_totalPolyunsaturated":0.37,"LinoleicAcid":0.11,"alphaLinolenicAcid":0.08,"EPA_20_5n3":0.01,"DPA_22_5n3":0.01,"DHA_22_6n3":0.0,"VitaminA_RAE":4.78,"Retinol":4.73,"Carotene_beta":0.49,"VitaminD":2.25,"VitaminE_alphaTocopherol":0.2,"VitaminK_phylloquinone":0.29,"VitaminC_totalAscorbicAcid":0.0,"Thiamin":0.1,"Riboflavin":0.16,"Niacin":5.11,"PantothenicAcid":0.49,"VitaminB6":0.14,"Folate_total":0.03,"Folate_food":0.03,"Folate_DFE":0.03,"FolicAcid":0.0,"VitaminB12":1.91,"Choline_total":0.02,"Betaine":0.02,"LuteinZeaxanthin":0.58,"Lycopene":0.03,"Calcium_Ca":22.43,"Iron_Fe":1.82,"Magnesium_Mg":27.57,"Phosphorus_P":224.03,"Potassium_K":389.78,"Sodium_Na":491.28,"Zinc_Zn":3.19,"Copper_Cu":0.13,"Manganese_Mn":0.04,"Selenium_Se":6.52,"Tryptophan":0.26,"Threonine":1.12,"Isoleucine":1.05,"Leucine":1.82,"Lysine":2.06,"Methionine":0.77,"Cystine":0.26,"Phenylalanine":0.92,"Tyrosine":0.82,"Valine":1.2,"Arginine":1.59,"Histidine":0.5,"Alanine":1.17,"AsparticAcid":0.0,"GlutamicAcid":3.31,"Glycine":1.01,"Proline":0.76,"Serine":0.81,"omega3":0.1,"omega6":0.11,"AddedSugars":0.0,"IntrinsicSugars":0.0},"addedSugars":0.0,"intrinsicSugars":0.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"11215","name":"Garlic, raw","grams":2.2},{"ndb":"2063","name":"Rosemary, fresh","grams":0.8},{"ndb":"2049","name":"Thyme, fresh","grams":0.8},{"ndb":"9152","name":"Lemon juice, raw","grams":3.8},{"ndb":"17078","name":"Lamb, New Zealand, imported, loin chop, separable lean only, raw","grams":172.0},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3}],"sections":[{"section_key":"marinade","section_label":"Marinade","prep_method":"raw","cook_method":"raw","cooking_method":"raw","ingredient_count":0,"raw_grams":0.0,"final_grams":0.0},{"section_key":"lamb_chops","section_label":"Lamb Chops","prep_method":"raw","cook_method":"pan seared","cooking_method":"pan seared","cooking_method_normalized":"fried","yield_factor_water":0.7681571015225616,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":695.15,"raw_water_grams":491.39,"raw_fat_grams":47.37,"raw_protein_grams":137.58,"raw_carb_grams":0.74,"raw_fiber_grams":0.29,"final_grams":581.23,"boil_minutes":7.0,"cook_stages":[],"fill_class":"pan_grilled_steak"}],"cookingMethod":"pan seared","cookMinutes":7},
+    nutritionJson: {"cal":245.0,"pro":34.4,"fat":11.8,"carb":0.2,"fib":0.1,"h2o":94.4,"sug":0.0,"perServing":{"cal":245.0,"pro":34.4,"fat":11.8,"carb":0.2,"fib":0.1,"h2o":94.4,"sug":0.0,"AddedSugars":0.0,"IntrinsicSugars":0.0},"micros":{"vitaminA":4.78,"vitaminC":0.0,"vitaminD":2.25,"vitaminE":0.2,"vitaminK":0.29,"vitaminB6":0.14,"vitaminB12":1.91,"thiamin":0.1,"riboflavin":0.16,"niacin":5.11,"folate":0.03,"calcium":22.43,"iron":1.82,"magnesium":27.57,"phosphorus":224.03,"potassium":389.78,"sodium":491.28,"zinc":3.19,"copper":0.13,"selenium":6.52,"cholesterol":78.12,"saturatedFat":3.27,"monoFat":2.37,"polyFat":0.37,"omega3":0.1,"omega6":0.11},"gramsPerServing":145.3,"servings":4,"per100g":{"Energy_KCal":168.58,"Water":64.94,"Protein":23.67,"TotalLipidFat":8.15,"Carbohydrate":0.13,"FiberTotalDietary":0.05,"SugarsTotal":0.0,"Cholesterol":78.12,"FattyAcids_totalSaturated":3.27,"FattyAcids_totalMonounsaturated":2.37,"FattyAcids_totalPolyunsaturated":0.37,"LinoleicAcid":0.11,"alphaLinolenicAcid":0.08,"EPA_20_5n3":0.01,"DPA_22_5n3":0.01,"DHA_22_6n3":0.0,"VitaminA_RAE":4.78,"Retinol":4.73,"Carotene_beta":0.49,"VitaminD":2.25,"VitaminE_alphaTocopherol":0.2,"VitaminK_phylloquinone":0.29,"VitaminC_totalAscorbicAcid":0.0,"Thiamin":0.1,"Riboflavin":0.16,"Niacin":5.11,"PantothenicAcid":0.49,"VitaminB6":0.14,"Folate_total":0.03,"Folate_food":0.03,"Folate_DFE":0.03,"FolicAcid":0.0,"VitaminB12":1.91,"Choline_total":0.02,"Betaine":0.02,"LuteinZeaxanthin":0.58,"Lycopene":0.03,"Calcium_Ca":22.43,"Iron_Fe":1.82,"Magnesium_Mg":27.57,"Phosphorus_P":224.03,"Potassium_K":389.78,"Sodium_Na":491.28,"Zinc_Zn":3.19,"Copper_Cu":0.13,"Manganese_Mn":0.04,"Selenium_Se":6.52,"Tryptophan":0.26,"Threonine":1.12,"Isoleucine":1.05,"Leucine":1.82,"Lysine":2.06,"Methionine":0.77,"Cystine":0.26,"Phenylalanine":0.92,"Tyrosine":0.82,"Valine":1.2,"Arginine":1.59,"Histidine":0.5,"Alanine":1.17,"AsparticAcid":0.0,"GlutamicAcid":3.31,"Glycine":1.01,"Proline":0.76,"Serine":0.81,"omega3":0.1,"omega6":0.11,"AddedSugars":0.0,"IntrinsicSugars":0.0},"addedSugars":0.0,"intrinsicSugars":0.0,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"4053","name":"Oil, olive, salad or cooking","grams":6.8},{"ndb":"11215","name":"Garlic, raw","grams":2.2},{"ndb":"2063","name":"Rosemary, fresh","grams":0.8},{"ndb":"2049","name":"Thyme, fresh","grams":0.8},{"ndb":"9152","name":"Lemon juice, raw","grams":3.8},{"ndb":"17078","name":"Lamb, New Zealand, imported, loin chop, separable lean only, raw","grams":172.0},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.3}],"sections":[{"section_key":"marinade","section_label":"Marinade","prep_method":"raw","cook_method":"raw","cooking_method":"raw","ingredient_count":0,"raw_grams":0.0,"final_grams":0.0},{"section_key":"lamb_chops","section_label":"Lamb Chops","prep_method":"raw","cook_method":"pan seared","cooking_method":"pan seared","cooking_method_normalized":"fried","effective_cooking_method_normalized":"fried","yield_factor_water":0.7681571015225616,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":3,"raw_grams":695.15,"raw_water_grams":491.39,"raw_fat_grams":47.37,"raw_protein_grams":137.58,"raw_carb_grams":0.74,"raw_fiber_grams":0.29,"final_grams":581.23,"boil_minutes":7.0,"cook_stages":[],"fill_class":"pan_grilled_steak"}],"cookingMethod":"pan seared","cookMinutes":7},
     recipeIngredients: [
       { name: 'Lamb Chops', quantity: 'custom (g)', foodWord: 'LAMBCHOPS', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'olive oil', quantity: '2 tbsp extra-virgin olive oil', section: 'marinade', ndbNo: '4053', portionDesc: 'g', portionGrams: 27.2, discarded: true, discardPercent: 100.0 },
@@ -15363,6 +15692,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 312,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15413,6 +15743,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 313,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15427,7 +15758,7 @@ export const LEVELS: Level[] = [
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
-    nutritionJson: {"cal":559.0,"pro":58.2,"fat":35.2,"carb":2.4,"fib":0.3,"h2o":106.2,"sug":0.3,"perServing":{"cal":559.0,"pro":58.2,"fat":35.2,"carb":2.4,"fib":0.3,"h2o":106.2,"sug":0.3,"AddedSugars":0.0,"IntrinsicSugars":0.3},"micros":{"vitaminA":0.67,"vitaminC":1.49,"vitaminD":0.0,"vitaminE":0.01,"vitaminK":0.18,"vitaminB6":0.19,"vitaminB12":3.48,"thiamin":0.15,"riboflavin":0.35,"niacin":8.1,"folate":25.58,"calcium":18.15,"iron":2.67,"magnesium":37.95,"phosphorus":270.16,"potassium":409.94,"sodium":369.75,"zinc":5.25,"copper":0.18,"selenium":32.7,"cholesterol":103.48,"saturatedFat":9.73,"monoFat":10.07,"polyFat":1.65,"omega3":0.0,"omega6":0.0},"gramsPerServing":205.8,"servings":6,"per100g":{"Energy_KCal":271.61,"Water":51.58,"Protein":28.27,"TotalLipidFat":17.1,"Carbohydrate":1.14,"FiberTotalDietary":0.15,"SugarsTotal":0.14,"Cholesterol":103.48,"FattyAcids_totalSaturated":9.73,"FattyAcids_totalMonounsaturated":10.07,"FattyAcids_totalPolyunsaturated":1.65,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.67,"Retinol":0.0,"Carotene_beta":1.83,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.01,"VitaminK_phylloquinone":0.18,"VitaminC_totalAscorbicAcid":1.49,"Thiamin":0.15,"Riboflavin":0.35,"Niacin":8.1,"PantothenicAcid":0.92,"VitaminB6":0.19,"Folate_total":25.58,"Folate_food":25.58,"Folate_DFE":25.58,"FolicAcid":0.0,"VitaminB12":3.48,"Choline_total":0.64,"Betaine":0.01,"LuteinZeaxanthin":1.03,"Lycopene":0.02,"Calcium_Ca":18.15,"Iron_Fe":2.67,"Magnesium_Mg":37.95,"Phosphorus_P":270.16,"Potassium_K":409.94,"Sodium_Na":369.75,"Zinc_Zn":5.25,"Copper_Cu":0.18,"Manganese_Mn":0.08,"Selenium_Se":32.7,"Tryptophan":0.32,"Threonine":1.21,"Isoleucine":1.36,"Leucine":2.18,"Lysine":2.49,"Methionine":0.72,"Cystine":0.3,"Phenylalanine":1.15,"Tyrosine":0.95,"Valine":1.51,"Arginine":1.67,"Histidine":0.89,"Alanine":1.69,"AsparticAcid":2.48,"GlutamicAcid":4.1,"Glycine":1.37,"Proline":1.18,"Serine":1.04,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":0.14},"addedSugars":0.0,"intrinsicSugars":0.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":0.705,"sources":[{"ndb":"17230","name":"Leg of Lamb (herb-roasted, bone-in whole leg, medium-rare)","grams":313.2},{"ndb":"4581","name":"Oil, avocado","grams":4.7},{"ndb":"11215","name":"Garlic, raw","grams":4.0},{"ndb":"2063","name":"Rosemary, fresh","grams":0.8},{"ndb":"2049","name":"Thyme, fresh","grams":0.1},{"ndb":"9152","name":"Lemon juice, raw","grams":10.2},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.2}],"sections":[{"section_key":"lamb","section_label":"Leg of Lamb","prep_method":"baked","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","yield_factor_water":0.4818329755464431,"yield_factor_fat":0.705,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":2008.05,"raw_water_grams":1321.79,"raw_fat_grams":299.57,"raw_protein_grams":349.12,"raw_carb_grams":14.13,"raw_fiber_grams":1.81,"final_grams":1234.77,"boil_minutes":0,"cook_stages":[{"tempF":450,"minutes":15},{"tempF":325,"minutes":100}],"fill_class":"baked_pork"}],"cookingMethod":"baked","cookMinutes":100},
+    nutritionJson: {"cal":559.0,"pro":58.2,"fat":35.2,"carb":2.4,"fib":0.3,"h2o":122.7,"sug":0.3,"perServing":{"cal":559.0,"pro":58.2,"fat":35.2,"carb":2.4,"fib":0.3,"h2o":122.7,"sug":0.3,"AddedSugars":0.0,"IntrinsicSugars":0.3},"micros":{"vitaminA":0.62,"vitaminC":1.38,"vitaminD":0.0,"vitaminE":0.01,"vitaminK":0.16,"vitaminB6":0.18,"vitaminB12":3.22,"thiamin":0.14,"riboflavin":0.32,"niacin":7.5,"folate":23.68,"calcium":16.8,"iron":2.48,"magnesium":35.13,"phosphorus":250.05,"potassium":379.43,"sodium":342.23,"zinc":4.86,"copper":0.16,"selenium":30.27,"cholesterol":95.78,"saturatedFat":9.0,"monoFat":9.32,"polyFat":1.53,"omega3":0.0,"omega6":0.0},"gramsPerServing":222.3,"servings":6,"per100g":{"Energy_KCal":251.4,"Water":55.18,"Protein":26.17,"TotalLipidFat":15.83,"Carbohydrate":1.06,"FiberTotalDietary":0.14,"SugarsTotal":0.13,"Cholesterol":95.78,"FattyAcids_totalSaturated":9.0,"FattyAcids_totalMonounsaturated":9.32,"FattyAcids_totalPolyunsaturated":1.53,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":0.62,"Retinol":0.0,"Carotene_beta":1.69,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.01,"VitaminK_phylloquinone":0.16,"VitaminC_totalAscorbicAcid":1.38,"Thiamin":0.14,"Riboflavin":0.32,"Niacin":7.5,"PantothenicAcid":0.86,"VitaminB6":0.18,"Folate_total":23.68,"Folate_food":23.68,"Folate_DFE":23.68,"FolicAcid":0.0,"VitaminB12":3.22,"Choline_total":0.59,"Betaine":0.01,"LuteinZeaxanthin":0.96,"Lycopene":0.01,"Calcium_Ca":16.8,"Iron_Fe":2.48,"Magnesium_Mg":35.13,"Phosphorus_P":250.05,"Potassium_K":379.43,"Sodium_Na":342.23,"Zinc_Zn":4.86,"Copper_Cu":0.16,"Manganese_Mn":0.08,"Selenium_Se":30.27,"Tryptophan":0.3,"Threonine":1.12,"Isoleucine":1.26,"Leucine":2.02,"Lysine":2.3,"Methionine":0.66,"Cystine":0.28,"Phenylalanine":1.06,"Tyrosine":0.88,"Valine":1.4,"Arginine":1.55,"Histidine":0.82,"Alanine":1.57,"AsparticAcid":2.29,"GlutamicAcid":3.79,"Glycine":1.27,"Proline":1.09,"Serine":0.96,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":0.13},"addedSugars":0.0,"intrinsicSugars":0.3,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":0.705,"sources":[{"ndb":"17230","name":"Leg of Lamb (herb-roasted, bone-in whole leg, medium-rare)","grams":313.2},{"ndb":"4581","name":"Oil, avocado","grams":4.7},{"ndb":"11215","name":"Garlic, raw","grams":4.0},{"ndb":"2063","name":"Rosemary, fresh","grams":0.8},{"ndb":"2049","name":"Thyme, fresh","grams":0.1},{"ndb":"9152","name":"Lemon juice, raw","grams":10.2},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"2030","name":"Spices, pepper, black","grams":0.2}],"sections":[{"section_key":"lamb","section_label":"Leg of Lamb","prep_method":"baked","cook_method":"baked","cooking_method":"baked","cooking_method_normalized":"baked","effective_cooking_method_normalized":"baked","yield_factor_water":0.5569531455714078,"yield_factor_fat":0.705,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":8,"raw_grams":2008.05,"raw_water_grams":1321.79,"raw_fat_grams":299.57,"raw_protein_grams":349.12,"raw_carb_grams":14.13,"raw_fiber_grams":1.81,"final_grams":1334.06,"boil_minutes":0,"cook_stages":[{"tempF":450,"minutes":15},{"tempF":325,"minutes":100}],"fill_class":"baked_pork"}],"cookingMethod":"baked","cookMinutes":100},
     recipeIngredients: [
       { name: 'Leg of Lamb', quantity: 'custom (g)', foodWord: 'LEGOFLAMB', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
       { name: 'lamb leg', quantity: '1 whole bone-in lamb leg (~5 lbs)', section: 'lamb', ndbNo: '17230', portionDesc: 'g', portionGrams: 1879.0 },
@@ -15459,6 +15790,9 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 314,
+    cook2Method: 'braise',
+    cook2Minutes: 22.0,
+    cook2FillClass: 'braised_beef',
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15473,43 +15807,48 @@ export const LEVELS: Level[] = [
     prepTime: '',
     linkType: 'builtin',
     sr28Rule: 'Rule D',
-    nutritionJson: {"cal":524.4,"pro":31.1,"fat":14.7,"carb":65.3,"fib":3.5,"h2o":277.0,"sug":4.7,"perServing":{"cal":524.4,"pro":31.1,"fat":14.7,"carb":65.3,"fib":3.5,"h2o":277.0,"sug":4.7,"AddedSugars":0.0,"IntrinsicSugars":4.7},"micros":{"vitaminA":19.15,"vitaminC":1.37,"vitaminD":0.0,"vitaminE":0.21,"vitaminK":2.77,"vitaminB6":0.07,"vitaminB12":0.7,"thiamin":0.1,"riboflavin":0.08,"niacin":1.65,"folate":33.47,"calcium":21.22,"iron":1.28,"magnesium":13.97,"phosphorus":78.17,"potassium":135.77,"sodium":188.0,"zinc":1.28,"copper":0.08,"selenium":9.44,"cholesterol":23.88,"saturatedFat":1.79,"monoFat":1.31,"polyFat":0.24,"omega3":0.0,"omega6":0.01},"gramsPerServing":392.2,"servings":6,"per100g":{"Energy_KCal":133.69,"Water":70.62,"Protein":7.94,"TotalLipidFat":3.76,"Carbohydrate":16.64,"FiberTotalDietary":0.9,"SugarsTotal":1.2,"Cholesterol":23.88,"FattyAcids_totalSaturated":1.79,"FattyAcids_totalMonounsaturated":1.31,"FattyAcids_totalPolyunsaturated":0.24,"LinoleicAcid":0.01,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":19.15,"Retinol":12.9,"Carotene_beta":62.51,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.21,"VitaminK_phylloquinone":2.77,"VitaminC_totalAscorbicAcid":1.37,"Thiamin":0.1,"Riboflavin":0.08,"Niacin":1.65,"PantothenicAcid":0.3,"VitaminB6":0.07,"Folate_total":33.47,"Folate_food":8.84,"Folate_DFE":50.71,"FolicAcid":37.9,"VitaminB12":0.7,"Choline_total":3.62,"Betaine":0.04,"LuteinZeaxanthin":16.93,"Lycopene":121.04,"Calcium_Ca":21.22,"Iron_Fe":1.28,"Magnesium_Mg":13.97,"Phosphorus_P":78.17,"Potassium_K":135.77,"Sodium_Na":188.0,"Zinc_Zn":1.28,"Copper_Cu":0.08,"Manganese_Mn":0.31,"Selenium_Se":9.44,"Tryptophan":0.08,"Threonine":0.3,"Isoleucine":0.34,"Leucine":0.56,"Lysine":0.57,"Methionine":0.18,"Cystine":0.09,"Phenylalanine":0.31,"Tyrosine":0.24,"Valine":0.4,"Arginine":0.47,"Histidine":0.22,"Alanine":0.43,"AsparticAcid":0.66,"GlutamicAcid":1.16,"Glycine":0.34,"Proline":0.3,"Serine":0.29,"omega3":0.0,"omega6":0.01,"AddedSugars":0.0,"IntrinsicSugars":1.2},"addedSugars":0.0,"intrinsicSugars":4.7,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"17059","name":"Lamb, domestic, cubed for stew or kabob (leg and shoulder), separable lean only, trimmed to 1/4\" fat, raw","grams":113.3},{"ndb":"1293","name":"Yogurt, Greek, plain, whole milk","grams":20.0},{"ndb":"11282","name":"Onions, raw","grams":73.3},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"11216","name":"Ginger root, raw","grams":3.0},{"ndb":"1003","name":"Butter oil, anhydrous","grams":6.8},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":20.5},{"ndb":"2043","name":"\"Spices, turmeric, ground\"","grams":0.3},{"ndb":"2014","name":"Spices, cumin seed","grams":0.7},{"ndb":"2013","name":"Spices, coriander seed","grams":0.7},{"ndb":"2006","name":"\"Spices, cardamom\"","grams":0.3},{"ndb":"2010","name":"Spices, cinnamon, ground","grams":0.4},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.2},{"ndb":"2011","name":"Spices, cloves, ground","grams":0.1},{"ndb":"2004","name":"Spices, bay leaf","grams":0.2},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"20044","name":"Rice, white, long-grain, regular, raw, enriched","grams":66.7},{"ndb":"11165","name":"Coriander (cilantro) leaves, raw","grams":2.7},{"ndb":"2065","name":"Spearmint, fresh","grams":1.0},{"ndb":"2047","name":"Salt, table","grams":0.5}],"sections":[{"section_key":"lamb","section_label":"Lamb","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":0.78,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":16,"raw_grams":1466.62,"raw_water_grams":1133.81,"raw_fat_grams":85.66,"raw_protein_grams":157.76,"raw_carb_grams":70.68,"raw_fiber_grams":15.09,"final_grams":1217.19,"boil_minutes":0,"cook_stages":[],"fill_class":""},{"section_key":"rice","section_label":"Rice","prep_method":"raw","cook_method":"boiled","cooking_method":"boiled","cooking_method_normalized":"boiled","yield_factor_water":11.717302538608068,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":4,"raw_grams":425.0,"raw_water_grams":66.37,"raw_fat_grams":2.77,"raw_protein_grams":29.06,"raw_carb_grams":320.89,"raw_fiber_grams":6.06,"final_grams":1136.34,"boil_minutes":0,"cook_stages":[],"fill_class":""}],"cookingMethod":"boiled","cookMinutes":null},
+    nutritionJson: {"cal":496.3,"pro":29.0,"fat":13.4,"carb":62.8,"fib":2.7,"h2o":242.9,"sug":3.8,"perServing":{"cal":496.3,"pro":29.0,"fat":13.4,"carb":62.8,"fib":2.7,"h2o":242.9,"sug":3.8,"AddedSugars":0.0,"IntrinsicSugars":3.8},"micros":{"vitaminA":17.25,"vitaminC":1.12,"vitaminD":0.0,"vitaminE":0.18,"vitaminK":3.04,"vitaminB6":0.07,"vitaminB12":0.75,"thiamin":0.1,"riboflavin":0.08,"niacin":1.82,"folate":36.8,"calcium":14.6,"iron":1.24,"magnesium":13.62,"phosphorus":78.9,"potassium":137.7,"sodium":67.34,"zinc":1.38,"copper":0.08,"selenium":9.96,"cholesterol":25.99,"saturatedFat":1.86,"monoFat":1.29,"polyFat":0.22,"omega3":0.0,"omega6":0.0},"gramsPerServing":350.4,"servings":6,"per100g":{"Energy_KCal":141.64,"Water":69.33,"Protein":8.28,"TotalLipidFat":3.82,"Carbohydrate":17.92,"FiberTotalDietary":0.76,"SugarsTotal":1.09,"Cholesterol":25.99,"FattyAcids_totalSaturated":1.86,"FattyAcids_totalMonounsaturated":1.29,"FattyAcids_totalPolyunsaturated":0.22,"LinoleicAcid":0.0,"alphaLinolenicAcid":0.0,"EPA_20_5n3":0.0,"DPA_22_5n3":0.0,"DHA_22_6n3":0.0,"VitaminA_RAE":17.25,"Retinol":11.51,"Carotene_beta":56.42,"VitaminD":0.0,"VitaminE_alphaTocopherol":0.18,"VitaminK_phylloquinone":3.04,"VitaminC_totalAscorbicAcid":1.12,"Thiamin":0.1,"Riboflavin":0.08,"Niacin":1.82,"PantothenicAcid":0.32,"VitaminB6":0.07,"Folate_total":36.8,"Folate_food":9.23,"Folate_DFE":56.1,"FolicAcid":42.42,"VitaminB12":0.75,"Choline_total":3.02,"Betaine":0.03,"LuteinZeaxanthin":12.45,"Lycopene":135.47,"Calcium_Ca":14.6,"Iron_Fe":1.24,"Magnesium_Mg":13.62,"Phosphorus_P":78.9,"Potassium_K":137.7,"Sodium_Na":67.34,"Zinc_Zn":1.38,"Copper_Cu":0.08,"Manganese_Mn":0.26,"Selenium_Se":9.96,"Tryptophan":0.09,"Threonine":0.33,"Isoleucine":0.38,"Leucine":0.63,"Lysine":0.63,"Methionine":0.2,"Cystine":0.1,"Phenylalanine":0.35,"Tyrosine":0.26,"Valine":0.44,"Arginine":0.53,"Histidine":0.24,"Alanine":0.48,"AsparticAcid":0.73,"GlutamicAcid":1.3,"Glycine":0.39,"Proline":0.34,"Serine":0.32,"omega3":0.0,"omega6":0.0,"AddedSugars":0.0,"IntrinsicSugars":1.09},"addedSugars":0.0,"intrinsicSugars":3.8,"isAddedSugarsEstimated":false,"addedSugarsBasis":"v3-classifier","nutrientVersion":"v3","retentionModelVersion":"v3-r6","sourceMatchVersion":"v3-greenfield","sourceNdbNo":"","sourceLongDesc":"","mergeBasis":"v3-build","yieldFactorWater":1.0,"yieldFactorFat":1.0,"sources":[{"ndb":"1293","name":"Yogurt, Greek, plain, whole milk","grams":20.0},{"ndb":"2043","name":"\"Spices, turmeric, ground\"","grams":0.3},{"ndb":"2014","name":"Spices, cumin seed","grams":0.7},{"ndb":"2013","name":"Spices, coriander seed","grams":0.7},{"ndb":"2006","name":"\"Spices, cardamom\"","grams":0.3},{"ndb":"2010","name":"Spices, cinnamon, ground","grams":0.4},{"ndb":"2031","name":"Spices, pepper, red or cayenne","grams":0.2},{"ndb":"2011","name":"Spices, cloves, ground","grams":0.1},{"ndb":"2047","name":"Salt, table","grams":1.5},{"ndb":"11282","name":"Onions, raw","grams":73.3},{"ndb":"1003","name":"Butter oil, anhydrous","grams":6.8},{"ndb":"11215","name":"Garlic, raw","grams":3.0},{"ndb":"11216","name":"Ginger root, raw","grams":3.0},{"ndb":"11529","name":"Tomatoes, red, ripe, raw, year round average","grams":20.5},{"ndb":"2004","name":"Spices, bay leaf","grams":0.2},{"ndb":"17059","name":"Lamb, domestic, cubed for stew or kabob (leg and shoulder), separable lean only, trimmed to 1/4\" fat, raw","grams":113.3},{"ndb":"20044","name":"Rice, white, long-grain, regular, raw, enriched","grams":66.7},{"ndb":"2047","name":"Salt, table","grams":0.5},{"ndb":"11165","name":"Coriander (cilantro) leaves, raw","grams":2.7},{"ndb":"2065","name":"Spearmint, fresh","grams":1.0}],"sections":[{"section_key":"marinade","section_label":"Marinade","prep_method":"raw","cook_method":"raw","cooking_method":"raw","ingredient_count":0,"raw_grams":0.0,"final_grams":0.0},{"section_key":"onions","section_label":"Onions","prep_method":"pan seared","cook_method":"braise","cooking_method":"braise","cooking_method_normalized":"boiled","effective_cooking_method_normalized":"boiled","yield_factor_water":0.8757681564384467,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":480.8,"raw_water_grams":392.18,"raw_fat_grams":41.03,"raw_protein_grams":4.95,"raw_carb_grams":41.1,"raw_fiber_grams":7.48,"final_grams":432.08,"boil_minutes":14.0,"cook_stages":[],"fill_class":"sauteed_aromatic"},{"section_key":"garlic_ginger","section_label":"Garlic & Ginger","prep_method":"pan seared","cook_method":"braise","cooking_method":"braise","cooking_method_normalized":"boiled","effective_cooking_method_normalized":"boiled","yield_factor_water":0.969631132984716,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":36.0,"raw_water_grams":24.74,"raw_fat_grams":0.23,"raw_protein_grams":1.47,"raw_carb_grams":9.15,"raw_fiber_grams":0.74,"final_grams":35.25,"boil_minutes":1.0,"cook_stages":[],"fill_class":"sauteed_aromatic"},{"section_key":"tomato_bay","section_label":"Tomato & Bay Leaves","prep_method":"simmer","cook_method":"braise","cooking_method":"braise","cooking_method_normalized":"boiled","effective_cooking_method_normalized":"boiled","yield_factor_water":0.9420674599807475,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":124.2,"raw_water_grams":116.32,"raw_fat_grams":0.35,"raw_protein_grams":1.17,"raw_carb_grams":5.68,"raw_fiber_grams":1.79,"final_grams":117.46,"boil_minutes":3.0,"cook_stages":[],"fill_class":"simmer_sauce"},{"section_key":"lamb","section_label":"Lamb","prep_method":"raw","cook_method":"braise","cooking_method":"braise","cooking_method_normalized":"boiled","effective_cooking_method_normalized":"boiled","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":1,"raw_grams":680.0,"raw_water_grams":501.43,"raw_fat_grams":35.9,"raw_protein_grams":137.43,"raw_carb_grams":0.0,"raw_fiber_grams":0.0,"final_grams":680.0,"boil_minutes":0,"cook_stages":[],"fill_class":"braised_beef"},{"section_key":"rice","section_label":"Rice","prep_method":"parboiled_long_grain_rice","cook_method":"braise","cooking_method":"braise","cooking_method_normalized":"boiled","effective_cooking_method_normalized":"boiled","yield_factor_water":0.8453707465230167,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":899.83,"raw_water_grams":543.32,"raw_fat_grams":2.64,"raw_protein_grams":28.52,"raw_carb_grams":319.8,"raw_fiber_grams":5.2,"final_grams":815.82,"boil_minutes":0,"cook_stages":[],"fill_class":"parboiled_long_grain_rice","primary_entry_stage":"2"},{"section_key":"garnish","section_label":"Garnish","prep_method":"finish","cook_method":"raw","cooking_method":"raw","cooking_method_normalized":"raw","effective_cooking_method_normalized":"raw","yield_factor_water":1.0,"yield_factor_fat":1.0,"yield_factor_protein":1.0,"yield_factor_carbohydrate":1.0,"yield_factor_fiber":1.0,"yield_factor_other":1.0,"ingredient_count":2,"raw_grams":22.0,"raw_water_grams":19.89,"raw_fat_grams":0.13,"raw_protein_grams":0.54,"raw_carb_grams":1.09,"raw_fiber_grams":0.86,"final_grams":22.0,"boil_minutes":0,"cook_stages":[],"fill_class":""}],"cookingMethod":"multi","cookMinutes":37},
     recipeIngredients: [
       { name: 'Lamb Biryani', quantity: 'custom (g)', foodWord: 'LAMBBIRYANI', portionDesc: 'custom (g)', portionGrams: 100.0, isDish: true },
+      { name: 'Greek whole milk yogurt', quantity: '½ cup', section: 'marinade', ndbNo: '1293', portionDesc: 'g', portionGrams: 120.0, discarded: true, discardPercent: 100.0 },
+      { name: 'ground turmeric', quantity: '1 tsp', section: 'marinade', ndbNo: '2043', portionDesc: 'g', portionGrams: 2.0, discarded: true, discardPercent: 100.0 },
+      { name: 'ground cumin', quantity: '2 tsp', section: 'marinade', ndbNo: '2014', portionDesc: 'g', portionGrams: 4.0, discarded: true, discardPercent: 100.0 },
+      { name: 'coriander seed', quantity: '2 tsp', section: 'marinade', ndbNo: '2013', portionDesc: 'g', portionGrams: 4.0, discarded: true, discardPercent: 100.0 },
+      { name: 'ground cardamom', quantity: '1 tsp', section: 'marinade', ndbNo: '2006', portionDesc: 'g', portionGrams: 2.0, discarded: true, discardPercent: 100.0 },
+      { name: 'ground cinnamon', quantity: '1 tsp', section: 'marinade', ndbNo: '2010', portionDesc: 'g', portionGrams: 2.6, discarded: true, discardPercent: 100.0 },
+      { name: 'cayenne pepper', quantity: '½ tsp', section: 'marinade', ndbNo: '2031', portionDesc: 'g', portionGrams: 1.5, discarded: true, discardPercent: 100.0 },
+      { name: 'ground cloves', quantity: '¼ tsp', section: 'marinade', ndbNo: '2011', portionDesc: 'g', portionGrams: 0.525, discarded: true, discardPercent: 100.0 },
+      { name: 'salt', quantity: '1½ tsp', section: 'marinade', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0, discarded: true, discardPercent: 100.0 },
+      { name: 'onion', quantity: '2 large onions, thinly sliced', section: 'onions', ndbNo: '11282', portionDesc: 'g', portionGrams: 440.0 },
+      { name: 'ghee', quantity: '3 tbsp', section: 'onions', ndbNo: '1003', portionDesc: 'g', portionGrams: 40.8 },
+      { name: 'garlic', quantity: '6 cloves garlic, minced', section: 'garlic_ginger', ndbNo: '11215', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'fresh ginger', quantity: '1½ tbsp fresh ginger, grated', section: 'garlic_ginger', ndbNo: '11216', portionDesc: 'g', portionGrams: 18.0 },
+      { name: 'tomato', quantity: '1 medium tomato, chopped (123g)', section: 'tomato_bay', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
+      { name: 'bay leaves', quantity: '2 bay leaves', section: 'tomato_bay', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
       { name: 'lamb (cubed for kabobs)', quantity: '1½ lb', section: 'lamb', ndbNo: '17059', portionDesc: 'g', portionGrams: 680.0 },
-      { name: 'Greek whole milk yogurt', quantity: '½ cup', section: 'lamb', ndbNo: '1293', portionDesc: 'g', portionGrams: 120.0 },
-      { name: 'onion', quantity: '2 large onions, thinly sliced', section: 'lamb', ndbNo: '11282', portionDesc: 'g', portionGrams: 440.0 },
-      { name: 'garlic', quantity: '6 cloves garlic, minced', section: 'lamb', ndbNo: '11215', portionDesc: 'g', portionGrams: 18.0 },
-      { name: 'fresh ginger', quantity: '1½ tbsp fresh ginger, grated', section: 'lamb', ndbNo: '11216', portionDesc: 'g', portionGrams: 18.0 },
-      { name: 'ghee', quantity: '3 tbsp', section: 'lamb', ndbNo: '1003', portionDesc: 'g', portionGrams: 40.8 },
-      { name: 'tomato', quantity: '1 medium tomato, chopped (123g)', section: 'lamb', ndbNo: '11529', portionDesc: 'g', portionGrams: 123.0 },
-      { name: 'ground turmeric', quantity: '1 tsp', section: 'lamb', ndbNo: '2043', portionDesc: 'g', portionGrams: 2.0 },
-      { name: 'ground cumin', quantity: '2 tsp', section: 'lamb', ndbNo: '2014', portionDesc: 'g', portionGrams: 4.0 },
-      { name: 'coriander seed', quantity: '2 tsp', section: 'lamb', ndbNo: '2013', portionDesc: 'g', portionGrams: 4.0 },
-      { name: 'ground cardamom', quantity: '1 tsp', section: 'lamb', ndbNo: '2006', portionDesc: 'g', portionGrams: 2.0 },
-      { name: 'ground cinnamon', quantity: '1 tsp', section: 'lamb', ndbNo: '2010', portionDesc: 'g', portionGrams: 2.6 },
-      { name: 'cayenne pepper', quantity: '½ tsp', section: 'lamb', ndbNo: '2031', portionDesc: 'g', portionGrams: 1.5 },
-      { name: 'ground cloves', quantity: '¼ tsp', section: 'lamb', ndbNo: '2011', portionDesc: 'g', portionGrams: 0.525 },
-      { name: 'bay leaves', quantity: '2 bay leaves', section: 'lamb', ndbNo: '2004', portionDesc: 'g', portionGrams: 1.2 },
-      { name: 'salt', quantity: '1½ tsp', section: 'lamb', ndbNo: '2047', portionDesc: 'g', portionGrams: 9.0 },
-      { name: 'white rice (dry)', quantity: '2 cups', section: 'rice', ndbNo: '20044', portionDesc: 'g', portionGrams: 400.0 },
-      { name: 'fresh cilantro', quantity: '¼ cup fresh cilantro, chopped', section: 'rice', ndbNo: '11165', portionDesc: 'g', portionGrams: 16.0 },
-      { name: 'fresh mint', quantity: '2 tbsp fresh mint, chopped', section: 'rice', ndbNo: '2065', portionDesc: 'g', portionGrams: 6.0 },
-      { name: 'salt', quantity: '½ tsp', section: 'rice', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 }
+      { name: 'long-grain regular white rice (dry)', quantity: '2 cups long-grain regular white rice (dry)', section: 'rice', ndbNo: '20044', portionDesc: 'g', portionGrams: 400.0 },
+      { name: 'salt', quantity: '½ tsp', section: 'rice', ndbNo: '2047', portionDesc: 'g', portionGrams: 3.0 },
+      { name: 'fresh cilantro', quantity: '¼ cup fresh cilantro, chopped', section: 'garnish', ndbNo: '11165', portionDesc: 'g', portionGrams: 16.0 },
+      { name: 'fresh mint', quantity: '2 tbsp fresh mint', section: 'garnish', ndbNo: '2065', portionDesc: 'g', portionGrams: 6.0 }
     ],
     recipeInstructions: [
       'In a bowl, combine the lamb with the yogurt, turmeric, cumin, coriander, cardamom, cinnamon, cayenne, cloves, and 1 teaspoon of salt. Toss to coat, cover, and refrigerate for at least 2 hours or overnight.',
-      'Melt the ghee in a large, heavy-bottomed pot over medium-high heat. Add the onions and cook, stirring occasionally, for 12–15 minutes until deep golden brown. Set aside a handful of the fried onions for garnish.',
+      'Melt the ghee in a large, heavy-bottomed pot over medium-high heat. Add the onions and cook, stirring occasionally, for 12–15 minutes until deep golden brown. Set aside a handful of the onions for garnish.',
       'Add the garlic and ginger to the pot and cook for 1 minute until fragrant. Add the tomatoes and bay leaves and cook for 3–4 minutes until the tomatoes break down.',
       'Add the marinated lamb to the pot. Stir to combine, cover, and simmer over medium-low heat for 35–40 minutes, stirring occasionally, until the lamb is tender and the sauce has thickened.',
-      'Meanwhile, bring a large pot of salted water to a boil. Add the rice and cook for 6–7 minutes until about 70% cooked (it should still have a firm bite at the center). Drain well.',
-      'Spread the par-cooked rice evenly over the lamb. Scatter the cilantro and mint over the rice, then top with the reserved fried onions. Cover the pot tightly (seal with foil, then the lid) and cook over very low heat for 20–25 minutes until the rice is fully cooked.',
+      'Rinse the regular long-grain rice until the water runs mostly clear. Parboil it in plenty of water until it is about 70% cooked, then drain it thoroughly.',
+      'Spread the parboiled rice evenly over the lamb. Cover the pot tightly (seal with foil, then the lid) and cook over very low heat for 20–25 minutes until the rice is fully cooked. Scatter the cilantro and mint over the rice. Then top with the reserved onions.',
       'To serve, scoop portions from the pot so each serving contains both lamb and rice. Arrange on a platter and serve immediately.',
       'Suggestions (not included): Serve with raita, a fresh cucumber and tomato salad, or warm naan bread.'
     ],
     sections: [
-      { key: 'lamb', label: 'Lamb', cookingMethod: 'boiled', prepMethod: '', yieldFactorWater: 0.78 },
-      { key: 'rice', label: 'Rice', cookingMethod: 'boiled', prepMethod: '', yieldFactorWater: 1.0 }
+      { key: 'marinade', label: 'Marinade', cookingMethod: 'raw', prepMethod: '' },
+      { key: 'onions', label: 'Onions', cookingMethod: 'braise', prepMethod: 'pan seared', boilMinutes: 14, fillClass: 'sauteed_aromatic' },
+      { key: 'garlic_ginger', label: 'Garlic & Ginger', cookingMethod: 'braise', prepMethod: 'pan seared', boilMinutes: 1, fillClass: 'sauteed_aromatic' },
+      { key: 'tomato_bay', label: 'Tomato & Bay Leaves', cookingMethod: 'braise', prepMethod: 'simmer', boilMinutes: 3, fillClass: 'simmer_sauce' },
+      { key: 'lamb', label: 'Lamb', cookingMethod: 'braise', prepMethod: '', fillClass: 'braised_beef' },
+      { key: 'rice', label: 'Rice', cookingMethod: 'braise', prepMethod: 'parboiled_long_grain_rice', fillClass: 'parboiled_long_grain_rice', primaryEntryStage: '2' },
+      { key: 'garnish', label: 'Garnish', cookingMethod: 'raw', prepMethod: 'finish' }
     ],
   },
   {
@@ -15518,6 +15857,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 315,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15565,6 +15905,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 316,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15612,6 +15953,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 317,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15656,6 +15998,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 318,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15700,6 +16043,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 319,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15747,6 +16091,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 320,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15799,6 +16144,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 321,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15842,6 +16188,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 322,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15892,6 +16239,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 323,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15942,6 +16290,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 324,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -15992,6 +16341,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 325,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16039,6 +16389,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 326,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16100,6 +16451,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 327,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16147,6 +16499,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 328,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16197,6 +16550,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 329,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16254,6 +16608,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pesca',
     levelNum: 330,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16304,6 +16659,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pesca',
     levelNum: 331,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16349,6 +16705,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pesca',
     levelNum: 332,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16403,6 +16760,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pesca',
     levelNum: 333,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16457,6 +16815,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pesca',
     levelNum: 334,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16515,6 +16874,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pesca',
     levelNum: 335,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16573,6 +16933,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pesca',
     levelNum: 336,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16619,6 +16980,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'all',
     levelNum: 337,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16681,6 +17043,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pesca',
     levelNum: 338,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16731,6 +17094,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pesca',
     levelNum: 339,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16777,6 +17141,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pesca',
     levelNum: 340,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16828,6 +17193,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pesca',
     levelNum: 341,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16885,6 +17251,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pesca',
     levelNum: 342,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16935,6 +17302,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pesca',
     levelNum: 343,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -16993,6 +17361,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pesca',
     levelNum: 344,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17040,6 +17409,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'vegan',
     levelNum: 345,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17095,6 +17465,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'veggie',
     levelNum: 346,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17141,6 +17512,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'vegan',
     levelNum: 347,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17189,6 +17561,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'vegan',
     levelNum: 348,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17236,6 +17609,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'vegan',
     levelNum: 349,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17294,6 +17668,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'vegan',
     levelNum: 350,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17350,6 +17725,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'vegan',
     levelNum: 351,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17408,6 +17784,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'vegan',
     levelNum: 352,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17463,6 +17840,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'veggie',
     levelNum: 353,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17512,6 +17890,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'veggie',
     levelNum: 354,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17568,6 +17947,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'veggie',
     levelNum: 355,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17624,6 +18004,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'veggie',
     levelNum: 356,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17675,6 +18056,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'veggie',
     levelNum: 357,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17727,6 +18109,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'veggie',
     levelNum: 358,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17787,6 +18170,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'veggie',
     levelNum: 359,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17831,6 +18215,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'all',
     levelNum: 360,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17877,6 +18262,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'veggie',
     levelNum: 361,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17921,6 +18307,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'veggie',
     levelNum: 362,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -17969,6 +18356,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'vegan',
     levelNum: 363,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18011,6 +18399,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'veggie',
     levelNum: 364,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18052,6 +18441,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'veggie',
     levelNum: 365,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18096,6 +18486,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'veggie',
     levelNum: 366,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18140,6 +18531,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'all',
     levelNum: 367,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18188,6 +18580,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'all',
     levelNum: 368,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18242,6 +18635,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'vegan',
     levelNum: 369,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18285,6 +18679,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'vegan',
     levelNum: 370,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18328,6 +18723,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'veggie',
     levelNum: 371,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18373,6 +18769,7 @@ export const LEVELS: Level[] = [
     category: 'sides',
     dietaryCategory: 'veggie',
     levelNum: 372,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18414,6 +18811,7 @@ export const LEVELS: Level[] = [
     category: 'soups & stews',
     dietaryCategory: 'pollo',
     levelNum: 373,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18463,6 +18861,7 @@ export const LEVELS: Level[] = [
     category: 'soups & stews',
     dietaryCategory: 'all',
     levelNum: 374,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18513,6 +18912,7 @@ export const LEVELS: Level[] = [
     category: 'soups & stews',
     dietaryCategory: 'all',
     levelNum: 375,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18568,6 +18968,7 @@ export const LEVELS: Level[] = [
     category: 'soups & stews',
     dietaryCategory: 'pollo',
     levelNum: 376,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18620,6 +19021,7 @@ export const LEVELS: Level[] = [
     category: 'soups & stews',
     dietaryCategory: 'pollo',
     levelNum: 377,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18667,6 +19069,7 @@ export const LEVELS: Level[] = [
     category: 'soups & stews',
     dietaryCategory: 'all',
     levelNum: 378,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18720,6 +19123,7 @@ export const LEVELS: Level[] = [
     category: 'soups & stews',
     dietaryCategory: 'pollo',
     levelNum: 379,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18777,6 +19181,7 @@ export const LEVELS: Level[] = [
     category: 'soups & stews',
     dietaryCategory: 'vegan',
     levelNum: 380,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18835,6 +19240,7 @@ export const LEVELS: Level[] = [
     category: 'soups & stews',
     dietaryCategory: 'all',
     levelNum: 381,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18894,6 +19300,7 @@ export const LEVELS: Level[] = [
     category: 'soups & stews',
     dietaryCategory: 'pollo',
     levelNum: 382,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -18948,6 +19355,7 @@ export const LEVELS: Level[] = [
     category: 'soups & stews',
     dietaryCategory: 'all',
     levelNum: 383,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -19005,6 +19413,7 @@ export const LEVELS: Level[] = [
     category: 'soups & stews',
     dietaryCategory: 'all',
     levelNum: 384,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -19064,6 +19473,7 @@ export const LEVELS: Level[] = [
     category: 'soups & stews',
     dietaryCategory: 'pesca',
     levelNum: 385,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -19131,6 +19541,7 @@ export const LEVELS: Level[] = [
     category: 'soups & stews',
     dietaryCategory: 'vegan',
     levelNum: 386,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -19192,6 +19603,7 @@ export const LEVELS: Level[] = [
     category: 'soups & stews',
     dietaryCategory: 'pesca',
     levelNum: 387,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -19251,6 +19663,7 @@ export const LEVELS: Level[] = [
     category: 'soups & stews',
     dietaryCategory: 'pesca',
     levelNum: 388,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -19311,6 +19724,7 @@ export const LEVELS: Level[] = [
     category: 'soups & stews',
     dietaryCategory: 'all',
     levelNum: 389,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -19366,6 +19780,7 @@ export const LEVELS: Level[] = [
     category: 'soups & stews',
     dietaryCategory: 'vegan',
     levelNum: 390,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -19424,6 +19839,7 @@ export const LEVELS: Level[] = [
     category: 'soups & stews',
     dietaryCategory: 'pesca',
     levelNum: 391,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -19488,6 +19904,7 @@ export const LEVELS: Level[] = [
     category: 'soups & stews',
     dietaryCategory: 'vegan',
     levelNum: 392,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -19553,6 +19970,7 @@ export const LEVELS: Level[] = [
     category: 'soups & stews',
     dietaryCategory: 'all',
     levelNum: 393,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -19606,6 +20024,7 @@ export const LEVELS: Level[] = [
     category: 'soups & stews',
     dietaryCategory: 'veggie',
     levelNum: 394,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -19658,6 +20077,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'veggie',
     levelNum: 395,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -19694,6 +20114,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'pesca',
     levelNum: 396,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -19734,6 +20155,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'all',
     levelNum: 397,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -19777,6 +20199,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'veggie',
     levelNum: 398,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -19824,6 +20247,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'veggie',
     levelNum: 399,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -19873,6 +20297,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'veggie',
     levelNum: 400,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -19912,6 +20337,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'veggie',
     levelNum: 401,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -19958,6 +20384,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'veggie',
     levelNum: 402,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -20009,6 +20436,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'all',
     levelNum: 403,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -20059,6 +20487,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'veggie',
     levelNum: 404,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -20103,6 +20532,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'veggie',
     levelNum: 405,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -20146,6 +20576,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'veggie',
     levelNum: 406,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -20186,6 +20617,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'vegan',
     levelNum: 407,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -20231,6 +20663,7 @@ export const LEVELS: Level[] = [
     category: 'Breakfast',
     dietaryCategory: 'vegan',
     levelNum: 408,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 5, emoji: '🧱' },
@@ -20279,6 +20712,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pesca',
     levelNum: 409,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -20326,6 +20760,7 @@ export const LEVELS: Level[] = [
     category: 'entrees & main courses',
     dietaryCategory: 'pesca',
     levelNum: 410,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -20376,6 +20811,7 @@ export const LEVELS: Level[] = [
     category: 'pasta & pizza',
     dietaryCategory: 'all',
     levelNum: 411,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -20415,6 +20851,7 @@ export const LEVELS: Level[] = [
     category: 'sauces & condiments',
     dietaryCategory: 'vegan',
     levelNum: 412,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -20467,6 +20904,7 @@ export const LEVELS: Level[] = [
     category: 'sauces & condiments',
     dietaryCategory: 'vegan',
     levelNum: 413,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -20515,6 +20953,7 @@ export const LEVELS: Level[] = [
     category: 'sauces & condiments',
     dietaryCategory: 'vegan',
     levelNum: 414,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -20563,6 +21002,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 415,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -20619,6 +21059,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'pollo',
     levelNum: 416,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -20670,6 +21111,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'pollo',
     levelNum: 417,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -20719,6 +21161,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'pesca',
     levelNum: 418,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -20771,6 +21214,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 419,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -20826,6 +21270,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'pollo',
     levelNum: 420,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -20882,6 +21327,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 421,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -20927,6 +21373,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'pollo',
     levelNum: 422,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -20972,6 +21419,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'pesca',
     levelNum: 423,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -21021,6 +21469,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'veggie',
     levelNum: 424,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -21061,6 +21510,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'vegan',
     levelNum: 425,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -21116,6 +21566,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'all',
     levelNum: 426,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -21172,6 +21623,7 @@ export const LEVELS: Level[] = [
     category: 'sandwiches & burgers',
     dietaryCategory: 'veggie',
     levelNum: 427,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -21220,6 +21672,7 @@ export const LEVELS: Level[] = [
     category: 'pasta & pizza',
     dietaryCategory: 'veggie',
     levelNum: 428,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -21273,6 +21726,7 @@ export const LEVELS: Level[] = [
     category: 'pasta & pizza',
     dietaryCategory: 'veggie',
     levelNum: 429,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -21327,6 +21781,7 @@ export const LEVELS: Level[] = [
     category: 'pasta & pizza',
     dietaryCategory: 'veggie',
     levelNum: 430,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -21381,6 +21836,7 @@ export const LEVELS: Level[] = [
     category: 'pasta & pizza',
     dietaryCategory: 'veggie',
     levelNum: 431,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -21435,6 +21891,7 @@ export const LEVELS: Level[] = [
     category: 'pasta & pizza',
     dietaryCategory: 'pesca',
     levelNum: 432,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -21490,6 +21947,7 @@ export const LEVELS: Level[] = [
     category: 'pasta & pizza',
     dietaryCategory: 'pollo',
     levelNum: 433,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -21543,6 +22001,7 @@ export const LEVELS: Level[] = [
     category: 'pasta & pizza',
     dietaryCategory: 'veggie',
     levelNum: 434,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -21593,6 +22052,7 @@ export const LEVELS: Level[] = [
     category: 'pasta & pizza',
     dietaryCategory: 'veggie',
     levelNum: 435,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -21654,6 +22114,7 @@ export const LEVELS: Level[] = [
     category: 'pasta & pizza',
     dietaryCategory: 'veggie',
     levelNum: 436,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -21701,6 +22162,7 @@ export const LEVELS: Level[] = [
     category: 'pasta & pizza',
     dietaryCategory: 'veggie',
     levelNum: 437,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -21755,6 +22217,7 @@ export const LEVELS: Level[] = [
     category: 'pasta & pizza',
     dietaryCategory: 'all',
     levelNum: 438,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -21816,6 +22279,7 @@ export const LEVELS: Level[] = [
     category: 'pasta & pizza',
     dietaryCategory: 'veggie',
     levelNum: 439,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -21860,6 +22324,7 @@ export const LEVELS: Level[] = [
     category: 'pasta & pizza',
     dietaryCategory: 'all',
     levelNum: 440,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -21907,6 +22372,7 @@ export const LEVELS: Level[] = [
     category: 'pasta & pizza',
     dietaryCategory: 'veggie',
     levelNum: 441,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -21954,6 +22420,7 @@ export const LEVELS: Level[] = [
     category: 'pasta & pizza',
     dietaryCategory: 'veggie',
     levelNum: 442,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -22009,6 +22476,7 @@ export const LEVELS: Level[] = [
     category: 'beverages',
     dietaryCategory: 'veggie',
     levelNum: 443,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -22047,6 +22515,7 @@ export const LEVELS: Level[] = [
     category: 'beverages',
     dietaryCategory: 'veggie',
     levelNum: 444,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -22084,6 +22553,7 @@ export const LEVELS: Level[] = [
     category: 'beverages',
     dietaryCategory: 'veggie',
     levelNum: 445,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -22121,6 +22591,7 @@ export const LEVELS: Level[] = [
     category: 'beverages',
     dietaryCategory: 'veggie',
     levelNum: 446,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -22157,6 +22628,7 @@ export const LEVELS: Level[] = [
     category: 'beverages',
     dietaryCategory: 'veggie',
     levelNum: 447,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -22194,6 +22666,7 @@ export const LEVELS: Level[] = [
     category: 'beverages',
     dietaryCategory: 'veggie',
     levelNum: 448,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -22230,6 +22703,7 @@ export const LEVELS: Level[] = [
     category: 'beverages',
     dietaryCategory: 'veggie',
     levelNum: 449,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -22268,6 +22742,7 @@ export const LEVELS: Level[] = [
     category: 'beverages',
     dietaryCategory: 'veggie',
     levelNum: 450,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -22306,6 +22781,7 @@ export const LEVELS: Level[] = [
     category: 'beverages',
     dietaryCategory: 'veggie',
     levelNum: 451,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -22344,6 +22820,7 @@ export const LEVELS: Level[] = [
     category: 'beverages',
     dietaryCategory: 'veggie',
     levelNum: 452,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -22383,6 +22860,7 @@ export const LEVELS: Level[] = [
     category: 'beverages',
     dietaryCategory: 'veggie',
     levelNum: 453,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -22421,6 +22899,7 @@ export const LEVELS: Level[] = [
     category: 'beverages',
     dietaryCategory: 'veggie',
     levelNum: 454,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -22459,6 +22938,7 @@ export const LEVELS: Level[] = [
     category: 'beverages',
     dietaryCategory: 'veggie',
     levelNum: 455,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -22497,6 +22977,7 @@ export const LEVELS: Level[] = [
     category: 'beverages',
     dietaryCategory: 'veggie',
     levelNum: 456,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -22533,6 +23014,7 @@ export const LEVELS: Level[] = [
     category: 'beverages',
     dietaryCategory: 'veggie',
     levelNum: 457,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -22570,6 +23052,7 @@ export const LEVELS: Level[] = [
     category: 'beverages',
     dietaryCategory: 'vegan',
     levelNum: 458,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -22609,6 +23092,7 @@ export const LEVELS: Level[] = [
     category: 'beverages',
     dietaryCategory: 'vegan',
     levelNum: 459,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -22648,6 +23132,7 @@ export const LEVELS: Level[] = [
     category: 'beverages',
     dietaryCategory: 'vegan',
     levelNum: 460,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -22685,6 +23170,7 @@ export const LEVELS: Level[] = [
     category: 'beverages',
     dietaryCategory: 'veggie',
     levelNum: 461,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -22728,6 +23214,7 @@ export const LEVELS: Level[] = [
     category: 'beverages',
     dietaryCategory: 'vegan',
     levelNum: 462,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -22770,6 +23257,7 @@ export const LEVELS: Level[] = [
     category: 'beverages',
     dietaryCategory: 'veggie',
     levelNum: 463,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -22816,6 +23304,7 @@ export const LEVELS: Level[] = [
     category: 'beverages',
     dietaryCategory: 'veggie',
     levelNum: 464,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -22856,6 +23345,7 @@ export const LEVELS: Level[] = [
     category: 'beverages',
     dietaryCategory: 'vegan',
     levelNum: 465,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -22897,6 +23387,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'veggie',
     levelNum: 466,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -22937,6 +23428,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 467,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -22975,6 +23467,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 468,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -23014,6 +23507,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 469,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -23053,6 +23547,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 470,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -23094,6 +23589,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 471,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -23135,6 +23631,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 472,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -23173,6 +23670,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 473,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -23213,6 +23711,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 474,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -23250,6 +23749,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 475,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -23295,6 +23795,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 476,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -23334,6 +23835,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 477,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -23375,6 +23877,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 478,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -23416,6 +23919,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 479,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -23455,6 +23959,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 480,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -23495,6 +24000,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 481,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -23534,6 +24040,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 482,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -23574,6 +24081,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 483,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -23614,6 +24122,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 484,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -23654,6 +24163,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 485,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -23695,6 +24205,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 486,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -23735,6 +24246,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 487,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -23773,6 +24285,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 488,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -23811,6 +24324,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 489,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -23850,6 +24364,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 490,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -23891,6 +24406,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 491,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -23932,6 +24448,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 492,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -23969,6 +24486,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 493,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -24011,6 +24529,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 494,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -24053,6 +24572,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 495,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -24094,6 +24614,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 496,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -24131,6 +24652,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 497,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -24171,6 +24693,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 498,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -24212,6 +24735,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 499,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -24250,6 +24774,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 500,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -24288,6 +24813,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 501,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -24326,6 +24852,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 502,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -24366,6 +24893,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'veggie',
     levelNum: 503,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -24406,6 +24934,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 504,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -24443,6 +24972,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 505,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -24480,6 +25010,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 506,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -24518,6 +25049,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'veggie',
     levelNum: 507,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -24555,6 +25087,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 508,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -24592,6 +25125,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 509,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -24630,6 +25164,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 510,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -24667,6 +25202,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 511,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -24705,6 +25241,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 512,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -24749,6 +25286,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 513,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -24789,6 +25327,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'veggie',
     levelNum: 514,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -24828,6 +25367,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 515,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -24867,6 +25407,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 516,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -24906,6 +25447,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 517,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -24942,6 +25484,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 518,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -24978,6 +25521,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 519,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -25016,6 +25560,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 520,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -25055,6 +25600,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 521,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -25098,6 +25644,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 522,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -25138,6 +25685,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 523,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -25175,6 +25723,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 524,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -25213,6 +25762,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 525,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -25251,6 +25801,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 526,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -25289,6 +25840,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 527,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -25327,6 +25879,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'pesca',
     levelNum: 528,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -25367,6 +25920,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 529,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -25403,6 +25957,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 530,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -25440,6 +25995,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 531,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -25481,6 +26037,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 532,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -25521,6 +26078,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 533,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -25559,6 +26117,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 534,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -25596,6 +26155,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'veggie',
     levelNum: 535,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -25634,6 +26194,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 536,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -25675,6 +26236,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 537,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -25713,6 +26275,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 538,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -25750,6 +26313,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'veggie',
     levelNum: 539,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -25790,6 +26354,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 540,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -25830,6 +26395,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 541,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -25872,6 +26438,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 542,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -25908,6 +26475,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 543,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -25946,6 +26514,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 544,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -25984,6 +26553,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 545,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -26021,6 +26591,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 546,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -26061,6 +26632,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 547,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -26098,6 +26670,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 548,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -26136,6 +26709,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 549,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -26174,6 +26748,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'veggie',
     levelNum: 550,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -26213,6 +26788,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 551,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -26252,6 +26828,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 552,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -26293,6 +26870,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'veggie',
     levelNum: 553,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -26330,6 +26908,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 554,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -26368,6 +26947,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'veggie',
     levelNum: 555,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -26412,6 +26992,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 556,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -26451,6 +27032,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 557,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -26490,6 +27072,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 558,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -26531,6 +27114,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 559,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -26571,6 +27155,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 560,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -26606,6 +27191,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 561,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -26644,6 +27230,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 562,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -26684,6 +27271,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 563,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -26724,6 +27312,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 564,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -26763,6 +27352,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 565,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -26799,6 +27389,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 566,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -26837,6 +27428,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 567,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -26875,6 +27467,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 568,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -26914,6 +27507,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 569,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -26953,6 +27547,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 570,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -26992,6 +27587,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 571,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -27037,6 +27633,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 572,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -27077,6 +27674,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 573,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -27118,6 +27716,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'veggie',
     levelNum: 574,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -27156,6 +27755,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'veggie',
     levelNum: 575,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -27198,6 +27798,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 576,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -27236,6 +27837,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 577,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -27272,6 +27874,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 578,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -27311,6 +27914,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 579,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -27351,6 +27955,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 580,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -27390,6 +27995,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 581,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -27427,6 +28033,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 582,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -27465,6 +28072,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 583,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -27502,6 +28110,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 584,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -27541,6 +28150,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 585,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -27584,6 +28194,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 586,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -27622,6 +28233,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 587,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -27661,6 +28273,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'veggie',
     levelNum: 588,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -27701,6 +28314,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 589,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -27738,6 +28352,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 590,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -27778,6 +28393,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 591,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -27815,6 +28431,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'veggie',
     levelNum: 592,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -27854,6 +28471,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'veggie',
     levelNum: 593,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },
@@ -27891,6 +28509,7 @@ export const LEVELS: Level[] = [
     category: 'cocktails',
     dietaryCategory: 'vegan',
     levelNum: 594,
+
     recipe: ['bread'],
     tools: [
       { type: 'wall', count: 6, emoji: '🧱' },

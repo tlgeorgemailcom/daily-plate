@@ -11,6 +11,15 @@ export interface BuiltinOverride {
   cookingMethod?: string;
   cookMinutes?: number;
   cookTempF?: number;
+  cook2Method?: string;
+  cook2Minutes?: number;
+  cook2TempF?: number;
+  cook2FillClass?: string;
+  cook3Method?: string;
+  cook3Minutes?: number;
+  cook3TempF?: number;
+  cook3FillClass?: string;
+  fillClass?: string;
   dishFamily?: string;
   prepTime?: string;
   servings?: string;
@@ -213,6 +222,15 @@ export async function getLevelsWithOverrides(): Promise<Level[]> {
       cookingMethod: Object.hasOwn(override, 'cookingMethod') ? override.cookingMethod : level.cookingMethod,
       cookMinutes:   Object.hasOwn(override, 'cookMinutes')   ? override.cookMinutes   : (level as Level & { cookMinutes?: number }).cookMinutes,
       cookTempF:     Object.hasOwn(override, 'cookTempF')     ? override.cookTempF     : (level as Level & { cookTempF?: number }).cookTempF,
+      fillClass:     Object.hasOwn(override, 'fillClass')     ? override.fillClass     : level.fillClass,
+      cook2Method:   Object.hasOwn(override, 'cook2Method')   ? override.cook2Method   : level.cook2Method,
+      cook2Minutes:  Object.hasOwn(override, 'cook2Minutes')  ? override.cook2Minutes  : level.cook2Minutes,
+      cook2TempF:    Object.hasOwn(override, 'cook2TempF')    ? override.cook2TempF    : level.cook2TempF,
+      cook2FillClass: Object.hasOwn(override, 'cook2FillClass') ? override.cook2FillClass : level.cook2FillClass,
+      cook3Method:   Object.hasOwn(override, 'cook3Method')   ? override.cook3Method   : level.cook3Method,
+      cook3Minutes:  Object.hasOwn(override, 'cook3Minutes')  ? override.cook3Minutes  : level.cook3Minutes,
+      cook3TempF:    Object.hasOwn(override, 'cook3TempF')    ? override.cook3TempF    : level.cook3TempF,
+      cook3FillClass: Object.hasOwn(override, 'cook3FillClass') ? override.cook3FillClass : level.cook3FillClass,
       dishFamily: override.dishFamily ?? level.dishFamily,
       prepTime: override.prepTime ?? level.prepTime,
       servings: override.servings ?? level.servings,

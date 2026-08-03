@@ -624,6 +624,20 @@ for recipe in recipes:
     servings_text = recipe.get('servings_label', '')
     sr_rule = recipe.get('sr_rule', '').strip()
 
+    def optional_number(field):
+        value = recipe.get(field, '')
+        try:
+            return float(value) if value not in (None, '') else None
+        except ValueError:
+            return None
+
+    cook_fields = {
+        'cook2Method': (recipe.get('cook2_method') or '').strip(),
+        'cook2Minutes': optional_number('cook2_minutes'),
+        'cook2TempF': optional_number('cook2_temp_f'),
+        'cook2FillClass': (recipe.get('cook2_fill_class') or '').strip(),
+    }
+
     v3_payload = v3_nutrition_overrides.get(rid)
     if v3_payload is None:
         # Phase 8a hard requirement: every authored recipe must have a v3 build.
@@ -658,6 +672,16 @@ for recipe in recipes:
         f"\n    sections: {ts_sections(sections_meta)},"
         if sections_meta else ''
     )
+    cook_field_lines = []
+    if cook_fields['cook2Method']:
+        cook_field_lines.append(f"    cook2Method: '{esc(cook_fields['cook2Method'])}',")
+    if cook_fields['cook2Minutes'] is not None:
+        cook_field_lines.append(f"    cook2Minutes: {cook_fields['cook2Minutes']},")
+    if cook_fields['cook2TempF'] is not None:
+        cook_field_lines.append(f"    cook2TempF: {cook_fields['cook2TempF']},")
+    if cook_fields['cook2FillClass']:
+        cook_field_lines.append(f"    cook2FillClass: '{esc(cook_fields['cook2FillClass'])}',")
+    cook_fields_block = '\n'.join(cook_field_lines)
 
     block = f"""  {{
     id: '{esc(rid)}',
@@ -665,6 +689,7 @@ for recipe in recipes:
     category: '{esc(recipe.get('category',''))}',
     dietaryCategory: '{esc(recipe.get('dietary_category','all'))}',
     levelNum: {level_num},
+{cook_fields_block}
     recipe: {ts_string_array(foods)},
     tools: {ts_tools(tools)},
     animalSpawns: {ts_animal_spawns(animal_spawns)},

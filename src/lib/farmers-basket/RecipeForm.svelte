@@ -144,7 +144,9 @@
     //   raw assembly (bm=0, no stages) → undefined
     const bmRaw = s.boil_minutes ?? s.boilMinutes ?? 0;
     const bm = typeof bmRaw === 'number' ? bmRaw : 0;
-    const boilMinutes: number | undefined = bm || firstStage?.minutes;
+    const boilMinutes: number | undefined = prepMethod === 'parboiled_long_grain_rice'
+      ? undefined
+      : (bm || firstStage?.minutes);
 
     // ── prepTempF: only meaningful when the pre-step is itself a bake ──────────
     const prepTempF = (prepV === 'baked' || prepV === 'par-baked')
@@ -325,7 +327,7 @@
   const GAME_FOODS = Object.keys(FOOD_EMOJI) as FoodType[];
   const ANIMAL_TYPES: AnimalType[] = ['rabbit', 'squirrel', 'raccoon', 'bird', 'mouse', 'fox'];
   
-  const COOKING_METHODS = ['Bake', 'Bake (covered)', 'Boil', 'Boil (covered)', 'Scalded', 'Simmer', 'Sub-simmer', 'Braise', 'Steam', 'Microwave', 'Sauté', 'Stir-fry', 'Pan sear', 'Grill', 'Broil', 'Fry', 'Deep-fry', 'No heat'];
+  const COOKING_METHODS = ['Bake', 'Bake (covered)', 'Parboil', 'Boil', 'Boil (covered)', 'Scalded', 'Simmer', 'Sub-simmer', 'Braise', 'Steam', 'Microwave', 'Sauté', 'Stir-fry', 'Pan sear', 'Grill', 'Broil', 'Fry', 'Deep-fry', 'No heat'];
   const COOK_METHOD_DISPLAY: Record<string, string> = {
     'Boil':           'Boil (uncovered)',
     'Boil (covered)': 'Boil (covered)',
@@ -336,7 +338,7 @@
   };
   // v3.md §18.1 — lowercase enum stored in recipe_sections.csv::cooking_method.
   const SECTION_COOKING_METHODS = ['raw', 'boiled', 'boiled covered', 'scalded', 'steamed', 'baked', 'baked covered', 'fried', 'deep-fried', 'sauteed', 'stir-fried', 'pan seared', 'grilled', 'broiled', 'microwave'];
-  const SECTION_PREP_METHODS    = ['boiled', 'boiled covered', 'scalded', 'simmer', 'sub-simmer', 'braise', 'steamed', 'blanched', 'baked', 'baked covered', 'par-baked', 'fried', 'deep-fried', 'sauteed', 'stir-fried', 'pan seared', 'grilled', 'broiled', 'microwave', 'finish'];
+  const SECTION_PREP_METHODS    = ['parboiled_long_grain_rice', 'parboiled', 'boiled', 'boiled covered', 'scalded', 'simmer', 'sub-simmer', 'braise', 'steamed', 'blanched', 'baked', 'baked covered', 'par-baked', 'fried', 'deep-fried', 'sauteed', 'stir-fried', 'pan seared', 'grilled', 'broiled', 'microwave', 'finish'];
 
   // Fill class keys are persisted pipeline identifiers. Keep them stable, but
   // show human labels because this control may eventually be exposed to users.
@@ -370,6 +372,7 @@
     fried_breaded_shrimp: 'breaded fried shrimp',
     fried_breaded_chicken_tender: 'breaded fried chicken tender',
     fried_breaded_fish_fillet: 'breaded fried fish fillet',
+    parboiled_long_grain_rice: 'parboiled long-grain rice',
     fried_battered_vegetable: 'battered fried vegetable pieces',
     braised_leafy_vegetable: 'braised leafy greens',
     glazed_vegetable: 'glazed vegetables',
@@ -416,6 +419,8 @@
   // Display labels for prep methods — stored values are clean identifiers;
   // UI annotations clarify open-pot vs covered assumption for the water model.
   const PREP_METHOD_DISPLAY: Record<string, string> = {
+    'parboiled_long_grain_rice': 'parboiled, drained, then braised (covered)',
+    'parboiled':      'parboiled (uncovered)',
     'boiled':         'boiled (uncovered)',
     'boiled covered': 'boiled (covered)',
     'simmer':         'simmer (uncovered)',
@@ -443,6 +448,10 @@
       'bake covered':    'Bake (covered)',
       'bake_covered':    'Bake (covered)',
       'boiled':          'Boil',
+      'parboil':         'Parboil',
+      'parboiled':       'Parboil',
+      'par-boil':        'Parboil',
+      'par-boiled':      'Parboil',
       'boil covered':    'Boil (covered)',
       'boil_covered':    'Boil (covered)',
       'boil (covered)':  'Boil (covered)',
@@ -3036,6 +3045,9 @@
             aria-label="Remove section"
           >✕</button>
         </div>
+        {#if sec.prepMethod === 'parboiled_long_grain_rice'}
+          <p class="parboiled-rice-info-note">Parboiled to 70% cooked absorbs 1.05 cups of water per cup of long-grain rice</p>
+        {/if}
         {#if sec.prepMethod === 'finish'}
           <p class="finish-info-note">ℹ️ Stirred in or added after the primary cook is complete — e.g. cheese, cream, finishing butter, whipped cream. No heat is applied; nutrition is calculated from the raw ingredient weight.</p>
         {/if}
@@ -3408,7 +3420,7 @@
         <div class="primary-cook-bar primary-cook-bar-staged">
           <button type="button" class="stage-additional-link" onclick={() => addAdditionalIngredients(2)}>Add additional ingredients2</button>
           <label class="primary-cook-label">
-            <span class="primary-cook-name">Cook2 *</span>
+            <span class="primary-cook-name">Cook2 (includes all previously cooked ingredients) *</span>
             <select bind:value={cook2Method} class="form-select primary-cook-select">
               <option value="">— select —</option>
               {#each COOKING_METHODS as m}
@@ -3458,7 +3470,7 @@
           <div class="primary-cook-bar primary-cook-bar-staged">
             <button type="button" class="stage-additional-link" onclick={() => addAdditionalIngredients(3)}>Add additional ingredients3</button>
             <label class="primary-cook-label">
-              <span class="primary-cook-name">Cook3 *</span>
+                <span class="primary-cook-name">Cook3 (includes all previously cooked ingredients) *</span>
               <select bind:value={cook3Method} class="form-select primary-cook-select">
                 <option value="">— select —</option>
                 {#each COOKING_METHODS as m}
@@ -3522,6 +3534,7 @@
               <li><strong>Bake</strong> — oven. Enter Bake (min) and Temp (°F).</li>
               <li><strong>Boil (lid off)</strong> — rolling boil, 212 °F, uncovered. Pasta, blanching.</li>
               <li><strong>Boil (covered)</strong> — rolling boil, 212 °F, lid on. Steam recondenses on the lid and drips back; only ~5 % of open-pot evaporation escapes. Rice, covered grains.</li>
+              <li><strong>Parboil</strong> — rolling boil, 212 °F, uncovered, for a partial cook before draining or finishing in another dish. Use for rice that reaches only part of its final hydration before a second cook.</li>
               <li><strong>Simmer (lid off)</strong> — 195 °F, uncovered. Sauce reductions, soups. <em>Lid on? Choose Braise instead.</em></li>
               <li><strong>Sub-simmer (lid off)</strong> — 180 °F, uncovered. Concentrating stock. <em>Lid on? Choose Braise instead.</em></li>
               <li><strong>Braise (covered)</strong> — 185 °F, lid on. Steam recondenses on the lid and drips back; only ~5 % of open-pot evaporation escapes. Use for any covered braise, pot roast, or Dutch-oven method.</li>
@@ -3537,6 +3550,7 @@
               <li><strong>no heat</strong> — ingredients go in as-is (cold, raw, or already cooked). This is correct for most sections.</li>
               <li><strong>Added after cooking</strong> — ingredient is stirred in or added after the primary cook is complete, off-heat (e.g. shredded cheese into a soup, whipped cream on a cooled pie, finishing butter). No evaporation is modelled; nutrition uses the raw weight as-is.</li>
               <li><strong>boiled (lid off)</strong> — rolling boil, 212 °F, uncovered. Blanching, par-boiling.</li>
+              <li><strong>parboiled (lid off)</strong> — rolling boil, 212 °F, uncovered. Use when the ingredient is only partially cooked before it is drained or joined to a later cook.</li>
               <li><strong>boiled (covered)</strong> — rolling boil, 212 °F, <em>lid on</em>. Model uses only 5 % of open-pot evaporation. Use for covered rice, covered grains, or other covered boiling prep steps.</li>
               <li><strong>simmer (lid off)</strong> — 195 °F, uncovered. Sauce reductions, hollandaise bases.</li>
               <li><strong>sub-simmer (lid off)</strong> — 180 °F, uncovered. Concentrating stock, uncovered slow stews.</li>
@@ -4370,6 +4384,15 @@
     color: #555;
     background: #fffbea;
     border-left: 3px solid #d69e2e;
+    padding: 5px 10px;
+    border-radius: 0 4px 4px 0;
+    margin: 4px 0 0 0;
+  }
+  .parboiled-rice-info-note {
+    font-size: 0.78rem;
+    color: #2c5282;
+    background: #ebf8ff;
+    border-left: 3px solid #4299e1;
     padding: 5px 10px;
     border-radius: 0 4px 4px 0;
     margin: 4px 0 0 0;

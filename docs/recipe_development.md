@@ -1,3 +1,4 @@
+| Regular white long-grain rice parboiled before a covered braise, then drained | `parboiled_long_grain_rice` — supplies 1.05 cups parboil water per cup rice internally and uses the binding-based partial absorber endpoint. Do not add a water row. Do not reuse for fully boiled rice or other grains. |
 # Recipe Development — Source of Truth
 
 > This file is the authoritative step-by-step guide for building dev recipes in `recipes_v3/`.
@@ -232,6 +233,7 @@ Without a `fill_class`, `calc_yield_water` returns `yfw=1.0` for all stovetop se
 | Section contents | `fill_class` |
 |---|---|
 | Absorber-driven oatmeal / cooked oats | Recipe-level primary `fill_class=none`; keep section `fill_class` blank — absorption model computes `yfw` |
+| Regular white long-grain rice parboiled before a covered braise, then drained | `parboiled_long_grain_rice` — supplies parboil water internally at 1.05 cups per cup of rice and uses the binding-based partial absorber endpoint. Do not add a water row or suggest a parboil time; use the 70% doneness endpoint. Do not reuse for fully boiled rice or other grains. |
 | Cheese omelette / Denver omelette / Frittata Herbs and Cheese | Recipe-level primary `fill_class=none`; keep section `fill_class` blank — calibrated `yfw=1.00`, not `fried_meat` |
 | Poached egg from raw whole egg | `poached_egg` — fixed `yfw=0.983687` from NDB 1123 raw whole egg → NDB 1131 poached egg; simmer time is display/doneness guidance only |
 | Fried egg from raw whole egg | `fried_egg` — fixed `yfw=0.841897` from NDB 1123 raw whole egg → NDB 1128 fried egg by protein conservation; fry time is display/doneness guidance only |
@@ -245,6 +247,7 @@ Without a `fill_class`, `calc_yield_water` returns `yfw=1.0` for all stovetop se
 | Chicken breast, fish fillet (pan seared) | `pan_grilled_chicken` |
 | Thin steak (pan seared, skirt/flank-style) | `pan_grilled_steak` |
 | Thick steak (pan seared) | Calibrate a distinct steak-specific fill class before use |
+| Lamb shoulder or cubed lamb (braised) | Calibrate a distinct lamb-specific braise fill class before use; do not reuse `braised_beef` without validation |
 | Breaded fried shrimp (flour, cornmeal, cracker crumb, panko, or other dry coating) | `fried_breaded_shrimp` |
 | Breaded fried chicken breast tender/strip (flour, cornmeal, cracker crumb, panko, or other dry coating) | `fried_breaded_chicken_tender` |
 | Breaded fried fish fillet (flour, cornmeal, cracker crumb, panko, or other dry coating) | `fried_breaded_fish_fillet` |
@@ -271,11 +274,11 @@ Every new fill class must be added to all computation and UI surfaces in the sam
    - Use a fixed `yfw` only when a USDA raw/cooked pair defines a cooked endpoint and elapsed time should not change the result, such as `poached_egg`.
 
 2. **Update the Python dev pipeline.**
-   - Binding class: add the key and calibrated coefficient to `recipes_v3/lib/yield_calc.py::BINDING` with the calibration note.
+   - Binding class: add the key and calibrated coefficient to `recipes_v3/lib/yield_calc.py::BINDING` with the calibration note. For a partial absorber class such as `parboiled_long_grain_rice`, the absorber branch in `build.py` must explicitly use the class coefficient instead of the ingredient's full-cook `bin` factor.
    - Fixed-yield class: add the key and value to `recipes_v3/lib/yield_calc.py::FIXED_YIELD_WATER` with the raw/cooked NDB pair note.
 
 3. **Update the TypeScript community pipeline in the same commit.**
-   - Binding class: add the same key and coefficient to `src/lib/nutrition/yieldCalc.ts::BINDING`.
+   - Binding class: add the same key and coefficient to `src/lib/nutrition/yieldCalc.ts::BINDING`, and make the community absorber branch honor that override as Python does.
    - Fixed-yield class: add the same key and value to `src/lib/nutrition/yieldCalc.ts::FIXED_YIELD_WATER`.
    - Do not add a class to only one side. Dev recipes and community recipes must compute the same nutrition.
 
@@ -745,6 +748,29 @@ If the preview shows any `⚠️ POSSIBLE DOUBLING` warning, fix `qty_display` o
 
 ## Step 7 — Build, Validate, Insert, Upload
 
+### comboo.db path for local builds
+
+The v3 pipeline reads USDA nutrient data from `comboo.db`. The default path in
+`recipes_v3/config.py` points to the shared JetFoodData checkout, which may not
+be available in every workspace. For builds in this repository, set the
+supported environment override to the workspace copy before running the build:
+
+```bash
+export RECIPES_V3_COMBOO_DB="$PWD/docs/comboo.db"
+```
+
+Run that export from the repository root once per terminal session. It applies
+to all subsequent `build_all.py` commands in that session. For a one-off build,
+prefix the command instead:
+
+```bash
+RECIPES_V3_COMBOO_DB="$PWD/docs/comboo.db" \
+   python3 recipes_v3/tools/build_all.py --recipe RECIPE_ID
+```
+
+Always keep `--recipe RECIPE_ID` (repeat it for multiple IDs); a bare
+`build_all.py` rebuilds the entire catalog and dirties unrelated build output.
+
 Run in this exact order:
 
 ```bash
@@ -992,7 +1018,7 @@ Reclassifying to `sauteed` also changes evaporation temp (200°F vs 230°F), so 
 Current top-bar authoring supports one primary assembled cook. Some recipes need an ordered visible cook timeline instead of a single top-bar method because the later phase is still part of the primary cook, not a finish or section-only prep.
 
 Examples to use as validation cases when designing this:
-- `ENTR_075` Lamb Tagine: covered braise 30 min, then add chickpeas and dried apricots and continue covered braise 20-30 min. Do not convert this recipe yet; it is a parked architecture case.
+- `ENTR_075` Lamb Tagine: covered braise 30 min, then add chickpeas and dried apricots and continue covered braise 20-30 min. It now uses the staged primary-cook model; `braised_beef` remains a provisional substitute until lamb braise physics is calibrated against a lamb reference.
 - `ENTR_076` Lamb Moussaka: staged bake where an assembled covered phase and later uncovered/browning phase both belong to the primary cook timeline.
 - `ENTR_081` Lamb Biryani: staged covered rice/lamb cook where primary cook phases and section participation need explicit timeline support.
 - Beef Lasagna: best concrete UI/spec test case. Bake covered, then bake uncovered. The covered/uncovered distinction changes evaporation and must be visible to community users.
@@ -1030,6 +1056,8 @@ Prep: Tomatoes | simmer (uncovered) | 2 min | ingredients: crushed tomatoes
 ```
 
 In the edit form, the `Additional Ingredients 2` prep stage belongs inside the `Assembled / Primary 2` timeline card as `Add prep before this stage`. Those ingredients are excluded from Primary 1 and included in Primary 2.
+
+`ENTR_075` currently uses `braised_beef` as a provisional substitute for the missing calibrated lamb braise fill class. This is a known modeling limitation, not validated lamb physics; replace it after calibrating against lamb shoulder or cubed lamb before treating the result as lamb-specific.
 
 Permanent naming rule for stage-entry additions: use numbered section labels tied to the primary cook stage they feed. Ingredients present before Primary 1 use `Prep: Additional Ingredients 1`; ingredients added after Primary 1 and before Primary 2 use `Prep: Additional Ingredients 2`; ingredients added after Primary 2 and before Primary 3 use `Prep: Additional Ingredients 3`. These ingredients still live in the same ingredient list as all other prep ingredients; the stable numbered section name plus the section's primary-entry metadata removes ambiguity in generated JSON and Turso section data.
 

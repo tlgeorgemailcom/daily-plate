@@ -94,6 +94,8 @@ _COOK_METHOD_MAP = {
     "baked covered":  "Bake (covered)",
     "bake covered":   "Bake (covered)",
     "boiled":         "Boil",
+    "parboil":        "Parboil",
+    "parboiled":      "Parboil",
     "boiled covered": "Boil (covered)",
     "scalded":        "Scalded",
     "simmer":         "Simmer",

@@ -56,6 +56,8 @@ export const BINDING: Record<string, number> = {
   pastry:            0.782,  // blind-baked pie crust
   crumb_crust:       0.432,  // baked cookie/cracker crumb crust
   none:              0.00,   // stovetop cold-set or no-bake — no evaporation
+  parboiled_long_grain_rice: 0.563,  // long-grain rice parboiled and drained before final braise (ENTR_081)
+                                     // calibrated to 400 g rice with 1¾ cups cooking water retained
   // ── Stovetop / fried / grilled fill classes ─────────────────────────────
   // Calibrated from locked BKFST values using stovetop evaporation model.
   simmer_sauce:       0.127, // simmered gravy/sauce (195°F×5min → yfw=0.92)

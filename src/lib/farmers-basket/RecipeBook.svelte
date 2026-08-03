@@ -326,6 +326,7 @@
     '':           'unheated',
     'none':       'unheated',
     'finish':     'Added after cooking',
+    'parboiled_long_grain_rice': 'parboiled long-grain rice',
     'boiled':     'boiled (uncovered)',
     'boil covered':   'boiled (covered)',
     'boil_covered':   'boiled (covered)',
@@ -352,7 +353,9 @@
     const displayMeta = routedSectionKey
       ? sectionsMeta?.find((s) => (s.key ?? s.section_key) === routedSectionKey) || meta
       : meta;
-    const label = meta?.label || (sectionKey.charAt(0).toUpperCase() + sectionKey.slice(1));
+    const label = sectionKey === 'additional_ingredients_2'
+      ? 'Cook2 additional ingredients'
+      : meta?.label || (sectionKey.charAt(0).toUpperCase() + sectionKey.slice(1));
     const discardedSuffix = formatDiscardedSectionSuffix(sectionItems);
     // prepMethod reflects what the cook does at this step; cookingMethod is physics only.
     const rawMethod = displayMeta?.prepMethod ?? '';
@@ -360,8 +363,38 @@
       ? SECTION_METHOD_LABEL[rawMethod]
       : rawMethod || null;
     // Only show prep time when there is an active cook method — never for unheated or finish sections.
-    const timeStr = (display && display !== 'unheated' && display !== 'Added after cooking' && displayMeta?.boilMinutes && displayMeta.boilMinutes > 0) ? ` | ${displayMeta.boilMinutes} min` : '';
-    return display ? `${label} — ${display}${timeStr}${discardedSuffix}` : `${label}${discardedSuffix}:`;
+    const timeStr = (display && display !== 'unheated' && display !== 'Added after cooking'
+      && displayMeta?.prepMethod !== 'parboiled_long_grain_rice'
+      && displayMeta?.boilMinutes && displayMeta.boilMinutes > 0)
+      ? ` | ${displayMeta.boilMinutes} min`
+      : '';
+    const prepTempF = displayMeta?.prepTempF
+      ?? (displayMeta?.prepMethod === 'baked' || displayMeta?.prepMethod === 'par-baked'
+        ? displayMeta?.stages?.[0]?.tempF
+        : undefined);
+    const tempStr = (display && display !== 'unheated' && display !== 'Added after cooking' && prepTempF && prepTempF > 0)
+      ? ` | ${prepTempF}°F`
+      : '';
+    return display ? `${label} — ${display}${timeStr}${tempStr}${discardedSuffix}` : `${label}${discardedSuffix}:`;
+  }
+
+  function isFirstCook2Entry(level: Level, sectionKey: string | undefined, groupIndex: number): boolean {
+    if (!sectionKey) return false;
+    const groups = groupRecipeIngredients(level);
+    const firstCook2Index = groups.findIndex((group) => {
+      if (!group.section) return false;
+      const meta = level.sections?.find((section) => (section.key ?? section.section_key) === group.section);
+      return meta?.primaryEntryStage === '2';
+    });
+    return firstCook2Index === groupIndex;
+  }
+
+  function hasCook2Entry(level: Level): boolean {
+    return groupRecipeIngredients(level).some((group) => {
+      if (!group.section) return false;
+      const meta = level.sections?.find((section) => (section.key ?? section.section_key) === group.section);
+      return meta?.primaryEntryStage === '2';
+    });
   }
 
   function formatIngredientLine(ingredient: { name: string; quantity?: string }) {
@@ -888,6 +921,9 @@
       category: level.category,
       dietaryCategory: level.dietaryCategory,
       cookingMethod: level.cookingMethod || derivedCookMethod || '',
+      ...(level.cook2Method ? { cook2Method: level.cook2Method } : {}),
+      ...(level.cook2Minutes != null ? { cook2Minutes: level.cook2Minutes } : {}),
+      ...(level.cook2TempF != null ? { cook2TempF: level.cook2TempF } : {}),
       dishFamily: level.dishFamily || '',
       prepTime: level.prepTime || '',
       servings: level.servings || '',
@@ -1772,6 +1808,10 @@
       'bake_covered':  'Bake (covered)',
       'baked covered': 'Bake (covered)',
       'boiled':        'Boil (uncovered)',
+      'parboil':       'Parboil',
+      'parboiled':     'Parboil',
+      'par-boil':      'Parboil',
+      'par-boiled':    'Parboil',
       'boiled covered': 'Boil (covered)',
       'scalded':       'Scalded',
       'simmer':      'Simmer (uncovered)',
@@ -2289,7 +2329,7 @@
                 {@const _cookTempF = selectedLevel.cookTempF ?? 0}
                 <div class="full-ingredients">
                   <div class="assembled-cook-line">
-                    <span class="assembled-cook-label">🍳 Final assembled cook:</span>
+                    <span class="assembled-cook-label">🍳 Assembled Cook1:</span>
                     {#if _cookMethod && _cookMethod !== 'raw' && _cookMethod !== 'multi'}
                       <span class="assembled-cook-value">
                         {normalizeCookingMethod(_cookMethod)}{_cookMins > 0 ? ` | ${_cookMins} min` : ''}{_cookTempF > 0 && _cookTempF !== 195 && _cookTempF !== 212 && _cookTempF !== 180 ? ` | ${_cookTempF}°F` : ''}
@@ -2298,12 +2338,21 @@
                       <span class="assembled-cook-none">None</span>
                     {/if}
                   </div>
-                  <span class="ingredients-label">📝 Full Ingredient List:</span>
-                  {#each groupRecipeIngredients(selectedLevel) as group}
+                  <span class="ingredients-label">📝 Cook1 Ingredient List:</span>
+                  {#each groupRecipeIngredients(selectedLevel) as group, groupIndex}
                     {#if group.section}
+                      {@const sectionMeta = selectedLevel.sections?.find(s => (s.key ?? s.section_key) === group.section)}
+                      {@const isCook2Entry = sectionMeta?.primaryEntryStage === '2'}
+                      {#if selectedLevel.cook2Method && ((!hasCook2Entry(selectedLevel) && groupIndex === groupRecipeIngredients(selectedLevel).length - 1) || (isCook2Entry && isFirstCook2Entry(selectedLevel, group.section, groupIndex)))}
+                        <div class="assembled-cook-line assembled-cook-line-staged">
+                          <span class="assembled-cook-label">🍳 Cook2 (includes all previously cooked ingredients):</span>
+                          <span class="assembled-cook-value">
+                            {normalizeCookingMethod(selectedLevel.cook2Method)}{selectedLevel.cook2Minutes != null ? ` | ${selectedLevel.cook2Minutes} min` : ''}{selectedLevel.cook2TempF != null && selectedLevel.cook2TempF !== 195 && selectedLevel.cook2TempF !== 212 && selectedLevel.cook2TempF !== 180 ? ` | ${selectedLevel.cook2TempF}°F` : ''}
+                          </span>
+                        </div>
+                      {/if}
                       {@const isSectionCollapsed = collapsedIngredientSections.has(group.section)}
                       {@const componentRefItem = group.items.find(i => i.isDish && i.componentRef)}
-                      {@const sectionMeta = selectedLevel.sections?.find(s => (s.key ?? s.section_key) === group.section)}
                       {@const sectionName = sectionMeta?.label ?? ((group.section ?? '').charAt(0).toUpperCase() + (group.section ?? '').slice(1))}
                       {@const qtyStripped = (componentRefItem?.quantity ?? '').replace(/\s*\([^)]*\)/g, '').trim()}
                       {@const collapsedLabel = qtyStripped && qtyStripped.toLowerCase().includes((sectionName.split(/\s+/)[0] ?? '').toLowerCase()) ? qtyStripped : (qtyStripped ? `${qtyStripped} ${sectionName}` : sectionName)}
@@ -3453,6 +3502,15 @@
     gap: 6px;
     margin-bottom: 6px;
     font-size: 0.85rem;
+  }
+  .assembled-cook-line-staged {
+    flex-wrap: wrap;
+  }
+  .assembled-cook-line-staged .assembled-cook-label {
+    flex: 1 0 100%;
+  }
+  .assembled-cook-line-staged .assembled-cook-value {
+    margin-left: 24px;
   }
   .assembled-cook-label {
     color: #888;

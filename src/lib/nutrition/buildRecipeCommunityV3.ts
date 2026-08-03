@@ -31,7 +31,10 @@ import type {
   SkippedIngredient,
 } from './types.js';
 import { inferFillingClass } from './inferFillingClass.js';
-import { calcYieldWater }    from './yieldCalc.js';
+import { BINDING, calcYieldWater } from './yieldCalc.js';
+const PARBOILED_RICE_CUP_GRAMS = 200;
+const PARBOILED_RICE_WATER_CUPS_PER_CUP = 1.05;
+const WATER_GRAMS_PER_CUP = 236.588;
 import { plausibilityCheck } from './plausibilityCheck.js';
 
 // ── Stock extraction yield factors (file-level — shared by yfw and yfp/yff/yfc/yfo paths) ──
@@ -62,6 +65,7 @@ function methodStovetopTempF(method: string | undefined | null): number {
   if (m === 'saute' || m === 'sauté' || m === 'sauteed' || m === 'sautéed') return 200;
   if (m === 'stir fry' || m === 'stir-fried' || m === 'stir fried') return 220;
   if (m === 'pan sear' || m === 'pan seared' || m === 'pan-seared' || m === 'sear' || m === 'seared') return 230;
+  if (m === 'parboiled long grain rice') return 212;
   return 212;
 }
 import {
@@ -443,9 +447,16 @@ export function buildRecipeCommunityV3(
     // Priority 1: locked value from Python pipeline (sections_json).
     // Priority 2: compute via calcYieldWater with fill class + oven stages.
     // Priority 3: 1.0 (no water loss — raw / unrecognised method).
-    const initialWaterG = active.reduce((sum, a) =>
+    let initialWaterG = active.reduce((sum, a) =>
       sum + (a.nutrients.water / 100) * a.grams, 0
     );
+    const virtualParboilWaterG = fillClass === 'parboiled_long_grain_rice'
+      ? active
+          .filter(a => a.nutrients.absorptionFactor != null)
+          .reduce((sum, a) => sum + a.grams, 0) / PARBOILED_RICE_CUP_GRAMS
+          * PARBOILED_RICE_WATER_CUPS_PER_CUP * WATER_GRAMS_PER_CUP
+      : 0;
+    initialWaterG += virtualParboilWaterG;
 
     let yieldWater: number;
 
@@ -474,7 +485,16 @@ export function buildRecipeCommunityV3(
       // For boiled sections: check absorption model first (pasta, legumes, grains).
       // Then check boiled-vegetable model (raw vegetables with boilYfw).
       // Matches the Python absorption/boil_yfw models in build.py.
-      if (effectiveCookMethod === 'boiled') {
+      if (fillClass === 'parboiled_long_grain_rice' && active.some(a => a.nutrients.absorptionFactor != null)) {
+        // Rice is parboiled before entering the covered primary braise. The
+        // custom fill class owns the partial absorber endpoint regardless of
+        // the final assembled cook method.
+        const partialFactor = BINDING[fillClass];
+        const totalRawG = active.reduce((sum, a) => sum + a.grams, 0) + virtualParboilWaterG;
+        const dryNonWaterG = totalRawG - initialWaterG;
+        const retainedWaterG = dryNonWaterG * partialFactor / (1 - partialFactor);
+        yieldWater = initialWaterG > 0 ? retainedWaterG / initialWaterG : 1.0;
+      } else if (effectiveCookMethod === 'boiled') {
         // Stock fill classes bypass the absorber/vegBoiler models — the long-simmer
         // evaporation is captured by the binding coefficient, not per-ingredient retention.
         if (STOCK_EXTRACTION[fillClass]) {
@@ -608,7 +628,8 @@ export function buildRecipeCommunityV3(
     // Each cook method has its own factor table in COOKING_RETENTION.
     // Single-pass otherwise (primary cook only).
     const sectionTotals: Record<string, number> = {};
-    let rawGrams = 0;
+    let rawGrams = virtualParboilWaterG;
+    sectionTotals.water = virtualParboilWaterG;
 
     for (const { grams, nutrients } of active) {
       rawGrams += grams;

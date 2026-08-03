@@ -39,6 +39,10 @@ Phase 8c — composite "recipe-within-recipe" support:
 """
 from __future__ import annotations
 
+PARBOILED_RICE_CUP_GRAMS = 200.0
+PARBOILED_RICE_WATER_CUPS_PER_CUP = 1.05
+WATER_GRAMS_PER_CUP = 236.588
+
 import json
 from typing import Any
 
@@ -55,7 +59,7 @@ from .load import (
     load_comboo_nutrients,
 )
 from .retention import get_retention, normalize_cooking_method
-from .yield_calc import calc_yield_water
+from .yield_calc import BINDING, calc_yield_water
 from .yield_model import cooked_total_grams
 
 
@@ -75,6 +79,8 @@ def _method_stovetop_temp(method: str | None, *, bake_covered_temp: float | None
         return 220.0
     if m in ("pan sear", "pan seared", "pan-seared", "sear", "seared"):
         return 230.0
+    if m == "parboiled long grain rice":
+        return 212.0
     if m in ("bake covered", "baked covered") and bake_covered_temp is not None:
         return bake_covered_temp
     return 212.0
@@ -760,6 +766,25 @@ def _build_recipe_multi(
             yfw = calc_yield_water(_stages_for_yield, st["raw_water"], _filling_class_for_yield,
                                    boil_minutes=boil_min, boil_temp_f=_boil_temp,
                                    boil_covered=_is_boil_covered)
+        elif (_filling_class_for_yield == 'parboiled_long_grain_rice'
+              and st["absorbers"]):
+            # Long-grain rice is parboiled in excess water, drained, then
+            # finishes absorbing during the covered braise. Use the calibrated
+            # partial-cook endpoint instead of the full-cook bin factor. The
+            # parboil water is supplied by this method, not by an ingredient row.
+            absorber_grams = sum(g for g, _ in st["absorbers"])
+            parboil_water_g = (
+                absorber_grams / PARBOILED_RICE_CUP_GRAMS
+                * PARBOILED_RICE_WATER_CUPS_PER_CUP
+                * WATER_GRAMS_PER_CUP
+            )
+            st["raw_total"] += parboil_water_g
+            st["raw_water"] += parboil_water_g
+            st["sums"]["Water"] += parboil_water_g
+            partial_factor = BINDING[_filling_class_for_yield]
+            dry_non_water_g = st["raw_total"] - st["raw_water"]
+            retained_water_g = dry_non_water_g * partial_factor / (1.0 - partial_factor)
+            yfw = retained_water_g / st["raw_water"] if st["raw_water"] > 0 else 1.0
         elif effective_method == 'boiled' and st["absorbers"]:
             total_absorber_g = sum(g for g, _ in st["absorbers"])
             weighted_factor  = sum(g * f for g, f in st["absorbers"]) / total_absorber_g
