@@ -3,6 +3,7 @@ import type { RequestHandler } from './$types';
 import { execute, queryAll, queryOne } from '$lib/server/turso';
 import { buildRecipeCommunityV3, type CommunitySectionV3, type PrimaryCookStage } from '$lib/nutrition/buildRecipeCommunityV3';
 import type { CommunityIngredient } from '$lib/nutrition/types';
+import { normalizeIngredientRemoval, validateRawAllocationIngredients, validateRawAllocationSections, type AllocationValidationIssue } from '$lib/nutrition/allocation';
 import { fetchNutrientsByNdb } from '$lib/server/nutrition/fetchNutrients';
 
 // ── Community nutrition builder ────────────────────────────────────────────────
@@ -23,28 +24,37 @@ async function calcCommunityNutrition(
   cook3Minutes?: unknown,
   cook3TempF?: unknown,
   cook3FillClass?: unknown,
-): Promise<{ nutritionJson: object | null; plausibilityFlags: string[]; blocked: boolean; missingIngredients: Array<{ ndbNo: string; displayName?: string }> }> {
+): Promise<{ nutritionJson: object | null; plausibilityFlags: string[]; blocked: boolean; missingIngredients: Array<{ ndbNo: string; displayName?: string }>; allocationIssues: AllocationValidationIssue[] }> {
   const sections = (sectionsRaw as unknown[]).filter(
     (s): s is CommunitySectionV3 =>
       !!s && typeof s === 'object' && typeof (s as Record<string, unknown>).sectionKey === 'string',
   );
   const ingredients: CommunityIngredient[] = (ingredientsRaw as unknown[]).map(r => {
     const obj = r as Record<string, unknown>;
+    const removal = normalizeIngredientRemoval(obj);
     return {
       ndbNo:        String(obj.ndbNo ?? ''),
       displayName:  String(obj.name ?? obj.displayName ?? ''),
-      portionGrams: Number(obj.portionGrams ?? 0),
-      sectionKey:   typeof obj.section === 'string' ? obj.section : undefined,
+      portionGrams: Number(obj.portionGrams ?? 0) * Math.max(1, Number(obj.servingCount ?? 1)),
+      sectionKey:   typeof (obj.sectionKey ?? obj.section) === 'string' ? String(obj.sectionKey ?? obj.section) : undefined,
       isOptional:   obj.ingredientStatus === 'optional' || obj.exempt === true,
       exempt:       obj.ingredientStatus === 'exempt',
+      removedAfterPrep: removal.removedAfterPrep,
+      removalAmount: removal.removalAmount,
+      removalUnit: removal.removalUnit,
+      discarded:    obj.discarded === true,
+      discardPercent: typeof obj.discardPercent === 'number' ? obj.discardPercent : undefined,
+      ...(obj.componentRef ? { componentRef: String(obj.componentRef) } : {}),
+      ...(obj.componentPer100g ? { componentPer100g: obj.componentPer100g as Record<string, number> } : {}),
     };
-  }).filter(i => i.ndbNo && i.portionGrams > 0);
+  }).filter(i => (i.ndbNo || i.componentPer100g) && i.portionGrams > 0);
 
-  if (ingredients.length === 0) return { nutritionJson: null, plausibilityFlags: [], blocked: false, missingIngredients: [] };
+  if (ingredients.length === 0) return { nutritionJson: null, plausibilityFlags: [], blocked: false, missingIngredients: [], allocationIssues: [] };
 
   const ndbNos = ingredients
     .filter(i => !i.isOptional && !i.exempt)
-    .map(i => i.ndbNo);
+    .map(i => i.ndbNo)
+    .filter((ndbNo) => ndbNo.trim().length > 0);
 
   const nutrientMap = await fetchNutrientsByNdb(ndbNos);
   const servingsNum        = Math.max(1, Number(servings ?? 1));
@@ -80,7 +90,7 @@ async function calcCommunityNutrition(
   );
 
   const p100  = result.per100g;
-  const gps   = result.gramsPerServing;
+  const gps   = result.servings > 0 ? result.totalCookedGrams / result.servings : result.gramsPerServing;
   const scale = gps / 100;
   const nutritionJson = {
     perServing: {
@@ -102,8 +112,22 @@ async function calcCommunityNutrition(
     },
     gramsPerServing: gps,
     servings:        servingsNum,
+    allocationSections: result.sections.map((section) => ({
+      sectionKey: section.sectionKey,
+      cookedGrams: section.cookedGrams,
+      renderedFatEstimateGrams: section.renderedFatEstimateGrams,
+      renderedFatAllocation: section.renderedFatAllocation,
+      reservedPoolGrams: section.reservedPoolGrams,
+      consumedReservedPoolGrams: section.consumedReservedPoolGrams,
+    })),
   };
-  return { nutritionJson, plausibilityFlags: result.plausibility.flags, blocked: result.plausibility.blocked, missingIngredients: result.plausibility.missingIngredients };
+  return {
+    nutritionJson,
+    plausibilityFlags: result.plausibility.flags,
+    blocked: result.plausibility.blocked,
+    missingIngredients: result.plausibility.missingIngredients,
+    allocationIssues: result.allocationIssues ?? [],
+  };
 }
 
 // Safe migration — add draft columns if they don't exist yet
@@ -180,6 +204,16 @@ export const POST: RequestHandler = async ({ request }) => {
     return json({ error: 'Missing recipeId, draftData, and either code or playerId' }, { status: 400 });
   }
 
+  const draftSections = Array.isArray(draftData?.sections) ? draftData.sections : [];
+  const draftAllocationIssues = [
+    ...validateRawAllocationSections(draftSections),
+    ...validateRawAllocationIngredients(Array.isArray(draftData?.ingredients) ? draftData.ingredients : []),
+  ];
+  const draftAllocationErrors = draftAllocationIssues.filter((issue) => issue.severity === 'error');
+  if (draftAllocationErrors.length > 0) {
+    return json({ error: 'Invalid allocation metadata', allocationIssues: draftAllocationErrors }, { status: 400 });
+  }
+
   if (playerId) {
     // Creator saves their own draft
     const recipe = await queryOne<{ submitted_by: string; status: string }>(
@@ -194,7 +228,6 @@ export const POST: RequestHandler = async ({ request }) => {
     // Compute nutrition_json from draft data if all ingredients are linked
     const rawIngs: unknown[] = Array.isArray(draftData?.ingredients) ? draftData.ingredients : [];
     let nutritionJson: string | null = null;
-    const draftSections = Array.isArray(draftData?.sections) ? draftData.sections : [];
     const hasCommunityBuild =
       draftSections.length > 0 &&
       rawIngs.length > 0 &&
@@ -205,7 +238,8 @@ export const POST: RequestHandler = async ({ request }) => {
         })
         .every((r: unknown) => {
           const obj = r as Record<string, unknown>;
-          return typeof obj.ndbNo === 'string' && (obj.ndbNo as string).trim().length > 0;
+          return (typeof obj.ndbNo === 'string' && (obj.ndbNo as string).trim().length > 0)
+            || !!obj.componentPer100g;
         });
     if (hasCommunityBuild) {
       const comm = await calcCommunityNutrition(
@@ -226,6 +260,9 @@ export const POST: RequestHandler = async ({ request }) => {
         draftData?.cook3TempF,
         draftData?.cook3FillClass,
       );
+      if (comm.allocationIssues.length > 0) {
+        return json({ error: 'Invalid allocation metadata', allocationIssues: comm.allocationIssues }, { status: 400 });
+      }
       if (comm.blocked) {
         return json({ error: 'missing_ndb', missingIngredients: comm.missingIngredients }, { status: 422 });
       }

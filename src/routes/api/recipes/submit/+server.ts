@@ -3,6 +3,7 @@ import type { RequestHandler } from './$types';
 import { execute, queryOne } from '$lib/server/turso';
 import { buildRecipeCommunityV3, type CommunitySectionV3, type PrimaryCookStage } from '$lib/nutrition/buildRecipeCommunityV3';
 import type { CommunityIngredient } from '$lib/nutrition/types';
+import { normalizeIngredientRemoval, validateRawAllocationIngredients, validateRawAllocationSections, type AllocationValidationIssue } from '$lib/nutrition/allocation';
 import { fetchNutrientsByNdb } from '$lib/server/nutrition/fetchNutrients';
 import { toStoredRecipeCategory } from '$lib/farmers-basket/recipe-categories';
 
@@ -52,20 +53,24 @@ async function calcCommunityNutrition(
   cook3Minutes?: unknown,
   cook3TempF?: unknown,
   cook3FillClass?: unknown,
-): Promise<{ nutritionJson: object | null; plausibilityFlags: string[]; blocked: boolean; missingIngredients: Array<{ ndbNo: string; displayName?: string }> }> {
+): Promise<{ nutritionJson: object | null; plausibilityFlags: string[]; blocked: boolean; missingIngredients: Array<{ ndbNo: string; displayName?: string }>; allocationIssues: AllocationValidationIssue[] }> {
   const sections = (sectionsRaw as unknown[]).filter(
     (s): s is CommunitySectionV3 =>
       !!s && typeof s === 'object' && typeof (s as Record<string, unknown>).sectionKey === 'string',
   );
   const ingredients: CommunityIngredient[] = (ingredientsRaw as unknown[]).map(r => {
     const obj = r as Record<string, unknown>;
+    const removal = normalizeIngredientRemoval(obj);
     return {
       ndbNo:        String(obj.ndbNo ?? ''),
       displayName:  String(obj.name ?? obj.displayName ?? ''),
-      portionGrams: Number(obj.portionGrams ?? 0),
-      sectionKey:   typeof obj.section === 'string' ? obj.section : undefined,
+      portionGrams: Number(obj.portionGrams ?? 0) * Math.max(1, Number(obj.servingCount ?? 1)),
+      sectionKey:   typeof (obj.sectionKey ?? obj.section) === 'string' ? String(obj.sectionKey ?? obj.section) : undefined,
       isOptional:   obj.ingredientStatus === 'optional' || obj.exempt === true,
       exempt:       obj.ingredientStatus === 'exempt',
+      removedAfterPrep: removal.removedAfterPrep,
+      removalAmount: removal.removalAmount,
+      removalUnit: removal.removalUnit,
       discarded:    obj.discarded === true,
       discardPercent: typeof obj.discardPercent === 'number' ? obj.discardPercent : undefined,
       ...(obj.componentRef ? { componentRef: String(obj.componentRef) } : {}),
@@ -73,11 +78,12 @@ async function calcCommunityNutrition(
     };
   }).filter(i => (i.ndbNo || i.componentPer100g) && i.portionGrams > 0);
 
-  if (ingredients.length === 0) return { nutritionJson: null, plausibilityFlags: [], blocked: false, missingIngredients: [] };
+  if (ingredients.length === 0) return { nutritionJson: null, plausibilityFlags: [], blocked: false, missingIngredients: [], allocationIssues: [] };
 
   const ndbNos = ingredients
     .filter(i => !i.isOptional && !i.exempt)
-    .map(i => i.ndbNo);
+    .map(i => i.ndbNo)
+    .filter((ndbNo) => ndbNo.trim().length > 0);
 
   const nutrientMap = await fetchNutrientsByNdb(ndbNos);
 
@@ -114,7 +120,7 @@ async function calcCommunityNutrition(
   );
 
   const p100  = result.per100g;
-  const gps   = result.gramsPerServing;
+  const gps   = result.servings > 0 ? result.totalCookedGrams / result.servings : result.gramsPerServing;
   const scale = gps / 100;
   const nutritionJson = {
     perServing: {
@@ -136,9 +142,23 @@ async function calcCommunityNutrition(
     },
     gramsPerServing: gps,
     servings:        servingsNum,
+    allocationSections: result.sections.map((section) => ({
+      sectionKey: section.sectionKey,
+      cookedGrams: section.cookedGrams,
+      renderedFatEstimateGrams: section.renderedFatEstimateGrams,
+      renderedFatAllocation: section.renderedFatAllocation,
+      reservedPoolGrams: section.reservedPoolGrams,
+      consumedReservedPoolGrams: section.consumedReservedPoolGrams,
+    })),
   };
 
-  return { nutritionJson, plausibilityFlags: result.plausibility.flags, blocked: result.plausibility.blocked, missingIngredients: result.plausibility.missingIngredients };
+  return {
+    nutritionJson,
+    plausibilityFlags: result.plausibility.flags,
+    blocked: result.plausibility.blocked,
+    missingIngredients: result.plausibility.missingIngredients,
+    allocationIssues: result.allocationIssues ?? [],
+  };
 }
 
 // PATCH — promote a draft recipe to pending, or update its data
@@ -196,6 +216,17 @@ export const PATCH: RequestHandler = async ({ request }) => {
     // Community recipe path: when sections are present and all active ingredients
     // have SR nutrition or component recipe nutrition, build authoritative nutrition.
     const patchSections = Array.isArray(fields.sections) ? fields.sections : [];
+    const patchAllocationIssues = [
+      ...validateRawAllocationSections(patchSections),
+      ...validateRawAllocationIngredients(patchIngredients),
+    ];
+    const patchAllocationErrors = patchAllocationIssues.filter((issue) => issue.severity === 'error');
+    if (patchAllocationErrors.length > 0) {
+      return json({ error: 'Invalid allocation metadata', allocationIssues: patchAllocationErrors }, { status: 400 });
+    }
+    for (const issue of patchAllocationIssues.filter((candidate) => candidate.severity === 'warning')) {
+      console.warn('[ALLOCATIONS]', issue.message, issue.poolId ?? issue.sectionKey ?? '');
+    }
     const patchHasCommunityBuild =
       patchSections.length > 0 &&
       patchIngredients.length > 0 &&
@@ -212,9 +243,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
 
     let patchNutritionJson: object | null = null;
     let patchPlausibilityFlags: string[] = [];
-    if (canonicalPreview) {
-      patchNutritionJson = canonicalPreview;
-    } else if (patchHasCommunityBuild) {
+    if (patchHasCommunityBuild) {
       const comm = await calcCommunityNutrition(
         patchIngredients,
         patchSections,
@@ -233,11 +262,16 @@ export const PATCH: RequestHandler = async ({ request }) => {
         fields.cook3TempF,
         fields.cook3FillClass,
       );
+      if (comm.allocationIssues.length > 0) {
+        return json({ error: 'Invalid allocation metadata', allocationIssues: comm.allocationIssues }, { status: 400 });
+      }
       if (comm.blocked) {
         return json({ error: 'missing_ndb', missingIngredients: comm.missingIngredients }, { status: 422 });
       }
       patchNutritionJson = comm.nutritionJson;
       patchPlausibilityFlags = comm.plausibilityFlags;
+    } else if (canonicalPreview) {
+      patchNutritionJson = canonicalPreview;
     }
     const nutritionJson = patchNutritionJson;
 
@@ -370,6 +404,17 @@ export const POST: RequestHandler = async ({ request }) => {
 
     // Community recipe path: sections present + all active ingredients have SR or component nutrition.
     const postSections = Array.isArray(body.sections) ? body.sections : [];
+    const postAllocationIssues = [
+      ...validateRawAllocationSections(postSections),
+      ...validateRawAllocationIngredients(Array.isArray(body.ingredients) ? body.ingredients : []),
+    ];
+    const postAllocationErrors = postAllocationIssues.filter((issue) => issue.severity === 'error');
+    if (postAllocationErrors.length > 0) {
+      return json({ error: 'Invalid allocation metadata', allocationIssues: postAllocationErrors }, { status: 400 });
+    }
+    for (const issue of postAllocationIssues.filter((candidate) => candidate.severity === 'warning')) {
+      console.warn('[ALLOCATIONS]', issue.message, issue.poolId ?? issue.sectionKey ?? '');
+    }
     const postHasCommunityBuild =
       postSections.length > 0 &&
       postIngredients.length > 0 &&
@@ -386,9 +431,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
     let computedNutrition: object | null = null;
     let postPlausibilityFlags: string[] = [];
-    if (canonicalPreview) {
-      computedNutrition = canonicalPreview;
-    } else if (postHasCommunityBuild) {
+    if (postHasCommunityBuild) {
       const comm = await calcCommunityNutrition(
         postIngredients,
         postSections,
@@ -407,11 +450,16 @@ export const POST: RequestHandler = async ({ request }) => {
         body.cook3TempF,
         body.cook3FillClass,
       );
+      if (comm.allocationIssues.length > 0) {
+        return json({ error: 'Invalid allocation metadata', allocationIssues: comm.allocationIssues }, { status: 400 });
+      }
       if (comm.blocked) {
         return json({ error: 'missing_ndb', missingIngredients: comm.missingIngredients }, { status: 422 });
       }
       computedNutrition = comm.nutritionJson;
       postPlausibilityFlags = comm.plausibilityFlags;
+    } else if (canonicalPreview) {
+      computedNutrition = canonicalPreview;
     }
 
     const nutritionJson = computedNutrition ? JSON.stringify(computedNutrition) : EMPTY_NUTRITION_JSON;

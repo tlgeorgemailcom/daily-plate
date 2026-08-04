@@ -1,5 +1,19 @@
 // Farmer's Basket - Game Types
 
+import type {
+  AllocationAmount,
+  AllocationUnit,
+  RenderedFatAllocationInput,
+  RenderedFatAllocationResult,
+  ReservedPoolAllocation,
+} from '$lib/nutrition/allocation';
+
+export type DiscardType = 'marinade' | 'rendered_fat' | 'other';
+
+export function defaultDiscardPercent(discardType?: DiscardType): number {
+  return discardType === 'rendered_fat' ? 0 : 100;
+}
+
 export type AnimalType = 'rabbit' | 'mouse' | 'bird' | 'fox' | 'squirrel' | 'raccoon';
 
 export type AnimalState = 
@@ -134,7 +148,11 @@ export interface Level {
     cookSection?: string;   // optional math section override; display still uses section
     is_optional?: boolean;  // true = moderator-added optional ingredient (excluded from nutrition math)
     discarded?: boolean;    // true = ingredient is displayed but partly/fully discarded before eating
-    discardPercent?: number; // 0-100 percentage discarded; defaults to 100 when discarded is true
+    discardPercent?: number; // 0-100 percentage discarded; defaults by discard type
+    discardType?: DiscardType; // discard behavior category
+    removedAfterPrep?: boolean;
+    removalAmount?: number;
+    removalUnit?: AllocationUnit;
   }[];
   servings?: string;              // e.g., "Serves 2"
   prepTime?: string;              // e.g., "10 minutes"
@@ -172,6 +190,15 @@ export interface Level {
     prepTempF?: number;            // oven temperature °F for a baked/par-baked prep step
     fillClass?: string;           // section physics class from recipe_sections.csv
     primaryEntryStage?: string;   // blank/1, 2, 3, or finish
+    keepHerePercent?: number;     // percentage of prepared material retained in this section
+    outputPoolId?: string;        // generated identity for reserved remainder
+    reservedPoolId?: string;      // generated pool consumed by this section
+    reservedPoolAmount?: AllocationAmount;
+    outputPoolAllocations?: ReservedPoolAllocation[];
+    renderedFatAllocation?: RenderedFatAllocationInput;
+    renderedFatLedger?: RenderedFatAllocationResult;
+    discardedFatPercent?: number; // default percentage of rendered fat discarded
+    discardedMarinadePercent?: number; // default percentage of marinade discarded
   }[];
 }
 

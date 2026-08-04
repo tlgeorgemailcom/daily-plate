@@ -251,7 +251,7 @@ export async function searchSr28FoodsWithNutrients(
         Sodium_Na, Zinc_Zn, VitaminC_totalAscorbicAcid, Thiamin, Riboflavin,
         Niacin, VitaminB6, Folate_DFE, VitaminB12, VitaminA_RAE, VitaminD,
         VitaminE_alphaTocopherol, VitaminK_phylloquinone,
-        key10, bin
+        key10, bin, fat_drain
       FROM DataCentralCombo
       ${sql}
       ORDER BY

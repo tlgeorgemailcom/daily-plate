@@ -4,7 +4,22 @@ import { queryAll, getGameDb } from '$lib/server/turso';
 import { toDisplayRecipeCategory, toStoredRecipeCategory } from '$lib/farmers-basket/recipe-categories';
 import { deleteRecipeImage, extractPublicId } from '$lib/server/cloudinary';
 import { calcNutritionSR28 } from '$lib/server/calcNutritionSR28';
-import type { Level } from '$lib/farmers-basket/types';
+import { buildRecipeCommunityV3, type CommunitySectionV3 } from '$lib/nutrition/buildRecipeCommunityV3';
+import type { CommunityIngredient } from '$lib/nutrition/types';
+import { fetchNutrientsByNdb } from '$lib/server/nutrition/fetchNutrients';
+import {
+  normalizeIngredientRemoval,
+  normalizeRenderedFatAllocation,
+  validateRawAllocationIngredients,
+  validateRawAllocationSections,
+} from '$lib/nutrition/allocation';
+import type {
+  AllocationAmount,
+  AllocationUnit,
+  AllocationValidationIssue,
+  ReservedPoolAllocation,
+} from '$lib/nutrition/allocation';
+import type { DiscardType, Level } from '$lib/farmers-basket/types';
 
 interface BuiltinRecipeRow {
   recipe_id: string;
@@ -106,6 +121,7 @@ interface NewBuiltinRecipe {
   animalSpawns: { type: string; delay: number }[];
   recipeInstructions?: string[];
   recipeIngredients?: NutritionLinkIngredient[];
+  sections?: Level['sections'];
   nutritionJson?: NutritionJson | null;
   imageUrl?: string;
   createdAt: string;
@@ -119,10 +135,21 @@ type NutritionLinkIngredient = {
   portionDesc?: string;
   portionGrams?: number;
   servingCount?: number;
+  section?: string;
   exempt?: boolean;
   isDish?: boolean;
+  componentRef?: string;
+  componentPer100g?: Record<string, number>;
+  componentName?: string;
+  componentServingGrams?: number;
+  is_optional?: boolean;
+  isOptional?: boolean;
   discarded?: boolean;
   discardPercent?: number;
+  discardType?: DiscardType;
+  removedAfterPrep?: boolean;
+  removalAmount?: number;
+  removalUnit?: AllocationUnit;
 };
 
 function toFoodWord(value: string): string {
@@ -167,10 +194,123 @@ async function computeBuiltinNutrition(
   servings: string | null | undefined,
   cookingMethod: string | null | undefined,
   yieldFactorWater?: number,
-  yieldFactorFat?: number
-): Promise<{ gramsPerServing: number; nutritionJson: string }> {
+  yieldFactorFat?: number,
+  sections?: Level['sections'],
+): Promise<{ gramsPerServing: number; nutritionJson: string; allocationIssues?: AllocationValidationIssue[] }> {
   if (!recipeIngredients || recipeIngredients.length === 0) {
     return { gramsPerServing: 0, nutritionJson: '{}' };
+  }
+
+  const allocationAware = recipeIngredients.some((ingredient) => {
+    const removal = normalizeIngredientRemoval(ingredient as unknown as Record<string, unknown>);
+    return removal.removedAfterPrep;
+  }) || (sections ?? []).some((section) =>
+    (section.keepHerePercent ?? 100) < 100
+    || !!section.outputPoolId
+    || !!section.reservedPoolId
+    || !!section.renderedFatAllocation
+  );
+
+  if (allocationAware) {
+    const activeIngredients = recipeIngredients.filter((ingredient) =>
+      !ingredient.exempt && !ingredient.isDish && (ingredient.portionGrams ?? 0) > 0
+    );
+    const unsupportedIngredient = activeIngredients.some((ingredient) =>
+      !ingredient.ndbNo && !ingredient.componentPer100g
+    );
+    if (!unsupportedIngredient) {
+      const ndbNos = activeIngredients
+        .map((ingredient) => ingredient.ndbNo)
+        .filter((ndbNo): ndbNo is string => typeof ndbNo === 'string' && ndbNo.length > 0);
+      const nutrientMap = await fetchNutrientsByNdb(ndbNos);
+      if (activeIngredients.every((ingredient) =>
+        !!ingredient.componentPer100g || (!!ingredient.ndbNo && nutrientMap.has(ingredient.ndbNo))
+      )) {
+        const communityIngredients: CommunityIngredient[] = recipeIngredients.map((ingredient) => {
+          const removal = normalizeIngredientRemoval(ingredient as unknown as Record<string, unknown>);
+          return {
+            ndbNo: ingredient.ndbNo ?? '',
+            portionGrams: (ingredient.portionGrams ?? 0) * (ingredient.servingCount ?? 1),
+            sectionKey: ingredient.section,
+            isOptional: ingredient.isOptional === true || ingredient.is_optional === true,
+            exempt: ingredient.exempt === true,
+            displayName: ingredient.name,
+            removedAfterPrep: removal.removedAfterPrep,
+            removalAmount: removal.removalAmount,
+            removalUnit: removal.removalUnit,
+            discarded: ingredient.discarded === true,
+            discardPercent: ingredient.discardPercent,
+            ...(ingredient.componentPer100g ? { componentPer100g: ingredient.componentPer100g } : {}),
+          };
+        });
+        const communitySections: CommunitySectionV3[] = (sections ?? []).map((section) => ({
+          sectionKey: section.section_key ?? section.key,
+          sectionLabel: section.label,
+          cookMethod: section.cookingMethod,
+          yieldFactorWater: section.yieldFactorWater,
+          yieldFactorFat: section.yieldFactorFat,
+          yieldFactorOther: section.yieldFactorOther,
+          prepMethod: section.prepMethod,
+          stages: section.stages,
+          boilMinutes: section.boilMinutes,
+          prepTempF: section.prepTempF,
+          fillClass: section.fillClass,
+          primaryEntryStage: section.primaryEntryStage,
+          keepHerePercent: section.keepHerePercent,
+          outputPoolId: section.outputPoolId,
+          reservedPoolId: section.reservedPoolId,
+          reservedPoolAmount: section.reservedPoolAmount,
+          outputPoolAllocations: section.outputPoolAllocations,
+          renderedFatAllocation: section.renderedFatAllocation,
+        }));
+        const servingsNum = Math.max(1, Number.parseInt(servings ?? '1', 10) || 1);
+        const result = buildRecipeCommunityV3(
+          communitySections,
+          communityIngredients,
+          nutrientMap,
+          servingsNum,
+          100,
+          cookingMethod ?? undefined,
+        );
+        const gramsPerServing = result.totalCookedGrams / servingsNum;
+        const scale = gramsPerServing / 100;
+        const p100 = result.per100g;
+        return {
+          gramsPerServing,
+          allocationIssues: result.allocationIssues,
+          nutritionJson: JSON.stringify({
+            perServing: {
+              cal: (p100.energy_KCal ?? 0) * scale,
+              pro: (p100.protein ?? 0) * scale,
+              fat: (p100.totalLipidFat ?? 0) * scale,
+              carb: (p100.carbohydrate ?? 0) * scale,
+              fib: (p100.fiberTotalDietary ?? 0) * scale,
+              h2o: (p100.water ?? 0) * scale,
+              sug: (p100.sugarsTotal ?? 0) * scale,
+            },
+            per100g: {
+              Energy_KCal: p100.energy_KCal ?? 0,
+              Protein: p100.protein ?? 0,
+              TotalLipidFat: p100.totalLipidFat ?? 0,
+              Carbohydrate: p100.carbohydrate ?? 0,
+              FiberTotalDietary: p100.fiberTotalDietary ?? 0,
+              SugarsTotal: p100.sugarsTotal ?? 0,
+              Water: p100.water ?? 0,
+            },
+            gramsPerServing,
+            servings: servingsNum,
+            allocationSections: result.sections.map((section) => ({
+              sectionKey: section.sectionKey,
+              cookedGrams: section.cookedGrams,
+              renderedFatEstimateGrams: section.renderedFatEstimateGrams,
+              renderedFatAllocation: section.renderedFatAllocation,
+              reservedPoolGrams: section.reservedPoolGrams,
+              consumedReservedPoolGrams: section.consumedReservedPoolGrams,
+            })),
+          }),
+        };
+      }
+    }
   }
 
   const linkedRows = recipeIngredients.map((ing) => ({
@@ -207,8 +347,28 @@ async function resolveBuiltinNutrition(
   servings: string | null | undefined,
   cookingMethod: string | null | undefined,
   yieldFactorWater?: number,
-  yieldFactorFat?: number
-): Promise<{ gramsPerServing: number; nutritionJson: string }> {
+  yieldFactorFat?: number,
+  sections?: Level['sections'],
+): Promise<{ gramsPerServing: number; nutritionJson: string; allocationIssues?: AllocationValidationIssue[] }> {
+  const allocationAware = (recipeIngredients ?? []).some((ingredient) =>
+    normalizeIngredientRemoval(ingredient as unknown as Record<string, unknown>).removedAfterPrep
+  ) || (sections ?? []).some((section) =>
+    (section.keepHerePercent ?? 100) < 100
+    || !!section.outputPoolId
+    || !!section.reservedPoolId
+    || !!section.renderedFatAllocation
+  );
+  if (allocationAware) {
+    const computed = await computeBuiltinNutrition(
+      recipeIngredients,
+      servings,
+      cookingMethod,
+      yieldFactorWater,
+      yieldFactorFat,
+      sections,
+    );
+    if (computed.nutritionJson !== '{}') return computed;
+  }
   if (explicitNutrition && typeof explicitNutrition === 'object') {
     const grams = Number((explicitNutrition as { gramsPerServing?: unknown }).gramsPerServing ?? 0);
     return {
@@ -216,7 +376,7 @@ async function resolveBuiltinNutrition(
       nutritionJson: JSON.stringify(explicitNutrition)
     };
   }
-  return await computeBuiltinNutrition(recipeIngredients, servings, cookingMethod, yieldFactorWater, yieldFactorFat);
+  return await computeBuiltinNutrition(recipeIngredients, servings, cookingMethod, yieldFactorWater, yieldFactorFat, sections);
 }
 
 function normalizeRecipeInstructions(value: string | null): string[] | undefined {
@@ -299,6 +459,9 @@ function normalizeRecipeIngredients(value: string | null): BuiltinOverride['reci
         componentRef: typeof source.componentRef === 'string'
           ? source.componentRef
           : undefined,
+        isOptional: typeof source.isOptional === 'boolean'
+          ? source.isOptional
+          : undefined,
         is_optional: typeof source.is_optional === 'boolean'
           ? source.is_optional
           : undefined,
@@ -307,10 +470,112 @@ function normalizeRecipeIngredients(value: string | null): BuiltinOverride['reci
           : undefined,
         discardPercent: typeof source.discardPercent === 'number'
           ? source.discardPercent
-          : undefined
+          : undefined,
+        discardType: source.discardType === 'marinade' || source.discardType === 'rendered_fat' || source.discardType === 'other'
+          ? source.discardType
+          : undefined,
+        ...(() => {
+          const removal = normalizeIngredientRemoval(source);
+          return {
+            removedAfterPrep: removal.removedAfterPrep,
+            removalAmount: removal.removalAmount,
+            removalUnit: removal.removalUnit,
+          };
+        })()
       };
     })
     .filter((item): item is NonNullable<typeof item> => item !== null && Boolean(item.name || item.isDish)) as NonNullable<BuiltinOverride['recipeIngredients']>;
+}
+
+function normalizeAllocationAmountValue(value: unknown): AllocationAmount | undefined {
+  if (!value || typeof value !== 'object') return undefined;
+  const raw = value as Record<string, unknown>;
+  const amount = Number(raw.value);
+  if (!Number.isFinite(amount) || amount < 0) return undefined;
+  return {
+    value: amount,
+    unit: raw.unit === 'grams' ? 'grams' : 'percent',
+  };
+}
+
+function normalizePoolAllocations(value: unknown): ReservedPoolAllocation[] | undefined {
+  if (!Array.isArray(value)) return undefined;
+  const allocations = value.flatMap((item) => {
+    if (!item || typeof item !== 'object') return [];
+    const raw = item as Record<string, unknown>;
+    if (raw.kind !== 'prepared_material' && raw.kind !== 'rendered_fat') return [];
+    const grams = Number(raw.grams);
+    return Number.isFinite(grams) && grams >= 0
+      ? [{ kind: raw.kind, grams } as ReservedPoolAllocation]
+      : [];
+  });
+  return allocations.length > 0 ? allocations : undefined;
+}
+
+function normalizeRecipeSections(value: string | null): Level['sections'] {
+  if (!value) return undefined;
+  const parsed = JSON.parse(value);
+  if (!Array.isArray(parsed)) return undefined;
+
+  return parsed
+    .map((item) => {
+      if (!item || typeof item !== 'object') return null;
+      const source = item as Record<string, unknown>;
+      const key = String(source.section_key ?? source.key ?? '');
+      if (!key) return null;
+      const prepMethod = String(source.prep_method ?? source.prepMethod ?? '');
+      const isUnheated = !prepMethod || prepMethod === 'raw' || prepMethod === 'none';
+      const rawKeepHere = source.keep_here_percent ?? source.keepHerePercent;
+      const parsedKeepHere = rawKeepHere === undefined || rawKeepHere === null || rawKeepHere === ''
+        ? 100
+        : Number(rawKeepHere);
+      const rawStages = Array.isArray(source.cook_stages)
+        ? source.cook_stages
+        : (Array.isArray(source.stages) ? source.stages : []);
+
+      return {
+        key,
+        label: String(source.section_label ?? source.label ?? ''),
+        cookingMethod: String(source.cook_method ?? source.cookingMethod ?? 'raw'),
+        prepMethod,
+        boilMinutes: isUnheated ? 0 : (typeof source.boil_minutes === 'number' ? source.boil_minutes : 0),
+        stages: rawStages,
+        fillClass: String(source.fill_class ?? source.fillClass ?? ''),
+        primaryEntryStage: String(source.primary_entry_stage ?? source.primaryEntryStage ?? ''),
+        keepHerePercent: Number.isFinite(parsedKeepHere) ? parsedKeepHere : 100,
+        outputPoolId: typeof (source.output_pool_id ?? source.outputPoolId) === 'string'
+          ? String(source.output_pool_id ?? source.outputPoolId)
+          : undefined,
+        reservedPoolId: typeof (source.reserved_pool_id ?? source.reservedPoolId) === 'string'
+          ? String(source.reserved_pool_id ?? source.reservedPoolId)
+          : undefined,
+        reservedPoolAmount: normalizeAllocationAmountValue(
+          source.reserved_pool_amount ?? source.reservedPoolAmount
+        ),
+        outputPoolAllocations: normalizePoolAllocations(
+          source.output_pool_allocations ?? source.outputPoolAllocations
+        ),
+        renderedFatAllocation: normalizeRenderedFatAllocation(source),
+        discardedFatPercent: typeof (source.discarded_fat_percent ?? source.discardedFatPercent) === 'number'
+          ? Number(source.discarded_fat_percent ?? source.discardedFatPercent)
+          : undefined,
+        discardedMarinadePercent: typeof (source.discarded_marinade_percent ?? source.discardedMarinadePercent) === 'number'
+          ? Number(source.discarded_marinade_percent ?? source.discardedMarinadePercent)
+          : undefined,
+      };
+    })
+    .filter((item): item is NonNullable<typeof item> => item !== null) as Level['sections'];
+}
+
+function validateBuiltinAllocationPayload(rawSections: unknown, rawIngredients?: unknown) {
+  const issues = [
+    ...validateRawAllocationSections(Array.isArray(rawSections) ? rawSections : []),
+    ...validateRawAllocationIngredients(Array.isArray(rawIngredients) ? rawIngredients : []),
+  ];
+  return {
+    errors: issues.filter((issue) => issue.severity === 'error'),
+    warnings: issues.filter((issue) => issue.severity === 'warning'),
+  };
 }
 
 // GET: Fetch all built-in recipe overrides and admin-added recipes from Turso
@@ -376,26 +641,7 @@ export const GET: RequestHandler = async () => {
       if (row.animal_spawns) override.animalSpawns = JSON.parse(row.animal_spawns);
       if (row.recipe_instructions_json) override.recipeInstructions = normalizeRecipeInstructions(row.recipe_instructions_json);
       if (row.recipe_ingredients_json) override.recipeIngredients = normalizeRecipeIngredients(row.recipe_ingredients_json);
-      if (row.sections_json) {
-        // Normalize snake_case sections_json to Level['sections'] camelCase shape
-        // so all downstream consumers use the typed fields without conditional lookups.
-        const raw = JSON.parse(row.sections_json) as Record<string,unknown>[];
-        override.sections = raw.map(s => {
-          const pm = String(s['prep_method'] ?? s['prepMethod'] ?? '');
-          const isUnheated = !pm || pm === 'raw' || pm === 'none';
-          return {
-            key:           String(s['section_key'] ?? s['key'] ?? ''),
-            label:         String(s['section_label'] ?? s['label'] ?? ''),
-            cookingMethod: String(s['cook_method'] ?? s['cookingMethod'] ?? 'raw'),
-            prepMethod:    pm,
-            // Unheated sections have no prep time — boil_minutes there drives the top bar, not display.
-            boilMinutes:   isUnheated ? 0 : (typeof s['boil_minutes'] === 'number' ? s['boil_minutes'] as number : 0),
-            stages:        Array.isArray(s['cook_stages']) ? s['cook_stages'] : (Array.isArray(s['stages']) ? s['stages'] : []),
-            fillClass:     String(s['fill_class'] ?? s['fillClass'] ?? ''),
-            primaryEntryStage: String(s['primary_entry_stage'] ?? s['primaryEntryStage'] ?? ''),
-          };
-        }) as Level['sections'];
-      }
+      if (row.sections_json) override.sections = normalizeRecipeSections(row.sections_json);
       if (row.nutrition_json && row.nutrition_json !== '{}') override.nutritionJson = JSON.parse(row.nutrition_json);
       if (row.image_url) override.imageUrl = row.image_url;
 
@@ -427,6 +673,7 @@ export const GET: RequestHandler = async () => {
       animalSpawns: row.animal_spawns ? JSON.parse(row.animal_spawns) : [{ type: 'rabbit', delay: 3000 }],
       recipeInstructions: normalizeRecipeInstructions(row.recipe_instructions_json),
       recipeIngredients: normalizeRecipeIngredients(row.recipe_ingredients_json),
+      sections: normalizeRecipeSections(row.sections_json),
       nutritionJson: row.nutrition_json && row.nutrition_json !== '{}' ? JSON.parse(row.nutrition_json) : undefined,
       imageUrl: row.image_url ?? undefined,
       createdAt: row.created_at
@@ -482,6 +729,18 @@ export const PATCH: RequestHandler = async ({ request }) => {
     const nextImageUrl = hasImageUrlUpdate && typeof updates.imageUrl === 'string' && updates.imageUrl.trim().length > 0
       ? updates.imageUrl.trim()
       : null;
+    const hasSectionsUpdate = Object.prototype.hasOwnProperty.call(updates, 'sections');
+    if (hasSectionsUpdate && !Array.isArray(updates.sections)) {
+      return json({ error: 'Sections must be an array', code: 'INVALID_SECTIONS' }, { status: 400 });
+    }
+    const allocation = validateBuiltinAllocationPayload(updates.sections, updates.ingredients);
+    if (allocation.errors.length > 0) {
+      return json({ error: 'Invalid allocation metadata', allocationIssues: allocation.errors }, { status: 400 });
+    }
+    for (const issue of allocation.warnings) {
+      console.warn('[ALLOCATIONS]', issue.message, issue.poolId ?? issue.sectionKey ?? '');
+    }
+    const sectionsJson = hasSectionsUpdate ? JSON.stringify(updates.sections) : null;
     const nextName = typeof updates.name === 'string' && updates.name.trim().length > 0
       ? updates.name.trim()
       : null;
@@ -496,8 +755,12 @@ export const PATCH: RequestHandler = async ({ request }) => {
       (updates.servings as string | null | undefined) ?? null,
       (updates.cookingMethod as string | null | undefined) ?? null,
       updateYieldWater,
-      updateYieldFat
+      updateYieldFat,
+      updates.sections as Level['sections'] | undefined,
     );
+    if (computedNutrition.allocationIssues && computedNutrition.allocationIssues.length > 0) {
+      return json({ error: 'Invalid allocation metadata', allocationIssues: computedNutrition.allocationIssues }, { status: 400 });
+    }
 
     // Check if dev recipe exists
     const existing = await db.execute({
@@ -511,10 +774,10 @@ export const PATCH: RequestHandler = async ({ request }) => {
         sql: `INSERT INTO dev_recipes (
               recipe_id, food_word, recipe_name, category, dietary_category, cooking_method, dish_family, prep_time, servings,
               servings_count, serving_label,
-              recipe, animal_spawns, recipe_instructions_json, recipe_ingredients_json,
+              recipe, animal_spawns, recipe_instructions_json, recipe_ingredients_json, sections_json,
               image_url, submitted_by, status, created_at, updated_at,
               grams_per_serving, nutrition_json, nutrient_version, retention_model_version, source_match_version
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'published', ?, ?, ?, ?, ?, ?, ?)`,
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'published', ?, ?, ?, ?, ?, ?, ?, ?)`,
         args: [
           id,
           nextFoodWord || id,
@@ -531,6 +794,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
           updates.animalSpawns ? JSON.stringify(updates.animalSpawns) : null,
           updates.recipeInstructions ? JSON.stringify(updates.recipeInstructions) : null,
           updates.recipeIngredients ? JSON.stringify(updates.recipeIngredients) : null,
+          sectionsJson,
           updates.imageUrl || null,
           editedBy || 'Moderator',
           now,
@@ -574,6 +838,7 @@ export const PATCH: RequestHandler = async ({ request }) => {
               animal_spawns = COALESCE(?, animal_spawns),
               recipe_instructions_json = COALESCE(?, recipe_instructions_json),
               recipe_ingredients_json = COALESCE(?, recipe_ingredients_json),
+              sections_json = CASE WHEN ? = 1 THEN ? ELSE sections_json END,
               grams_per_serving = CASE WHEN ? > 0 THEN ? ELSE grams_per_serving END,
               nutrition_json = CASE WHEN ? != '{}' THEN ? ELSE nutrition_json END,
               image_url = CASE
@@ -600,6 +865,8 @@ export const PATCH: RequestHandler = async ({ request }) => {
           updates.animalSpawns ? JSON.stringify(updates.animalSpawns) : null,
           updates.recipeInstructions ? JSON.stringify(updates.recipeInstructions) : null,
           updates.recipeIngredients ? JSON.stringify(updates.recipeIngredients) : null,
+          hasSectionsUpdate ? 1 : 0,
+          sectionsJson,
           computedNutrition.gramsPerServing,
           computedNutrition.gramsPerServing,
           computedNutrition.nutritionJson,
@@ -638,6 +905,17 @@ export const POST: RequestHandler = async ({ request }) => {
       return json({ error: 'Recipe name is required' }, { status: 400 });
     }
 
+    if (data.sections !== undefined && !Array.isArray(data.sections)) {
+      return json({ error: 'Sections must be an array', code: 'INVALID_SECTIONS' }, { status: 400 });
+    }
+    const allocation = validateBuiltinAllocationPayload(data.sections, data.ingredients);
+    if (allocation.errors.length > 0) {
+      return json({ error: 'Invalid allocation metadata', allocationIssues: allocation.errors }, { status: 400 });
+    }
+    for (const issue of allocation.warnings) {
+      console.warn('[ALLOCATIONS]', issue.message, issue.poolId ?? issue.sectionKey ?? '');
+    }
+
     const db = getGameDb();
     const now = new Date().toISOString();
     const id = `admin-${Date.now()}`;
@@ -664,17 +942,18 @@ export const POST: RequestHandler = async ({ request }) => {
       (data.servings as string | null | undefined) ?? null,
       (data.cookingMethod as string | null | undefined) ?? null,
       dataYieldWater,
-      dataYieldFat
+      dataYieldFat,
+      data.sections as Level['sections'] | undefined,
     );
 
     await db.execute({
       sql: `INSERT INTO dev_recipes (
             recipe_id, food_word, recipe_name, category, dietary_category, cooking_method, dish_family, prep_time, servings,
             servings_count, serving_label,
-            recipe, animal_spawns, recipe_instructions_json, recipe_ingredients_json,
+            recipe, animal_spawns, recipe_instructions_json, recipe_ingredients_json, sections_json,
             image_url, submitted_by, status, created_at, updated_at,
             grams_per_serving, nutrition_json, nutrient_version, retention_model_version, source_match_version
-          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'published', ?, ?, ?, ?, ?, ?, ?)`,
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'published', ?, ?, ?, ?, ?, ?, ?, ?)`,
       args: [
         id,
         foodWord,
@@ -691,6 +970,7 @@ export const POST: RequestHandler = async ({ request }) => {
         data.animalSpawns ? JSON.stringify(data.animalSpawns) : null,
         data.recipeInstructions ? JSON.stringify(data.recipeInstructions) : null,
         data.recipeIngredients ? JSON.stringify(data.recipeIngredients) : null,
+        data.sections !== undefined ? JSON.stringify(data.sections) : null,
         data.imageUrl || null,
         'Moderator',
         now,

@@ -3,6 +3,7 @@ import type { RequestHandler } from './$types';
 import { calcNutritionSR28 } from '$lib/server/calcNutritionSR28';
 import { buildRecipeCommunityV3, type CommunitySectionV3, type PrimaryCookStage } from '$lib/nutrition/buildRecipeCommunityV3';
 import type { CommunityIngredient, NutrientRow } from '$lib/nutrition/types';
+import { normalizeIngredientRemoval } from '$lib/nutrition/allocation';
 import { fetchNutrientsByNdb } from '$lib/server/nutrition/fetchNutrients.js';
 
 function hasValidLink(row: unknown): boolean {
@@ -24,6 +25,27 @@ function withDefaultServingCount(row: unknown): unknown {
     ...obj,
     servingCount: Number.isFinite(count) && count > 0 ? count : 1,
   };
+}
+
+function totalIngredientGrams(row: unknown): number {
+  if (!row || typeof row !== 'object') return 0;
+  const obj = row as Record<string, unknown>;
+  const grams = Number(obj.portionGrams ?? 0);
+  const count = Number(obj.servingCount ?? 1);
+  return Number.isFinite(grams) && grams > 0 && Number.isFinite(count) && count > 0
+    ? grams * count
+    : 0;
+}
+
+function allocationPreviewSections(buildResult: ReturnType<typeof buildRecipeCommunityV3>) {
+  return buildResult.sections.map((section) => ({
+    sectionKey: section.sectionKey,
+    cookedGrams: section.cookedGrams,
+    renderedFatEstimateGrams: section.renderedFatEstimateGrams,
+    renderedFatAllocation: section.renderedFatAllocation,
+    reservedPoolGrams: section.reservedPoolGrams,
+    consumedReservedPoolGrams: section.consumedReservedPoolGrams,
+  }));
 }
 
 /**
@@ -126,12 +148,16 @@ export const POST: RequestHandler = async ({ request }) => {
     );
     const ingList: CommunityIngredient[] = (rawIngs as unknown[]).map(r => {
       const obj = r as Record<string, unknown>;
+      const removal = normalizeIngredientRemoval(obj);
       return {
         ndbNo:         String(obj.ndbNo ?? ''),
-        portionGrams:  Number(obj.portionGrams ?? 0),
-        sectionKey:    typeof obj.section === 'string' ? obj.section : undefined,
+        portionGrams:  totalIngredientGrams(obj),
+        sectionKey:    typeof (obj.sectionKey ?? obj.section) === 'string' ? String(obj.sectionKey ?? obj.section) : undefined,
         isOptional:    obj.exempt === true,
         exempt:        false,
+        removedAfterPrep: removal.removedAfterPrep,
+        removalAmount: removal.removalAmount,
+        removalUnit: removal.removalUnit,
         discarded:     obj.discarded === true,
         discardPercent: typeof obj.discardPercent === 'number' ? obj.discardPercent : undefined,
         ...(obj.componentPer100g ? { componentPer100g: obj.componentPer100g as Record<string, number> } : {}),
@@ -184,7 +210,7 @@ export const POST: RequestHandler = async ({ request }) => {
       servings: srv,
     };
     console.log(`[PREVIEW/community] sections=${sectionsList.length} ings=${ingList.length} cal=${nutritionJson.perServing.cal.toFixed(1)}`);
-    return json({ nutritionJson, canonical: null });
+    return json({ nutritionJson: { ...nutritionJson, allocationSections: allocationPreviewSections(buildResult) }, canonical: null });
   }
 
   // ── Sections-aware path: sections sent but no embedded nutrientMap ──────────
@@ -209,16 +235,26 @@ export const POST: RequestHandler = async ({ request }) => {
         // Turso unavailable — fall through to flat SR28 path
         sectionNutrientMap = new Map();
       }
-      if (sectionNutrientMap.size > 0) {
+      const hasEmbeddedComponents = rawIngs.some((row) => {
+        const value = row as Record<string, unknown>;
+        return !!value.componentPer100g;
+      });
+      if (sectionNutrientMap.size > 0 || hasEmbeddedComponents) {
         const ingList: CommunityIngredient[] = rawIngs.map(r => {
           const o = r as Record<string, unknown>;
+          const removal = normalizeIngredientRemoval(o);
           return {
             ndbNo:        String(o.ndbNo ?? ''),
-            portionGrams: Number(o.portionGrams ?? 0),
-            sectionKey:   typeof o.section === 'string' ? o.section : undefined,
+            portionGrams: totalIngredientGrams(o),
+            sectionKey:   typeof (o.sectionKey ?? o.section) === 'string' ? String(o.sectionKey ?? o.section) : undefined,
             isOptional:   o.exempt === true,
             exempt:       false,
             displayName:  String(o.name ?? ''),
+            removedAfterPrep: removal.removedAfterPrep,
+            removalAmount: removal.removalAmount,
+            removalUnit: removal.removalUnit,
+            discarded: o.discarded === true,
+            discardPercent: typeof o.discardPercent === 'number' ? o.discardPercent : undefined,
             ...(o.componentPer100g ? { componentPer100g: o.componentPer100g as Record<string, number> } : {}),
           };
         }).filter(i => (i.ndbNo || i.componentPer100g) && i.portionGrams > 0);
@@ -264,6 +300,7 @@ export const POST: RequestHandler = async ({ request }) => {
             },
             gramsPerServing: gps,
             servings: srv,
+            allocationSections: allocationPreviewSections(buildResult),
           },
           canonical: null,
         });
@@ -275,7 +312,12 @@ export const POST: RequestHandler = async ({ request }) => {
   // When any ingredient is a componentRef (recipe-as-ingredient), SR28 lookup
   // can't handle it. Use V3 with empty sections so componentPer100g is applied.
   const hasComponentRefs = rawIngs.some(r => !!(r as Record<string, unknown>).componentPer100g);
-  if (hasComponentRefs && (!Array.isArray(sectionsRaw) || sectionsRaw.length === 0)) {
+  const hasCanonicalRemoval = rawIngs.some(r => {
+    if (!r || typeof r !== 'object') return false;
+    const obj = r as Record<string, unknown>;
+    return obj.removedAfterPrep === true;
+  });
+  if ((hasComponentRefs || hasCanonicalRemoval) && (!Array.isArray(sectionsRaw) || sectionsRaw.length === 0)) {
     const sr28Ndbs = rawIngs
       .filter(r => { const o = r as Record<string, unknown>; return !o.exempt && Number(o.portionGrams ?? 0) > 0 && o.ndbNo; })
       .map(r => String((r as Record<string, unknown>).ndbNo ?? ''))
@@ -285,12 +327,18 @@ export const POST: RequestHandler = async ({ request }) => {
     catch { flatNutrientMap = new Map(); }
     const flatIngList: CommunityIngredient[] = rawIngs.map(r => {
       const o = r as Record<string, unknown>;
+      const removal = normalizeIngredientRemoval(o);
       return {
         ndbNo:        String(o.ndbNo ?? ''),
-        portionGrams: Number(o.portionGrams ?? 0),
+        portionGrams: totalIngredientGrams(o),
         isOptional:   o.exempt === true,
         exempt:       false,
         displayName:  String(o.name ?? ''),
+        removedAfterPrep: removal.removedAfterPrep,
+        removalAmount: removal.removalAmount,
+        removalUnit: removal.removalUnit,
+        discarded: o.discarded === true,
+        discardPercent: typeof o.discardPercent === 'number' ? o.discardPercent : undefined,
         ...(o.componentPer100g ? { componentPer100g: o.componentPer100g as Record<string, number> } : {}),
       };
     }).filter(i => (i.ndbNo || i.componentPer100g) && i.portionGrams > 0);
@@ -306,7 +354,9 @@ export const POST: RequestHandler = async ({ request }) => {
         nutritionJson: {
           perServing: { cal: (p100.energy_KCal ?? 0) * scale, pro: (p100.protein ?? 0) * scale, fat: (p100.totalLipidFat ?? 0) * scale, carb: (p100.carbohydrate ?? 0) * scale, fib: (p100.fiberTotalDietary ?? 0) * scale, sug: (p100.sugarsTotal ?? 0) * scale },
           per100g: { Energy_KCal: p100.energy_KCal ?? 0, Protein: p100.protein ?? 0, TotalLipidFat: p100.totalLipidFat ?? 0, Carbohydrate: p100.carbohydrate ?? 0, FiberTotalDietary: p100.fiberTotalDietary ?? 0, SugarsTotal: p100.sugarsTotal ?? 0, Water: p100.water ?? 0 },
-          gramsPerServing: gps, servings: flatResult.servings,
+          gramsPerServing: gps,
+          servings: flatResult.servings,
+          allocationSections: allocationPreviewSections(flatResult),
         },
         canonical: null,
       });

@@ -1,11 +1,23 @@
 <script lang="ts">
-  import { FOOD_EMOJI } from '$lib/farmers-basket/types';
+  import { defaultDiscardPercent, FOOD_EMOJI } from '$lib/farmers-basket/types';
   import { RECIPE_CATEGORY_OPTIONS, toStoredRecipeCategory } from '$lib/farmers-basket/recipe-categories';
-  import type { FoodType, AnimalType, DietaryCategory } from '$lib/farmers-basket/types';
+  import type { FoodType, AnimalType, DietaryCategory, DiscardType } from '$lib/farmers-basket/types';
   import FoodIcon from '$lib/farmers-basket/FoodIcon.svelte';
   import { FOODS } from '$lib/data/food-portions';
   import type { Food as FoodData } from '$lib/data/food-portions';
   import { BINDING, FIXED_YIELD_WATER } from '$lib/nutrition/yieldCalc';
+  import {
+    calculateRenderedFatAllocation,
+    normalizeIngredientRemoval,
+    normalizeRenderedFatAllocation,
+  } from '$lib/nutrition/allocation';
+  import type {
+    AllocationAmount,
+    AllocationUnit,
+    RenderedFatAllocationInput,
+    RenderedFatAllocationResult,
+    ReservedPoolAllocation,
+  } from '$lib/nutrition/allocation';
 
   /** Extends FoodData with optional recipe-result fields returned by /api/recipes/food-search */
   type RecipeSearchItem = FoodData & {
@@ -44,8 +56,16 @@
     componentServingGrams?: number;
     /** Ingredient is shown in the recipe but partly/fully discarded before eating. */
     discarded?: boolean;
-    /** Percentage discarded, 0-100. Defaults to 100 when discarded is checked. */
+    /** Percentage discarded, 0-100. Defaults by discard type when discarded is checked. */
     discardPercent?: number;
+    /** Legacy discard category retained only while existing recipes are migrated. */
+    discardType?: DiscardType;
+    /** Canonical generic post-prep removal flag. */
+    removedAfterPrep?: boolean;
+    /** Entered post-prep removal amount. */
+    removalAmount?: number;
+    /** Unit for the entered post-prep removal amount. */
+    removalUnit?: AllocationUnit;
   }
 
   // v3.md §18 — per-section cooking method metadata for multi-stage recipes.
@@ -73,6 +93,33 @@
     fillClass?: string;
     /** Primary cook stage this section enters before: blank/1, 2, 3, or finish. */
     primaryEntryStage?: string;
+    /** Percentage of this section's prepared material that stays in this section. */
+    keepHerePercent?: number;
+    /** Generated identity for the material reserved from this section. */
+    outputPoolId?: string;
+    /** Generated pool consumed by this section, if any. */
+    reservedPoolId?: string;
+    /** Optional explicit amount consumed from the existing Reserved Pool. */
+    reservedPoolAmount?: AllocationAmount;
+    /** Component allocations represented by the existing output pool. */
+    outputPoolAllocations?: ReservedPoolAllocation[];
+    /** Four-way rendered-fat allocation for this heated section. */
+    renderedFatAllocation?: RenderedFatAllocationInput;
+    /** Calculated rendered-fat ledger for display or diagnostics. */
+    renderedFatLedger?: RenderedFatAllocationResult;
+    /** Default percentage of rendered fat discarded for this section. */
+    discardedFatPercent?: number;
+    /** Default percentage of marinade discarded for this section. */
+    discardedMarinadePercent?: number;
+  }
+
+  function clampPercent(value: unknown, fallback: number): number {
+    const numeric = typeof value === 'number' ? value : Number(value);
+    return Number.isFinite(numeric) ? Math.max(0, Math.min(100, numeric)) : fallback;
+  }
+
+  function generatedReservedPoolId(sectionKey: string): string {
+    return `reserved:${sectionKey}`;
   }
   
   export interface RecipeInstruction {
@@ -176,6 +223,44 @@
     );
     const fillClass = fcRaw && !isPrimaryOwnedFillClass ? fcRaw : undefined;
 
+    const keepHerePercent = clampPercent(s.keep_here_percent ?? s.keepHerePercent, 100);
+    const renderedFatAllocation = normalizeRenderedFatAllocation(s);
+    const rawOutputPoolId = String(s.output_pool_id ?? s.outputPoolId ?? '');
+    const outputPoolId = (keepHerePercent < 100 || renderedFatAllocation?.disposition === 'reserve')
+      ? (rawOutputPoolId || generatedReservedPoolId(key))
+      : undefined;
+    const rawReservedPoolId = String(s.reserved_pool_id ?? s.reservedPoolId ?? '');
+    const rawReservedPoolAmount = s.reserved_pool_amount ?? s.reservedPoolAmount;
+    const reservedPoolAmount = rawReservedPoolAmount && typeof rawReservedPoolAmount === 'object'
+      ? (() => {
+          const value = rawReservedPoolAmount as Record<string, unknown>;
+          const amount = Number(value.value);
+          if (!Number.isFinite(amount) || amount < 0) return undefined;
+          return {
+            value: amount,
+            unit: value.unit === 'grams' ? 'grams' as const : 'percent' as const,
+          };
+        })()
+      : undefined;
+    const rawOutputPoolAllocations = s.output_pool_allocations ?? s.outputPoolAllocations;
+    const outputPoolAllocations = Array.isArray(rawOutputPoolAllocations)
+      ? rawOutputPoolAllocations
+          .filter((value): value is Record<string, unknown> => Boolean(value && typeof value === 'object'))
+          .map((value) => ({
+            kind: value.kind === 'rendered_fat' ? 'rendered_fat' as const : 'prepared_material' as const,
+            grams: Number(value.grams),
+          }))
+          .filter((value) => Number.isFinite(value.grams) && value.grams >= 0)
+      : undefined;
+    const discardedFatPercent = clampPercent(
+      s.discarded_fat_percent ?? s.discardedFatPercent,
+      defaultDiscardPercent('rendered_fat')
+    );
+    const discardedMarinadePercent = clampPercent(
+      s.discarded_marinade_percent ?? s.discardedMarinadePercent,
+      defaultDiscardPercent('marinade')
+    );
+
     return {
       key,
       label,
@@ -191,6 +276,14 @@
       stages: hasSectionOwnedOvenStages ? stages : undefined,
       fillClass,
       primaryEntryStage,
+      keepHerePercent,
+      outputPoolId,
+      reservedPoolId: rawReservedPoolId || undefined,
+      reservedPoolAmount,
+      outputPoolAllocations: outputPoolAllocations?.length ? outputPoolAllocations : undefined,
+      renderedFatAllocation,
+      discardedFatPercent,
+      discardedMarinadePercent,
     };
   }
 
@@ -231,6 +324,14 @@
       SugarsTotal?: number;
     };
     gramsPerServing?: number | null;
+    allocationSections?: Array<{
+      sectionKey: string;
+      cookedGrams: number;
+      renderedFatEstimateGrams?: number;
+      renderedFatAllocation?: RenderedFatAllocationResult;
+      reservedPoolGrams?: number;
+      consumedReservedPoolGrams?: number;
+    }>;
     [key: string]: unknown;
   }
   
@@ -339,6 +440,15 @@
   // v3.md §18.1 — lowercase enum stored in recipe_sections.csv::cooking_method.
   const SECTION_COOKING_METHODS = ['raw', 'boiled', 'boiled covered', 'scalded', 'steamed', 'baked', 'baked covered', 'fried', 'deep-fried', 'sauteed', 'stir-fried', 'pan seared', 'grilled', 'broiled', 'microwave'];
   const SECTION_PREP_METHODS    = ['parboiled_long_grain_rice', 'parboiled', 'boiled', 'boiled covered', 'scalded', 'simmer', 'sub-simmer', 'braise', 'steamed', 'blanched', 'baked', 'baked covered', 'par-baked', 'fried', 'deep-fried', 'sauteed', 'stir-fried', 'pan seared', 'grilled', 'broiled', 'microwave', 'finish'];
+
+  function isHeatedPrepMethod(prepMethod: string | undefined, cookingMethod?: string): boolean {
+    const prep = prepMethod?.toLowerCase();
+    if (prep === 'finish' || prep === 'raw') return false;
+    return [prep, cookingMethod?.toLowerCase()].some((method) => Boolean(
+      method && method !== 'finish' && method !== 'raw'
+        && (SECTION_PREP_METHODS.includes(method) || SECTION_COOKING_METHODS.includes(method)),
+    ));
+  }
 
   // Fill class keys are persisted pipeline identifiers. Keep them stable, but
   // show human labels because this control may eventually be exposed to users.
@@ -548,8 +658,18 @@
           portionDesc: ing.portionDesc,
           portionGrams: ing.portionGrams,
           servingCount: ing.servingCount,
-          ingredientStatus: ing.exempt ? 'exempt' : 'required',
-          section: ing.section
+          ingredientStatus: ing.exempt ? 'exempt' : (ing.is_optional ? 'optional' : 'required'),
+          is_optional: ing.is_optional,
+          isDish: ing.isDish,
+          componentRef: ing.componentRef,
+          componentPer100g: ing.componentPer100g,
+          componentName: ing.componentName,
+          componentServingGrams: ing.componentServingGrams,
+          section: ing.section,
+          discarded: ing.discarded,
+          discardPercent: ing.discardPercent,
+          discardType: ing.discardType,
+          ...normalizeIngredientRemoval(ing as unknown as Record<string, unknown>)
         }))
       : [{ id: 1, name: '', quantity: '', gameFood: '', animal: '' }]
   ));
@@ -558,6 +678,287 @@
     .filter((section): section is RecipeSection => section !== null) ?? []);
   let sections = $state<RecipeSection[]>(_initialSections);
   let sectionAdvancedOpen = $state<Record<number, boolean>>({});
+
+  type GeneratedReservedPool = {
+    id: string;
+    label: string;
+    sourceSectionKey: string;
+    grams: number;
+  };
+
+  function sectionKeepHerePercent(section: RecipeSection): number {
+    return clampPercent(section.keepHerePercent, 100);
+  }
+
+  function sectionDiscardPercent(section: RecipeSection, discardType: DiscardType): number {
+    const value = discardType === 'rendered_fat'
+      ? section.discardedFatPercent
+      : discardType === 'marinade'
+        ? section.discardedMarinadePercent
+        : undefined;
+    return clampPercent(value, defaultDiscardPercent(discardType));
+  }
+
+  function ingredientDiscardDefault(ingredient: RecipeIngredient, discardType?: DiscardType): number {
+    const section = sections.find((candidate) => candidate.key === ingredient.section);
+    return section && discardType
+      ? sectionDiscardPercent(section, discardType)
+      : defaultDiscardPercent(discardType);
+  }
+
+  function ingredientRemovalUnit(ingredient: RecipeIngredient): AllocationUnit {
+    return ingredient.removalUnit ?? 'percent';
+  }
+
+  function ingredientRemovalAmount(ingredient: RecipeIngredient): number {
+    if (typeof ingredient.removalAmount === 'number' && Number.isFinite(ingredient.removalAmount)) {
+      return Math.max(0, ingredient.removalAmount);
+    }
+    if (typeof ingredient.discardPercent === 'number' && Number.isFinite(ingredient.discardPercent)) {
+      return clampPercent(ingredient.discardPercent, 100);
+    }
+    return 100;
+  }
+
+  function setIngredientRemovalEnabled(ingId: number, enabled: boolean) {
+    ingredients = ingredients.map((ingredient) => {
+      if (ingredient.id !== ingId) return ingredient;
+      if (!enabled) {
+        return {
+          ...ingredient,
+          removedAfterPrep: false,
+          discarded: false,
+          discardPercent: undefined,
+        };
+      }
+      const unit = ingredientRemovalUnit(ingredient);
+      const amount = ingredientRemovalAmount(ingredient);
+      return {
+        ...ingredient,
+        removedAfterPrep: true,
+        removalAmount: amount,
+        removalUnit: unit,
+      };
+    });
+  }
+
+  function setIngredientRemovalAmount(ingId: number, rawValue: number) {
+    ingredients = ingredients.map((ingredient) => {
+      if (ingredient.id !== ingId) return ingredient;
+      const amount = Number.isFinite(rawValue) ? Math.max(0, rawValue) : 0;
+      const unit = ingredientRemovalUnit(ingredient);
+      return {
+        ...ingredient,
+        removalAmount: unit === 'percent' ? clampPercent(amount, 100) : amount,
+        removalUnit: unit,
+      };
+    });
+  }
+
+  function setIngredientRemovalUnit(ingId: number, unit: AllocationUnit) {
+    ingredients = ingredients.map((ingredient) => {
+      if (ingredient.id !== ingId) return ingredient;
+      const amount = ingredientRemovalAmount(ingredient);
+      return {
+        ...ingredient,
+        removalUnit: unit,
+        removalAmount: unit === 'percent' ? clampPercent(amount, 100) : amount,
+      };
+    });
+  }
+
+  function renderedFatDisposition(section: RecipeSection): RenderedFatAllocationInput['disposition'] {
+    return section.renderedFatAllocation?.disposition ?? 'retain_all';
+  }
+
+  function renderedFatAmount(section: RecipeSection): number {
+    const amount = section.renderedFatAllocation?.amount;
+    return typeof amount === 'number' && Number.isFinite(amount) ? Math.max(0, amount) : 100;
+  }
+
+  function renderedFatUnit(section: RecipeSection): AllocationUnit {
+    return section.renderedFatAllocation?.unit ?? 'percent';
+  }
+
+  function setRenderedFatDisposition(sectionIndex: number, disposition: RenderedFatAllocationInput['disposition']) {
+    const current = sections[sectionIndex];
+    if (!current) return;
+    const previousPoolId = sectionOutputPoolId(current);
+    const needsPool = sectionKeepHerePercent(current) < 100 || disposition === 'reserve';
+    const nextPoolId = needsPool
+      ? (current.outputPoolId || generatedReservedPoolId(current.key))
+      : undefined;
+    sections = sections.map((section, index) => {
+      if (index !== sectionIndex) {
+        return previousPoolId !== nextPoolId && section.reservedPoolId === previousPoolId
+          ? { ...section, reservedPoolId: undefined, reservedPoolAmount: undefined }
+          : section;
+      }
+      if (disposition === 'retain_all' || disposition === 'discard_all') {
+        return { ...section, outputPoolId: nextPoolId, renderedFatAllocation: { disposition } };
+      }
+      return {
+        ...section,
+        outputPoolId: nextPoolId,
+        renderedFatAllocation: {
+          disposition,
+          amount: renderedFatAmount(section),
+          unit: renderedFatUnit(section),
+        },
+      };
+    });
+  }
+
+  function setRenderedFatAmount(sectionIndex: number, rawValue: number) {
+    sections = sections.map((section, index) => {
+      if (index !== sectionIndex || !section.renderedFatAllocation) return section;
+      const amount = Number.isFinite(rawValue) ? Math.max(0, rawValue) : 0;
+      return {
+        ...section,
+        renderedFatAllocation: {
+          ...section.renderedFatAllocation,
+          amount,
+        },
+      };
+    });
+  }
+
+  function setRenderedFatUnit(sectionIndex: number, unit: AllocationUnit) {
+    sections = sections.map((section, index) => {
+      if (index !== sectionIndex || !section.renderedFatAllocation) return section;
+      return {
+        ...section,
+        renderedFatAllocation: {
+          ...section.renderedFatAllocation,
+          unit,
+        },
+      };
+    });
+  }
+
+  function renderedFatPreview(section: RecipeSection): PreviewAllocationSection | undefined {
+    return liveNutritionJson?.allocationSections?.find((candidate) => candidate.sectionKey === section.key)
+      ?? persistedNutrition?.allocationSections?.find((candidate) => candidate.sectionKey === section.key);
+  }
+
+  function renderedFatEstimateForSection(section: RecipeSection): number {
+    const preview = renderedFatPreview(section);
+    if (typeof preview?.renderedFatEstimateGrams === 'number') return preview.renderedFatEstimateGrams;
+    return section.renderedFatLedger?.estimatedGrams ?? 0;
+  }
+
+  function consumedReservedPoolGramsForSection(section: RecipeSection): number {
+    const value = renderedFatPreview(section)?.consumedReservedPoolGrams;
+    return typeof value === 'number' ? value : 0;
+  }
+
+  function setSectionDiscardPercent(sectionIndex: number, discardType: DiscardType, rawValue: number) {
+    const value = clampPercent(rawValue, defaultDiscardPercent(discardType));
+    sections = sections.map((section, index) => {
+      if (index !== sectionIndex) return section;
+      if (discardType === 'rendered_fat') return { ...section, discardedFatPercent: value };
+      if (discardType === 'marinade') return { ...section, discardedMarinadePercent: value };
+      return section;
+    });
+  }
+
+  function linkedGramsForSection(sectionKey: string): number {
+    return ingredients
+      .filter((ingredient) => ingredient.section === sectionKey && hasIngredientNutritionLink(ingredient))
+      .reduce((total, ingredient) => total + (ingredient.portionGrams ?? 0) * (ingredient.servingCount ?? 1), 0);
+  }
+
+  function reserveGramsForSection(section: RecipeSection): number {
+    const ledgerSection = renderedFatPreview(section);
+    if (typeof ledgerSection?.reservedPoolGrams === 'number') {
+      return ledgerSection.reservedPoolGrams;
+    }
+    const keepHere = sectionKeepHerePercent(section);
+    return Math.max(0, linkedGramsForSection(section.key) * (1 - keepHere / 100));
+  }
+
+  function sectionOutputPoolId(section: RecipeSection): string {
+    return section.outputPoolId || generatedReservedPoolId(section.key);
+  }
+
+  function formatReserveGrams(grams: number): string {
+    return `${grams >= 10 ? grams.toFixed(0) : grams.toFixed(1)} g`;
+  }
+
+  let generatedReservedPools = $derived<GeneratedReservedPool[]>(
+    sections.flatMap((section) => {
+      if (sectionKeepHerePercent(section) >= 100 && renderedFatDisposition(section) !== 'reserve') return [];
+      return [{
+        id: sectionOutputPoolId(section),
+        label: section.label || section.key,
+        sourceSectionKey: section.key,
+        grams: reserveGramsForSection(section),
+      }];
+    })
+  );
+
+  function reservedPoolOptions(sectionKey: string): GeneratedReservedPool[] {
+    return generatedReservedPools.filter((pool) => pool.sourceSectionKey !== sectionKey);
+  }
+
+  function setSectionKeepHerePercent(sectionIndex: number, rawValue: number) {
+    const keepHerePercent = clampPercent(rawValue, 100);
+    const current = sections[sectionIndex];
+    if (!current) return;
+    const previousPoolId = sectionOutputPoolId(current);
+    const nextPoolId = (keepHerePercent < 100 || renderedFatDisposition(current) === 'reserve')
+      ? (current.outputPoolId || generatedReservedPoolId(current.key))
+      : undefined;
+    sections = sections.map((section, index) => {
+      if (index === sectionIndex) return { ...section, keepHerePercent, outputPoolId: nextPoolId };
+      return previousPoolId !== nextPoolId && section.reservedPoolId === previousPoolId
+        ? { ...section, reservedPoolId: undefined, reservedPoolAmount: undefined }
+        : section;
+    });
+  }
+
+  function setSectionReservedPool(sectionIndex: number, reservedPoolId: string) {
+    sections = sections.map((section, index) => index === sectionIndex
+      ? { ...section, reservedPoolId: reservedPoolId || undefined }
+      : section
+    );
+  }
+
+  function setSectionReservedPoolAmount(sectionIndex: number, rawValue: string) {
+    sections = sections.map((section, index) => {
+      if (index !== sectionIndex) return section;
+      if (!rawValue.trim()) return { ...section, reservedPoolAmount: undefined };
+      const value = Number(rawValue);
+      if (!Number.isFinite(value) || value < 0) return section;
+      const unit = section.reservedPoolAmount?.unit ?? 'percent';
+      return {
+        ...section,
+        reservedPoolAmount: {
+          value: unit === 'percent' ? clampPercent(value, 100) : value,
+          unit,
+        },
+      };
+    });
+  }
+
+  function setSectionReservedPoolUnit(sectionIndex: number, unit: AllocationUnit) {
+    sections = sections.map((section, index) => {
+      if (index !== sectionIndex) return section;
+      if (!section.reservedPoolAmount) {
+        return { ...section, reservedPoolAmount: { value: 0, unit } };
+      }
+      return {
+        ...section,
+        reservedPoolAmount: {
+          ...section.reservedPoolAmount,
+          unit,
+          value: unit === 'percent'
+            ? clampPercent(section.reservedPoolAmount.value, 100)
+            : Math.max(0, section.reservedPoolAmount.value),
+        },
+      };
+    });
+  }
 
   // Backfill missing/unknown ingredient.section assignments by carrying forward
   // the most recently-seen valid section (falls back to first section). This
@@ -957,9 +1358,55 @@
     ingredients = ingredients.map(i => i.id === ingId ? { ...i, ingredientStatus: status } : i);
   }
 
+  function inferDiscardType(ingredient: RecipeIngredient): DiscardType | undefined {
+    const section = sections.find((candidate) => candidate.key === ingredient.section);
+    const sectionText = `${section?.key ?? ''} ${section?.label ?? ''}`.toLowerCase();
+    const ingredientText = `${ingredient.name} ${ingredient.foodWord ?? ''}`.toLowerCase();
+    if (/marinade|marinating|brine|brined|soak|soaking/.test(sectionText)) return 'marinade';
+    if (/rendered|drippings?|lard|fatback|pork fat|beef fat|chicken fat|duck fat/.test(`${sectionText} ${ingredientText}`)) return 'rendered_fat';
+    return undefined;
+  }
+
+  function isHeatedIngredientPrep(ingredient: RecipeIngredient): boolean {
+    const section = sections.find((candidate) => candidate.key === ingredient.section);
+    return Boolean(section && isHeatedPrepMethod(section.prepMethod, section.cookingMethod));
+  }
+
+  function discardTypeFor(ingredient: RecipeIngredient): DiscardType | undefined {
+    return ingredient.discardType
+      ?? inferDiscardType(ingredient)
+      ?? (ingredient.discarded && isHeatedIngredientPrep(ingredient) ? 'other' : undefined);
+  }
+
+  function isDiscardEligible(ingredient: RecipeIngredient): boolean {
+    return Boolean(isHeatedIngredientPrep(ingredient) || discardTypeFor(ingredient) || ingredient.discarded);
+  }
+
+  function setIngredientDiscardType(ingId: number, rawType: string) {
+    const discardType: DiscardType | undefined = rawType === 'marinade' || rawType === 'rendered_fat' || rawType === 'other'
+      ? rawType
+      : undefined;
+    ingredients = ingredients.map((ingredient) => ingredient.id === ingId
+      ? {
+          ...ingredient,
+          discardType,
+          discardPercent: ingredient.discarded
+            ? (ingredient.discardPercent ?? ingredientDiscardDefault(ingredient, discardType))
+            : ingredient.discardPercent,
+        }
+      : ingredient
+    );
+  }
+
   function setIngredientDiscarded(ingId: number, discarded: boolean) {
     ingredients = ingredients.map(i => i.id === ingId
-      ? { ...i, discarded, discardPercent: discarded ? (i.discardPercent ?? 100) : undefined }
+      ? {
+          ...i,
+          discarded,
+          discardPercent: discarded
+            ? (i.discardPercent ?? ingredientDiscardDefault(i, discardTypeFor(i)))
+            : undefined,
+        }
       : i
     );
   }
@@ -1046,16 +1493,23 @@
   }
   function addSection() {
     const key = uniqueSectionKey('section_' + (sections.length + 1));
-    sections = [...sections, { key, label: '', prepMethod: 'none', cookingMethod: 'baked', yieldFactorWater: 1.0, boilMinutes: undefined }];
+    sections = [...sections, { key, label: '', prepMethod: 'none', cookingMethod: 'baked', yieldFactorWater: 1.0, boilMinutes: undefined, keepHerePercent: 100 }];
   }
   function removeSection(idx: number) {
     const removedKey = sections[idx]?.key;
+    const removedPoolId = sections[idx] ? sectionOutputPoolId(sections[idx]) : undefined;
     sections = sections.filter((_, i) => i !== idx);
     // Detach ingredients from the removed section (keep them in the recipe,
     // unsectioned) so the author doesn't lose data on an accidental click.
     if (removedKey) {
       ingredients = ingredients.map((ing) =>
         ing.section === removedKey ? { ...ing, section: undefined } : ing
+      );
+    }
+    if (removedPoolId) {
+      sections = sections.map((section) => section.reservedPoolId === removedPoolId
+        ? { ...section, reservedPoolId: undefined }
+        : section
       );
     }
   }
@@ -1074,6 +1528,18 @@
         );
       }
       next.key = newKey;
+      const oldPoolId = old.outputPoolId || generatedReservedPoolId(old.key);
+      const newPoolId = old.outputPoolId === generatedReservedPoolId(old.key)
+        ? generatedReservedPoolId(newKey)
+        : old.outputPoolId;
+      next.outputPoolId = newPoolId;
+      sections = sections.map((section, i) => i === idx
+        ? next
+        : section.reservedPoolId === oldPoolId
+          ? { ...section, reservedPoolId: newPoolId }
+          : section
+      );
+      return;
     }
     sections = sections.map((s, i) => (i === idx ? next : s));
   }
@@ -1083,7 +1549,7 @@
   function addSectionWithRow() {
     const idx = sections.length;
     const key = uniqueSectionKey(`section_${idx + 1}`);
-    sections = [...sections, { key, label: '', prepMethod: 'none', cookingMethod: 'baked', yieldFactorWater: 1.0, boilMinutes: undefined }];
+    sections = [...sections, { key, label: '', prepMethod: 'none', cookingMethod: 'baked', yieldFactorWater: 1.0, boilMinutes: undefined, keepHerePercent: 100 }];
     addIngredientToSection(key);
   }
 
@@ -1123,7 +1589,13 @@
         portionDesc: i.portionDesc || '',
         portionGrams: i.portionGrams ?? null,
         servingCount: i.servingCount ?? null,
-        exempt: i.ingredientStatus === 'exempt' || i.ingredientStatus === 'optional'
+        exempt: i.ingredientStatus === 'exempt' || i.ingredientStatus === 'optional',
+        removedAfterPrep: i.removedAfterPrep === true,
+        removalAmount: i.removalAmount ?? null,
+        removalUnit: i.removalUnit ?? null,
+        discarded: i.discarded === true,
+        discardPercent: i.discardPercent ?? null,
+        section: i.section ?? null,
       }));
 
     return JSON.stringify({
@@ -1133,6 +1605,17 @@
         cook3Method,
       linkMode,
       ingredients: ingredientSignature,
+      sections: sections.map((section) => ({
+        key: section.key,
+        prepMethod: section.prepMethod ?? null,
+        cookingMethod: section.cookingMethod,
+        keepHerePercent: section.keepHerePercent ?? 100,
+        outputPoolId: section.outputPoolId ?? null,
+        reservedPoolId: section.reservedPoolId ?? null,
+        reservedPoolAmount: section.reservedPoolAmount ?? null,
+        outputPoolAllocations: section.outputPoolAllocations ?? null,
+        renderedFatAllocation: section.renderedFatAllocation ?? null,
+      })),
       dishLink: dishLink
         ? {
             foodWord: dishLink.foodWord,
@@ -1173,8 +1656,15 @@
             portionGrams: i.portionGrams,
             servingCount: i.servingCount ?? 1,
             exempt: i.ingredientStatus === 'exempt' || i.ingredientStatus === 'optional',
-            discarded: i.discarded === true,
-            discardPercent: i.discarded === true ? (i.discardPercent ?? 100) : undefined,
+            ...(i.removedAfterPrep !== true && i.discarded === true ? {
+              discarded: true,
+              discardPercent: i.discardPercent ?? ingredientDiscardDefault(i, discardTypeFor(i)),
+            } : {}),
+            ...(typeof i.removedAfterPrep === 'boolean' ? {
+              removedAfterPrep: i.removedAfterPrep,
+              ...(typeof i.removalAmount === 'number' ? { removalAmount: i.removalAmount } : {}),
+              ...(i.removalUnit ? { removalUnit: i.removalUnit } : {}),
+            } : {}),
             ...(i.section ? { section: i.section } : {}),
             ...(i.componentRef ? { componentRef: i.componentRef } : {}),
             ...(i.componentPer100g ? { componentPer100g: i.componentPer100g } : {}),
@@ -1216,6 +1706,12 @@
           ...(Array.isArray(sec.stages) && sec.stages.length > 0 ? { stages: sec.stages } : {}),
           ...(sec.fillClass && !sectionFillClassOwnedByPrimary(sec) ? { fillClass: sec.fillClass } : {}),
           ...(sec.primaryEntryStage ? { primaryEntryStage: sec.primaryEntryStage } : {}),
+          ...(typeof sec.keepHerePercent === 'number' ? { keepHerePercent: sec.keepHerePercent } : {}),
+          ...(sec.outputPoolId ? { outputPoolId: sec.outputPoolId } : {}),
+          ...(sec.reservedPoolId ? { reservedPoolId: sec.reservedPoolId } : {}),
+          ...(sec.reservedPoolAmount ? { reservedPoolAmount: sec.reservedPoolAmount } : {}),
+          ...(sec.outputPoolAllocations ? { outputPoolAllocations: sec.outputPoolAllocations } : {}),
+          ...(sec.renderedFatAllocation ? { renderedFatAllocation: sec.renderedFatAllocation } : {}),
           // Inject top-bar oven params as fallback for sections with no explicit stages.
           ...(!(Array.isArray(sec.stages) && sec.stages.length > 0) ? {
             cookTempF:   typeof sec.cookTempF   === 'number' ? sec.cookTempF   : (cookTempF   ?? undefined),
@@ -1245,11 +1741,20 @@
   );
 
   // ─── Canonical live preview ──────────────────────────────────────────────────
+  type PreviewAllocationSection = {
+    sectionKey: string;
+    cookedGrams: number;
+    renderedFatEstimateGrams?: number;
+    renderedFatAllocation?: RenderedFatAllocationResult;
+    reservedPoolGrams?: number;
+    consumedReservedPoolGrams?: number;
+  };
   type PreviewNutrition = {
     perServing: { cal: number; pro: number; fat: number; carb: number; fib: number; sug: number };
     per100g?: { Energy_KCal: number; Protein: number; TotalLipidFat: number; Carbohydrate: number; FiberTotalDietary: number; SugarsTotal: number; Water: number };
     gramsPerServing: number | null;
     servings: number;
+    allocationSections?: PreviewAllocationSection[];
   };
   let liveNutritionJson = $state<PreviewNutrition | null>(null);
   let canonicalNutritionJson = $state<PreviewNutrition | null>(null);
@@ -1326,6 +1831,7 @@
     componentRef?: string;
     discarded?: boolean;
     discardPercent?: number;
+    discardType?: DiscardType;
   };
   type V3Build = {
     recipe_id: string;
@@ -1496,6 +2002,8 @@
               ingredient_group: ing.section,
               discarded: ing.discarded,
               discardPercent: ing.discardPercent,
+              discardType: ing.discardType,
+              ...normalizeIngredientRemoval(ing as unknown as Record<string, unknown>),
             };
           });
           nextIngredientId = ingredients.length + 1;
@@ -1525,6 +2033,7 @@
                 ingredient_group: (ing as RecipeIngredient).ingredient_group || ing.section,
                 discarded: (ing as RecipeIngredient).discarded,
                 discardPercent: (ing as RecipeIngredient).discardPercent,
+                discardType: (ing as RecipeIngredient).discardType,
               })),
             ];
             nextIngredientId = extraIdx;
@@ -1839,6 +2348,12 @@
         quantity: i.quantity,
         gameFood: i.gameFood,
         animal: i.animal,
+        ...(i.componentRef ? {
+          componentRef: i.componentRef,
+          ...(i.componentPer100g ? { componentPer100g: i.componentPer100g } : {}),
+          ...(i.componentName ? { componentName: i.componentName } : {}),
+          ...(typeof i.componentServingGrams === 'number' ? { componentServingGrams: i.componentServingGrams } : {}),
+        } : {}),
         ...(i.section ? { section: i.section } : {}),
         ...(linked ? {
           ...(hasIngredientNutritionLink(i) ? {
@@ -1850,7 +2365,17 @@
           } : {}),
           ...(i.ingredientStatus === 'exempt' ? { exempt: true } : {}),
           ...(i.ingredientStatus === 'optional' ? { is_optional: true } : {}),
-          ...(i.discarded ? { discarded: true, discardPercent: i.discardPercent ?? 100 } : {})
+          ...(i.removedAfterPrep !== true && i.discarded ? { discarded: true, discardPercent: i.discardPercent ?? ingredientDiscardDefault(i, discardTypeFor(i)) } : {}),
+          ...(typeof i.removedAfterPrep === 'boolean' ? {
+            removedAfterPrep: i.removedAfterPrep,
+            ...(typeof i.removalAmount === 'number' ? { removalAmount: i.removalAmount } : {}),
+            ...(i.removalUnit ? { removalUnit: i.removalUnit } : {}),
+          } : {})
+        } : {}),
+        ...(!linked && typeof i.removedAfterPrep === 'boolean' ? {
+          removedAfterPrep: i.removedAfterPrep,
+          ...(typeof i.removalAmount === 'number' ? { removalAmount: i.removalAmount } : {}),
+          ...(i.removalUnit ? { removalUnit: i.removalUnit } : {}),
         } : {})
       })),
       instructions: instructions.filter(i => i.text.trim()),
@@ -1859,7 +2384,19 @@
       ...(sections.length > 0 ? {
         // Inject recipe-level cook time/temp into every section so the pipeline
         // can build oven stages without needing per-section overrides.
-        sections: sections.map(s => ({ ...s, cookMinutes: cookMinutes ?? undefined, cookTempF: cookTempF ?? undefined }))
+        sections: sections.map((section) => {
+          const {
+            discardedFatPercent: _discardedFatPercent,
+            discardedMarinadePercent: _discardedMarinadePercent,
+            renderedFatLedger: _renderedFatLedger,
+            ...persistedSection
+          } = section;
+          return {
+            ...persistedSection,
+            cookMinutes: cookMinutes ?? undefined,
+            cookTempF: cookTempF ?? undefined,
+          };
+        })
       } : {})
     };
     
@@ -2038,6 +2575,8 @@
       ingredientStatus: (ing as RecipeIngredient).ingredientStatus ?? 'required',
       discarded: (ing as RecipeIngredient).discarded,
       discardPercent: (ing as RecipeIngredient).discardPercent,
+      discardType: (ing as RecipeIngredient).discardType,
+      ...normalizeIngredientRemoval(ing as unknown as Record<string, unknown>),
       // v3.md §18 — carry per-row section assignment so suggestion-fills
       // can reconstruct section grouping in the editor.
       section:
@@ -3029,6 +3568,60 @@
               <option value={m}>{PREP_METHOD_DISPLAY[m] ?? m}</option>
             {/each}
           </select>
+          <label class="section-pool-field" title="Percentage of this section's prepared material that stays here">
+            <span>Keep here:</span>
+            <input
+              type="number"
+              min="0"
+              max="100"
+              step="1"
+              class="form-input section-percent-input"
+              value={sectionKeepHerePercent(sec)}
+              oninput={(e) => setSectionKeepHerePercent(sIdx, Number((e.currentTarget as HTMLInputElement).value))}
+            />
+            <span>%</span>
+          </label>
+          <span class="section-reserve-estimate">Reserve pool: {formatReserveGrams(reserveGramsForSection(sec))}</span>
+          {#if sec.reservedPoolId && consumedReservedPoolGramsForSection(sec) > 0}
+            <span class="section-consumed-estimate">Uses {formatReserveGrams(consumedReservedPoolGramsForSection(sec))}</span>
+          {/if}
+          <label class="section-pool-field section-reserved-pool-field" title="Use prepared material reserved by another section">
+            <span>Reserved Pool:</span>
+            <select
+              class="form-input section-pool-select"
+              value={sec.reservedPoolId ?? ''}
+              disabled={reservedPoolOptions(sec.key).length === 0}
+              onchange={(e) => setSectionReservedPool(sIdx, (e.currentTarget as HTMLSelectElement).value)}
+            >
+              <option value="">{reservedPoolOptions(sec.key).length === 0 ? 'None available' : 'Select pool'}</option>
+              {#each reservedPoolOptions(sec.key) as pool}
+                <option value={pool.id}>{pool.label} ({formatReserveGrams(pool.grams)})</option>
+              {/each}
+            </select>
+          </label>
+          {#if sec.reservedPoolId}
+            <label class="section-pool-field" title="Leave blank to consume the full Reserved Pool">
+              <span>Use:</span>
+              <input
+                type="number"
+                min="0"
+                max={sec.reservedPoolAmount?.unit === 'percent' ? 100 : undefined}
+                step={sec.reservedPoolAmount?.unit === 'percent' ? 1 : 0.1}
+                class="form-input section-percent-input"
+                placeholder="all"
+                value={sec.reservedPoolAmount?.value ?? ''}
+                oninput={(e) => setSectionReservedPoolAmount(sIdx, (e.currentTarget as HTMLInputElement).value)}
+              />
+              <select
+                class="form-input allocation-unit-select"
+                value={sec.reservedPoolAmount?.unit ?? 'percent'}
+                onchange={(e) => setSectionReservedPoolUnit(sIdx, (e.currentTarget as HTMLSelectElement).value as AllocationUnit)}
+              >
+                <option value="percent">%</option>
+                <option value="grams">g</option>
+              </select>
+            </label>
+          {/if}
           {#if moderatorMode}
             <button
               type="button"
@@ -3044,6 +3637,55 @@
             onclick={() => removeSection(sIdx)}
             aria-label="Remove section"
           >✕</button>
+        </div>
+        <div class="section-allocation-controls" aria-label="Section material allocation">
+          <p class="section-allocation-note">Keep here applies to prepared material. Rendered fat is allocated separately.</p>
+          {#if isHeatedPrepMethod(sec.prepMethod, sec.cookingMethod)}
+            {@const fatPreview = renderedFatPreview(sec)}
+            {@const fatLedger = fatPreview?.renderedFatAllocation ?? sec.renderedFatLedger ?? calculateRenderedFatAllocation(renderedFatEstimateForSection(sec), sec.renderedFatAllocation)}
+            <div class="rendered-fat-controls">
+              <label class="section-discard-field" title="Choose what happens to rendered fat after this heated prep.">
+                <span>Rendered fat:</span>
+                <select
+                  class="form-input rendered-fat-disposition-select"
+                  value={renderedFatDisposition(sec)}
+                  onchange={(e) => setRenderedFatDisposition(sIdx, (e.currentTarget as HTMLSelectElement).value as RenderedFatAllocationInput['disposition'])}
+                >
+                  <option value="retain_all">Retain all here</option>
+                  <option value="discard_all">Discard all</option>
+                  <option value="retain_here">Retain an amount here</option>
+                  <option value="reserve">Reserve an amount</option>
+                </select>
+              </label>
+              {#if renderedFatDisposition(sec) === 'retain_here' || renderedFatDisposition(sec) === 'reserve'}
+                <label class="section-discard-field" title="Enter the retained or reserved rendered-fat amount.">
+                  <span>{renderedFatDisposition(sec) === 'reserve' ? 'Reserve' : 'Retain'}:</span>
+                  <input
+                    type="number"
+                    min="0"
+                    step="0.1"
+                    class="form-input discard-percent-input"
+                    value={renderedFatAmount(sec)}
+                    oninput={(e) => setRenderedFatAmount(sIdx, Number((e.currentTarget as HTMLInputElement).value))}
+                  />
+                  <select
+                    class="form-input allocation-unit-select"
+                    value={renderedFatUnit(sec)}
+                    onchange={(e) => setRenderedFatUnit(sIdx, (e.currentTarget as HTMLSelectElement).value as AllocationUnit)}
+                  >
+                    <option value="percent">%</option>
+                    <option value="grams">g</option>
+                  </select>
+                </label>
+              {/if}
+              <span class="rendered-fat-ledger" title="Calculated from the section's prepared output.">
+                Estimated {formatReserveGrams(renderedFatEstimateForSection(sec))}
+                · retained {formatReserveGrams(fatLedger.retainedGrams)}
+                · reserved {formatReserveGrams(fatLedger.reservedGrams)}
+                · discarded {formatReserveGrams(fatLedger.discardedGrams)}
+              </span>
+            </div>
+          {/if}
         </div>
         {#if sec.prepMethod === 'parboiled_long_grain_rice'}
           <p class="parboiled-rice-info-note">Parboiled to 70% cooked absorbs 1.05 cups of water per cup of long-grain rice</p>
@@ -3225,28 +3867,36 @@
                 </div>
               {/if}
 
-              {#if hasIngredientNutritionLink(ingredient)}
+              {#if hasIngredientNutritionLink(ingredient) || isDiscardEligible(ingredient)}
                 <div class="discard-controls-row">
                   <label class="discard-checkbox-label">
                     <input
                       type="checkbox"
-                      checked={ingredient.discarded === true}
-                      onchange={(e) => setIngredientDiscarded(ingredient.id, (e.target as HTMLInputElement).checked)}
+                      checked={ingredient.removedAfterPrep === true || ingredient.discarded === true}
+                      onchange={(e) => setIngredientRemovalEnabled(ingredient.id, (e.target as HTMLInputElement).checked)}
                     />
-                    Discarded
+                    Remove this ingredient after prep
                   </label>
-                  {#if ingredient.discarded}
+                  {#if ingredient.removedAfterPrep === true || ingredient.discarded === true}
                     <label class="discard-percent-label">
-                      % discarded
+                      Amount:
                       <input
                         type="number"
                         min="0"
-                        max="100"
-                        step="1"
+                        max={ingredientRemovalUnit(ingredient) === 'percent' ? 100 : undefined}
+                        step={ingredientRemovalUnit(ingredient) === 'percent' ? 1 : 0.1}
                         class="discard-percent-input"
-                        value={ingredient.discardPercent ?? 100}
-                        oninput={(e) => setIngredientDiscardPercent(ingredient.id, Number((e.target as HTMLInputElement).value))}
+                        value={ingredientRemovalAmount(ingredient)}
+                        oninput={(e) => setIngredientRemovalAmount(ingredient.id, Number((e.currentTarget as HTMLInputElement).value))}
                       />
+                      <select
+                        class="form-input allocation-unit-select"
+                        value={ingredientRemovalUnit(ingredient)}
+                        onchange={(e) => setIngredientRemovalUnit(ingredient.id, (e.currentTarget as HTMLSelectElement).value as AllocationUnit)}
+                      >
+                        <option value="percent">%</option>
+                        <option value="grams">g</option>
+                      </select>
                     </label>
                   {/if}
                 </div>
@@ -4217,6 +4867,54 @@
     border-bottom: 1px dashed #cbd5e0;
     margin-bottom: 8px;
   }
+  .section-discard-defaults {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    margin: -2px 0 8px;
+    color: #718096;
+    font-size: 0.76rem;
+  }
+  .section-discard-field {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+  }
+  .section-allocation-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    margin: -2px 0 8px;
+    color: #718096;
+    font-size: 0.76rem;
+  }
+  .section-allocation-note {
+    margin: 0;
+    color: #718096;
+  }
+  .rendered-fat-controls {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    flex-wrap: wrap;
+  }
+  .rendered-fat-disposition-select {
+    min-width: 168px;
+    padding: 3px 5px;
+    font-size: 0.78rem;
+    background: white;
+  }
+  .allocation-unit-select {
+    padding: 3px 5px;
+    font-size: 0.78rem;
+    background: white;
+  }
+  .rendered-fat-ledger {
+    color: #4a5568;
+  }
   .section-header-bar .section-label-input {
     flex: 1 1 180px;
     min-width: 140px;
@@ -4230,6 +4928,88 @@
     padding: 5px 6px;
     font-size: 0.85rem;
     background: white;
+  }
+  .section-pool-field {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: #4a5568;
+    font-size: 0.78rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .section-percent-input {
+    width: 80px;
+    min-width: 80px;
+    box-sizing: border-box;
+    padding: 4px 5px;
+    text-align: right;
+    font-size: 0.82rem;
+    background: white;
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+  .section-percent-input::-webkit-outer-spin-button,
+  .section-percent-input::-webkit-inner-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+  }
+  .section-reserve-estimate {
+    padding: 4px 7px;
+    color: #744210;
+    background: #fffaf0;
+    border: 1px solid #f6ad55;
+    border-radius: 4px;
+    font-size: 0.78rem;
+    white-space: nowrap;
+  }
+  .section-consumed-estimate {
+    color: #276749;
+    font-size: 0.78rem;
+    white-space: nowrap;
+  }
+  .section-pool-select {
+    min-width: 150px;
+    max-width: 220px;
+    padding: 4px 5px;
+    font-size: 0.8rem;
+    background: white;
+  }
+  .discard-controls-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    color: #4a5568;
+    font-size: 0.8rem;
+  }
+  .discard-type-select {
+    width: 128px;
+    padding: 3px 5px;
+    font-size: 0.78rem;
+    background: white;
+  }
+  .discard-checkbox-label,
+  .discard-percent-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .discard-percent-input {
+    width: 80px;
+    min-width: 80px;
+    box-sizing: border-box;
+    padding: 3px 5px;
+    text-align: right;
+    font-size: 0.78rem;
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+  .discard-percent-input::-webkit-outer-spin-button,
+  .discard-percent-input::-webkit-inner-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
   }
   .section-card-dash {
     color: #a0aec0;

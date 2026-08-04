@@ -49,9 +49,10 @@ import { fetchNutrientsByNdb }    from '$lib/server/nutrition/fetchNutrients.js'
 function isValidIngredient(x: unknown): x is CommunityIngredient {
   if (!x || typeof x !== 'object') return false;
   const obj = x as Record<string, unknown>;
+  const hasNdbNo = typeof obj.ndbNo === 'string' && obj.ndbNo.trim().length > 0;
+  const hasComponentNutrition = !!obj.componentPer100g && typeof obj.componentPer100g === 'object';
   return (
-    typeof obj.ndbNo        === 'string' &&
-    obj.ndbNo.trim().length > 0 &&
+    (hasNdbNo || hasComponentNutrition) &&
     typeof obj.portionGrams === 'number' &&
     Number.isFinite(obj.portionGrams) &&
     obj.portionGrams >= 0
@@ -155,7 +156,8 @@ export const POST: RequestHandler = async ({ request }) => {
   // ── Fetch nutrients from Turso (SR Legacy comboo.db) ───────────────────────────
   const ndbNos = (ingredients as CommunityIngredient[])
     .filter(i => !i.exempt && !i.isOptional)
-    .map(i => i.ndbNo);
+    .map(i => i.ndbNo)
+    .filter((ndbNo) => ndbNo.trim().length > 0);
 
   let nutrientMap;
   try {

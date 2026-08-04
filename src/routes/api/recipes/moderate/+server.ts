@@ -1,6 +1,7 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 import { execute, queryAll } from '$lib/server/turso';
+import { validateRawAllocationIngredients, validateRawAllocationSections } from '$lib/nutrition/allocation';
 import { toDisplayRecipeCategory, toStoredRecipeCategory } from '$lib/farmers-basket/recipe-categories';
 import { deleteRecipeImage, extractPublicId } from '$lib/server/cloudinary';
 
@@ -56,6 +57,17 @@ function parseJson<T>(value: string | null | undefined, fallback: T): T {
   } catch {
     return fallback;
   }
+}
+
+function validateAllocationPayload(rawSections: unknown, rawIngredients?: unknown): { errors: ReturnType<typeof validateRawAllocationSections>; warnings: ReturnType<typeof validateRawAllocationSections> } {
+  const issues = [
+    ...validateRawAllocationSections(Array.isArray(rawSections) ? rawSections : []),
+    ...validateRawAllocationIngredients(Array.isArray(rawIngredients) ? rawIngredients : []),
+  ];
+  return {
+    errors: issues.filter((issue) => issue.severity === 'error'),
+    warnings: issues.filter((issue) => issue.severity === 'warning'),
+  };
 }
 
 function buildPlayerSubmission(row: Record<string, unknown>): RecipeSubmission {
@@ -268,6 +280,13 @@ export const POST: RequestHandler = async ({ request }) => {
       if (!recipeName || !recipeName.trim()) {
         return json({ error: 'Recipe name required' }, { status: 400 });
       }
+      const allocation = validateAllocationPayload(sections, ingredients);
+      if (allocation.errors.length > 0) {
+        return json({ error: 'Invalid allocation metadata', allocationIssues: allocation.errors }, { status: 400 });
+      }
+      for (const issue of allocation.warnings) {
+        console.warn('[ALLOCATIONS]', issue.message, issue.poolId ?? issue.sectionKey ?? '');
+      }
 
       const newId = `admin-${Date.now()}`;
       const now = new Date().toISOString();
@@ -329,8 +348,8 @@ export const POST: RequestHandler = async ({ request }) => {
       return json({ error: 'Missing recipe id' }, { status: 400 });
     }
 
-    const existing = await queryAll<{ id: string; recipeName: string; status: string }>(
-      `SELECT recipe_id AS id, recipe_name AS recipeName, status FROM player_recipes WHERE recipe_id = ?`,
+    const existing = await queryAll<{ id: string; recipeName: string; status: string; sectionsJson: string | null }>(
+      `SELECT recipe_id AS id, recipe_name AS recipeName, status, sections_json AS sectionsJson FROM player_recipes WHERE recipe_id = ?`,
       [id]
     );
     if (existing.length === 0) {
@@ -345,6 +364,16 @@ export const POST: RequestHandler = async ({ request }) => {
     if (action === 'approve') {
       if (!gameFoods || gameFoods.length === 0) {
         return json({ error: 'Game foods required for approval' }, { status: 400 });
+      }
+      const allocation = validateAllocationPayload(
+        Array.isArray(sections) ? sections : parseJson<unknown[]>(existing[0].sectionsJson, []),
+        ingredients,
+      );
+      if (allocation.errors.length > 0) {
+        return json({ error: 'Invalid allocation metadata', allocationIssues: allocation.errors }, { status: 400 });
+      }
+      for (const issue of allocation.warnings) {
+        console.warn('[ALLOCATIONS]', issue.message, issue.poolId ?? issue.sectionKey ?? '');
       }
 
       await execute(
@@ -443,6 +472,16 @@ export const PATCH: RequestHandler = async ({ request }) => {
       : null;
 
     const isPlayerRecipe = id.startsWith('recipe-');
+
+    if (Array.isArray(updates.sections)) {
+      const allocation = validateAllocationPayload(updates.sections, updates.ingredients);
+      if (allocation.errors.length > 0) {
+        return json({ error: 'Invalid allocation metadata', allocationIssues: allocation.errors }, { status: 400 });
+      }
+      for (const issue of allocation.warnings) {
+        console.warn('[ALLOCATIONS]', issue.message, issue.poolId ?? issue.sectionKey ?? '');
+      }
+    }
 
     if (isPlayerRecipe) {
       const existing = await queryAll<{ id: string; recipeName: string; imageUrl: string | null }>(

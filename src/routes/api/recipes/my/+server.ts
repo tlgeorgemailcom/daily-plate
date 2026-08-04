@@ -3,6 +3,7 @@ import type { RequestHandler } from './$types';
 import { queryAll, execute } from '$lib/server/turso';
 import { buildRecipeCommunityV3, type CommunitySectionV3, type PrimaryCookStage } from '$lib/nutrition/buildRecipeCommunityV3';
 import type { CommunityIngredient } from '$lib/nutrition/types';
+import { normalizeIngredientRemoval, validateRawAllocationIngredients, validateRawAllocationSections, type AllocationValidationIssue } from '$lib/nutrition/allocation';
 import { fetchNutrientsByNdb } from '$lib/server/nutrition/fetchNutrients';
 import { toDisplayRecipeCategory, toStoredRecipeCategory } from '$lib/farmers-basket/recipe-categories';
 
@@ -83,20 +84,24 @@ async function calcCommunityNutrition(
   cook3Minutes?: unknown,
   cook3TempF?: unknown,
   cook3FillClass?: unknown,
-): Promise<{ nutritionJson: object | null; plausibilityFlags: string[]; blocked: boolean; missingIngredients: Array<{ ndbNo: string; displayName?: string }> }> {
+): Promise<{ nutritionJson: object | null; plausibilityFlags: string[]; blocked: boolean; missingIngredients: Array<{ ndbNo: string; displayName?: string }>; allocationIssues: AllocationValidationIssue[] }> {
   const sections = (sectionsRaw as unknown[]).filter(
     (s): s is CommunitySectionV3 =>
       !!s && typeof s === 'object' && typeof (s as Record<string, unknown>).sectionKey === 'string',
   );
   const ingredients: CommunityIngredient[] = (ingredientsRaw as unknown[]).map(r => {
     const obj = r as Record<string, unknown>;
+    const removal = normalizeIngredientRemoval(obj);
     return {
       ndbNo:        String(obj.ndbNo ?? ''),
       displayName:  String(obj.name ?? obj.displayName ?? ''),
-      portionGrams: Number(obj.portionGrams ?? 0),
-      sectionKey:   typeof obj.section === 'string' ? obj.section : undefined,
+      portionGrams: Number(obj.portionGrams ?? 0) * Math.max(1, Number(obj.servingCount ?? 1)),
+      sectionKey:   typeof (obj.sectionKey ?? obj.section) === 'string' ? String(obj.sectionKey ?? obj.section) : undefined,
       isOptional:   obj.ingredientStatus === 'optional' || obj.exempt === true,
       exempt:       obj.ingredientStatus === 'exempt',
+      removedAfterPrep: removal.removedAfterPrep,
+      removalAmount: removal.removalAmount,
+      removalUnit: removal.removalUnit,
       discarded:    obj.discarded === true,
       discardPercent: typeof obj.discardPercent === 'number' ? obj.discardPercent : undefined,
       ...(obj.componentRef ? { componentRef: String(obj.componentRef) } : {}),
@@ -104,11 +109,12 @@ async function calcCommunityNutrition(
     };
   }).filter(i => (i.ndbNo || i.componentPer100g) && i.portionGrams > 0);
 
-  if (ingredients.length === 0) return { nutritionJson: null, plausibilityFlags: [], blocked: false, missingIngredients: [] };
+  if (ingredients.length === 0) return { nutritionJson: null, plausibilityFlags: [], blocked: false, missingIngredients: [], allocationIssues: [] };
 
   const ndbNos = ingredients
     .filter(i => !i.isOptional && !i.exempt)
-    .map(i => i.ndbNo);
+    .map(i => i.ndbNo)
+    .filter((ndbNo) => ndbNo.trim().length > 0);
 
   const nutrientMap = await fetchNutrientsByNdb(ndbNos);
   const servingsNum        = Math.max(1, Number(servings ?? 1));
@@ -144,7 +150,7 @@ async function calcCommunityNutrition(
   );
 
   const p100  = result.per100g;
-  const gps   = result.gramsPerServing;
+  const gps   = result.servings > 0 ? result.totalCookedGrams / result.servings : result.gramsPerServing;
   const scale = gps / 100;
   const nutritionJson = {
     perServing: {
@@ -166,8 +172,22 @@ async function calcCommunityNutrition(
     },
     gramsPerServing: gps,
     servings:        servingsNum,
+    allocationSections: result.sections.map((section) => ({
+      sectionKey: section.sectionKey,
+      cookedGrams: section.cookedGrams,
+      renderedFatEstimateGrams: section.renderedFatEstimateGrams,
+      renderedFatAllocation: section.renderedFatAllocation,
+      reservedPoolGrams: section.reservedPoolGrams,
+      consumedReservedPoolGrams: section.consumedReservedPoolGrams,
+    })),
   };
-  return { nutritionJson, plausibilityFlags: result.plausibility.flags, blocked: result.plausibility.blocked, missingIngredients: result.plausibility.missingIngredients };
+  return {
+    nutritionJson,
+    plausibilityFlags: result.plausibility.flags,
+    blocked: result.plausibility.blocked,
+    missingIngredients: result.plausibility.missingIngredients,
+    allocationIssues: result.allocationIssues ?? [],
+  };
 }
 
 // GET: Fetch recipes by IDs (anonymous) OR by player_id (subscribers)
@@ -358,6 +378,17 @@ export const PATCH: RequestHandler = async ({ request }) => {
     let nutritionJson: string | null = null;
     let plausibilityFlags: string[] = [];
     const updateSections = Array.isArray(updates.sections) ? updates.sections : [];
+    const allocationIssues = [
+      ...validateRawAllocationSections(updateSections),
+      ...validateRawAllocationIngredients(Array.isArray(updates.ingredients) ? updates.ingredients : []),
+    ];
+    const allocationErrors = allocationIssues.filter((issue) => issue.severity === 'error');
+    if (allocationErrors.length > 0) {
+      return json({ error: 'Invalid allocation metadata', allocationIssues: allocationErrors }, { status: 400 });
+    }
+    for (const issue of allocationIssues.filter((candidate) => candidate.severity === 'warning')) {
+      console.warn('[ALLOCATIONS]', issue.message, issue.poolId ?? issue.sectionKey ?? '');
+    }
     const hasCommunityBuild =
       updateSections.length > 0 &&
       rawIngs.length > 0 &&
@@ -390,6 +421,9 @@ export const PATCH: RequestHandler = async ({ request }) => {
         (updates as { cook3TempF?: unknown }).cook3TempF,
         (updates as { cook3FillClass?: unknown }).cook3FillClass,
       );
+      if (comm.allocationIssues.length > 0) {
+        return json({ error: 'Invalid allocation metadata', allocationIssues: comm.allocationIssues }, { status: 400 });
+      }
       if (comm.blocked) {
         return json({ error: 'missing_ndb', missingIngredients: comm.missingIngredients }, { status: 422 });
       }

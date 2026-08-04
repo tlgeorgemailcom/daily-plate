@@ -836,6 +836,8 @@ git commit -m "Add RECIPE_ID Recipe Name (Rule X, dietary_category, cooking_meth
 git push
 ```
 
+**Sandbox rule:** Run `git push` with network access outside the terminal sandbox. If the sandbox blocks the push, do not retry it inside the sandbox; rerun the same command from an unsandboxed host terminal or request unsandboxed execution. Confirm the remote reports `main -> main` before declaring the push complete.
+
 **`git push` is required for Vercel to deploy the update.** The static bundle (`generated-levels.ts`), `food-portions.ts`, and all CSV-derived assets are baked into the Vercel build at deploy time. Turso is updated the moment `upload.py --commit` and `insert_new.py --commit` run, but the front-end app (served by Vercel) will not reflect any new recipe, food-portions entry, or instruction change until a push triggers a new Vercel deployment.
 
 Always commit `recipes_bundle.json` if `generate_bundle.py` was run.

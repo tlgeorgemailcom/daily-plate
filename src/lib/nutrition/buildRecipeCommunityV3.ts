@@ -32,6 +32,14 @@ import type {
 } from './types.js';
 import { inferFillingClass } from './inferFillingClass.js';
 import { BINDING, calcYieldWater } from './yieldCalc.js';
+import {
+  allocationAmountToGrams,
+  calculateRemovalGrams,
+  calculateRenderedFatAllocation,
+  normalizeIngredientRemoval,
+  normalizeRenderedFatAllocation,
+  type AllocationValidationIssue,
+} from './allocation.js';
 const PARBOILED_RICE_CUP_GRAMS = 200;
 const PARBOILED_RICE_WATER_CUPS_PER_CUP = 1.05;
 const WATER_GRAMS_PER_CUP = 236.588;
@@ -49,12 +57,6 @@ const STOCK_EXTRACTION: Record<string, { yfp: number; yff: number; yfc: number; 
   vegetable_stock: { yfp: 0.484, yff: 0.950, yfc: 0.290, yfo: 0.02 },
   // STOCK_007 Vegetable Stock: minimal fat (yff=0.950); yfp=0.484; yfc=0.290; Rule C calibrated.
 };
-
-function retainedIngredientFraction(ing: CommunityIngredient): number {
-  if (!ing.discarded) return 1;
-  const discardPercent = Number.isFinite(ing.discardPercent) ? ing.discardPercent! : 100;
-  return Math.max(0, Math.min(1, 1 - discardPercent / 100));
-}
 
 function methodStovetopTempF(method: string | undefined | null): number {
   const m = method?.trim().toLowerCase().replace(/_/g, ' ') ?? '';
@@ -76,7 +78,7 @@ import {
 } from '$lib/data/cookingLossModel.js';
 
 // ── Nutrient key list (same as V1) ────────────────────────────────────────────
-const MACRO_KEYS: Array<keyof Omit<NutrientRow, 'ndbNo' | 'longDesc' | 'fdGrpCd'>> = [
+const MACRO_KEYS: Array<keyof MacroMap> = [
   'energy_KCal',
   'water',
   'protein',
@@ -154,6 +156,30 @@ const FAT_SOLUBLE_KEYS = new Set<string>([
   'vitaminE_alphaTocopherol',
 ]);
 
+function addMacro(target: MacroMap, source: MacroMap, multiplier = 1): void {
+  for (const key of MACRO_KEYS) {
+    const value = source[key] ?? 0;
+    if (value !== 0) target[key] = (target[key] ?? 0) + value * multiplier;
+  }
+}
+
+function scaledMacro(source: MacroMap, multiplier: number): MacroMap {
+  const result: MacroMap = {};
+  addMacro(result, source, multiplier);
+  return result;
+}
+
+function subtractMacro(source: MacroMap, deduction: MacroMap, multiplier = 1): MacroMap {
+  const result = scaledMacro(source, 1);
+  for (const key of MACRO_KEYS) {
+    const amount = (deduction[key] ?? 0) * multiplier;
+    if (amount !== 0) result[key] = Math.max(0, (result[key] ?? 0) - amount);
+  }
+  return result;
+}
+
+const FRIED_MEAT_RENDER_FRACTION_NDB_10219_TO_10220 = 0.35595846289415445;
+
 // ── Extended section interface ────────────────────────────────────────────────
 
 /**
@@ -215,6 +241,41 @@ export interface PrimaryCookStage {
   minutes?: number;
   fillClass?: string;
 }
+
+type ActiveIngredient = {
+  ingredient: CommunityIngredient;
+  grams: number;
+  nutrients: NutrientRow;
+};
+
+type PreparedIngredientLedger = {
+  active: ActiveIngredient;
+  rawWaterGrams: number;
+  virtualWaterGrams: number;
+  preYield: MacroMap;
+  postYield: MacroMap;
+  preparedGrams: number;
+};
+
+type MaterialLedger = {
+  grams: number;
+  nutrients: MacroMap;
+  renderedFatGrams: number;
+};
+
+type ComputedSectionLedger = {
+  section: CommunitySectionV3;
+  fillingClass: string;
+  yieldFactorWater: number;
+  cookMethod: CookingMethod;
+  rawGrams: number;
+  cookedGrams: number;
+  retainedNutrients: MacroMap;
+  skipped: SkippedIngredient[];
+  outputPool?: MaterialLedger;
+  renderedFatAllocation?: ReturnType<typeof calculateRenderedFatAllocation>;
+  renderedFatEstimateGrams: number;
+};
 
 // ── Main function ─────────────────────────────────────────────────────────────
 
@@ -300,7 +361,9 @@ export function buildRecipeCommunityV3(
   }
 
   const sectionResults: SectionBuildResult[] = [];
+  const computedSections: ComputedSectionLedger[] = [];
   const globalSkipped: SkippedIngredient[]   = [];
+  const allocationIssues: AllocationValidationIssue[] = [];
 
   // ── Partition ingredients by section ────────────────────────────────────────
   const sectionKeys = sections.map(s => s.sectionKey);
@@ -378,11 +441,11 @@ export function buildRecipeCommunityV3(
     const prepLidOn = prepMethodStr === 'braise' || prepMethodStr === 'boil covered' || prepMethodStr === 'boil_covered' || prepMethodStr === 'boiled covered' || prepMethodStr === 'boiled_covered' || prepMethodStr === 'boil (covered)' || prepMethodStr === 'boiled (covered)';
 
     const skipped: SkippedIngredient[] = [];
-    const active: Array<{ grams: number; nutrients: NutrientRow }> = [];
+    const active: ActiveIngredient[] = [];
     for (const ing of bucket) {
       if (ing.isOptional) { skipped.push({ ndbNo: ing.ndbNo, displayName: ing.displayName, reason: 'optional'    }); continue; }
       if (ing.exempt)     { skipped.push({ ndbNo: ing.ndbNo, displayName: ing.displayName, reason: 'exempt'      }); continue; }
-      const effectiveGrams = ing.portionGrams * retainedIngredientFraction(ing);
+      const effectiveGrams = ing.portionGrams;
       if (effectiveGrams <= 0) { skipped.push({ ndbNo: ing.ndbNo, displayName: ing.displayName, reason: 'discarded' }); continue; }
       const nr = nutrientMap.get(ing.ndbNo);
       if (!nr && ing.componentPer100g) {
@@ -398,15 +461,15 @@ export function buildRecipeCommunityV3(
           const nrKey = colToKey[colName] ?? colName;
           (syntheticNr as unknown as Record<string, unknown>)[nrKey] = v;
         }
-        active.push({ grams: effectiveGrams, nutrients: syntheticNr });
+        active.push({ ingredient: ing, grams: effectiveGrams, nutrients: syntheticNr });
         continue;
       }
       if (!nr)            { skipped.push({ ndbNo: ing.ndbNo, displayName: ing.displayName, reason: 'missing_ndb' }); continue; }
-      active.push({ grams: effectiveGrams, nutrients: nr });
+      active.push({ ingredient: ing, grams: effectiveGrams, nutrients: nr });
     }
     globalSkipped.push(...skipped);
 
-    if (active.length === 0) continue;
+    if (active.length === 0 && !sec.reservedPoolId) continue;
 
     const isWrapped = wrappedKeys.has(sec.sectionKey);
     const HINT_COOK_MAP: Record<string, string[]> = {
@@ -627,76 +690,217 @@ export function buildRecipeCommunityV3(
     // Two-pass when hasPrepStep: pre-step retention × primary cook retention.
     // Each cook method has its own factor table in COOKING_RETENTION.
     // Single-pass otherwise (primary cook only).
-    const sectionTotals: Record<string, number> = {};
+    const sectionTotals: MacroMap = {};
+    const preYffTotals: MacroMap = {};
+    const preparedRows: PreparedIngredientLedger[] = [];
+    const absorberGrams = active
+      .filter((a) => a.nutrients.absorptionFactor != null)
+      .reduce((sum, a) => sum + a.grams, 0);
     let rawGrams = virtualParboilWaterG;
-    sectionTotals.water = virtualParboilWaterG;
 
-    for (const { grams, nutrients } of active) {
+    for (const activeIngredient of active) {
+      const { grams, nutrients } = activeIngredient;
+      const virtualWaterGrams = virtualParboilWaterG > 0 && nutrients.absorptionFactor != null && absorberGrams > 0
+        ? virtualParboilWaterG * grams / absorberGrams
+        : 0;
       rawGrams += grams;
+      const preYield: MacroMap = {};
       for (const key of MACRO_KEYS) {
         const rawPer100g = (nutrients as unknown as Record<string, number>)[key] ?? 0;
-        const colName    = KEY_TO_COLUMN[key] ?? key;
+        const colName = KEY_TO_COLUMN[key] ?? key;
         let retained: number;
         if (key === 'water') {
-          // Water: yield factor applied via yieldWater below.
-          retained = rawPer100g * (grams / 100);
+          retained = rawPer100g * (grams / 100) + virtualWaterGrams;
         } else if (hasPrepStep && prepCookMethod) {
-          // Two-pass: pre-step retention × primary cook retention.
-          // e.g. simmer’s VitC 0.50 × baked’s VitC factor.
-          const prepFactor    = getRetentionFactor(prepCookMethod, colName);
+          const prepFactor = getRetentionFactor(prepCookMethod, colName);
           const primaryFactor = getRetentionFactor(effectiveCookMethod, colName);
           retained = rawPer100g * (grams / 100) * prepFactor * primaryFactor;
         } else {
           retained = applyRetention(rawPer100g, grams, effectiveCookMethod, colName);
         }
-        sectionTotals[key] = (sectionTotals[key] ?? 0) + retained;
+        preYield[key] = retained;
       }
+      preparedRows.push({
+        active: activeIngredient,
+        rawWaterGrams: (nutrients.water ?? 0) * grams / 100,
+        virtualWaterGrams,
+        preYield,
+        postYield: {},
+        preparedGrams: 0,
+      });
     }
 
-    // ── Step 3: Apply water yield to water column ──────────────────────────────
-    sectionTotals['water'] = (sectionTotals['water'] ?? 0) * yieldWater;
-
-    // ── Step 4: Apply fat / protein / carb yield factors (post-retention) ──────
-    if (yff !== 1.0) {
-      sectionTotals['totalLipidFat']                  = (sectionTotals['totalLipidFat'] ?? 0) * yff;
-      sectionTotals['fattyAcids_totalSaturated']      = (sectionTotals['fattyAcids_totalSaturated'] ?? 0) * yff;
-      sectionTotals['fattyAcids_totalMonounsaturated']= (sectionTotals['fattyAcids_totalMonounsaturated'] ?? 0) * yff;
-      sectionTotals['fattyAcids_totalPolyunsaturated']= (sectionTotals['fattyAcids_totalPolyunsaturated'] ?? 0) * yff;
-      sectionTotals['cholesterol']                    = (sectionTotals['cholesterol'] ?? 0) * yff;
-    }
-    if (effectiveYfp !== 1.0) {
-      sectionTotals['protein'] = (sectionTotals['protein'] ?? 0) * effectiveYfp;
-    }
-    if (effectiveYfc !== 1.0) {
-      sectionTotals['carbohydrate'] = (sectionTotals['carbohydrate'] ?? 0) * effectiveYfc;
-      sectionTotals['sugarsTotal']  = (sectionTotals['sugarsTotal']  ?? 0) * effectiveYfc;
-      sectionTotals['fiberTotalDietary'] = (sectionTotals['fiberTotalDietary'] ?? 0) * effectiveYfc;
-    }
-    if (effectiveYfo !== 1.0) {
-      for (const fatKey of FAT_SOLUBLE_KEYS) {
-        sectionTotals[fatKey] = (sectionTotals[fatKey] ?? 0) * effectiveYfo;
+    for (const row of preparedRows) {
+      const postYield = { ...row.preYield } as MacroMap;
+      postYield.water = (postYield.water ?? 0) * yieldWater;
+      if (yff !== 1.0) {
+        postYield.totalLipidFat = (postYield.totalLipidFat ?? 0) * yff;
+        postYield.fattyAcids_totalSaturated = (postYield.fattyAcids_totalSaturated ?? 0) * yff;
+        postYield.fattyAcids_totalMonounsaturated = (postYield.fattyAcids_totalMonounsaturated ?? 0) * yff;
+        postYield.fattyAcids_totalPolyunsaturated = (postYield.fattyAcids_totalPolyunsaturated ?? 0) * yff;
+        postYield.cholesterol = (postYield.cholesterol ?? 0) * yff;
       }
+      if (effectiveYfp !== 1.0) {
+        postYield.protein = (postYield.protein ?? 0) * effectiveYfp;
+      }
+      if (effectiveYfc !== 1.0) {
+        postYield.carbohydrate = (postYield.carbohydrate ?? 0) * effectiveYfc;
+        postYield.sugarsTotal = (postYield.sugarsTotal ?? 0) * effectiveYfc;
+        postYield.fiberTotalDietary = (postYield.fiberTotalDietary ?? 0) * effectiveYfc;
+      }
+      if (effectiveYfo !== 1.0) {
+        for (const fatKey of FAT_SOLUBLE_KEYS) {
+          const key = fatKey as keyof MacroMap;
+          postYield[key] = (postYield[key] ?? 0) * effectiveYfo;
+        }
+      }
+
+      const unremovedPreparedGrams = row.active.grams + row.virtualWaterGrams
+        - (row.rawWaterGrams + row.virtualWaterGrams) * (1 - yieldWater);
+      let preparedGrams = Math.max(0, unremovedPreparedGrams);
+      const removal = normalizeIngredientRemoval(row.active.ingredient as unknown as Record<string, unknown>);
+      if (removal.removedAfterPrep) {
+        const removalAmount = removal.removalAmount ?? 100;
+        const removalUnit = removal.removalUnit ?? 'percent';
+        const removalResult = calculateRemovalGrams(preparedGrams, {
+          value: removalAmount,
+          unit: removalUnit,
+        });
+        for (const error of removalResult.errors) {
+          const ingredientLabel = row.active.ingredient.displayName || row.active.ingredient.ndbNo || 'Ingredient';
+          allocationIssues.push({
+            severity: 'error',
+            code: 'invalid_ingredient_removal',
+            message: `${ingredientLabel}: ${error}`,
+            sectionKey: sec.sectionKey,
+          });
+        }
+        const removedFraction = preparedGrams > 0
+          ? removalResult.requestedGrams / preparedGrams
+          : 0;
+        const retainedFraction = Math.max(0, 1 - removedFraction);
+        row.preYield = scaledMacro(row.preYield, retainedFraction);
+        const scaledPostYield = scaledMacro(postYield, retainedFraction);
+        for (const key of MACRO_KEYS) postYield[key] = scaledPostYield[key];
+        preparedGrams -= removalResult.requestedGrams;
+      }
+      row.postYield = postYield;
+      row.preparedGrams = Math.max(0, preparedGrams);
+      addMacro(preYffTotals, row.preYield);
+      addMacro(sectionTotals, row.postYield);
     }
 
     // ── Step 5: Atwater energy recompute (matches Python build.py) ─────────────
-    // Fires when any macro yield factor < 1.0 to avoid overcounting drained calories.
     if (yff < 1.0 || effectiveYfp < 1.0 || effectiveYfc < 1.0) {
-      sectionTotals['energy_KCal'] =
-        (sectionTotals['protein']      ?? 0) * 4 +
-        (sectionTotals['totalLipidFat']?? 0) * 9 +
-        (sectionTotals['carbohydrate'] ?? 0) * 4;
+      sectionTotals.energy_KCal =
+        (sectionTotals.protein ?? 0) * 4 +
+        (sectionTotals.totalLipidFat ?? 0) * 9 +
+        (sectionTotals.carbohydrate ?? 0) * 4;
     }
 
-    // ── Cooked grams = raw grams minus water lost ──────────────────────────────
-    const waterLost   = initialWaterG * (1 - yieldWater);
-    const cookedGrams = rawGrams - waterLost;
-
-    // ── Accumulate into global totals ──────────────────────────────────────────
-    for (const key of MACRO_KEYS) {
-      (globalTotals as Record<string, number>)[key]! += sectionTotals[key] ?? 0;
+    const cookedGrams = preparedRows.reduce((sum, row) => sum + row.preparedGrams, 0);
+    const sectionRenderedFatAllocation = sec.renderedFatAllocation
+      ?? normalizeRenderedFatAllocation(sec as unknown as Record<string, unknown>);
+    const hasRenderedFatAllocation = !!sectionRenderedFatAllocation;
+    const nutritionalFatLoss = Math.max(
+      0,
+      (preYffTotals.totalLipidFat ?? 0) - (sectionTotals.totalLipidFat ?? 0),
+    );
+    let renderedFatEstimate = nutritionalFatLoss;
+    if (hasRenderedFatAllocation && yff === 1.0) {
+      const metadataRenderedFat = preparedRows.reduce((total, row) => {
+        const fatDrain = row.active.nutrients.fatDrain;
+        if (typeof fatDrain !== 'number') return total;
+        const retainedFraction = Math.max(0, Math.min(1, fatDrain));
+        return total + (row.preYield.totalLipidFat ?? 0) * (1 - retainedFraction);
+      }, 0);
+      const fallbackRenderedFat = fillClass === 'fried_meat'
+        ? preparedRows.reduce((total, row) => {
+            const nutrients = row.active.nutrients;
+            if (typeof nutrients.fatDrain === 'number'
+              || !nutrients.fdGrpCd.startsWith('10')
+              || (nutrients.protein ?? 0) <= 0) {
+              return total;
+            }
+            return total + (row.preYield.totalLipidFat ?? 0) * FRIED_MEAT_RENDER_FRACTION_NDB_10219_TO_10220;
+          }, 0)
+        : 0;
+      renderedFatEstimate = Math.min(
+        preYffTotals.totalLipidFat ?? 0,
+        metadataRenderedFat + fallbackRenderedFat,
+      );
     }
-    totalRawGrams    += rawGrams;
-    totalCookedGrams += cookedGrams;
+    const renderedFatAllocation = hasRenderedFatAllocation
+      ? calculateRenderedFatAllocation(renderedFatEstimate, sectionRenderedFatAllocation)
+      : undefined;
+    if (renderedFatAllocation && !renderedFatAllocation.valid) {
+      for (const error of renderedFatAllocation.errors) {
+        allocationIssues.push({
+          severity: 'error',
+          code: 'invalid_rendered_fat_allocation',
+          message: `${sec.sectionLabel || sec.sectionKey}: ${error}`,
+          sectionKey: sec.sectionKey,
+        });
+      }
+    }
+    const renderedFatVector: MacroMap = {};
+    if (renderedFatEstimate > 0) {
+      const drainFraction = renderedFatEstimate / Math.max(preYffTotals.totalLipidFat ?? 0, renderedFatEstimate);
+      for (const key of [
+        'totalLipidFat',
+        'fattyAcids_totalSaturated',
+        'fattyAcids_totalMonounsaturated',
+        'fattyAcids_totalPolyunsaturated',
+        'cholesterol',
+      ] as Array<keyof MacroMap>) {
+        renderedFatVector[key] = (preYffTotals[key] ?? 0) * drainFraction;
+      }
+      renderedFatVector.energy_KCal = (renderedFatVector.totalLipidFat ?? 0) * 9;
+    }
+    const renderedFatIncludedInSection = Math.max(
+      0,
+      Math.min(renderedFatEstimate, renderedFatEstimate - nutritionalFatLoss),
+    );
+    const generalNutrients = hasRenderedFatAllocation && renderedFatEstimate > 0
+      ? subtractMacro(
+          sectionTotals,
+          renderedFatVector,
+          renderedFatIncludedInSection / renderedFatEstimate,
+        )
+      : sectionTotals;
+
+    const keepHerePercent = Math.max(0, Math.min(100, Number.isFinite(sec.keepHerePercent) ? sec.keepHerePercent! : 100));
+    const keepHereFraction = keepHerePercent / 100;
+    const generalMaterialGrams = hasRenderedFatAllocation
+      ? Math.max(0, cookedGrams - renderedFatEstimate)
+      : cookedGrams;
+    const retainedGeneralNutrients = scaledMacro(generalNutrients, keepHereFraction);
+    const reservedGeneralNutrients = scaledMacro(generalNutrients, 1 - keepHereFraction);
+    let retainedGrams = generalMaterialGrams * keepHereFraction;
+    const outputPoolGrams = generalMaterialGrams * (1 - keepHereFraction);
+    const retainedNutrients = retainedGeneralNutrients;
+    let renderedFatReservedGrams = 0;
+    if (renderedFatAllocation && renderedFatEstimate > 0) {
+      const retainedFatFraction = renderedFatAllocation.retainedGrams / renderedFatEstimate;
+      const reservedFatFraction = renderedFatAllocation.reservedGrams / renderedFatEstimate;
+      addMacro(retainedNutrients, renderedFatVector, retainedFatFraction);
+      renderedFatReservedGrams = renderedFatAllocation.reservedGrams;
+      retainedGrams += renderedFatAllocation.retainedGrams;
+      if (reservedFatFraction > 0) {
+        addMacro(reservedGeneralNutrients, renderedFatVector, reservedFatFraction);
+      }
+    }
+
+    const outputPoolNutrients = reservedGeneralNutrients;
+    const outputPool = (sec.outputPoolId && (outputPoolGrams > 0 || renderedFatReservedGrams > 0))
+      ? {
+          grams: outputPoolGrams + renderedFatReservedGrams,
+          nutrients: outputPoolNutrients,
+          renderedFatGrams: renderedFatReservedGrams,
+        }
+      : undefined;
+
+    totalRawGrams += rawGrams;
 
     // Infer fillClass for the result record (for plausibility + display) —
     // same hint-first logic as above.
@@ -722,16 +926,82 @@ export function buildRecipeCommunityV3(
       fillingClass = hintClass || inferFillingClass(active, isWrapped);
     }
 
-    sectionResults.push({
-      sectionKey:        sec.sectionKey,
-      sectionLabel:      sec.sectionLabel,
+    computedSections.push({
+      section: sec,
       fillingClass,
-      yieldFactorWater:  yieldWater,
-      cookMethod:        effectiveCookMethod,
+      yieldFactorWater: yieldWater,
+      cookMethod: effectiveCookMethod,
       rawGrams,
-      cookedGrams,
-      retainedNutrients: sectionTotals as MacroMap,
+      cookedGrams: retainedGrams,
+      retainedNutrients,
       skipped,
+      outputPool,
+      renderedFatAllocation,
+      renderedFatEstimateGrams: renderedFatEstimate,
+    });
+  }
+
+  const pools = new Map<string, MaterialLedger>();
+  for (const computed of computedSections) {
+    if (!computed.section.outputPoolId || !computed.outputPool) continue;
+    const existing = pools.get(computed.section.outputPoolId);
+    if (existing) {
+      existing.grams += computed.outputPool.grams;
+      existing.renderedFatGrams += computed.outputPool.renderedFatGrams;
+      addMacro(existing.nutrients, computed.outputPool.nutrients);
+    } else {
+      pools.set(computed.section.outputPoolId, {
+        grams: computed.outputPool.grams,
+        nutrients: scaledMacro(computed.outputPool.nutrients, 1),
+        renderedFatGrams: computed.outputPool.renderedFatGrams,
+      });
+    }
+  }
+  const poolCapacities = new Map<string, number>(
+    [...pools.entries()].map(([poolId, pool]) => [poolId, pool.grams]),
+  );
+
+  for (const computed of computedSections) {
+    let consumedReservedPoolGrams = 0;
+    let consumedReservedPoolNutrients: MacroMap = {};
+    if (computed.section.reservedPoolId) {
+      const pool = pools.get(computed.section.reservedPoolId);
+      if (pool && pool.grams > 0) {
+        const poolCapacity = poolCapacities.get(computed.section.reservedPoolId) ?? pool.grams;
+        const requestedGrams = computed.section.reservedPoolAmount
+          ? allocationAmountToGrams(computed.section.reservedPoolAmount, poolCapacity)
+          : poolCapacity;
+        const amount = Math.max(0, Math.min(pool.grams, requestedGrams ?? 0));
+        const fraction = amount / pool.grams;
+        consumedReservedPoolGrams = amount;
+        consumedReservedPoolNutrients = scaledMacro(pool.nutrients, fraction);
+        pool.grams -= amount;
+        pool.renderedFatGrams = Math.max(0, pool.renderedFatGrams * (1 - fraction));
+        pool.nutrients = scaledMacro(pool.nutrients, 1 - fraction);
+      }
+    }
+
+    const finalNutrients = scaledMacro(computed.retainedNutrients, 1);
+    addMacro(finalNutrients, consumedReservedPoolNutrients);
+    for (const key of MACRO_KEYS) {
+      (globalTotals as Record<string, number>)[key]! += finalNutrients[key] ?? 0;
+    }
+    const finalCookedGrams = computed.cookedGrams + consumedReservedPoolGrams;
+    totalCookedGrams += finalCookedGrams;
+    sectionResults.push({
+      sectionKey: computed.section.sectionKey,
+      sectionLabel: computed.section.sectionLabel,
+      fillingClass: computed.fillingClass,
+      yieldFactorWater: computed.yieldFactorWater,
+      cookMethod: computed.cookMethod,
+      rawGrams: computed.rawGrams,
+      cookedGrams: finalCookedGrams,
+      retainedNutrients: finalNutrients,
+      skipped: computed.skipped,
+      renderedFatAllocation: computed.renderedFatAllocation,
+      renderedFatEstimateGrams: computed.renderedFatEstimateGrams,
+      reservedPoolGrams: computed.outputPool?.grams,
+      consumedReservedPoolGrams: consumedReservedPoolGrams > 0 ? consumedReservedPoolGrams : undefined,
     });
   }
 
@@ -754,5 +1024,6 @@ export function buildRecipeCommunityV3(
     servings,
     sections: sectionResults,
     plausibility,
+    allocationIssues,
   };
 }

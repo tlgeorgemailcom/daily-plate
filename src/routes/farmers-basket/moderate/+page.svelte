@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { FOOD_EMOJI } from '$lib/farmers-basket/types';
-  import type { FoodType, AnimalType, DietaryCategory } from '$lib/farmers-basket/types';
+  import { defaultDiscardPercent, FOOD_EMOJI } from '$lib/farmers-basket/types';
+  import type { FoodType, AnimalType, DietaryCategory, DiscardType } from '$lib/farmers-basket/types';
   import RecipeForm, { type RecipeFormData } from '$lib/farmers-basket/RecipeForm.svelte';
   
   interface SubmittedIngredient {
@@ -16,6 +16,17 @@
     servingCount?: number;
     exempt?: boolean;
     is_optional?: boolean;
+    isDish?: boolean;
+    componentRef?: string;
+    componentPer100g?: Record<string, number>;
+    componentName?: string;
+    componentServingGrams?: number;
+    discarded?: boolean;
+    discardPercent?: number;
+    discardType?: DiscardType;
+    removedAfterPrep?: boolean;
+    removalAmount?: number;
+    removalUnit?: 'percent' | 'grams';
     section?: string;
   }
   
@@ -237,6 +248,25 @@
       servingCount: typeof ing.servingCount === 'number' ? ing.servingCount : (typeof ing.serving_count === 'number' ? ing.serving_count : undefined),
       exempt: ing.exempt === true,
       isDish: Boolean(ing.isDish),
+      is_optional: ing.is_optional === true,
+      componentRef: typeof ing.componentRef === 'string' ? ing.componentRef : undefined,
+      componentPer100g: ing.componentPer100g && typeof ing.componentPer100g === 'object' ? ing.componentPer100g as Record<string, number> : undefined,
+      componentName: typeof ing.componentName === 'string' ? ing.componentName : undefined,
+      componentServingGrams: typeof ing.componentServingGrams === 'number' ? ing.componentServingGrams : undefined,
+      discarded: ing.discarded === true,
+      discardPercent: typeof ing.discardPercent === 'number' ? ing.discardPercent : undefined,
+      discardType: (
+        ing.discardType === 'marinade'
+          ? 'marinade'
+          : ing.discardType === 'rendered_fat'
+            ? 'rendered_fat'
+            : ing.discardType === 'other'
+              ? 'other'
+            : undefined
+      ) as DiscardType | undefined,
+          removedAfterPrep: ing.removedAfterPrep === true,
+          removalAmount: typeof ing.removalAmount === 'number' ? ing.removalAmount : undefined,
+          removalUnit: (ing.removalUnit === 'grams' ? 'grams' : (ing.removalUnit === 'percent' ? 'percent' : undefined)) as 'grams' | 'percent' | undefined,
       section: ing.section != null ? String(ing.section) : undefined
     }));
 
@@ -282,6 +312,29 @@
       cook3Minutes: typeof (recipe as any).cook3Minutes === 'number' ? (recipe as any).cook3Minutes : undefined,
       cook3TempF: typeof (recipe as any).cook3TempF === 'number' ? (recipe as any).cook3TempF : undefined,
       cook3FillClass: typeof (recipe as any).cook3FillClass === 'string' ? (recipe as any).cook3FillClass : undefined,
+    };
+  }
+
+  function serializeIngredientAllocation(ingredient: RecipeFormData['ingredients'][number]): Record<string, unknown> {
+    return {
+      ...(ingredient.isDish ? { isDish: true } : {}),
+      ...(ingredient.componentRef ? {
+        componentRef: ingredient.componentRef,
+        ...(ingredient.componentPer100g ? { componentPer100g: ingredient.componentPer100g } : {}),
+        ...(ingredient.componentName ? { componentName: ingredient.componentName } : {}),
+        ...(typeof ingredient.componentServingGrams === 'number' ? { componentServingGrams: ingredient.componentServingGrams } : {}),
+      } : {}),
+      ...(ingredient.ingredientStatus === 'optional' || ingredient.is_optional ? { is_optional: true } : {}),
+      ...(ingredient.exempt ? { exempt: true } : {}),
+      ...(ingredient.removedAfterPrep !== true && ingredient.discarded ? {
+        discarded: true,
+        discardPercent: ingredient.discardPercent ?? defaultDiscardPercent(ingredient.discardType),
+      } : {}),
+      ...(ingredient.removedAfterPrep ? {
+        removedAfterPrep: true,
+        ...(typeof ingredient.removalAmount === 'number' ? { removalAmount: ingredient.removalAmount } : {}),
+        ...(ingredient.removalUnit ? { removalUnit: ingredient.removalUnit } : {}),
+      } : {}),
     };
   }
   
@@ -404,9 +457,10 @@
             quantity: i.quantity,
             gameFood: i.gameFood || null,
             animal: i.animal || null,
-            ...(i.section ? { section: i.section } : {})
+            ...(i.section ? { section: i.section } : {}),
+            ...serializeIngredientAllocation(i)
           })),
-          ...(data.sections && data.sections.length > 0 ? { sections: data.sections } : {}),
+          ...(data.sections !== undefined ? { sections: data.sections } : {}),
           instructions: data.instructions.filter(i => i.text.trim()).map(i => i.text),
           nutritionJson: data.nutritionJson ?? null,
           gameFoods,
@@ -541,8 +595,7 @@
               portionDesc: i.portionDesc,
               portionGrams: i.portionGrams,
               servingCount: i.servingCount,
-              ...(i.exempt ? { exempt: true } : {}),
-              ...(i.is_optional ? { is_optional: true } : {})
+              ...serializeIngredientAllocation(i)
             })),
             modIngredients: data.ingredients.filter(i => i.name.trim()).map(i => ({
               name: i.name,
@@ -555,10 +608,9 @@
               portionDesc: i.portionDesc,
               portionGrams: i.portionGrams,
               servingCount: i.servingCount,
-              ...(i.exempt ? { exempt: true } : {}),
-              ...(i.is_optional ? { is_optional: true } : {})
+              ...serializeIngredientAllocation(i)
             })),
-            ...(data.sections && data.sections.length > 0 ? { sections: data.sections } : {}),
+            ...(data.sections !== undefined ? { sections: data.sections } : {}),
             instructions: data.instructions.filter(i => i.text.trim()).map(i => i.text),
             imageUrl
           },
@@ -650,9 +702,10 @@
             quantity: i.quantity,
             gameFood: i.gameFood || null,
             animal: i.animal || null,
-            ...(i.section ? { section: i.section } : {})
+            ...(i.section ? { section: i.section } : {}),
+            ...serializeIngredientAllocation(i)
           })),
-          ...(data.sections && data.sections.length > 0 ? { sections: data.sections } : {}),
+          ...(data.sections !== undefined ? { sections: data.sections } : {}),
           instructions: data.instructions.filter(i => i.text.trim()).map(i => i.text),
           gameFoods,
           animalSpawns,

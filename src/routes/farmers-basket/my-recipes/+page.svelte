@@ -2,6 +2,8 @@
   import { onMount } from 'svelte';
   import RecipeForm from '$lib/farmers-basket/RecipeForm.svelte';
   import type { RecipeFormData } from '$lib/farmers-basket/RecipeForm.svelte';
+  import { defaultDiscardPercent } from '$lib/farmers-basket/types';
+  import type { DiscardType } from '$lib/farmers-basket/types';
   
   interface MyRecipe {
     id: string;
@@ -10,7 +12,7 @@
     dietaryCategory: string;
     prepTime: string;
     servings: string;
-    ingredients: { name: string; quantity: string; foodWord?: string; ndbNo?: string; portionDesc?: string; portionGrams?: number; servingCount?: number; exempt?: boolean; isDish?: boolean }[];
+    ingredients: { name: string; quantity: string; foodWord?: string; ndbNo?: string; portionDesc?: string; portionGrams?: number; servingCount?: number; exempt?: boolean; isDish?: boolean; is_optional?: boolean; componentRef?: string; componentPer100g?: Record<string, number>; componentName?: string; componentServingGrams?: number; section?: string; discarded?: boolean; discardPercent?: number; discardType?: DiscardType; removedAfterPrep?: boolean; removalAmount?: number; removalUnit?: 'percent' | 'grams' }[];
     instructions: string[];
     imageUrl: string | null;
     submitterName: string;
@@ -251,13 +253,39 @@
       const hasNutritionLinkMeta = (ingredient: RecipeFormData['ingredients'][number]) =>
         Boolean((ingredient.foodWord || ingredient.ndbNo) && ingredient.portionGrams);
 
+      const serializeIngredientAllocation = (ingredient: RecipeFormData['ingredients'][number]): Record<string, unknown> => ({
+        ...(ingredient.isDish ? { isDish: true } : {}),
+        ...(ingredient.componentRef ? {
+          componentRef: ingredient.componentRef,
+          ...(ingredient.componentPer100g ? { componentPer100g: ingredient.componentPer100g } : {}),
+          ...(ingredient.componentName ? { componentName: ingredient.componentName } : {}),
+          ...(typeof ingredient.componentServingGrams === 'number' ? { componentServingGrams: ingredient.componentServingGrams } : {}),
+        } : {}),
+        ...(ingredient.ingredientStatus === 'optional' || ingredient.is_optional ? { is_optional: true } : {}),
+        ...(ingredient.exempt ? { exempt: true } : {}),
+        ...(ingredient.removedAfterPrep !== true && ingredient.discarded ? {
+          discarded: true,
+          discardPercent: ingredient.discardPercent ?? defaultDiscardPercent(ingredient.discardType),
+        } : {}),
+        ...(ingredient.removedAfterPrep ? {
+          removedAfterPrep: true,
+          ...(typeof ingredient.removalAmount === 'number' ? { removalAmount: ingredient.removalAmount } : {}),
+          ...(ingredient.removalUnit ? { removalUnit: ingredient.removalUnit } : {}),
+        } : {}),
+      });
+
       let ingredientsPayload: Record<string, unknown>[];
       if (isLinked && (linkMode === 'dish' || linkMode === 'mixed') && data.dishLink) {
         const dishEntry = { isDish: true, ...data.dishLink };
         if (linkMode === 'dish') {
           ingredientsPayload = [
             dishEntry,
-            ...data.ingredients.map(i => ({ name: i.name.trim(), quantity: i.quantity.trim() }))
+            ...data.ingredients.map(i => ({
+              name: i.name.trim(),
+              quantity: i.quantity.trim(),
+              ...(i.section ? { section: i.section } : {}),
+              ...serializeIngredientAllocation(i)
+            }))
           ];
         } else {
           ingredientsPayload = [
@@ -265,8 +293,9 @@
             ...data.ingredients.map(i => ({
               name: i.name.trim(),
               quantity: i.quantity.trim(),
+              ...(i.section ? { section: i.section } : {}),
               ...(hasNutritionLinkMeta(i) ? { foodWord: i.foodWord, ndbNo: i.ndbNo, portionDesc: i.portionDesc, portionGrams: i.portionGrams, servingCount: i.servingCount } : {}),
-              ...(i.exempt ? { exempt: true } : {})
+              ...serializeIngredientAllocation(i)
             }))
           ];
         }
@@ -274,10 +303,13 @@
         ingredientsPayload = data.ingredients.filter(i => i.name.trim()).map(i => ({
           name: i.name.trim(),
           quantity: i.quantity.trim(),
+          ...(i.section ? { section: i.section } : {}),
           ...(isLinked ? {
             ...(hasNutritionLinkMeta(i) ? { foodWord: i.foodWord, ndbNo: i.ndbNo, portionDesc: i.portionDesc, portionGrams: i.portionGrams, servingCount: i.servingCount } : {}),
-            ...(i.exempt ? { exempt: true } : {})
-          } : {})
+            ...serializeIngredientAllocation(i)
+          } : {
+            ...serializeIngredientAllocation(i)
+          })
         }));
       }
 
@@ -292,7 +324,7 @@
         ingredients: ingredientsPayload,
         instructions: data.instructions.filter(i => i.text.trim()).map(i => i.text),
         ...(isLinked && data.linkMode ? { linkType: data.linkMode } : {}),
-        ...(data.sections && data.sections.length > 0 ? { sections: data.sections } : {})
+        ...(data.sections !== undefined ? { sections: data.sections } : {})
       };
       
       // Only include imageUrl if it changed
@@ -484,7 +516,21 @@
                 portionGrams: ing.portionGrams,
                 servingCount: ing.servingCount
               } : {}),
-              ...(ing.exempt ? { exempt: true } : {})
+                ...(ing.exempt ? { exempt: true } : {}),
+                ...(ing.is_optional ? { is_optional: true } : {}),
+                ...(ing.componentRef ? {
+                  componentRef: ing.componentRef,
+                  ...(ing.componentPer100g ? { componentPer100g: ing.componentPer100g } : {}),
+                  ...(ing.componentName ? { componentName: ing.componentName } : {}),
+                  ...(typeof ing.componentServingGrams === 'number' ? { componentServingGrams: ing.componentServingGrams } : {}),
+                } : {}),
+                ...(ing.section ? { section: ing.section } : {}),
+                ...(ing.removedAfterPrep !== true && ing.discarded ? { discarded: true, discardPercent: ing.discardPercent ?? defaultDiscardPercent(ing.discardType) } : {}),
+                ...(ing.removedAfterPrep ? {
+                  removedAfterPrep: true,
+                  ...(typeof ing.removalAmount === 'number' ? { removalAmount: ing.removalAmount } : {}),
+                  ...(ing.removalUnit ? { removalUnit: ing.removalUnit } : {}),
+                } : {})
             })),
             instructions: editingRecipe.instructions.map((text, i) => ({
               id: i + 1,

@@ -1,3 +1,11 @@
+import type {
+  AllocationAmount,
+  AllocationUnit,
+  AllocationValidationIssue,
+  RenderedFatAllocationInput,
+  RenderedFatAllocationResult,
+  ReservedPoolAllocation,
+} from './allocation.js';
 /**
  * types.ts — Shared interfaces for the community recipe nutrition pipeline.
  *
@@ -89,6 +97,22 @@ export interface CommunitySection {
   sectionKey: string;       // e.g. "crust", "filling", "topping"
   sectionLabel: string;     // display name shown in UI
   cookMethod: string;       // "baked" | "boiled" | "simmered" | "raw" | ...
+  /** Percentage of prepared material retained in this section. */
+  keepHerePercent?: number;
+  /** Existing shared Reserved Pool identity for material leaving this section. */
+  outputPoolId?: string;
+  /** Existing shared Reserved Pool consumed by this section. */
+  reservedPoolId?: string;
+  /** Optional explicit amount consumed from reservedPoolId. */
+  reservedPoolAmount?: AllocationAmount;
+  /** Component accounting for the existing output pool. */
+  outputPoolAllocations?: ReservedPoolAllocation[];
+  /** Four-way rendered-fat disposition for heated sections. */
+  renderedFatAllocation?: RenderedFatAllocationInput;
+  /** Calculated ledger may be returned by the builder but need not be stored. */
+  renderedFatLedger?: RenderedFatAllocationResult;
+  /** Entered generic removal amount for an ingredient row. */
+  allocationUnit?: AllocationUnit;
   /** Explicit filling class from recipe_sections.csv (e.g. 'dense_fruit',
    *  'pastry'). When present, used by buildRecipeCommunity before falling
    *  back to inferFillingClass(). */
@@ -125,6 +149,9 @@ export interface CommunityIngredient {
    *  When present and ndbNo has no SR28 match, these values are used directly — same as Python
    *  pipeline treating dev sub-recipes as SR Legacy food items. */
   componentPer100g?: Record<string, number>;
+  removedAfterPrep?: boolean;
+  removalAmount?: number;
+  removalUnit?: AllocationUnit;
   discarded?: boolean;      // displayed but partly/fully discarded before eating
   discardPercent?: number;  // 0-100 percentage discarded; defaults to 100 when discarded is true
 }
@@ -152,6 +179,10 @@ export interface SectionBuildResult {
   cookedGrams: number;        // rawGrams minus water lost to heat
   retainedNutrients: MacroMap;
   skipped: SkippedIngredient[];
+  renderedFatAllocation?: RenderedFatAllocationResult;
+  renderedFatEstimateGrams?: number;
+  reservedPoolGrams?: number;
+  consumedReservedPoolGrams?: number;
 }
 
 /** Full build output returned by buildRecipeCommunity() */
@@ -163,6 +194,7 @@ export interface BuildResult {
   servings: number;
   sections: SectionBuildResult[];
   plausibility: PlausibilityResult;
+  allocationIssues?: AllocationValidationIssue[];
 }
 
 // ── Plausibility ──────────────────────────────────────────────────────────────

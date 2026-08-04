@@ -57,7 +57,8 @@ const SELECT_COLUMNS = `
   VitaminE_alphaTocopherol,
   VitaminK_phylloquinone,
   AlcholEthyl,
-  bin
+  bin,
+  fat_drain
 `.trim();
 
 // ── Row mapper ────────────────────────────────────────────────────────────────
