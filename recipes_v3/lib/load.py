@@ -243,7 +243,9 @@ def _parse_optional_cook_method(s: str | None) -> str:
     value = (s or "").strip().lower()
     if not value or value not in COOK_METHOD_ALIASES:
         return ""
-    return normalize_cooking_method(value)
+    # Preserve the authored stage label for upload and display. Build-time
+    # consumers normalize this value when applying retention or physics.
+    return value
 
 
 def _parse_bool(s: str | None) -> bool:

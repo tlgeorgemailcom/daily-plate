@@ -428,13 +428,14 @@
   const GAME_FOODS = Object.keys(FOOD_EMOJI) as FoodType[];
   const ANIMAL_TYPES: AnimalType[] = ['rabbit', 'squirrel', 'raccoon', 'bird', 'mouse', 'fox'];
   
-  const COOKING_METHODS = ['Bake', 'Bake (covered)', 'Parboil', 'Boil', 'Boil (covered)', 'Scalded', 'Simmer', 'Sub-simmer', 'Braise', 'Steam', 'Microwave', 'Sauté', 'Stir-fry', 'Pan sear', 'Grill', 'Broil', 'Fry', 'Deep-fry', 'No heat'];
+  const COOKING_METHODS = ['Bake', 'Bake (uncovered)', 'Bake (covered)', 'Parboil', 'Boil', 'Boil (covered)', 'Scalded', 'Simmer', 'Sub-simmer', 'Braise', 'Steam', 'Microwave', 'Sauté', 'Stir-fry', 'Pan sear', 'Grill', 'Broil', 'Fry', 'Deep-fry', 'No heat'];
   const COOK_METHOD_DISPLAY: Record<string, string> = {
     'Boil':           'Boil (uncovered)',
     'Boil (covered)': 'Boil (covered)',
     'Simmer':         'Simmer (uncovered)',
     'Sub-simmer':     'Sub-simmer (uncovered)',
     'Braise':         'Braise (covered)',
+    'Bake (uncovered)': 'Bake (uncovered)',
     'Bake (covered)': 'Bake (covered)',
   };
   // v3.md §18.1 — lowercase enum stored in recipe_sections.csv::cooking_method.
@@ -557,6 +558,10 @@
       'baked covered':   'Bake (covered)',
       'bake covered':    'Bake (covered)',
       'bake_covered':    'Bake (covered)',
+        'baked uncovered': 'Bake (uncovered)',
+        'bake uncovered':  'Bake (uncovered)',
+        'baked_uncovered': 'Bake (uncovered)',
+        'bake_uncovered':  'Bake (uncovered)',
       'boiled':          'Boil',
       'parboil':         'Parboil',
       'parboiled':       'Parboil',
@@ -585,6 +590,7 @@
       'pan seared':  'Pan sear',
       'pan-seared':  'Pan sear',
       'grilled':     'Grill',
+      'broil':       'Broil',
       'broiled':     'Broil',
       'raw':         'unheated',
       'no heat':     'unheated',
@@ -678,6 +684,7 @@
     .filter((section): section is RecipeSection => section !== null) ?? []);
   let sections = $state<RecipeSection[]>(_initialSections);
   let sectionAdvancedOpen = $state<Record<number, boolean>>({});
+  let sectionAllocationOpen = $state<Record<string, boolean>>({});
 
   type GeneratedReservedPool = {
     id: string;
@@ -3547,7 +3554,8 @@
       </datalist>
 
       {#snippet sectionHeaderBar(sec: RecipeSection, sIdx: number)}
-        <div class="section-header-bar">
+        <div class="section-allocation-disclosure" class:section-allocation-expanded={sectionAllocationOpen[sec.key]}>
+          <div class="section-header-bar">
           <input
             type="text"
             list="section-label-vocab"
@@ -3568,60 +3576,69 @@
               <option value={m}>{PREP_METHOD_DISPLAY[m] ?? m}</option>
             {/each}
           </select>
-          <label class="section-pool-field" title="Percentage of this section's prepared material that stays here">
-            <span>Keep here:</span>
-            <input
-              type="number"
-              min="0"
-              max="100"
-              step="1"
-              class="form-input section-percent-input"
-              value={sectionKeepHerePercent(sec)}
-              oninput={(e) => setSectionKeepHerePercent(sIdx, Number((e.currentTarget as HTMLInputElement).value))}
-            />
-            <span>%</span>
-          </label>
-          <span class="section-reserve-estimate">Reserve pool: {formatReserveGrams(reserveGramsForSection(sec))}</span>
-          {#if sec.reservedPoolId && consumedReservedPoolGramsForSection(sec) > 0}
-            <span class="section-consumed-estimate">Uses {formatReserveGrams(consumedReservedPoolGramsForSection(sec))}</span>
-          {/if}
-          <label class="section-pool-field section-reserved-pool-field" title="Use prepared material reserved by another section">
-            <span>Reserved Pool:</span>
-            <select
-              class="form-input section-pool-select"
-              value={sec.reservedPoolId ?? ''}
-              disabled={reservedPoolOptions(sec.key).length === 0}
-              onchange={(e) => setSectionReservedPool(sIdx, (e.currentTarget as HTMLSelectElement).value)}
-            >
-              <option value="">{reservedPoolOptions(sec.key).length === 0 ? 'None available' : 'Select pool'}</option>
-              {#each reservedPoolOptions(sec.key) as pool}
-                <option value={pool.id}>{pool.label} ({formatReserveGrams(pool.grams)})</option>
-              {/each}
-            </select>
-          </label>
-          {#if sec.reservedPoolId}
-            <label class="section-pool-field" title="Leave blank to consume the full Reserved Pool">
-              <span>Use:</span>
+          <button
+            type="button"
+            class="section-adjust-link"
+            aria-expanded={sectionAllocationOpen[sec.key] ?? false}
+            aria-controls={`section-allocation-header-${sIdx} section-allocation-controls-${sIdx}`}
+            onclick={() => (sectionAllocationOpen[sec.key] = !sectionAllocationOpen[sec.key])}
+          >Adjust</button>
+          <div id={`section-allocation-header-${sIdx}`} class="section-allocation-header-fields">
+            <label class="section-pool-field" title="Percentage of this section's prepared material that stays here">
+              <span>Keep here:</span>
               <input
                 type="number"
                 min="0"
-                max={sec.reservedPoolAmount?.unit === 'percent' ? 100 : undefined}
-                step={sec.reservedPoolAmount?.unit === 'percent' ? 1 : 0.1}
+                max="100"
+                step="1"
                 class="form-input section-percent-input"
-                placeholder="all"
-                value={sec.reservedPoolAmount?.value ?? ''}
-                oninput={(e) => setSectionReservedPoolAmount(sIdx, (e.currentTarget as HTMLInputElement).value)}
+                value={sectionKeepHerePercent(sec)}
+                oninput={(e) => setSectionKeepHerePercent(sIdx, Number((e.currentTarget as HTMLInputElement).value))}
               />
+              <span>%</span>
+            </label>
+            <span class="section-reserve-estimate">Reserve pool: {formatReserveGrams(reserveGramsForSection(sec))}</span>
+            {#if sec.reservedPoolId && consumedReservedPoolGramsForSection(sec) > 0}
+              <span class="section-consumed-estimate">Uses {formatReserveGrams(consumedReservedPoolGramsForSection(sec))}</span>
+            {/if}
+            <label class="section-pool-field section-reserved-pool-field" title="Use prepared material reserved by another section">
+              <span>Reserved Pool:</span>
               <select
-                class="form-input allocation-unit-select"
-                value={sec.reservedPoolAmount?.unit ?? 'percent'}
-                onchange={(e) => setSectionReservedPoolUnit(sIdx, (e.currentTarget as HTMLSelectElement).value as AllocationUnit)}
+                class="form-input section-pool-select"
+                value={sec.reservedPoolId ?? ''}
+                disabled={reservedPoolOptions(sec.key).length === 0}
+                onchange={(e) => setSectionReservedPool(sIdx, (e.currentTarget as HTMLSelectElement).value)}
               >
-                <option value="percent">%</option>
-                <option value="grams">g</option>
+                <option value="">{reservedPoolOptions(sec.key).length === 0 ? 'None available' : 'Select pool'}</option>
+                {#each reservedPoolOptions(sec.key) as pool}
+                  <option value={pool.id}>{pool.label} ({formatReserveGrams(pool.grams)})</option>
+                {/each}
               </select>
             </label>
-          {/if}
+            {#if sec.reservedPoolId}
+              <label class="section-pool-field" title="Leave blank to consume the full Reserved Pool">
+                <span>Use:</span>
+                <input
+                  type="number"
+                  min="0"
+                  max={sec.reservedPoolAmount?.unit === 'percent' ? 100 : undefined}
+                  step={sec.reservedPoolAmount?.unit === 'percent' ? 1 : 0.1}
+                  class="form-input section-percent-input"
+                  placeholder="all"
+                  value={sec.reservedPoolAmount?.value ?? ''}
+                  oninput={(e) => setSectionReservedPoolAmount(sIdx, (e.currentTarget as HTMLInputElement).value)}
+                />
+                <select
+                  class="form-input allocation-unit-select"
+                  value={sec.reservedPoolAmount?.unit ?? 'percent'}
+                  onchange={(e) => setSectionReservedPoolUnit(sIdx, (e.currentTarget as HTMLSelectElement).value as AllocationUnit)}
+                >
+                  <option value="percent">%</option>
+                  <option value="grams">g</option>
+                </select>
+              </label>
+            {/if}
+          </div>
           {#if moderatorMode}
             <button
               type="button"
@@ -3637,8 +3654,13 @@
             onclick={() => removeSection(sIdx)}
             aria-label="Remove section"
           >✕</button>
-        </div>
-        <div class="section-allocation-controls" aria-label="Section material allocation">
+          </div>
+        <div
+          id={`section-allocation-controls-${sIdx}`}
+          class="section-allocation-controls"
+          class:section-allocation-expanded={sectionAllocationOpen[sec.key]}
+          aria-label="Section material allocation"
+        >
           <p class="section-allocation-note">Keep here applies to prepared material. Rendered fat is allocated separately.</p>
           {#if isHeatedPrepMethod(sec.prepMethod, sec.cookingMethod)}
             {@const fatPreview = renderedFatPreview(sec)}
@@ -3686,6 +3708,7 @@
               </span>
             </div>
           {/if}
+        </div>
         </div>
         {#if sec.prepMethod === 'parboiled_long_grain_rice'}
           <p class="parboiled-rice-info-note">Parboiled to 70% cooked absorbs 1.05 cups of water per cup of long-grain rice</p>
@@ -4030,7 +4053,7 @@
           </select>
         </label>
         <label class="section-time-field" title="Total cook time in minutes">
-          <span class="section-time-label">{['Bake','Braise','Simmer','Sub-simmer'].includes(cookingMethod) ? `${cookingMethod} (min)` : 'Cook (min)'}</span>
+          <span class="section-time-label">{['Bake','Bake (uncovered)','Braise','Simmer','Sub-simmer'].includes(cookingMethod) ? `${cookingMethod} (min)` : 'Cook (min)'}</span>
           <input
             type="number" min="0" max="600" step="1" placeholder="–"
             value={cookMinutes ?? ''}
@@ -4079,7 +4102,7 @@
             </select>
           </label>
           <label class="section-time-field" title="Second primary cook time in minutes">
-            <span class="section-time-label">{['Bake','Bake (covered)','Braise','Simmer','Sub-simmer'].includes(cook2Method) ? `${cook2Method} (min)` : 'Cook2 (min)'}</span>
+            <span class="section-time-label">{['Bake','Bake (uncovered)','Bake (covered)','Braise','Simmer','Sub-simmer'].includes(cook2Method) ? `${cook2Method} (min)` : 'Cook2 (min)'}</span>
             <input
               type="number" min="0" max="600" step="1" placeholder="–"
               value={cook2Minutes ?? ''}
@@ -4129,7 +4152,7 @@
               </select>
             </label>
             <label class="section-time-field" title="Third primary cook time in minutes">
-              <span class="section-time-label">{['Bake','Bake (covered)','Braise','Simmer','Sub-simmer'].includes(cook3Method) ? `${cook3Method} (min)` : 'Cook3 (min)'}</span>
+              <span class="section-time-label">{['Bake','Bake (uncovered)','Bake (covered)','Braise','Simmer','Sub-simmer'].includes(cook3Method) ? `${cook3Method} (min)` : 'Cook3 (min)'}</span>
               <input
                 type="number" min="0" max="600" step="1" placeholder="–"
                 value={cook3Minutes ?? ''}
@@ -4891,6 +4914,27 @@
     color: #718096;
     font-size: 0.76rem;
   }
+  .section-allocation-header-fields {
+    display: none;
+  }
+  .section-adjust-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 0;
+    border: 0;
+    background: transparent;
+    color: #2b6cb0;
+    font: inherit;
+    font-size: 0.82rem;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .section-allocation-disclosure.section-allocation-expanded .section-allocation-header-fields {
+    display: contents;
+  }
+  .section-allocation-disclosure:not(.section-allocation-expanded) .section-allocation-controls {
+    display: none;
+  }
   .section-allocation-note {
     margin: 0;
     color: #718096;
@@ -5025,6 +5069,26 @@
   }
   .section-gear-btn:hover { background: #edf2f7; }
   .section-remove-btn { padding: 2px 8px; }
+  @media (max-width: 600px) {
+    .section-allocation-header-fields {
+      flex: 1 1 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      padding: 4px 0;
+    }
+    .section-allocation-disclosure.section-allocation-expanded .section-allocation-header-fields {
+      display: flex;
+    }
+    .section-allocation-disclosure:not(.section-allocation-expanded) .section-allocation-controls {
+      display: none;
+    }
+    .section-allocation-header-fields .section-pool-field,
+    .section-allocation-header-fields .section-pool-select {
+      width: 100%;
+      max-width: none;
+    }
+  }
   .primary-cook-bar {
     display: flex;
     align-items: center;
@@ -5214,7 +5278,7 @@
   }
   .section-card-advanced {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 8px;
     margin-bottom: 8px;
     padding: 8px;
@@ -5224,11 +5288,15 @@
   .advanced-field {
     display: flex;
     flex-direction: column;
+    min-width: 0;
     gap: 2px;
     font-size: 0.75rem;
     color: #4a5568;
   }
-  .advanced-field .form-input {
+  .advanced-field > .form-input {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
     padding: 3px 6px;
     font-size: 0.85rem;
   }
@@ -5311,7 +5379,7 @@
   }
   .add-section-btn:hover { background: #2f855a; }
   @media (max-width: 600px) {
-    .section-card-advanced { grid-template-columns: repeat(2, 1fr); }
+    .section-card-advanced { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
   
   .form-row {

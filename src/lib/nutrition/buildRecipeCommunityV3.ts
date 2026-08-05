@@ -70,6 +70,11 @@ function methodStovetopTempF(method: string | undefined | null): number {
   if (m === 'parboiled long grain rice') return 212;
   return 212;
 }
+
+function isBroilMethod(method: string | undefined | null): boolean {
+  const m = method?.trim().toLowerCase().replace(/_/g, ' ') ?? '';
+  return m === 'broil' || m === 'broiled';
+}
 import {
   applyRetention,
   getRetentionFactor,
@@ -535,6 +540,12 @@ export function buildRecipeCommunityV3(
       const stages: Array<[number, number]> =
         activePrimary.length > 0
           ? activePrimary
+              .map(stage => ({
+                tempF: typeof stage.tempF === 'number'
+                  ? stage.tempF
+                  : isBroilMethod(stage.methodRaw) ? 500 : undefined,
+                minutes: stage.minutes,
+              }))
               .filter(stage => typeof stage.tempF === 'number' && typeof stage.minutes === 'number' && stage.tempF > 0 && stage.minutes > 0)
               .map(stage => [stage.tempF!, stage.minutes!] as [number, number])
         : sec.stages && sec.stages.length > 0

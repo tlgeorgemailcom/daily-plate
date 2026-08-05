@@ -1061,6 +1061,12 @@ In the edit form, the `Additional Ingredients 2` prep stage belongs inside the `
 
 `ENTR_075` currently uses `braised_beef` as a provisional substitute for the missing calibrated lamb braise fill class. This is a known modeling limitation, not validated lamb physics; replace it after calibrating against lamb shoulder or cubed lamb before treating the result as lamb-specific.
 
+### Deferred: `simmered_pork` fill class (ENTR_082 Pork Carnitas)
+
+Pork Carnitas uses `braised_beef` as a temporary physics proxy for its 100-minute uncovered simmer before the 4-minute broil. This is a stopgap: the existing class is calibrated to a beef brisket braise, not pork shoulder simmered in citrus and its rendered fat. The recipe must remain marked as proxy-based until a pork-specific class is available.
+
+What is needed: calibrate a `simmered_pork` fill class against a raw pork shoulder/butt NDB and a cooked pork reference that matches the carnitas process (uncovered simmer, liquid reduction, rendered fat, then brief broiling). Replace `braised_beef` in `ENTR_082` after calibration and rebuild the recipe through the physics pipeline.
+
 Permanent naming rule for stage-entry additions: use numbered section labels tied to the primary cook stage they feed. Ingredients present before Primary 1 use `Prep: Additional Ingredients 1`; ingredients added after Primary 1 and before Primary 2 use `Prep: Additional Ingredients 2`; ingredients added after Primary 2 and before Primary 3 use `Prep: Additional Ingredients 3`. These ingredients still live in the same ingredient list as all other prep ingredients; the stable numbered section name plus the section's primary-entry metadata removes ambiguity in generated JSON and Turso section data.
 
 Storage rule: do not create separate arrays such as `additionalIngredients2` or `additionalIngredients3`. Stage-entry ingredients are ordinary rows in `recipe_ingredients_json` / `recipe_ingredients.csv` whose `section` is the matching normal section key, e.g. `additional_ingredients_2` or `additional_ingredients_3`. The matching section row carries the visible label (`Additional Ingredients 2`) and `primary_entry_stage=2`, so the codebase knows exactly which primary cook stage first includes those ingredients.

@@ -340,6 +340,10 @@
     'bake covered':  'baked (covered)',
     'bake_covered':  'baked (covered)',
     'baked covered': 'baked (covered)',
+    'bake uncovered':  'baked (uncovered)',
+    'bake_uncovered':  'baked (uncovered)',
+    'baked uncovered': 'baked (uncovered)',
+    'baked_uncovered': 'baked (uncovered)',
   };
 
   function formatSectionHeader(
@@ -357,6 +361,9 @@
       ? 'Cook2 additional ingredients'
       : meta?.label || (sectionKey.charAt(0).toUpperCase() + sectionKey.slice(1));
     const discardedSuffix = formatDiscardedSectionSuffix(sectionItems);
+    if (sectionKey === 'additional_ingredients_2') {
+      return `${label}${discardedSuffix}:`;
+    }
     // prepMethod reflects what the cook does at this step; cookingMethod is physics only.
     const rawMethod = displayMeta?.prepMethod ?? '';
     const display = rawMethod in SECTION_METHOD_LABEL
@@ -1804,6 +1811,10 @@
     if (!raw) return 'Bake';
     const map: Record<string, string> = {
       'baked':         'Bake',
+      'bake uncovered':  'Bake (uncovered)',
+      'bake_uncovered':  'Bake (uncovered)',
+      'baked uncovered': 'Bake (uncovered)',
+      'baked_uncovered': 'Bake (uncovered)',
       'bake covered':  'Bake (covered)',
       'bake_covered':  'Bake (covered)',
       'baked covered': 'Bake (covered)',
@@ -1819,6 +1830,7 @@
       'braise':      'Braise (covered)',
       'pan seared':     'Pan sear',
       'grilled':        'Grill',
+      'broil':          'Broil',
       'broiled':        'Broil',
       'fried':          'Fry',
       'deep-fried':     'Deep-fry',
@@ -2343,7 +2355,7 @@
                     {#if group.section}
                       {@const sectionMeta = selectedLevel.sections?.find(s => (s.key ?? s.section_key) === group.section)}
                       {@const isCook2Entry = sectionMeta?.primaryEntryStage === '2'}
-                      {#if selectedLevel.cook2Method && ((!hasCook2Entry(selectedLevel) && groupIndex === groupRecipeIngredients(selectedLevel).length - 1) || (isCook2Entry && isFirstCook2Entry(selectedLevel, group.section, groupIndex)))}
+                      {#if selectedLevel.cook2Method && isCook2Entry && isFirstCook2Entry(selectedLevel, group.section, groupIndex)}
                         <div class="assembled-cook-line assembled-cook-line-staged">
                           <span class="assembled-cook-label">🍳 Cook2 (includes all previously cooked ingredients):</span>
                           <span class="assembled-cook-value">
@@ -2370,6 +2382,14 @@
                         </li>
                       {/each}
                     </ul>
+                    {/if}
+                    {#if selectedLevel.cook2Method && !hasCook2Entry(selectedLevel) && groupIndex === groupRecipeIngredients(selectedLevel).length - 1}
+                      <div class="assembled-cook-line assembled-cook-line-staged">
+                        <span class="assembled-cook-label">🍳 Cook2 (includes all previously cooked ingredients):</span>
+                        <span class="assembled-cook-value">
+                          {normalizeCookingMethod(selectedLevel.cook2Method)}{selectedLevel.cook2Minutes != null ? ` | ${selectedLevel.cook2Minutes} min` : ''}{selectedLevel.cook2TempF != null && selectedLevel.cook2TempF !== 195 && selectedLevel.cook2TempF !== 212 && selectedLevel.cook2TempF !== 180 ? ` | ${selectedLevel.cook2TempF}°F` : ''}
+                        </span>
+                      </div>
                     {/if}
                   {/each}
                 </div>

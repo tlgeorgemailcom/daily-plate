@@ -494,8 +494,13 @@ def _build_recipe_multi(
         if _uses_primary_timeline(section):
             stages = []
             for stage in _active_primary_stages(section):
-                if stage["temp_f"] and stage["minutes"]:
-                    stages.append((stage["temp_f"], stage["minutes"]))
+                temp_f = stage["temp_f"]
+                if not temp_f:
+                    method_raw = str(stage["method_raw"] or "").strip().lower().replace("_", " ")
+                    if method_raw in {"broil", "broiled"}:
+                        temp_f = 500
+                if temp_f and stage["minutes"]:
+                    stages.append((temp_f, stage["minutes"]))
             if stages:
                 return stages
         if section.cook_stages:
@@ -794,6 +799,10 @@ def _build_recipe_multi(
                 yfw = retained_water_g / st["raw_water"]
             else:
                 yfw = 1.0
+        elif s.yield_factor_water is not None:
+            # Explicit locks take priority over the default fill_class='none'
+            # physics path while legacy sections are being converted.
+            yfw = s.yield_factor_water
         elif _filling_class_for_yield and (_stages_for_yield or s.boil_stages):
             # Explicit fill_class takes priority over the per-vegetable boil_yfw model.
             # If the recipe author set a fill_class (e.g. simmer_sauce), use the physics
@@ -812,10 +821,6 @@ def _build_recipe_multi(
             yfw = calc_yield_water(_stages_for_yield, st["raw_water"], _filling_class_for_yield,
                                    boil_minutes=boil_min, boil_temp_f=_boil_temp,
                                    boil_covered=_boil_covered)
-        elif s.yield_factor_water is not None:
-            # Explicit lock takes priority over the ingredient-level boil_yfw fallback.
-            # Locks are set on unconverted sections pending fill_class + stages authoring.
-            yfw = s.yield_factor_water
         elif effective_method == 'boiled' and st["boil_yfw_ingredients"]:
             # Fallback per-vegetable water-retention model — fires only when no
             # explicit fill_class is set. (Moved below fill_class check July 2026.)

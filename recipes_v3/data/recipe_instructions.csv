@@ -1975,17 +1975,16 @@ ENTR_081,4,"Add the marinated lamb to the pot. Stir to combine, cover, and simme
 ENTR_081,5,"Rinse the regular long-grain rice until the water runs mostly clear. Parboil it in plenty of water until it is about 70% cooked, then drain it thoroughly."
 ENTR_081,6,"Spread the parboiled rice evenly over the lamb. Cover the pot tightly (seal with foil, then the lid) and cook over very low heat for 20–25 minutes until the rice is fully cooked. Scatter the cilantro and mint over the rice. Then top with the reserved onions."
 ENTR_081,7,"To serve, scoop portions from the pot so each serving contains both lamb and rice. Arrange on a platter and serve immediately."
-ENTR_082,1,"Cut the pork into 2-inch cubes. In a large, heavy pot, combine the pork, orange juice, lime juice, garlic, onion, cumin, oregano, cinnamon, black pepper, bay leaves, and salt."
-ENTR_082,2,"Add just enough water to barely cover the pork (about 1–2 cups). Bring to a boil over high heat, then reduce to a vigorous simmer. Cook uncovered for 1½–2 hours, stirring occasionally."
-ENTR_082,3,"Continue simmering until all the liquid has evaporated and the pork is sizzling in its own rendered fat, about 20–30 more minutes. Stir frequently at this stage to prevent burning. The pork should be golden and lightly crisp on the edges."
-ENTR_082,4,Remove and discard the bay leaves. Use two forks to shred or roughly chop the pork into bite-sized pieces.
-ENTR_082,5,"For extra crispiness, spread the shredded pork on a baking sheet and broil for 3–5 minutes until edges are caramelized and crisp."
-ENTR_082,6,"Suggestions (not included): Serve in warm tortillas with your choice of toppings such as diced white onion, fresh cilantro, salsa, and lime wedges."
-ENTR_083,1,"In a bowl, whisk together the hoisin sauce, soy sauce, honey, brown sugar, Shaoxing rice wine (or dry white wine as a substitute), sesame oil, garlic, ginger, and five-spice powder to form the marinade. Reserve 3 tablespoons of the marinade separately for basting."
+ENTR_082,1,"Cut the pork into 2-inch cubes. Place all ingredients in a large, heavy pot and toss to coat."
+ENTR_082,2,"Bring to a boil over high heat, then reduce to a vigorous uncovered simmer. Cook for 100 minutes, stirring occasionally, until the liquid has evaporated and the pork is tender and sizzling in its rendered fat."
+ENTR_082,3,Remove and discard the bay leaves. Use two forks to shred or roughly chop the pork into bite-sized pieces.
+ENTR_082,4,"Spread the shredded pork on a baking sheet and broil for 4 minutes, until the edges are caramelized and crisp."
+ENTR_082,5,"Suggestions (not included): Serve in warm tortillas with your choice of toppings such as diced white onion, fresh cilantro, salsa, and lime wedges."
+ENTR_083,1,"In a bowl, whisk together the hoisin sauce, soy sauce, honey, brown sugar, Shaoxing rice wine (or dry white wine as a substitute), sesame oil, garlic, ginger, and five-spice powder to form the marinade."
 ENTR_083,2,"Cut the pork shoulder into long strips about 2 inches wide and 1 inch thick. Add to the marinade, toss to coat, cover, and refrigerate for at least 4 hours or overnight."
 ENTR_083,3,Remove the pork from the refrigerator 30 minutes before cooking. Preheat the oven to 400°F (200°C). Line a baking sheet with foil and set a wire rack on top. Arrange the pork strips on the rack in a single layer.
-ENTR_083,4,"Roast for 15 minutes, then flip the strips and brush generously with the reserved marinade. Roast for another 15 minutes."
-ENTR_083,5,Switch the oven to broil. Brush the pork again with the remaining reserved marinade and broil for 3–4 minutes until the edges are deeply caramelized and slightly charred. Watch closely to prevent burning.
+ENTR_083,4,"Bake the pork uncovered at 400°F (200°C) for 30 minutes, flipping the strips halfway through."
+ENTR_083,5,Switch the oven to broil and broil the pork for 3 minutes until the edges are deeply caramelized and slightly charred. Watch closely to prevent burning.
 ENTR_083,6,"Rest for 5 minutes, then slice against the grain."
 ENTR_083,7,Suggestions (not included): Serve over steamed rice.
 ENTR_084,1,Remove the chops from the refrigerator 30 minutes before cooking. Pat dry with paper towels and season generously on both sides with salt and black pepper.
@@ -1996,35 +1995,36 @@ ENTR_084,5,Transfer to a cutting board and rest for 5 minutes before serving.
 ENTR_085,1,Remove the crown roast from the refrigerator 1 hour before roasting. Preheat oven to 450°F (230°C).
 ENTR_085,2,"Combine the olive oil, garlic, rosemary, and thyme in a small bowl. Rub the herb mixture generously over the entire outside surface of the crown, including between the bones."
 ENTR_085,3,Season the crown all over with salt and black pepper. Wrap each exposed rib-bone tip with a small piece of foil to prevent burning during roasting.
-ENTR_085,4,"Stand crown with bones upright in roasting pan. Roast at 450°F 15 min, then reduce to 375°F for 60–80 min to 145°F internal. (Center cavity may be filled with stuffing — not included.)"
+ENTR_085,4,"Stand crown with bones upright in roasting pan. Roast at 450°F for 15 min, then reduce to 375°F for 70 min to 145°F internal. (Center cavity may be filled with stuffing — not included.)"
 ENTR_085,5,Remove the foil from the bone tips. Transfer to a cutting board and rest 20 minutes before carving.
 ENTR_085,6,Carve by slicing straight down between the rib bones to divide into individual chops. Serve 2 ribs per person.
-ENTR_086,1,"In a large skillet or wok over high heat, cook the ground pork, breaking it up, until no longer pink, about 3–4 minutes. Add the garlic and ginger and stir-fry 30 seconds."
-ENTR_086,2,"Add the cabbage, carrots, bean sprouts, and scallions. Stir-fry until the vegetables are just wilted, about 2–3 minutes. Add the tamari and sesame oil, toss to combine, and transfer filling to a plate to cool completely."
-ENTR_086,3,"Place one wonton wrapper on a flat surface with a corner pointing toward you (diamond position). Spoon about 3 tablespoons (≈70g) of filling across the center. Fold the bottom corner over the filling, fold in the sides, and roll tightly. Seal the top corner with a dab of water. Repeat with remaining wrappers and filling."
-ENTR_086,4,"Heat 2–3 inches of vegetable oil in a deep skillet or pot to 350°F (175°C). Fry the egg rolls in batches, seam side down, for 3–4 minutes, turning once, until deep golden brown and crispy."
-ENTR_086,5,Drain on a rack or paper towels. Serve immediately.
-ENTR_086,6,Suggestions (not included): Serve with sweet-and-sour sauce or duck sauce.
+ENTR_086,1,"In a large skillet or wok over high heat, cook the ground pork, breaking it up, until no longer pink, about 4 minutes. Transfer to a bowl."
+ENTR_086,2,"Add the garlic and ginger to the skillet and stir-fry for 3 minutes."
+ENTR_086,3,"Add the cabbage, carrots, bean sprouts, and scallions. Stir-fry until the vegetables are just wilted, about 2 minutes."
+ENTR_086,4,"Add the tamari and sesame oil, toss to combine, and transfer the filling to a plate to cool completely."
+ENTR_086,5,"Place one wonton wrapper on a flat surface with a corner pointing toward you (diamond position). Spoon about 3 tablespoons (≈70g) of filling across the center. Fold the bottom corner over the filling, fold in the sides, and roll tightly. Seal the top corner with a dab of water. Repeat with remaining wrappers and filling."
+ENTR_086,6,"Heat 2–3 inches of vegetable oil in a deep skillet or pot to 350°F (175°C). Fry the egg rolls in batches, seam side down, for 3 minutes, turning once, until deep golden brown and crispy."
+ENTR_086,7,Drain on a rack or paper towels. Serve immediately.
+ENTR_086,8,Suggestions (not included): Serve with sweet-and-sour sauce or duck sauce.
 ENTR_087,1,"Cook the rice: rinse 2 cups of white rice until water runs clear. Combine with 3 cups water in a medium saucepan. Bring to a boil, reduce heat to low, cover, and cook for 18 minutes. Remove from heat and let steam, covered, for 5 minutes."
-ENTR_087,2,"While the rice cooks, heat vegetable oil in a large skillet or wok over medium-high heat."
-ENTR_087,3,"Add the pork and cook, breaking it up, for 5–6 minutes until no longer pink."
-ENTR_087,4,Add the garlic and ginger and cook for 30 seconds until fragrant.
-ENTR_087,5,Add the cabbage and carrots. Stir-fry for 3–4 minutes until the cabbage is wilted but still has some texture.
-ENTR_087,6,Add the bean sprouts and scallions. Stir-fry for 1–2 minutes.
-ENTR_087,7,Add the tamari and sesame oil. Toss to combine and cook for 1 minute more.
+ENTR_087,2,"Heat the vegetable oil in a large skillet or wok over medium-high heat. Add the pork and cook, breaking it up, for 11 minutes until no longer pink."
+ENTR_087,3,"Add the garlic and ginger and stir-fry for 6 minutes until fragrant."
+ENTR_087,4,"Add the cabbage and carrots. Stir-fry for 5 minutes until wilted but still textured."
+ENTR_087,5,"Add the bean sprouts and scallions. Stir-fry for 2 minutes."
+ENTR_087,6,"Add the tamari and sesame oil. Toss to combine and stir-fry for 1 minute."
 ENTR_087,8,Divide the rice among 4 bowls. Top with the pork filling and serve immediately.
 ENTR_088,1,Place the pork tenderloin cutlets between two sheets of plastic wrap and pound to 1/4-inch thickness. Season both sides with salt and pepper.
 ENTR_088,2,"Set up a breading station: flour in one shallow dish, beaten egg in a second, and panko breadcrumbs in a third."
 ENTR_088,3,"Dredge each cutlet in flour and shake off the excess. Dip in the beaten egg, letting the excess drip off. Press firmly into the panko to coat both sides."
-ENTR_088,4,"Heat avocado oil in a large skillet over medium-high heat until shimmering. Add the cutlets and cook until deep golden brown, 3–4 minutes per side. (The ingredient list reflects only the oil absorbed into the crust.)"
+ENTR_088,4,"Heat avocado oil in a large skillet over medium-high heat until shimmering. Add the cutlets and pan sear for 7 minutes total, turning halfway, until deep golden brown. (The ingredient list reflects only the oil absorbed into the crust.)"
 ENTR_088,5,Transfer to a wire rack for 1–2 minutes.
 ENTR_088,6,Suggestions (not included): Serve with lemon wedges and an arugula salad.
 ENTR_089,1,Make or prepare the BBQ Sauce (see the BBQ Sauce recipe). Set aside.
-ENTR_089,2,Preheat oven to 275°F (135°C). Remove the thin membrane from the back of the rack by sliding a butter knife under it and pulling it off with a paper towel.
+ENTR_089,2,Remove the thin membrane from the back of the rack by sliding a butter knife under it and pulling it off with a paper towel.
 ENTR_089,3,"Mix the paprika, brown sugar, chili powder, garlic powder, onion powder, ground mustard, black pepper, salt, and cayenne in a small bowl. Rub the dry rub evenly over both sides of the ribs."
-ENTR_089,4,Place the rack bone-side down on a large sheet of foil. Wrap the foil tightly around the ribs to seal completely. Place on a baking sheet.
-ENTR_089,5,"Bake for 2.5–3 hours, until the meat is tender and beginning to pull back from the bones."
-ENTR_089,6,"Open the foil and brush both sides of the ribs generously with BBQ sauce. Return to the oven uncovered for 20–30 minutes, until the sauce caramelizes."
+ENTR_089,4,Place the rack bone-side down on a large sheet of foil. Wrap the foil tightly around the ribs to seal completely and place on a baking sheet.
+ENTR_089,5,"Braise covered at 275°F for 165 minutes, until the meat is tender and beginning to pull back from the bones."
+ENTR_089,6,"Open the foil and brush both sides of the ribs generously with BBQ sauce. Bake uncovered at 275°F for 25 minutes, until the sauce caramelizes."
 ENTR_089,7,Rest for 10 minutes before slicing into individual ribs.
 ENTR_089,8,Suggestions (not included): Serve with additional BBQ sauce on the side.
 ENTR_090,1,Make or prepare the BBQ Sauce (see the BBQ Sauce recipe). Set aside.
