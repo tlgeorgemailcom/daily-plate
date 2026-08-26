@@ -6,6 +6,7 @@
   import { FOODS } from '$lib/data/food-portions';
   import type { Food as FoodData } from '$lib/data/food-portions';
   import { BINDING, FIXED_YIELD_WATER } from '$lib/nutrition/yieldCalc';
+  import { USDA_YIELD_PROFILE_CLASSES } from '$lib/nutrition/usdaYieldProfiles';
   import {
     calculateRenderedFatAllocation,
     normalizeIngredientRemoval,
@@ -471,8 +472,232 @@
     sauteed_aromatic: 'sautéed aromatics',
     pan_grilled_batter: 'pan-seared batter or bread',
     pan_grilled_masa: 'pan-seared masa cake',
-    fried_meat: 'fried or seared ground meat',
-    fried_ground_beef: 'pan-browned ground beef crumbles',
+    fried_meat: 'pork, ground, crumbles (and other ground meats)',
+    beef_ground_crumbles_low_fat: 'beef ground crumbles low-fat pan-fried',
+    beef_ground_crumbles_medium_fat: 'beef ground crumbles medium-fat pan-fried',
+    beef_ground_crumbles_high_fat: 'beef ground crumbles high-fat pan-fried',
+    beef_ground_patty_low_fat: 'beef ground patty low-fat pan-fried',
+    beef_ground_patty_medium_fat: 'beef ground patty medium-fat pan-fried',
+    beef_ground_patty_high_fat: 'beef ground patty high-fat pan-fried',
+    beef_flank_steak_boneless_pan_grilled: 'beef flank steak boneless pan-grilled',
+    beef_inside_skirt_steak_boneless_grilled: 'beef inside skirt steak boneless grilled',
+    beef_skirt_steak_boneless_pan_grilled: 'beef skirt steak boneless pan-grilled',
+    beef_ribeye_steak_boneless_pan_grilled: 'beef ribeye steak boneless pan-grilled',
+    beef_tenderloin_steak_boneless_pan_grilled: 'beef tenderloin steak boneless pan-grilled',
+    beef_top_round_steak_boneless_grilled: 'beef top round steak boneless grilled',
+    beef_round_steak_boneless_pan_grilled: 'beef round steak boneless pan-grilled',
+    beef_top_loin_steak_boneless_grilled: 'beef top loin steak boneless grilled',
+    beef_strip_steak_boneless_pan_grilled: 'beef New York strip steak boneless pan-grilled',
+    beef_t_bone_steak_bone_in_pan_grilled: 'beef T-bone steak bone-in pan-grilled (CALC)',
+    beef_porterhouse_steak_bone_in_pan_grilled: 'beef porterhouse steak bone-in pan-grilled (CALC)',
+    beef_top_sirloin_steak_boneless_pan_grilled: 'beef top sirloin steak boneless pan-grilled',
+    beef_shoulder_steak_boneless_grilled: 'beef shoulder steak boneless grilled',
+    beef_mock_tender_steak_boneless_braised: 'beef mock tender steak boneless braised',
+    beef_shoulder_clod_tender_medallion_boneless_grilled: 'beef shoulder clod tender medallion boneless grilled',
+    beef_shoulder_clod_top_center_steak_boneless_grilled: 'beef shoulder clod top center steak boneless grilled',
+    beef_top_blade_steak_boneless_grilled: 'beef top blade steak boneless grilled',
+    beef_flat_iron_steak_boneless_pan_grilled: 'beef flat iron steak boneless pan-grilled',
+    beef_denver_steak_boneless_grilled: 'beef Denver steak boneless grilled',
+    beef_underblade_pot_roast_boneless_braised: 'beef underblade pot roast boneless braised',
+    beef_underblade_steak_boneless_braised: 'beef underblade steak boneless braised',
+    beef_tri_tip_roast_boneless_roasted: 'beef tri-tip roast boneless roasted',
+    beef_tri_tip_roast_lean_only_roasted: 'beef tri-tip roast lean only roasted',
+    beef_chuck_eye_roast_boneless_roasted: 'beef chuck-eye roast boneless roasted',
+    beef_round_tip_roast_boneless_roasted: 'beef round-tip roast boneless roasted',
+    beef_bottom_round_roast_boneless_roasted: 'beef bottom-round roast boneless roasted',
+    beef_shoulder_pot_roast_boneless_braised: 'beef shoulder pot roast boneless braised',
+    beef_rib_eye_roast_bone_in_roasted: 'beef rib-eye roast bone-in roasted',
+    beef_rib_eye_roast_boneless_roasted: 'beef rib-eye roast boneless roasted',
+    beef_eye_of_round_roast_boneless_roasted: 'beef eye-of-round roast boneless roasted',
+    beef_pot_roast_boneless_braised: 'beef pot roast boneless braised',
+    beef_short_ribs_boneless_braised: 'beef short ribs boneless braised',
+    pork_sausage_high_fat_pan_fried: 'pork sausage high-fat pan-fried',
+    bacon_pan_fried: 'pork bacon pan-fried',
+    pork_back_ribs_bone_in_braised: 'pork back ribs bone-in braised',
+    pork_chop_bone_in_pan_grilled: 'pork chop bone-in pan-grilled',
+    pork_cured_ham_boneless_roasted: 'pork cured ham boneless roasted',
+    pork_blade_roast_bone_in_roasted: 'pork blade roast bone-in roasted',
+    pork_blade_roast_boneless_roasted: 'pork blade roast boneless roasted',
+    pork_center_loin_roast_bone_in_roasted: 'pork center loin roast bone-in roasted',
+    pork_center_rib_roast_bone_in_roasted: 'pork center rib roast bone-in roasted',
+    pork_tenderloin_lean_only_roasted: 'pork tenderloin lean only roasted',
+    pork_top_loin_roast_lean_only_roasted: 'pork top loin roast lean only roasted',
+    pork_country_style_ribs_boneless_braised: 'pork country-style ribs boneless braised',
+    pork_back_ribs_bone_in_roasted: 'pork back ribs bone-in roasted',
+    pork_back_ribs_bone_in_lean_only_roasted: 'pork back ribs bone-in lean only roasted',
+    pork_spareribs_bone_in_roasted: 'pork spareribs bone-in roasted',
+    pork_leg_sirloin_tip_roast_boneless_braised: 'pork leg sirloin tip roast boneless braised',
+    pork_sirloin_chop_bone_in_braised: 'pork sirloin chop bone-in braised',
+    pork_sirloin_chop_bone_in_lean_only_braised: 'pork sirloin chop bone-in lean only braised',
+    pork_sirloin_chop_boneless_braised: 'pork sirloin chop boneless braised',
+    pork_sirloin_chop_boneless_lean_only_braised: 'pork sirloin chop boneless lean only braised',
+    pork_blade_roast_bone_in_lean_only_roasted: 'pork blade roast bone-in lean only roasted',
+    pork_blade_roast_boneless_lean_only_roasted: 'pork blade roast boneless lean only roasted',
+    pork_center_loin_roast_bone_in_lean_only_roasted: 'pork center loin roast bone-in lean only roasted',
+    pork_center_rib_roast_bone_in_lean_only_roasted: 'pork center rib roast bone-in lean only roasted',
+    pork_blade_chop_boneless_lean_only_pan_grilled: 'pork blade chop boneless lean only pan-grilled',
+    pork_chop_boneless_pan_grilled: 'pork chop boneless pan-grilled',
+    pork_leg_rump_half_lean_only_roasted: 'pork leg rump half lean only roasted',
+    pork_leg_shank_half_lean_only_roasted: 'pork leg shank half lean only roasted',
+    pork_blade_chop_bone_in_braised: 'pork blade chop bone-in braised',
+    pork_blade_chop_bone_in_pan_grilled: 'pork blade chop bone-in pan-grilled',
+    pork_center_loin_chop_bone_in_braised: 'pork center loin chop bone-in braised',
+    pork_center_loin_chop_bone_in_lean_only_braised: 'pork center loin chop bone-in lean only braised',
+    pork_center_loin_chop_bone_in_lean_only_pan_grilled: 'pork center loin chop bone-in lean only pan-grilled',
+    pork_ground_crumbles_high_fat: 'pork, ground, crumbles, high fat',
+    pork_ground_crumbles_low_fat: 'pork, ground, crumbles, low fat',
+    pork_ground_crumbles_medium_fat: 'pork, ground, crumbles, medium fat',
+    pork_ground_patty_high_fat: 'pork, ground, patty, high fat',
+    pork_ground_patty_low_fat: 'pork, ground, patty, low fat',
+    pork_ground_patty_medium_fat: 'pork, ground, patty, medium fat',
+    chicken_wing_dark_fried_batter: 'chicken wing meat and skin fried in batter',
+    chicken_wing_dark_fried_flour: 'chicken wing meat and skin fried in flour',
+    chicken_wing_dark_roasted: 'chicken wing meat and skin roasted',
+    chicken_wing_dark_stewed: 'chicken wing meat and skin stewed',
+    chicken_wing_dark_fried: 'chicken wing meat only flour fried',
+    chicken_wing_dark_roasted_meat_only: 'chicken wing meat only roasted',
+    chicken_wing_dark_stewed_meat_only: 'chicken wing meat only stewed',
+    chicken_gizzard_stewed: 'chicken gizzard poached, simmered, or stewed',
+    chicken_liver_pan_grilled: 'chicken liver pan-fried, sauteed, or stir-fried',
+    turkey_gizzard_stewed: 'turkey gizzard poached, simmered, or stewed',
+    turkey_heart_stewed: 'turkey heart poached, simmered, or stewed',
+    turkey_liver_stewed: 'turkey liver poached, simmered, or stewed',
+    veal_liver_braised: 'veal liver braised',
+    veal_liver_pan_grilled: 'veal liver pan-fried, sauteed, or stir-fried',
+    veal_top_round_braised: 'veal topside (top round) braised',
+    veal_top_round_pan_fried_breaded: 'veal topside (top round) breaded pan-fried',
+    veal_top_round_pan_fried_unbreaded: 'veal topside (top round) unbreaded pan-fried',
+    veal_top_round_roasted: 'veal topside (top round) roasted',
+    veal_loin_braised: 'veal loin braised',
+    veal_loin_roasted: 'veal loin roasted',
+    veal_loin_chop_grilled: 'veal loin chop grilled',
+    veal_hindshank_braised: 'veal hindshank braised',
+    veal_rib_braised: 'veal ribs braised',
+    veal_rib_roasted: 'veal ribs roasted',
+    veal_sirloin_braised: 'veal strip loin (sirloin) braised',
+    veal_sirloin_roasted: 'veal strip loin (sirloin) roasted',
+    veal_breast_braised: 'veal breast braised',
+    veal_ground_broiled: 'ground veal broiled',
+    veal_ground_pan_fried: 'ground veal pan-fried',
+    pork_chitterlings_stewed: 'pork chitterlings poached, simmered, or stewed',
+    pork_feet_stewed: 'pork feet poached, simmered, or stewed',
+    pork_stomach_stewed: 'pork stomach poached, simmered, or stewed',
+    beef_brain_stewed: 'beef brain poached, simmered, or stewed',
+    beef_heart_stewed: 'beef heart poached, simmered, or stewed',
+    beef_kidneys_stewed: 'beef kidneys poached, simmered, or stewed',
+    beef_liver_braised: 'beef liver braised',
+    beef_liver_pan_grilled: 'beef liver pan-fried, sauteed, or stir-fried',
+    beef_tripe_stewed: 'beef tripe poached, simmered, or stewed',
+    turkey_whole_meat_and_skin_roasted: 'turkey whole meat and skin roasted',
+    turkey_whole_meat_only_roasted: 'turkey whole meat only roasted',
+    turkey_light_meat_and_skin_roasted: 'turkey light meat and skin roasted',
+    turkey_light_meat_only_roasted: 'turkey light meat only roasted',
+    turkey_dark_meat_and_skin_roasted: 'turkey dark meat and skin roasted',
+    turkey_dark_meat_only_roasted: 'turkey dark meat only roasted',
+    turkey_ground_crumbles_pan_broiled: 'ground turkey 93% lean, 7% fat pan-broiled crumbles',
+    turkey_ground_patty_broiled: 'ground turkey 93% lean, 7% fat patties broiled',
+    turkey_ground_85_15_crumbles_pan_broiled: 'ground turkey 85% lean, 15% fat pan-broiled crumbles',
+    turkey_ground_85_15_patty_broiled: 'ground turkey 85% lean, 15% fat patties broiled',
+    turkey_breast_meat_and_skin_roasted: 'turkey breast meat and skin roasted',
+    turkey_leg_meat_and_skin_roasted: 'turkey leg meat and skin roasted',
+    turkey_wing_meat_and_skin_roasted: 'turkey wing meat and skin roasted',
+    lamb_foreshank_meat_and_fat_braised: 'lamb foreshank meat and fat braised',
+    lamb_leg_shank_half_meat_and_fat_roasted: 'lamb leg shank half meat and fat roasted',
+    lamb_leg_sirloin_half_meat_and_fat_roasted: 'lamb leg sirloin half meat and fat roasted',
+    lamb_loin_meat_and_fat_broiled: 'lamb loin meat and fat broiled',
+    lamb_loin_meat_and_fat_roasted: 'lamb loin meat and fat roasted',
+    lamb_shoulder_meat_and_fat_braised: 'lamb shoulder meat and fat braised',
+    lamb_shoulder_meat_and_fat_roasted: 'lamb shoulder meat and fat roasted',
+    lamb_stew_cubes_lean_only_braised: 'lamb stew cubes lean only braised',
+    lamb_new_zealand_leg_chop_bone_in_meat_and_fat_fast_fried: 'lamb New Zealand leg chop bone-in meat and fat fast-fried',
+    lamb_new_zealand_leg_chop_bone_in_lean_only_fast_fried: 'lamb New Zealand leg chop bone-in lean only fast-fried',
+    lamb_new_zealand_loin_chop_meat_and_fat_broiled: 'lamb New Zealand loin chop meat and fat broiled',
+    lamb_new_zealand_loin_chop_lean_only_broiled: 'lamb New Zealand loin chop lean only broiled',
+    lamb_new_zealand_partly_frenched_rack_meat_and_fat_fast_roasted: 'lamb New Zealand partly frenched rack meat and fat fast-roasted',
+    lamb_new_zealand_partly_frenched_rack_lean_only_fast_roasted: 'lamb New Zealand partly frenched rack lean only fast-roasted',
+    lamb_new_zealand_loin_chop_meat_and_fat_fast_fried: 'lamb New Zealand loin chop meat and fat fast-fried',
+    lamb_australian_sirloin_chop_boneless_meat_and_fat_broiled: 'lamb Australian boneless sirloin chop meat and fat broiled',
+    lamb_australian_sirloin_chop_boneless_lean_only_broiled: 'lamb Australian boneless sirloin chop lean only broiled',
+    lamb_australian_frenched_rib_chop_bone_in_meat_and_fat_grilled: 'lamb Australian frenched rib chop bone-in meat and fat grilled',
+    lamb_australian_frenched_rib_chop_bone_in_lean_only_grilled: 'lamb Australian frenched rib chop bone-in lean only grilled',
+    lamb_new_zealand_fully_frenched_rack_lean_only_fast_roasted: 'lamb New Zealand fully frenched rack lean only fast-roasted',
+    lamb_new_zealand_fully_frenched_rack_meat_and_fat_fast_roasted: 'lamb New Zealand fully frenched rack meat and fat fast-roasted',
+    emu_ground_grilled: 'emu ground pan-broiled',
+    emu_fan_fillet_broiled: 'emu fan fillet broiled',
+    emu_full_rump_broiled: 'emu full rump broiled',
+    emu_inside_drum_broiled: 'emu inside drum broiled',
+    cornish_game_hen_roasted_meat_and_skin: 'Cornish game hen meat and skin roasted',
+    cornish_game_hen_roasted_meat_only: 'Cornish game hen meat only roasted',
+    bison_chuck_shoulder_braised: 'bison chuck shoulder clod braised',
+    bison_ground_grilled: 'bison ground broiled or grilled',
+    bison_top_round_grilled: 'bison top round broiled or grilled',
+    deer_ground_grilled: 'deer ground broiled or grilled',
+    elk_ground_grilled: 'elk ground broiled or grilled',
+    ostrich_ground_grilled: 'ostrich ground pan-broiled',
+    ostrich_inside_leg_cooked: 'ostrich inside leg cooked',
+    ostrich_inside_strip_cooked: 'ostrich inside strip cooked',
+    ostrich_outside_strip_cooked: 'ostrich outside strip cooked',
+    ostrich_oyster_cooked: 'ostrich oyster cooked',
+    ostrich_tip_trimmed_cooked: 'ostrich tip trimmed cooked',
+    ostrich_top_loin_cooked: 'ostrich top loin cooked',
+    game_antelope_roasted: 'antelope roasted',
+    game_bear_simmered: 'bear simmered',
+    game_beaver_roasted: 'beaver roasted',
+    game_beefalo_roasted: 'beefalo roasted',
+    game_bison_lean_roasted: 'bison lean roasted',
+    game_boar_roasted: 'wild boar roasted',
+    game_buffalo_roasted: 'water buffalo roasted',
+    game_caribou_roasted: 'caribou roasted',
+    game_deer_roasted: 'deer roasted',
+    game_elk_roasted: 'elk roasted',
+    game_horse_roasted: 'horse roasted',
+    game_moose_roasted: 'moose roasted',
+    game_muskrat_roasted: 'muskrat roasted',
+    game_rabbit_domesticated_roasted: 'domesticated rabbit roasted',
+    game_rabbit_domesticated_stewed: 'domesticated rabbit stewed',
+    game_rabbit_wild_stewed: 'wild rabbit stewed',
+    game_squirrel_roasted: 'squirrel roasted',
+    chicken_thigh_dark_pan_grilled: 'chicken thigh meat only pan-grilled',
+    chicken_thigh_dark_fried: 'chicken thigh meat only flour fried',
+    chicken_thigh_dark_roasted: 'chicken thigh meat and skin roasted',
+    chicken_thigh_dark_fried_batter: 'chicken thigh meat and skin fried in batter',
+    chicken_thigh_dark_fried_flour: 'chicken thigh meat and skin fried in flour',
+    chicken_thigh_dark_stewed: 'chicken thigh meat and skin stewed',
+    chicken_thigh_dark_rotisserie: 'chicken thigh meat only rotisserie',
+    chicken_thigh_dark_rotisserie_meat_and_skin: 'chicken thigh meat and skin rotisserie',
+    chicken_breast_light_rotisserie: 'chicken breast meat and skin rotisserie',
+    chicken_breast_light_fried_batter: 'chicken breast meat and skin fried in batter',
+    chicken_breast_light_fried_flour: 'chicken breast meat and skin fried in flour',
+    chicken_breast_light_roasted: 'chicken breast meat and skin roasted',
+    chicken_breast_light_stewed: 'chicken breast meat and skin stewed',
+    chicken_breast_light_fried: 'chicken breast meat only flour fried',
+    chicken_breast_light_roasted_meat_only: 'chicken breast meat only roasted',
+    chicken_breast_light_stewed_meat_only: 'chicken breast meat only stewed',
+    chicken_breast_light_rotisserie_meat_only: 'chicken breast meat only rotisserie',
+    chicken_back_fried_batter: 'chicken back meat and skin fried in batter',
+    chicken_back_fried_flour: 'chicken back meat and skin fried in flour',
+    chicken_back_roasted: 'chicken back meat and skin roasted',
+    chicken_back_stewed: 'chicken back meat and skin stewed',
+    chicken_back_rotisserie_meat_and_skin: 'chicken back meat and skin rotisserie',
+    chicken_back_fried: 'chicken back meat only flour fried',
+    chicken_back_roasted_meat_only: 'chicken back meat only roasted',
+    chicken_back_stewed_meat_only: 'chicken back meat only stewed',
+    chicken_back_rotisserie_meat_only: 'chicken back meat only rotisserie',
+    chicken_neck_fried_batter: 'chicken neck meat and skin fried in batter',
+    chicken_neck_fried_flour: 'chicken neck meat and skin fried in flour',
+    chicken_neck_simmered: 'chicken neck meat and skin simmered',
+    chicken_neck_fried: 'chicken neck meat only flour fried',
+    chicken_neck_simmered_meat_only: 'chicken neck meat only simmered',
+    chicken_drumstick_dark_fried_batter: 'chicken drumstick meat and skin fried in batter',
+    chicken_drumstick_dark_fried_flour: 'chicken drumstick meat and skin fried in flour',
+    chicken_drumstick_dark_roasted: 'chicken drumstick meat and skin roasted',
+    chicken_drumstick_dark_stewed: 'chicken drumstick meat and skin stewed',
+    chicken_drumstick_dark_fried: 'chicken drumstick meat only flour fried',
+    chicken_drumstick_dark_roasted_meat_only: 'chicken drumstick meat only roasted',
+    chicken_drumstick_dark_stewed_meat_only: 'chicken drumstick meat only stewed',
+    chicken_drumstick_dark_rotisserie: 'chicken drumstick meat only rotisserie',
+    chicken_drumstick_dark_rotisserie_meat_and_skin: 'chicken drumstick meat and skin rotisserie',
+    fried_ground_beef: 'beef, ground, crumbles',
     fried_potato: 'fried shredded potato',
     deep_fried_potato: 'deep-fried potato strips',
     deep_fried_battered_ring: 'deep-fried battered rings',
@@ -499,13 +724,22 @@
     scalded_squeezed_spinach: 'scalded and squeezed spinach',
     baked_pork: 'slow-roasted pork shoulder',
     braised_beef: 'braised beef brisket',
+    beef_brisket_whole_separable_lean_only_0in_braised: 'beef brisket whole, separable lean only, trimmed to 0-inch fat, braised',
+    beef_brisket_whole_separable_lean_and_fat_1_8in_braised: 'beef brisket whole, separable lean and fat, 1/8-inch fat, braised',
+    beef_brisket_flat_separable_lean_and_fat_1_8in_braised: 'beef brisket flat half, separable lean and fat, 1/8-inch fat, braised',
+    beef_brisket_flat_separable_lean_only_1_8in_braised: 'beef brisket flat half, separable lean only, 1/8-inch fat, braised',
+    beef_brisket_point_separable_lean_and_fat_1_8in_braised: 'beef brisket point half, separable lean and fat, 1/8-inch fat, braised',
+    beef_corned_brisket_cooked: 'beef corned brisket cooked',
     sub_simmered_beef: 'sub-simmered beef in liquid',
     chicken_stock: 'chicken or beef stock extraction',
     bone_broth: 'bone broth extraction',
     fish_stock: 'fish stock extraction',
     vegetable_stock: 'vegetable stock extraction',
-    poached_egg: 'poached egg from raw whole egg',
-    fried_egg: 'fried egg from raw whole egg',
+    poached_egg: 'eggs, chicken, poached egg from raw whole egg',
+    fried_egg: 'eggs, chicken, fried egg from raw whole egg',
+    hard_boiled_egg: 'eggs, chicken, hard-boiled egg from raw whole egg',
+    omelet_egg: 'eggs, chicken, omelet from raw whole egg',
+    scrambled_egg: 'eggs, chicken, scrambled egg from raw whole egg',
   };
 
   function formatFillClassLabel(key: string): string {
@@ -522,10 +756,34 @@
       key,
       label: `${formatFillClassLabel(key)} (fixed yfw ${yieldWater.toFixed(3)})`,
     })),
+    ...USDA_YIELD_PROFILE_CLASSES.map((key) => ({
+      key,
+      label: `${formatFillClassLabel(key)} (USDA)`,
+    })),
   ];
 
+  function filterFillClassOptions(query: string, selectedKey = '') {
+    const normalizedQuery = query.trim().toLowerCase();
+    if (!normalizedQuery) return FILL_CLASS_OPTIONS;
+    const terms = normalizedQuery.split(/\s+/).filter(Boolean);
+    return FILL_CLASS_OPTIONS.filter((option) => {
+      if (option.key === selectedKey) return true;
+      const haystack = `${option.key} ${option.label}`.toLowerCase();
+      return terms.every((term) => haystack.includes(term));
+    });
+  }
+
+  let fillClassSearch = $state('');
+  let cook2FillClassSearch = $state('');
+  let cook3FillClassSearch = $state('');
+  let sectionFillClassSearch = $state<Record<string, string>>({});
+
+  function sectionFillClassQuery(key: string): string {
+    return sectionFillClassSearch[key] ?? '';
+  }
+
   function hasKnownFillClass(key: string): boolean {
-    return key in BINDING || key in FIXED_YIELD_WATER;
+    return key in BINDING || key in FIXED_YIELD_WATER || USDA_YIELD_PROFILE_CLASSES.includes(key);
   }
   // Display labels for prep methods — stored values are clean identifiers;
   // UI annotations clarify open-pot vs covered assumption for the water model.
@@ -2841,6 +3099,7 @@
     cookingMethod,
     cookMinutes: cookMinutes ?? undefined,
     cookTempF: cookTempF ?? undefined,
+    fillClass: fillClass || undefined,
     cook2Method: cook2Method || undefined,
     cook2Minutes: cook2Minutes ?? undefined,
     cook2TempF: cook2TempF ?? undefined,
@@ -3740,6 +3999,32 @@
             {/if}
           </div>
         {/if}
+        {#if !sectionFillClassOwnedByPrimary(sec) || !moderatorMode}
+          <label class="section-time-field section-fill-class-field" title="Filling class controls how much water is free to evaporate for this section's cook method.">
+            <span class="section-time-label">Fill class</span>
+            <input
+              type="search"
+              value={sectionFillClassQuery(sec.key)}
+              oninput={(e) => sectionFillClassSearch = { ...sectionFillClassSearch, [sec.key]: (e.currentTarget as HTMLInputElement).value }}
+              class="fill-class-search"
+              placeholder="Search fill classes"
+              aria-label={`Search fill classes for ${sec.label}`}
+            />
+            <select
+              value={sec.fillClass ?? ''}
+              onchange={(e) => { const v = (e.currentTarget as HTMLSelectElement).value; sections = sections.map((s, i) => i === sIdx ? { ...s, fillClass: v || undefined } : s); }}
+              class="form-input"
+            >
+              <option value="">— none —</option>
+              {#if sec.fillClass && !hasKnownFillClass(sec.fillClass)}
+                <option value={sec.fillClass}>{sec.fillClass} — unknown current value</option>
+              {/if}
+              {#each filterFillClassOptions(sectionFillClassQuery(sec.key), sec.fillClass ?? '') as option}
+                <option value={option.key}>{option.label}</option>
+              {/each}
+            </select>
+          </label>
+        {/if}
         {#if moderatorMode && sectionAdvancedOpen[sIdx]}
           <div class="section-card-advanced">
             <label class="advanced-field">
@@ -3761,24 +4046,6 @@
               <input type="number" step="0.01" min="0" max="2"
                 bind:value={sec.yieldFactorOther} placeholder="1.00" class="form-input" />
             </label>
-            {#if !sectionFillClassOwnedByPrimary(sec)}
-              <label class="advanced-field" title="Filling class controls how much water is free to evaporate (binding coefficient). Leave blank for non-filling sections.">
-                <span>Fill class</span>
-                <select
-                  value={sec.fillClass ?? ''}
-                  onchange={(e) => { const v = (e.currentTarget as HTMLSelectElement).value; sections = sections.map((s, i) => i === sIdx ? { ...s, fillClass: v || undefined } : s); }}
-                  class="form-input"
-                >
-                  <option value="">— none —</option>
-                  {#if sec.fillClass && !hasKnownFillClass(sec.fillClass)}
-                    <option value={sec.fillClass}>{sec.fillClass} — unknown current value</option>
-                  {/if}
-                  {#each FILL_CLASS_OPTIONS as option}
-                    <option value={option.key}>{option.label}</option>
-                  {/each}
-                </select>
-              </label>
-            {/if}
             <div class="advanced-field advanced-stages" style="grid-column: 1 / -1"
               title="Multi-stage oven bake: each entry fires in order. calcYieldWater() uses these for evaporation modelling.">
               <span>Cook stages (°F → min)</span>
@@ -4070,20 +4337,26 @@
             class="form-input time-number-input"
           />
         </label>
-        {#if moderatorMode}
-          <label class="primary-cook-label" title="Filling class used by the top-bar cook when raw sections inherit the primary heat">
-            <span class="primary-cook-name">Fill class</span>
-            <select bind:value={fillClass} class="form-select primary-fill-select">
-              <option value="">— none —</option>
-              {#if fillClass && !hasKnownFillClass(fillClass)}
-                <option value={fillClass}>{fillClass} — unknown current value</option>
-              {/if}
-              {#each FILL_CLASS_OPTIONS as option}
-                <option value={option.key}>{option.label}</option>
-              {/each}
-            </select>
-          </label>
-        {/if}
+        <label class="primary-cook-label" title="Filling class used by the top-bar cook when raw sections inherit the primary heat">
+          <span class="primary-cook-name">Fill class</span>
+          <input
+            type="search"
+            value={fillClassSearch}
+            oninput={(e) => fillClassSearch = (e.currentTarget as HTMLInputElement).value}
+            class="fill-class-search"
+            placeholder="Search fill classes"
+            aria-label="Search primary fill classes"
+          />
+          <select bind:value={fillClass} class="form-select primary-fill-select">
+            <option value="">— none —</option>
+            {#if fillClass && !hasKnownFillClass(fillClass)}
+              <option value={fillClass}>{fillClass} — unknown current value</option>
+            {/if}
+            {#each filterFillClassOptions(fillClassSearch, fillClass) as option}
+              <option value={option.key}>{option.label}</option>
+            {/each}
+          </select>
+        </label>
         <button type="button" class="cook-help-btn" onclick={() => cookHelpOpen = true} title="How to fill in these fields">ⓘ</button>
       </div>
 
@@ -4119,20 +4392,26 @@
               class="form-input time-number-input"
             />
           </label>
-          {#if moderatorMode}
-            <label class="primary-cook-label" title="Filling class used by the second primary cook">
-              <span class="primary-cook-name">Fill class</span>
-              <select bind:value={cook2FillClass} class="form-select primary-fill-select">
-                <option value="">— none —</option>
-                {#if cook2FillClass && !hasKnownFillClass(cook2FillClass)}
-                  <option value={cook2FillClass}>{cook2FillClass} — unknown current value</option>
-                {/if}
-                {#each FILL_CLASS_OPTIONS as option}
-                  <option value={option.key}>{option.label}</option>
-                {/each}
-              </select>
-            </label>
-          {/if}
+          <label class="primary-cook-label" title="Filling class used by the second primary cook">
+            <span class="primary-cook-name">Fill class</span>
+            <input
+              type="search"
+              value={cook2FillClassSearch}
+              oninput={(e) => cook2FillClassSearch = (e.currentTarget as HTMLInputElement).value}
+              class="fill-class-search"
+              placeholder="Search fill classes"
+              aria-label="Search Cook2 fill classes"
+            />
+            <select bind:value={cook2FillClass} class="form-select primary-fill-select">
+              <option value="">— none —</option>
+              {#if cook2FillClass && !hasKnownFillClass(cook2FillClass)}
+                <option value={cook2FillClass}>{cook2FillClass} — unknown current value</option>
+              {/if}
+              {#each filterFillClassOptions(cook2FillClassSearch, cook2FillClass) as option}
+                <option value={option.key}>{option.label}</option>
+              {/each}
+            </select>
+          </label>
         </div>
       {/if}
 
@@ -4169,20 +4448,26 @@
                 class="form-input time-number-input"
               />
             </label>
-            {#if moderatorMode}
-              <label class="primary-cook-label" title="Filling class used by the third primary cook">
-                <span class="primary-cook-name">Fill class</span>
-                <select bind:value={cook3FillClass} class="form-select primary-fill-select">
-                  <option value="">— none —</option>
-                  {#if cook3FillClass && !hasKnownFillClass(cook3FillClass)}
-                    <option value={cook3FillClass}>{cook3FillClass} — unknown current value</option>
-                  {/if}
-                  {#each FILL_CLASS_OPTIONS as option}
-                    <option value={option.key}>{option.label}</option>
-                  {/each}
-                </select>
-              </label>
-            {/if}
+            <label class="primary-cook-label" title="Filling class used by the third primary cook">
+              <span class="primary-cook-name">Fill class</span>
+              <input
+                type="search"
+                value={cook3FillClassSearch}
+                oninput={(e) => cook3FillClassSearch = (e.currentTarget as HTMLInputElement).value}
+                class="fill-class-search"
+                placeholder="Search fill classes"
+                aria-label="Search Cook3 fill classes"
+              />
+              <select bind:value={cook3FillClass} class="form-select primary-fill-select">
+                <option value="">— none —</option>
+                {#if cook3FillClass && !hasKnownFillClass(cook3FillClass)}
+                  <option value={cook3FillClass}>{cook3FillClass} — unknown current value</option>
+                {/if}
+                {#each filterFillClassOptions(cook3FillClassSearch, cook3FillClass) as option}
+                  <option value={option.key}>{option.label}</option>
+                {/each}
+              </select>
+            </label>
           </div>
         {/if}
       {/if}
@@ -5109,6 +5394,16 @@
   }
   .primary-cook-name {
     white-space: nowrap;
+  }
+  .fill-class-search {
+    width: 150px;
+    min-width: 110px;
+    padding: 3px 6px;
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+  .section-fill-class-field {
+    margin: 0 2px 8px;
   }
   .primary-cook-bar-staged {
     margin-left: 12px;

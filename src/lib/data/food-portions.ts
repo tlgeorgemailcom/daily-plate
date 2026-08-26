@@ -27,7 +27,6 @@ export interface Food {
   fib: number;      // Fiber (g)
   h2o: number;      // Water (g)
   sug: number;      // Total Sugar (g)
-  micros?: Record<string, number | null>; // Recipe results may carry Turso per-100g micronutrients
   portions: Portion[];  // [0] is always custom (100g base)
 }
 
@@ -1435,7 +1434,7 @@ export const FOODS: Food[] = [
     "groups": [
       "fruit"
     ],
-    "ndb": "9502",
+    "ndb": "09502",
     "desc": "Apples, raw, granny smith, with skin",
     "cal": 58.0,
     "pro": 0.4,
@@ -2509,7 +2508,7 @@ export const FOODS: Food[] = [
     "groups": [
       "fruit"
     ],
-    "ndb": "9040",
+    "ndb": "09040",
     "desc": "Bananas, raw",
     "cal": 89.0,
     "pro": 1.1,
@@ -4249,7 +4248,7 @@ export const FOODS: Food[] = [
     "groups": [
       "fruit"
     ],
-    "ndb": "9050",
+    "ndb": "09050",
     "desc": "Blueberries, raw",
     "cal": 57.0,
     "pro": 0.7,
@@ -5049,7 +5048,7 @@ export const FOODS: Food[] = [
     "groups": [
       "vegetable"
     ],
-    "ndb": "11090",
+    "ndb": "011090",
     "desc": "Broccoli, raw",
     "cal": 34.0,
     "pro": 2.8,
@@ -5791,7 +5790,7 @@ export const FOODS: Food[] = [
       "dairy",
       "fats"
     ],
-    "ndb": "1001",
+    "ndb": "01001",
     "desc": "Butter, salted",
     "cal": 717.0,
     "pro": 0.8,
@@ -5862,7 +5861,7 @@ export const FOODS: Food[] = [
     "groups": [
       "dairy"
     ],
-    "ndb": "1145",
+    "ndb": "01145",
     "desc": "Butter, without salt",
     "cal": 717.0,
     "pro": 0.8,
@@ -5950,7 +5949,7 @@ export const FOODS: Food[] = [
     "groups": [
       "vegetable"
     ],
-    "ndb": "11109",
+    "ndb": "011109",
     "desc": "Cabbage, raw",
     "cal": 25.0,
     "pro": 1.3,
@@ -9140,7 +9139,7 @@ export const FOODS: Food[] = [
     "groups": [
       "fats"
     ],
-    "ndb": "4582",
+    "ndb": "04582",
     "desc": "Oil, canola",
     "cal": 884.0,
     "pro": 0.0,
@@ -9680,7 +9679,7 @@ export const FOODS: Food[] = [
     "groups": [
       "vegetable"
     ],
-    "ndb": "11124",
+    "ndb": "011124",
     "desc": "Carrots, raw",
     "cal": 41.0,
     "pro": 0.9,
@@ -10226,7 +10225,7 @@ export const FOODS: Food[] = [
     "groups": [
       "vegetable"
     ],
-    "ndb": "11143",
+    "ndb": "011143",
     "desc": "Celery, raw",
     "cal": 16.0,
     "pro": 0.7,
@@ -10859,7 +10858,7 @@ export const FOODS: Food[] = [
     "groups": [
       "dairy"
     ],
-    "ndb": "1009",
+    "ndb": "01009",
     "desc": "Cheese, cheddar",
     "cal": 404.0,
     "pro": 22.9,
@@ -11200,7 +11199,7 @@ export const FOODS: Food[] = [
     "groups": [
       "nuts"
     ],
-    "ndb": "12006",
+    "ndb": "012006",
     "desc": "Seeds, chia seeds, dried",
     "cal": 486.0,
     "pro": 16.5,
@@ -13772,7 +13771,7 @@ export const FOODS: Food[] = [
       "nuts",
       "fats"
     ],
-    "ndb": "4047",
+    "ndb": "04047",
     "desc": "Oil, coconut",
     "cal": 892.0,
     "pro": 0.0,
@@ -16812,7 +16811,7 @@ export const FOODS: Food[] = [
     "groups": [
       "dairy"
     ],
-    "ndb": "1053",
+    "ndb": "01053",
     "desc": "Cream, fluid, heavy whipping",
     "cal": 340.0,
     "pro": 2.8,
@@ -16855,7 +16854,7 @@ export const FOODS: Food[] = [
     "groups": [
       "dairy"
     ],
-    "ndb": "1017",
+    "ndb": "01017",
     "desc": "Cheese, cream",
     "cal": 350.0,
     "pro": 6.2,
@@ -17467,7 +17466,7 @@ export const FOODS: Food[] = [
     "groups": [
       "vegetable"
     ],
-    "ndb": "11205",
+    "ndb": "011205",
     "desc": "Cucumber, with peel, raw",
     "cal": 15.0,
     "pro": 0.7,
@@ -19228,7 +19227,7 @@ export const FOODS: Food[] = [
     "groups": [
       "protein"
     ],
-    "ndb": "1123",
+    "ndb": "01123",
     "desc": "Egg, whole, raw, fresh",
     "cal": 143.0,
     "pro": 12.6,
@@ -19418,7 +19417,7 @@ export const FOODS: Food[] = [
     "groups": [
       "protein"
     ],
-    "ndb": "1124",
+    "ndb": "01124",
     "desc": "Egg, white, raw, fresh",
     "cal": 52.0,
     "pro": 10.9,
@@ -19451,7 +19450,7 @@ export const FOODS: Food[] = [
     "groups": [
       "protein"
     ],
-    "ndb": "1125",
+    "ndb": "01125",
     "desc": "Egg, yolk, raw, fresh",
     "cal": 322.0,
     "pro": 15.9,
@@ -20147,7 +20146,7 @@ export const FOODS: Food[] = [
     "groups": [
       "dairy"
     ],
-    "ndb": "1019",
+    "ndb": "01019",
     "desc": "Cheese, feta",
     "cal": 264.0,
     "pro": 14.2,
@@ -20190,7 +20189,7 @@ export const FOODS: Food[] = [
     "groups": [
       "fruit"
     ],
-    "ndb": "9094",
+    "ndb": "09094",
     "desc": "Figs, dried, uncooked",
     "cal": 249.0,
     "pro": 3.3,
@@ -20516,7 +20515,7 @@ export const FOODS: Food[] = [
     "groups": [
       "nuts"
     ],
-    "ndb": "12220",
+    "ndb": "012220",
     "desc": "Seeds, flaxseed",
     "cal": 534.0,
     "pro": 18.3,
@@ -20630,7 +20629,7 @@ export const FOODS: Food[] = [
     "groups": [
       "grain"
     ],
-    "ndb": "20581",
+    "ndb": "020581",
     "desc": "Wheat flour, white, all-purpose, enriched",
     "cal": 364.0,
     "pro": 10.3,
@@ -20894,7 +20893,7 @@ export const FOODS: Food[] = [
     "groups": [
       "protein"
     ],
-    "ndb": "7022",
+    "ndb": "07022",
     "desc": "Frankfurter, beef, unheated",
     "cal": 315.0,
     "pro": 11.69,
@@ -21458,7 +21457,7 @@ export const FOODS: Food[] = [
       "vegetable",
       "spice"
     ],
-    "ndb": "11215",
+    "ndb": "011215",
     "desc": "Garlic, raw",
     "cal": 149.0,
     "pro": 6.4,
@@ -22376,7 +22375,7 @@ export const FOODS: Food[] = [
     "groups": [
       "beverage"
     ],
-    "ndb": "9123",
+    "ndb": "09123",
     "desc": "Grapefruit juice, white, canned or bottled, unsweetened",
     "cal": 34.0,
     "pro": 0.6,
@@ -23867,7 +23866,7 @@ export const FOODS: Food[] = [
     "groups": [
       "legume"
     ],
-    "ndb": "16158",
+    "ndb": "016158",
     "desc": "Hummus, commercial",
     "cal": 166.0,
     "pro": 7.9,
@@ -25226,7 +25225,7 @@ export const FOODS: Food[] = [
     "groups": [
       "protein"
     ],
-    "ndb": "17224",
+    "ndb": "017224",
     "desc": "Lamb, ground, raw",
     "cal": 282.0,
     "pro": 16.6,
@@ -25874,7 +25873,7 @@ export const FOODS: Food[] = [
     "groups": [
       "vegetable"
     ],
-    "ndb": "11252",
+    "ndb": "011252",
     "desc": "Lettuce, iceberg (includes crisphead types), raw",
     "cal": 14.0,
     "pro": 0.9,
@@ -27159,7 +27158,7 @@ export const FOODS: Food[] = [
     "groups": [
       "spice"
     ],
-    "ndb": "6931",
+    "ndb": "06931",
     "desc": "Sauce, pasta, spaghetti/marinara, ready-to-serve",
     "cal": 50.0,
     "pro": 1.4,
@@ -27839,7 +27838,7 @@ export const FOODS: Food[] = [
       "dairy",
       "beverage"
     ],
-    "ndb": "1077",
+    "ndb": "01077",
     "desc": "Milk, whole, 3.25% milkfat, with added vitamin D",
     "cal": 61.0,
     "pro": 3.1,
@@ -28968,7 +28967,7 @@ export const FOODS: Food[] = [
     "groups": [
       "spice"
     ],
-    "ndb": "2046",
+    "ndb": "02046",
     "desc": "Mustard, prepared, yellow",
     "cal": 60.0,
     "pro": 3.7,
@@ -29891,7 +29890,7 @@ export const FOODS: Food[] = [
     "groups": [
       "fats"
     ],
-    "ndb": "4582",
+    "ndb": "04582",
     "desc": "Oil, canola",
     "cal": 884.0,
     "pro": 0.0,
@@ -29931,7 +29930,7 @@ export const FOODS: Food[] = [
       "nuts",
       "fats"
     ],
-    "ndb": "4047",
+    "ndb": "04047",
     "desc": "Oil, coconut",
     "cal": 892.0,
     "pro": 0.0,
@@ -32349,7 +32348,7 @@ export const FOODS: Food[] = [
     "groups": [
       "fruit"
     ],
-    "ndb": "9236",
+    "ndb": "09236",
     "desc": "Peaches, yellow, raw",
     "cal": 39.0,
     "pro": 0.9,
@@ -32510,7 +32509,7 @@ export const FOODS: Food[] = [
       "nuts",
       "fats"
     ],
-    "ndb": "16098",
+    "ndb": "016098",
     "desc": "Peanut butter, smooth style, with salt",
     "cal": 598.0,
     "pro": 22.2,
@@ -33139,7 +33138,7 @@ export const FOODS: Food[] = [
     "groups": [
       "nuts"
     ],
-    "ndb": "12142",
+    "ndb": "012142",
     "desc": "Nuts, pecans",
     "cal": 691.0,
     "pro": 9.2,
@@ -33476,7 +33475,7 @@ export const FOODS: Food[] = [
     "groups": [
       "spice"
     ],
-    "ndb": "11937",
+    "ndb": "011937",
     "desc": "Pickles, cucumber, dill or kosher dill",
     "cal": 12.0,
     "pro": 0.5,
@@ -34555,7 +34554,7 @@ export const FOODS: Food[] = [
     "groups": [
       "fruit"
     ],
-    "ndb": "9266",
+    "ndb": "09266",
     "desc": "Pineapple, raw, all varieties",
     "cal": 50.0,
     "pro": 0.5,
@@ -38303,7 +38302,7 @@ export const FOODS: Food[] = [
     "groups": [
       "fruit"
     ],
-    "ndb": "9302",
+    "ndb": "09302",
     "desc": "Raspberries, raw",
     "cal": 52.0,
     "pro": 1.2,
@@ -38858,7 +38857,7 @@ export const FOODS: Food[] = [
     "groups": [
       "dairy"
     ],
-    "ndb": "1036",
+    "ndb": "01036",
     "desc": "Cheese, ricotta, whole milk",
     "cal": 174.0,
     "pro": 11.3,
@@ -39998,7 +39997,7 @@ export const FOODS: Food[] = [
     "groups": [
       "spice"
     ],
-    "ndb": "2047",
+    "ndb": "02047",
     "desc": "Salt, table",
     "cal": 0.0,
     "pro": 0.0,
@@ -41535,7 +41534,7 @@ export const FOODS: Food[] = [
     "groups": [
       "vegetable"
     ],
-    "ndb": "11238",
+    "ndb": "011238",
     "desc": "Mushrooms, shiitake, raw",
     "cal": 34.0,
     "pro": 2.2,
@@ -42938,7 +42937,7 @@ export const FOODS: Food[] = [
     "groups": [
       "dairy"
     ],
-    "ndb": "1056",
+    "ndb": "01056",
     "desc": "Cream, sour, cultured",
     "cal": 198.0,
     "pro": 2.4,
@@ -43976,7 +43975,7 @@ export const FOODS: Food[] = [
     "groups": [
       "fruit"
     ],
-    "ndb": "9316",
+    "ndb": "09316",
     "desc": "Strawberries, raw",
     "cal": 32.0,
     "pro": 0.7,
@@ -44252,7 +44251,7 @@ export const FOODS: Food[] = [
     "groups": [
       "spice"
     ],
-    "ndb": "19335",
+    "ndb": "019335",
     "desc": "Sugars, granulated",
     "cal": 387.0,
     "pro": 0.0,
@@ -44741,7 +44740,7 @@ export const FOODS: Food[] = [
     "groups": [
       "dairy"
     ],
-    "ndb": "1040",
+    "ndb": "01040",
     "desc": "Cheese, swiss",
     "cal": 393.0,
     "pro": 27.0,
@@ -47214,7 +47213,7 @@ export const FOODS: Food[] = [
     "groups": [
       "protein"
     ],
-    "ndb": "15121",
+    "ndb": "015121",
     "desc": "Fish, tuna, light, canned in water, drained solids",
     "cal": 86.0,
     "pro": 19.4,
@@ -49143,7 +49142,7 @@ export const FOODS: Food[] = [
     "groups": [
       "grain"
     ],
-    "ndb": "20080",
+    "ndb": "020080",
     "desc": "Wheat flour, whole-grain",
     "cal": 340.0,
     "pro": 13.2,
@@ -49859,7 +49858,7 @@ export const FOODS: Food[] = [
     "groups": [
       "protein"
     ],
-    "ndb": "1125",
+    "ndb": "01125",
     "desc": "Egg, yolk, raw, fresh",
     "cal": 322.0,
     "pro": 15.9,
@@ -50213,7 +50212,7 @@ export const FOODS: Food[] = [
     "groups": [
       "protein"
     ],
-    "ndb": "10219",
+    "ndb": "010219",
     "desc": "Pork, fresh, ground, raw",
     "cal": 263.0,
     "pro": 16.9,
@@ -50543,7 +50542,7 @@ export const FOODS: Food[] = [
       "dairy",
       "beverage"
     ],
-    "ndb": "1079",
+    "ndb": "01079",
     "desc": "Milk, reduced fat, fluid, 2% milkfat, with added vitamin A and vitamin D",
     "cal": 50.0,
     "pro": 3.3,
@@ -50614,7 +50613,7 @@ export const FOODS: Food[] = [
     "groups": [
       "protein"
     ],
-    "ndb": "23572",
+    "ndb": "023572",
     "desc": "Beef, ground, 80% lean meat / 20% fat, raw",
     "cal": 254.0,
     "pro": 17.17,
@@ -50709,7 +50708,7 @@ export const FOODS: Food[] = [
       "vegetable",
       "fruit"
     ],
-    "ndb": "11333",
+    "ndb": "011333",
     "desc": "Peppers, sweet, green, raw",
     "cal": 20.0,
     "pro": 0.86,
@@ -50752,7 +50751,7 @@ export const FOODS: Food[] = [
     "groups": [
       "dairy"
     ],
-    "ndb": "1293",
+    "ndb": "01293",
     "desc": "Yogurt, Greek, plain, whole milk",
     "cal": 97.0,
     "pro": 9.0,
@@ -50914,7 +50913,7 @@ export const FOODS: Food[] = [
       "prepared",
       "vegetable"
     ],
-    "ndb": "11546",
+    "ndb": "011546",
     "desc": "Tomato products, canned, paste, without salt added",
     "cal": 82.0,
     "pro": 4.32,
@@ -51586,7 +51585,7 @@ export const FOODS: Food[] = [
     "groups": [
       "vegetable"
     ],
-    "ndb": "11266",
+    "ndb": "011266",
     "desc": "Mushrooms, brown, italian, or crimini, raw",
     "cal": 22.0,
     "pro": 2.5,
@@ -51650,7 +51649,7 @@ export const FOODS: Food[] = [
     "groups": [
       "protein"
     ],
-    "ndb": "5665",
+    "ndb": "05665",
     "desc": "Ground turkey, 93% lean, 7% fat, raw",
     "cal": 150.0,
     "pro": 18.73,
@@ -52118,7 +52117,7 @@ export const FOODS: Food[] = [
     "groups": [
       "vegetable"
     ],
-    "ndb": "11112",
+    "ndb": "011112",
     "desc": "Cabbage, red, raw",
     "cal": 31.0,
     "pro": 1.43,
@@ -52157,7 +52156,7 @@ export const FOODS: Food[] = [
       "vegetable",
       "fruit"
     ],
-    "ndb": "11821",
+    "ndb": "011821",
     "desc": "Peppers, sweet, red, raw",
     "cal": 31.0,
     "pro": 0.99,
@@ -52253,7 +52252,7 @@ export const FOODS: Food[] = [
     "word": "TOMATOCAN",
     "display": "Tomatoes Crushed Canned",
     "groups": [],
-    "ndb": "11693",
+    "ndb": "011693",
     "desc": "Tomatoes, crushed, canned",
     "cal": 32.0,
     "pro": 1.64,
@@ -52436,7 +52435,7 @@ export const FOODS: Food[] = [
     "groups": [
       "vegetable"
     ],
-    "ndb": "11251",
+    "ndb": "011251",
     "desc": "Lettuce, cos or romaine, raw",
     "cal": 17.0,
     "pro": 1.23,
@@ -52469,7 +52468,7 @@ export const FOODS: Food[] = [
     "groups": [
       "nuts"
     ],
-    "ndb": "12147",
+    "ndb": "012147",
     "desc": "Nuts, pine nuts, dried",
     "cal": 673.0,
     "pro": 13.69,
@@ -52502,7 +52501,7 @@ export const FOODS: Food[] = [
     "groups": [
       "nuts"
     ],
-    "ndb": "12061",
+    "ndb": "012061",
     "desc": "Nuts, almonds",
     "cal": 579.0,
     "pro": 21.15,
@@ -52548,7 +52547,7 @@ export const FOODS: Food[] = [
     "groups": [
       "vegetable"
     ],
-    "ndb": "11457",
+    "ndb": "011457",
     "desc": "Spinach, raw",
     "cal": 23.0,
     "pro": 2.86,
@@ -52609,7 +52608,7 @@ export const FOODS: Food[] = [
     "groups": [
       "nuts"
     ],
-    "ndb": "12155",
+    "ndb": "012155",
     "desc": "Nuts, walnuts, english",
     "cal": 654.0,
     "pro": 15.23,
@@ -52797,7 +52796,7 @@ export const FOODS: Food[] = [
     "groups": [
       "beverage"
     ],
-    "ndb": "9206",
+    "ndb": "09206",
     "desc": "",
     "cal": 45.0,
     "pro": 0.7,
@@ -53166,7 +53165,7 @@ export const FOODS: Food[] = [
     "groups": [
       "nuts"
     ],
-    "ndb": "12087",
+    "ndb": "012087",
     "desc": "Nuts, cashew nuts, raw",
     "cal": 553.0,
     "pro": 18.22,
@@ -53300,7 +53299,7 @@ export const FOODS: Food[] = [
       "vegetable",
       "vegetable"
     ],
-    "ndb": "11209",
+    "ndb": "011209",
     "desc": "Eggplant, raw",
     "cal": 25.0,
     "pro": 0.98,
@@ -53595,7 +53594,7 @@ export const FOODS: Food[] = [
     "groups": [
       "grain"
     ],
-    "ndb": "20036",
+    "ndb": "020036",
     "desc": "Rice, brown, long-grain, raw",
     "cal": 367.0,
     "pro": 7.54,
@@ -54173,7 +54172,7 @@ export const FOODS: Food[] = [
     "groups": [
       "vegetable"
     ],
-    "ndb": "11161",
+    "ndb": "011161",
     "desc": "Collards, raw",
     "cal": 32.0,
     "pro": 3.02,
@@ -54258,7 +54257,7 @@ export const FOODS: Food[] = [
     "groups": [
       "vegetable"
     ],
-    "ndb": "11098",
+    "ndb": "011098",
     "desc": "Brussels sprouts, raw",
     "cal": 43.0,
     "pro": 3.38,
@@ -54390,7 +54389,7 @@ export const FOODS: Food[] = [
     "groups": [
       "vegetable"
     ],
-    "ndb": "11052",
+    "ndb": "011052",
     "desc": "Beans, snap, green, raw",
     "cal": 31.0,
     "pro": 1.83,
@@ -54490,7 +54489,7 @@ export const FOODS: Food[] = [
     "groups": [
       "grain"
     ],
-    "ndb": "20008",
+    "ndb": "020008",
     "desc": "Buckwheat",
     "cal": 343.0,
     "pro": 13.25,
@@ -54614,7 +54613,7 @@ export const FOODS: Food[] = [
     "groups": [
       "vegetable"
     ],
-    "ndb": "11233",
+    "ndb": "011233",
     "desc": "Kale, raw",
     "cal": 49.0,
     "pro": 4.28,
@@ -55714,7 +55713,7 @@ export const FOODS: Food[] = [
     "groups": [
       "beverage"
     ],
-    "ndb": "11540",
+    "ndb": "011540",
     "desc": "Tomato juice, canned, with salt added",
     "cal": 17.0,
     "pro": 0.76,
@@ -57957,6 +57956,34 @@ export const FOODS: Food[] = [
         "amt": 1.0,
         "desc": "cup",
         "gm": 125.0
+      }
+    ]
+  },
+  {
+    "word": "PORKGROUND84RAW",
+    "display": "Pork Ground (Raw)",
+    "groups": [
+      "protein"
+    ],
+    "ndb": "10972",
+    "desc": "Pork, ground, 84% lean / 16% fat, raw",
+    "cal": 218.0,
+    "pro": 17.99,
+    "fat": 16.0,
+    "carb": 0.44,
+    "fib": 0.0,
+    "h2o": 64.67,
+    "sug": 0.0,
+    "portions": [
+      {
+        "amt": 1.0,
+        "desc": "custom (g)",
+        "gm": 100.0
+      },
+      {
+        "amt": 1.0,
+        "desc": "oz",
+        "gm": 28.35
       }
     ]
   }

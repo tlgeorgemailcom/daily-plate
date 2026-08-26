@@ -53,6 +53,7 @@ export const BINDING: Record<string, number> = {
   dairy_custard:     0.33,   // cream/milk/egg custard
   starch_custard:    0.099,  // cornstarch-thickened custard (crème pâtissière)
   cake_batter:       0.74,   // flour/butter/egg batter
+  biscuit:           1.618857860711962, // BKFST_001: 450°F×14min; 9.98% measured moisture loss
   pastry:            0.782,  // blind-baked pie crust
   crumb_crust:       0.432,  // baked cookie/cracker crumb crust
   none:              0.00,   // stovetop cold-set or no-bake — no evaporation
@@ -142,8 +143,11 @@ export const BINDING: Record<string, number> = {
 // Fixed cooked-state water yields. These classes are calibrated from USDA
 // raw/cooked pairs where doneness, not elapsed time, defines the endpoint.
 export const FIXED_YIELD_WATER: Record<string, number> = {
-  poached_egg: 0.983687, // NDB 1123 raw whole egg -> NDB 1131 poached egg; time-independent endpoint
+  poached_egg: 1.000041463874206, // NDB 1123 raw whole egg -> NDB 1131 poached egg; protein-conserved endpoint
   fried_egg: 0.8418968903460676, // NDB 1123 raw whole egg -> NDB 1128 fried egg; protein-conserved endpoint
+  hard_boiled_egg: 0.978350193691432, // NDB 1123 raw whole egg -> NDB 1129 hard-boiled egg
+  omelet_egg: 0.906762967826658, // 100g raw beaten egg -> 92.90g omelet; 5-minute moisture-only test
+  scrambled_egg: 0.882600131319764, // 100g raw beaten egg -> 91.06g scrambled egg; 5-minute moisture-only test
 };
 
 // ── Core functions ────────────────────────────────────────────────────────────

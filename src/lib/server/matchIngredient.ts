@@ -273,7 +273,7 @@ export async function matchIngredient(
   if (searchTokens.length > 1) {
     const andClauses = searchTokens.map(() => 'Long_Desc LIKE ?').join(' AND ');
     const andResult  = await db.execute({
-      sql:  `SELECT NDB_NO, Long_Desc, Energy_KCal FROM DataCentralCombo WHERE ${andClauses} LIMIT 100`,
+      sql:  `SELECT NDB_NO, Long_Desc, Energy_KCal FROM DataCentralCombo WHERE CAST(COALESCE(key10, '0') AS INTEGER) > 0 AND ${andClauses} LIMIT 100`,
       args: likeArgs,
     });
     rows = andResult.rows;
@@ -283,7 +283,7 @@ export async function matchIngredient(
   if (rows.length < 15) {
     const orClauses = searchTokens.map(() => 'Long_Desc LIKE ?').join(' OR ');
     const orResult  = await db.execute({
-      sql:  `SELECT NDB_NO, Long_Desc, Energy_KCal FROM DataCentralCombo WHERE ${orClauses} LIMIT 400`,
+      sql:  `SELECT NDB_NO, Long_Desc, Energy_KCal FROM DataCentralCombo WHERE CAST(COALESCE(key10, '0') AS INTEGER) > 0 AND (${orClauses}) LIMIT 400`,
       args: likeArgs,
     });
     // Merge: AND results + OR results, deduplicated by NDB_NO

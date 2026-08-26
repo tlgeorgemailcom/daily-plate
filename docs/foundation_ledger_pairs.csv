@@ -1,0 +1,75 @@
+ingredient_key,food_word,legacy_ndb,ledger_long_desc,foundation_ndb,foundation_long_desc,foundation_key10
+almonds_sliced,ALMONDS,12061,"Nuts, almonds",012061,"Nuts, almonds, whole, raw",4
+apple_granny_smith_raw,APPLESMITH,9502,"Apples, raw, granny smith, with skin",09502,"Apples, granny smith, with skin, raw",9
+banana_raw,BANANA,9040,"Bananas, raw",09040,"Bananas, ripe and slightly ripe, raw",11
+beef_ground_80lean_raw,BEEFGROUND80RAW,23572,"Beef, ground, 80% lean meat / 20% fat, raw",023572,"Beef, ground, 80% lean meat / 20% fat, raw",2
+bell_pepper_green_raw,BELLPEPPER,11333,"Peppers, sweet, green, raw",011333,"Peppers, bell, green, raw",8
+bell_pepper_red_raw,BELLPEPPERRED,11821,"Peppers, sweet, red, raw",011821,"Peppers, bell, red, raw",8
+blueberries_raw,BLUEBERRIES,9050,"Blueberries, raw",09050,"Blueberries, raw",4
+broccoli_raw,BROCCOLI,11090,"Broccoli, raw",011090,"Broccoli, raw",2
+butter_salted,BUTTERSALTED,1001,"Butter, salted",01001,"Butter, stick, salted",12
+butter_unsalted,BUTTERUNSALTED,1145,"Butter, without salt",01145,"Butter, stick, unsalted",12
+cabbage_raw,CABBAGE,11109,"Cabbage, raw",011109,"Cabbage, green, raw",2
+cabbage_red_raw,REDCABBAGE,11112,"Cabbage, red, raw",011112,"Cabbage, red, raw",2
+canola_oil,OILCANOLA,4582,"Oil, canola",04582,"Oil, canola",3
+carrot_raw,CARROT,11124,"Carrots, raw",011124,"Carrots, mature, raw",7
+cashews_raw,CASHEWSRAW,12087,"Nuts, cashew nuts, raw",012087,"Nuts, cashew nuts, raw",4
+celery_raw,CELERY,11143,"Celery, raw",011143,"Celery, raw",2
+cheese_cheddar,CHEDDAR,1009,"Cheese, cheddar",01009,"Cheese, cheddar",4
+cheese_feta,FETA,1019,"Cheese, feta",01019,"Cheese, feta, whole milk, crumbled",4
+cheese_ricotta_wholemilk,RICOTTA,1036,"Cheese, ricotta, whole milk",01036,"Cheese, ricotta, whole milk",4
+cheese_swiss,SWISSCHEESE,1040,"Cheese, swiss",01040,"Cheese, swiss",4
+coconut_oil,OILCOCONUT,4047,"Oil, coconut",04047,"Oil, coconut",3
+cream_cheese,CREAMCHEESE,1017,"Cheese, cream",01017,"Cream cheese, full fat, block",2
+cucumber_raw,CUCUMBERPEEL,11205,"Cucumber, with peel, raw",011205,"Cucumber, with peel, raw",2
+egg_white_raw,EGGWHITE,1124,"Egg, white, raw, fresh",01124,"Eggs, Grade A, Large, egg white",11
+egg_whole_raw,EGGRAW,1123,"Egg, whole, raw, fresh",01123,"Eggs, Grade A, Large, egg whole",12
+egg_yolk_raw,YOLK,1125,"Egg, yolk, raw, fresh",01125,"Eggs, Grade A, Large, egg yolk",11
+eggplant_raw,EGGPLANT,11209,"Eggplant, raw",011209,"Eggplant, raw",2
+figs_dried_uncooked,FIG,9094,"Figs, dried, uncooked",09094,"Figs, dried, uncooked",9
+flour_ap_white_enriched_unbleached,FLOURAPENRICHED,20581,"Wheat flour, white, all-purpose, enriched, unbleached",020581,"Flour, wheat, all-purpose, enriched, unbleached",2
+flour_whole_wheat,WHEATWHOLE,20080,"Wheat flour, whole-grain",020080,"Flour, whole wheat, unenriched",2
+frankfurter_beef,FRANKFURTERRAW,7022,"Frankfurter, beef, unheated",07022,"Frankfurter, beef, unheated",2
+garlic_raw,GARLIC,11215,"Garlic, raw",011215,"Garlic, raw",12
+ground_pork_raw,GROUNDPORK,10219,"Pork, fresh, ground, raw",010219,"Pork, ground, raw",2
+ground_turkey_raw,TURKEYBURGER,5665,"Ground turkey, 93% lean, 7% fat, raw",05665,"Turkey, ground, 93% lean/ 7% fat, raw",4
+heavy_cream,CREAM,1053,"Cream, fluid, heavy whipping",01053,"Cream, heavy",2
+lamb_ground_raw,LAMBGROUND,17224,"Lamb, ground, raw",017224,"Lamb, ground, raw",2
+lettuce_iceberg_raw,LETTUCE,11252,"Lettuce, iceberg (includes crisphead types), raw",011252,"Lettuce, iceberg, raw",11
+lettuce_romaine_raw,ROMAINE,11251,"Lettuce, cos or romaine, raw",011251,"Lettuce, cos or romaine, raw",11
+marinara_sauce,MARINARASAUCE,6931,"Sauce, pasta, spaghetti/marinara, ready-to-serve",06931,"Sauce, pasta, spaghetti/marinara, ready-to-serve",4
+milk_lowfat_2pct,MILK2PCT,1079,"Milk, reduced fat, fluid, 2% milkfat, with added vitamin A and vitamin D",01079,"Milk, reduced fat, fluid, 2% milkfat, with added vitamin A and vitamin D",9
+milk_whole,MILK,1077,"Milk, whole, 3.25% milkfat, with added vitamin D",01077,"Milk, whole, 3.25% milkfat, with added vitamin D",10
+mushroom_crimini_raw,CRIMINI,11266,"Mushrooms, brown, italian, or crimini, raw",011266,"Mushroom, crimini",4
+mustard_yellow,MUSTARD,2046,"Mustard, prepared, yellow",02046,"Mustard, prepared, yellow",11
+orange_juice_raw,ORANGEJUICERAW,9206,,09206,"Orange juice, no pulp, not fortified, not from concentrate, refrigerated",7
+peach_yellow_raw,PEACH,9236,"Peaches, yellow, raw",09236,"Peaches, yellow, raw",10
+peanut_butter_smooth,PEANUTBUTTER,16098,"Peanut butter, smooth style, with salt",016098,"Peanut butter, creamy",7
+pecans_raw,PECAN,12142,"Nuts, pecans",012142,"Nuts, pecans, halves, raw",4
+pickle_dill,PICKLE,11937,"Pickles, cucumber, dill or kosher dill",011937,"Pickles, cucumber, dill or kosher dill",9
+pine_nuts_dried,PINENUTS,12147,"Nuts, pine nuts, dried",012147,"Nuts, pine nuts, raw",4
+pork_ground_raw,GROUNDPORK,10219,"Pork, fresh, ground, raw",010219,"Pork, ground, raw",2
+rice_brown_long_raw,BROWNRICE,20036,"Rice, brown, long-grain, raw",020036,"Rice, brown, long grain, unenriched, raw",6
+salt_table,SALT,2047,"Salt, table",02047,"Salt, table, iodized",11
+sour_cream,SOURCREAM,1056,"Cream, sour, cultured",01056,"Cream, sour, full fat",2
+spinach_raw,SPINACHRAW,11457,"Spinach, raw",011457,"Spinach, mature",11
+sugar_granulated,SUGAR,19335,"Sugars, granulated",019335,"Sugars, granulated",11
+tomato_paste,TOMATOPASTE,11546,"Tomato products, canned, paste, without salt added",011546,"Tomato, paste, canned, without salt added",4
+tomatoes_canned_crushed,TOMATOCAN,11693,"Tomatoes, crushed, canned",011693,"Tomatoes, crushed, canned",4
+tuna_canned_light_water,TUNALIGHT,15121,"Fish, tuna, light, canned in water, drained solids",015121,"Fish, tuna, light, canned in water, drained solids",2
+walnuts_raw,WALNUTRAW,12155,"Nuts, walnuts, english",012155,"Nuts, walnuts, English, halves, raw",4
+yogurt_greek_whole_milk,GREEKYOGURT,1293,"Yogurt, Greek, plain, whole milk",01293,"Yogurt, Greek, plain, whole milk",4
+collard_greens_raw,COLLARDRAW,11161,"Collards, raw",011161,"Collards, raw",2
+brussels_sprouts_raw,BRUSSELSPROUTSRAW,11098,"Brussels sprouts, raw",011098,"Brussels sprouts, raw",2
+mushroom_shiitake_raw,SHIITAKE,11238,"Mushrooms, shiitake, raw",011238,"Mushrooms, shiitake",4
+green_beans_raw,GREENBEANS,11052,"Beans, snap, green, raw",011052,"Beans, snap, green, raw",2
+flaxseed_ground,FLAXSEED,12220,"Seeds, flaxseed",012220,"Flaxseed, ground",2
+chia_seeds,CHIA,12006,"Seeds, chia seeds, dried",012006,"Chia seeds, dry, raw",2
+buckwheat_groats_raw,BUCKWHEATGROATS,20008,Buckwheat,020008,"Buckwheat, whole grain",2
+hummus_commercial,HUMMUS,16158,"Hummus, commercial",016158,"Hummus, commercial",11
+strawberries_raw,STRAWBERRIES,9316,"Strawberries, raw",09316,"Strawberries, raw",11
+raspberries_raw,RASPBERRIES,9302,"Raspberries, raw",09302,"Raspberries, raw",9
+kale_raw,KALERAW,11233,"Kale, raw",011233,"Kale, raw",11
+grapefruit_juice,GRAPEFRUITJUICE,9123,"Grapefruit juice, white, canned or bottled, unsweetened",09123,"Grapefruit juice, white, canned or bottled, unsweetened",8
+tomato_juice,TOMATOJUICE,11540,"Tomato juice, canned, with salt added",011540,"Tomato juice, with added ingredients, from concentrate, shelf stable",2
+pineapple_raw,PINEAPPLE,9266,"Pineapple, raw, all varieties",09266,"Pineapple, raw",7

@@ -982,6 +982,14 @@ For recipes where all sections are assembled raw but the whole dish applies a si
 
 ## TODO / Deferred Work
 
+### Tomorrow — approve Foundation Foods search keys (2026-08-12)
+
+- Review all 363 Foundation Foods rows individually.
+- Approve the curated `keyword` and `key0`–`key8` search values for each row; do not generate them automatically from the description.
+- Use the existing SR Legacy key conventions as a reference, including the distinction between the primary `keyword` and supplemental key fields.
+- Do not write approved search keys to local `docs/comboo.db` until each entry has been reviewed and approved.
+- After approval, update and validate local search results before considering any production Turso synchronization.
+
 ### Completed: `pan grilled` → `pan seared` physics migration
 
 Completed 2026-07-23. All stored `pan grilled` recipe and section methods were migrated to `pan seared`, the affected recipes were rebuilt through physics, and the rebuilt nutrition was uploaded to Turso. `pan seared` is now the canonical stored value for higher-heat direct pan contact and uses the explicit **230°F** evaporation path in `_method_stovetop_temp()`.

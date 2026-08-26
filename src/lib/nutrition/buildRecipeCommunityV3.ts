@@ -32,6 +32,7 @@ import type {
 } from './types.js';
 import { inferFillingClass } from './inferFillingClass.js';
 import { BINDING, calcYieldWater } from './yieldCalc.js';
+import { matchingUsdaYieldProfile, profileFatLoss, profileRetainedWater } from './usdaYieldProfiles.js';
 import {
   allocationAmountToGrams,
   calculateRemovalGrams,
@@ -518,6 +519,12 @@ export function buildRecipeCommunityV3(
     let initialWaterG = active.reduce((sum, a) =>
       sum + (a.nutrients.water / 100) * a.grams, 0
     );
+    const usdaProfileRows = active.flatMap((a) => {
+      const profile = matchingUsdaYieldProfile(fillClass, a.nutrients.ndbNo);
+      if (!profile) return [];
+      return [{ profile, ndbNo: a.nutrients.ndbNo, grams: a.grams, water: (a.nutrients.water ?? 0) * a.grams / 100,
+        fat: (a.nutrients.totalLipidFat ?? 0) * a.grams / 100 }];
+    });
     const virtualParboilWaterG = fillClass === 'parboiled_long_grain_rice'
       ? active
           .filter(a => a.nutrients.absorptionFactor != null)
@@ -631,6 +638,14 @@ export function buildRecipeCommunityV3(
         yieldWater = calcYieldWater(stages, initialWaterG, fillClass, boilMins, boilTempF, boilLidOn);
       }
     }
+    if (usdaProfileRows.length > 0 && initialWaterG > 0) {
+      const profileWater = usdaProfileRows.reduce((sum, row) => sum + row.water, 0);
+      const retainedProfileWater = usdaProfileRows.reduce(
+        (sum, row) => sum + profileRetainedWater(row.profile, row.grams, row.water),
+        0,
+      );
+      yieldWater = (initialWaterG - profileWater + retainedProfileWater) / initialWaterG;
+    }
 
     // ── Read yield factors (default 1.0 = no effect) ──────────────────────────
     // For strained sections: auto-derive yff/yfp/yfc from per-ingredient strainRetain.
@@ -655,12 +670,20 @@ export function buildRecipeCommunityV3(
       yff = sec.yieldFactorFat;
     } else {
       const fatDrainers = active.filter(a => typeof a.nutrients.fatDrain === 'number');
-      if (fatDrainers.length > 0) {
+      const profileFat = usdaProfileRows.reduce((sum, row) => sum + row.fat, 0);
+      const usdaProfileFatLoss = usdaProfileRows.reduce(
+        (sum, row) => sum + profileFatLoss(row.profile, row.grams),
+        0,
+      );
+      const nonProfileDrainers = fatDrainers.filter(a =>
+        !usdaProfileRows.some(row => row.ndbNo === a.nutrients.ndbNo)
+      );
+      if (usdaProfileFatLoss > 0 || nonProfileDrainers.length > 0) {
         const totalFat       = active.reduce((s, a) => s + (a.nutrients.totalLipidFat ?? 0) * (a.grams / 100), 0);
-        const drainerFat     = fatDrainers.reduce((s, a) => s + (a.nutrients.totalLipidFat ?? 0) * (a.grams / 100), 0);
-        const retainedFromDrainers    = fatDrainers.reduce((s, a) => s + (a.nutrients.totalLipidFat ?? 0) * (a.grams / 100) * a.nutrients.fatDrain!, 0);
-        const retainedFromNonDrainers = totalFat - drainerFat;
-        yff = totalFat > 0 ? (retainedFromDrainers + retainedFromNonDrainers) / totalFat : 1.0;
+        const drainerFat     = nonProfileDrainers.reduce((s, a) => s + (a.nutrients.totalLipidFat ?? 0) * (a.grams / 100), 0);
+        const retainedFromDrainers = nonProfileDrainers.reduce((s, a) => s + (a.nutrients.totalLipidFat ?? 0) * (a.grams / 100) * a.nutrients.fatDrain!, 0);
+        const retainedFat = totalFat - usdaProfileFatLoss - drainerFat + retainedFromDrainers;
+        yff = totalFat > 0 ? retainedFat / totalFat : 1.0;
       } else {
         yff = 1.0;
       }

@@ -61,6 +61,7 @@ from .load import (
 from .retention import get_retention, normalize_cooking_method
 from .yield_calc import BINDING, calc_yield_water
 from .yield_model import cooked_total_grams
+from .usda_yield_profiles import matching_profile, profile_fat_loss, profile_retained_water
 
 
 def _method_stovetop_temp(method: str | None, *, bake_covered_temp: float | None = None) -> float:
@@ -541,10 +542,13 @@ def _build_recipe_multi(
             # List of (grams, absorption_factor) for submersion-boil absorbers
             # (pasta, rice, oats, legumes). Populated from DataCentralCombo.bin.
             "absorbers": [],
-            # List of (fat_contrib_g, fat_drain_factor) for ingredients whose fat
-            # renders and drains during cooking (e.g. raw bacon, ground beef).
+            # List of (NDB, fat_contrib_g, fat_drain_factor) for ingredients whose
+            # fat renders and drains during cooking (e.g. raw bacon, ground beef).
             # Populated from ingredients_ledger.csv::fat_drain.
             "fat_drainers": [],
+            # (NDB, ingredient grams, water grams, fat grams) for a qualified
+            # USDA profile. Filled during accumulation and matched by class later.
+            "usda_profile_rows": [],
             # List of (water_contrib_g, boil_yfw) for raw vegetables that change
             # water content when submerged-boiled. Populated from DataCentralCombo.boil_yfw.
             "boil_yfw_ingredients": [],
@@ -641,6 +645,12 @@ def _build_recipe_multi(
         st["raw_protein"] += nuts.get("Protein", 0.0) * scale
         st["raw_carb"] += nuts.get("Carbohydrate", 0.0) * scale
         st["raw_fiber"] += nuts.get("FiberTotalDietary", 0.0) * scale
+        st["usda_profile_rows"].append((
+            entry.ndb_no,
+            effective_grams,
+            nuts.get("Water", 0.0) * scale,
+            nuts.get("TotalLipidFat", 0.0) * scale,
+        ))
         if effective_grams > 0:
             st["ingredient_count"] += 1
 
@@ -656,7 +666,7 @@ def _build_recipe_multi(
         fat_drain_val = entry.fat_drain if entry.fat_drain is not None else nuts.get("_fat_drain")
         if fat_drain_val is not None:
             fat_contrib_g = nuts.get("TotalLipidFat", 0.0) * scale
-            st["fat_drainers"].append((fat_contrib_g, fat_drain_val))
+            st["fat_drainers"].append((entry.ndb_no, fat_contrib_g, fat_drain_val))
 
         # Track boiled-vegetable water-retention ingredients.
         # boil_yfw = fraction of this ingredient's water retained after submerged boiling.
@@ -745,6 +755,11 @@ def _build_recipe_multi(
         _has_prep = _prep_norm not in ('raw',) and _prep_norm != effective_method
         _stages_for_yield = _primary_stages(s)
         _filling_class_for_yield = _primary_fill_class(s)
+        _usda_profile_rows = []
+        for _ndb_no, _grams, _water, _fat in st["usda_profile_rows"]:
+            _candidate = matching_profile(_filling_class_for_yield, _ndb_no)
+            if _candidate:
+                _usda_profile_rows.append((_candidate, _grams, _water, _fat))
         # ── Yield factor for water ─────────────────────────────────────────
         # Priority order:
         #   1. Submersion-boil absorption model — fires when cook_method=boiled
@@ -840,6 +855,15 @@ def _build_recipe_multi(
             yfw = max(0.0, (st["raw_water"] - water_absorbed) / st["raw_water"]) if st["raw_water"] > 0 else 1.0
         else:
             yfw = 1.0
+        if _usda_profile_rows and st["raw_water"] > 0.0:
+            profile_water = sum(_water for _, _, _water, _ in _usda_profile_rows)
+            retained_profile_water = sum(
+                profile_retained_water(_profile, _grams, _water)
+                for _profile, _grams, _water, _ in _usda_profile_rows
+            )
+            yfw = (
+                st["raw_water"] - profile_water + retained_profile_water
+            ) / st["raw_water"]
         yff = s.yield_factor_fat
         # Auto-derive yff from fat_drain ingredient factors when not explicitly set.
         # If the section has fat-draining ingredients (e.g. raw bacon) and no
@@ -868,11 +892,32 @@ def _build_recipe_multi(
             yfc_strained = ret_carb  / total_carb  if total_carb  > 0 else 1.0
         elif yff is None:
             total_fat = st["sums"].get("TotalLipidFat", 0.0)
-            if st["fat_drainers"] and total_fat > 0:
-                drainer_fat_total = sum(f for f, _ in st["fat_drainers"])
-                retained_from_drainers = sum(f * d for f, d in st["fat_drainers"])
-                retained_from_non_drainers = total_fat - drainer_fat_total
-                yff = (retained_from_drainers + retained_from_non_drainers) / total_fat
+            profile_fat_loss_g = 0.0
+            profile_fat_g = 0.0
+            if _usda_profile_rows:
+                profile_fat_g = sum(_fat for _, _, _, _fat in _usda_profile_rows)
+                profile_fat_loss_g = sum(
+                    profile_fat_loss(_profile, _grams)
+                    for _profile, _grams, _, _ in _usda_profile_rows
+                )
+            non_profile_fat = total_fat - profile_fat_g
+            profile_ndbs = {
+                _ndb_no for _ndb_no, _grams, _water, _fat in st["usda_profile_rows"]
+                if matching_profile(_filling_class_for_yield, _ndb_no)
+            }
+            non_profile_drainers = [
+                (fat, drain)
+                for ndb_no, fat, drain in st["fat_drainers"]
+                if ndb_no not in profile_ndbs
+            ]
+            if profile_fat_loss_g or non_profile_drainers:
+                drainer_fat_total = sum(f for f, _ in non_profile_drainers)
+                retained_from_drainers = sum(f * d for f, d in non_profile_drainers)
+                retained_fat = (
+                    total_fat - profile_fat_loss_g - drainer_fat_total
+                    + retained_from_drainers
+                )
+                yff = retained_fat / total_fat if total_fat > 0 else 1.0
             else:
                 yff = 1.0
         st["resolved_yff"] = yff  # store for fat_lost_total summary below

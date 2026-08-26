@@ -108,6 +108,7 @@ BINDING: dict[str, float] = {
                                  # calibrated: boil_3min → yfw=0.950 (only 9.9% free to evaporate;
                                  # starch gel binds 90.1% — much higher retention than dairy_custard)
     "cake_batter":        0.74,  # flour/butter/egg batter — SWEET_012
+    "biscuit":            1.618857860711962,  # BKFST_001: 450°F×14min; 9.98% measured moisture loss
     "pastry":             0.782, # blind-baked pie crust — SWEET_011 (425°F×13)+(375°F×9) → yfw=0.840
                                  # single calibration point; generalises to other blind-bake temps/times
     "crumb_crust":        0.432, # baked cookie/cracker crumb crust — SWEET_013 (350°F×9) → yfw=0.970
@@ -211,8 +212,11 @@ BINDING: dict[str, float] = {
 # Fixed cooked-state water yields. These classes are calibrated from USDA
 # raw/cooked pairs where doneness, not elapsed time, defines the endpoint.
 FIXED_YIELD_WATER: dict[str, float] = {
-    "poached_egg": 0.983687,  # NDB 1123 raw whole egg → NDB 1131 poached egg; time-independent endpoint
+    "poached_egg": 1.000041463874206,  # NDB 1123 raw whole egg → NDB 1131 poached egg; protein-conserved endpoint
     "fried_egg": 0.8418968903460676,  # NDB 1123 raw whole egg → NDB 1128 fried egg; protein-conserved endpoint
+    "hard_boiled_egg": 0.978350193691432,  # NDB 1123 raw whole egg → NDB 1129 hard-boiled egg
+    "omelet_egg": 0.906762967826658,  # 100g raw beaten egg → 92.90g omelet; 5-minute moisture-only test
+    "scrambled_egg": 0.882600131319764,  # 100g raw beaten egg → 91.06g scrambled egg; 5-minute moisture-only test
 }
 
 # ── Straining hydration constant ─────────────────────────────────────────────

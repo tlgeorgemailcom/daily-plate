@@ -39,8 +39,12 @@ recipes_v3/output/upload_log/
 
 # Backup/scratch files
 *.bak
+*.db.bak-*
 *.bak2
 NOT SET
+
+# Local USDA Foundation release files
+data/foundation/
 
 # libsql Turso sync temp files
 comboo_*.db

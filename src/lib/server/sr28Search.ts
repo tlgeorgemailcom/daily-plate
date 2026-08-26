@@ -107,6 +107,9 @@ function buildSearchWhere(query: string, scope: Sr28SearchScope): { sql: string;
   // Baby foods and infant formula (FdGrp_Cd = 300) are handled separately.
   filters.push('COALESCE("FdGrp_Cd", \'\') <> ?');
   args.push('300');
+  // key10=0 is reserved for retired foods; NULL is also excluded until an
+  // imported row has received its explicit positive search rank.
+  filters.push('CAST(COALESCE(key10, \'0\') AS INTEGER) > 0');
 
   // OR across all terms — any matching term returns the row.
   if (terms.length > 0) {
