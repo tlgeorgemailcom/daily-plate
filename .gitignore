@@ -46,6 +46,13 @@ NOT SET
 # Local USDA Foundation release files
 data/foundation/
 
+# Iodine source and release files
+IODINE_RELEASE_*.zip
+*Iodine*.csv
+*Iodine*.xlsx
+*iodine*.csv
+*iodine*.xlsx
+
 # libsql Turso sync temp files
 comboo_*.db
 comboo_*.db-info

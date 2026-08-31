@@ -29890,7 +29890,7 @@ export const FOODS: Food[] = [
     "groups": [
       "fats"
     ],
-    "ndb": "04582",
+    "ndb": "4582",
     "desc": "Oil, canola",
     "cal": 884.0,
     "pro": 0.0,
@@ -39997,7 +39997,7 @@ export const FOODS: Food[] = [
     "groups": [
       "spice"
     ],
-    "ndb": "02047",
+    "ndb": "2047",
     "desc": "Salt, table",
     "cal": 0.0,
     "pro": 0.0,
