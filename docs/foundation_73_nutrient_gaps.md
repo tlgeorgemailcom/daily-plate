@@ -12,10 +12,10 @@ The audit fields are the seven recipe audit macros plus key minerals and vitamin
 |---|---:|
 | Protein | 2/73 |
 | Total fat | 1/73 |
-| Carbohydrate | 2/73 |
+| Carbohydrate | 3/73 |
 | Dietary fiber | 33/73 |
 | Total sugars | 38/73 |
-| Energy | 2/73 |
+| Energy | 0/73 |
 | Water | 1/73 |
 | Calcium | 4/73 |
 | Iron | 4/73 |
@@ -118,6 +118,129 @@ Abbreviations: `P` protein, `F` total fat, `C` carbohydrate, `Fi` fiber, `Su` su
 | `023572` | `beef_ground_80lean_raw` | Fi, Su, A, C-vit, B1, B2, B3, B6, Fol, B12, D, E-vit, K-vit, Cho |
 
 ## Migration Actions
+
+### Energy estimates for butter
+
+Foundation Foods does not report Energy for the two butter rows below. Do not copy
+the SR Legacy Energy value into the Foundation profile. Instead, calculate Energy
+from the Foundation macronutrients using the butter-specific Atwater factors from
+the [FAO energy conversion factors](https://www.fao.org/4/y5022e/y5022e04.htm),
+Table 3.1:
+
+- Protein: `4.27 kcal/g`
+- Fat: `8.79 kcal/g`
+- Total carbohydrate: `3.87 kcal/g`
+
+The calculated values are:
+
+| Foundation NDB | Description | Foundation P/F/C (g/100g) | Calculation | Energy to store (kcal/100g) |
+|---|---|---|---|---:|
+| `01001` | Butter, stick, salted | `0.85 / 82.2 / 0.58` | `(0.85 x 4.27) + (82.2 x 8.79) + (0.58 x 3.87) = 728.4121` | `728` |
+| `01145` | Butter, stick, unsalted | `0.85 / 81.5 / 0.06` | `(0.85 x 4.27) + (81.5 x 8.79) + (0.06 x 3.87) = 720.2467` | `720` |
+
+These are Foundation-based calculated estimates, not Foundation-reported Energy
+values. The salted value differs from the SR Legacy value of `717 kcal/100g`
+because SR Legacy used its own macronutrient profile (`0.85 / 81.11 / 0.06`).
+
+### FAO specific-factor references for remaining gaps
+
+The FAO Table 3.1 provides the following specific Atwater factors for categories
+represented among the remaining Foundation rows. These factors are references for
+the calculations below; no remaining database values are changed by this section.
+
+| FAO category | Protein (kcal/g) | Fat (kcal/g) | Total carbohydrate (kcal/g) |
+|---|---:|---:|---:|
+| Other vegetable fats and oils | `--` | `8.84` | `--` |
+| Fruits, all except lemons and limes | `3.36` | `8.37` | `3.60` |
+| Fruit juice, except lemon and lime | `3.36` | `8.37` | `3.92` |
+| Mature dry beans, peas, nuts | `3.47` | `8.37` | `4.07` |
+| Other vegetables | `2.44` | `8.37` | `3.57` |
+
+These categories cover the listed olive, sunflower, peanut, soybean, safflower,
+corn, and canola oils; blackberries and the other listed fruits and vegetables;
+the listed fruit juices; and the 0%-moisture dry bean rows. `Salt, table,
+iodized` has no energy-producing macronutrients and therefore does not require an
+Atwater energy estimate. The FAO table does not provide a separate factor for
+each individual food in these groups, so the category assignment should be
+recorded with each subsequent calculation.
+
+#### Oil calculations
+
+For these oil rows, SR Legacy reports protein and carbohydrate as `0`, while
+Foundation reports only the fat value. Using the FAO factor for other vegetable
+fats and oils (`8.84 kcal/g`):
+
+| Foundation NDB | Description | Foundation fat (g/100g) | Calculation | Estimated Energy (kcal/100g) |
+|---|---|---:|---|---:|
+| `0100258` | Oil, olive, extra light | `92.9` | `92.9 x 8.84 = 821.236` | `821` |
+| `0100262` | Oil, sunflower | `93.2` | `93.2 x 8.84 = 823.888` | `824` |
+| `04042` | Oil, peanut | `93.4` | `93.4 x 8.84 = 825.656` | `826` |
+| `04044` | Oil, soybean | `94.6` | `94.6 x 8.84 = 836.264` | `836` |
+| `04063` | Oil, olive, extra virgin | `93.7` | `93.7 x 8.84 = 828.308` | `828` |
+| `04511` | Oil, safflower | `93.2` | `93.2 x 8.84 = 823.888` | `824` |
+| `04518` | Oil, corn | `94.0` | `94.0 x 8.84 = 830.960` | `831` |
+| `04582` | Oil, canola | `94.5` | `94.5 x 8.84 = 835.380` | `835` |
+
+These are calculated estimates, not Foundation-reported Energy values. Only
+`04582` (canola oil) is included in the 73-food paired audit; the other oil rows
+are additional missing-energy rows in the full Foundation database.
+
+#### Watermelon calculation
+
+Foundation watermelon `0100383` reports protein but no fat or carbohydrate:
+`P=0.871 g` per 100 g. SR Legacy `09326` reports `F=0.15 g` and `C=7.55 g`
+per 100 g, which are used here as provisional cross-source estimates. Using the
+FAO factor for fruits,
+except lemons and limes (`P=3.36`, `F=8.37`, `C=3.60 kcal/g`):
+
+`(0.871 x 3.36) + (0.15 x 8.37) + (7.55 x 3.60) = 31.36206`
+
+Estimated Energy: **31 kcal/100 g**. This is a calculated estimate using two
+SR Legacy macronutrients, not a Foundation-reported Energy value.
+
+### Foundation search-source cleanup history
+
+The following local database actions retired exact Foundation duplicates from
+search by setting `key10=0`. Matching Legacy rows were kept searchable. These
+actions changed search-source selection only; they did not merge nutrient
+columns between databases.
+
+Current inventory of Foundation rows whose stored `NDB_NO` begins with `0`:
+
+- **363 total rows**
+- **63 rows** with `key10=0`
+- **300 rows** with positive `key10` and therefore still searchable
+
+The leading-zero subset contains 363 distinct numeric NDB identities; the
+counts are not inflated by duplicate padded and unpadded identifiers.
+
+| Batch | Exact identities or scope | Foundation result |
+|---|---|---|
+| Eggs | Whole egg `01123`/`1123`, egg white `01124`/`1124`, egg yolk `01125`/`1125` | 3 rows retired |
+| Meat, seafood, and peanut butter | Ground turkey `05665`, ground pork `010219`, ground beef `023572`, ground lamb `017224`, beef frankfurter `07022`, canned light tuna `015121`, peanut butter `016098` | 7 rows retired |
+| Fruits and juices | Exact normalized NDB matches in the audited fruit/juice set | 40 rows processed; 39 changed to `key10=0`; records without Legacy counterparts were left untouched |
+| Vegetables and pickles | Previously retired exact duplicates plus cucumber `11206` and tomato `11529` | Cucumber and tomato retired; earlier duplicate rows remained retired |
+| Nuts and seeds | Chia `12006`, almonds `12061`, cashews `12087`, pecans `12142`, pine nuts `12147`, walnuts `12155`, flaxseed `12220` | All 7 were already at `key10=0` |
+| Grains, starches, and sugar | Buckwheat `20008`, brown rice `20040`, whole-wheat flour `20080`, white flour `20581`, granulated sugar `19335` | 9 rows found across padded/unpadded IDs; 5 changed to `key10=0`, 4 were already retired |
+
+### Exact Legacy duplicate retirements
+
+On 2026-08-28, exact shared numeric NDB matches were checked in the local
+Foundation and SR Legacy databases for four prepared-food and sauce items.
+Foundation rows were retired from search by setting `key10=0`; nutrient values
+were not changed. Both padded and unpadded Foundation identifiers were handled
+where present.
+
+| Legacy NDB | Item | Foundation rows retired or already retired | Legacy `key10` retained |
+|---:|---|---|---:|
+| `2046` | Mustard, prepared, yellow | `02046`, `2046` | `11` |
+| `6931` | Sauce, pasta, spaghetti/marinara, ready-to-serve | `06931`, `6931` | `4` |
+| `16158` | Hummus, commercial | `016158`, `16158` | `11` |
+| `15121` | Fish, tuna, light, canned in water, drained solids | `015121`, `15121` | `2` |
+
+Eight Foundation rows now have `key10=0`; three searchable rows were changed
+and five were already retired. The corresponding Legacy rows remain searchable
+and their `key10` values were unchanged.
 
 - [ ] Decide whether missing core fields should block Foundation migration. They affect `salt_table`, `canola_oil`, and two protein rows and should be reviewed before rebuild.
 - [ ] Decide whether missing micronutrients should remain `NULL`, be treated as zero only where USDA semantics support that interpretation, or be supplemented from an approved source.

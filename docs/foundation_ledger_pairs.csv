@@ -11,7 +11,6 @@ butter_salted,BUTTERSALTED,1001,"Butter, salted",01001,"Butter, stick, salted",1
 butter_unsalted,BUTTERUNSALTED,1145,"Butter, without salt",01145,"Butter, stick, unsalted",12
 cabbage_raw,CABBAGE,11109,"Cabbage, raw",011109,"Cabbage, green, raw",2
 cabbage_red_raw,REDCABBAGE,11112,"Cabbage, red, raw",011112,"Cabbage, red, raw",2
-canola_oil,OILCANOLA,4582,"Oil, canola",04582,"Oil, canola",3
 carrot_raw,CARROT,11124,"Carrots, raw",011124,"Carrots, mature, raw",7
 cashews_raw,CASHEWSRAW,12087,"Nuts, cashew nuts, raw",012087,"Nuts, cashew nuts, raw",4
 celery_raw,CELERY,11143,"Celery, raw",011143,"Celery, raw",2
@@ -50,7 +49,6 @@ pickle_dill,PICKLE,11937,"Pickles, cucumber, dill or kosher dill",011937,"Pickle
 pine_nuts_dried,PINENUTS,12147,"Nuts, pine nuts, dried",012147,"Nuts, pine nuts, raw",4
 pork_ground_raw,GROUNDPORK,10219,"Pork, fresh, ground, raw",010219,"Pork, ground, raw",2
 rice_brown_long_raw,BROWNRICE,20036,"Rice, brown, long-grain, raw",020036,"Rice, brown, long grain, unenriched, raw",6
-salt_table,SALT,2047,"Salt, table",02047,"Salt, table, iodized",11
 sour_cream,SOURCREAM,1056,"Cream, sour, cultured",01056,"Cream, sour, full fat",2
 spinach_raw,SPINACHRAW,11457,"Spinach, raw",011457,"Spinach, mature",11
 sugar_granulated,SUGAR,19335,"Sugars, granulated",019335,"Sugars, granulated",11
